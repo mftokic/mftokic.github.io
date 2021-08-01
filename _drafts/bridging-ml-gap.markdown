@@ -31,7 +31,7 @@ Machine Learning (ML) is exploding, we are only limited by our imagination of ho
 
 When finance departments start on their modern finance journey with machine learning, they might tackle the highest impact projects that could benefit the business the most. These will probably revolve around forecasting revenue and various balance sheet risk management solutions. 
 
-Who implements these kinds of game changers in the early days of ML adoption? Help usually comes from these areas. 
+Who implements these kinds of game changes in the early days of ML adoption? Help usually comes from these areas. 
 
 - Existing data scientists that work in another department
 - Consultants that come in, build something, then leave
@@ -45,22 +45,17 @@ Leveraging help from outside of the finance org can get the ball rolling quickly
 
 ## What Got You Here Won't Get You There
 
-You quickly run into an issue with the current business model of outside help. The more solutions you want to build, the more resources you need to build them. ML solutions expand on a linear scale. This linear approach runs into a myriad issues. 
+You quickly run into issues with the current business model of outside help. The more solutions you want to build, the more resources you need to build them. ML solutions expand on a linear scale. This linear approach runs into a myriad issues. 
 
 - Data scientist teams in other orgs already have a job, and can only offer so much support. 
-- Costs grow with each new solution. Existing solution work never goes away. There will always be maintenance to existing solutions to constantly update data sources and improve as the business evolves. Mo solutions, mo problems. 
-- Principle-Agent problem with vendors. External resources want to make sure they are always needed, which means they will build solutions in a way to ensure new solutions continue to scale linearly. 
+- Costs grow with each new solution. Existing solution work never goes away. There will always be maintenance to constantly update data sources and improve the model as the business evolves. More solutions, more problems. 
+- Principle-Agent problem with vendors. External resources want to make sure they are always needed, which means they will build solutions in a way to ensure new solutions continue to scale linearly. New innovation around scaling solutions or democratization through tools may never come, since that removes them from the picture. 
 
-In addition to scale issues, there is another large problem of domain expertise. Most outside data scientists don't understand the work of finance people. Those that claim they have experience in building finance solutions do not understand your company and its various nuances. This means there needs to be program manager (PM) roles created in order to gather the domain expertise of finance users and translate it to these outside resources to build solutions. The linear approach is a short-term solution to a long-term problem.
+In addition to scale issues, there is another large problem of domain expertise. Most outside data scientists don't understand the work of finance people. Those that claim they have experience in building finance solutions do not understand your company and its various nuances. This means there needs to be program manager (PM) roles created in order to gather the domain expertise of finance users and translate it to these outside resources to build solutions. More layers of abstraction lead to longer dev times, more communication overhead, and just more everything. The linear approach is a short-term solution to a long-term problem.
 
-> Leveraging data science talent outside of finance is a short-term solution to a long-term problem
+> Leveraging data science talent outside of finance is a short-term solution to a long-term problem.
 
 You could also entertain the idea of hiring these vendors and other outside talent as full-time employees to sit within the finance department. This might seem to solve some of the problems called out above, but it still doesn't solve the long-term problem. These outside data scientists turned finance employees may not have finance backgrounds, and in some respects are "data mercenaries". They could be people that enjoy building ML solutions but do not care who benefits from them or if they are solving the right problems within finance. 
-
----
----
----
----
 
 There's got to be a better way!
 
@@ -70,14 +65,25 @@ There's got to be a better way!
 
 ## Long-Term Strategy
 
-The solution has been right under our nose this entire time. The best people are already within your company, and are already experts in finance. Yes, I'm talking about your finance employees!
+The solution has been right under our nose this entire time. The best people are already within your company, and are already experts in finance. Yes, I'm talking about your finance employees! What I'm proposing is to find the data scientists who don't know they are data scientists yet, the diamonds in the rough. 
+
+The diamonds I'm talking about usually fit a familiar archetype, which you may have already seen within your finance employees. 
+
+- Like to build things. They hate repeating themselves, and often take pride in the large financial models they have built in excel. They might already know a little bit of programming, whether that's excel macros using VBA or having a little python knowledge to break out whenever they feel constrained by the four walls of excel. 
+- Constantly learning. They are the definition of a growth mindset. Being a "learn it all" is more important than being a "know it all" kind of person. 
+- Master communicator. This one is typically harder to find. Having someone who loves to build, and then can turn around and sell it to others is hard to do. Being able to explain complex technical subjects is a super power itself. 
+
+If you send out the bat signal looking for these types of folks, many will come running. Others may be more hesitant to reach out. Imposter syndrome could be the biggest reason these diamonds stay in the rough. They could be a rock star within the org, but they may not see themselves that way. So always be on the lookout for talent, even if they don't see it in themselves. 
+
+Creating a path from regular finance employee to data scientist is a hard path to build out. This is a problem I have been thinking about for some time, and more details will be provided in a future blog post. At a high level, an apprenticeship program is one that I personally see as a path to building finance centered data science teams. Most of us forgot about this model of learning, and think it's only for electricians and plumbers today. I think it's making a comeback in a big way, and look forward to detailing how I plan to implement it within my finance org. The best part is, once I do I will report back with information around how you can do it too! 
+
+## Final Thoughts
+
+In conclusion, scaling out data science work within large finance orgs is tough. What initially got you started isn't what will take you to the next level. There are many pitfalls along the way, and it's not as easy process. What I hope to do is implement a system for growing data science talent that already exist within finance, then turn around and share those insights with the rest of the world. Stay tuned!s
 
 ## Reversal
 
-To-do. Talk about places where I could be wrong. 
-
-- Outside data science help as harmful and anti-innovative
-- Scaling may not be an issue to smaller companies. 
-- Growing in house DS talent takes time and may not always work out. 
-  - No clear career path
-  - poor engineering practices (need to review committee)
+1. For smaller finance orgs (<50 employees), leveraging outside data science talent may be your best strategy. There are only a few places that ML can be implemented, and having a full time team on-site may not be the best financial decision. 
+2. There has been a lot of innovation recently in no-code tools that enable anyone to produce a machine learning model for a variety of tasks. This democratization leads to more exponential adoption of ML, as opposed to the linear adoption curve. This can post it's own risks, where cookie cutter solutions don't fit the need to every problem. Once you do need a more custom solution based on the needs of the business, you are right back at square one in using outside help. Custom solutions and no-code tools will merge into a happy harmony one day, and will intermingle as self-serve solutions need to be transformed into custom ones managed by a data science team. 
+3. It will take time to grow existing finance talent into data science roles, and it may not work out. There is some downside to this approach, but it comes with potentially unlimited upside when you empower the domain experts to build things they think are useful. 
+4. Lack of career path and poor engineering practices are likely to spring up after going down this path. This is something to think a lot about, and is something I plan to address in a future post around building an apprenticeship program. 
