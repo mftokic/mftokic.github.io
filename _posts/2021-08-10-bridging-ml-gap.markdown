@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "Bridging the ML Talent Gap in Corporate Finance: Finding the Diamonds in the Rough"
-#date:   2021-09-02 8:48:31 -0700
-categories: machine-learning
+date:   2021-08-10 8:48:31 -0700
+categories: machine-learning finance
 author: Mike Tokic
 ---
 
@@ -51,7 +51,7 @@ You quickly run into issues with the current business model of outside help. The
 - Costs grow with each new solution. Existing solution work never goes away. There will always be maintenance to constantly update data sources and improve the model as the business evolves. More solutions, more problems. 
 - Principle-Agent problem with vendors. External resources want to make sure they are always needed, which means they will build solutions in a way to ensure new solutions continue to scale linearly. New innovation around scaling solutions or democratization through tools may never come, since that removes them from the picture. 
 
-In addition to scale issues, there is another large problem of domain expertise. Most outside data scientists don't understand the work of finance people. Those that claim they have experience in building finance solutions do not understand your company and its various nuances. This means there needs to be program manager (PM) roles created in order to gather the domain expertise of finance users and translate it to these outside resources to build solutions. More layers of abstraction lead to longer dev times, more communication overhead, and just more everything. The linear approach is a short-term solution to a long-term problem.
+In addition to scale issues, there is another large problem of domain expertise. Most outside data scientists don't understand the work of finance people. Those that claim they have experience in building finance solutions do not understand your company and its various nuances. This creates the need for program manager (PM) roles to be created in order to gather the domain expertise of finance users and translate it to these outside resources to build solutions. More layers of abstraction lead to longer dev times, more communication overhead, and just more everything. The linear approach is a short-term solution to a long-term problem.
 
 > Leveraging data science talent outside of finance is a short-term solution to a long-term problem.
 
@@ -79,11 +79,12 @@ Creating a path from regular finance employee to data scientist is a hard path t
 
 ## Final Thoughts
 
-In conclusion, scaling out data science work within large finance orgs is tough. What initially got you started isn't what will take you to the next level. There are many pitfalls along the way, and it's not as easy process. What I hope to do is implement a system for growing data science talent that already exist within finance, then turn around and share those insights with the rest of the world. Stay tuned!s
+In conclusion, scaling out data science work within large finance orgs is tough. What initially got you started isn't what will take you to the next level. There are many pitfalls along the way, and it's not an easy process. What I hope to do is implement a system for growing data science talent that already exist within finance, then turn around and share those insights with the rest of the world. Stay tuned!
 
 ## Reversal
 
 1. For smaller finance orgs (<50 employees), leveraging outside data science talent may be your best strategy. There are only a few places that ML can be implemented, and having a full time team on-site may not be the best financial decision. 
-2. There has been a lot of innovation recently in no-code tools that enable anyone to produce a machine learning model for a variety of tasks. This democratization leads to more exponential adoption of ML, as opposed to the linear adoption curve. This can post it's own risks, where cookie cutter solutions don't fit the need to every problem. Once you do need a more custom solution based on the needs of the business, you are right back at square one in using outside help. Custom solutions and no-code tools will merge into a happy harmony one day, and will intermingle as self-serve solutions need to be transformed into custom ones managed by a data science team. 
-3. It will take time to grow existing finance talent into data science roles, and it may not work out. There is some downside to this approach, but it comes with potentially unlimited upside when you empower the domain experts to build things they think are useful. 
-4. Lack of career path and poor engineering practices are likely to spring up after going down this path. This is something to think a lot about, and is something I plan to address in a future post around building an apprenticeship program. 
+2. Hiring external data science help as full time employees could work just fine if you find people who are passionate about solving problems within the business. They may not always be data mercenaries and could have existing business backgrounds in addition to data science skills. 
+3. There has been a lot of innovation recently in no-code tools that enable anyone to produce a machine learning model for a variety of tasks. This democratization leads to more exponential adoption of ML, as opposed to the linear adoption curve. This can post it's own risks, where cookie cutter solutions don't fit the need to every problem. Once you do need a more custom solution based on the needs of the business, you are right back at square one in using outside help. Custom solutions and no-code tools will merge into a happy harmony one day, and will intermingle as self-serve solutions need to be transformed into custom ones managed by a data science team. 
+5. It will take time to grow existing finance talent into data science roles, and it may not work out. There is some downside to this approach, but it comes with potentially unlimited upside when you empower the domain experts to build things they think are useful. 
+5. Lack of career path and poor engineering practices are likely to spring up after going down this paths. This is something to think a lot about, and is something I plan to address in a future post around building an apprenticeship program. 
