@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "R vs Python: One Happy Family"
-#date:   2021-09-02 8:48:31 -0700
-categories: machine-learning R python
+title:  "Kanban for Life: Rethinking the To-Do List"
+#date:   2021-08-17 8:48:31 -0700
+categories: life productivity 
 author: Mike Tokic
 ---
 
@@ -19,5 +19,3 @@ author: Mike Tokic
 </div>
 
 <br />
-
-to-do

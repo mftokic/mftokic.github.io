@@ -2,7 +2,7 @@
 layout: post
 title:  "Bridging the ML Talent Gap in Corporate Finance: Finding the Diamonds in the Rough"
 date:   2021-08-10 8:48:31 -0700
-categories: machine-learning finance
+categories: machine_learning finance
 author: Mike Tokic
 ---
 
