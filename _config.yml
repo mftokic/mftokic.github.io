@@ -21,7 +21,7 @@
 title: Thoughts on Things
 email: mftokic@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Michael (Mike) Tokic's thoughts on things. Which includes books, technology, and being useful.
+  Michael "Mike" Tokic's thoughts on things. Which includes technology, books, and being useful.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "mftokic.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: tomhanks
