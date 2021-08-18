@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Personal User Manual"
-#date:   2021-08-24 8:48:31 -0700
+date:   2021-08-26 8:48:31 -0700
 categories: general
 author: Mike Tokic
 ---
@@ -30,7 +30,7 @@ From 7am-8am I like to focus on learning something new, mostly around technical 
 
 Then from 12pm-1pm I normally each lunch and set aside more time for learning. These can be AI topics too but usually spread out to more broader technology topics. Such as reading tech news and blogs. 
 
-Finally I close out my day from 1om-4pm on whatever needs to get done that day. 
+Finally I close out my day from 1pm-4pm on whatever else needs to get done that day. 
 
 ## Dev vs Meeting Days
 
@@ -50,8 +50,18 @@ As more teams realize the power of distributed teams, asynchronous communication
 
 ## Best Times to Meet
 
-The best times I like to meet are at the edges of existing components of my day. For example, 
+The best times I like to meet are at the edges of existing components of my day. For example, I'd rather meet right after my lunch break around 1:00/1:30pm then having a meeting a 2:30pm. Having a meeting in the middle of the afternoon splits that part of the day in half, which can limit the amount of deep work I get get in a day since it takes a while to get in the zone or flow state. That's ok because I have set up days (Tue/Thu) where I batch all my meetings together. So if I have a bunch of meetings, all with half hour gaps in between, I don't worry because I know the next day I'll have a lot of unstructured time for deep work. 
+
+With that being said, normally I like meetings to start after 10am, take a break over the noon lunch hour, then end by 4pm. Thankfully I work on a team and company that respects those hours, but on occasion I have a 4pm meeting I just can't avoid. Meeting with a CVP for example. Not the end of the world. 
 
 ## How to Fix Me if Broken
 
+I had to do some hard thinking about this one. In the end I settled on a simple answer, just leave me alone to think. If I even get flustered or seem super stressed, normally time to myself is the cure. Either just some quiet reflection at my desk or a quick walk around the block. 
+
+I'm an introvert so sometimes too many meetings a deadlines can get the best of me and stress me out too much, solitude is the brain reboot I need to come back down to normal. 
+
 ## Final Thoughts
+
+I think more people should write about how they work best. Obviously not everyone will have the same working style as other team members, but knowing how someone honestly likes to get their work done helps find common ground and make compromises to get the best collaboration. 
+
+I could even see HR products like [Microsoft Viva](https://www.microsoft.com/en-us/microsoft-viva/?ef_id=7273d80a44e71b3cd7fcb917d974c238:G:s&OCID=AID2200888_SEM_7273d80a44e71b3cd7fcb917d974c238:G:s&msclkid=7273d80a44e71b3cd7fcb917d974c238) coming into the mix soon with some type of employee bio or baseball card with high level stats on who they are and how they do their work. Aggregating this kind of info across teams could lead to some interesting insights. If everyone on the team likes to email and IM vs having a meeting to discuss, then maybe the boss should stop scheduling weekly in person update meetings. The same goes for a team that is mostly extroverted and likes to meet in person to work things through. If a new introvert who enjoys asynchronous work joins the team, maybe the team members could create ways to accommodate their working style to find the best of both worlds. Like recording a meeting and allowing them to contribute on their own time instead of joining synchronously. By doing this more teams will become more inclusive, and hopefully more productive. Which is a buzzword every management team loves to hear. 
