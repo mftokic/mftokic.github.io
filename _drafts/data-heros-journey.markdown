@@ -52,7 +52,7 @@ author: Mike Tokic
 
 ### Resurrection
 
-## Return with Elixir
+### Return with Elixir
 
 ## Final Thoughts
 
