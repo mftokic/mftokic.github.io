@@ -48,6 +48,12 @@ Having everyone come together to discuss something should not be the first optio
 
 As more teams realize the power of distributed teams, asynchronous communication and writing skills will become an even bigger superpower. Doing this well not only makes better use of everyone's time, but allows for better decisions to be made. More people have the opportunity to voice their opinion, especially introverts. More people have the freedom to work when they want to work, preventing the dreaded 4pm Friday meeting 😪. 
 
+## How to Contact Me
+
+Usually email and IM are the best ways to contact me. For email I try to respond within 1-3 days, and for IM within the same day. Sending me an IM with just "hey" are usually not my favorite messages to receive. If you have a question or request, then say it right out of the gate when sending a message. This will help me prioritize what you're asking over other things I'm working on that day. 
+
+Something I'm trying to find good solutions for is the dreaded "do you have a min for a quick call"? I know sometimes just asking a question out loud or sharing your screen is the quickest way to figure something out, but it can rob any flow or attention from the person being asked. So I only try to do this sparingly with others on my team and hope others do the same with me. 
+
 ## Best Times to Meet
 
 The best times I like to meet are at the edges of existing components of my day. For example, I'd rather meet right after my lunch break around 1:00/1:30pm then having a meeting a 2:30pm. Having a meeting in the middle of the afternoon splits that part of the day in half, which can limit the amount of deep work I get get in a day since it takes a while to get in the zone or flow state. That's ok because I have set up days (Tue/Thu) where I batch all my meetings together. So if I have a bunch of meetings, all with half hour gaps in between, I don't worry because I know the next day I'll have a lot of unstructured time for deep work. 
