@@ -48,9 +48,27 @@ My future career was already figured out, except for one minor thing. I never co
 
 ### Refusal of the Call
 
-At the end of the internship I was ready to write code. A fellow intern had some data background and recommended that I start to learn Python. I quickly figured out that knowing what I learn and finding the right path to get those skills is hard without the proper guidance. I went online and searched for how to learn Python. A website called [codeacademy](https://www.codecademy.com/) appeared and looked like a good choice for learning Python. 
+At the end of the internship I was ready to write code. A fellow intern had some data background and recommended that I start to learn Python. I quickly figured out that knowing what to learn and finding the right path to get those skills is hard without the proper guidance. I went online and searched for how to learn Python. A website called [code academy](https://www.codecademy.com/) appeared and looked like a good choice for learning Python. 
 
-### Meeting Mentor
+The good thing about code academy and other Python training sites is that they taught you Python, and the bad thing is that the taught you Python. High level Python info that was helpful if you were a back end web developer but not at all helpful if you were trying to do data science with Python. 
+
+I returned back to Kansas for my senior year. I looked up potential data science classes to take that fall but back in 2015 there were not a lot of options unless you went directly to the computer science department. Thankfully there is a whole analytics major students can enroll in within business schools. 
+
+Hitting these dead ends lead me back to what was comfortable at the time, financial modeling and staying within the four walls of excel. 
+
+### Meeting the Mentor
+
+In the summer of 2016 I returned back to Microsoft to start full time in their Finance Rotation Program. My first rotation was in the Windows Finance team, doing FP&A. As a new employee I quickly learned of learning resources offered by Microsoft that I could leverage for free. One that I still use heavily today was a free O'Reilly subscription that let me read any technical book they have published. 
+
+That summer I cracked another Python book open from O'Reilly and started reading, but ran into the same dead ends of not understanding how basic things in Python like lists and dictionaries translate in machine learning models. I was in a circular patter of trial and error. 
+
+That's when something amazing happened. During the selection process of our second rotation, one of the analysts got her last pick. Meaning the last role she wanted for her second rotation. This was on a core financial systems team withing a broader business intelligence (BI) org in Finance. It didn't sound like the coolest job on earth, and I don't think she was excited at all. 
+
+Thankfully once she started the rotation she was given a choice, to either continue to do the systems work that the previous analyst was doing, or to pick another team within the broader BI team to work on. She had a finance and information systems background at school, and gravitated to a team that was working in the brand new space of machine learning. That kind of work only started in 2015 within finance at Microsoft and was still in its infancy when she joined the team. 
+
+A month or two into the second rotation I saw her on a bus to work and caught up about her rotation. After hearing that she was the only FRP working directly on machine learning solutions I knew that was my opportunity to go figure out what this whole AI thing is about and finally dive into the deep end. To take the red pill and see how deep the AI rabbit holes. 
+
+Thank goodness for serendipity. A wise man once told me about being at the right time, right place, with the right people. Looking back I feel so lucky to have the stars align for this opportunity. More on that later. 
 
 ### Crossing the Threshold 
 
