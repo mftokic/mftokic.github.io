@@ -24,11 +24,9 @@ author: Mike Tokic
 
 [source](https://thenovelsmithy.com/wp-content/uploads/2019/09/circ_orig-1.png)
 
-## Opening
+### Opening
 
 I'm not an engineer by training. I didn't have any formal training in advanced statistics or programming. When thinking back on my journey into data and AI I'm reminded by the idea of a "Heros Journey". A archetypical story that many of our great movies fall into (Star Wars, Matrix, etc.). I thought it would be fun to tell the story of my data journey through that same lens, enjoy! 
-
-## Separation
 
 ### Ordinary World
 
@@ -68,11 +66,21 @@ Thankfully once she started the rotation she was given a choice, to either conti
 
 A month or two into the second rotation I saw her on a bus to work and caught up about her rotation. After hearing that she was the only FRP working directly on machine learning solutions I knew that was my opportunity to go figure out what this whole AI thing is about and finally dive into the deep end. To take the red pill and see how deep the AI rabbit holes. 
 
-Thank goodness for serendipity. A wise man once told me about being at the right time, right place, with the right people. Looking back I feel so lucky to have the stars align for this opportunity. More on that later. 
+Thank goodness for serendipity. A wise man once told me about success coming from being at the right time, right place, with the right people. Looking back I feel so lucky to have the stars align for this opportunity. More on that later. 
 
 ### Crossing the Threshold 
 
-## Descent
+I was able to secure that BI role for my third rotation in the FRP. My main focus was to figure out exactly how to do this whole "machine learning" thing. Learn to code, train models, the whole shebang. Most of the data science work on the team was done by external vendors, with the full time employees (FTE) bring project managers (PM) for various solutions including machine learning. 
+
+I would fall into the PM bucket on the team, but that was good enough for me. I was right next to the data scientists, able to pick their brains at a moments notice. My manager was very supportive about my desire to gain technical data science skill. She brought up a current Microsoft data science certification program (no longer offered) that I could take for free as a Microsoft employee. She even insisted that I make getting the data science certification part of my listed "job responsibilities" that I would be evaluated on during performance reviews. 
+
+The pressure was on after that. Finally something that was part of my job that my boss was expecting updates on. This along with the correct learning path through the certification was exactly the kick in the butt I needed to follow my curiosity that would change my career forever. No looking back now. 
+
+### The Road of Trials
+
+Learning data science was hard! Learning to code, relearn all of the stats I forgot in school, and then learn core machine learning concepts on top of that was overwhelming at first. Thankfully I was able to dedicate part of every workday to taking the online classes, mostly during the morning. I usually worked from 7:30am-4:00pm on my regular schedule so learning in the morning ensured there would be no distractions. This is a practice I still do today. Learn when your mind is at its best and before anyone can bother you with IM's for meetings. 
+
+After work I would come home and practiced what I learned that day. Usually on a dataset that I found online. Looking back I don't think I did this enough. Taking what I recently learned and applying it in a real world solution. None of the ML knowledge I was gaining was being put to good use at my job, only my PM skills of in building machine learning solutions with others who wrote the code. 
 
 ### Tests, Allies, Enemies
 
