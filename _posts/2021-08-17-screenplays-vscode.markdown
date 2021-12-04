@@ -2,7 +2,7 @@
 layout: post
 title:  "Writing Screenplays in VS Code: Open Source Movies?"
 date:   2021-08-17 8:48:31 -0700
-categories: code movies_tv open_source 
+categories: code movies-tv open-source 
 author: Mike Tokic
 ---
 
