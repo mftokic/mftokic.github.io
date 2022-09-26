@@ -1,0 +1,19 @@
+---
+title: "Switching to Quarto"
+description: "Transitioning my site to Quarto"
+author: "Mike Tokic"
+date: "2022-09-25"
+categories: [general]
+---
+
+![](images/paste-87E07CAB.png)
+
+I've recently switched this website over to quarto, the newest scientific publishing technology developed by RStudio, which recently changed its name to Posit. Lot's of change going on at Posit, and they are doing some really cool things. One of the most interesting is quarto.
+
+Quarto builds on top of the already great work of Rmarkdown, which is a way to take code and covert it to other document types like pdf or html. With quarto you can write Python or R code, and create outputs that can be published anywhere, including as web pages.
+
+I used to leverage some complex Ruby code with Jekyll to produce this site, but with quarto the process was dramatically simplified. The design of ".qmd" documents is very smooth and intuitive, allowing me to fully re-publish the site on a Sunday afternoon. I still leverage github pages, which connects to a "docs" folder in my repo where the quarto files are rendered as html, css, and javascript. Very simple.
+
+With great technology like quarto, it begs the question if folks should use quarto for all written communication. From writing proposals, creating slide presentations, publishing papers, and creating technical documentation. All written as code and stored in version control. Exciting stuff!
+
+If you'd like to learn more about quarto, check out their [website](https://quarto.org/)!
