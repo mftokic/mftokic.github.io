@@ -1,0 +1,11 @@
+---
+title: "Free Book on Advanced Analytics in Corporate Finance"
+description: "Free resources on building advanced analytics talent that thrives"
+author: "Mike Tokic"
+date: "2021-12-03"
+categories: [machine-learning, code, learning, open-source]
+---
+
+I'm excited to announce the release of a new R package called [finnts](https://microsoft.github.io/finnts/), aka Finn. The package helps simplify the process of creating time series forecasts with statistical and machine learning models. Finn automates the more tedious aspects of machine learning. Things like data cleaning, feature engineering, back testing, and model selection are all handled automatically by Finn while still being flexible to many forecasting scenarios. 
+
+Finn is a perfect solution for people new to machine learning as well as seasoned pros looking for a scalable way to put many forecasts into production. Please take a look at the [package site](https://microsoft.github.io/finnts/), try it out, and let me know what you think!
