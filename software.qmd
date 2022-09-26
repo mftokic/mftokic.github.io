@@ -1,0 +1,7 @@
+---
+title: "Software I've Written"
+---
+
+## R
+
+-   [finnts](https://microsoft.github.io/finnts/) - low code package for time series forecasting

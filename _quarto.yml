@@ -1,0 +1,20 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Thoughts on Things"
+  navbar:
+    right:
+      - about.qmd
+      - text: "Software"
+        file: software.qmd
+      - icon: github
+        href: https://github.com/mftokic
+format:
+  html:
+    theme: cyborg
+    css: styles.css
+
+
+
