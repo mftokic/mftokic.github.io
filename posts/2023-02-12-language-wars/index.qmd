@@ -1,0 +1,17 @@
+---
+title: "The ML Language Wars Are Over, Large Language Models Won"
+description: "Picking the right tool for the job has never been easier with things like Chat-GPT"
+author: "Mike Tokic"
+date: "2023-02-13"
+categories: [machine-learning, open-source]
+---
+
+![](https://i0.wp.com/craffic.co.in/wp-content/uploads/2021/08/openai.jpg?resize=1024%252C576&ssl=1)
+
+When I started learning data science there was an essential choice that had to be made at the beginning. One that has consequences that can ripple throughout your machine learning journey and even change your career options. I'm talking about the classic debate of R versus Python. Just like any hot issue, you will most likely get a different answer to this question based on who you ask. R is great for statistics, but Python is the best for production. You can't do deep learning in R. Python is the second best language for everything. Over the years it seems that each side of the debate has only dug their heels in deeper. Whenever people ask me what language they should learn first, I usually give this recommendation. If you can only choose one, learn python, but eventually you will have to learn both to be a good data scientist. Building high quality solutions with data comes down to one thing, picking the right tool for the job.
+
+Each language has its strengths. Over the years the rise of new open source packages have started to even the playing field. For example R has always had amazing packages for time series, but now python is catching up. The same can be said for the rise of deep learning in R. While I still believe learning both will allow you to thrive in your data career, the rise of large language models (LLM) like OpenAI's Chat-GPT are going to change the game forever.
+
+If you haven't heard of Chat-GPT yet then you are living under a rock, and congrats on being able to read this blog inside your underground doomsday bunker. These LLM's can do a lot of things, but the game changer for the open source data space is being able to easily translate one language into another. For example I'm able to easily translate dplyr code in R into perfect pandas code in python. Over time these models will unlock the potential to translate every package from one language into another. Imagine writing a package in R, and have a GitHub action that calls a LLM to automatically convert it into python or vice versa. A data scientist could even write code in one language during a projects development, then automatically convert it into another when they move into production. The possibilities are endless!
+
+Models like Chat-GPT may not be at this level of language translation today, but like anything in the AI space the pace of innovation moves exponentially, and could be on the horizon sooner than you think. I for one personally can't wait for this day to come.
