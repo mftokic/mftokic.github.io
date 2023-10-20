@@ -1,0 +1,29 @@
+---
+title: "Total Addressable Market for Advanced Analytics in Finance"
+description: "Using new technology to reinvent how we look forward, look backward, and make the next best decision in finance"
+author: "Mike Tokic"
+date: "2023-10-19"
+categories: [machine-learning, finance]
+---
+
+![](https://thumbs.dreamstime.com/b/conceptual-business-illustration-words-total-addressabl-addressable-market-110227412.jpg)
+
+What would you say, you do here? I often have to explain the buzzword term "advanced analytics" and why exactly does a team like that exist in finance. Shouldn't we just be called a business intelligence team or data team? The reason my advanced analytics team exists can be boiled down to one sentence. To reinvent how we use new technology to look forward, look backward, and make the next best decision in finance. This one phrase has a lot of surface area, so let's peel back the onion and dive deeper.
+
+The first two buckets cover most activities related to rhythm of business (RoB) work that is so crucial to finance, from budgeting and forecasting to the close process. This contains the bulk of the opportunity or addressable market. The final frontier is helping finance teams make the next best decision, which takes up every other activity outside of the traditional RoB activities. 
+
+### Looking Forward
+
+By definition finance tries to make decisions about the future. What will out revenue look like? How is headcount going to change over the next 12 months? Are we going to actually hit our budget numbers for Q3? Most of looking forward is about some sort of time series forecasting. This is where I think the biggest bang for buck lies in the finance space. Most finance teams need some sort of prediction about the future, and most predictions are time related. 
+
+### Looking Backward
+
+After making predictions about the future, we have to measure what actually happened in the business. This is the "close process" you might hear finance pros discuss (sometimes with distaste). At the end of each month, each quarter, each fiscal year the financial numbers for that period need to lock. Journal entries need to complete, allocations have to be allocated, and every metaphorical "i" is dotted and "t" is crossed. This is probably the most manual process in finance today that hasn't changed much since the inception of spreadsheets and powerpoint. Human beings have to look at reports, see how the month closed and if that number was different then what was initially forecasted, and then go tell their CFO why we were off $100 or $1,000,000,000 that month. As we use algorithms to look into the future, we can use algorithms to look into the past. If ML can be adopted in the forecast process, then there is a good chance we can use it during close. This is a unique problem to solve though. Currently we can get decent interpretability of the future forecast, but understanding the error between the forecast and what actually happened is not an exact science. I also think it's a problem most data scientists may not think about today since it might only be important in small niches like finance where explaining that forecast error is crucial and prevents adoption of ML solutions. Large languge models I think can unlock this problem, where we can build agents that can peel back the layers of forecasts and run the variance analysis to create the explanations we need. This takes a very manual process and could eventually speed up the story gathering part of close from a few days to a few minutes. Very exciting. 
+
+### Making the Next Best Decision
+
+This is the final frontier for advanced analytics in finance. Outside of the financial RoB processes like forecast and close, finance people do so much other kinds of work that mostly revolve around making data informed decisions about what to do in the business. How should we price our new product? Will the new product hurt sales of our older products? What's the lifetime value of our customer? Should we buy back shares or double down on R&D? All of these questions cannot fit into a standard time series forecasting bucket, or any standard ML bucket. Each question has its own nuance and needs to be approached in a different way. One way to solve this with technology it to add armies of data & AI professionals who can answer these non-standard quesitons on demand, but this method doesn't scale. Finance is notorious for running lean and being reluctant to add large technical teams that don't do standard BI work like data pipelines and reporting. So again this is a space that is ripe for disruption through large language models. Again it's agents to the rescue. Agents that can piece together various tools that can find data, pull data, and then analyze that data to help a human make a decision faster and with more precision. We are still so early in this space. 
+
+### Final Thoughts
+
+Advanced analytics in finance still has so much promise yet to be realized. Expectations are high and skeptics are always there. Brick by brick we get closer to making these ideas become a reality. If you are working on machine learning in your finance org, I salute you! It's often nerve racking work that doesn't always pay off immediately. Stay at it my friends, and the future will be yours. 
