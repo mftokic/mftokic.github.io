@@ -1,0 +1,36 @@
+---
+title: "Weekend Reads (12/9/23)"
+description: "Interesting things I found on the internet this week."
+author: "Mike Tokic"
+date: "2023-12-09"
+categories: [weekend-reads]
+---
+
+![](https://thumbs.dreamstime.com/b/conceptual-business-illustration-words-total-addressabl-addressable-market-110227412.jpg)
+
+## Articles
+
+- [How AI agents will impact the world](https://www.gatesnotes.com/AI-agents): great post from Bill Gates exploring agents and their new place in our world.
+- [Langchain expands collaboration with Microsoft](https://blog.langchain.dev/langchain-expands-collaboration-with-microsoft/?utm_source=bensbites&utm_medium=newsletter&utm_campaign=daily-digest-microsoft-made-google-sing): so cool to see that open-source LLM tech like langchain can coexist with tech giants like Microsoft. 
+
+## Videos
+
+- [How large language models work](https://www.youtube.com/watch?v=zjkBMFhNj_g&t=1s): perfect intro to LLMs from an AI legend
+- AI Engineering Summit: interesting videos about a new discipline
+    - [Open questions about AI engineering](https://www.youtube.com/watch?v=AjLVoAu-u-Q)
+    - [Climbing the ladder of abstraction](https://www.youtube.com/watch?v=PAy_GHUAICw)
+    - [The intelligent interface](https://www.youtube.com/watch?v=ieWT6X2Yh_g)
+
+## Podcasts
+
+- [Dr. Andrew Huberman on The Tim Ferris Show](https://open.spotify.com/episode/6KiIolOda4bsSyrtWpVj2F?si=2e7bb1828b1f43cf): Dr. Huberman is a gift to humanity. So much great insight per minute of listening. 
+
+## Books
+
+### Currently Reading
+
+- [The Anthonolgy of Balaji Srinivasan](https://www.amazon.com/Anthology-Balaji-Technology-Building-Future/dp/1544542917): Need to get excited about the future? Learn from one of the best in Balaji. 
+
+### Re-Reading
+
+- [Tools of Titans](https://www.amazon.com/Tools-Titans-Billionaires-World-Class-Performers/dp/B082VKY29Q/ref=sr_1_1?crid=5MGMGSM4ZATG&keywords=tools+of+titans&qid=1702145360&s=books&sprefix=tools+of+titans%2Cstripbooks%2C334&sr=1-1): Re-reding this once a year is almost mandatory for me now. So much great insight that stands the test of time. 

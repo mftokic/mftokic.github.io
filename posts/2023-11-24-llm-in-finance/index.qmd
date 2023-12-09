@@ -1,0 +1,51 @@
+---
+title: "Large Language Model Use in Finance"
+description: "How we can start using Generative AI technology within corporate finance"
+author: "Mike Tokic"
+date: "2023-11-24"
+categories: [llm, finance]
+---
+
+![](https://thumbs.dreamstime.com/b/conceptual-business-illustration-words-total-addressabl-addressable-market-110227412.jpg)
+
+How can we use large language models in corporate finance? A lot of great work has been done inside of Microsoft Finance to find and consolidate ways we can levarage generative AI. Below are the common themes we found. Special shoutout to the Microsoft modern finance community for their help in this effort.
+
+### 1. Generate Content
+
+We all create content every single day, and now AI can help. LLMs can be used to create content on their own, update your own content, or have it create a good starting point for you to build on top of. In finance, we can use llm content generation to help us in many areas. 
+
+- **Close Commentary** - Analze month end close reports and create commentary on the results.
+- **Internal Audit Reports** - Write internal audit reports based on the results of a recent audit. 
+
+This is where existing [Microsoft 365 copilots](https://adoption.microsoft.com/en-us/copilot/) can be used right out of the box. No custom solutions needed. 
+
+### 2. Summarize Information
+
+The most common form of LLM use across any field is summarization. Even Sam Altman, CEO of OpenAI, has said that this is the most popular use case.
+
+- **Summarize Earnings Calls** - We can use LLMs to summarize earnings calls and provide a quick summary of the call. This can be used to help analysts and investors quickly understand the key points of the call.
+- **Summarize Financial Close Documents** - Analyze month end powerpoints and distill is down to the most important information. This can later be used for quick reference and to help summarize trends across multiple months or quarters. 
+
+For simple document analysis, eixsting copilots can immediately help. If you have many documents you need to analyze and extract key information, the best way to do this is through a common technique called [retrieval augmented generation (RAG)](https://www.databricks.com/glossary/retrieval-augmented-generation-rag#:~:text=Retrieval%20augmented%20generation%20or%20RAG%20is%20an%20architectural,and%20providing%20them%20as%20context%20for%20the%20LLM.). 
+
+### 3. Recommend Actions
+
+Now we're getting into the more advacned use cases. Recommending actions is a great way to use LLMs to help you make decisions.
+
+- **Financial Variance Analysis** - Dig through structured reports, analyze variances to budget or close, and recommend where humans should focus their attention.
+- **Compliance** - Ensuring that customer communications or next steps are compliant with internal and external regulations.
+
+No out of the box solutions today can do this kind of work, meaning you'll need to build your own custom solutions. 
+
+### 4. Simplify Tasks
+
+The final frontier of LLMs is around siplifying and automating tasks. This is where the most impact can be made, but is often the hardest to do in practice. 
+
+- **Procurement Sourcing** - Analyze procurement requests and automatically source the best vendor for the job.
+- **Customer Financing** - Analyze customer financing requests and automatically determine the best financing options for them.
+
+Similar to recommending actions, this is another area where you'll need to build your own custom solutions.
+
+## Final Thoughts
+
+There is no need to go directly into the deep end of the LLM pool with custom solutions. See what you can start using immideately with existing copilots and then build from there. Technology by definition is something that doesn't quite work yet, so don't be afraid to experiment and fail.
