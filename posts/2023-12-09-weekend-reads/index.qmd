@@ -7,8 +7,6 @@ categories: [weekend-reads]
 image: "image.png"
 ---
 
-![](https://thumbs.dreamstime.com/b/conceptual-business-illustration-words-total-addressabl-addressable-market-110227412.jpg)
-
 ## Articles
 
 - [How AI agents will impact the world](https://www.gatesnotes.com/AI-agents): great post from Bill Gates exploring agents and their new place in our world.
