@@ -7,7 +7,7 @@ categories: [weekend-reads]
 image: "image.png"
 ---
 
-![](image.jpg)
+![](./image.png)
 
 ## Articles
 

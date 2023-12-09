@@ -7,7 +7,7 @@ categories: [llm, finance]
 image: "image.png"
 ---
 
-![](image.jpg)
+![](./image.png)
 
 How can we use large language models in corporate finance? A lot of great work has been done inside of Microsoft Finance to find and consolidate ways we can levarage generative AI. Below are the common themes we found. Special shoutout to the Microsoft modern finance community for their help in this effort.
 
