@@ -4,6 +4,7 @@ description: "Interesting things I found on the internet this week."
 author: "Mike Tokic"
 date: "2023-12-09"
 categories: [weekend-reads]
+image: "image.png"
 ---
 
 ![](https://thumbs.dreamstime.com/b/conceptual-business-illustration-words-total-addressabl-addressable-market-110227412.jpg)

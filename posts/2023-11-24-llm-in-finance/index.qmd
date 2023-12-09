@@ -4,6 +4,7 @@ description: "How we can start using Generative AI technology within corporate f
 author: "Mike Tokic"
 date: "2023-11-24"
 categories: [llm, finance]
+image: "image.png"
 ---
 
 ![](https://thumbs.dreamstime.com/b/conceptual-business-illustration-words-total-addressabl-addressable-market-110227412.jpg)
