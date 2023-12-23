@@ -1,0 +1,31 @@
+---
+title: "Weekend Reads (12/22/23)"
+description: "Interesting things I found on the internet this week"
+author: "Mike Tokic"
+date: "2023-12-22"
+categories: [weekend-reads]
+image: "image.png"
+---
+
+![](./image.png)
+
+## Articles
+
+- [4 Types of Professional Time](https://www.sahilbloom.com/newsletter/the-4-types-of-professional-time): Always make time for consumption and ideation time. 
+- [Microsoft Releases Phi-2](https://venturebeat.com/ai/microsoft-releases-phi-2-a-small-language-model-ai-that-outperforms-llama-2-mistral-7b/): Small models are so hot right now.
+- [No Meetings, No Deadlines, No Full Time Employees](https://sahillavingia.com/work): One meeting a quarter at Gumroad. Yep, that's the dream. One can only imagine. 
+
+## Videos
+
+- [Making LLMs Uncool Again](https://www.youtube.com/watch?v=6LXw2beprGI): Hear thoughts from an AI legend, Jeremy Howard.
+- [A16Z AMA](https://www.youtube.com/watch?v=lPGDwqY-zi8): Various topics tackled by the top dogs at Andreesen Horowitz. 
+- [AngeList QnA with Naval](https://www.youtube.com/watch?v=nfWYN4DsVJo): You can never go wrong hearing from Naval. 
+
+## Podcasts
+
+- [George Mack on Modern Wisdom](https://open.spotify.com/episode/1XdTjVHlKIqJNOjby6VUkC?si=rh1NS30FRlCbumrzfdLu1Q): Powerful insights on the role memes play in society. 
+
+## Books
+
+- [Anthology of Naval Ravikant](https://www.amazon.com/Almanack-Naval-Ravikant-Wealth-Happiness-ebook/dp/B08FF8MTM6/ref=tmm_kin_swatch_0?_encoding=UTF8&qid=1703291388&sr=8-2): Don't think, just buy this book and re-read once a month.
+- [Poor Charlie's Almanac](https://www.amazon.com/Poor-Charlies-Almanack-Essential-Charles-ebook/dp/B0C5TCGPPS/ref=tmm_kin_swatch_0?_encoding=UTF8&qid=1703291432&sr=8-1): Timeless wisdom from Charlie Munger, may he rest in peace. 

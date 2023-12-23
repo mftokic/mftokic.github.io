@@ -1,4 +1,6 @@
 
-- LLM in Finance
-- Total Addressable market of advanced analytics in Finance. 
-- ML lanaguage wars are over, LLMs won
+- Anthology of Naval Ravikant 
+- Meetings strategy
+- My FRP journey and post-program transition
+- Why I hold bitcoin and eth
+- Chose Love Over Power
