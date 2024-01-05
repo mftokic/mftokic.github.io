@@ -1,0 +1,53 @@
+---
+title: "Thoughts on The Almanack of Naval Ravikant"
+description: "Key takeaways from the book"
+author: "Mike Tokic"
+date: "2023-12-30"
+categories: [books]
+image: "image.jpg"
+---
+
+![](./image.jpg)
+
+The Almanack of Naval Ravikant by Eric Jorgenson is something I like to read every few months. Eric was able to take all public content from Naval and put it into one place. I love that idea and think Eric will be successful with many other thought leaders. 
+
+Meet Naval Ravikant: a modern philosopher-entrepreneur and the co-founder of AngelList. Renowned for his deep insights on technology, investing, and the art of living, Ravikant has become a luminary in Silicon Valley. Beyond his success with startups like X (Twitter) and Postmates, he captivates audiences with his profound perspectives on life and happiness, shared on his popular podcast and Twitter feed.
+
+Enjoy some of Naval's best quotes and ideas I found most interesting. 
+
+### Types of Leverage
+
+> Labor means people working for you. It’s the oldest and most fought-over form of leverage. Labor leverage will impress your parents, but don’t waste your life chasing it.
+> Money is a good form of leverage. It means every time you make a decision, you multiply it with money. It's probably been the most dominate form of leverage in the last century.  
+> Code and media are permissionless leverage. They’re the leverage behind the newly rich. You can create software and media that works for you while you sleep.
+
+Focus on permissionless leverage. Often people think the next step in their career is managing people. That's how they get more money, more power, more status. Is Taylor Swift Time's 2023 person of the year because she is a great manager or because she is the best in the world at media (music, video, merch)? We're quickly starting to see more one person empires being built. Through media with influencer's, and through code like Satoshi Nakamoto (inventor of Bitcoin). Instead of trying to grow you career through scaling of people and capital, try the route with no gatekeepers.  
+
+Balaji Srinivasan made an interesting point that once a robot can do something, you've turned labor into capital. Meaning you just need the money to purchase the robot and then code to program it. Not long from now we might see managers only overseeing physical robots operating in the world of atoms (doing physical work) or AI agents operating in the world of bits (traditional knowledge work). The skills needed to manage these new digital workers revolve around writing code and coordination. Not traditional management skills. 
+
+### Build or Sell
+
+> Learn to sell. Learn to build. If you can do both, you will be unstoppable.
+
+I believe Bill Gates said this back in his heyday at Microsoft. This is the most powerful piece of advice in the book. Most businesses boil down to a product or service to sell. The most important people at a company either build that product or sell that product. If you do not do work like that today at your company, you might want to consider changing jobs. These roles have the greatest potential for impact on the world, and create the most financial rewards. 
+
+### Specific Knowledge
+
+> Specific knowledge is knowledge you cannot be trained for. If society can train you, it can train someone else and replace you.
+> When specific knowledge is taught, it’s through apprenticeships, not schools.
+
+This is how you can prevent AI from taking your job. If what you do can't be explained in a book, class, or YouTube videos, there is a good chance it will be hard for an AI model to figure out how to do it well. 
+
+### Be You
+
+> The way to get out of the competition trap is to be authentic, to find the thing you know how to do better than anybody. You know how to do it better because you love it, and no one can compete with you. If you love to do it, be authentic, and then figure out how to map that to what society actually wants. Apply some leverage and put your name on it. You take the risks, but you gain the rewards, have ownership and equity in what you’re doing, and just crank it up.
+> Your goal in life is to find the people, business, project, or art that needs you the most. There is something out there just for you. What you don’t want to do is build checklists and decision frameworks built on what other people are doing. You’re never going to be them. You’ll never be good at being somebody else. 
+> Technology democratizes consumption but consolidates production. The best person in the world at anything gets to do it for everyone.
+
+Nothing to add here, Naval hit the nail on the head. 
+
+### Lifelong Learning
+
+> The most important skill for getting rich is becoming a perpetual learner. You have to know how to learn anything you want to learn. The old model of making money is going to school for four years, getting your degree, and working as a professional for thirty years. But things change fast now. Now, you have to come up to speed on a new profession within nine months, and it’s obsolete four years later. But within those three productive years, you can get very wealthy.
+
+ChatGPT was released by OpenAI about a year ago. In that time, people have had the opportunity to get up to speed on using generative AI models like GPT-3.5 and now GPT-4. There was no class in using these models, only the documentation on OpenAI's website and videos on YouTube. For the brave folks who went ahead and learned how to use these models, the world will be theres the next three years while everyone else catches up. Learning how to use GPT-4 in your company to improve a product or become more productive is a form of permissionless leverage. Something of a superpower. The recent AI hype cycle might be winding down, but people with these skills are in demand. A few years from now another technology or idea might come out, another thing that's not taught in schools. Never stop learning, never stop growing. 
