@@ -1,0 +1,30 @@
+---
+title: "Weekend Reads (1/5/24)"
+description: "Interesting things I found on the internet this week"
+author: "Mike Tokic"
+date: "2024-01-05"
+categories: [weekend-reads]
+image: "image.png"
+---
+
+![](./image.png)
+
+## Articles
+
+- [Sahil Bloom: The Best Ideas of 2023](https://www.sahilbloom.com/newsletter/the-best-ideas-of-2023)
+- [Sam Altman: What I Wish Someone Had Told Me](https://blog.samaltman.com/what-i-wish-someone-had-told-me/)
+
+## Videos
+
+- [Last Lecture Series: How to Live an Asymmetric Life](https://www.youtube.com/watch?v=dZxbVGhpEkI)
+
+## Podcasts
+
+- [Ali Abdaal on Modern Wisdom](https://open.spotify.com/episode/6IesuigzSHYLN02Q6lk14N?si=ec3d800a158a4257)
+- [Bill Perkins on Modern Wisdom](https://open.spotify.com/episode/1huHLhgK7lsPtFflpo0d21?si=c1e8fea1e79f4d22)
+
+## Books
+
+- [The Daily Laws by Robert Green](https://www.amazon.com/Daily-Laws-Meditations-Seduction-Strategy-ebook/dp/B0916VTYCD/ref=tmm_kin_swatch_0?_encoding=UTF8&qid=1704502149&sr=8-1)
+- [The Daily Stoic by Ryan Holiday](https://www.amazon.com/Daily-Stoic-Meditations-Wisdom-Perseverance-ebook/dp/B01HNJIJB2/ref=sr_1_1?crid=3B0BKSONR7G2K&keywords=daily+stoic&qid=1704502187&sprefix=daily+%2Caps%2C164&sr=8-1)
+- [A Calendar of Wisdom by Leo Tolstoy](https://www.amazon.com/Calendar-Wisdom-Thoughts-Nourish-Written-ebook/dp/B003L77UKC/ref=tmm_kin_swatch_0?_encoding=UTF8&qid=1704502222&sr=8-1)
