@@ -5,3 +5,4 @@
 - Chose Love Over Power
 - Approach to weekends
 - Priorities, tradeoffs, incentives
+- Main ideas from Clear Thinking by Shane Parish

@@ -1,0 +1,40 @@
+---
+title: "Weekend Reads (1/12/24)"
+description: "Interesting things I found on the internet this week"
+author: "Mike Tokic"
+date: "2024-01-12"
+categories: [weekend-reads]
+image: "image.png"
+---
+
+![](./image.png)
+
+## Articles
+
+- [Scott Galloway's 2024 Predictions](https://www.profgalloway.com/2024-predictions/)
+- [The Psychology of Persuasion](https://fs.blog/influence-psychology-persuasion/)
+- [Deep Dive on the AI Revolution](https://readwise-assets.s3.amazonaws.com/media/wisereads/articles/ai-the-coming-revolution/The_AI_Revolution.pdf)
+
+## Videos
+
+- [Does Athletic Greens Actually Work?](https://www.youtube.com/watch?v=IrFJ4DCdYaQ)
+- [Do Electrolyte Powders Actually Work?](https://www.youtube.com/watch?v=Rii5dMK4jZM)
+
+## Podcasts
+
+- [2024 Predictions on All In](https://open.spotify.com/episode/2TeIwqNMI0gv8NCRyEebJR?si=OQI2T8c0SAeol0-lFoB5pg)
+- [George Mack on Modern Wisdom](https://open.spotify.com/episode/6emdJWgF7qDmi4oneN3VJF?si=kHYxTcLrTbKOyHcpqRAPgQ)
+
+## Tweets
+
+- [Discipline is Overpriced, Incentives are Underpriced](https://twitter.com/george__mack/status/1743998250217009348?s=20)
+- [Ricky Gervais at the Golden Globes](https://twitter.com/nbc/status/1214008610667155456?s=46&t=8Xa2BngQ9d359SJzFrCFMA)
+
+## Movies
+
+- Poor Things: In Theatres
+- You Are What You Eat (A Twin Experiment): On Netflix
+
+## Books
+
+- [Hidden Potential by Adam Grant](https://www.amazon.com/Hidden-Potential-Science-Achieving-Greater-ebook/dp/B0C5LN1BCM/ref=tmm_kin_swatch_0?_encoding=UTF8&dib_tag=se&dib=eyJ2IjoiMSJ9.mA9XRCHChN602Rd5pxr4TTU2MJEouRhEolzKOI38tI7LHrqrCOgNOzkpl2jzsZlXrY2Yfs_8Z6-6-EfldrP7QQ.C9TR5irR3V5VZx3PHdfyl7_Ud391V3XpO8qt0NhSUnc&qid=1704933199&sr=8-3)

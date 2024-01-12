@@ -1,0 +1,38 @@
+---
+title: "Thoughts on My Journey in Microsoft's Finance Rotation Program"
+description: "My path through the FRP and Advice"
+author: "Mike Tokic"
+date: "2024-01-12"
+categories: [career]
+image: "image.jpg"
+---
+
+![](./image.jpg)
+
+On new years day of 2015, I got an email from a Microsoft recruiter to schedule a phone screen for Microsoft's Finance Rotation Program (FRP). A week after the phone screen, I was reading the book "The Alchemist" (link to Alchemist) during a study break and started to think about my personal legend (link to personal legend). I thought Microsoft would be a good opportunity and hoped for another interview. That's right when my phone rang, it was the recruiter informing me that I was about to be chosen for the final super day in February. The weekend before the big interview in Redmond, my brother got me tickets to see the Oklahoma City Thunder take on the LA Clippers, a present for my 21st birthday. I told him I couldn't go, because I needed time to prepare for the biggest interview of my life. Laughing, he said I had nothing to worry about, I would get the job, and we can use this weekend to celebrate the new job. His confidence in me, and the uncanny coincidence with the Alchemist book, were the "omens I'd follow" into my own personal legend. Thankfully the interview went well, I got the offer, and the rest is history. 
+
+The Finance Rotation Program at Microsoft is a two year program where recent college graduates complete four rotations across various groups in finance, each lasting six months. It's a great opportunity to learn about different parts of Microsoft's business, while also being a world class "try it before you buy it" experience for finding your optimal career path. You get to find what your destined to do, and Microsoft get's a well rounded finance professional that is tuned into the exact job they want long term. A true win-win.
+
+I often get asked to talk about my experience from would be FRP's still in school and existing FRP's. My career path in the FRP is nontraditional in nature, but is hopefully one anyone with enough high agency can do as well. I write this to those high agency folks. People who want to do interesting things in the world and help others. What follows is my path in the FRP and what I recommend for today's FRP's.  
+
+## Rotations
+
+### Internship: Venture Integration
+
+I came into the FRP as an intern in the summer of 2015, the same summer Microsoft launched Windows 10. It was a fun time to join finance at Microsoft. Satya Nadella was only installed as CEO a few years back, same as Amy Hood the CFO. The stock price was in the 40s and no one thought Microsoft was doing anything cool or exciting. Safe to say most students at my college had MacBook's instead of Surface's. 
+
+### First Rotation: Windows COGS
+
+### Second Rotation: Worldwide Commercial Solutions Finance
+
+### Third Rotation: Finance Business Intelligence Services
+
+### Fourth Rotation: Office/Dynamics/Bing Business Intelligence
+
+## Advice
+
+### Aspiring FRP's
+
+### Current FRP's
+
+### Graduating FRP's 
