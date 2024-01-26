@@ -1,0 +1,36 @@
+---
+title: "Weekend Reads (1/26/24)"
+description: "Interesting things I found on the internet this week"
+author: "Mike Tokic"
+date: "2024-01-26"
+categories: [weekend-reads]
+image: "image.png"
+---
+
+![](./image.png)
+
+## Articles
+
+- [A Techno-Trad Take on Fertility](https://shakoist.substack.com/p/a-neo-trad-take-on-fertility)
+- [This is Your Reminder to Say No](https://ryanholiday.net/this-is-your-reminder-to-say-no/)
+- [Signs and Portents: Hints about the next year of AI](https://www.oneusefulthing.org/p/signs-and-portents)
+- [Microsoft Releases Copilot Pro](https://blogs.microsoft.com/blog/2024/01/15/bringing-the-full-power-of-copilot-to-more-people-and-businesses/)
+
+## Podcasts
+
+- [Sal Khan on the Future of Education](https://open.spotify.com/episode/7EBXdFqRGw6PKDrDnadaid?si=8R-nYg7VS1WtDBIayf9GBg&nd=1&dlsi=624e6711a4c44974)
+- [Peter Attia on Huberman Lab](https://open.spotify.com/episode/2WAURbTJ5afxr0pcu4cu2b?si=fTxM6hgbQpWDMDfux3wDTA)
+- [Markel CEO on The Knowledge Project](https://open.spotify.com/episode/4JOE60a1MqyoxN7Qgn6nXN?si=nW4Oa33TQnCD62wtVUFajw&nd=1&dlsi=5dca55e42f864506)
+
+## Tweets
+
+- [Peacock Boosting Their App Downloads](https://twitter.com/trungtphan/status/1747047730223198438?s=46&t=8Xa2BngQ9d359SJzFrCFMA)
+- [Surface Area in Your Life](https://twitter.com/shaneaparrish/status/1692163310362214606?s=46&t=8Xa2BngQ9d359SJzFrCFMA)
+
+## Books
+
+- [Atomic Habits by James Clear](https://www.amazon.com/Atomic-Habits-Proven-Build-Break-ebook/dp/B07D23CFGR/ref=tmm_kin_swatch_0?_encoding=UTF8&qid=1706058523&sr=8-1)
+
+## Products
+
+- [Tuo Circadian Lightbulb](https://www.thetuolife.com/)
