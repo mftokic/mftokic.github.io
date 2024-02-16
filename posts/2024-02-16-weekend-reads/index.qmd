@@ -1,0 +1,30 @@
+---
+title: "Weekend Reads (2/16/24)"
+description: "Interesting things I found on the internet this week"
+author: "Mike Tokic"
+date: "2024-02-16"
+categories: [weekend-reads]
+image: "image.png"
+---
+
+![](./image.png)
+
+## Articles
+
+- [8 Lessons from "Curb Your Enthusiasm"](https://www.readtrung.com/p/8-lessons-from-curb-your-enthusiasm)
+- [The Knowledge Economy Is Over. Welcome to the Allocation Economy](https://every.to/chain-of-thought/the-knowledge-economy-is-over-welcome-to-the-allocation-economy/)
+- [The Race Is On to Stop Ozempic Muscle Loss](https://www.nytimes.com/2024/02/08/well/live/ozempic-muscle-loss-exercise.html)
+- [All My Thoughts After 40 Hours in the Vision Pro](https://waitbutwhy.com/2024/02/vision-pro.html)
+
+## Tweets
+
+- [High Agency by George Mack](https://twitter.com/george__mack/status/1751522832545107992)
+- [Vision Pro Teardown by Trung Phan](https://twitter.com/trungtphan/status/1757590076027281580?s=46&t=8Xa2BngQ9d359SJzFrCFMA)
+
+## Books
+
+- [The Boys in the Boat by Daniel James Brown](https://www.amazon.com/Boys-Boat-Americans-Berlin-Olympics-ebook/dp/B00AEBETU2/ref=tmm_kin_swatch_0?_encoding=UTF8&dib_tag=se&dib=eyJ2IjoiMSJ9.KquVRXnik3uOg8hxrLmJfP_LahKB4s1W46vzNAgAb9wvj80R1_rinS9btDIvVMLrc4mooEEO2d9FMOJYI2OsrGfzFHNWTUH8LtJNa0moro5FM4CWZttdApwLepeP_x0lB_8eIRJXq3y7CcHf-Kn6a2p3hBhsY_P32sHQg7u7D5JEHOE4aAkLflmwMHHIPTd56wISovn7vw3oTtFnSPVL5yx8vuz-GGhu6En1F9ZeHoQ.0GJBdgRORD33beQuLvtA3nEpCNE0wzbCf6HNbAENZVg&qid=1708101446&sr=8-1)
+
+## Products
+
+- [Maui Nui Sugar Free Venison Jerky](https://mauinuivenison.com/collections/butcher-shop/products/sugar-free-pepper-stick-24-pack)

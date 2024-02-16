@@ -47,16 +47,65 @@ This rotation was all around analytics, which was exactly what I needed. I was a
 
 Power BI was recently released. No one on the team knew how to use it, but understood how powerful it could be when visualizing data. So I became the Power BI guy on the team. The one to figure out how to use it, then teach it to everyone else. Thankfully the previous FRP started them on the Power BI journey by building some initial dashboards. My job was to improve those dashboards, then get everyone else up to speed on how they could build their own. It was a solid experience in the world of analytics. One where no one could show you how to solve certain problems. You were on your own and had to figure everything out yourself. 
 
-The analytics experience was great, but still no AI. While on the team I tried to find ways we could apply AI and machine learning to specific areas but couldn't find a good opportunity. At this point I started to learn
+The analytics experience was great, but still no AI. While on the team I tried to find ways we could apply AI and machine learning to specific areas but couldn't find a good opportunity. At this point I started to learn more on my own through books and courses on the internet. I was flying blind, with no one to guide me to ensure I was headed in the right direction. That's when the power of serendipity came and altered the course of my FRP career. 
+
+Another FRP analyst in my class got her last pick on her list of prioritized rotations. Like choice number 32 out of 32 options. Right before she started on her team for the second rotation, there was a large re-org and she was able to essentially chose wherever she'd like to go in the broader org. A true choose your own adventure. She had an information systems background and found a team that was just starting to get into the world of machine learning. I heard about this and knew exactly where I wanted to go for my third rotation. 
 
 ### Third Rotation: Finance Business Intelligence Services
 
+Working for the FBI, what a fun thing to say. The FBI Services team was almost an in house consultancy team, who supported most folks in finance. If someone wanted a special dashboard, custom tool, or even machine learning model they could reach out to this team and get the help they needed. The team consisted mostly of program manager (PM) type roles for full time employees, and various technical roles for vendors.  
+
+Coming to this team was being at the right place at the right time. In the summer of 2015 (during my internship) our CFO reached out to the head of the cloud engineering team, asking him to help get some initial machine learning solutions off the ground. Eventually this work was transferred to the FBI Services team, who hired a team of data science vendors to keep the work going. Most of the ML solutions centered around time series forecasting. Since that is easily the biggest bang for buck ML work in the corporate finance space. Almost everyone under the CFO is responsible for some sort of forecast, so the impact with ML is enormous.
+
+I came on the team as a PM who would partner with the data science vendors to build ML solutions. It was a dream come true. Finally I had people I can talk to about ML. Pick their brain. See how they think about ML problems. I also found a data science certification offered through Microsoft (on the EdX learning platform). It had a full learning track for python, no coding experience required. Thankfully as a Microsoft employee I could take the courses for free. While on the team I was able to make the learning part of my job, and even devote part of each day to taking the courses. It was a dream come true. 
+
+The big project on the team was around creating a centralized tool for our finance teams in the field, teams who support sales and sit all around the world, to use for their quarterly forecast of the commercial business. We were tasked with building a tool that could combine machine learning methods with existing sales pipeline based methods (taking what's in the sales pipeline and multiplying it by how many deals we have closed on average historically). One tool that everyone in the field could use instead of building their own manual excel model that eats up weeks of their time every forecast cycle. 
+
+It was a fun project to work on. The stakes were high, and no one had done anything like it before. It wasn't just a machine learning project, but also a centralization and automation project. A crazy ven diagram of categories of technology. Over the course of my six month rotation we (and I say that lightly since I was the rookie on this project) were able to go from initial concept to working plugin in excel that could automatically calculate the forecast for the user, allow them to select what forecast methods they'd like to use, make any manual adjustments, and save that data back to a data cube. A herculean effort that had a few late nights toward the end of the project. It was a fantastic learning experience, so many different opportunities to learn in one project. How to work with technical and non-technical people. Getting the most from ML models, and knowing their limitations. The change management required to get to people to want to use the new tool and move away from what they've always done. 
+
+I was also able to knock out the entire Microsoft certification in data science. I could now write python code to analyze data, train models, and create predictions. Everything that astounded me as an intern was now in my tool kit. I had data super powers and it felt awesome. The only problem is I had no idea what came next. Towards the end of the rotation I wanted to stay on the team and graduate early. Unfortunately previous FRP was able to secure a full time spot on the team before I asked. Now I was in a tough spot. Knowing what I wanted to do, but not knowing where to do it. Thankfully serendipity came to my rescue. 
+
+At a FRP manager round table, my manager noted to the group that I was looking for a home for my fourth and final rotation. I wanted to work on machine learning but had no clue what team to rank highly. Another manager spoke up, saying they were just starting to dip their toes in the ML space and could have me on the team. That chance encounter lead me to ranking that rotation as my number one pick. Other FRP's thought I was crazy. Usually that rotation went to a first year FRP, often as someone's first rotation. I saw it as an opportunity to work on a technical team and carve out a path to working full time on ML. Safe to say after I joined the team every FRP who has worked on the team since has been a second year. 
+
 ### Fourth Rotation: Office/Dynamics/Bing Business Intelligence
+
+My final rotation was a BI team that supported finance teams in the Office, Dynamics, and Bing product spaces. Previous FRP's worked on an executive scorecard that would get send to senior leaders. I had my fill of scorecards while an intern so I was relieved that they were changing the rotation to allow me to work on machine learning problems. I felt like the luckiest guy in the world. I could actually write code to build machine learning models and get paid for it, all without having a degree in the subject. 
+
+I worked on two main projects while on the team. One was around forecasting search traffic volume for our Bing business partners, and another was focused on trying to predict if a potential customer purchase in our sales pipeline was going to close or not. The search volume project was exciting because I could write code from scratch to create the forecasts. It was my first true ML project that I was responsible for coding. Building something from nothing, it was exhilarating. Just like my first rotation manager said. 
+
+The second project was a tough one. Being able to create a classification model to predict the likelihood of a deal in our customer sales pipeline closing was a tricky project. One where getting high quality historical data was tough to get. I knew this was something analytics teams in sales had to of tried to solve before, so I sent out the bat signal through a few distribution groups and got a hit. A data science team in India had done the exact work I needed and could send me the results of their models prediction. What should have taken months of work was now widdled down to a few weeks to pull the prediction data and display it in a Power BI. Leveraging the work of others proved a powerful lesson for me, and allowed me to finish my project that much faster. 
+
+My time on the team flew by and I was quickly approaching the end of my FRP tenure, meaning I needed to find a full time job ASAP. Most of my time quickly shifted to checking internal job boards and emailing managers in other BI teams, hoping they had a spot for me. I wanted this ML train to keep rolling. My current team said that they could potentially offer me a job, but I had to wait a little longer. This did little to remove any fear of not finding a job post FRP graduation. FRP's were given some flexibility in finding a full time job. After graduating the program in September, Microsoft gave you about 4-6 weeks more to settle into a final job. You would still get paid, even if you didn't have a team to call home. Being in this corporate limbo sounds nice in theory but in reality is awful. Like your days are numbered.   
+
+The waiting ended up in a re-org of another BI team joining ours. So there was a hiring freeze in the meantime while both teams were being combined. After that, a job was offered, and the rest is history. I'm still on that team today. We've been through a lot of re-orgs since 2018, but I still get to work on ML every single day. I consider myself lucky. 
 
 ## Advice
 
+Here is my advice for anyone interested in the FRP, currently in the program, or FRP's who are about to graduate and start the next phase of their career.
+
 ### Aspiring FRP's
+
+Recruiting for the FRP used to be done at Target schools. Places like Texas, Penn, University of Washington. Kids from these schools normally had the best shot at getting an interview, because Microsoft would come onto campus and do interviews. Thankfully this started to change when I applied for the internship. Now Microsoft finds FRPs from any school in the country, even recently expanding to other parts of the world. This opens up the opportunity of joining the FRP to almost anyone in the world, but because of this it becomes harder to get recognized in a sea full of applications. 
+
+Before you even apply, you need to put yourself in a strong position by building a portfolio of experiences and skills that make you a perfect match for the FRP. Here is what I recommend.  
+
+1. High Agency: Having good grades is a fantastic accomplishment, but nowadays everyone has good grades. It becomes more of a check box than something that differentiates yourself from others. Grades show that you can follow instructions, keep deadlines, and demonstrate some type of understanding of your study area. What companies want though are people who go out into the world and make things happen. People who are proactive instead of reactive, or better put have high agency. The best definition I've heard of high agency is "who would you call to bail you out of a third world prison?". Someone who can do that can most likely figure out how to do any kind of job, and become indispensable to their company. The best way to showcase high agency to recruiters at Microsoft is to show how you spend your time outside of the classroom. If you have a 4.0 but only play video games when you're not studying, your resume will most likely get thrown away. Don't get me wrong, you could be a fantastic hire but a recruiter has no idea how you get along with others, your communication skills, or anything that's not related to reading a textbook and taking a test to prove you read the textbook. The best way to showcase high agency is with leadership experience. Running your own business, being the vice president of your sorority, being treasurer of your finance club, running your own charity, working a full time job to pay for school. These are all ways to demonstrate that you are someone who goes out and makes things happen. That you indeed have high agency. 
+
+2. Previous Work Experience: Having already done the job makes it easy to get a similar job. 
+
+3. Data Superpowers: 
+
+Tips when applying. 
 
 ### Current FRP's
 
+- Always ask for what you want
+- Always see who else is working on something first
+
 ### Graduating FRP's 
+
+- Cast a wide net 
+- The best jobs go to people with high agency
+- Join for the team, not the job. The job will eventually come. Being in the right position is important. 
+
+## Closing Thoughts
