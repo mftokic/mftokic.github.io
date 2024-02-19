@@ -1,6 +1,6 @@
 ---
 title: "Thoughts on My Journey in Microsoft's Finance Rotation Program"
-description: "My path through the FRP and Advice to Aspiring+Current Analysts"
+description: "My path through the FRP and advice to aspiring and current analysts"
 author: "Mike Tokic"
 date: "2024-02-19"
 categories: [career, finance]
