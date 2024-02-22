@@ -1,0 +1,36 @@
+---
+title: "Weekend Reads (2/23/24)"
+description: "Interesting things I found on the internet this week"
+author: "Mike Tokic"
+date: "2024-02-23"
+categories: [weekend-reads]
+image: "image.png"
+---
+
+![](./image.png)
+
+## Articles
+
+- [Sora by OpenAI](https://openai.com/sora)
+- [OpenAI Forum](https://forum.openai.com/)
+- [Company Fires Employees Who Don't Embrace New AI Tools](https://bensbites.beehiiv.com/p/ignitetech-using-ai-change-business)
+
+## Videos
+
+- [Aswath Damodaran on Prof G Markets](https://www.youtube.com/watch?v=CX7Ng70IEwc)
+- [What I Learned From 100 Days of Rejection](https://www.youtube.com/watch?v=-vZXgApsPCQ)
+- [Charlie Houpert on Modern Wisdom](https://www.youtube.com/watch?v=XieCU9nzrl8)
+
+## Podcasts
+
+- [Chris Williamson on Joe Rogan](https://open.spotify.com/episode/7iLniD7dXRCJVzvP8IPCtf?si=4MXVdJFkS52MttJH3s-49Q)
+- [Latest AI Developments on All In](https://open.spotify.com/episode/3hSnWfuMS4TMsd1p7BTYyi?si=D7TerLvXSEK5MiFsqPfF5w)
+- [Morgan Housel on Modern Wisdom](https://open.spotify.com/episode/2b3r0hLbXz8oxCTB7lZN6X?si=FkTHisA2QoiG6Bx6Ka9ACw)
+
+## Songs
+
+- [Sweet City Woman by Stampeders](https://open.spotify.com/track/52SCT6ImFklqEhH21lgErO?si=7b5b89bd51d7408d)
+
+## Series
+
+- Unbreakable Kimmy Schmidt on Netflix
