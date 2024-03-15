@@ -1,0 +1,28 @@
+---
+title: "Thoughts on First Principles in Time Series Forecasting"
+description: "Walking through the building blocks of creating a great forecast"
+author: "Mike Tokic"
+date: "2024-03-20"
+categories: [time-series, machine-learning]
+image: "image.png"
+---
+
+![](./image.png)
+
+### Domain Expertise
+
+### Higher Grain Higher Accuracy
+
+### Dealing With Trend
+
+### Order Is Important
+
+### Magic is in the Feature Engineering
+
+### Simple Models Are Better Models
+
+### Capture Uncertainty
+
+### Simple Model Averages Are King
+
+### Deep Learning Last
