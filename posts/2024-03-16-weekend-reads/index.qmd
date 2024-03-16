@@ -17,7 +17,7 @@ image: "image.png"
 
 - [Chris Davis On The Knowledge Project](https://open.spotify.com/episode/6fJYHF4NOQZvoCpaCFt7lX?si=GkalASEQRzq22cxs77TYNw)
 - [Kimbal Musk On Lex Friedman](https://open.spotify.com/episode/7LQzv0OKaE6KWEPPXPWuv7?si=CA0dzU35Q96xKYkIQipI0g)
-- [Dr. Cal Newport On Huberman Lab]
+- [Dr. Cal Newport On Huberman Lab](https://open.spotify.com/episode/5TAmY56aFV2J6Byn0qg94H?si=G2jTl8QFR4-P40FxjXd9jw)
 
 ## Tweets
 
