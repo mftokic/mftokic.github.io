@@ -1,0 +1,32 @@
+---
+title: "Weekend Reads (3/16/24)"
+description: "Interesting things I found on the internet this week"
+author: "Mike Tokic"
+date: "2024-03-16"
+categories: [weekend-reads]
+image: "image.png"
+---
+
+![](./image.png)
+
+## Videos
+
+- [The Algebra of Happiness](https://www.youtube.com/watch?v=-gfEjOgxBfI)
+
+## Podcasts
+
+- [Chris Davis On The Knowledge Project](https://open.spotify.com/episode/6fJYHF4NOQZvoCpaCFt7lX?si=GkalASEQRzq22cxs77TYNw)
+- [Kimbal Musk On Lex Friedman](https://open.spotify.com/episode/7LQzv0OKaE6KWEPPXPWuv7?si=CA0dzU35Q96xKYkIQipI0g)
+- [Dr. Cal Newport On Huberman Lab]
+
+## Tweets
+
+- [Excellent Product Placement](https://twitter.com/heyitswindy/status/1764023423485812995?s=46&t=8Xa2BngQ9d359SJzFrCFMA)
+- [Meet Devin, Your AI Dev Intern](https://twitter.com/cognition_labs/status/1767548763134964000?s=46&t=8Xa2BngQ9d359SJzFrCFMA)
+- [SpaceX Launch](https://twitter.com/spacex/status/1768267464062943676?s=46&t=8Xa2BngQ9d359SJzFrCFMA)
+- [ChatGPT Writing Prompt](https://twitter.com/neilpatel/status/1768645880784314626?s=46&t=8Xa2BngQ9d359SJzFrCFMA)
+- [Invest For The Long Haul](https://twitter.com/thekriskay/status/1768665799638553068?s=46&t=8Xa2BngQ9d359SJzFrCFMA)
+
+## Books
+
+- [The Great Mental Models Volume 1 by Shane Parrish](https://www.amazon.com/Great-Mental-Models-Thinking-Concepts-ebook/dp/B07P79P8ST/ref=tmm_kin_swatch_0?_encoding=UTF8&dib_tag=se&dib=eyJ2IjoiMSJ9.nqDtFB0egHNRqbrwj7r9Q_VC72or3xvMfmy7E8Mp0Jf450tLXd7icWtUFMWvgbxO9dAyqa7WCJgjoHxY_gFVtNrfRN0jweiog60OU-ohIGe6cOiS0lNSskb-ZSLy3T-YZr62UAI1EL6NaBwfeB68kg4YW61sMl7qJdAYRlVMFg5ymByXAbbwp11EadBruMWEyWfCnPSoVU1CNUpFRnr4WUj_3IAu4Uv2sihpLbmPf1Q.wzJzOHHNv35HioL8ZTZcL1y-Tl7sbyX4KoL6E-Vge04&qid=1710597095&sr=8-1)
