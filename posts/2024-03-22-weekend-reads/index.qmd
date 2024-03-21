@@ -1,0 +1,20 @@
+---
+title: "Weekend Reads (3/22/24)"
+description: "Interesting things I found on the internet this week"
+author: "Mike Tokic"
+date: "2024-03-22"
+categories: [weekend-reads]
+image: "image.png"
+---
+
+![](./image.png)
+
+## Articles
+
+## Videos
+
+## Podcasts
+
+## Tweets
+
+## Books
