@@ -11,10 +11,26 @@ image: "image.png"
 
 ## Articles
 
+- [DHH On Coding AI Agents](https://world.hey.com/dhh/developers-are-on-edge-4dfcf9c1)
+- [When Confidence Backfires](https://collabfund.com/blog/the-thin-line/)
+
 ## Videos
+
+- [Sahil Bloom on Building Life Systems](https://youtu.be/NdxFctWShtc?si=pFzzxt7EctaREoZY)
+- [Sam Altman on Lex Friedman](https://youtu.be/jvqFAi7vkBc?si=v654_j6USVkIUGNx)
+- [Jensen Huang at Stanford GSB](https://youtu.be/lXLBTBBil2U?si=yEU-YxYkgusDFkEd)
+- [TikTok Ban, AI, and more on All In](https://youtu.be/uMajFsCkzxY?si=fwzKDf-jfCK-ZyKT)
 
 ## Podcasts
 
+- [Morgan Housel on Modern Wisdom](https://open.spotify.com/episode/11oI0JELKOohCSEwz8WOQD?si=1648IhapTUOdkaanwRM4Ug)
+
 ## Tweets
 
+- [Grateful that Kansas won their first round game](https://x.com/BallsackSports/status/1770999544911626266?s=20)
+- [How Momentum Rules Your Life](https://x.com/george__mack/status/1769376253524496607?s=20)
+- [Cognitive Biases](https://x.com/Feynmanism_/status/1753767517762596903?s=20)
+
 ## Books
+
+- [The Numbers Game by Chris Anderson](https://www.amazon.com/Numbers-Game-Everything-About-Soccer-ebook/dp/B00BPDR3E2/ref=tmm_kin_swatch_0?_encoding=UTF8&dib_tag=se&dib=eyJ2IjoiMSJ9.rmUGJqVG-UDO-EJgjWaUjPm0ug1og2SXZQ8GiC45XXxuQBtP7Zt81fkEWNptjyu6-K4Lk6Dq4pKN867arj5xDiLron2Zl7KN5-fjRRh1w15sNA0UvwnPtIKnfWqyQEGEd475FjsPSiNH_CVWG5956NWPyp4f2j9I5mYgWmxLceICvMI-j9WKDdR5Xn9MwPaRwzIg0N5GNI9U_r2gIstQ0RlZhNonJR2TyxycZexvtKY.7_sZ4hdeMz5-fU0BCzqT3rFyOo0klmjutMl3rZ_qpn4&qid=1711121115&sr=8-4)
