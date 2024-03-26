@@ -153,41 +153,21 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p><img src="./image.png" class="img-fluid"></p>
-<p>I’ve been doing time series forecasting with machine learning (ML) most of my career. I believe it’s still the best AI opportunity in corporate finance, even with all of the latest Generative AI developments in recent years. If you work for the CFO, chances are you often create predictions about the future. Those predictions take time and can always be more accurate. Machine learning can help in both areas. Before you want to explore building machine learning solutions in your finance org, it’s important to understand the true building blocks of making good forecasts.</p>
+<p>I’ve been doing time series forecasting with machine learning (ML) most of my career. I believe it’s still the best AI opportunity in corporate finance, even with all of the latest Generative AI developments in recent years. If you work for the CFO, chances are you often create predictions about the future. Those predictions take time and can always be more accurate. Machine learning can help in both areas. Before you build machine learning solutions in your finance org, it’s important to understand the true building blocks of making good forecasts.</p>
 <p>In this post I will overview each first principle, and have follow-up posts digging deeper into each one. Let’s dive in.</p>
-<ul>
-<li><ol type="1">
+<ol type="1">
 <li><strong>Domain Expertise</strong>: Knowing what factors actually influence what you are trying to forecast is more important than which ML model to train.</li>
-</ol></li>
-<li><ol start="2" type="1">
 <li><strong>Garbage In Garbage Out</strong>: Training a model on bad data leads to bad forecasts.</li>
-</ol></li>
-<li><ol start="3" type="1">
 <li><strong>The Future Is Similar To The Past</strong>: If you expect the future to be drastically different than past data, you will have a hard time training accurate models.<br>
 </li>
-</ol></li>
-<li><ol start="4" type="1">
 <li><strong>Higher Grain Higher Accuracy</strong>: Forecasting by country is often more accurate than forecasting by city. Forecasting by month is often more accurate than forecasting by day.</li>
-</ol></li>
-<li><ol start="5" type="1">
 <li><strong>Order Is Important</strong>: When time is involved, how your data is ordered makes all the difference.</li>
-</ol></li>
-<li><ol start="6" type="1">
 <li><strong>The Magic Is In The Feature Engineering</strong>: How you transform your data before model training can transform a mediocre forecast into a world class forecast.</li>
-</ol></li>
-<li><ol start="7" type="1">
 <li><strong>Simple Models Are Better Models</strong>: Like occam’s razor, the best model is often the one with the least amount of inputs.</li>
-</ol></li>
-<li><ol start="8" type="1">
 <li><strong>Capture Uncertainty</strong>: Showing the back testing results and future uncertainty of a model’s forecast builds more trust.</li>
-</ol></li>
-<li><ol start="9" type="1">
 <li><strong>Model Averages Are King</strong>: Usually a simple average of multiple models is more accurate than just one model’s prediction.</li>
-</ol></li>
-<li><ol start="10" type="1">
 <li><strong>Deep Learning Last</strong>: Deep learning isn’t as effective as more traditional ML models.</li>
-</ol></li>
-</ul>
+</ol>
 <section id="final-thoughts" class="level3">
 <h3 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h3>
 <p>This is not an exhaustive list, but instead principles that I find particularly important when creating a time series forecast. Having a firm understanding of these principles is enough to get the ball rolling on any type of forecast you’re working on. Thankfully, the very same approach I use in my job to do forecasting is open source and freely available through my R forecasting package called <a href="https://microsoft.github.io/finnts/index.html">finnts</a>. Even if you’ve never done data science or used R before, finnts makes it easy to get off the ground fast without shooting yourself in the foot when dealing with the above principles. Stay tuned for more posts about each principle.</p>
