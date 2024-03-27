@@ -1,0 +1,45 @@
+---
+title: "Time Series First Principles: Domain Expertise"
+description: "Knowing what factors actually influence what you are trying to forecast is more important than which ML model to train"
+author: "Mike Tokic"
+date: "2024-03-28"
+categories: [time-series, machine-learning]
+image: "image.png"
+---
+
+![](./image.png)
+
+### Time Series First Principles Series
+
+This post dives into the first principle of a good time series forecast, domain expertise. Check out the [initial post](https://mftokic.github.io/posts/2024-03-26-time-series-first-principles-initial/) to get a high level view of each principle. 
+
+1. **Domain Expertise**
+2. Garbage In Garbage Out
+3. The Future Is Similar To The Past
+4. Higher Grain Higher Accuracy
+5. Order Is Important
+6. The Magic Is In The Feature Engineering
+7. Simple Models Are Better Models
+8. Capture Uncertainty
+9. Model Averages Are King
+10. Deep Learning Last
+
+### Introduction
+
+Any data scientist worth their salt can create a time series forecast for you. They can pull some data, train some models, and give you a forecast. All with you out of the loop. If that's the case at your company, run! This is a big red flag. While that can sometimes yield good results, most of the time the most important ingredient is missing, which is strong domain expertise about what you're trying to forecast. This is where strong understanding of the business and market forces come into play. You know, the stuff that finance people excel at. Pairing robust ML models with strong domain expertise about the area being forecasted always yields the most accurate forecast. It also increases trust in that forecast, since the humans using that forecast know that the model took into account important factors that influence the business. 
+
+### It's Not About Data Size, but instead How You Use It
+
+How does domain expertise change how a ML model is created? This can manifest in many forms. The most common is changing the kind of data used in training a model. Variables that a model learns from are called "features". A good example is in forecasting real estate expenses at a company. In the last few years, COVID and the work from home revolution have changed how people come into work. This changes how many people drink coffee, use the copier, and even which buildings stay in operation for a company. Simply pulling historical building expense data and training a model could get you ok results, but to get to peak performance you need domain expertise around what actually moves the needle for building expenses. Example features could be the square footage of a building, how many people actually badge into that building each month, even the periods where COVID was at its worse and a work from home mandate was in effect. All of these things are custom knowledge, most likely kept inside the heads of the finance workers who oversee the real estate space within a finance org. 
+
+### Iteration is Key
+
+Throwing all of your ideas as features into a model from the start is usually not a good idea. Instead having multiple rounds of iteration is key. In the real estate example, it's best to start out with no external features. Just use historical spend to forecast future spend. Starting with this simpler approach can sometimes get you 90% of the accuracy you need, maybe even 100% if there is stable trends and seasonality that carries into the future. Run this first to see what the initial accuracy is, and if it doesn't meet your requirements that when we can refine by adding new data. 
+
+Once you have the baseline, you can look deeper into the accuracy results to see where the forecast is performing poorly. This is where domain knowledge kicks in. Poor initial forecast performance can be fixed by asking the domain expert what does a human know that can then be quantified as data to teach a model? This kind of insight can be added into a model with easy to find hard data, or even as binary yes or no values (1 or 0) to denote when a specific one off event happened.  
+
+For the real estate forecast, maybe there was a period where expenses jumped sharply in one month and stayed at that new level for the rest of the year. This will be hard for a ML model to understand or even anticipate, but the domain expert of the real estate space know that in that specific month there were two new building openings. So the expenses of course jumped up a significant degree and stayed like that going forward. Knowing this, we can get historical square footage information and add it into our model. We can even incorporate future buildings that might be removed or added going forward. This will help a model understand how changes in total buildings impact spend. 
+
+So we added total square footage to our model and the results improved compared to our initial baseline with new external features. But it didn't move the needle that much. Even though our company might be adding more buildings, in recent years the spend may not have a perfect correlation with added square footage. Knowing this, the domain expert recommends using anonymous badge in data to see who is actually coming into work. Pre-covid this data may not have been useful, since most buildings were always at max capacity with everyone coming to work each day. Now in a post-covid world this has changed forever. Now some teams might only be in their assigned building 2-3 days a week. Or maybe they never returned in person, deciding instead to buy ranches in Wyoming with fast WiFi. 
+
+### Final Thoughts
