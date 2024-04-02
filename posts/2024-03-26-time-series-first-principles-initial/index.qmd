@@ -3,7 +3,7 @@ title: "Thoughts on First Principles in Time Series Forecasting"
 description: "Building blocks of creating a great forecast"
 author: "Mike Tokic"
 date: "2024-03-26"
-categories: [time-series, machine-learning]
+categories: [time-series, machine-learning, finance]
 image: "image.png"
 ---
 
