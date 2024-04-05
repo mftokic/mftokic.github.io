@@ -1,0 +1,34 @@
+---
+title: "Weekend Reads (4/5/24)"
+description: "Interesting things I found on the internet this week"
+author: "Mike Tokic"
+date: "2024-04-05"
+categories: [weekend-reads]
+image: "image.png"
+---
+
+![](./image.png)
+
+## Videos
+
+- [Improving Focus](https://youtu.be/_Y-7liNT1Ok?si=VDIlw5FTQXCu2kYm)
+- [Dopamine and Motivation](https://youtu.be/ha1ZbJIW1f8?si=2D0Gp15NkD9iup01)
+- [Optimal Morning Routine](https://youtu.be/gR_f-iwUGY4?si=JHewqUkP7dautU1v)
+- [Sequoia AI Summit](https://www.youtube.com/playlist?list=PLOhHNjZItNnOoPxOF3dmq30UxYqFuxXKn)
+- [SBF, Gov Spending, and More on All In](https://youtu.be/4t4YkHSTZbw?si=qqjiCcKg4_YmotoA)
+
+## Podcasts
+
+- [Scott Glenn on Tim Ferriss](https://open.spotify.com/episode/4iqmP3Gys5AkyLpcXNU26N?si=zGiCV0c0Ts-8baaJ2j2k8g)
+- [Seth Godin on Tim Ferriss](https://open.spotify.com/episode/7ExrANvf3Rhha46GRX5W8X?si=ON6IJbN-QT-SDo6a7fOjMQ)
+- [Dr. Rhonda Patrick on The Knowledge Project](https://open.spotify.com/episode/4tnRkV3qL3GulapNmzirsy?si=3NYI2OFhSVWpFevtfxvK6Q)
+
+## Tweets
+
+- [Sora Goodness](https://x.com/gdb/status/1772334028009652415)
+- [Satya Nadella Stays Undefeated](https://x.com/EMostaque/status/1772594194315436266)
+- [Bezos Leadership Principles](https://x.com/thegarrettscott/status/1771645169151901952)
+
+## Books
+
+- [GenAI Guidebook](https://ravinkumar.com/GenAiGuidebook/book_intro.html)
