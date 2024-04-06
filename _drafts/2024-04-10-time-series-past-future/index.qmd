@@ -1,0 +1,52 @@
+---
+title: "Time Series First Principles: The Future Is Similar To The Past"
+description: "If you expect the future to be drastically different than past data, you will have a hard time training accurate models"
+author: "Mike Tokic"
+date: "2024-04-10"
+categories: [time-series, machine-learning, finance]
+image: "image.png"
+---
+
+![](./image.png)
+
+### Time Series First Principles Series
+
+This post dives into the third principle of a good time series forecast, the future is similar to the past. Check out the [initial post](https://mftokic.github.io/posts/2024-03-26-time-series-first-principles-initial/) in this series to get a high level view of each principle. 
+
+1. [Domain Expertise](https://mftokic.github.io/posts/2024-04-02-time-series-domain-expertise/)
+2. [Garbage In Garbage Out](https://mftokic.github.io/posts/2024-04-08-time-series-garbage/)
+3. **The Future Is Similar To The Past**
+4. Higher Grain Higher Accuracy
+5. Order Is Important
+6. The Magic Is In The Feature Engineering
+7. Simple Models Are Better Models
+8. Capture Uncertainty
+9. Model Averages Are King
+10. Deep Learning Last
+
+### Here Comes The Sun 
+
+This principle is very straightforward. For whatever you're trying to forecast, it will be a lot easier to do with with machine learning (ML) if the future is similar to the past. 
+
+When you open the weather app on your phone, have you ever looked at when the sun is expected to rise and set? If you're on the new human optimization craze about getting morning sunlight, you most likely have. That forecast is down to the minute, most likely even second, and has a high degree of accuracy. Is the forecast accurate because of expert human judgement, or the type of weather related features fed into a ML model? Nope. It's accurate because the sun has risen and set at relatively the same time based on time of year for millions of years. We don't expect future sun rises and sun sets to change that much going forward, that's why your weather app gives you an exact time for the sun rise but gives you only a percent probability of rain. Even then that chance of rain may not even be accurate. It's almost a joke now how many times in Seattle I've seen a dry forecast only to step out of my house and have it immediately start raining. At least I know the exact minute when the sun will set that day. 
+
+### Handling A Changing Future
+
+Your business is most likely not like the sun. It's constantly changing, reacting to market forces and industry competitors. The best way to teach a model about your expectations of the future is to give it data about the past and future. 
+
+Let's use an example of a monthly revenue forecast for a product. If you only use historical sales data to forecast the product, then you are making the assumption that the future of the product will be almost identical to the past, especially the most recent past. For some established products in mature industries this could be totally fine, but often this is not the case. 
+
+One thing to try is adding features that can help explain how outside forces impact the product. For example, how much money consumers have to spend might greatly impact who buys your product. So using an economic feature like consumer sentiment can help a model to adjust it's predictions based on changes in consumer spending habits. 
+
+We can add features into our data in two ways. The first is to just give historical values of that feature. This will force us to only use historical lags of the feature when training a ML model, since we don't know what the future value of that feature will be. We can take that original feature and create new features (this is called feature engineering). Ones that are a 3 month lag, 6 month lag, or 12 month lag of the original data. Often macro data like consumer sentiment can be a lagging indicator. Meaning their impact is delayed and takes a while to flow through the economy. Changes in consumer sentiment from 6 months ago can actually have a strong correlation with how customers purchase our product today. 
+
+A second way is to use both historical values and future values. We could use a future forecast of consumer sentiment in our model, in addition to using the historical data. That way a model can learn from any lagged relationships as well as understand how changes in consumer sentiment impact our product in real time. These future values can either come from an expert forecast (like from famous economists) or created by your own ML solution. 
+
+### New Time Series
+
+
+### Reversal
+
+Wrong future feature values compound forecast inaccuracy. 
+
+### Final Thoughts
