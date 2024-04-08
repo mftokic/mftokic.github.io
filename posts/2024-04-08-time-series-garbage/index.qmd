@@ -78,4 +78,4 @@ Thankfully there is a solution to most of these problems. My package, [finnts](h
 
 ### Final Thoughts
 
-Messy data will always lead to a messy forecast. ML models can't save you from bad data. There's no magic wand to cure common data problems. What you can do though is make sure your data has solid historical trends/seasonality, no missing data, and good approach to handling outliers. With these taken care of your own your way to building a high quality forecast. 
+Messy data will always lead to a messy forecast. ML models can't save you from bad data. There's no magic wand to cure common data problems. What you can do though is make sure your data has solid historical trends/seasonality, no missing data, and good approach to handling outliers. With these taken care of, you're own your way to building a high quality forecast. 
