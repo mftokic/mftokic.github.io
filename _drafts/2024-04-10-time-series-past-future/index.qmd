@@ -28,7 +28,7 @@ This post dives into the third principle of a good time series forecast, the fut
 
 This principle is very straightforward. For whatever you're trying to forecast, it will be a lot easier to do with with machine learning (ML) if the future is similar to the past. 
 
-When you open the weather app on your phone, have you ever looked at when the sun is expected to rise and set? If you're on the new human optimization craze about getting morning sunlight, you most likely have. That forecast is down to the minute, most likely even second, and has a high degree of accuracy. Is the forecast accurate because of expert human judgement, or the type of weather related features fed into a ML model? Nope. It's accurate because the sun has risen and set at relatively the same time based on time of year for millions of years. We don't expect future sun rises and sun sets to change that much going forward, that's why your weather app gives you an exact time for the sun rise but gives you only a percent probability of rain. Even then that chance of rain may not even be accurate. It's almost a joke now how many times in Seattle I've seen a dry forecast only to step out of my house and have it immediately start raining. At least I know the exact minute when the sun will set that day. 
+When you open the weather app on your phone, have you ever looked at when the sun is expected to rise and set? If you're on the new human optimization craze about getting morning sunlight, you most likely have. That forecast is down to the minute, most likely even second, and has a high degree of accuracy. Is the forecast accurate because of expert human judgement, or the type of weather related features fed into a ML model? Nope. It's accurate because the sun has risen and set at relatively the same time, based on time of year, for millions of years. We don't expect future sun rises and sun sets to change that much going forward, that's why your weather app gives you an exact time for the sun rise but gives you only a percent probability of rain. Even then that chance of rain may not even be accurate. It's almost a joke now how many times in Seattle I've seen a dry forecast only to step out of my house and have it immediately start raining. At least I know the exact minute when the sun will set that day. 
 
 ### Handling A Changing Future
 
@@ -42,11 +42,26 @@ We can add features into our data in two ways. The first is to just give histori
 
 A second way is to use both historical values and future values. We could use a future forecast of consumer sentiment in our model, in addition to using the historical data. That way a model can learn from any lagged relationships as well as understand how changes in consumer sentiment impact our product in real time. These future values can either come from an expert forecast (like from famous economists) or created by your own ML solution. 
 
+### The Future Always Must Learn From The Past
+
+You might have a ton of ideas for new kinds of future information your can encode as features to train a model. In order to use this data we need to make sure there are historical examples for a model to learn from. The upcoming 2024 presidential election in the US could have a large impact on your business, which will impact your future forecast for the rest of 2024. We know exactly when the election is going to happen, so it's easy to give that information into a ML model to learn from. 
+
+The catch is we need to make sure that we show examples from the past to allow the model to learn how did previous elections impact our business and how the model should handle similar events in the future. If we only have product sales data from the last three years, then we cannot feed it future election data because we don't have the data from the 2020 or 2016 presidential elections. 
+
+If we know something is going to happen in the future, but we can't quantify it with historical data for a model, then we need to go old school. Instead we need to use our domain expertise about the business to take the ML output, without knowledge of the future event, and make a manual adjustment to the forecast based on the expected impact of the future. For the election example, maybe your product sales will grow as we get closer to the election, so if you don't have enough historical data for a model to learn about the election's impact you can make a manual adjustment to the ML forecast based on your assumption about the election's impact. 
+
+This kind of hybrid approach, ML first with a light human touch second, can create a powerful combination. A ML model can do 80-90% of the initial work and a human can make the final adjustments based on their domain expertise. This allows a human to add more insight into a forecast that is not easily quantifiable for a ML model to learn from. 
+
 ### New Time Series
 
+A new product at your company might be exciting, but is harder to forecast accurately with ML models. The lack of historical data will make it hard for any new ML model to learn from. Initial trends and seasonality may not always carry into the future. For example there might be a big spike in initial sales around release but then taper off over time. The new product may not even be on sale yet, so you are now tasked with forecasting something with zero historical data. 
+
+If the time series in question has some historical data, ideally more than one historical observation, a good way to deal with it is to train a ML model with the new time series alongside similar existing products with a lot of historical data. This is sometimes called a "global model", where a model learns from multiple time series instead of one. Training on one specific time series is sometimes called a "local model". Training a global model allows the ML model to learn general trends and seasonality patters across similar time series and apply it to the newer time series. 
 
 ### Reversal
 
 Wrong future feature values compound forecast inaccuracy. 
+
+Manual adjustments add human bias that can hurt accuracy. 
 
 ### Final Thoughts
