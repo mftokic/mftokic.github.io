@@ -2,7 +2,7 @@
 title: "Time Series First Principles: The Future Is Similar To The Past"
 description: "If you expect the future to be drastically different than past data, you will have a hard time training accurate models"
 author: "Mike Tokic"
-date: "2024-04-10"
+date: "2024-04-11"
 categories: [time-series, machine-learning, finance]
 image: "image.png"
 ---
@@ -56,12 +56,18 @@ This kind of hybrid approach, ML first with a light human touch second, can crea
 
 A new product at your company might be exciting, but is harder to forecast accurately with ML models. The lack of historical data will make it hard for any new ML model to learn from. Initial trends and seasonality may not always carry into the future. For example there might be a big spike in initial sales around release but then taper off over time. The new product may not even be on sale yet, so you are now tasked with forecasting something with zero historical data. 
 
-If the time series in question has some historical data, ideally more than one historical observation, a good way to deal with it is to train a ML model with the new time series alongside similar existing products with a lot of historical data. This is sometimes called a "global model", where a model learns from multiple time series instead of one. Training on one specific time series is sometimes called a "local model". Training a global model allows the ML model to learn general trends and seasonality patters across similar time series and apply it to the newer time series. 
+If the time series in question has some historical data, ideally more than one historical observation, a good way to deal with it is to train a ML model with the new time series alongside similar existing products with a lot of historical data. This is sometimes called a "global model", where a model learns from multiple time series instead of one. Training on one specific time series is sometimes called a "local model". Training a global model allows the ML model to learn general trends and seasonality patters across similar time series and apply it to the newer time series. This can work well if the other time series are similar to one another. 
+
+If the product you want to forecast has no historical data, then you are in a tough boat. Traditional time series methods cannot help you, since they all rely on quality historical data. What you can do is take a more traditional machine learning regression approach. This involves taking all historical products that have launched over time and training a model to understand the initial demand of a new product and how it either grows or shrinks over time. For example with iPhone sales, you can train a model on the initial sales of each iPhone model from V1 to V14, then use that model to predict the kind of demand the latest V15 iPhone might have. This type of approach would need a more detailed post to explain fully, but hopefully you get the broader picture. 
+
+To learn more about forecasting new time series, check out the [forecasting bible](https://otexts.com/fpp3/judgmental.html) written by our forecasting godfather Rob Hyndman. The chapter on judgemental forecasts goes deep into forecasting new products and discusses other approaches you can take. 
 
 ### Reversal
 
-Wrong future feature values compound forecast inaccuracy. 
+When using future values of a feature, there is a risk of compounding errors. Let's go back to the consumer sentiment example. If you create your own expectation of future consumer sentiment, or use an economist's prediction, there is a good chance that forecast will be wrong. If the forecast about consumer sentiment is wrong, and that forecast is fed into a model to predict your product's sales, then your sales forecast will be even more wrong. The errors compound. Add in other features and you can see how the house of cards can tumble pretty fast. Always be weary about using future values of features where you don't have 100% confidence in their future value. For example using future holiday features are great because they will always happen on the same day, but trying to tell a model where inflation is headed in the future can get you in trouble. 
 
-Manual adjustments add human bias that can hurt accuracy. 
+Having a human make manual adjustments after the initial ML forecast can add unneeded human bias to the final forecast. This bias can sometimes be wrong and hurt the accuracy of the forecast. It's good practice to capture these adjustments and always report on the forecast accuracy of the pure ML model and the accuracy for the model + human adjustments. That way you can track how helpful the manual adjustments are, and remember why they were made in the first place. 
 
 ### Final Thoughts
+
+Embarking on the journey of time series forecasting, remember it's more art than exact science—akin to predicting rain in Seattle. The key takeaway? Use the past as a guide but sprinkle in educated guesses about the future with caution. Whether you're launching new products or navigating established markets, blending machine learning with a dash of human intuition can create robust forecasts. Yet, tread lightly with future predictions. Too much confidence in uncertain outcomes can skew results. Think of forecasting as preparing a gourmet meal: it requires a balance of tried-and-true ingredients and innovative flavors to create something tasty. May your forecasts be as reliable as the sunrise, with just enough flexibility to handle an unexpected downpour.
