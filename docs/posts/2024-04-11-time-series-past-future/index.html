@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Mike Tokic">
-<meta name="dcterms.date" content="2024-04-02">
-<meta name="description" content="Knowing what factors actually influence what you are trying to forecast is more important than which ML model to train">
+<meta name="dcterms.date" content="2024-04-11">
+<meta name="description" content="If you expect the future to be drastically different than past data, you will have a hard time training accurate models">
 
-<title>Thoughts on Things - Time Series First Principles: Domain Expertise</title>
+<title>Thoughts on Things - Time Series First Principles: The Future Is Similar To The Past</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -108,10 +108,10 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Time Series First Principles: Domain Expertise</h1>
+      <h1 class="title">Time Series First Principles: The Future Is Similar To The Past</h1>
                   <div>
         <div class="description">
-          Knowing what factors actually influence what you are trying to forecast is more important than which ML model to train
+          If you expect the future to be drastically different than past data, you will have a hard time training accurate models
         </div>
       </div>
                           <div class="quarto-categories">
@@ -135,7 +135,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">April 2, 2024</p>
+        <p class="date">April 11, 2024</p>
       </div>
     </div>
     
@@ -156,11 +156,11 @@ ul.task-list li input[type="checkbox"] {
 <p><img src="./image.png" class="img-fluid"></p>
 <section id="time-series-first-principles-series" class="level3">
 <h3 class="anchored" data-anchor-id="time-series-first-principles-series">Time Series First Principles Series</h3>
-<p>This post dives into the first principle of a good time series forecast, domain expertise. Check out the <a href="https://mftokic.github.io/posts/2024-03-26-time-series-first-principles-initial/">initial post</a> to get a high level view of each principle.</p>
+<p>This post dives into the third principle of a good time series forecast, the future is similar to the past. Check out the <a href="https://mftokic.github.io/posts/2024-03-26-time-series-first-principles-initial/">initial post</a> in this series to get a high level view of each principle.</p>
 <ol type="1">
-<li><a href="https://mftokic.github.io/posts/2024-04-02-time-series-domain-expertise/"><strong>Domain Expertise</strong></a></li>
+<li><a href="https://mftokic.github.io/posts/2024-04-02-time-series-domain-expertise/">Domain Expertise</a></li>
 <li><a href="https://mftokic.github.io/posts/2024-04-08-time-series-garbage/">Garbage In Garbage Out</a></li>
-<li><a href="https://mftokic.github.io/posts/2024-04-11-time-series-past-future/">The Future Is Similar To The Past</a></li>
+<li><a href="https://mftokic.github.io/posts/2024-04-11-time-series-past-future/"><strong>The Future Is Similar To The Past</strong></a></li>
 <li>Higher Grain Higher Accuracy</li>
 <li>Order Is Important</li>
 <li>The Magic Is In The Feature Engineering</li>
@@ -170,30 +170,41 @@ ul.task-list li input[type="checkbox"] {
 <li>Deep Learning Last</li>
 </ol>
 </section>
-<section id="introduction" class="level3">
-<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
-<p>Any data scientist worth their salt can create a time series forecast for you. They can pull some data, train some machine learning (ML) models, and give you a forecast. All with you out of the loop. If that’s the case at your company, run! This is a big red flag. While that can sometimes yield good results, often the most important ingredient is missing, which is strong domain expertise about what you’re trying to forecast. This is where strong understanding of the business and market forces come into play. You know, the stuff that finance people excel at. Pairing robust ML models with strong domain expertise about the area being forecasted always yields the most accurate forecast. It also increases trust in that forecast, since the humans using that forecast know the model took into account important factors that influence the business. In this post we’ll use a hypothetical example of a company’s real estate spending to showcase the importance of domain expertise.</p>
+<section id="here-comes-the-sun" class="level3">
+<h3 class="anchored" data-anchor-id="here-comes-the-sun">Here Comes The Sun</h3>
+<p>For whatever you’re trying to forecast, it will be a lot easier to do with with machine learning (ML) if the future is similar to the past. It’s as simple as that.</p>
+<p>When you open the weather app on your phone, have you ever looked at when the sun is expected to rise and set? If you’re on the new human optimization craze about getting morning sunlight, you most likely have. That forecast is down to the minute, most likely even second, and has a high degree of accuracy. Is the forecast accurate because of expert human judgement, or the type of weather related <a href="https://vitalflux.com/what-are-features-in-machine-learning/">features</a> fed into a ML model? Nope. It’s accurate because the sun has risen and set at relatively the same time, based on time of year, for millions of years. We don’t expect future sun rises and sun sets to change that much going forward, that’s why your weather app gives you an exact time for the sun rise but gives you only a percent probability of rain. Even then, that chance of rain may not even be accurate. It’s almost a joke now how many times in Seattle I’ve seen a dry forecast only to step out of my house and have it immediately start raining. At least I know the exact minute when the sun will set that day.</p>
 </section>
-<section id="translating-domain-expertise-into-features" class="level3">
-<h3 class="anchored" data-anchor-id="translating-domain-expertise-into-features">Translating Domain Expertise Into Features</h3>
-<p>How does domain expertise change how a ML model is created? This can manifest in many forms. The most common is changing the kind of data used in training a model. Variables that a model learns from are called “features”. Let’s apply this to our real estate spend forecast example. In the last few years, COVID and the work from home revolution have changed how people come into work. This changes how many people drink coffee, use the copier, and even which buildings stay in operation for a company. Simply pulling historical building expense data and training a model could get you ok results, but to get to peak performance you need domain expertise around what actually moves the needle for building expenses. Example features could be the square footage of a building, how many people actually badge into that building each month, even the periods where COVID was at its worse and a work from home mandate was in effect. All of these things are custom knowledge, most likely kept inside the heads of the finance workers who oversee the real estate space within a finance org.</p>
+<section id="handling-a-changing-future" class="level3">
+<h3 class="anchored" data-anchor-id="handling-a-changing-future">Handling A Changing Future</h3>
+<p>Your business is most likely not like the sun. It’s constantly changing, reacting to market forces and industry competitors. The best way to teach a model about your expectations of the future is to give it data about the past and future.</p>
+<p>Let’s use an example of a monthly revenue forecast for a product. If you only use historical sales data to forecast the product, then you are making the assumption that the future of the product will be almost identical to the past, especially the most recent past. For some established products in mature industries this could be totally fine, but often this is not the case.</p>
+<p>One thing to try is adding features that can explain how outside forces impact the product. For example, how much money consumers have to spend might greatly impact who buys your product. So using an economic feature like consumer sentiment can help a model adjust it’s predictions based on changes in consumer spending habits.</p>
+<p>We can add features into our data in two ways. The first is to just give historical values of that feature. This will force us to only use historical lags of the feature when training a ML model, since we don’t know what the future value of that feature will be. We can take that original feature and create new features (this is called feature engineering). Ones that are a 3 month lag, 6 month lag, or 12 month lag of the original data. Often macro data like consumer sentiment can be a lagging indicator. Meaning their impact is delayed and takes a while to flow through the economy. Changes in consumer sentiment from 6 months ago can actually have a strong correlation with how customers purchase our product today.</p>
+<p>A second way is to use both historical values and future values. We could use a future forecast of consumer sentiment in our model, in addition to using the historical data. That way a model can learn from any lagged relationships as well as understand how changes in consumer sentiment impact our product in real time. These future values can either come from an expert forecast (like from famous economists) or created by your own ML solution.</p>
 </section>
-<section id="iteration-is-key" class="level3">
-<h3 class="anchored" data-anchor-id="iteration-is-key">Iteration is Key</h3>
-<p>Throwing all of your ideas as features into a model from the start is usually not a good idea. Instead having multiple rounds of iteration is key. In the real estate example, it’s best to start out with no external features. Just use historical spend to forecast future spend. Starting with this simpler approach can sometimes get you 90% of the accuracy you need, maybe even 100% if there are stable trends and seasonality that carries into the future. Run this first to see what the initial accuracy is, and if it doesn’t meet your requirements that when we can refine by adding new data.</p>
-<p>Once you have the baseline, you can look deeper into the accuracy results to see where the forecast is performing poorly. This is where domain knowledge kicks in. Poor initial forecast performance can be fixed by asking the domain expert if there is a difference between what the model knows and what a human knows. If there is a gap, can that be quantified as data to teach a model? This kind of insight can be added into a model with easy to find numeric data, or even as binary yes or no values (1 or 0) to denote when a specific one off event happened. This iterative process is where the magic happens.</p>
-<p>For the real estate forecast, maybe there was a period where expenses jumped sharply in one month and stayed at that new level for the rest of the year. This will be hard for a ML model to understand or even anticipate, but the domain expert of the real estate space knows that in that specific month there were two new building openings. So the expenses of course jumped up a significant degree and stayed like that going forward. Knowing this, we can get historical square footage information and add it into our model. We can even incorporate future buildings that might be removed or added going forward. This will help a model understand how changes in total buildings impact spend.</p>
-<p>So we added total square footage to our model and the results improved compared to our initial baseline of no external features. But it didn’t move the needle that much. Even though our company might be adding more buildings, in recent years the spend may not have a perfect correlation with added square footage. Knowing this, the domain expert recommends using anonymous badge in data to see who is actually coming into work. Pre-covid this data may not have been useful, since most buildings were always at max capacity with everyone coming to work each day. Now in a post-covid world this has changed forever. Some teams might only be in their assigned building 2-3 days a week. Or maybe they never returned in person, deciding instead to buy ranches in Wyoming with fast WiFi. Combining the square footage and badge in data into the model yielded fantastic results, much better than the initial baseline.</p>
-<p>After reviewing the improved results with the domain expert, the future forecast still seems a little low compared to the domain experts expectations. The domain expert has one last idea, trying to teach the model how COVID impacted spending. This can be quantified as a binary variable, where in all rows of the data we add a 1 if COVID was impacting the world, and 0 when it wasn’t. This means from early 2020 - early 2022 we have values of 1 and every period before and after we give a value of 0. A model can now understand that what happened over those two years was mostly a one off situation that is not expected going forward. After the ML model is trained with this new insight the back testing now looks great and the future forecast matches the expectations of the domain expert.</p>
+<section id="the-future-always-must-learn-from-the-past" class="level3">
+<h3 class="anchored" data-anchor-id="the-future-always-must-learn-from-the-past">The Future Always Must Learn From The Past</h3>
+<p>You might have a ton of ideas for new kinds of future information your can encode as features to train a model. In order to use this data we need to make sure there are historical examples for a model to learn from. The upcoming 2024 presidential election in the US could have a large impact on your business, which will impact your future forecast for the rest of 2024. We know exactly when the election is going to happen, so it’s easy to give that information into a ML model to learn from.</p>
+<p>The catch is we need to make sure that we show examples from the past to allow the model to learn how previous elections impact our business and how the model should handle similar events in the future. If we only have product sales data from the last three years, then we cannot feed it future election data because we don’t have the data from the 2020 or 2016 US presidential elections.</p>
+<p>If we know something is going to happen in the future, but we can’t quantify it with historical data for a model, then we need to go old school. Instead we need to use our domain expertise about the business to take the ML output, without knowledge of the future event, and make a manual adjustment to the forecast based on the expected impact of the future. For the election example, maybe your product sales will grow as we get closer to the election, so if you don’t have enough historical data for a model to learn about the election’s impact you can make a manual adjustment to the ML forecast based on your assumption about the election’s impact.</p>
+<p>This kind of hybrid approach, ML first with a light human touch second, can create a powerful combination. A ML model can do 80-90% of the initial work and a human can make the final manual adjustments based on their domain expertise. This allows a human to add more insight into a forecast that is not easily quantifiable for a ML model to learn from.</p>
+</section>
+<section id="new-time-series" class="level3">
+<h3 class="anchored" data-anchor-id="new-time-series">New Time Series</h3>
+<p>A new product at your company might be exciting, but is harder to forecast accurately with ML models. The lack of historical data will make it hard for any new ML model to learn from. Initial trends and seasonality may not always carry into the future. For example there might be a big spike in initial sales around release but then taper off over time. The new product may not even be on sale yet, so you are now tasked with forecasting something with zero historical data.</p>
+<p>If the time series in question has some historical data, ideally more than one year of historical observations, a good way to deal with it is to train a ML model with the new time series alongside similar existing products with a lot of historical data. This is sometimes called a “global model”, where a model learns from multiple time series instead of one. Training on one specific time series is sometimes called a “local model”. Training a global model allows the ML model to learn general trends and seasonality patters across similar time series and apply it to the newer time series. This can work well if the other time series are similar to one another.</p>
+<p>If the product you want to forecast has no historical data, then you are in a tough boat. Traditional time series methods cannot help you, since they all rely on quality historical data. What you can do is take a more traditional machine learning regression approach. This involves taking all historical products that have launched over time and training a model to understand the initial demand of a new product and how it either grows or shrinks over time. For example with iPhone sales, you can train a model on the initial sales of each iPhone model from V1 to V14, then use that model to predict the kind of demand the latest V15 iPhone might have. This type of approach would need a more detailed post to explain fully, but hopefully you get the broader picture.</p>
+<p>To learn more about forecasting new time series, check out the <a href="https://otexts.com/fpp3/judgmental.html">forecasting bible</a> written by our forecasting godfather Rob Hyndman. The chapter on judgemental forecasts goes deep into forecasting new products and discusses other approaches you can take.</p>
 </section>
 <section id="reversal" class="level3">
 <h3 class="anchored" data-anchor-id="reversal">Reversal</h3>
-<p>Getting high quality data to use as features in a model is always a good idea. There are times though where the amount of historical feature data might be lacking. For example, we may not be able to get more than 3 years of historical square footage data for our real estate expense forecast, even though we can get 5 years of historical spend data. What should we do? We can shorten the historical spend data to the last 3 years to match the square footage data, but having less data can sometimes degrade model performance. So in some cases choosing to use the full 5 years of historical spend without the square footage data is the best approach that yields the best accuracy.</p>
-<p>When facing this dilemma, try both approaches and see how accuracy is effected. I’ve seen many times that using more historical data of what you’re trying to forecast is often more accurate than shortening that data to combine it with external features.</p>
+<p>When using future values of a feature, there is a risk of compounding errors. Let’s go back to the consumer sentiment example. If you create your own expectation of future consumer sentiment, or use an economist’s prediction, there is a good chance the forecast will be wrong. If the forecast about consumer sentiment is wrong, and that forecast is fed into a model to predict your product’s sales, then your sales forecast will be even more wrong. The errors compound. Add in other features and you can see how the house of cards can tumble pretty fast. Always be weary about using future values of features where you don’t have 100% confidence in their future value. For example using future holiday features are great because they will always happen on a specific day with 100% certainty, but trying to tell a model where inflation is headed in the future can get you in trouble.</p>
+<p>Having a human make manual adjustments after the initial ML forecast can add unneeded human bias to the final forecast. This bias can sometimes be wrong and hurt the accuracy of the forecast. It’s good practice to capture these adjustments and always report on the forecast accuracy of the pure ML model and the accuracy for the model + human adjustments. That way you can track how helpful the manual adjustments are, and remember why they were made in the first place.</p>
 </section>
 <section id="final-thoughts" class="level3">
 <h3 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h3>
-<p>Starting any ML process without a business domain expert in the room is always a bad mistake. They are the cheat code in the video game that gets you to level 20 in half the time. Involving them early and often while also adopting a quick iteration approach can create a world class forecast that is trusted by the ultimate end users, which often are the domain experts themselves. At the end of the day most ML forecasts come down to trust by the end user. That’s why domain expertise is the first principle in building quality time series forecasts.</p>
+<p>When embarking on the journey of time series forecasting, remember it’s more art than exact science—akin to predicting rain in Seattle. The key takeaway? Use the past as a guide but sprinkle in educated guesses about the future with caution. Whether you’re launching new products or navigating established markets, blending machine learning with a dash of human intuition can create robust forecasts. May your forecasts be as reliable as the sunrise, with just enough flexibility to handle an unexpected downpour.</p>
 
 
 </section>
