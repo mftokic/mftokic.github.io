@@ -42,7 +42,7 @@ We can add features into our data in two ways. The first is to just give histori
 
 A second way is to use both historical values and future values. We could use a future forecast of consumer sentiment in our model, in addition to using the historical data. That way a model can learn from any lagged relationships as well as understand how changes in consumer sentiment impact our product in real time. These future values can either come from an expert forecast (like from famous economists) or created by your own ML solution. 
 
-### The Future Always Must Learn From The Past
+### The Future Must Always Learn From The Past
 
 You might have a ton of ideas for new kinds of future information your can encode as features to train a model. In order to use this data we need to make sure there are historical examples for a model to learn from. The upcoming 2024 presidential election in the US could have a large impact on your business, which will impact your future forecast for the rest of 2024. We know exactly when the election is going to happen, so it's easy to give that information into a ML model to learn from. 
 
