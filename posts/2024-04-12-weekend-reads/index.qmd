@@ -1,0 +1,37 @@
+---
+title: "Weekend Reads (4/12/24)"
+description: "Interesting things I found on the internet this week"
+author: "Mike Tokic"
+date: "2024-04-12"
+categories: [weekend-reads]
+image: "image.png"
+---
+
+![](./image.png)
+
+## Articles
+
+- [17 Important Questions](https://tim.blog/wp-content/uploads/2020/01/17-Questions-That-Changed-My-Life.pdf)
+- [Time Series First Principles: Garbage In, Garbage Out](https://mftokic.github.io/posts/2024-04-08-time-series-garbage/)
+- [Time Series First Principles: The Future Is Similar To The Past](https://mftokic.github.io/posts/2024-04-11-time-series-past-future/)
+
+## Videos
+
+- [Telling Good Stories](https://youtu.be/Z2BnqYArwaw?si=tfQXzl1Zu4Zfom9R)
+- [Power of Being a Contrarian](https://youtu.be/_ZJpU43NA0c?si=-kIn8vjU9-PYWaE2)
+- [Making Friends as an Adult](https://youtu.be/sgVDljNavSc?si=YnSlsK_JgUqlv6Lp)
+
+## Podcasts
+
+- [Protocols to Improve Your Sleep, Huberman Lab](https://open.spotify.com/episode/1Ab1UcjpAvbhAhUslDt0kA?si=oGRuirSFQaWt1G6z_gawaw)
+
+## Tweets
+
+- [Power of Motivation](https://x.com/jasonfried/status/1775918262259536230)
+- [Our Planet Rocks](https://x.com/JamesLucasIT/status/1777026561947963709)
+- [Shipping on Fridays](https://x.com/DeepLearningAI/status/1777345409007952098)
+- [Cool Idea Around Building the Pyramids](https://x.com/Alkibiades_/status/1777418763316466080)
+
+## Books
+
+- [Sapiens by Yuval Noah Harari](https://www.amazon.com/Sapiens-Humankind-Yuval-Noah-Harari-ebook/dp/B00ICN066A/ref=tmm_kin_swatch_0?_encoding=UTF8&dib_tag=se&dib=eyJ2IjoiMSJ9.04mm2YQe9BvKUhAU-tuaKKTp_ekz9KX-YILKoI3_bfIEBt49_HpfeyFUJJlvIwSWAIPWrL_6wT9ArXYinHBdd26BvpLuJiO8L-PDmeH6Bp72MBNaBM3BIkDJczpjw__nnhyQBkyPBqqAxj5-FZHbC_wDc7NP_EpLiA253DUGUSSl1faJjZ8ThMS_HxUzPgC0WHQZRl5HkHwYJMTQgcFc-mGrBXCLrlR63IS6_1cyxs4.80oPRRInfnlKdy_MYM4yAdkI9w0YEtNugcGm04aOaDM&qid=1712934638&sr=8-1)
