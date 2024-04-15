@@ -23,3 +23,24 @@ This post dives into the third principle of a good time series forecast, the fut
 8. Capture Uncertainty
 9. Model Averages Are King
 10. Deep Learning Last
+
+### Clear Skies
+
+When planes take off from the ground they climb high into the sky. During that 5-10 minute period passengers have to stay seated with their seatbelt fastened. It's only after the plane reaches 10,000 feet people can start to get up and move around the plane. Eventually the plane can reach an altitude of 40,000 feet. To compare, the peak of Mount Everest is 29,000 feet off the ground. Planes go up that high because it's easier to fly the plane and more efficient. If planes flew a few feet off the ground it would be a lot bumpier ride, having to deal with changing weather and turbulence. 
+
+Forecasting is similar to flying a plane. Training a machine learning (ML) model at a higher grain is akin to a plane climbing in altitude. There is less turbulence (noise) in the data and your forecast has a better chance of being more accurate. You can either climb in altitude at the individual time series grain, or by the date grain. Let's discuss each of them along with other methods. 
+
+### Time Series Grain
+
+![](./chart1.png)
+![](./chart2.png)
+
+### Date Grain
+
+### Hierarchical Forecasting
+
+### Allocations
+
+### Reversal
+
+### Final Thoughts
