@@ -1,6 +1,6 @@
 ---
 title: "Time Series First Principles: Higher Grain Higher Accuracy"
-description: "Forecasting by country is often more accurate than forecasting by city. Forecasting by month is often more accurate than forecasting by day"
+description: "Forecasting by country is often more accurate than forecasting by city. Forecasting by month is often more accurate than forecasting by day."
 author: "Mike Tokic"
 date: "2024-04-17"
 categories: [time-series, machine-learning, finance]
@@ -11,7 +11,7 @@ image: "image.png"
 
 ### Time Series First Principles Series
 
-This post dives into the third principle of a good time series forecast, the future is similar to the past. Check out the [initial post](https://mftokic.github.io/posts/2024-03-26-time-series-first-principles-initial/) in this series to get a high level view of each principle. 
+This post dives into the fourth principle of a good time series forecast, the higher the grain the higher the accuracy. Check out the [initial post](https://mftokic.github.io/posts/2024-03-26-time-series-first-principles-initial/) in this series to get a high level view of each principle. 
 
 1. [Domain Expertise](https://mftokic.github.io/posts/2024-04-02-time-series-domain-expertise/)
 2. [Garbage In Garbage Out](https://mftokic.github.io/posts/2024-04-08-time-series-garbage/)
@@ -28,19 +28,48 @@ This post dives into the third principle of a good time series forecast, the fut
 
 When planes take off from the ground they climb high into the sky. During that 5-10 minute period passengers have to stay seated with their seatbelt fastened. It's only after the plane reaches 10,000 feet people can start to get up and move around the plane. Eventually the plane can reach an altitude of 40,000 feet. To compare, the peak of Mount Everest is 29,000 feet off the ground. Planes go up that high because it's easier to fly the plane and more efficient. If planes flew a few feet off the ground it would be a lot bumpier ride, having to deal with changing weather and turbulence. 
 
-Forecasting is similar to flying a plane. Training a machine learning (ML) model at a higher grain is akin to a plane climbing in altitude. There is less turbulence (noise) in the data and your forecast has a better chance of being more accurate. You can either climb in altitude at the individual time series grain, or by the date grain. Let's discuss each of them along with other methods. 
+Forecasting is similar to flying a plane. Training a machine learning (ML) model at a higher grain of data is akin to a plane climbing in altitude. There is less turbulence (noise) in the data and your forecast has a better chance of being more accurate. You can either climb in altitude at the individual time series grain, or by the date grain. Let's discuss each of them along with other methods. 
 
 ### Time Series Grain
 
-![](./chart1.png)
+Think of a higher time series grain as an aggregation of your original data. For example you might have product sales across a bunch of cities, where each city is a time series. Individual cities might have hard to model trend and seasonality, but when combined at a total country level, it can be easier to model. Take the example charts below. Each city might be noisy but climbing in altitude up to the county level makes it easier to spot trends and seasonality. 
+
 ![](./chart2.png)
+![](./chart1.png)
 
 ### Date Grain
 
+In a perfect world we would be able to forecast our businesses down to the day, or even minute, across the next 10 years. This is sadly not the case. The more granular you try to forecast at the date grain, the noisier the data is going to be, and the harder it will be to create accurate forecasts. Unless there is an absolute need to forecast at a certain level, I almost always recommend a higher date grain. Take the example charts below. See how aggregating daily data to a monthly date grain level makes it easier to spot trends and seasonality. 
+
+![](./chart3.png)
+![](./chart4.png)
+
+In the finance org, the most common date grain to forecast at is month. This gives a healthy balance of being able to forecast long periods of time while also being able to update your forecast with new historical data every few weeks. 
+
+Here is another important point to call out. The longer your forecast horizon, the higher the date grain you should forecast at. Here are some recommendations based on your forecast horizon (how many periods you want to forecast). For example, if you're trying to forecast out the next 6 months at the daily grain, you might get better results if you aggregate up to the monthly grain and forecast by month instead. 
+
+- Daily Grain: 1-90 day forecast horizon
+- Weekly Grain: 1-12 week forecast horizon
+- Monthly Grain: 1-18 month forecast horizon
+- Quarterly Grain: 1-8 quarter forecast horizon
+- Yearly Grain: more than 1 year forecast horizon
+
 ### Hierarchical Forecasting
+
+A potential "best of both worlds" solution to the data grain issue is to use a hierarchical forecast. This is where you can train models at different grains of the data, then use a statistical process to reconcile each forecast together so they are in sync. Our forecasting godfather, Rob Hyndman, has done a lot of great work in this space. Here is a [chapter from his book](https://otexts.com/fpp3/hierarchical.html) on hierarchical forecasting. 
+
+Let's go back to our time series grain example. Using a hierarchical forecast you could train models and create forecasts for each city, then do the same at the total country level, then finally do the same at a total world wide level across all countries. This is a standard hierarchical approach shown in the chart below. This hierarchical process blends a "bottoms up" forecast of creating predictions at the lowest level by city, with a "tops down" forecast of creating predictions at the highest global level. A statistical process is then used to make the "tops down" forecast equal the "bottoms up" forecast, optimizing for accuracy at all levels of the hierarchy. 
+
+![](./chart5.png)
+
+The same idea can be applied at the date grain too. Where you can forecast at the daily level, weekly level, and monthly level. Then use a reconciliation process to get the final forecast at the daily level that is also accurate when summing up by month. 
 
 ### Allocations
 
 ### Reversal
+
+Daily can sometimes be better than monthly, for example chinese new year. 
+
+### finnts
 
 ### Final Thoughts
