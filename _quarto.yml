@@ -6,6 +6,8 @@ website:
   title: "Thoughts on Things"
   navbar:
     right:
+      - text: "Start Here"
+        file: start_here.qmd
       - about.qmd
       - text: "Software"
         file: software.qmd

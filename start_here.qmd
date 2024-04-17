@@ -1,0 +1,11 @@
+---
+title: "Learn How I Think"
+---
+
+## Binge My Best Stuff
+
+- [My Journey in Microsoft's Finance Rotation Program](https://mftokic.github.io/posts/2024-02-19-frp-journey/)
+- [First Principles of Time Series Forecasting](https://mftokic.github.io/posts/2024-03-26-time-series-first-principles-initial/)
+- [Personal User Manual](https://mftokic.github.io/posts/2021-08-26-personal-user-manual/)
+- [Three Levels of Machine Learning Adoption in Finance](https://mftokic.github.io/posts/2023-02-11-three-levels-of-ml-adoption/)
+- [Power](https://mftokic.github.io/posts/2024-03-13-power-pursuits/)
