@@ -62,9 +62,83 @@ Let's go back to our time series grain example. Using a hierarchical forecast yo
 
 ![](./chart5.png)
 
-The same idea can be applied at the date grain too. Where you can forecast at the daily level, weekly level, and monthly level. Then use a reconciliation process to get the final forecast at the daily level that is also accurate when summing up by month. 
+The same idea can be applied at the date grain too. Where you can forecast at the daily level, weekly level, and monthly level. Then use a reconciliation process to get the final forecast at the daily level that is also accurate when summing up by month. This can work well if a monthly forecast is more accurate, but the final forecast needs to be at a daily level. 
 
 ### Allocations
+
+Another option is to take a forecast at a higher grain and allocate it down to a lower grain using simple allocation logic. This process can replace the more complicated hierarchical forecasting discussed earlier. Simple allocations can be done in two ways. 
+
+The first is to take historical values and create a percent split to apply to the final forecast. For example we can create a forecast at the country level, then split that out by city. The split percent by city (allocation percent) can be calculated based on how much each city was the percent of total country over the last few years. This can be broken down by period. So you can get a specific percent split for each month on average in the past. This approach helps maintain historical seasonality across each time series (each city). See the charts below for an example of using two historical years of monthly data to create the final allocation percentages. 
+
+Initial historical values: 
+
+Historical splits by city:
+| Month    | City A % | City B % | City C % |
+|----------|----------|----------|----------|
+| Jan 2021 | 30.87%   | 30.08%   | 39.05%   |
+| Feb 2021 | 28.11%   | 23.90%   | 47.99%   |
+| Mar 2021 | 23.77%   | 47.43%   | 28.81%   |
+| Apr 2021 | 31.26%   | 18.42%   | 50.32%   |
+| May 2021 | 39.50%   | 34.08%   | 26.42%   |
+| Jun 2021 | 50.58%   | 30.98%   | 18.44%   |
+| Jan 2022 | 36.33%   | 31.79%   | 31.88%   |
+| Feb 2022 | 19.79%   | 40.74%   | 39.47%   |
+| Mar 2022 | 19.95%   | 28.99%   | 51.06%   |
+| Apr 2022 | 20.37%   | 26.76%   | 52.87%   |
+| May 2022 | 41.37%   | 41.53%   | 17.10%   |
+| Jun 2022 | 43.86%   | 41.10%   | 15.04%   |
+
+Average of city split by month:
+| Month | City A % | City B % | City C % |
+|-------|----------|----------|----------|
+|  Jan  |   33.60% |   30.93% |   35.46% |
+|  Feb  |   23.95% |   32.32% |   43.73% |
+|  Mar  |   21.86% |   38.21% |   39.93% |
+|  Apr  |   25.82% |   22.59% |   51.60% |
+|  May  |   40.43% |   37.81% |   21.76% |
+|  Jun  |   47.22% |   36.04% |   16.74% |
+
+Final forecast using the city splits:
+| Month    |   Country Forecast |   City A % |   City B % |   City C % |   City A Forecast |   City B Forecast |   City C Forecast |
+|:---------|-------------------:|-----------:|-----------:|-----------:|------------------:|------------------:|------------------:|
+| Jan 2023 |              15000 |      33.60 |      30.93 |      35.46 |            5040   |            4639.5 |            5319   |
+| Feb 2023 |              15200 |      23.95 |      32.32 |      43.73 |            3640.4 |            4912.64|            6646.96|
+| Mar 2023 |              15400 |      21.86 |      38.21 |      39.93 |            3366.44|            5884.34|            6149.22|
+| Apr 2023 |              15600 |      25.82 |      22.59 |      51.60 |            4027.92|            3524.04|            8049.6 |
+| May 2023 |              15800 |      40.43 |      37.81 |      21.76 |            6387.94|            5973.98|            3438.08|
+| Jun 2023 |              16000 |      47.22 |      36.04 |      16.74 |            7555.2 |            5766.4 |            2678.4 |
+
+The second approach is to use a future forecast to create the allocation splits. For example we can create future forecasts at the country level and also at the city level. Then we can create the split percent for each city by taking the city forecast and summing it up to the country level, then taking the percent split for each city. These splits can then be applied to the final country level forecast to get the final forecast by city. This approach uses the more robust country level forecast, while still trying to capture future changing trends and seasonality by city. 
+
+Initial forecast, where country and each city are forecasted separately:
+| Month    | Country Forecast | City A Forecast | City B Forecast | City C Forecast |
+|----------|------------------|-----------------|-----------------|-----------------|
+| Jan 2023 | 10,000           | 4,000           | 3,500           | 2,000           |
+| Feb 2023 | 10,500           | 4,200           | 3,000           | 3,300           |
+| Mar 2023 | 11,000           | 4,500           | 3,200           | 3,300           |
+| Apr 2023 | 11,500           | 4,800           | 3,400           | 3,300           |
+| May 2023 | 12,000           | 5,000           | 3,500           | 3,500           |
+| Jun 2023 | 12,500           | 5,200           | 3,800           | 3,500           |
+
+Calculating the percent splits by city:
+| Month    | City A % | City B % | City C % |
+|----------|----------|----------|----------|
+| Jan 2023 | 40.0%    | 35.0%    | 20.0%    |
+| Feb 2023 | 40.0%    | 28.6%    | 31.4%    |
+| Mar 2023 | 40.9%    | 29.1%    | 30.0%    |
+| Apr 2023 | 41.7%    | 29.6%    | 28.7%    |
+| May 2023 | 41.7%    | 29.2%    | 29.2%    |
+| Jun 2023 | 41.6%    | 30.4%    | 28.0%    |
+
+Final forecast after applying the city splits to the country level forecast:
+| Month    | City A Final Forecast | City B Final Forecast | City C Final Forecast |
+|----------|-----------------------|-----------------------|-----------------------|
+| Jan 2023 | 4,000                 | 3,500                 | 2,000                 |
+| Feb 2023 | 4,200                 | 3,000                 | 3,300                 |
+| Mar 2023 | 4,500                 | 3,200                 | 3,300                 |
+| Apr 2023 | 4,800                 | 3,400                 | 3,300                 |
+| May 2023 | 5,000                 | 3,500                 | 3,500                 |
+| Jun 2023 | 5,200                 | 3,800                 | 3,500                 |
 
 ### Reversal
 
