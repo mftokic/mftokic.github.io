@@ -16,7 +16,7 @@ In this post I will overview each first principle, and have follow-up posts digg
 1. [**Domain Expertise**](https://mftokic.github.io/posts/2024-04-02-time-series-domain-expertise/): Knowing what factors actually influence what you are trying to forecast is more important than which ML model to train.
 2. [**Garbage In Garbage Out**](https://mftokic.github.io/posts/2024-04-08-time-series-garbage/): Training a model on bad data leads to bad forecasts.
 3. [**The Future Is Similar To The Past**](https://mftokic.github.io/posts/2024-04-11-time-series-past-future/): If you expect the future to be drastically different than past data, you will have a hard time training accurate models.  
-4. **Higher Grain Higher Accuracy**: Forecasting by country is often more accurate than forecasting by city. Forecasting by month is often more accurate than forecasting by day. 
+4. [**Higher Grain Higher Accuracy**](https://mftokic.github.io/posts/2024-04-18-time-series-grain/): Forecasting by country is often more accurate than forecasting by city. Forecasting by month is often more accurate than forecasting by day. 
 5. **Order Is Important**: When time is involved, how your data is ordered makes all the difference. 
 6. **The Magic Is In The Feature Engineering**: How you transform your data before model training can transform a mediocre forecast into a world class forecast.
 7. **Simple Models Are Better Models**: Like occam's razor, the best model is often the one with the least amount of inputs.

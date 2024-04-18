@@ -16,7 +16,7 @@ This post dives into the first principle of a good time series forecast, domain 
 1. [**Domain Expertise**](https://mftokic.github.io/posts/2024-04-02-time-series-domain-expertise/)
 2. [Garbage In Garbage Out](https://mftokic.github.io/posts/2024-04-08-time-series-garbage/)
 3. [The Future Is Similar To The Past](https://mftokic.github.io/posts/2024-04-11-time-series-past-future/)
-4. Higher Grain Higher Accuracy
+4. [Higher Grain Higher Accuracy](https://mftokic.github.io/posts/2024-04-18-time-series-grain/)
 5. Order Is Important
 6. The Magic Is In The Feature Engineering
 7. Simple Models Are Better Models

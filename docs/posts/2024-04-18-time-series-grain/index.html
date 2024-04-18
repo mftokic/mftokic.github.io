@@ -170,7 +170,7 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="https://mftokic.github.io/posts/2024-04-02-time-series-domain-expertise/">Domain Expertise</a></li>
 <li><a href="https://mftokic.github.io/posts/2024-04-08-time-series-garbage/">Garbage In Garbage Out</a></li>
 <li><a href="https://mftokic.github.io/posts/2024-04-11-time-series-past-future/">The Future Is Similar To The Past</a></li>
-<li><strong>Higher Grain Higher Accuracy</strong></li>
+<li><a href="https://mftokic.github.io/posts/2024-04-18-time-series-grain/"><strong>Higher Grain Higher Accuracy</strong></a></li>
 <li>Order Is Important</li>
 <li>The Magic Is In The Feature Engineering</li>
 <li>Simple Models Are Better Models</li>
@@ -214,14 +214,395 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="allocations">Allocations</h3>
 <p>Another option is to take a forecast at a higher grain and allocate it down to a lower grain using simple allocation logic. This process can replace the more complicated hierarchical forecasting discussed earlier. Simple allocations can be done in two ways.</p>
 <p>The first is to take historical values and create a percent split to apply to the final forecast. For example we can create a forecast at the country-level, then split that out by city. The split percent by city (allocation percent) can be calculated based on how much each city was the percent of total country over the last few years. This can be broken down by period. So you can get a specific percent split for each month on average in the past. This approach helps maintain historical seasonality across each time series (each city). See the charts below for an example of using two historical years of monthly data to create the final allocation percentages.</p>
-<p>Initial historical values:</p>
-<p>Historical splits by city: | Month | City A % | City B % | City C % | |———-|———-|———-|———-| | Jan 2021 | 30.87% | 30.08% | 39.05% | | Feb 2021 | 28.11% | 23.90% | 47.99% | | Mar 2021 | 23.77% | 47.43% | 28.81% | | Apr 2021 | 31.26% | 18.42% | 50.32% | | May 2021 | 39.50% | 34.08% | 26.42% | | Jun 2021 | 50.58% | 30.98% | 18.44% | | Jan 2022 | 36.33% | 31.79% | 31.88% | | Feb 2022 | 19.79% | 40.74% | 39.47% | | Mar 2022 | 19.95% | 28.99% | 51.06% | | Apr 2022 | 20.37% | 26.76% | 52.87% | | May 2022 | 41.37% | 41.53% | 17.10% | | Jun 2022 | 43.86% | 41.10% | 15.04% |</p>
-<p>Average of city split by month: | Month | City A % | City B % | City C % | |——-|———-|———-|———-| | Jan | 33.60% | 30.93% | 35.46% | | Feb | 23.95% | 32.32% | 43.73% | | Mar | 21.86% | 38.21% | 39.93% | | Apr | 25.82% | 22.59% | 51.60% | | May | 40.43% | 37.81% | 21.76% | | Jun | 47.22% | 36.04% | 16.74% |</p>
-<p>Final forecast using the city splits: | Month | Country Forecast | City A % | City B % | City C % | City A Forecast | City B Forecast | City C Forecast | |:———|——————-:|———–:|———–:|———–:|——————:|——————:|——————:| | Jan 2023 | 15000 | 33.60 | 30.93 | 35.46 | 5040 | 4639.5 | 5319 | | Feb 2023 | 15200 | 23.95 | 32.32 | 43.73 | 3640.4 | 4912.64| 6646.96| | Mar 2023 | 15400 | 21.86 | 38.21 | 39.93 | 3366.44| 5884.34| 6149.22| | Apr 2023 | 15600 | 25.82 | 22.59 | 51.60 | 4027.92| 3524.04| 8049.6 | | May 2023 | 15800 | 40.43 | 37.81 | 21.76 | 6387.94| 5973.98| 3438.08| | Jun 2023 | 16000 | 47.22 | 36.04 | 16.74 | 7555.2 | 5766.4 | 2678.4 |</p>
+<table class="table">
+<caption>Historical splits by city</caption>
+<thead>
+<tr class="header">
+<th>Month</th>
+<th>City A %</th>
+<th>City B %</th>
+<th>City C %</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Jan 2021</td>
+<td>30.87%</td>
+<td>30.08%</td>
+<td>39.05%</td>
+</tr>
+<tr class="even">
+<td>Feb 2021</td>
+<td>28.11%</td>
+<td>23.90%</td>
+<td>47.99%</td>
+</tr>
+<tr class="odd">
+<td>Mar 2021</td>
+<td>23.77%</td>
+<td>47.43%</td>
+<td>28.81%</td>
+</tr>
+<tr class="even">
+<td>Apr 2021</td>
+<td>31.26%</td>
+<td>18.42%</td>
+<td>50.32%</td>
+</tr>
+<tr class="odd">
+<td>May 2021</td>
+<td>39.50%</td>
+<td>34.08%</td>
+<td>26.42%</td>
+</tr>
+<tr class="even">
+<td>Jun 2021</td>
+<td>50.58%</td>
+<td>30.98%</td>
+<td>18.44%</td>
+</tr>
+<tr class="odd">
+<td>Jan 2022</td>
+<td>36.33%</td>
+<td>31.79%</td>
+<td>31.88%</td>
+</tr>
+<tr class="even">
+<td>Feb 2022</td>
+<td>19.79%</td>
+<td>40.74%</td>
+<td>39.47%</td>
+</tr>
+<tr class="odd">
+<td>Mar 2022</td>
+<td>19.95%</td>
+<td>28.99%</td>
+<td>51.06%</td>
+</tr>
+<tr class="even">
+<td>Apr 2022</td>
+<td>20.37%</td>
+<td>26.76%</td>
+<td>52.87%</td>
+</tr>
+<tr class="odd">
+<td>May 2022</td>
+<td>41.37%</td>
+<td>41.53%</td>
+<td>17.10%</td>
+</tr>
+<tr class="even">
+<td>Jun 2022</td>
+<td>43.86%</td>
+<td>41.10%</td>
+<td>15.04%</td>
+</tr>
+</tbody>
+</table>
+<table class="table">
+<caption>Average of city split by month</caption>
+<thead>
+<tr class="header">
+<th>Month</th>
+<th>City A %</th>
+<th>City B %</th>
+<th>City C %</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Jan</td>
+<td>33.60%</td>
+<td>30.93%</td>
+<td>35.46%</td>
+</tr>
+<tr class="even">
+<td>Feb</td>
+<td>23.95%</td>
+<td>32.32%</td>
+<td>43.73%</td>
+</tr>
+<tr class="odd">
+<td>Mar</td>
+<td>21.86%</td>
+<td>38.21%</td>
+<td>39.93%</td>
+</tr>
+<tr class="even">
+<td>Apr</td>
+<td>25.82%</td>
+<td>22.59%</td>
+<td>51.60%</td>
+</tr>
+<tr class="odd">
+<td>May</td>
+<td>40.43%</td>
+<td>37.81%</td>
+<td>21.76%</td>
+</tr>
+<tr class="even">
+<td>Jun</td>
+<td>47.22%</td>
+<td>36.04%</td>
+<td>16.74%</td>
+</tr>
+</tbody>
+</table>
+<table class="table">
+<caption>Final forecast using the city splits</caption>
+<colgroup>
+<col style="width: 8%">
+<col style="width: 16%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 15%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Month</th>
+<th style="text-align: right;">Country Forecast</th>
+<th style="text-align: right;">City A %</th>
+<th style="text-align: right;">City B %</th>
+<th style="text-align: right;">City C %</th>
+<th style="text-align: right;">City A Forecast</th>
+<th style="text-align: right;">City B Forecast</th>
+<th style="text-align: right;">City C Forecast</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Jan 2023</td>
+<td style="text-align: right;">15000</td>
+<td style="text-align: right;">33.60</td>
+<td style="text-align: right;">30.93</td>
+<td style="text-align: right;">35.46</td>
+<td style="text-align: right;">5040</td>
+<td style="text-align: right;">4639.5</td>
+<td style="text-align: right;">5319</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Feb 2023</td>
+<td style="text-align: right;">15200</td>
+<td style="text-align: right;">23.95</td>
+<td style="text-align: right;">32.32</td>
+<td style="text-align: right;">43.73</td>
+<td style="text-align: right;">3640.4</td>
+<td style="text-align: right;">4912.64</td>
+<td style="text-align: right;">6646.96</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Mar 2023</td>
+<td style="text-align: right;">15400</td>
+<td style="text-align: right;">21.86</td>
+<td style="text-align: right;">38.21</td>
+<td style="text-align: right;">39.93</td>
+<td style="text-align: right;">3366.44</td>
+<td style="text-align: right;">5884.34</td>
+<td style="text-align: right;">6149.22</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Apr 2023</td>
+<td style="text-align: right;">15600</td>
+<td style="text-align: right;">25.82</td>
+<td style="text-align: right;">22.59</td>
+<td style="text-align: right;">51.60</td>
+<td style="text-align: right;">4027.92</td>
+<td style="text-align: right;">3524.04</td>
+<td style="text-align: right;">8049.6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">May 2023</td>
+<td style="text-align: right;">15800</td>
+<td style="text-align: right;">40.43</td>
+<td style="text-align: right;">37.81</td>
+<td style="text-align: right;">21.76</td>
+<td style="text-align: right;">6387.94</td>
+<td style="text-align: right;">5973.98</td>
+<td style="text-align: right;">3438.08</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Jun 2023</td>
+<td style="text-align: right;">16000</td>
+<td style="text-align: right;">47.22</td>
+<td style="text-align: right;">36.04</td>
+<td style="text-align: right;">16.74</td>
+<td style="text-align: right;">7555.2</td>
+<td style="text-align: right;">5766.4</td>
+<td style="text-align: right;">2678.4</td>
+</tr>
+</tbody>
+</table>
 <p>The second approach is to use a future forecast to create the allocation splits. For example we can create future forecasts at the country-level and also at the city-level. Then we can create the split percent for each city by taking the city forecast and summing it up to the country-level, then taking the percent split for each city. These splits can then be applied to the final country-level forecast to get the final forecast by city. This approach uses the more robust country-level forecast, while still trying to capture future changing trends and seasonality by city.</p>
-<p>Initial forecast, where country and each city are forecasted separately: | Month | Country Forecast | City A Forecast | City B Forecast | City C Forecast | |———-|——————|—————–|—————–|—————–| | Jan 2023 | 10,000 | 4,000 | 3,500 | 2,000 | | Feb 2023 | 10,500 | 4,200 | 3,000 | 3,300 | | Mar 2023 | 11,000 | 4,500 | 3,200 | 3,300 | | Apr 2023 | 11,500 | 4,800 | 3,400 | 3,300 | | May 2023 | 12,000 | 5,000 | 3,500 | 3,500 | | Jun 2023 | 12,500 | 5,200 | 3,800 | 3,500 |</p>
-<p>Calculating the percent splits by city: | Month | City A % | City B % | City C % | |———-|———-|———-|———-| | Jan 2023 | 40.0% | 35.0% | 20.0% | | Feb 2023 | 40.0% | 28.6% | 31.4% | | Mar 2023 | 40.9% | 29.1% | 30.0% | | Apr 2023 | 41.7% | 29.6% | 28.7% | | May 2023 | 41.7% | 29.2% | 29.2% | | Jun 2023 | 41.6% | 30.4% | 28.0% |</p>
-<p>Final forecast after applying the city splits to the country-level forecast: | Month | City A Final Forecast | City B Final Forecast | City C Final Forecast | |———-|———————–|———————–|———————–| | Jan 2023 | 4,000 | 3,500 | 2,000 | | Feb 2023 | 4,200 | 3,000 | 3,300 | | Mar 2023 | 4,500 | 3,200 | 3,300 | | Apr 2023 | 4,800 | 3,400 | 3,300 | | May 2023 | 5,000 | 3,500 | 3,500 | | Jun 2023 | 5,200 | 3,800 | 3,500 |</p>
+<table class="table">
+<caption>Initial forecast, where country and each city are forecasted separately</caption>
+<colgroup>
+<col style="width: 12%">
+<col style="width: 22%">
+<col style="width: 21%">
+<col style="width: 21%">
+<col style="width: 21%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Month</th>
+<th>Country Forecast</th>
+<th>City A Forecast</th>
+<th>City B Forecast</th>
+<th>City C Forecast</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Jan 2023</td>
+<td>10,000</td>
+<td>4,000</td>
+<td>3,500</td>
+<td>2,000</td>
+</tr>
+<tr class="even">
+<td>Feb 2023</td>
+<td>10,500</td>
+<td>4,200</td>
+<td>3,000</td>
+<td>3,300</td>
+</tr>
+<tr class="odd">
+<td>Mar 2023</td>
+<td>11,000</td>
+<td>4,500</td>
+<td>3,200</td>
+<td>3,300</td>
+</tr>
+<tr class="even">
+<td>Apr 2023</td>
+<td>11,500</td>
+<td>4,800</td>
+<td>3,400</td>
+<td>3,300</td>
+</tr>
+<tr class="odd">
+<td>May 2023</td>
+<td>12,000</td>
+<td>5,000</td>
+<td>3,500</td>
+<td>3,500</td>
+</tr>
+<tr class="even">
+<td>Jun 2023</td>
+<td>12,500</td>
+<td>5,200</td>
+<td>3,800</td>
+<td>3,500</td>
+</tr>
+</tbody>
+</table>
+<table class="table">
+<caption>Calculating the percent splits by city</caption>
+<thead>
+<tr class="header">
+<th>Month</th>
+<th>City A %</th>
+<th>City B %</th>
+<th>City C %</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Jan 2023</td>
+<td>40.0%</td>
+<td>35.0%</td>
+<td>20.0%</td>
+</tr>
+<tr class="even">
+<td>Feb 2023</td>
+<td>40.0%</td>
+<td>28.6%</td>
+<td>31.4%</td>
+</tr>
+<tr class="odd">
+<td>Mar 2023</td>
+<td>40.9%</td>
+<td>29.1%</td>
+<td>30.0%</td>
+</tr>
+<tr class="even">
+<td>Apr 2023</td>
+<td>41.7%</td>
+<td>29.6%</td>
+<td>28.7%</td>
+</tr>
+<tr class="odd">
+<td>May 2023</td>
+<td>41.7%</td>
+<td>29.2%</td>
+<td>29.2%</td>
+</tr>
+<tr class="even">
+<td>Jun 2023</td>
+<td>41.6%</td>
+<td>30.4%</td>
+<td>28.0%</td>
+</tr>
+</tbody>
+</table>
+<table class="table">
+<caption>Final forecast after applying the city splits to the country-level forecast</caption>
+<colgroup>
+<col style="width: 12%">
+<col style="width: 29%">
+<col style="width: 29%">
+<col style="width: 29%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Month</th>
+<th>City A Final Forecast</th>
+<th>City B Final Forecast</th>
+<th>City C Final Forecast</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Jan 2023</td>
+<td>4,000</td>
+<td>3,500</td>
+<td>2,000</td>
+</tr>
+<tr class="even">
+<td>Feb 2023</td>
+<td>4,200</td>
+<td>3,000</td>
+<td>3,300</td>
+</tr>
+<tr class="odd">
+<td>Mar 2023</td>
+<td>4,500</td>
+<td>3,200</td>
+<td>3,300</td>
+</tr>
+<tr class="even">
+<td>Apr 2023</td>
+<td>4,800</td>
+<td>3,400</td>
+<td>3,300</td>
+</tr>
+<tr class="odd">
+<td>May 2023</td>
+<td>5,000</td>
+<td>3,500</td>
+<td>3,500</td>
+</tr>
+<tr class="even">
+<td>Jun 2023</td>
+<td>5,200</td>
+<td>3,800</td>
+<td>3,500</td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="reversal" class="level3">
 <h3 class="anchored" data-anchor-id="reversal">Reversal</h3>
