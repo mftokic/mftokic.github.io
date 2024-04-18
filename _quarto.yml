@@ -4,6 +4,8 @@ project:
 
 website:
   title: "Thoughts on Things"
+  site-url: https://mftokic.github.io
+  description: "A collection of thoughts on things from the mind of Mike Tokic."
   navbar:
     right:
       - text: "Start Here"
@@ -13,6 +15,8 @@ website:
         file: software.qmd
       - icon: github
         href: https://github.com/mftokic
+      - icon: rss
+        href: index.xml
 format:
   html:
     theme: cyborg

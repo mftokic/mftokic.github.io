@@ -1,0 +1,1184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Thoughts on Things</title>
+<link>https://mftokic.github.io/index.html</link>
+<atom:link href="https://mftokic.github.io/index.xml" rel="self" type="application/rss+xml"/>
+<description>A collection of thoughts on things from the mind of Mike Tokic.</description>
+<generator>quarto-1.3.450</generator>
+<lastBuildDate>Fri, 12 Apr 2024 07:00:00 GMT</lastBuildDate>
+<item>
+  <title>Weekend Reads (4/12/24)</title>
+  <dc:creator>Mike Tokic</dc:creator>
+  <link>https://mftokic.github.io/posts/2024-04-12-weekend-reads/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p><img src="https://mftokic.github.io/posts/2024-04-12-weekend-reads/image.png" class="img-fluid"></p>
+<section id="articles" class="level2">
+<h2 class="anchored" data-anchor-id="articles">Articles</h2>
+<ul>
+<li><a href="https://tim.blog/wp-content/uploads/2020/01/17-Questions-That-Changed-My-Life.pdf">17 Important Questions</a></li>
+<li><a href="https://mftokic.github.io/posts/2024-04-08-time-series-garbage/">Time Series First Principles: Garbage In, Garbage Out</a></li>
+<li><a href="https://mftokic.github.io/posts/2024-04-11-time-series-past-future/">Time Series First Principles: The Future Is Similar To The Past</a></li>
+</ul>
+</section>
+<section id="videos" class="level2">
+<h2 class="anchored" data-anchor-id="videos">Videos</h2>
+<ul>
+<li><a href="https://youtu.be/Z2BnqYArwaw?si=tfQXzl1Zu4Zfom9R">Telling Good Stories</a></li>
+<li><a href="https://youtu.be/_ZJpU43NA0c?si=-kIn8vjU9-PYWaE2">Power of Being a Contrarian</a></li>
+<li><a href="https://youtu.be/sgVDljNavSc?si=YnSlsK_JgUqlv6Lp">Making Friends as an Adult</a></li>
+</ul>
+</section>
+<section id="podcasts" class="level2">
+<h2 class="anchored" data-anchor-id="podcasts">Podcasts</h2>
+<ul>
+<li><a href="https://open.spotify.com/episode/1Ab1UcjpAvbhAhUslDt0kA?si=oGRuirSFQaWt1G6z_gawaw">Protocols to Improve Your Sleep, Huberman Lab</a></li>
+</ul>
+</section>
+<section id="tweets" class="level2">
+<h2 class="anchored" data-anchor-id="tweets">Tweets</h2>
+<ul>
+<li><a href="https://x.com/jasonfried/status/1775918262259536230">Power of Motivation</a></li>
+<li><a href="https://x.com/JamesLucasIT/status/1777026561947963709">Our Planet Rocks</a></li>
+<li><a href="https://x.com/DeepLearningAI/status/1777345409007952098">Shipping on Fridays</a></li>
+<li><a href="https://x.com/Alkibiades_/status/1777418763316466080">Cool Idea Around Building the Pyramids</a></li>
+</ul>
+</section>
+<section id="books" class="level2">
+<h2 class="anchored" data-anchor-id="books">Books</h2>
+<ul>
+<li><a href="https://www.amazon.com/Sapiens-Humankind-Yuval-Noah-Harari-ebook/dp/B00ICN066A/ref=tmm_kin_swatch_0?_encoding=UTF8&amp;dib_tag=se&amp;dib=eyJ2IjoiMSJ9.04mm2YQe9BvKUhAU-tuaKKTp_ekz9KX-YILKoI3_bfIEBt49_HpfeyFUJJlvIwSWAIPWrL_6wT9ArXYinHBdd26BvpLuJiO8L-PDmeH6Bp72MBNaBM3BIkDJczpjw__nnhyQBkyPBqqAxj5-FZHbC_wDc7NP_EpLiA253DUGUSSl1faJjZ8ThMS_HxUzPgC0WHQZRl5HkHwYJMTQgcFc-mGrBXCLrlR63IS6_1cyxs4.80oPRRInfnlKdy_MYM4yAdkI9w0YEtNugcGm04aOaDM&amp;qid=1712934638&amp;sr=8-1">Sapiens by Yuval Noah Harari</a></li>
+</ul>
+
+
+</section>
+
+ ]]></description>
+  <category>weekend-reads</category>
+  <guid>https://mftokic.github.io/posts/2024-04-12-weekend-reads/index.html</guid>
+  <pubDate>Fri, 12 Apr 2024 07:00:00 GMT</pubDate>
+  <media:content url="https://mftokic.github.io/posts/2024-04-12-weekend-reads/image.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
+<item>
+  <title>Time Series First Principles: The Future Is Similar To The Past</title>
+  <dc:creator>Mike Tokic</dc:creator>
+  <link>https://mftokic.github.io/posts/2024-04-11-time-series-past-future/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p><img src="https://mftokic.github.io/posts/2024-04-11-time-series-past-future/image.png" class="img-fluid"></p>
+<section id="time-series-first-principles-series" class="level3">
+<h3 class="anchored" data-anchor-id="time-series-first-principles-series">Time Series First Principles Series</h3>
+<p>This post dives into the third principle of a good time series forecast, the future is similar to the past. Check out the <a href="https://mftokic.github.io/posts/2024-03-26-time-series-first-principles-initial/">initial post</a> in this series to get a high level view of each principle.</p>
+<ol type="1">
+<li><a href="https://mftokic.github.io/posts/2024-04-02-time-series-domain-expertise/">Domain Expertise</a></li>
+<li><a href="https://mftokic.github.io/posts/2024-04-08-time-series-garbage/">Garbage In Garbage Out</a></li>
+<li><a href="https://mftokic.github.io/posts/2024-04-11-time-series-past-future/"><strong>The Future Is Similar To The Past</strong></a></li>
+<li>Higher Grain Higher Accuracy</li>
+<li>Order Is Important</li>
+<li>The Magic Is In The Feature Engineering</li>
+<li>Simple Models Are Better Models</li>
+<li>Capture Uncertainty</li>
+<li>Model Averages Are King</li>
+<li>Deep Learning Last</li>
+</ol>
+</section>
+<section id="here-comes-the-sun" class="level3">
+<h3 class="anchored" data-anchor-id="here-comes-the-sun">Here Comes The Sun</h3>
+<p>For whatever you’re trying to forecast, it will be a lot easier to do with with machine learning (ML) if the future is similar to the past. It’s as simple as that.</p>
+<p>When you open the weather app on your phone, have you ever looked at when the sun is expected to rise and set? If you’re on the new human optimization craze about getting morning sunlight, you most likely have. That forecast is down to the minute, most likely even second, and has a high degree of accuracy. Is the forecast accurate because of expert human judgement, or the type of weather related <a href="https://vitalflux.com/what-are-features-in-machine-learning/">features</a> fed into a ML model? Nope. It’s accurate because the sun has risen and set at relatively the same time, based on time of year, for millions of years. We don’t expect future sun rises and sun sets to change that much going forward, that’s why your weather app gives you an exact time for the sun rise but gives you only a percent probability of rain. Even then, that chance of rain may not even be accurate. It’s almost a joke now how many times in Seattle I’ve seen a dry forecast only to step out of my house and have it immediately start raining. At least I know the exact minute when the sun will set that day.</p>
+</section>
+<section id="handling-a-changing-future" class="level3">
+<h3 class="anchored" data-anchor-id="handling-a-changing-future">Handling A Changing Future</h3>
+<p>Your business is most likely not like the sun. It’s constantly changing, reacting to market forces and industry competitors. The best way to teach a model about your expectations of the future is to give it data about the past and future.</p>
+<p>Let’s use an example of a monthly revenue forecast for a product. If you only use historical sales data to forecast the product, then you are making the assumption that the future of the product will be almost identical to the past, especially the most recent past. For some established products in mature industries this could be totally fine, but often this is not the case.</p>
+<p>One thing to try is adding features that can explain how outside forces impact the product. For example, how much money consumers have to spend might greatly impact who buys your product. So using an economic feature like consumer sentiment can help a model adjust it’s predictions based on changes in consumer spending habits.</p>
+<p>We can add features into our data in two ways. The first is to just give historical values of that feature. This will force us to only use historical lags of the feature when training a ML model, since we don’t know what the future value of that feature will be. We can take that original feature and create new features (this is called feature engineering). Ones that are a 3 month lag, 6 month lag, or 12 month lag of the original data. Often macro data like consumer sentiment can be a lagging indicator. Meaning their impact is delayed and takes a while to flow through the economy. Changes in consumer sentiment from 6 months ago can actually have a strong correlation with how customers purchase our product today.</p>
+<p>A second way is to use both historical values and future values. We could use a future forecast of consumer sentiment in our model, in addition to using the historical data. That way a model can learn from any lagged relationships as well as understand how changes in consumer sentiment impact our product in real time. These future values can either come from an expert forecast (like from famous economists) or created by your own ML solution.</p>
+</section>
+<section id="the-future-must-always-learn-from-the-past" class="level3">
+<h3 class="anchored" data-anchor-id="the-future-must-always-learn-from-the-past">The Future Must Always Learn From The Past</h3>
+<p>You might have a ton of ideas for new kinds of future information your can encode as features to train a model. In order to use this data we need to make sure there are historical examples for a model to learn from. The upcoming 2024 presidential election in the US could have a large impact on your business, which will impact your future forecast for the rest of 2024. We know exactly when the election is going to happen, so it’s easy to give that information into a ML model to learn from.</p>
+<p>The catch is we need to make sure that we show examples from the past to allow the model to learn how previous elections impact our business and how the model should handle similar events in the future. If we only have product sales data from the last three years, then we cannot feed it future election data because we don’t have the data from the 2020 or 2016 US presidential elections.</p>
+<p>If we know something is going to happen in the future, but we can’t quantify it with historical data for a model, then we need to go old school. Instead we need to use our domain expertise about the business to take the ML output, without knowledge of the future event, and make a manual adjustment to the forecast based on the expected impact of the future. For the election example, maybe your product sales will grow as we get closer to the election, so if you don’t have enough historical data for a model to learn about the election’s impact you can make a manual adjustment to the ML forecast based on your assumption about the election’s impact.</p>
+<p>This kind of hybrid approach, ML first with a light human touch second, can create a powerful combination. A ML model can do 80-90% of the initial work and a human can make the final manual adjustments based on their domain expertise. This allows a human to add more insight into a forecast that is not easily quantifiable for a ML model to learn from.</p>
+</section>
+<section id="new-time-series" class="level3">
+<h3 class="anchored" data-anchor-id="new-time-series">New Time Series</h3>
+<p>A new product at your company might be exciting, but is harder to forecast accurately with ML models. The lack of historical data will make it hard for any new ML model to learn from. Initial trends and seasonality may not always carry into the future. For example there might be a big spike in initial sales around release but then taper off over time. The new product may not even be on sale yet, so you are now tasked with forecasting something with zero historical data.</p>
+<p>If the time series in question has some historical data, ideally more than one year of historical observations, a good way to deal with it is to train a ML model with the new time series alongside similar existing products with a lot of historical data. This is sometimes called a “global model”, where a model learns from multiple time series instead of one. Training on one specific time series is sometimes called a “local model”. Training a global model allows the ML model to learn general trends and seasonality patters across similar time series and apply it to the newer time series. This can work well if the other time series are similar to one another.</p>
+<p>If the product you want to forecast has no historical data, then you are in a tough boat. Traditional time series methods cannot help you, since they all rely on quality historical data. What you can do is take a more traditional machine learning regression approach. This involves taking all historical products that have launched over time and training a model to understand the initial demand of a new product and how it either grows or shrinks over time. For example with iPhone sales, you can train a model on the initial sales of each iPhone model from V1 to V14, then use that model to predict the kind of demand the latest V15 iPhone might have. This type of approach would need a more detailed post to explain fully, but hopefully you get the broader picture.</p>
+<p>To learn more about forecasting new time series, check out the <a href="https://otexts.com/fpp3/judgmental.html">forecasting bible</a> written by our forecasting godfather Rob Hyndman. The chapter on judgemental forecasts goes deep into forecasting new products and discusses other approaches you can take.</p>
+</section>
+<section id="reversal" class="level3">
+<h3 class="anchored" data-anchor-id="reversal">Reversal</h3>
+<p>When using future values of a feature, there is a risk of compounding errors. Let’s go back to the consumer sentiment example. If you create your own expectation of future consumer sentiment, or use an economist’s prediction, there is a good chance the forecast will be wrong. If the forecast about consumer sentiment is wrong, and that forecast is fed into a model to predict your product’s sales, then your sales forecast will be even more wrong. The errors compound. Add in other features and you can see how the house of cards can tumble pretty fast. Always be weary about using future values of features where you don’t have 100% confidence in their future value. For example using future holiday features are great because they will always happen on a specific day with 100% certainty, but trying to tell a model where inflation is headed in the future can get you in trouble.</p>
+<p>Having a human make manual adjustments after the initial ML forecast can add unneeded human bias to the final forecast. This bias can sometimes be wrong and hurt the accuracy of the forecast. It’s good practice to capture these adjustments and always report on the forecast accuracy of the pure ML model and the accuracy for the model + human adjustments. That way you can track how helpful the manual adjustments are, and remember why they were made in the first place.</p>
+</section>
+<section id="final-thoughts" class="level3">
+<h3 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h3>
+<p>When embarking on the journey of time series forecasting, remember it’s more art than exact science—akin to predicting rain in Seattle. The key takeaway? Use the past as a guide but sprinkle in educated guesses about the future with caution. Whether you’re launching new products or navigating established markets, blending machine learning with a dash of human intuition can create robust forecasts. May your forecasts be as reliable as the sunrise, with just enough flexibility to handle an unexpected downpour.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>time-series</category>
+  <category>machine-learning</category>
+  <category>finance</category>
+  <guid>https://mftokic.github.io/posts/2024-04-11-time-series-past-future/index.html</guid>
+  <pubDate>Thu, 11 Apr 2024 07:00:00 GMT</pubDate>
+  <media:content url="https://mftokic.github.io/posts/2024-04-11-time-series-past-future/image.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
+<item>
+  <title>Time Series First Principles: Garbage In, Garbage Out</title>
+  <dc:creator>Mike Tokic</dc:creator>
+  <link>https://mftokic.github.io/posts/2024-04-08-time-series-garbage/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p><img src="https://mftokic.github.io/posts/2024-04-08-time-series-garbage/image.png" class="img-fluid"></p>
+<section id="time-series-first-principles-series" class="level3">
+<h3 class="anchored" data-anchor-id="time-series-first-principles-series">Time Series First Principles Series</h3>
+<p>This post dives into the second principle of a good time series forecast, garbage in garbage out. Check out the <a href="https://mftokic.github.io/posts/2024-03-26-time-series-first-principles-initial/">initial post</a> in this series to get a high level view of each principle.</p>
+<ol type="1">
+<li><a href="https://mftokic.github.io/posts/2024-04-02-time-series-domain-expertise/">Domain Expertise</a></li>
+<li><a href="https://mftokic.github.io/posts/2024-04-08-time-series-garbage/"><strong>Garbage In Garbage Out</strong></a></li>
+<li><a href="https://mftokic.github.io/posts/2024-04-11-time-series-past-future/">The Future Is Similar To The Past</a></li>
+<li>Higher Grain Higher Accuracy</li>
+<li>Order Is Important</li>
+<li>The Magic Is In The Feature Engineering</li>
+<li>Simple Models Are Better Models</li>
+<li>Capture Uncertainty</li>
+<li>Model Averages Are King</li>
+<li>Deep Learning Last</li>
+</ol>
+</section>
+<section id="youre-not-a-wizard-harry" class="level3">
+<h3 class="anchored" data-anchor-id="youre-not-a-wizard-harry">You’re Not a Wizard, Harry</h3>
+<p>A common I see people in finance make when trying to use machine learning (ML) is around approaching it like a magic wand. Thinking as long as they bring in some data and throw it over the fence to a ML process, a perfect forecast will come back to them. All shiny and clean. ML should be able to find all of the patterns in the data and do things we humans can’t fathom right? No, wrong. ML is not a cure all thing. Having a good ML forecast starts with having quality historical data for a model to learn from. Without good data, you won’t get a good forecast. It’s as simple as that. Let’s dive into ways data can be stinky and how we can sanitize it before training models. To help illustrate each point we’ll use an example of a monthly sales forecast.</p>
+</section>
+<section id="amount-of-historical-data" class="level3">
+<h3 class="anchored" data-anchor-id="amount-of-historical-data">Amount of Historical Data</h3>
+<p>Ideally you want to get as much historical data as possible. If we want to forecast the next quarter of sales, it’s a bad idea to only use the last 12 months of historical data to train a model. Usually I try to get 5+ years of historical data before training any model. This allows for enough year over year observations for a model to learn from. For monthly forecasts, I won’t even start a forecast project if there is less than 3 years of historical data.</p>
+<p>Having sufficient historical data creates the opportunity to have sufficient model back testing. Where we can see how models performed over the last few months of the data. We can then use that back testing accuracy as a proxy for what to expect for the future forecast. The less historical data you have, the less you can back test.</p>
+<p>The more data you have, the longer you can forecast into the future. If I only have 3 years of historical data, it’s a bad idea to try and forecast the next 2 years. A good heuristic is to cap your forecast horizon (periods you want to forecast out) to less than 50% of the historical data. So if you want to forecast out the next 3 years of monthly sales, you need at least 6 years of historical data. When in doubt always get more data.</p>
+<p>What if I have tons of historical monthly sales data, but a cool new feature I want to use around sales pipeline is only available for the last 2 years? Most of the time, stick with using more historical data even if it’s at the expense of using highly correlated features but less historical data. Feel free to try both approaches, but often the one with the most historical data wins.</p>
+</section>
+<section id="trend-and-seasonality" class="level3">
+<h3 class="anchored" data-anchor-id="trend-and-seasonality">Trend and Seasonality</h3>
+<p>Most time series can be broken into three pieces. First is trend, is your data going up or down over time. Second is seasonality, are there peaks and valleys in your data that happen at the same time each year. Finally is the “error” or “residual” component, which is anything left over after accounting for trend and seasonality. Think of it as noise in your data. This approach of breaking down a time series into separate pieces is called time series decomposition.</p>
+<p>Having recurring trends and seasonality in your historical data make things 100% easier to forecast in the future. If your data has trends that change month to month and seasonal patterns that evolve over time, your data is basically all noise. A noisy dataset is a bad dataset, one that can’t be modelled effectively by any ML model. Take a look at the below time series, each broken out by trend, seasonality, and residual. Now tell me which one would be easier to train a model on? Which would produce a high quality future forecast?</p>
+<p><img src="https://mftokic.github.io/posts/2024-04-08-time-series-garbage/chart1.png" class="img-fluid"></p>
+<p>You can deal with noisy data like this in a few ways. The first is to just change the grain of the data. For example, if this was forecasting a specific product SKU, maybe instead sum it up to a higher level like product category. That way more stable trends and seasonality might appear. You can also try to add features (variables to your training data) to try to teach a model why the seasonality and trends in the data are messy. For example the main COVID years from 2020-2022 really throw a wrench in any trends or seasonal patterns in most data sets. So adding information to a data set that tells a model that there was a special one-off situation for specific periods can help a model learn the right kinds of relationships in the data and generalize well to new unseen data going forward.</p>
+</section>
+<section id="missing-data" class="level3">
+<h3 class="anchored" data-anchor-id="missing-data">Missing Data</h3>
+<p>Missing data is the silent killer in forecasting. If you don’t specifically look for it you might never know it’s the reason your forecasts perform poorly. Missing data is important because many models (either statistical models or ML models) often need all sequential date observations of the historical data to train a model. Even one period of missing data can throw off an entire model and lead to poor performance.</p>
+<p>Often times financial systems will not have tons of missing data. It’s important to know if the data that is missing should mean treated as actually missing or seen as a true zero value. For example, if we have product sales missing for a specific month, should we classify that value as truly missing or just hardcode that value to zero? Make sure you clarify that with whoever owns the data.</p>
+<p>If the missing should be zero then that’s a quick fix, but if it’s truly missing then you now have another problem on your hands around what to do. Simply replacing the missing value with zero can throw off any trend or seasonality patters like we discussed earlier. Common ML advice is to replace missing feature data with the median or mean value of that feature, but this is terrible advice for time series forecasting. Usually the best approach is to use some sort of simple statistical model that can understand the trends and patterns of data around the missing value and impute what the value should be. This will keep existing trends and seasonality patterns in the data, meaning your future forecast will be more robust.</p>
+</section>
+<section id="outliers" class="level3">
+<h3 class="anchored" data-anchor-id="outliers">Outliers</h3>
+<p>An outlier in time series forecasting is an atypical data point that significantly deviates from the overall pattern of the data. They can occur multiple times in a historical time series or just be a one off for a particular period. Either way, their presence can greatly impact how a model learns from the data.</p>
+<p>Outlier detection in time series forecasting often involves statistical methods, anomaly detection algorithms, or visual inspection to identify data points that significantly deviate from the typical patterns of the series. Techniques include setting thresholds based on standard deviations, using moving averages to smooth the series and highlight anomalies, applying machine learning models like isolation forests, or utilizing robust decomposition methods (like STL) to separate the series into components and identify outliers in the residuals.</p>
+<p>Take a look at the chart below. See how just one large value towards the end of the time series completely changes the trend and seasonality. A model might take this data and produce a huge forecast going forward, since the trend changed drastically based on the outlier. It might also have a huge spike for that specific period next year, since it learned that seasonality recently changed.</p>
+<p><img src="https://mftokic.github.io/posts/2024-04-08-time-series-garbage/chart2.png" class="img-fluid"></p>
+<p>There are a few ways we can handle the presence of outliers. First we can leave it alone, and let it’s presence impact our future forecast. Maybe after talking with the business domain expert they say that there is a foundational change in the business (new product launch, tax change) that means we expect to see similar values in the future. Second we can add some more information to our data to explain what happened in that period and if we expect it to happen again in the future. If the outlier was caused by a new product launch, we can label that as a feature in the data and also tell the model if we expect any product launches in the future. A model will then learn of these one off patterns and adjust the forecast as needed. The final method is to remove the outlier altogether. Once removed, we can treat it like a missing value and replace it with a value more in line with recent trends and seasonality. If it’s truly a one off thing that will never happen again then removing it is sometimes the best approach. The choice you make always depends on the context of what caused the outlier and how we expect similar things to happen going forward.</p>
+</section>
+<section id="reversal" class="level3">
+<h3 class="anchored" data-anchor-id="reversal">Reversal</h3>
+<p>Sometimes having more historical data is a bad thing, and can hurt model performance. For example having 30 years of historical data could produce a good forecast, but do the trends and patterns of the business 20 years ago still apply to the business today? Often in fast changing industries this is not the case, so sometimes deliberately shortening your data is the right idea. Five years from now we may want to exclude data from pre-2023 to remove all impacts of COVID. How your customers purchased your services in 2019 is most likely very different than how they will buy them in 2024. Gee, thanks COVID.</p>
+</section>
+<section id="automatic-data-cleaning-with-finnts" class="level3">
+<h3 class="anchored" data-anchor-id="automatic-data-cleaning-with-finnts">Automatic Data Cleaning with finnts</h3>
+<p>Thankfully there is a solution to most of these problems. My package, <a href="https://microsoft.github.io/finnts/index.html">finnts</a>, helps solve a lot of the data sanitizing needed to produce a high quality forecast. It can handle outliers and missing values automatically for you. It abstracts away all of these hard topics and makes it easy to get up and running with a forecast in one line of code. Check it out.</p>
+</section>
+<section id="final-thoughts" class="level3">
+<h3 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h3>
+<p>Messy data will always lead to a messy forecast. ML models can’t save you from bad data. There’s no magic wand to cure common data problems. What you can do though is make sure your data has solid historical trends/seasonality, no missing data, and good approach to handling outliers. With these taken care of, you’re own your way to building a high quality forecast.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>time-series</category>
+  <category>machine-learning</category>
+  <category>finance</category>
+  <guid>https://mftokic.github.io/posts/2024-04-08-time-series-garbage/index.html</guid>
+  <pubDate>Mon, 08 Apr 2024 07:00:00 GMT</pubDate>
+  <media:content url="https://mftokic.github.io/posts/2024-04-08-time-series-garbage/image.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
+<item>
+  <title>Weekend Reads (4/5/24)</title>
+  <dc:creator>Mike Tokic</dc:creator>
+  <link>https://mftokic.github.io/posts/2024-04-05-weekend-reads/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p><img src="https://mftokic.github.io/posts/2024-04-05-weekend-reads/image.png" class="img-fluid"></p>
+<section id="videos" class="level2">
+<h2 class="anchored" data-anchor-id="videos">Videos</h2>
+<ul>
+<li><a href="https://youtu.be/_Y-7liNT1Ok?si=VDIlw5FTQXCu2kYm">Improving Focus</a></li>
+<li><a href="https://youtu.be/ha1ZbJIW1f8?si=2D0Gp15NkD9iup01">Dopamine and Motivation</a></li>
+<li><a href="https://youtu.be/gR_f-iwUGY4?si=JHewqUkP7dautU1v">Optimal Morning Routine</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLOhHNjZItNnOoPxOF3dmq30UxYqFuxXKn">Sequoia AI Summit</a></li>
+<li><a href="https://youtu.be/4t4YkHSTZbw?si=qqjiCcKg4_YmotoA">SBF, Gov Spending, and More on All In</a></li>
+</ul>
+</section>
+<section id="podcasts" class="level2">
+<h2 class="anchored" data-anchor-id="podcasts">Podcasts</h2>
+<ul>
+<li><a href="https://open.spotify.com/episode/4iqmP3Gys5AkyLpcXNU26N?si=zGiCV0c0Ts-8baaJ2j2k8g">Scott Glenn on Tim Ferriss</a></li>
+<li><a href="https://open.spotify.com/episode/7ExrANvf3Rhha46GRX5W8X?si=ON6IJbN-QT-SDo6a7fOjMQ">Seth Godin on Tim Ferriss</a></li>
+<li><a href="https://open.spotify.com/episode/4tnRkV3qL3GulapNmzirsy?si=3NYI2OFhSVWpFevtfxvK6Q">Dr.&nbsp;Rhonda Patrick on The Knowledge Project</a></li>
+</ul>
+</section>
+<section id="tweets" class="level2">
+<h2 class="anchored" data-anchor-id="tweets">Tweets</h2>
+<ul>
+<li><a href="https://x.com/gdb/status/1772334028009652415">Sora Goodness</a></li>
+<li><a href="https://x.com/EMostaque/status/1772594194315436266">Satya Nadella Stays Undefeated</a></li>
+<li><a href="https://x.com/thegarrettscott/status/1771645169151901952">Bezos Leadership Principles</a></li>
+</ul>
+</section>
+<section id="books" class="level2">
+<h2 class="anchored" data-anchor-id="books">Books</h2>
+<ul>
+<li><a href="https://ravinkumar.com/GenAiGuidebook/book_intro.html">GenAI Guidebook</a></li>
+</ul>
+
+
+</section>
+
+ ]]></description>
+  <category>weekend-reads</category>
+  <guid>https://mftokic.github.io/posts/2024-04-05-weekend-reads/index.html</guid>
+  <pubDate>Fri, 05 Apr 2024 07:00:00 GMT</pubDate>
+  <media:content url="https://mftokic.github.io/posts/2024-04-05-weekend-reads/image.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
+<item>
+  <title>Time Series First Principles: Domain Expertise</title>
+  <dc:creator>Mike Tokic</dc:creator>
+  <link>https://mftokic.github.io/posts/2024-04-02-time-series-domain-expertise/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p><img src="https://mftokic.github.io/posts/2024-04-02-time-series-domain-expertise/image.png" class="img-fluid"></p>
+<section id="time-series-first-principles-series" class="level3">
+<h3 class="anchored" data-anchor-id="time-series-first-principles-series">Time Series First Principles Series</h3>
+<p>This post dives into the first principle of a good time series forecast, domain expertise. Check out the <a href="https://mftokic.github.io/posts/2024-03-26-time-series-first-principles-initial/">initial post</a> to get a high level view of each principle.</p>
+<ol type="1">
+<li><a href="https://mftokic.github.io/posts/2024-04-02-time-series-domain-expertise/"><strong>Domain Expertise</strong></a></li>
+<li><a href="https://mftokic.github.io/posts/2024-04-08-time-series-garbage/">Garbage In Garbage Out</a></li>
+<li><a href="https://mftokic.github.io/posts/2024-04-11-time-series-past-future/">The Future Is Similar To The Past</a></li>
+<li>Higher Grain Higher Accuracy</li>
+<li>Order Is Important</li>
+<li>The Magic Is In The Feature Engineering</li>
+<li>Simple Models Are Better Models</li>
+<li>Capture Uncertainty</li>
+<li>Model Averages Are King</li>
+<li>Deep Learning Last</li>
+</ol>
+</section>
+<section id="introduction" class="level3">
+<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
+<p>Any data scientist worth their salt can create a time series forecast for you. They can pull some data, train some machine learning (ML) models, and give you a forecast. All with you out of the loop. If that’s the case at your company, run! This is a big red flag. While that can sometimes yield good results, often the most important ingredient is missing, which is strong domain expertise about what you’re trying to forecast. This is where strong understanding of the business and market forces come into play. You know, the stuff that finance people excel at. Pairing robust ML models with strong domain expertise about the area being forecasted always yields the most accurate forecast. It also increases trust in that forecast, since the humans using that forecast know the model took into account important factors that influence the business. In this post we’ll use a hypothetical example of a company’s real estate spending to showcase the importance of domain expertise.</p>
+</section>
+<section id="translating-domain-expertise-into-features" class="level3">
+<h3 class="anchored" data-anchor-id="translating-domain-expertise-into-features">Translating Domain Expertise Into Features</h3>
+<p>How does domain expertise change how a ML model is created? This can manifest in many forms. The most common is changing the kind of data used in training a model. Variables that a model learns from are called “features”. Let’s apply this to our real estate spend forecast example. In the last few years, COVID and the work from home revolution have changed how people come into work. This changes how many people drink coffee, use the copier, and even which buildings stay in operation for a company. Simply pulling historical building expense data and training a model could get you ok results, but to get to peak performance you need domain expertise around what actually moves the needle for building expenses. Example features could be the square footage of a building, how many people actually badge into that building each month, even the periods where COVID was at its worse and a work from home mandate was in effect. All of these things are custom knowledge, most likely kept inside the heads of the finance workers who oversee the real estate space within a finance org.</p>
+</section>
+<section id="iteration-is-key" class="level3">
+<h3 class="anchored" data-anchor-id="iteration-is-key">Iteration is Key</h3>
+<p>Throwing all of your ideas as features into a model from the start is usually not a good idea. Instead having multiple rounds of iteration is key. In the real estate example, it’s best to start out with no external features. Just use historical spend to forecast future spend. Starting with this simpler approach can sometimes get you 90% of the accuracy you need, maybe even 100% if there are stable trends and seasonality that carries into the future. Run this first to see what the initial accuracy is, and if it doesn’t meet your requirements that when we can refine by adding new data.</p>
+<p>Once you have the baseline, you can look deeper into the accuracy results to see where the forecast is performing poorly. This is where domain knowledge kicks in. Poor initial forecast performance can be fixed by asking the domain expert if there is a difference between what the model knows and what a human knows. If there is a gap, can that be quantified as data to teach a model? This kind of insight can be added into a model with easy to find numeric data, or even as binary yes or no values (1 or 0) to denote when a specific one off event happened. This iterative process is where the magic happens.</p>
+<p>For the real estate forecast, maybe there was a period where expenses jumped sharply in one month and stayed at that new level for the rest of the year. This will be hard for a ML model to understand or even anticipate, but the domain expert of the real estate space knows that in that specific month there were two new building openings. So the expenses of course jumped up a significant degree and stayed like that going forward. Knowing this, we can get historical square footage information and add it into our model. We can even incorporate future buildings that might be removed or added going forward. This will help a model understand how changes in total buildings impact spend.</p>
+<p>So we added total square footage to our model and the results improved compared to our initial baseline of no external features. But it didn’t move the needle that much. Even though our company might be adding more buildings, in recent years the spend may not have a perfect correlation with added square footage. Knowing this, the domain expert recommends using anonymous badge in data to see who is actually coming into work. Pre-covid this data may not have been useful, since most buildings were always at max capacity with everyone coming to work each day. Now in a post-covid world this has changed forever. Some teams might only be in their assigned building 2-3 days a week. Or maybe they never returned in person, deciding instead to buy ranches in Wyoming with fast WiFi. Combining the square footage and badge in data into the model yielded fantastic results, much better than the initial baseline.</p>
+<p>After reviewing the improved results with the domain expert, the future forecast still seems a little low compared to the domain experts expectations. The domain expert has one last idea, trying to teach the model how COVID impacted spending. This can be quantified as a binary variable, where in all rows of the data we add a 1 if COVID was impacting the world, and 0 when it wasn’t. This means from early 2020 - early 2022 we have values of 1 and every period before and after we give a value of 0. A model can now understand that what happened over those two years was mostly a one off situation that is not expected going forward. After the ML model is trained with this new insight the back testing now looks great and the future forecast matches the expectations of the domain expert.</p>
+</section>
+<section id="reversal" class="level3">
+<h3 class="anchored" data-anchor-id="reversal">Reversal</h3>
+<p>Getting high quality data to use as features in a model is always a good idea. There are times though where the amount of historical feature data might be lacking. For example, we may not be able to get more than 3 years of historical square footage data for our real estate expense forecast, even though we can get 5 years of historical spend data. What should we do? We can shorten the historical spend data to the last 3 years to match the square footage data, but having less data can sometimes degrade model performance. So in some cases choosing to use the full 5 years of historical spend without the square footage data is the best approach that yields the best accuracy.</p>
+<p>When facing this dilemma, try both approaches and see how accuracy is effected. I’ve seen many times that using more historical data of what you’re trying to forecast is often more accurate than shortening that data to combine it with external features.</p>
+</section>
+<section id="final-thoughts" class="level3">
+<h3 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h3>
+<p>Starting any ML process without a business domain expert in the room is always a bad mistake. They are the cheat code in the video game that gets you to level 20 in half the time. Involving them early and often while also adopting a quick iteration approach can create a world class forecast that is trusted by the ultimate end users, which often are the domain experts themselves. At the end of the day most ML forecasts come down to trust by the end user. That’s why domain expertise is the first principle in building quality time series forecasts.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>time-series</category>
+  <category>machine-learning</category>
+  <category>finance</category>
+  <guid>https://mftokic.github.io/posts/2024-04-02-time-series-domain-expertise/index.html</guid>
+  <pubDate>Tue, 02 Apr 2024 07:00:00 GMT</pubDate>
+  <media:content url="https://mftokic.github.io/posts/2024-04-02-time-series-domain-expertise/image.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
+<item>
+  <title>Thoughts on First Principles in Time Series Forecasting</title>
+  <dc:creator>Mike Tokic</dc:creator>
+  <link>https://mftokic.github.io/posts/2024-03-26-time-series-first-principles-initial/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p><img src="https://mftokic.github.io/posts/2024-03-26-time-series-first-principles-initial/image.png" class="img-fluid"></p>
+<p>I’ve been doing time series forecasting with machine learning (ML) most of my career. I believe it’s still the best AI opportunity in corporate finance, even with all of the latest Generative AI developments in recent years. If you work for the CFO, chances are you often create predictions about the future. Those predictions take time and can always be more accurate. Machine learning can help in both areas. Before you build machine learning solutions in your finance org, it’s important to understand the true building blocks of making good forecasts.</p>
+<p>In this post I will overview each first principle, and have follow-up posts digging deeper into each one. Let’s dive in.</p>
+<ol type="1">
+<li><a href="https://mftokic.github.io/posts/2024-04-02-time-series-domain-expertise/"><strong>Domain Expertise</strong></a>: Knowing what factors actually influence what you are trying to forecast is more important than which ML model to train.</li>
+<li><a href="https://mftokic.github.io/posts/2024-04-08-time-series-garbage/"><strong>Garbage In Garbage Out</strong></a>: Training a model on bad data leads to bad forecasts.</li>
+<li><a href="https://mftokic.github.io/posts/2024-04-11-time-series-past-future/"><strong>The Future Is Similar To The Past</strong></a>: If you expect the future to be drastically different than past data, you will have a hard time training accurate models.<br>
+</li>
+<li><strong>Higher Grain Higher Accuracy</strong>: Forecasting by country is often more accurate than forecasting by city. Forecasting by month is often more accurate than forecasting by day.</li>
+<li><strong>Order Is Important</strong>: When time is involved, how your data is ordered makes all the difference.</li>
+<li><strong>The Magic Is In The Feature Engineering</strong>: How you transform your data before model training can transform a mediocre forecast into a world class forecast.</li>
+<li><strong>Simple Models Are Better Models</strong>: Like occam’s razor, the best model is often the one with the least amount of inputs.</li>
+<li><strong>Capture Uncertainty</strong>: Showing the back testing results and future uncertainty of a model’s forecast builds more trust.</li>
+<li><strong>Model Averages Are King</strong>: Usually a simple average of multiple models is more accurate than just one model’s prediction.</li>
+<li><strong>Deep Learning Last</strong>: Deep learning isn’t as effective as more traditional ML models.</li>
+</ol>
+<section id="final-thoughts" class="level3">
+<h3 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h3>
+<p>This is not an exhaustive list, but instead principles that I find particularly important when creating a time series forecast. Having a firm understanding of these principles is enough to get the ball rolling on any type of forecast you’re working on. Thankfully, the very same approach I use in my job to do forecasting is open source and freely available through my R forecasting package called <a href="https://microsoft.github.io/finnts/index.html">finnts</a>. Even if you’ve never done data science or used R before, finnts makes it easy to get off the ground fast without shooting yourself in the foot when dealing with the above principles. Stay tuned for more posts about each principle.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>time-series</category>
+  <category>machine-learning</category>
+  <category>finance</category>
+  <guid>https://mftokic.github.io/posts/2024-03-26-time-series-first-principles-initial/index.html</guid>
+  <pubDate>Tue, 26 Mar 2024 07:00:00 GMT</pubDate>
+  <media:content url="https://mftokic.github.io/posts/2024-03-26-time-series-first-principles-initial/image.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
+<item>
+  <title>Weekend Reads (3/22/24)</title>
+  <dc:creator>Mike Tokic</dc:creator>
+  <link>https://mftokic.github.io/posts/2024-03-22-weekend-reads/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p><img src="https://mftokic.github.io/posts/2024-03-22-weekend-reads/image.png" class="img-fluid"></p>
+<section id="articles" class="level2">
+<h2 class="anchored" data-anchor-id="articles">Articles</h2>
+<ul>
+<li><a href="https://world.hey.com/dhh/developers-are-on-edge-4dfcf9c1">DHH On Coding AI Agents</a></li>
+<li><a href="https://collabfund.com/blog/the-thin-line/">When Confidence Backfires</a></li>
+</ul>
+</section>
+<section id="videos" class="level2">
+<h2 class="anchored" data-anchor-id="videos">Videos</h2>
+<ul>
+<li><a href="https://youtu.be/NdxFctWShtc?si=pFzzxt7EctaREoZY">Sahil Bloom on Building Life Systems</a></li>
+<li><a href="https://youtu.be/jvqFAi7vkBc?si=v654_j6USVkIUGNx">Sam Altman on Lex Friedman</a></li>
+<li><a href="https://youtu.be/lXLBTBBil2U?si=yEU-YxYkgusDFkEd">Jensen Huang at Stanford GSB</a></li>
+<li><a href="https://youtu.be/uMajFsCkzxY?si=fwzKDf-jfCK-ZyKT">TikTok Ban, AI, and more on All In</a></li>
+</ul>
+</section>
+<section id="podcasts" class="level2">
+<h2 class="anchored" data-anchor-id="podcasts">Podcasts</h2>
+<ul>
+<li><a href="https://open.spotify.com/episode/11oI0JELKOohCSEwz8WOQD?si=1648IhapTUOdkaanwRM4Ug">Morgan Housel on Modern Wisdom</a></li>
+</ul>
+</section>
+<section id="tweets" class="level2">
+<h2 class="anchored" data-anchor-id="tweets">Tweets</h2>
+<ul>
+<li><a href="https://x.com/BallsackSports/status/1770999544911626266?s=20">Grateful that Kansas won their first round game</a></li>
+<li><a href="https://x.com/george__mack/status/1769376253524496607?s=20">How Momentum Rules Your Life</a></li>
+<li><a href="https://x.com/Feynmanism_/status/1753767517762596903?s=20">Cognitive Biases</a></li>
+</ul>
+</section>
+<section id="books" class="level2">
+<h2 class="anchored" data-anchor-id="books">Books</h2>
+<ul>
+<li><a href="https://www.amazon.com/Numbers-Game-Everything-About-Soccer-ebook/dp/B00BPDR3E2/ref=tmm_kin_swatch_0?_encoding=UTF8&amp;dib_tag=se&amp;dib=eyJ2IjoiMSJ9.rmUGJqVG-UDO-EJgjWaUjPm0ug1og2SXZQ8GiC45XXxuQBtP7Zt81fkEWNptjyu6-K4Lk6Dq4pKN867arj5xDiLron2Zl7KN5-fjRRh1w15sNA0UvwnPtIKnfWqyQEGEd475FjsPSiNH_CVWG5956NWPyp4f2j9I5mYgWmxLceICvMI-j9WKDdR5Xn9MwPaRwzIg0N5GNI9U_r2gIstQ0RlZhNonJR2TyxycZexvtKY.7_sZ4hdeMz5-fU0BCzqT3rFyOo0klmjutMl3rZ_qpn4&amp;qid=1711121115&amp;sr=8-4">The Numbers Game by Chris Anderson</a></li>
+</ul>
+
+
+</section>
+
+ ]]></description>
+  <category>weekend-reads</category>
+  <guid>https://mftokic.github.io/posts/2024-03-22-weekend-reads/index.html</guid>
+  <pubDate>Fri, 22 Mar 2024 07:00:00 GMT</pubDate>
+  <media:content url="https://mftokic.github.io/posts/2024-03-22-weekend-reads/image.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
+<item>
+  <title>Weekend Reads (3/16/24)</title>
+  <dc:creator>Mike Tokic</dc:creator>
+  <link>https://mftokic.github.io/posts/2024-03-16-weekend-reads/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p><img src="https://mftokic.github.io/posts/2024-03-16-weekend-reads/image.png" class="img-fluid"></p>
+<section id="videos" class="level2">
+<h2 class="anchored" data-anchor-id="videos">Videos</h2>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=-gfEjOgxBfI">The Algebra of Happiness</a></li>
+</ul>
+</section>
+<section id="podcasts" class="level2">
+<h2 class="anchored" data-anchor-id="podcasts">Podcasts</h2>
+<ul>
+<li><a href="https://open.spotify.com/episode/6fJYHF4NOQZvoCpaCFt7lX?si=GkalASEQRzq22cxs77TYNw">Chris Davis On The Knowledge Project</a></li>
+<li><a href="https://open.spotify.com/episode/7LQzv0OKaE6KWEPPXPWuv7?si=CA0dzU35Q96xKYkIQipI0g">Kimbal Musk On Lex Friedman</a></li>
+<li><a href="https://open.spotify.com/episode/5TAmY56aFV2J6Byn0qg94H?si=G2jTl8QFR4-P40FxjXd9jw">Dr.&nbsp;Cal Newport On Huberman Lab</a></li>
+</ul>
+</section>
+<section id="tweets" class="level2">
+<h2 class="anchored" data-anchor-id="tweets">Tweets</h2>
+<ul>
+<li><a href="https://twitter.com/heyitswindy/status/1764023423485812995?s=46&amp;t=8Xa2BngQ9d359SJzFrCFMA">Excellent Product Placement</a></li>
+<li><a href="https://twitter.com/cognition_labs/status/1767548763134964000?s=46&amp;t=8Xa2BngQ9d359SJzFrCFMA">Meet Devin, Your AI Dev Intern</a></li>
+<li><a href="https://twitter.com/spacex/status/1768267464062943676?s=46&amp;t=8Xa2BngQ9d359SJzFrCFMA">SpaceX Launch</a></li>
+<li><a href="https://twitter.com/neilpatel/status/1768645880784314626?s=46&amp;t=8Xa2BngQ9d359SJzFrCFMA">ChatGPT Writing Prompt</a></li>
+<li><a href="https://twitter.com/thekriskay/status/1768665799638553068?s=46&amp;t=8Xa2BngQ9d359SJzFrCFMA">Invest For The Long Haul</a></li>
+</ul>
+</section>
+<section id="books" class="level2">
+<h2 class="anchored" data-anchor-id="books">Books</h2>
+<ul>
+<li><a href="https://www.amazon.com/Great-Mental-Models-Thinking-Concepts-ebook/dp/B07P79P8ST/ref=tmm_kin_swatch_0?_encoding=UTF8&amp;dib_tag=se&amp;dib=eyJ2IjoiMSJ9.nqDtFB0egHNRqbrwj7r9Q_VC72or3xvMfmy7E8Mp0Jf450tLXd7icWtUFMWvgbxO9dAyqa7WCJgjoHxY_gFVtNrfRN0jweiog60OU-ohIGe6cOiS0lNSskb-ZSLy3T-YZr62UAI1EL6NaBwfeB68kg4YW61sMl7qJdAYRlVMFg5ymByXAbbwp11EadBruMWEyWfCnPSoVU1CNUpFRnr4WUj_3IAu4Uv2sihpLbmPf1Q.wzJzOHHNv35HioL8ZTZcL1y-Tl7sbyX4KoL6E-Vge04&amp;qid=1710597095&amp;sr=8-1">The Great Mental Models Volume 1 by Shane Parrish</a></li>
+</ul>
+
+
+</section>
+
+ ]]></description>
+  <category>weekend-reads</category>
+  <guid>https://mftokic.github.io/posts/2024-03-16-weekend-reads/index.html</guid>
+  <pubDate>Sat, 16 Mar 2024 07:00:00 GMT</pubDate>
+  <media:content url="https://mftokic.github.io/posts/2024-03-16-weekend-reads/image.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
+<item>
+  <title>Thoughts on Power</title>
+  <dc:creator>Mike Tokic</dc:creator>
+  <link>https://mftokic.github.io/posts/2024-03-13-power-pursuits/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p><img src="https://mftokic.github.io/posts/2024-03-13-power-pursuits/image.png" class="img-fluid"></p>
+<p>A few years ago I was at dinner with a few friends. Out of the blue one of them asked me “what is the meaning of life?”. Without thinking I blurted out “love”. Thinking that in the end, everything comes down to love. It sounded cheesy and cliche coming out of my mouth. Over the years though, I continued to ponder the question and now think more than ever that it’s the right answer.</p>
+<p>What most people want in life can mostly be boiled down to the pursuit and gaining of power. Some types of power are good for you, but the most common ones always leave you unfulfilled. You know what does fulfil you though? Love. It fills you up better than power ever could. Let’s review how most things we chase in life are just hidden forms of power.</p>
+<section id="types-of-unfulfilling-power" class="level3">
+<h3 class="anchored" data-anchor-id="types-of-unfulfilling-power">Types of Unfulfilling Power</h3>
+<p>Starting with unfulfilling power. These are things that can be attained in ok ways, but doing them just for the pursuit of having it is a good way to waste your life.</p>
+<ol type="1">
+<li><strong>Money</strong>: The most popular form of power and game we play in society. Granted you want to get to a certain level of money to have a good life, but after that the more money you have the less fulfilled it makes you. Mo money, mo problems.</li>
+<li><strong>Status</strong>: This is power over how people in society look at you. There are many ways to get status. Going to an elite college or working at a prestigious job are ways to gain status. You also gain status around how you spend your money. Living in a fancy house in a fancy neighborhood punches a ticket to a different level of status than someone living in a trailer park. It’s easy for people to see what you own, and most people own certain things to convey status. Does a Rolex tell more accurate time than your phone? No but it shows that you are the type of person who can spend $10,000 minimum on an accessory you don’t really need. Increases in status normally feed your ego, which is not good for anyone.</li>
+<li><strong>Beauty</strong>: Having power over other’s attention and sexual desires. This is a weird one because it can either be gained naturally (just being born) or through external means (botox, plastic surgery). If you hit the genetic lottery, congrats, but the external route is a slippery slope that usually doesn’t end well.</li>
+<li><strong>Fame</strong>: Having power over people’s attention. Will Smith says the process of becoming famous is fun, but maintaining fame is just ok, and losing fame is hell. You don’t know how important having a private life is until you become a famous person. Can Will Smith casually go to a local park with his family on a Sunday? Nope. His life is forever inconvenienced by his fame. How much would he pay to have a quiet afternoon on a park bench with no interruptions? It might be more than you think.</li>
+<li><strong>Legacy</strong>: Having power after you’re dead. How many people donate tens of millions to a university anonymously? Almost none. Most donate and in return get their name on a building. Maybe they’re stewards of higher education but maybe they just want their name to be remembered after they’re dead. Who cares if people remember your name 100 years from now, you will be dead. I repeat, you will be dead. Has your grandpa ever talked to you about his grandpa while growing up? Probably not. People are forgotten and that’s ok.</li>
+<li><strong>Leadership Roles</strong>: Having power over people’s careers. Most people think the further they progress in their careers, the more likely they will end up managing a large team or company. While that’s true for a lot of jobs, it may not be everything you expected. Maybe instead of the management promotion you actually just wanted to work on higher impact projects and have more autonomy over how you get your work done. Think about a band like the Rolling Stones. They are very good at their job, but it’s not like after their second album their record label said “you have been doing such a good job that we think you should be promoted and start overlooking other bands”. That would be crazy. Instead they were given every opportunity to write more songs and perform to bigger audiences. I think knowledge work will move more towards that in the future. Corporate rock-stars will forgo the management path and truly become the best in the world at something. With scalable technology the best person in the world at a task can literally do it for everyone else in the world.</li>
+</ol>
+</section>
+<section id="types-of-fulfilling-power" class="level3">
+<h3 class="anchored" data-anchor-id="types-of-fulfilling-power">Types of Fulfilling Power</h3>
+<p>I’m not saying that we should all shave our head, sell our possessions, and live as a monk. It’s ok to do things in life that increase your power, but I recommend trying to increase types of power that can actually fulfill you instead of leaving you wanting more. There are types of power that compound as you continue to increase them. These are true super powers that should be prioritized in life. Here are the types of power worth pursuing.</p>
+<ol type="1">
+<li><strong>Freedom</strong>: Having power over how you spend your time. Why does America rock? People will say the freedom they have, which is another way to say they can truly do whatever they want. Having control over your time is the best power you can have.</li>
+<li><strong>Health</strong>: Having power over your own body. You might have a million thoughts and worries bounce around your head in a typical day, but when you’re sick or injured you only think about one thing. Improve your sleep, diet, and exercise and see if your life doesn’t improve by an order of magnitude.</li>
+<li><strong>Learning</strong>: How does that old saying go again? Oh yeah, knowledge is power. Some would argue it’s potential power, waiting to be applied. Noticed I listed this as learning and not knowledge. Having knowledge is great but there is never a reason to stop acquiring knowledge throughout life. This power compounds as you learn more. Lean into the eighth wonder of the world and keep learning.</li>
+<li><strong>Reputation</strong>: Having power over other’s perceptions of your character. Warren Buffet can do billion dollar deals over the phone, no contract needed, because of his stellar reputation he built over a lifetime. A good reputation can increase your luck surface area in life. A good reputation takes time to build, but can be gone in an instant.<br>
+</li>
+<li><strong>Relationships</strong>: Having power over other people’s time. Loving friends, an amazing spouse, and children running around your house are some of the most rewarding things in life. Not having strong relationships is literally the equivalent to smoking when it comes to lifespan. I would choose these relationships wisely though. Once when I was in college my business class went to visit a local bank in Kansas City. The bank’s founder, a hunched over man in his 80s, came out to speak to us students. When asked for advice for living a good life, his response was simple. He said, “be around good people”. The older I get the more this advice makes more sense. You truly are the average of the five people you hang out with most. Choose wisely.</li>
+</ol>
+</section>
+<section id="love-over-power" class="level3">
+<h3 class="anchored" data-anchor-id="love-over-power">Love Over Power</h3>
+<p>Love what you do, love who you spend your time with, and most importantly love yourself. The most important things in life boil down to love. Truly a first principle when it comes to living a good life. Call me a hippie but it’s the truth. Stay away from the most popular desires in life that ultimately are unfulfilling power, double down on power that does fulfill you, and most importantly optimize for more love in your life.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>life</category>
+  <guid>https://mftokic.github.io/posts/2024-03-13-power-pursuits/index.html</guid>
+  <pubDate>Wed, 13 Mar 2024 07:00:00 GMT</pubDate>
+  <media:content url="https://mftokic.github.io/posts/2024-03-13-power-pursuits/image.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
+<item>
+  <title>Weekend Reads (2/23/24)</title>
+  <dc:creator>Mike Tokic</dc:creator>
+  <link>https://mftokic.github.io/posts/2024-02-23-weekend-reads/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p><img src="https://mftokic.github.io/posts/2024-02-23-weekend-reads/image.png" class="img-fluid"></p>
+<section id="articles" class="level2">
+<h2 class="anchored" data-anchor-id="articles">Articles</h2>
+<ul>
+<li><a href="https://openai.com/sora">Sora by OpenAI</a></li>
+<li><a href="https://forum.openai.com/">OpenAI Forum</a></li>
+<li><a href="https://bensbites.beehiiv.com/p/ignitetech-using-ai-change-business">Company Fires Employees Who Don’t Embrace New AI Tools</a></li>
+</ul>
+</section>
+<section id="videos" class="level2">
+<h2 class="anchored" data-anchor-id="videos">Videos</h2>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=CX7Ng70IEwc">Aswath Damodaran on Prof G Markets</a></li>
+<li><a href="https://www.youtube.com/watch?v=-vZXgApsPCQ">What I Learned From 100 Days of Rejection</a></li>
+<li><a href="https://www.youtube.com/watch?v=XieCU9nzrl8">Charlie Houpert on Modern Wisdom</a></li>
+</ul>
+</section>
+<section id="podcasts" class="level2">
+<h2 class="anchored" data-anchor-id="podcasts">Podcasts</h2>
+<ul>
+<li><a href="https://open.spotify.com/episode/7iLniD7dXRCJVzvP8IPCtf?si=4MXVdJFkS52MttJH3s-49Q">Chris Williamson on Joe Rogan</a></li>
+<li><a href="https://open.spotify.com/episode/3hSnWfuMS4TMsd1p7BTYyi?si=D7TerLvXSEK5MiFsqPfF5w">Latest AI Developments on All In</a></li>
+<li><a href="https://open.spotify.com/episode/2b3r0hLbXz8oxCTB7lZN6X?si=FkTHisA2QoiG6Bx6Ka9ACw">Morgan Housel on Modern Wisdom</a></li>
+</ul>
+</section>
+<section id="songs" class="level2">
+<h2 class="anchored" data-anchor-id="songs">Songs</h2>
+<ul>
+<li><a href="https://open.spotify.com/track/52SCT6ImFklqEhH21lgErO?si=7b5b89bd51d7408d">Sweet City Woman by Stampeders</a></li>
+</ul>
+</section>
+<section id="series" class="level2">
+<h2 class="anchored" data-anchor-id="series">Series</h2>
+<ul>
+<li>Unbreakable Kimmy Schmidt on Netflix</li>
+</ul>
+
+
+</section>
+
+ ]]></description>
+  <category>weekend-reads</category>
+  <guid>https://mftokic.github.io/posts/2024-02-23-weekend-reads/index.html</guid>
+  <pubDate>Fri, 23 Feb 2024 08:00:00 GMT</pubDate>
+  <media:content url="https://mftokic.github.io/posts/2024-02-23-weekend-reads/image.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
+<item>
+  <title>Thoughts on My Journey in Microsoft’s Finance Rotation Program</title>
+  <dc:creator>Mike Tokic</dc:creator>
+  <link>https://mftokic.github.io/posts/2024-02-19-frp-journey/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p><img src="https://mftokic.github.io/posts/2024-02-19-frp-journey/image.png" class="img-fluid"></p>
+<p>On new years day of 2015, I got an email from a Microsoft recruiter to schedule a phone screen for Microsoft’s Finance Rotation Program (FRP). A week after the phone screen, I was reading the book <a href="https://www.amazon.com/Alchemist-Paulo-Coelho-ebook/dp/B00U6SFUSS/ref=tmm_kin_swatch_0?_encoding=UTF8&amp;dib_tag=se&amp;dib=eyJ2IjoiMSJ9.oUSaMmdTbyPBivuJLFm4Q1-NYaczN5ba008GOHDhQ9MOWgetjqBf7mHJx-PV4E6-kGeu5vWE_iQluiP7ZWLeFr1BIb5kFE3AaWUllmpUW-i1TbGQz95SeAAXu8D3mJs6t5MRYogHfFbhJ-tXXH-oIdjEK_veG5yAXDhFY2tOH4bRHh3hBoqlkL8qoLDFMJnESLJYbLoXadTMspNTNsDk-zbD2P3t-k7haUW7HWzd-BQ.TRSe7jlfvSeKC_Zh01wIH6cYm_jC_bsYxD8nY4LD0OY&amp;qid=1708359556&amp;sr=8-1">The Alchemist</a> during a study break and started to think about my <a href="https://www.literarytraveler.com/articles/what-is-your-personal-legend/#:~:text=Your%20Personal%20Legend%20is%20what%20you%20have%20always,to%20see%20happen%20to%20them%20in%20their%20lives.">personal legend</a>. I thought Microsoft would be a good opportunity and hoped for another interview. That’s right when my phone rang, it was the recruiter informing me that I was about to be chosen for the final super day in February. The weekend before the big interview in Redmond, my brother got me tickets to see the Oklahoma City Thunder take on the LA Clippers, a present for my 21st birthday. I told him I couldn’t go, because I needed time to prepare for the biggest interview of my life. Laughing, he said I had nothing to worry about, I would get the job, and we can use this weekend to celebrate the new job. His confidence in me, and the uncanny coincidence with the Alchemist book, were the “omens I’d follow” into my own personal legend. Thankfully the interview went well, I got the offer, and the rest is history.</p>
+<p>The Finance Rotation Program at Microsoft is a two year program where recent college graduates complete four rotations across various groups in finance, each lasting six months. It’s a great opportunity to learn about different parts of Microsoft’s business, while also being a world class “try it before you buy it” experience for finding your optimal career path. You get to find what your destined to do, and Microsoft gets a well rounded finance professional that is tuned to find the exact job they want long term. A true win-win.</p>
+<p>I often get asked to talk about my experience from would be FRP’s still in school and existing FRP’s in the program. My career path in the FRP is nontraditional in nature, but is hopefully one anyone with enough high agency can do as well. I write this to those high agency folks. People who want to do interesting things in the world and help others. What follows is my path in the FRP and what I recommend for today’s FRP’s.</p>
+<section id="rotations" class="level2">
+<h2 class="anchored" data-anchor-id="rotations">Rotations</h2>
+<section id="internship-venture-integration" class="level3">
+<h3 class="anchored" data-anchor-id="internship-venture-integration">Internship: Venture Integration</h3>
+<p>I came into the FRP as an intern in the summer of 2015, the same summer Microsoft launched Windows 10. It was a fun time to join finance at Microsoft. Satya Nadella was only installed as CEO a few years back, same as Amy Hood the CFO. The stock price was in the 40s and no one thought Microsoft was doing anything cool or exciting. Safe to say most students at my college had MacBooks instead of Surfaces.</p>
+<p>The Venture Integration team was responsible for helping acquired companies integrate successfully into Microsoft. While Corporate Development teams work on closing the deal, the Venture Integration team does everything else. From doing due diligence on the companies financial statements, digging through the products source code, all the way to determining if the acquired CEO would move to Redmond. It was a cool space to be in. Code names were used for each deal, and the deal flow was strong. Often we started a new deal every two weeks.</p>
+<p>My role on the team didn’t involve running deals, although I did get to help with modeling the integration costs for one deal. I was tasked with running the quarterly scorecard process. This involved a lot of cat herding. For each recently closed deal, I would track down metrics to see if we were on track for a successful integration into Microsoft. This was more project management and less about financial modeling or analysis. The cool part was on the last day of my internship I completed the scorecard powerpoint and personally sent it to the CFO for review, who would then share it with the board of directors. So, in a way, I got to work on something that Bill Gate’s got to see. Most likely it was buried in the appendix of the board materials but I know my guy Bill loves to read! So I’m sure he saw it and was blown away by my excellence. At least that’s what I tell myself.</p>
+<p>The life changing moment for me happened towards the end of the summer. The tech team responsible for reviewing the code of acquired companies hosted a brown bag lunch session about a new service called “Azure Machine Learning Studio”. They demoed a drag and drop tool that could build a machine learning model to predict if an event was going to happen or not. With a few clicks of their mouse they had a working model up and running in a self-serve UI. Only a few lines of code were written, with most of the magic happening in predefined lego blocks they pieced together. My mind was blown. It seemed like a magic trick to me, and I had to figure out how they did it. In school I always loved building three statement financial models to value a companies stock price. The biggest assumption we had to make was around future revenue growth, and that number was always made up. You could say xyz company’s revenue will continue to grow 10% because of xyz reason, but in the end it was a guess. The fact that you could build a machine learning model to create a more accurate prediction of the future was astounding to me, and I had to learn more.</p>
+<p>Within a week after that presentation, all of the FRP interns got to meet with the CFO. A lot of questions were asked. I’m not even sure who asked it but a question around AI was brought up. Amy said that AI and machine learning will become very important in finance one day, and it will be an important skill for everyone to know. There are few moments of pure clarity in a lifetime where everything comes together and makes perfect sense. This was one of those moments for me. I had to figure out this AI thing. I had absolutely no clue how to start. I was only a finance major with zero technical skills. What I lacked in hard skills I made up for with enthusiasm to go figure it out any way possible.</p>
+<p>The internship ended and thankfully I got the return offer. I remember the head of the FRP looking at my manager during the final review meeting. She said, “should you tell him or should I tell him”. My heart dropped, I thought I messed up and wasn’t getting the offer. Thankfully that confusion was cleared up real fast and I had a return offer in my hand. How can I say no to an opportunity to come back to Microsoft? Within a week back at school I accepted the offer and had total peace of mind going into my final year of undergrad.</p>
+</section>
+<section id="first-rotation-windows-cogs" class="level3">
+<h3 class="anchored" data-anchor-id="first-rotation-windows-cogs">First Rotation: Windows COGS</h3>
+<p>My first rotation was a classic rhythm of business (ROB) rotation in the world of Windows, Microsoft’s oldest business. It was a great place to earn my sea legs in traditional FP&amp;A work. I was responsible for owning the royalty portfolio for “codec” payments. Basically there is special software needed to read/write disks that are inserted into an optical drive on a computer. That software comes from companies like Dolbe, and Microsoft had to pay them to license the software on Windows OS. Wow, that makes me sound old. Working on royalties for optical drives on computers. Safe to say no one even thinks about optical drives anymore.</p>
+<p>It wasn’t the prettiest work, but it helped me learn the basics of closing the books each month and forecasting the future each quarter. I had to submit journal entries and make manual adjustments to our payments when needed. Once you got the hang of pulling the data and making journal entries, the work wasn’t all that hard. So most of my time toward the end of the rotation was spent trying to automate every single part of the ROB process. What was initially a complex refresh process handed to me at the start of my rotation was transformed into a simple click to refresh excel that did all of the heavy lifting for you. It was my pride and joy.</p>
+<p>My manager gave me a powerful piece of feedback towards the end of the rotation. He said that I liked building things. Some people like to start things, others like to keep a process going or optimize it. I was someone who liked to build new things. That idea stuck with me. I eventually became the guy on the team who could build any complex workflow as a model in excel. For example building out the new forecast consolidation file that all team members could add their component forecasts into. While it was fun to build this kind of stuff, it wasn’t AI work. For that I had to continue on my data hero’s journey.</p>
+</section>
+<section id="second-rotation-worldwide-commercial-solutions-finance" class="level3">
+<h3 class="anchored" data-anchor-id="second-rotation-worldwide-commercial-solutions-finance">Second Rotation: Worldwide Commercial Solutions Finance</h3>
+<p>For my second rotation I wanted to leave the world of ROB behind and get my hands dirty with data. I went to a team that did two things. First was analytics around discounts and customer renewals across Microsoft’s commercial business, and the second was around supporting the financing of customer purchases. Back in the day a customer could finance a large software purchase so they didn’t have to pay for most of it up front. We would partner with a bank to finance the payment or even do the financing ourselves through our Treasury department.</p>
+<p>This rotation was all around analytics, which was exactly what I needed. I was able to analyze patterns around the type of discounts we give to customers, and how those discounts compound as a customer continues to renew their software purchase contracts. Another big ticket analytics item was around tracking special azure financing deals. This was a key metric we reported directly to the CFO, so a lot of eye balls were on it. I was the guy to track down this data and create interesting ways to understand it.</p>
+<p>Power BI was recently released. No one on the team knew how to use it, but understood how powerful it could be when visualizing data. So I became the Power BI guy on the team. The one to figure out how to use it, then teach it to everyone else. Thankfully the previous FRP started them on the Power BI journey by building some initial dashboards. My job was to improve those dashboards, then get everyone else up to speed on how they could build their own. It was a solid experience in the world of analytics. One where no one could show you how to solve certain problems. You were on your own and had to figure everything out yourself.</p>
+<p>The analytics experience was great, but still no AI. While on the team I tried to find ways we could apply AI and machine learning to specific areas but couldn’t find a good opportunity. At this point I started to learn more on my own through books and courses on the internet. I was flying blind, with no one to guide me to ensure I was headed in the right direction. That’s when the power of serendipity came and altered the course of my FRP career.</p>
+<p>Another FRP analyst in my class got her last pick on her list of ranked rotations. Like choice number 32 out of 32 options. Right before she started on her team for the second rotation, there was a large re-org and she was able to now chose wherever she’d like to go in the broader org. A true choose your own adventure. She had an information systems background and found a team that was just starting to get into the world of machine learning. I heard about this and knew exactly where I wanted to go for my third rotation.</p>
+</section>
+<section id="third-rotation-finance-business-intelligence-services" class="level3">
+<h3 class="anchored" data-anchor-id="third-rotation-finance-business-intelligence-services">Third Rotation: Finance Business Intelligence Services</h3>
+<p>Working for the FBI, what a fun thing to say. The FBI Services team was almost an in house consultancy team, who supported most folks in finance. If someone wanted a special dashboard, custom tool, or even machine learning model they could reach out to this team and get the help they needed. The team consisted mostly of program manager (PM) type roles for full time employees, and various technical roles for vendors.</p>
+<p>Coming to this team was being at the right place at the right time. In the summer of 2015 (during my internship) our CFO reached out to the head of the cloud engineering team, asking him to help get some initial machine learning solutions off the ground. Eventually this work was transferred to the FBI Services team, who hired a team of data science vendors to keep the work going. Most of the ML solutions centered around time series forecasting, since that is easily the biggest bang for buck ML work in the corporate finance space. Almost everyone under the CFO is responsible for some sort of forecast, so the impact with ML is enormous.</p>
+<p>I came on the team as a PM who would partner with the data science vendors to build ML solutions. It was a dream come true. Finally I had people I can talk to about ML. Pick their brain. See how they think about ML problems. I also found a data science certification offered through Microsoft (on the EdX learning platform). It had a full learning track for python, no coding experience required. Thankfully as a Microsoft employee I could take the courses for free. While on the team I was able to make the learning part of my job, and even devote part of each day to taking the courses. It was a dream come true.</p>
+<p>The big project on the team was around creating a centralized tool for our finance teams in the field, teams who support sales and sit all around the world, to use for their quarterly forecast of the commercial business. We were tasked with building a tool that could combine machine learning methods with existing sales pipeline based methods (like taking what’s in the sales pipeline and multiplying it by how many deals we have closed on average historically). One tool that everyone in the field could use instead of building their own manual excel model that eats up weeks of their time every forecast cycle.</p>
+<p>It was a fun project to work on. The stakes were high, and no one had done anything like it before. It wasn’t just a machine learning project, but also a centralization and automation project. A crazy ven diagram of categories of technology. Over the course of my six month rotation we (and I say that lightly since I was the rookie on this project) were able to go from initial concept to working plugin in excel that could automatically calculate the forecast for the user, allow them to select what forecast methods they’d like to use, make any manual adjustments, and save that data back to a data cube. A herculean effort that had a few late nights toward the end of the project. It was a fantastic learning experience, with so many different opportunities to learn in one project. How to work with technical and non-technical people. Getting the most from ML models, and knowing their limitations. The change management required to get to people to want to use the new tool and move away from what they’ve always done.</p>
+<p>I was also able to knock out the entire Microsoft certification in data science. I could now write python code to analyze data, train models, and create predictions. Everything that astounded me as an intern was now in my tool kit. I had data super powers and it felt awesome. The only problem is I had no idea what came next. Towards the end of the rotation I wanted to stay on the team and graduate early. Unfortunately the previous FRP was able to secure a full time spot on the team before I asked. Now I was in a tough spot. Knowing what I wanted to do, but not knowing where to do it. Thankfully serendipity came to my rescue.</p>
+<p>At a FRP manager round table, my manager noted to the group that I was looking for a home for my fourth and final rotation. I wanted to work on machine learning but had no clue what team to rank highly. Another manager spoke up, saying they were just starting to dip their toes in the ML space and could have me on the team. That chance encounter lead me to ranking that rotation as my number one pick. Other FRP’s thought I was crazy. Usually that rotation went to a first year FRP, often as someone’s first rotation. I saw it as an opportunity to work on a technical team and carve out a path to working full time on ML. Safe to say after I joined the team every FRP who has worked on the team since has been a second year analyst.</p>
+</section>
+<section id="fourth-rotation-officedynamicsbing-business-intelligence" class="level3">
+<h3 class="anchored" data-anchor-id="fourth-rotation-officedynamicsbing-business-intelligence">Fourth Rotation: Office/Dynamics/Bing Business Intelligence</h3>
+<p>My final rotation was a BI team that supported finance teams in the Office, Dynamics, and Bing product spaces. Previous FRP’s worked on an executive scorecard that would get sent to senior leaders. I had my fill of scorecards while an intern so I was relieved that they were changing the rotation to allow me to work on machine learning problems. I felt like the luckiest guy in the world. I could actually write code to build machine learning models and get paid for it, all without having a degree in the subject.</p>
+<p>I worked on two main projects while on the team. One was around forecasting search traffic volume for our Bing business partners, and another was focused on trying to predict if a potential customer purchase in our sales pipeline was going to close or not. The search volume project was exciting because I could write code from scratch to create the forecasts. It was my first true ML project that I was responsible for coding. Building something from nothing, it was exhilarating. Just like my first rotation manager said.</p>
+<p>The second project was a tough one. Being able to create a classification model to predict the likelihood of a deal in our customer sales pipeline closing was a tricky project. One where getting high quality historical data was tough to get. I knew this was something analytics teams in sales had to of tried to solve before, so I sent out the bat signal through a few distribution groups and got a hit. A data science team in India had done the exact work I needed and could send me the results of their models prediction. What should have taken months of work was now widdled down to a few weeks to pull the prediction data and display it in a Power BI. Leveraging the work of others proved a powerful lesson for me, and allowed me to finish my project that much faster.</p>
+<p>My time on the team flew by and I was quickly approaching the end of my FRP tenure, meaning I needed to find a full time job ASAP. Most of my time quickly shifted to checking internal job boards and emailing managers in other BI teams, hoping they had a spot for me. I wanted this ML train to keep rolling. My current team said that they could potentially offer me a job, but I had to wait a little longer. This did little to remove any fear of not finding a job post FRP graduation. FRP’s were given some flexibility in finding a full time job. After graduating the program in September, Microsoft gave you about 4-6 weeks more to settle into a final job. You would still get paid, even if you didn’t have a team to call home. Being in this corporate limbo sounds nice in theory but in reality is awful. Like your days are numbered.</p>
+<p>The waiting ended in a re-org of another BI team joining ours. So there was a hiring freeze in the meantime while both teams were being combined. After that, a job was offered, and the rest is history. I’m still on that team today. We’ve been through a lot of re-orgs since 2018, but I still get to work on ML every single day. I consider myself lucky.</p>
+</section>
+</section>
+<section id="advice" class="level2">
+<h2 class="anchored" data-anchor-id="advice">Advice</h2>
+<p>Here is my advice for anyone interested in the FRP, currently in the program, or FRP’s who are about to graduate and start the next phase of their career. I have to say that this advice may not stand the test of time, hiring practices constantly change. So take these next words with a grain of salt.</p>
+<section id="aspiring-frps" class="level3">
+<h3 class="anchored" data-anchor-id="aspiring-frps">Aspiring FRP’s</h3>
+<p>Recruiting for the FRP used to be done at target schools. Places like Texas, Penn, and the University of Washington. Kids from these schools normally had the best shot at getting an interview, because Microsoft would come onto campus and do interviews. Thankfully this started to change when I applied for the internship. Now Microsoft finds FRPs from any school in the country, even recently expanding to other parts of the world. This opens up the opportunity of joining the FRP to almost anyone in the world, but because of this it becomes harder to get recognized in a sea full of applications.</p>
+<p>Before you even apply, you need to put yourself in a strong position by building a portfolio of experiences and skills that make you a perfect match for the FRP. Here is what I recommend.</p>
+<ol type="1">
+<li>High Agency: Having good grades is a fantastic accomplishment, but nowadays everyone has good grades. It becomes more of a check box than something that differentiates yourself from others. Grades show that you can follow instructions, keep deadlines, and demonstrate some type of understanding of your study area. What companies want though are people who go out into the world and make things happen. People who are proactive instead of reactive, or better put have high agency. The best definition I’ve heard of high agency is “a person you would call to bail you out of a third world prison”. Someone who can do that can most likely figure out how to do any kind of job, and become indispensable to their company. The best way to showcase high agency to recruiters at Microsoft is to show how you spend your time outside of the classroom. If you have a 4.0 but only play video games when you’re not studying, your resume will most likely get thrown away. Don’t get me wrong, you could be a fantastic hire but a recruiter has no idea how you get along with others, your communication skills, or anything that’s not related to reading a textbook and taking a test to prove you read the textbook. The best way to showcase high agency is with leadership experience. Running your own business, being the vice president of your sorority, treasurer of your finance club, running your own charity, working a full time job to pay for school. These are all ways to demonstrate that you are someone who goes out and makes things happen. That you indeed have high agency.</li>
+<li>Previous Work Experience: Having already done the job makes it easy to get a similar job. This can sometimes be a chicken or the egg situation, where needing a previous job to get your first job isn’t possible. That’s why I think you should start small. For me, it started the summer after 8th grade. I got a job in the concession stand of my local city pool. It wasn’t fun work, but lead to my second job working for the famous Jack Stack BBQ in the catering department. That job lead to multiple summers working at two different golf courses as a cart boy. All to say that it eventually lead to my first real business job working as an intern on Fridays during the school year at a financial advisor company. I didn’t do much, but I showed up every Friday ready to help. Having that experience gave me the opportunity to work in FP&amp;A at HR&amp;R Block in Kansas City as a legit intern. That experience then opened the door to work at Microsoft as an FRP intern. Small beginnings lead to massive results. Having a crap job at the beginning can lead to your dream job later down the line. Start this path as soon as you can, because hard work compounds.</li>
+<li>Data Superpowers: In this modern age of AI, knowing how to work with data is critical. I’m not just talking excel skills. Being able to pull, manipulate, visualize, and tell stories with data is most of what you do in Finance at Microsoft. Having some programming or low code skills in data tools like python or Power BI can go a long way. This gets supercharged with tools like ChatGPT, where a little knowledge of coding can quickly make you on par with an entry level data scientist or software engineer. Imagine not learning email or Microsoft Office in the 90s. Not knowing email today is basically a firable offense. Using AI powered tools might have the same path in knowledge work. Get ahead and get data superpowers.</li>
+</ol>
+<p>You might have all of those experiences and skills called out above, but that’s only half the battle. You still have to get noticed somehow. Either by a recruiter or someone else who works at the company. Here is what I recommend.</p>
+<ol type="1">
+<li>Conferences: Microsoft has pivoted away from on campus interviews and now does a lot of recruiting at conferences. This is how the first round of interviews get offered. These conferences are usually meetings of large student organizations like Association of Latino Professionals for America (ALPFA), Management Leadership for Tomorrow (MLT), Out for Undergrad (O4U), and National Association of Black Accountants (NABA).</li>
+<li>Employee Referral: Getting your resume referred by a current or FRP alum can go a long way, but it’s no guarantee of an interview. The best way to get a referral is by actually knowing someone who works at the company, or having a shared interest with them. Blindly messaging Microsoft employees on LinkedIn could work, but you’d have better success finding someone who went to your same high school or served in the same branch of the military. Having a shared connection around a place or thing helps.</li>
+<li>Intern First: The best way to get a full time offer is to be an intern the summer before. 50-90% of full time FRP’s were an intern the previous summer. This is the path with the greatest opportunity of a job. Don’t go work at a bank in the summer, assuming you’ll get a shot at Microsoft in the fall if you don’t like your bank job. Be in it to win it from the start.</li>
+</ol>
+</section>
+<section id="current-frps" class="level3">
+<h3 class="anchored" data-anchor-id="current-frps">Current FRP’s</h3>
+<p>For folks currently in the FRP, I hope you’re having just as much fun as I did. Normally when working with FRP’s today I have to fight the urge to grab them around the shoulders and beg them to cherish being in the FRP (just like <a href="https://youtu.be/rr9_EgFKr1Q?si=ZqfFmwwtVO6gMXh0">Billy Madison</a>). In order to get the most out of the program you should do the following.</p>
+<ol type="1">
+<li>Always ask for what you want. The biggest unlock I learned in the FRP is to just be up front with what you want in the rotation. Telling your manager at the beginning of the rotation what you’d hope to get out of the next six months can unlock doors you never thought possible. In my fourth rotation, they literally changed the entire rotation because I simply asked if I could solely work on building ML solutions. Don’t forget I’m still working in that job six years later. The best approach is to ask for what you want before you rank your next rotation. Bear in mind you can’t just say something like “I want to work with the CFO directly”. I’ve seen interns do this in the past, and it doesn’t end well for them. Know what you want, have some sort of skill or experience doing it, then ask for it.</li>
+<li>Always see who else is working on something first. It’s always fun to build something from scratch. An important skill to learn in the FRP though is building on the work of others. This is a key component of how impact gets measured at the company. In my fourth rotation, I was able to have impact 10x as fast on the deal pipeline analysis project because I found another data scientist team who already had a deal pipeline conversion model I could leverage and start using immediately. If I didn’t ask I would have spent most of my time trying to build one, which may not have been useful at all. Always ask around before building something new.</li>
+<li>Embrace serendipity. Your career path is never going to work out 100% exactly like you planned it, and you don’t want it to. You need to brace serendipity, keeping an open mind for making the most of new opportunities. The best example was the FRP in my class who got their dead last choice of rotation, but ended up working on that team full time post FRP. You never know where a road is going to take you. Don’t be afraid to explore different paths or see things through on an existing path.</li>
+</ol>
+</section>
+<section id="graduating-frps" class="level3">
+<h3 class="anchored" data-anchor-id="graduating-frps">Graduating FRP’s</h3>
+<p>My last piece of advice comes to those who are ending their FRP tenure and now look on to the rest of their career. It can be a scary feeling, so here’s what I recommend.</p>
+<ol type="1">
+<li>Cast a wide net. Don’t just apply to one job, hoping you’re going to get it and end up with the perfect job. You need to apply to a crap ton of jobs. Don’t be picky. Even apply to jobs that don’t look exciting on paper, because that could change once you meet with the hiring manager. Serendipity could strike in your favor.</li>
+<li>The best jobs go to people with high agency. Your perfect job is out there, but it may not be listed on the internal company job board. So have high agency and chase down opportunities that don’t even exist yet. This starts months before graduation. You need to network with teams you are interested in, meeting with potential hiring managers who could one day give you a job. For me, I went to every business intelligence team in finance. I emailed the director level leader, gave my short sales pitch saying I wanted do work on ML solutions for their team, and asked if we could chat to discuss any openings on their team. I’d even ask them if they knew any other team I should go talk to. Most didn’t offer me a job. Some continued to offer me interviews years after the FRP. You just never know. If you are talking to teams that aren’t hiring, you are basically in your own talent pool. Looking for opportunities that might materialize later once you graduate. If a job does open on that team, who is their first call? Probably the person who proactively reached out and made a connection well before a job was ever created. Use this to your advantage.</li>
+<li>Join for the team, not the job. The job will eventually come. Being in the right position is important more than what you do. Most jobs after graduating may not be the most fun. They will be work, maybe even grueling. Someone needs to do the work and congrats it’s your turn to eat a plate of crap for the company. Going to the right team is definitely more important that getting the dream job you wanted on a crap team. For me, I took a job on my fourth rotations team. They said I could do ML work, but most of my time would be spent as a program manager (PM). I hated PM work, but knowing that part of my time could be doing ML work was all I needed to hear. Eventually my job morphed into 100% ML work after I was able to prove to my manager that I could have more impact on the ML side than the PM side of my job. Being on the right team or org allows you more opportunity to work on things you eventually want your career to morph into. The team I joined post FRP has now morphed into a 400+ person engineering team. One that’s quickly becoming the defacto engineering team in finance at Microsoft. Being on this team over the years has created much more opportunity compared to doing similar work on a different team. Thankfully I was well positioned, even though I didn’t have the ideal job initially. See what I mean? So don’t be too picky on the job, but more picky on the team.</li>
+</ol>
+</section>
+</section>
+<section id="closing-thoughts" class="level2">
+<h2 class="anchored" data-anchor-id="closing-thoughts">Closing Thoughts</h2>
+<p>Being an FRP teaches you a lot. How to ramp up quickly on new skills, being able to juggle many things at a time, effective communication and teamwork, and countless other skills. All things that make you a well rounded person both professionally and personally. Some of my favorite memories come from the summer internship or hanging out with my FRP coworkers in building 26 (before they tore it down). I think it’s a great idea for anyone who is interested in technology and business. If you’d like to apply to the program, please do so on the <a href="https://careers.microsoft.com/v2/global/en/financerotation">Microsoft career website</a>. Whether you’re interviewing for the FRP or trying to land your post FRP role, I wish you good luck!</p>
+
+
+</section>
+
+ ]]></description>
+  <category>career</category>
+  <category>finance</category>
+  <guid>https://mftokic.github.io/posts/2024-02-19-frp-journey/index.html</guid>
+  <pubDate>Mon, 19 Feb 2024 08:00:00 GMT</pubDate>
+  <media:content url="https://mftokic.github.io/posts/2024-02-19-frp-journey/image.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
+<item>
+  <title>Weekend Reads (2/16/24)</title>
+  <dc:creator>Mike Tokic</dc:creator>
+  <link>https://mftokic.github.io/posts/2024-02-16-weekend-reads/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p><img src="https://mftokic.github.io/posts/2024-02-16-weekend-reads/image.png" class="img-fluid"></p>
+<section id="articles" class="level2">
+<h2 class="anchored" data-anchor-id="articles">Articles</h2>
+<ul>
+<li><a href="https://www.readtrung.com/p/8-lessons-from-curb-your-enthusiasm">8 Lessons from “Curb Your Enthusiasm”</a></li>
+<li><a href="https://every.to/chain-of-thought/the-knowledge-economy-is-over-welcome-to-the-allocation-economy/">The Knowledge Economy Is Over. Welcome to the Allocation Economy</a></li>
+<li><a href="https://www.nytimes.com/2024/02/08/well/live/ozempic-muscle-loss-exercise.html">The Race Is On to Stop Ozempic Muscle Loss</a></li>
+<li><a href="https://waitbutwhy.com/2024/02/vision-pro.html">All My Thoughts After 40 Hours in the Vision Pro</a></li>
+</ul>
+</section>
+<section id="tweets" class="level2">
+<h2 class="anchored" data-anchor-id="tweets">Tweets</h2>
+<ul>
+<li><a href="https://twitter.com/george__mack/status/1751522832545107992">High Agency by George Mack</a></li>
+<li><a href="https://twitter.com/trungtphan/status/1757590076027281580?s=46&amp;t=8Xa2BngQ9d359SJzFrCFMA">Vision Pro Teardown by Trung Phan</a></li>
+</ul>
+</section>
+<section id="books" class="level2">
+<h2 class="anchored" data-anchor-id="books">Books</h2>
+<ul>
+<li><a href="https://www.amazon.com/Boys-Boat-Americans-Berlin-Olympics-ebook/dp/B00AEBETU2/ref=tmm_kin_swatch_0?_encoding=UTF8&amp;dib_tag=se&amp;dib=eyJ2IjoiMSJ9.KquVRXnik3uOg8hxrLmJfP_LahKB4s1W46vzNAgAb9wvj80R1_rinS9btDIvVMLrc4mooEEO2d9FMOJYI2OsrGfzFHNWTUH8LtJNa0moro5FM4CWZttdApwLepeP_x0lB_8eIRJXq3y7CcHf-Kn6a2p3hBhsY_P32sHQg7u7D5JEHOE4aAkLflmwMHHIPTd56wISovn7vw3oTtFnSPVL5yx8vuz-GGhu6En1F9ZeHoQ.0GJBdgRORD33beQuLvtA3nEpCNE0wzbCf6HNbAENZVg&amp;qid=1708101446&amp;sr=8-1">The Boys in the Boat by Daniel James Brown</a></li>
+</ul>
+</section>
+<section id="products" class="level2">
+<h2 class="anchored" data-anchor-id="products">Products</h2>
+<ul>
+<li><a href="https://mauinuivenison.com/collections/butcher-shop/products/sugar-free-pepper-stick-24-pack">Maui Nui Sugar Free Venison Jerky</a></li>
+</ul>
+
+
+</section>
+
+ ]]></description>
+  <category>weekend-reads</category>
+  <guid>https://mftokic.github.io/posts/2024-02-16-weekend-reads/index.html</guid>
+  <pubDate>Fri, 16 Feb 2024 08:00:00 GMT</pubDate>
+  <media:content url="https://mftokic.github.io/posts/2024-02-16-weekend-reads/image.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
+<item>
+  <title>Weekend Reads (1/26/24)</title>
+  <dc:creator>Mike Tokic</dc:creator>
+  <link>https://mftokic.github.io/posts/2024-01-26-weekend-reads/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p><img src="https://mftokic.github.io/posts/2024-01-26-weekend-reads/image.png" class="img-fluid"></p>
+<section id="articles" class="level2">
+<h2 class="anchored" data-anchor-id="articles">Articles</h2>
+<ul>
+<li><a href="https://shakoist.substack.com/p/a-neo-trad-take-on-fertility">A Techno-Trad Take on Fertility</a></li>
+<li><a href="https://ryanholiday.net/this-is-your-reminder-to-say-no/">This is Your Reminder to Say No</a></li>
+<li><a href="https://www.oneusefulthing.org/p/signs-and-portents">Signs and Portents: Hints about the next year of AI</a></li>
+<li><a href="https://blogs.microsoft.com/blog/2024/01/15/bringing-the-full-power-of-copilot-to-more-people-and-businesses/">Microsoft Releases Copilot Pro</a></li>
+</ul>
+</section>
+<section id="podcasts" class="level2">
+<h2 class="anchored" data-anchor-id="podcasts">Podcasts</h2>
+<ul>
+<li><a href="https://open.spotify.com/episode/7EBXdFqRGw6PKDrDnadaid?si=8R-nYg7VS1WtDBIayf9GBg&amp;nd=1&amp;dlsi=624e6711a4c44974">Sal Khan on the Future of Education</a></li>
+<li><a href="https://open.spotify.com/episode/2WAURbTJ5afxr0pcu4cu2b?si=fTxM6hgbQpWDMDfux3wDTA">Peter Attia on Huberman Lab</a></li>
+<li><a href="https://open.spotify.com/episode/4JOE60a1MqyoxN7Qgn6nXN?si=nW4Oa33TQnCD62wtVUFajw&amp;nd=1&amp;dlsi=5dca55e42f864506">Markel CEO on The Knowledge Project</a></li>
+</ul>
+</section>
+<section id="tweets" class="level2">
+<h2 class="anchored" data-anchor-id="tweets">Tweets</h2>
+<ul>
+<li><a href="https://twitter.com/trungtphan/status/1747047730223198438?s=46&amp;t=8Xa2BngQ9d359SJzFrCFMA">Peacock Boosting Their App Downloads</a></li>
+<li><a href="https://twitter.com/shaneaparrish/status/1692163310362214606?s=46&amp;t=8Xa2BngQ9d359SJzFrCFMA">Surface Area in Your Life</a></li>
+</ul>
+</section>
+<section id="books" class="level2">
+<h2 class="anchored" data-anchor-id="books">Books</h2>
+<ul>
+<li><a href="https://www.amazon.com/Atomic-Habits-Proven-Build-Break-ebook/dp/B07D23CFGR/ref=tmm_kin_swatch_0?_encoding=UTF8&amp;qid=1706058523&amp;sr=8-1">Atomic Habits by James Clear</a></li>
+</ul>
+</section>
+<section id="products" class="level2">
+<h2 class="anchored" data-anchor-id="products">Products</h2>
+<ul>
+<li><a href="https://www.thetuolife.com/">Tuo Circadian Lightbulb</a></li>
+</ul>
+
+
+</section>
+
+ ]]></description>
+  <category>weekend-reads</category>
+  <guid>https://mftokic.github.io/posts/2024-01-26-weekend-reads/index.html</guid>
+  <pubDate>Fri, 26 Jan 2024 08:00:00 GMT</pubDate>
+  <media:content url="https://mftokic.github.io/posts/2024-01-26-weekend-reads/image.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
+<item>
+  <title>Weekend Reads (1/12/24)</title>
+  <dc:creator>Mike Tokic</dc:creator>
+  <link>https://mftokic.github.io/posts/2024-01-12-weekend-reads/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p><img src="https://mftokic.github.io/posts/2024-01-12-weekend-reads/image.png" class="img-fluid"></p>
+<section id="articles" class="level2">
+<h2 class="anchored" data-anchor-id="articles">Articles</h2>
+<ul>
+<li><a href="https://www.profgalloway.com/2024-predictions/">Scott Galloway’s 2024 Predictions</a></li>
+<li><a href="https://fs.blog/influence-psychology-persuasion/">The Psychology of Persuasion</a></li>
+<li><a href="https://readwise-assets.s3.amazonaws.com/media/wisereads/articles/ai-the-coming-revolution/The_AI_Revolution.pdf">Deep Dive on the AI Revolution</a></li>
+</ul>
+</section>
+<section id="videos" class="level2">
+<h2 class="anchored" data-anchor-id="videos">Videos</h2>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=IrFJ4DCdYaQ">Does Athletic Greens Actually Work?</a></li>
+<li><a href="https://www.youtube.com/watch?v=Rii5dMK4jZM">Do Electrolyte Powders Actually Work?</a></li>
+</ul>
+</section>
+<section id="podcasts" class="level2">
+<h2 class="anchored" data-anchor-id="podcasts">Podcasts</h2>
+<ul>
+<li><a href="https://open.spotify.com/episode/2TeIwqNMI0gv8NCRyEebJR?si=OQI2T8c0SAeol0-lFoB5pg">2024 Predictions on All In</a></li>
+<li><a href="https://open.spotify.com/episode/6emdJWgF7qDmi4oneN3VJF?si=kHYxTcLrTbKOyHcpqRAPgQ">George Mack on Modern Wisdom</a></li>
+</ul>
+</section>
+<section id="tweets" class="level2">
+<h2 class="anchored" data-anchor-id="tweets">Tweets</h2>
+<ul>
+<li><a href="https://twitter.com/george__mack/status/1743998250217009348?s=20">Discipline is Overpriced, Incentives are Underpriced</a></li>
+<li><a href="https://twitter.com/nbc/status/1214008610667155456?s=46&amp;t=8Xa2BngQ9d359SJzFrCFMA">Ricky Gervais at the Golden Globes</a></li>
+</ul>
+</section>
+<section id="movies" class="level2">
+<h2 class="anchored" data-anchor-id="movies">Movies</h2>
+<ul>
+<li>Poor Things: In Theatres</li>
+<li>You Are What You Eat (A Twin Experiment): On Netflix</li>
+</ul>
+</section>
+<section id="books" class="level2">
+<h2 class="anchored" data-anchor-id="books">Books</h2>
+<ul>
+<li><a href="https://www.amazon.com/Hidden-Potential-Science-Achieving-Greater-ebook/dp/B0C5LN1BCM/ref=tmm_kin_swatch_0?_encoding=UTF8&amp;dib_tag=se&amp;dib=eyJ2IjoiMSJ9.mA9XRCHChN602Rd5pxr4TTU2MJEouRhEolzKOI38tI7LHrqrCOgNOzkpl2jzsZlXrY2Yfs_8Z6-6-EfldrP7QQ.C9TR5irR3V5VZx3PHdfyl7_Ud391V3XpO8qt0NhSUnc&amp;qid=1704933199&amp;sr=8-3">Hidden Potential by Adam Grant</a></li>
+</ul>
+
+
+</section>
+
+ ]]></description>
+  <category>weekend-reads</category>
+  <guid>https://mftokic.github.io/posts/2024-01-12-weekend-reads/index.html</guid>
+  <pubDate>Fri, 12 Jan 2024 08:00:00 GMT</pubDate>
+  <media:content url="https://mftokic.github.io/posts/2024-01-12-weekend-reads/image.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
+<item>
+  <title>Weekend Reads (1/5/24)</title>
+  <dc:creator>Mike Tokic</dc:creator>
+  <link>https://mftokic.github.io/posts/2024-01-05-weekend-reads/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p><img src="https://mftokic.github.io/posts/2024-01-05-weekend-reads/image.png" class="img-fluid"></p>
+<section id="articles" class="level2">
+<h2 class="anchored" data-anchor-id="articles">Articles</h2>
+<ul>
+<li><a href="https://www.sahilbloom.com/newsletter/the-best-ideas-of-2023">Sahil Bloom: The Best Ideas of 2023</a></li>
+<li><a href="https://blog.samaltman.com/what-i-wish-someone-had-told-me/">Sam Altman: What I Wish Someone Had Told Me</a></li>
+</ul>
+</section>
+<section id="videos" class="level2">
+<h2 class="anchored" data-anchor-id="videos">Videos</h2>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=dZxbVGhpEkI">Last Lecture Series: How to Live an Asymmetric Life</a></li>
+</ul>
+</section>
+<section id="podcasts" class="level2">
+<h2 class="anchored" data-anchor-id="podcasts">Podcasts</h2>
+<ul>
+<li><a href="https://open.spotify.com/episode/6IesuigzSHYLN02Q6lk14N?si=ec3d800a158a4257">Ali Abdaal on Modern Wisdom</a></li>
+<li><a href="https://open.spotify.com/episode/1huHLhgK7lsPtFflpo0d21?si=c1e8fea1e79f4d22">Bill Perkins on Modern Wisdom</a></li>
+</ul>
+</section>
+<section id="books" class="level2">
+<h2 class="anchored" data-anchor-id="books">Books</h2>
+<ul>
+<li><a href="https://www.amazon.com/Daily-Laws-Meditations-Seduction-Strategy-ebook/dp/B0916VTYCD/ref=tmm_kin_swatch_0?_encoding=UTF8&amp;qid=1704502149&amp;sr=8-1">The Daily Laws by Robert Greene</a></li>
+<li><a href="https://www.amazon.com/Daily-Stoic-Meditations-Wisdom-Perseverance-ebook/dp/B01HNJIJB2/ref=sr_1_1?crid=3B0BKSONR7G2K&amp;keywords=daily+stoic&amp;qid=1704502187&amp;sprefix=daily+%2Caps%2C164&amp;sr=8-1">The Daily Stoic by Ryan Holiday</a></li>
+<li><a href="https://www.amazon.com/Calendar-Wisdom-Thoughts-Nourish-Written-ebook/dp/B003L77UKC/ref=tmm_kin_swatch_0?_encoding=UTF8&amp;qid=1704502222&amp;sr=8-1">A Calendar of Wisdom by Leo Tolstoy</a></li>
+</ul>
+
+
+</section>
+
+ ]]></description>
+  <category>weekend-reads</category>
+  <guid>https://mftokic.github.io/posts/2024-01-05-weekend-reads/index.html</guid>
+  <pubDate>Fri, 05 Jan 2024 08:00:00 GMT</pubDate>
+  <media:content url="https://mftokic.github.io/posts/2024-01-05-weekend-reads/image.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
+<item>
+  <title>Thoughts on The Almanack of Naval Ravikant</title>
+  <dc:creator>Mike Tokic</dc:creator>
+  <link>https://mftokic.github.io/posts/2023-12-30-naval-book/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p><img src="https://mftokic.github.io/posts/2023-12-30-naval-book/image.jpg" class="img-fluid"></p>
+<p>The Almanack of Naval Ravikant by Eric Jorgenson is something I like to read every few months. Eric was able to take all public content from Naval and put it into one place. I love that idea and think Eric will be successful with many other thought leaders.</p>
+<p>Meet Naval Ravikant: a modern philosopher-entrepreneur and the co-founder of AngelList. Renowned for his deep insights on technology, investing, and the art of living, Ravikant has become a luminary in Silicon Valley. Beyond his success with startups like X (Twitter) and Postmates, he captivates audiences with his profound perspectives on life and happiness, shared on his popular podcast and Twitter feed.</p>
+<p>Enjoy some of Naval’s best quotes and ideas I found most interesting.</p>
+<section id="types-of-leverage" class="level3">
+<h3 class="anchored" data-anchor-id="types-of-leverage">Types of Leverage</h3>
+<blockquote class="blockquote">
+<p>Labor means people working for you. It’s the oldest and most fought-over form of leverage. Labor leverage will impress your parents, but don’t waste your life chasing it. Money is a good form of leverage. It means every time you make a decision, you multiply it with money. It’s probably been the most dominate form of leverage in the last century.<br>
+Code and media are permissionless leverage. They’re the leverage behind the newly rich. You can create software and media that works for you while you sleep.</p>
+</blockquote>
+<p>Focus on permissionless leverage. Often people think the next step in their career is managing people. That’s how they get more money, more power, more status. Is Taylor Swift Time’s 2023 person of the year because she is a great manager or because she is the best in the world at media (music, video, merch)? We’re quickly starting to see more one person empires being built. Through media with influencer’s, and through code like Satoshi Nakamoto (inventor of Bitcoin). Instead of trying to grow you career through scaling of people and capital, try the route with no gatekeepers.</p>
+<p>Balaji Srinivasan made an interesting point that once a robot can do something, you’ve turned labor into capital. Meaning you just need the money to purchase the robot and then code to program it. Not long from now we might see managers only overseeing physical robots operating in the world of atoms (doing physical work) or AI agents operating in the world of bits (traditional knowledge work). The skills needed to manage these new digital workers revolve around writing code and coordination. Not traditional management skills.</p>
+</section>
+<section id="build-or-sell" class="level3">
+<h3 class="anchored" data-anchor-id="build-or-sell">Build or Sell</h3>
+<blockquote class="blockquote">
+<p>Learn to sell. Learn to build. If you can do both, you will be unstoppable.</p>
+</blockquote>
+<p>I believe Bill Gates said this back in his heyday at Microsoft. This is the most powerful piece of advice in the book. Most businesses boil down to a product or service to sell. The most important people at a company either build that product or sell that product. If you do not do work like that today at your company, you might want to consider changing jobs. These roles have the greatest potential for impact on the world, and create the most financial rewards.</p>
+</section>
+<section id="specific-knowledge" class="level3">
+<h3 class="anchored" data-anchor-id="specific-knowledge">Specific Knowledge</h3>
+<blockquote class="blockquote">
+<p>Specific knowledge is knowledge you cannot be trained for. If society can train you, it can train someone else and replace you. When specific knowledge is taught, it’s through apprenticeships, not schools.</p>
+</blockquote>
+<p>This is how you can prevent AI from taking your job. If what you do can’t be explained in a book, class, or YouTube videos, there is a good chance it will be hard for an AI model to figure out how to do it well.</p>
+</section>
+<section id="be-you" class="level3">
+<h3 class="anchored" data-anchor-id="be-you">Be You</h3>
+<blockquote class="blockquote">
+<p>The way to get out of the competition trap is to be authentic, to find the thing you know how to do better than anybody. You know how to do it better because you love it, and no one can compete with you. If you love to do it, be authentic, and then figure out how to map that to what society actually wants. Apply some leverage and put your name on it. You take the risks, but you gain the rewards, have ownership and equity in what you’re doing, and just crank it up. Your goal in life is to find the people, business, project, or art that needs you the most. There is something out there just for you. What you don’t want to do is build checklists and decision frameworks built on what other people are doing. You’re never going to be them. You’ll never be good at being somebody else. Technology democratizes consumption but consolidates production. The best person in the world at anything gets to do it for everyone.</p>
+</blockquote>
+<p>Nothing to add here, Naval hit the nail on the head.</p>
+</section>
+<section id="lifelong-learning" class="level3">
+<h3 class="anchored" data-anchor-id="lifelong-learning">Lifelong Learning</h3>
+<blockquote class="blockquote">
+<p>The most important skill for getting rich is becoming a perpetual learner. You have to know how to learn anything you want to learn. The old model of making money is going to school for four years, getting your degree, and working as a professional for thirty years. But things change fast now. Now, you have to come up to speed on a new profession within nine months, and it’s obsolete four years later. But within those three productive years, you can get very wealthy.</p>
+</blockquote>
+<p>ChatGPT was released by OpenAI about a year ago. In that time, people have had the opportunity to get up to speed on using generative AI models like GPT-3.5 and now GPT-4. There was no class in using these models, only the documentation on OpenAI’s website and videos on YouTube. For the brave folks who went ahead and learned how to use these models, the world will be theres the next three years while everyone else catches up. Learning how to use GPT-4 in your company to improve a product or become more productive is a form of permissionless leverage. Something of a superpower. The recent AI hype cycle might be winding down, but people with these skills are in demand. A few years from now another technology or idea might come out, another thing that’s not taught in schools. Never stop learning, never stop growing.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>books</category>
+  <guid>https://mftokic.github.io/posts/2023-12-30-naval-book/index.html</guid>
+  <pubDate>Sat, 30 Dec 2023 08:00:00 GMT</pubDate>
+  <media:content url="https://mftokic.github.io/posts/2023-12-30-naval-book/image.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>Weekend Reads (12/22/23)</title>
+  <dc:creator>Mike Tokic</dc:creator>
+  <link>https://mftokic.github.io/posts/2023-12-22-weekend-reads/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p><img src="https://mftokic.github.io/posts/2023-12-22-weekend-reads/image.png" class="img-fluid"></p>
+<section id="articles" class="level2">
+<h2 class="anchored" data-anchor-id="articles">Articles</h2>
+<ul>
+<li><a href="https://www.sahilbloom.com/newsletter/the-4-types-of-professional-time">4 Types of Professional Time</a>: Always make time for consumption and ideation time.</li>
+<li><a href="https://venturebeat.com/ai/microsoft-releases-phi-2-a-small-language-model-ai-that-outperforms-llama-2-mistral-7b/">Microsoft Releases Phi-2</a>: Small models are so hot right now.</li>
+<li><a href="https://sahillavingia.com/work">No Meetings, No Deadlines, No Full Time Employees</a>: One meeting a quarter at Gumroad. Yep, that’s the dream. One can only imagine.</li>
+</ul>
+</section>
+<section id="videos" class="level2">
+<h2 class="anchored" data-anchor-id="videos">Videos</h2>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=6LXw2beprGI">Making LLMs Uncool Again</a>: Hear thoughts from an AI legend, Jeremy Howard.</li>
+<li><a href="https://www.youtube.com/watch?v=lPGDwqY-zi8">A16Z AMA</a>: Various topics tackled by the top dogs at Andreesen Horowitz.</li>
+<li><a href="https://www.youtube.com/watch?v=nfWYN4DsVJo">AngeList QnA with Naval</a>: You can never go wrong hearing from Naval.</li>
+</ul>
+</section>
+<section id="podcasts" class="level2">
+<h2 class="anchored" data-anchor-id="podcasts">Podcasts</h2>
+<ul>
+<li><a href="https://open.spotify.com/episode/1XdTjVHlKIqJNOjby6VUkC?si=rh1NS30FRlCbumrzfdLu1Q">George Mack on Modern Wisdom</a>: Powerful insights on the role memes play in society.</li>
+</ul>
+</section>
+<section id="books" class="level2">
+<h2 class="anchored" data-anchor-id="books">Books</h2>
+<ul>
+<li><a href="https://www.amazon.com/Almanack-Naval-Ravikant-Wealth-Happiness-ebook/dp/B08FF8MTM6/ref=tmm_kin_swatch_0?_encoding=UTF8&amp;qid=1703291388&amp;sr=8-2">Anthology of Naval Ravikant</a>: Don’t think, just buy this book and re-read once a month.</li>
+<li><a href="https://www.amazon.com/Poor-Charlies-Almanack-Essential-Charles-ebook/dp/B0C5TCGPPS/ref=tmm_kin_swatch_0?_encoding=UTF8&amp;qid=1703291432&amp;sr=8-1">Poor Charlie’s Almanac</a>: Timeless wisdom from Charlie Munger, may he rest in peace.</li>
+</ul>
+
+
+</section>
+
+ ]]></description>
+  <category>weekend-reads</category>
+  <guid>https://mftokic.github.io/posts/2023-12-22-weekend-reads/index.html</guid>
+  <pubDate>Fri, 22 Dec 2023 08:00:00 GMT</pubDate>
+  <media:content url="https://mftokic.github.io/posts/2023-12-22-weekend-reads/image.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
+<item>
+  <title>Is AI the End of Specialization?</title>
+  <dc:creator>Mike Tokic</dc:creator>
+  <link>https://mftokic.github.io/posts/2023-12-11-ai-specialization/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p><img src="https://mftokic.github.io/posts/2023-12-11-ai-specialization/image.png" class="img-fluid"></p>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<p>AI and large language models (LLM) are slowly taking away value from jobs that used to require a lot of schooling, like medicine and law. It will even come for pure software development jobs. What AI cannot replace in the near term is specialized knowledge, skills that can only be obtained through apprenticeships. In the future, we need to focus more on gaining strong domain expertise across business, science, and engineering. But only in ways where specialized knowledge is needed, not simple skill acquisition that a LLM can do faster and cheaper. Going to a coding bootcamp to learn how to build web apps will help you make money this year at a company, but that same company might kick you to the curb three years from now when GitHub Copilot can code the entire app in a day.</p>
+</section>
+<section id="more-specialization-more-knowledge" class="level2">
+<h2 class="anchored" data-anchor-id="more-specialization-more-knowledge">More Specialization, More Knowledge</h2>
+<p>Which jobs require the most schooling? This is a good proxy for how much knowledge someone has to attain before they are qualified to work in a specific job. Doctors and lawyers seem to require the most schooling before they can start their careers. Most likely because of all of the information they have to memorize and load into their head. The more specialized someone’s skills in a domain like medicine, the more money they can make. What’s interesting is that new large language models are becoming very good at the same thing, and can be trained in months, not years. How will this impact these high status, high pay jobs? Specialization will go through a fundamental shift in the age of AI.</p>
+</section>
+<section id="story-time" class="level2">
+<h2 class="anchored" data-anchor-id="story-time">Story Time</h2>
+<p>I recently had to get my knee checked out by a doctor. I tweaked it pretty good playing kickball at my grandma’s 90th birthday party (story for a different time). Most of my time spent getting my knee examined was not actually interacting with the doctor I came to see. Getting checked into the system, filling out forms, getting an xray. All things where the doctor was no where to be found. The doctor did finally come in to my room, after waiting a while, and briefly talked to me for two minutes. Yes, two minutes. Almost as if they couldn’t wait to leave and were in a rush to go somewhere else, maybe the golf course. They recommended I go get an MRI, and handed me a phone number to schedule it myself.</p>
+<p>I went to get the MRI, which was even stranger. It was in a different medical building, one with a waiting room the size of a small bedroom. There were no doctors there, just someone to check you in and someone to operate the MRI machine. After getting the MRI, the technician said I had some bruising on my knee. I asked what that meant and they said they were not a doctor and couldn’t tell me anything about my knee. A qualified doctor was required to do that.</p>
+<p>Finally, after another week I was able to see the doctor again. They looked at the MRI and told me some various technical jargon that meant my knee was ok and that I should just take it easy for another month to heal part of my bone that connects to the knee. This entire process took a month, all to see and speak to a doctor for five total minutes over three appointments. The cherry on top was that it cost me hundreds of dollars even with good insurance. Do you see where I’m going here?</p>
+</section>
+<section id="rethinking-healthcare" class="level2">
+<h2 class="anchored" data-anchor-id="rethinking-healthcare">Rethinking Healthcare</h2>
+<p>What if instead I could go to a local pharmacy, and say that my knee hurts. There could be someone with high tech equipment who could xray my knee, and take an MRI if needed. An AI system would analyze the scans and flag any concerns. I could then get a final recommendation from the system. If something was wrong with my knee, it could recommend some physical therapy exercises. Or if something was really wrong it could route my request to a hospital that could do the surgery for me. This process could happen in an hour, instead of a month, and could cost me half the price without ever needing to see a real doctor. This kind of technology might be closer to reality then some might guess.</p>
+<p><img src="https://mftokic.github.io/posts/2023-12-11-ai-specialization/https:/th.bing.com/th/id/OIP.GCOJ6ofXpioyRcHRM4Yi8QAAAA?rs=1&amp;pid=ImgDetMain" class="img-fluid"></p>
+<p>Doctors who go to school most of their life could be replaced by a specially trained large language model that was trained on the history of medical research in a few months. It would already know everything about the human body, including what current therapies and medicines work the best. The best part is once it’s built, it can scale to the entire world. Rural villages in India could get the same healthcare as the rich in Beverly Hills.</p>
+<p>Would doctors still need to go to school? There is still an opportunity for wannabe doctors about to enter school. Instead of going to school for seven years, maybe they just jump to the very end of the training from the get go. Instead of building a strong foundation about everything in the body, they skip and go right to the path of specialization in a specific field of medicine. This is how doctors get paid the most anyways. If someone is interested in oncology (treating cancer), then maybe that’s what they start studying immediately. They can use AI tools to cover the basics on everything else and spend all of their waking moments on learning about cancer. Lowering the barriers to entry might make it easier for more folks to do medical research, at least until AI starts to get good at that too.</p>
+<p>If doctors can be replaced, what happens to nurses? They already do a decent amount of the work already in hospitals, and are the main connection to a patient. Over time they could be the ones powered by AI who end of making all of the decisions and determining the best treatment options. A nurses role would change into a combined version of what doctors and nurses have done historically. Maybe even spawning a new type of job. Robotics is another space where AI can disrupt medicine. Would someone rather be treated by a human, or a machine that comes with 90% less medical bills? Money might do the talking there, but replacing human connection could be the most resistant to AI and automation.</p>
+</section>
+<section id="ai-cannot-replace-specialized-knowledge" class="level2">
+<h2 class="anchored" data-anchor-id="ai-cannot-replace-specialized-knowledge">AI Cannot Replace Specialized Knowledge</h2>
+<p>Memorizing all of the parts of the body and the latest medical research is easily done by LLMs. What could be more difficult is what Naval Ravikant calls specialized knowledge. These are skills that cannot be easily learned from a book or class. Instead they usually get developed through apprenticeships. A student learning from a master, Jedi style. My life in corporate finance is a good example of specialized knowledge. My company hires finance employees from all walks of life. Having a finance degree or experience is good but not crucial to succeeding. This is most likely because the work you actually do within the CFO’s org is very specialized, where what classes you took in school is not that helpful. Most of it, in the financial planning and analysis space, revolves around financial rhythms like forecasting and close. There is no class in college related to this work. You cannot watch a few YouTube videos and get up to speed in a weekend. You learn by doing, and mostly watching others do it. This apprenticeship like model is a powerful indicator of what jobs are hard to replace with AI. There have been efforts to automate things like forecasting with machine learning (ML) in finance, but we have a long way to go before that becomes the default for everyone. Even then there will be cases where a ML model cannot capture everything about a business in its training data, and a human will always need to be in a loop to impart their domain expertise.</p>
+<p>Domain expertise will become more valuable as LLMs can learn more technical concepts like coding and memorizing all facts on the internet. What it can’t do (not yet at least) is know how a specific business works inside and out like a human can. A LLM could write all of the code to build your companies website, but it will not know how to piece together logistics, manufacturing, sales, marketing, and design all at the same time like a CEO can. Maybe one day it will get closer, but for now we still need a human at the top directing all of these AI processes. That takes specialized knowledge.</p>
+</section>
+<section id="final-thoughts" class="level2">
+<h2 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h2>
+<p>In my current job, I believe strong domain knowledge about finance and our business is going to be way more important than what kind of coding skills you posses. Since LLMs will take over more of the coding tasks, leaving work that requires specialized knowledge for us humans to do. This could mean less specialists in technical domains that historically have paid the most, since that kind of knowledge was rare in society. With more emphasis on specialization for domain specific knowledge is a business instead. Coders who are like restaurant line cooks working their way through a backlog created by someone else might be at the highest risk of getting their jobs removed. Same goes for doctors who just spend five minutes reviewing a patients chart and telling them what to do next without any follow up or long-term investment.</p>
+<p>Finally, if AI can know the foundation of each profession, that makes it easier for anyone to come into the space and do good work. If they are able to obtain specialized knowledge quickly. This opens up opportunities for people to have multiple careers throughout their life, without the need of always going back to school or getting a credential of some type. Over the long term this gives the power to individuals with high agency and entrepreneurial spirit. Ones who can seize opportunities for innovation and make impact across many different domains.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>AI</category>
+  <category>LLM</category>
+  <guid>https://mftokic.github.io/posts/2023-12-11-ai-specialization/index.html</guid>
+  <pubDate>Mon, 11 Dec 2023 08:00:00 GMT</pubDate>
+  <media:content url="https://mftokic.github.io/posts/2023-12-11-ai-specialization/image.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
+<item>
+  <title>Weekend Reads (12/9/23)</title>
+  <dc:creator>Mike Tokic</dc:creator>
+  <link>https://mftokic.github.io/posts/2023-12-09-weekend-reads/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p><img src="https://mftokic.github.io/posts/2023-12-09-weekend-reads/image.png" class="img-fluid"></p>
+<section id="articles" class="level2">
+<h2 class="anchored" data-anchor-id="articles">Articles</h2>
+<ul>
+<li><a href="https://www.gatesnotes.com/AI-agents">How AI agents will impact the world</a>: great post from Bill Gates exploring agents and their new place in our world.</li>
+<li><a href="https://blog.langchain.dev/langchain-expands-collaboration-with-microsoft/?utm_source=bensbites&amp;utm_medium=newsletter&amp;utm_campaign=daily-digest-microsoft-made-google-sing">Langchain expands collaboration with Microsoft</a>: so cool to see that open-source LLM tech like langchain can coexist with tech giants like Microsoft.</li>
+</ul>
+</section>
+<section id="videos" class="level2">
+<h2 class="anchored" data-anchor-id="videos">Videos</h2>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=zjkBMFhNj_g&amp;t=1s">How large language models work</a>: perfect intro to LLMs from an AI legend</li>
+<li>AI Engineering Summit: interesting videos about a new discipline
+<ul>
+<li><a href="https://www.youtube.com/watch?v=AjLVoAu-u-Q">Open questions about AI engineering</a></li>
+<li><a href="https://www.youtube.com/watch?v=PAy_GHUAICw">Climbing the ladder of abstraction</a></li>
+<li><a href="https://www.youtube.com/watch?v=ieWT6X2Yh_g">The intelligent interface</a></li>
+</ul></li>
+</ul>
+</section>
+<section id="podcasts" class="level2">
+<h2 class="anchored" data-anchor-id="podcasts">Podcasts</h2>
+<ul>
+<li><a href="https://open.spotify.com/episode/6KiIolOda4bsSyrtWpVj2F?si=2e7bb1828b1f43cf">Dr.&nbsp;Andrew Huberman on The Tim Ferris Show</a>: Dr.&nbsp;Huberman is a gift to humanity. So much great insight per minute of listening.</li>
+</ul>
+</section>
+<section id="books" class="level2">
+<h2 class="anchored" data-anchor-id="books">Books</h2>
+<section id="currently-reading" class="level3">
+<h3 class="anchored" data-anchor-id="currently-reading">Currently Reading</h3>
+<ul>
+<li><a href="https://www.amazon.com/Anthology-Balaji-Technology-Building-Future/dp/1544542917">The Anthonolgy of Balaji Srinivasan</a>: Need to get excited about the future? Learn from one of the best in Balaji.</li>
+</ul>
+</section>
+<section id="re-reading" class="level3">
+<h3 class="anchored" data-anchor-id="re-reading">Re-Reading</h3>
+<ul>
+<li><a href="https://www.amazon.com/Tools-Titans-Billionaires-World-Class-Performers/dp/B082VKY29Q/ref=sr_1_1?crid=5MGMGSM4ZATG&amp;keywords=tools+of+titans&amp;qid=1702145360&amp;s=books&amp;sprefix=tools+of+titans%2Cstripbooks%2C334&amp;sr=1-1">Tools of Titans</a>: Re-reding this once a year is almost mandatory for me now. So much great insight that stands the test of time.</li>
+</ul>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>weekend-reads</category>
+  <guid>https://mftokic.github.io/posts/2023-12-09-weekend-reads/index.html</guid>
+  <pubDate>Sat, 09 Dec 2023 08:00:00 GMT</pubDate>
+  <media:content url="https://mftokic.github.io/posts/2023-12-09-weekend-reads/image.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
+<item>
+  <title>Large Language Model Use in Finance</title>
+  <dc:creator>Mike Tokic</dc:creator>
+  <link>https://mftokic.github.io/posts/2023-11-24-llm-in-finance/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p><img src="https://mftokic.github.io/posts/2023-11-24-llm-in-finance/image.png" class="img-fluid"></p>
+<p>How can we use large language models in corporate finance? A lot of great work has been done inside of Microsoft Finance to find and consolidate ways we can leverage generative AI. Below are the common themes we found. Special shout out to the Microsoft modern finance community for their help in this effort.</p>
+<section id="generate-content" class="level3">
+<h3 class="anchored" data-anchor-id="generate-content">1. Generate Content</h3>
+<p>We all create content every single day, and now AI can help. LLMs can be used to create content on their own, update your own content, or have it create a good starting point for you to build on top of. In finance, we can use llm content generation to help us in many areas.</p>
+<ul>
+<li><strong>Close Commentary</strong> - Analyze month end close reports and create commentary on the results.</li>
+<li><strong>Internal Audit Reports</strong> - Write internal audit reports based on the results of a recent audit.</li>
+</ul>
+<p>This is where existing <a href="https://adoption.microsoft.com/en-us/copilot/">Microsoft 365 copilots</a> can be used right out of the box. No custom solutions needed.</p>
+</section>
+<section id="summarize-information" class="level3">
+<h3 class="anchored" data-anchor-id="summarize-information">2. Summarize Information</h3>
+<p>The most common form of LLM use across any field is summarization. Even Sam Altman, CEO of OpenAI, has said that this is the most popular use case.</p>
+<ul>
+<li><strong>Summarize Earnings Calls</strong> - We can use LLMs to summarize earnings calls and provide a quick summary of the call. This can be used to help analysts and investors quickly understand the key points of the call.</li>
+<li><strong>Summarize Financial Close Documents</strong> - Analyze month end powerpoint’s and distill is down to the most important information. This can later be used for quick reference and to help summarize trends across multiple months or quarters.</li>
+</ul>
+<p>For simple document analysis, existing copilots can immediately help. If you have many documents you need to analyze and extract key information, the best way to do this is through a common technique called <a href="https://www.databricks.com/glossary/retrieval-augmented-generation-rag#:~:text=Retrieval%20augmented%20generation%20or%20RAG%20is%20an%20architectural,and%20providing%20them%20as%20context%20for%20the%20LLM.">retrieval augmented generation (RAG)</a>.</p>
+</section>
+<section id="recommend-actions" class="level3">
+<h3 class="anchored" data-anchor-id="recommend-actions">3. Recommend Actions</h3>
+<p>Now we’re getting into the more advanced use cases. Recommending actions is a great way to use LLMs to help you make decisions.</p>
+<ul>
+<li><strong>Financial Variance Analysis</strong> - Dig through structured reports, analyze variances to budget or close, and recommend where humans should focus their attention.</li>
+<li><strong>Compliance</strong> - Ensuring that customer communications or next steps are compliant with internal and external regulations.</li>
+</ul>
+<p>No out of the box solutions today can do this kind of work, meaning you’ll need to build your own custom solutions.</p>
+</section>
+<section id="simplify-tasks" class="level3">
+<h3 class="anchored" data-anchor-id="simplify-tasks">4. Simplify Tasks</h3>
+<p>The final frontier of LLMs is around simplifying and automating tasks. This is where the most impact can be made, but is often the hardest to do in practice.</p>
+<ul>
+<li><strong>Procurement Sourcing</strong> - Analyze procurement requests and automatically source the best vendor for the job.</li>
+<li><strong>Customer Financing</strong> - Analyze customer financing requests and automatically determine the best financing options for them.</li>
+</ul>
+<p>Similar to recommending actions, this is another area where you’ll need to build your own custom solutions.</p>
+</section>
+<section id="final-thoughts" class="level2">
+<h2 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h2>
+<p>There is no need to go directly into the deep end of the LLM pool with custom solutions. See what you can start using immediately with existing copilots and then build from there. Technology by definition is something that doesn’t quite work yet, so don’t be afraid to experiment and fail.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>llm</category>
+  <category>finance</category>
+  <guid>https://mftokic.github.io/posts/2023-11-24-llm-in-finance/index.html</guid>
+  <pubDate>Fri, 24 Nov 2023 08:00:00 GMT</pubDate>
+  <media:content url="https://mftokic.github.io/posts/2023-11-24-llm-in-finance/image.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
+</channel>
+</rss>
