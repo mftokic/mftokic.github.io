@@ -2,9 +2,10 @@
 title: "Time Series First Principles: Higher Grain Higher Accuracy"
 description: "Forecasting by country is often more accurate than forecasting by city. Forecasting by month is often more accurate than forecasting by day."
 author: "Mike Tokic"
-date: "2024-04-17"
+date: "2024-04-18"
 categories: [time-series, machine-learning, finance]
 image: "image.png"
+draft: true
 ---
 
 ![](./image.png)
@@ -32,7 +33,7 @@ Forecasting is similar to flying a plane. Training a machine learning (ML) model
 
 ### Time Series Grain
 
-Think of a higher time series grain as an aggregation of your original data. For example you might have product sales across a bunch of cities, where each city is a time series. Individual cities might have hard to model trend and seasonality, but when combined at a total country level, it can be easier to model. Take the example charts below. Each city might be noisy but climbing in altitude up to the county level makes it easier to spot trends and seasonality. 
+Think of a higher time series grain as an aggregation of your original data. For example you might have product sales across a bunch of cities, where each city is a time series. Individual cities might have hard to model trend and seasonality, but when combined at a total country-level, it can be easier to model. Take the example charts below. Each city might be noisy but climbing in altitude up to the county level makes it easier to spot trends and seasonality. 
 
 ![](./chart2.png)
 ![](./chart1.png)
@@ -58,7 +59,7 @@ Here is another important point to call out. The longer your forecast horizon, t
 
 A potential "best of both worlds" solution to the data grain issue is to use a hierarchical forecast. This is where you can train models at different grains of the data, then use a statistical process to reconcile each forecast together so they are in sync. Our forecasting godfather, Rob Hyndman, has done a lot of great work in this space. Here is a [chapter from his book](https://otexts.com/fpp3/hierarchical.html) on hierarchical forecasting. 
 
-Let's go back to our time series grain example. Using a hierarchical forecast you could train models and create forecasts for each city, then do the same at the total country level, then finally do the same at a total world wide level across all countries. This is a standard hierarchical approach shown in the chart below. This hierarchical process blends a "bottoms up" forecast of creating predictions at the lowest level by city, with a "tops down" forecast of creating predictions at the highest global level. A statistical process is then used to make the "tops down" forecast equal the "bottoms up" forecast, optimizing for accuracy at all levels of the hierarchy. 
+Let's go back to our time series grain example. Using a hierarchical forecast you could train models and create forecasts for each city, then do the same at the total country-level, then finally do the same at a total world wide level across all countries. This is a standard hierarchical approach shown in the chart below. This hierarchical process blends a "bottoms up" forecast of creating predictions at the lowest level by city, with a "tops down" forecast of creating predictions at the highest global level. A statistical process is then used to make the "tops down" forecast equal the "bottoms up" forecast, optimizing for accuracy at all levels of the hierarchy. 
 
 ![](./chart5.png)
 
@@ -68,7 +69,7 @@ The same idea can be applied at the date grain too. Where you can forecast at th
 
 Another option is to take a forecast at a higher grain and allocate it down to a lower grain using simple allocation logic. This process can replace the more complicated hierarchical forecasting discussed earlier. Simple allocations can be done in two ways. 
 
-The first is to take historical values and create a percent split to apply to the final forecast. For example we can create a forecast at the country level, then split that out by city. The split percent by city (allocation percent) can be calculated based on how much each city was the percent of total country over the last few years. This can be broken down by period. So you can get a specific percent split for each month on average in the past. This approach helps maintain historical seasonality across each time series (each city). See the charts below for an example of using two historical years of monthly data to create the final allocation percentages. 
+The first is to take historical values and create a percent split to apply to the final forecast. For example we can create a forecast at the country-level, then split that out by city. The split percent by city (allocation percent) can be calculated based on how much each city was the percent of total country over the last few years. This can be broken down by period. So you can get a specific percent split for each month on average in the past. This approach helps maintain historical seasonality across each time series (each city). See the charts below for an example of using two historical years of monthly data to create the final allocation percentages. 
 
 Initial historical values: 
 
@@ -108,7 +109,7 @@ Final forecast using the city splits:
 | May 2023 |              15800 |      40.43 |      37.81 |      21.76 |            6387.94|            5973.98|            3438.08|
 | Jun 2023 |              16000 |      47.22 |      36.04 |      16.74 |            7555.2 |            5766.4 |            2678.4 |
 
-The second approach is to use a future forecast to create the allocation splits. For example we can create future forecasts at the country level and also at the city level. Then we can create the split percent for each city by taking the city forecast and summing it up to the country level, then taking the percent split for each city. These splits can then be applied to the final country level forecast to get the final forecast by city. This approach uses the more robust country level forecast, while still trying to capture future changing trends and seasonality by city. 
+The second approach is to use a future forecast to create the allocation splits. For example we can create future forecasts at the country-level and also at the city-level. Then we can create the split percent for each city by taking the city forecast and summing it up to the country-level, then taking the percent split for each city. These splits can then be applied to the final country-level forecast to get the final forecast by city. This approach uses the more robust country-level forecast, while still trying to capture future changing trends and seasonality by city. 
 
 Initial forecast, where country and each city are forecasted separately:
 | Month    | Country Forecast | City A Forecast | City B Forecast | City C Forecast |
@@ -130,7 +131,7 @@ Calculating the percent splits by city:
 | May 2023 | 41.7%    | 29.2%    | 29.2%    |
 | Jun 2023 | 41.6%    | 30.4%    | 28.0%    |
 
-Final forecast after applying the city splits to the country level forecast:
+Final forecast after applying the city splits to the country-level forecast:
 | Month    | City A Final Forecast | City B Final Forecast | City C Final Forecast |
 |----------|-----------------------|-----------------------|-----------------------|
 | Jan 2023 | 4,000                 | 3,500                 | 2,000                 |
@@ -142,8 +143,18 @@ Final forecast after applying the city splits to the country level forecast:
 
 ### Reversal
 
-Daily can sometimes be better than monthly, for example chinese new year. 
+A more granular forecast can sometimes be more accurate, especially if the more detailed grain uncovers more stable trends and seasonality that can be modeled. Take for example a product whose sales are impacted by Chinese New Year. That holiday doesn't happen on the same day every year, and it can even happen in different months. Sometimes in January, and sometimes in February. Since it happens over multiple days the split between the two months can change drastically from year to year. Creating a forecast at the daily level, adding information around when Chinese New Year is happening, could result in a more accurate forecast. You could also take the approach of a monthly forecast, and have a numeric feature that lists how many days of Chinese New Year falls within each month. 
+
+If your initial data at the higher grain is noisy or has low forecast accuracy, consider asking the domain expert if there could be more insightful trends and seasonality at a lower grain. 
 
 ### finnts
 
+Hierarchical forecasting is a tricky business, thankfully my open-source package [finnts](https://microsoft.github.io/finnts/index.html) can automatically do hierarchical forecasting. The package can even use external regressors (features) in the hierarchical approach! Today finnts supports hierarchical forecasting at the time series grain. Hopefully one day we will implement hierarchical forecasting at the date grain, stay tuned. This is the same package I use internally at my job, allowing my company to replace hundreds of billions of manual forecasts with machine learning. Check out the package and see for yourself. 
+
 ### Final Thoughts
+
+Just as pilots navigate to higher altitudes to find smoother skies and better efficiency, so too must we elevate our approach to data granularity in forecasting when needed. By stepping back from the minutiae of daily or city-level data and ascending to monthly or country-level aggregations, we enable our models to capture more coherent patterns and deliver forecasts with improved precision. This strategic shift—from a granular view to a broader perspective—is not just about avoiding turbulence; it's about leveraging stability to enhance predictability.
+
+However, the real magic often lies in blending these approaches through hierarchical forecasting. This method combines the detailed insights available at lower levels with the clarity and simplicity of higher-level forecasts, ensuring both depth and breadth in our predictive capabilities. As we continue to refine our techniques and tools, like the finnts package, we are paving the way for a future where complex, multi-tiered forecasting is as streamlined as a flight cruising at 40,000 feet.
+
+In your journey through data, remember that the right altitude can make all the difference. Rising above the noise can provide not just clearer views, but also far-reaching insights. So, buckle up—we're about to take forecasting to new heights.
