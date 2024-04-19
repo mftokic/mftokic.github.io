@@ -5,7 +5,10 @@ project:
 website:
   title: "Thoughts on Things"
   site-url: https://mftokic.github.io
-  description: "A collection of thoughts on things from the mind of Mike Tokic."
+  open-graph: true
+  twitter-card: true
+  favicon: logo.png
+  description: "A collection of thoughts on things from the mind of Mike Tokic"
   navbar:
     right:
       - text: "Start Here"
