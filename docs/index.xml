@@ -10,7 +10,57 @@
 <atom:link href="https://mftokic.github.io/index.xml" rel="self" type="application/rss+xml"/>
 <description>A collection of thoughts on things from the mind of Mike Tokic</description>
 <generator>quarto-1.3.450</generator>
-<lastBuildDate>Thu, 18 Apr 2024 07:00:00 GMT</lastBuildDate>
+<lastBuildDate>Fri, 19 Apr 2024 07:00:00 GMT</lastBuildDate>
+<item>
+  <title>Weekend Reads (4/19/24)</title>
+  <dc:creator>Mike Tokic</dc:creator>
+  <link>https://mftokic.github.io/posts/2024-04-19-weekend-reads/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p><img src="https://mftokic.github.io/posts/2024-04-19-weekend-reads/image.png" class="img-fluid"></p>
+<section id="articles" class="level2">
+<h2 class="anchored" data-anchor-id="articles">Articles</h2>
+<ul>
+<li><a href="https://hbr.org/2023/12/use-strategic-thinking-to-create-the-life-you-want">Use Strategic Thinking to Create the Life You Want</a></li>
+<li><a href="https://www.maximiliankiener.com/digitalprojects/time/">How Time Flies</a></li>
+<li><a href="https://mftokic.github.io/posts/2024-04-18-time-series-grain/">Time Series First Principles: Higher Grain, Higher Accuracy</a></li>
+</ul>
+</section>
+<section id="videos" class="level2">
+<h2 class="anchored" data-anchor-id="videos">Videos</h2>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=5N4UFl9G00A">Dave Chappelle - Unforgiven</a></li>
+<li><a href="https://www.youtube.com/watch?v=-9ROlCeB5FQ">Balaji on AI Gods</a></li>
+<li><a href="https://www.youtube.com/watch?v=SEnuWRLMI88">Building Laser Focus</a></li>
+<li><a href="https://www.youtube.com/watch?v=5qGItht6U0E">Overrated and Underrated Habits</a></li>
+<li><a href="https://www.youtube.com/watch?v=FPFqB1P9BIo">Lessons Learned on Writing</a></li>
+</ul>
+</section>
+<section id="sites" class="level2">
+<h2 class="anchored" data-anchor-id="sites">Sites</h2>
+<ul>
+<li><a href="https://suno.com/">Make Music with AI</a></li>
+</ul>
+</section>
+<section id="tweets" class="level2">
+<h2 class="anchored" data-anchor-id="tweets">Tweets</h2>
+<ul>
+<li><a href="https://twitter.com/trungtphan/status/1780794237426323918?s=46&amp;t=8Xa2BngQ9d359SJzFrCFMA">Building an Engineering Dream Team</a></li>
+<li><a href="https://twitter.com/tunguz/status/1779532581274570991?s=46&amp;t=8Xa2BngQ9d359SJzFrCFMA">Experiences &gt; Things</a></li>
+</ul>
+
+
+</section>
+
+ ]]></description>
+  <category>weekend-reads</category>
+  <guid>https://mftokic.github.io/posts/2024-04-19-weekend-reads/index.html</guid>
+  <pubDate>Fri, 19 Apr 2024 07:00:00 GMT</pubDate>
+  <media:content url="https://mftokic.github.io/posts/2024-04-19-weekend-reads/image.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
 <item>
   <title>Time Series First Principles: Higher Grain Higher Accuracy</title>
   <dc:creator>Mike Tokic</dc:creator>
@@ -1536,65 +1586,6 @@ Code and media are permissionless leverage. They’re the leverage behind the ne
   <guid>https://mftokic.github.io/posts/2023-12-11-ai-specialization/index.html</guid>
   <pubDate>Mon, 11 Dec 2023 08:00:00 GMT</pubDate>
   <media:content url="https://mftokic.github.io/posts/2023-12-11-ai-specialization/image.png" medium="image" type="image/png" height="144" width="144"/>
-</item>
-<item>
-  <title>Weekend Reads (12/9/23)</title>
-  <dc:creator>Mike Tokic</dc:creator>
-  <link>https://mftokic.github.io/posts/2023-12-09-weekend-reads/index.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<p><img src="https://mftokic.github.io/posts/2023-12-09-weekend-reads/image.png" class="img-fluid"></p>
-<section id="articles" class="level2">
-<h2 class="anchored" data-anchor-id="articles">Articles</h2>
-<ul>
-<li><a href="https://www.gatesnotes.com/AI-agents">How AI agents will impact the world</a>: great post from Bill Gates exploring agents and their new place in our world.</li>
-<li><a href="https://blog.langchain.dev/langchain-expands-collaboration-with-microsoft/?utm_source=bensbites&amp;utm_medium=newsletter&amp;utm_campaign=daily-digest-microsoft-made-google-sing">Langchain expands collaboration with Microsoft</a>: so cool to see that open-source LLM tech like langchain can coexist with tech giants like Microsoft.</li>
-</ul>
-</section>
-<section id="videos" class="level2">
-<h2 class="anchored" data-anchor-id="videos">Videos</h2>
-<ul>
-<li><a href="https://www.youtube.com/watch?v=zjkBMFhNj_g&amp;t=1s">How large language models work</a>: perfect intro to LLMs from an AI legend</li>
-<li>AI Engineering Summit: interesting videos about a new discipline
-<ul>
-<li><a href="https://www.youtube.com/watch?v=AjLVoAu-u-Q">Open questions about AI engineering</a></li>
-<li><a href="https://www.youtube.com/watch?v=PAy_GHUAICw">Climbing the ladder of abstraction</a></li>
-<li><a href="https://www.youtube.com/watch?v=ieWT6X2Yh_g">The intelligent interface</a></li>
-</ul></li>
-</ul>
-</section>
-<section id="podcasts" class="level2">
-<h2 class="anchored" data-anchor-id="podcasts">Podcasts</h2>
-<ul>
-<li><a href="https://open.spotify.com/episode/6KiIolOda4bsSyrtWpVj2F?si=2e7bb1828b1f43cf">Dr.&nbsp;Andrew Huberman on The Tim Ferris Show</a>: Dr.&nbsp;Huberman is a gift to humanity. So much great insight per minute of listening.</li>
-</ul>
-</section>
-<section id="books" class="level2">
-<h2 class="anchored" data-anchor-id="books">Books</h2>
-<section id="currently-reading" class="level3">
-<h3 class="anchored" data-anchor-id="currently-reading">Currently Reading</h3>
-<ul>
-<li><a href="https://www.amazon.com/Anthology-Balaji-Technology-Building-Future/dp/1544542917">The Anthonolgy of Balaji Srinivasan</a>: Need to get excited about the future? Learn from one of the best in Balaji.</li>
-</ul>
-</section>
-<section id="re-reading" class="level3">
-<h3 class="anchored" data-anchor-id="re-reading">Re-Reading</h3>
-<ul>
-<li><a href="https://www.amazon.com/Tools-Titans-Billionaires-World-Class-Performers/dp/B082VKY29Q/ref=sr_1_1?crid=5MGMGSM4ZATG&amp;keywords=tools+of+titans&amp;qid=1702145360&amp;s=books&amp;sprefix=tools+of+titans%2Cstripbooks%2C334&amp;sr=1-1">Tools of Titans</a>: Re-reding this once a year is almost mandatory for me now. So much great insight that stands the test of time.</li>
-</ul>
-
-
-</section>
-</section>
-
- ]]></description>
-  <category>weekend-reads</category>
-  <guid>https://mftokic.github.io/posts/2023-12-09-weekend-reads/index.html</guid>
-  <pubDate>Sat, 09 Dec 2023 08:00:00 GMT</pubDate>
-  <media:content url="https://mftokic.github.io/posts/2023-12-09-weekend-reads/image.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 </channel>
 </rss>

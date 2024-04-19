@@ -1,0 +1,33 @@
+---
+title: "Weekend Reads (4/19/24)"
+description: "Interesting things I found on the internet this week"
+author: "Mike Tokic"
+date: "2024-04-19"
+categories: [weekend-reads]
+image: "image.png"
+---
+
+![](./image.png)
+
+## Articles
+
+- [Use Strategic Thinking to Create the Life You Want](https://hbr.org/2023/12/use-strategic-thinking-to-create-the-life-you-want)
+- [How Time Flies](https://www.maximiliankiener.com/digitalprojects/time/)
+- [Time Series First Principles: Higher Grain, Higher Accuracy](https://mftokic.github.io/posts/2024-04-18-time-series-grain/)
+
+## Videos
+
+- [Dave Chappelle - Unforgiven](https://www.youtube.com/watch?v=5N4UFl9G00A)
+- [Balaji on AI Gods](https://www.youtube.com/watch?v=-9ROlCeB5FQ)
+- [Building Laser Focus](https://www.youtube.com/watch?v=SEnuWRLMI88)
+- [Overrated and Underrated Habits](https://www.youtube.com/watch?v=5qGItht6U0E)
+- [Lessons Learned on Writing](https://www.youtube.com/watch?v=FPFqB1P9BIo)
+
+## Sites
+
+- [Make Music with AI](https://suno.com/)
+
+## Tweets
+
+- [Building an Engineering Dream Team](https://twitter.com/trungtphan/status/1780794237426323918?s=46&t=8Xa2BngQ9d359SJzFrCFMA)
+- [Experiences > Things](https://twitter.com/tunguz/status/1779532581274570991?s=46&t=8Xa2BngQ9d359SJzFrCFMA)
