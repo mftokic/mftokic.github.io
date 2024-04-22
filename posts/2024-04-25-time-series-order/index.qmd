@@ -54,26 +54,50 @@ Take the below housing data. This is a traditional regression problem. Where we 
 
 : Example fake housing data for a regression model
 
-A time series has a built in order to it. It's said right there in the name, time. Ignoring the order based on time can have disastrous consequences, resulting in your final future forecast not being accurate. Just like baking a cake we need to make sure how we train a model is done in the right order. When splitting a historical time series into a training set and a testing set, splitting not at random but based on time is the proper way to go. Using the oldest data as the training set and the newest data as the testing set makes sure we respect the order of our data based on time. The example table below 
+A time series has a built in order to it. It's said right there in the name, time. Ignoring the order based on time can have disastrous consequences, resulting in your final future forecast not being accurate. Just like baking a cake, we need to make sure how we train a model is done in the right order. When splitting a historical time series into a training set and a testing set, splitting not at random but based on time is the proper way to go. Using the oldest data as the training set and the newest data as the testing set makes sure we respect the order of our data based on time. The example table below is a made up time series of the price of one specific house. In reality we would need a lot more data to train a good time series model but just be cool for a minute and go with me on this one. The split column now has the test data set at the very end instead of randomly split across time. We can now use [features](https://developers.google.com/machine-learning/crash-course/framing/ml-terminology) like interest rates and gdp growth to help us forecast the price of this house over time. The first 9 months of data will train the model, and the final 3 months will be used to test the model's accuracy. 
 
-| Date           | Interest_Rate | GDP_Growth | Total_Cost |
-|----------------|---------------|------------|------------|
-| January 2002   | 3.43635       | 1.58111    | 315052     |
-| February 2002  | 4.87679       | 0.03085    | 314723     |
-| March 2002     | 4.32998       | -0.04544   | 312854     |
-| April 2002     | 3.99665       | -0.04149   | 311865     |
-| May 2002       | 2.89005       | 0.26061    | 309452     |
-| June 2002      | 2.88999       | 0.81189    | 311106     |
-| July 2002      | 2.64521       | 0.57986    | 309675     |
-| August 2002    | 4.66544       | 0.22807    | 314681     |
-| September 2002 | 4.00279       | 1.02963    | 315097     |
-| October 2002   | 4.27018       | -0.15127   | 312357     |
-| November 2002  | 2.55146       | 0.23036    | 308345     |
-| December 2002  | 4.92477       | 0.41591    | 316022     |
+| Date           | Interest_Rate | GDP_Growth | Total_Cost | Split    |
+|----------------|---------------|------------|------------|----------|
+| January 2002   | 3.43635       | 1.58111    | 315052     | Training |
+| February 2002  | 4.87679       | 0.03085    | 314723     | Training |
+| March 2002     | 4.32998       | -0.04544   | 312854     | Training |
+| April 2002     | 3.99665       | -0.04149   | 311865     | Training |
+| May 2002       | 2.89005       | 0.26061    | 309452     | Training |
+| June 2002      | 2.88999       | 0.81189    | 311106     | Training |
+| July 2002      | 2.64521       | 0.57986    | 309675     | Training |
+| August 2002    | 4.66544       | 0.22807    | 314681     | Training |
+| September 2002 | 4.00279       | 1.02963    | 315097     | Training |
+| October 2002   | 4.27018       | -0.15127   | 312357     | Testing  |
+| November 2002  | 2.55146       | 0.23036    | 308345     | Testing  |
+| December 2002  | 4.92477       | 0.41591    | 316022     | Testing  |
+
 
 : Example fake time series for the price of a specific house
 
 ### Data Leakage
+
+Whenever time is involved in machine learning, the probability of shooting yourself in the foot rises. This has to do with the concept of [data leakage](https://machinelearningmastery.com/data-leakage-machine-learning/). Data leakage occurs when information from outside the training dataset is used to create the model, leading it to make overly optimistic predictions. It can also happen when we train with data that may not be available in the future when we need to create new predictions. 
+
+In time series forecasting we have already discussed one component of data leakage, related to splitting the data correctly based on time. Take the below table, we have now split our data randomly across time. Our model can now "see ahead in time" when training, and in effect cheat when being evaluated on the testing splits. For example, for the test observation in July 2002 the model can learn from data on either side of that month. Figuring out previous and future trends and seasonality. This makes it easy to predict what the housing cost in July should be, since it has information before and after that month. With this approach our test accuracy will be a lot better than in the previous example where the splits are based on time. Future forecast performance will suffer though, since we have now trained and chosen a model that may only be good at figuring out how to extrapolate between two points, instead of trying to create predictions on unseen data in the future.  
+
+| Date           | Interest_Rate | GDP_Growth | Total_Cost | Split    |
+|----------------|---------------|------------|------------|----------|
+| January 2002   | 3.43635       | 1.58111    | 315052     | Training |
+| February 2002  | 4.87679       | 0.03085    | 314723     | Testing  |
+| March 2002     | 4.32998       | -0.04544   | 312854     | Training |
+| April 2002     | 3.99665       | -0.04149   | 311865     | Training |
+| May 2002       | 2.89005       | 0.26061    | 309452     | Training |
+| June 2002      | 2.88999       | 0.81189    | 311106     | Training |
+| July 2002      | 2.64521       | 0.57986    | 309675     | Testing  |
+| August 2002    | 4.66544       | 0.22807    | 314681     | Training |
+| September 2002 | 4.00279       | 1.02963    | 315097     | Training |
+| October 2002   | 4.27018       | -0.15127   | 312357     | Training |
+| November 2002  | 2.55146       | 0.23036    | 308345     | Training |
+| December 2002  | 4.92477       | 0.41591    | 316022     | Testing  |
+
+: Incorrect train and test splits
+
+Ok, so we know not to split data randomly when training. Another thing to watch out for is how features are used in the model In our time series housing example, we can use date information (month, quarter, etc) along with our macro features like interest rates and GDP growth. Let's say we follow the right approach, split the data based on time, and see that we get good results on the test data. We can now take our model into production and try to create a forecast for the future. But wait, what do we do with the future feature values of interest rate and GDP growth? This is another potential data leakage issue, where data used to train the model is not available to create new predictions in the future. You might be thinking, no problem we can just create a forecast of future interest rates and gdp growth right? Wrong. If you can produce accurate interest rate and GDP growth forecasts, then you shouldn't be reading this post. You should instead be sitting on your own private island, watching the return on your flagship hedge fund skyrocket. See where I'm going here? If you cannot perfectly predict future values of the feature you want to use, then you should consider not using that feature. You might be able to know with 100% certainty when a holiday or special event will take place, but not even expert economists can perfectly predict interest rate fluctuations. Instead you can look at using feature lags. Where instead of using real time interest rates or GDP growth you can instead use lags of them. For example, using a 3 or 12 month lag of each feature.  
 
 ### finnts
 
