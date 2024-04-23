@@ -194,14 +194,14 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="baking-cakes-over-making-smoothies" class="level3">
 <h3 class="anchored" data-anchor-id="baking-cakes-over-making-smoothies">Baking Cakes Over Making Smoothies</h3>
-<p>Machine learning (ML) is a lot like cooking. You have various ingredients and you can combine them together in clever ways to make for a tasty dish. Most machine learning approaches like classification (predicting an outcome) and regression (predicting a number) can follow a similar process to making a smoothie. Where we can take some data (fruits and veggies) and blend it all together inside of our model blender.</p>
+<p>Machine learning (ML) is a lot like cooking. You have various ingredients and can combine them together in clever ways to make for a tasty dish. Most machine learning approaches like classification (predicting an outcome) and regression (predicting a number) can follow a similar process to making a smoothie. We can take some data (fruits and veggies) and blend it all together inside of our model blender.</p>
 <p>Time series forecasting is a whole other beast. It still technically falls under the regression family tree but has to be handled very differently. Forecasting is more like baking a cake, where the order in which you do things is very important. For example, you cannot switch when you add the eggs and when you add the frosting. If you do you will certainly not be invited back to your nephew’s birthday party next year. In order to bake something tasty please follow the below guidance.</p>
 </section>
 <section id="time-series-training" class="level3">
 <h3 class="anchored" data-anchor-id="time-series-training">Time Series Training</h3>
-<p>Training any sort of machine learning model often requires two separate historical data sets. One that is used to train the initial model, then another that is set aside to create predictions based on the initial model. We can then see how accurate the predictions were on the test data set. This ensures that our new ML model can generalize well to new and unseen data. Making sure our model doesn’t overfit to the training data.</p>
-<p>Common ML approaches like classification and regression don’t need a lot of sophistication when splitting up the historical data between a training set and a testing set. Often it will be split randomly. This is similar to making a smoothie. You can randomly throw in bananas, apples, spinach, and blueberries. All without having to think about the oder of when you do it.</p>
-<p>Take the below housing data. This is a traditional regression problem. Where we can use the total square feet and number of bedrooms to predict how much the house will cost. We can randomly split 80% of the data to train the model, then hold out 20% of the data to test how accurate the model is. We can randomly split the data to ensure we can a healthy mix of different data in each split.</p>
+<p>Training any sort of machine learning model often requires two separate historical data sets. One that is used to train the initial model, then another that is set aside to create predictions based on the initial model. We can then see how accurate the predictions were on the test data set. This ensures that our new ML model can generalize well to new and unseen data, making sure our model doesn’t overfit to the training data.</p>
+<p>Common ML approaches like classification and regression don’t need a lot of sophistication when splitting up the historical data between a training set and a testing set. Often it will be split randomly. This is similar to making a smoothie. You can randomly throw in bananas, apples, spinach, and blueberries. All without having to think about the order of when you do it.</p>
+<p>Take the below housing data. This is a traditional regression problem. Let’s use the total square feet and number of bedrooms to predict how much the house will cost. We can randomly split 80% of the data to train the model, then hold out 20% of the data to test how accurate the model is. Randomly splitting the data ensures we get a healthy mix of different data in each split.</p>
 <table class="table">
 <caption>Example fake housing data for a regression model</caption>
 <thead>
@@ -238,10 +238,10 @@ ul.task-list li input[type="checkbox"] {
 <td>Training</td>
 </tr>
 <tr class="odd">
-<td>1695</td>
-<td>4</td>
-<td>539010</td>
-<td>Testing</td>
+<td><strong>1695</strong></td>
+<td><strong>4</strong></td>
+<td><strong>539010</strong></td>
+<td><strong>Testing</strong></td>
 </tr>
 <tr class="even">
 <td>3692</td>
@@ -262,10 +262,10 @@ ul.task-list li input[type="checkbox"] {
 <td>Training</td>
 </tr>
 <tr class="odd">
-<td>1066</td>
-<td>5</td>
-<td>392288</td>
-<td>Testing</td>
+<td><strong>1066</strong></td>
+<td><strong>5</strong></td>
+<td><strong>392288</strong></td>
+<td><strong>Testing</strong></td>
 </tr>
 <tr class="even">
 <td>1838</td>
@@ -278,6 +278,13 @@ ul.task-list li input[type="checkbox"] {
 <p>A time series has a built in order to it. It’s said right there in the name, time. Ignoring the order based on time can have disastrous consequences, resulting in your final future forecast not being accurate. Just like baking a cake, we need to make sure how we train a model is done in the right order. When splitting a historical time series into a training set and a testing set, splitting not at random but based on time is the proper way to go. Using the oldest data as the training set and the newest data as the testing set makes sure we respect the order of our data based on time. The example table below is a made up time series of the price of one specific house. In reality we would need a lot more data to train a good time series model but just be cool for a minute and go with me on this one. The split column now has the test data set at the very end instead of randomly split across time. We can now use <a href="https://developers.google.com/machine-learning/crash-course/framing/ml-terminology">features</a> like interest rates and gdp growth to help us forecast the price of this house over time. The first 9 months of data will train the model, and the final 3 months will be used to test the model’s accuracy.</p>
 <table class="table">
 <caption>Example fake time series for the price of a specific house</caption>
+<colgroup>
+<col style="width: 24%">
+<col style="width: 23%">
+<col style="width: 18%">
+<col style="width: 18%">
+<col style="width: 15%">
+</colgroup>
 <thead>
 <tr class="header">
 <th>Date</th>
@@ -352,25 +359,25 @@ ul.task-list li input[type="checkbox"] {
 <td>Training</td>
 </tr>
 <tr class="even">
-<td>October 2002</td>
-<td>4.27018</td>
-<td>-0.15127</td>
-<td>312357</td>
-<td>Testing</td>
+<td><strong>October 2002</strong></td>
+<td><strong>4.27018</strong></td>
+<td><strong>-0.15127</strong></td>
+<td><strong>312357</strong></td>
+<td><strong>Testing</strong></td>
 </tr>
 <tr class="odd">
-<td>November 2002</td>
-<td>2.55146</td>
-<td>0.23036</td>
-<td>308345</td>
-<td>Testing</td>
+<td><strong>November 2002</strong></td>
+<td><strong>2.55146</strong></td>
+<td><strong>0.23036</strong></td>
+<td><strong>308345</strong></td>
+<td><strong>Testing</strong></td>
 </tr>
 <tr class="even">
-<td>December 2002</td>
-<td>4.92477</td>
-<td>0.41591</td>
-<td>316022</td>
-<td>Testing</td>
+<td><strong>December 2002</strong></td>
+<td><strong>4.92477</strong></td>
+<td><strong>0.41591</strong></td>
+<td><strong>316022</strong></td>
+<td><strong>Testing</strong></td>
 </tr>
 </tbody>
 </table>
@@ -378,9 +385,16 @@ ul.task-list li input[type="checkbox"] {
 <section id="data-leakage" class="level3">
 <h3 class="anchored" data-anchor-id="data-leakage">Data Leakage</h3>
 <p>Whenever time is involved in machine learning, the probability of shooting yourself in the foot rises. This has to do with the concept of <a href="https://machinelearningmastery.com/data-leakage-machine-learning/">data leakage</a>. Data leakage occurs when information from outside the training dataset is used to create the model, leading it to make overly optimistic predictions. It can also happen when we train with data that may not be available in the future when we need to create new predictions.</p>
-<p>In time series forecasting we have already discussed one component of data leakage, related to splitting the data correctly based on time. Take the below table, we have now split our data randomly across time. Our model can now “see ahead in time” when training, and in effect cheat when being evaluated on the testing splits. For example, for the test observation in July 2002 the model can learn from data on either side of that month. Figuring out previous and future trends and seasonality. This makes it easy to predict what the housing cost in July should be, since it has information before and after that month. With this approach our test accuracy will be a lot better than in the previous example where the splits are based on time. Future forecast performance will suffer though, since we have now trained and chosen a model that may only be good at figuring out how to extrapolate between two points, instead of trying to create predictions on unseen data in the future.</p>
+<p>In time series forecasting we have already discussed one component of data leakage, related to splitting the data correctly based on time. Take the below table, instead of splitting properly by time the data is now split randomly. Our model can now “see ahead in time” when training, and in effect cheat when being evaluated on the testing splits. For example, for the test observation in July 2002 the model can learn from data on either side of that month. Figuring out previous and future trends and seasonality. This makes it easy to predict what the housing cost in July should be, since it has information before and after that month. With this approach our test accuracy will be a lot better than in the previous example where the splits are based on time. Future forecast performance will suffer though, since we have now trained and chosen a model that may only be good at figuring out how to extrapolate between two points, instead of trying to create predictions on unseen data in the future.</p>
 <table class="table">
 <caption>Incorrect train and test splits</caption>
+<colgroup>
+<col style="width: 24%">
+<col style="width: 23%">
+<col style="width: 18%">
+<col style="width: 18%">
+<col style="width: 15%">
+</colgroup>
 <thead>
 <tr class="header">
 <th>Date</th>
@@ -399,11 +413,11 @@ ul.task-list li input[type="checkbox"] {
 <td>Training</td>
 </tr>
 <tr class="even">
-<td>February 2002</td>
-<td>4.87679</td>
-<td>0.03085</td>
-<td>314723</td>
-<td>Testing</td>
+<td><strong>February 2002</strong></td>
+<td><strong>4.87679</strong></td>
+<td><strong>0.03085</strong></td>
+<td><strong>314723</strong></td>
+<td><strong>Testing</strong></td>
 </tr>
 <tr class="odd">
 <td>March 2002</td>
@@ -434,11 +448,11 @@ ul.task-list li input[type="checkbox"] {
 <td>Training</td>
 </tr>
 <tr class="odd">
-<td>July 2002</td>
-<td>2.64521</td>
-<td>0.57986</td>
-<td>309675</td>
-<td>Testing</td>
+<td><strong>July 2002</strong></td>
+<td><strong>2.64521</strong></td>
+<td><strong>0.57986</strong></td>
+<td><strong>309675</strong></td>
+<td><strong>Testing</strong></td>
 </tr>
 <tr class="even">
 <td>August 2002</td>
@@ -469,11 +483,11 @@ ul.task-list li input[type="checkbox"] {
 <td>Training</td>
 </tr>
 <tr class="even">
-<td>December 2002</td>
-<td>4.92477</td>
-<td>0.41591</td>
-<td>316022</td>
-<td>Testing</td>
+<td><strong>December 2002</strong></td>
+<td><strong>4.92477</strong></td>
+<td><strong>0.41591</strong></td>
+<td><strong>316022</strong></td>
+<td><strong>Testing</strong></td>
 </tr>
 </tbody>
 </table>
