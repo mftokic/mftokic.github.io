@@ -1,5 +1,5 @@
 ---
-title: "Time Series First Principles: Order is Important"
+title: "Time Series First Principles: Order Is Important"
 description: "When time is involved, how your data is ordered makes all the difference"
 author: "Mike Tokic"
 date: "2024-04-23"

@@ -1,6 +1,6 @@
 ---
 title: "Time Series First Principles: Higher Grain Higher Accuracy"
-description: "Forecasting by country is often more accurate than forecasting by city. Forecasting by month is often more accurate than forecasting by day."
+description: "Forecasting by country is often more accurate than forecasting by city. Forecasting by month is often more accurate than forecasting by day"
 author: "Mike Tokic"
 date: "2024-04-18"
 categories: [time-series, machine-learning, finance]
@@ -17,7 +17,7 @@ This post dives into the fourth principle of a good time series forecast, the hi
 2. [Garbage In Garbage Out](https://mftokic.github.io/posts/2024-04-08-time-series-garbage/)
 3. [The Future Is Similar To The Past](https://mftokic.github.io/posts/2024-04-11-time-series-past-future/)
 4. [**Higher Grain Higher Accuracy**](https://mftokic.github.io/posts/2024-04-18-time-series-grain/)
-5. Order Is Important
+5. [Order Is Important](https://mftokic.github.io/posts/2024-04-23-time-series-order/)
 6. The Magic Is In The Feature Engineering
 7. Simple Models Are Better Models
 8. Capture Uncertainty

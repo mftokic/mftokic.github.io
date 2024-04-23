@@ -12,7 +12,7 @@
 <generator>quarto-1.3.450</generator>
 <lastBuildDate>Tue, 23 Apr 2024 07:00:00 GMT</lastBuildDate>
 <item>
-  <title>Time Series First Principles: Order is Important</title>
+  <title>Time Series First Principles: Order Is Important</title>
   <dc:creator>Mike Tokic</dc:creator>
   <link>https://mftokic.github.io/posts/2024-04-23-time-series-order/index.html</link>
   <description><![CDATA[ 
@@ -411,7 +411,7 @@
 <li><a href="https://mftokic.github.io/posts/2024-04-08-time-series-garbage/">Garbage In Garbage Out</a></li>
 <li><a href="https://mftokic.github.io/posts/2024-04-11-time-series-past-future/">The Future Is Similar To The Past</a></li>
 <li><a href="https://mftokic.github.io/posts/2024-04-18-time-series-grain/"><strong>Higher Grain Higher Accuracy</strong></a></li>
-<li>Order Is Important</li>
+<li><a href="https://mftokic.github.io/posts/2024-04-23-time-series-order/">Order Is Important</a></li>
 <li>The Magic Is In The Feature Engineering</li>
 <li>Simple Models Are Better Models</li>
 <li>Capture Uncertainty</li>
@@ -944,7 +944,7 @@
 <li><a href="https://mftokic.github.io/posts/2024-04-08-time-series-garbage/">Garbage In Garbage Out</a></li>
 <li><a href="https://mftokic.github.io/posts/2024-04-11-time-series-past-future/"><strong>The Future Is Similar To The Past</strong></a></li>
 <li><a href="https://mftokic.github.io/posts/2024-04-18-time-series-grain/">Higher Grain Higher Accuracy</a></li>
-<li>Order Is Important</li>
+<li><a href="https://mftokic.github.io/posts/2024-04-23-time-series-order/">Order Is Important</a></li>
 <li>The Magic Is In The Feature Engineering</li>
 <li>Simple Models Are Better Models</li>
 <li>Capture Uncertainty</li>
@@ -1017,7 +1017,7 @@
 <li><a href="https://mftokic.github.io/posts/2024-04-08-time-series-garbage/"><strong>Garbage In Garbage Out</strong></a></li>
 <li><a href="https://mftokic.github.io/posts/2024-04-11-time-series-past-future/">The Future Is Similar To The Past</a></li>
 <li><a href="https://mftokic.github.io/posts/2024-04-18-time-series-grain/">Higher Grain Higher Accuracy</a></li>
-<li>Order Is Important</li>
+<li><a href="https://mftokic.github.io/posts/2024-04-23-time-series-order/">Order Is Important</a></li>
 <li>The Magic Is In The Feature Engineering</li>
 <li>Simple Models Are Better Models</li>
 <li>Capture Uncertainty</li>
@@ -1149,7 +1149,7 @@
 <li><a href="https://mftokic.github.io/posts/2024-04-08-time-series-garbage/">Garbage In Garbage Out</a></li>
 <li><a href="https://mftokic.github.io/posts/2024-04-11-time-series-past-future/">The Future Is Similar To The Past</a></li>
 <li><a href="https://mftokic.github.io/posts/2024-04-18-time-series-grain/">Higher Grain Higher Accuracy</a></li>
-<li>Order Is Important</li>
+<li><a href="https://mftokic.github.io/posts/2024-04-23-time-series-order/">Order Is Important</a></li>
 <li>The Magic Is In The Feature Engineering</li>
 <li>Simple Models Are Better Models</li>
 <li>Capture Uncertainty</li>
@@ -1211,7 +1211,7 @@
 <li><a href="https://mftokic.github.io/posts/2024-04-11-time-series-past-future/"><strong>The Future Is Similar To The Past</strong></a>: If you expect the future to be drastically different than past data, you will have a hard time training accurate models.<br>
 </li>
 <li><a href="https://mftokic.github.io/posts/2024-04-18-time-series-grain/"><strong>Higher Grain Higher Accuracy</strong></a>: Forecasting by country is often more accurate than forecasting by city. Forecasting by month is often more accurate than forecasting by day.</li>
-<li><strong>Order Is Important</strong>: When time is involved, how your data is ordered makes all the difference.</li>
+<li><a href="https://mftokic.github.io/posts/2024-04-23-time-series-order/"><strong>Order Is Important</strong></a>: When time is involved, how your data is ordered makes all the difference.</li>
 <li><strong>The Magic Is In The Feature Engineering</strong>: How you transform your data before model training can transform a mediocre forecast into a world class forecast.</li>
 <li><strong>Simple Models Are Better Models</strong>: Like occam’s razor, the best model is often the one with the least amount of inputs.</li>
 <li><strong>Capture Uncertainty</strong>: Showing the back testing results and future uncertainty of a model’s forecast builds more trust.</li>
