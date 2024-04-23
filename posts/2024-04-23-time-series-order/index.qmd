@@ -2,10 +2,9 @@
 title: "Time Series First Principles: Order is Important"
 description: "When time is involved, how your data is ordered makes all the difference"
 author: "Mike Tokic"
-date: "2024-04-25"
+date: "2024-04-23"
 categories: [time-series, machine-learning, finance]
 image: "image.png"
-draft: true
 ---
 
 ![](./image.png)
@@ -18,7 +17,7 @@ This post dives into the fifth principle of a good time series forecast, order i
 2. [Garbage In Garbage Out](https://mftokic.github.io/posts/2024-04-08-time-series-garbage/)
 3. [The Future Is Similar To The Past](https://mftokic.github.io/posts/2024-04-11-time-series-past-future/)
 4. [Higher Grain Higher Accuracy](https://mftokic.github.io/posts/2024-04-18-time-series-grain/)
-5. **Order Is Important**
+5. [**Order Is Important**](https://mftokic.github.io/posts/2024-04-23-time-series-order/)
 6. The Magic Is In The Feature Engineering
 7. Simple Models Are Better Models
 8. Capture Uncertainty
@@ -97,8 +96,12 @@ In time series forecasting we have already discussed one component of data leaka
 
 : Incorrect train and test splits
 
-Ok, so we know not to split data randomly when training. Another thing to watch out for is how features are used in the model In our time series housing example, we can use date information (month, quarter, etc) along with our macro features like interest rates and GDP growth. Let's say we follow the right approach, split the data based on time, and see that we get good results on the test data. We can now take our model into production and try to create a forecast for the future. But wait, what do we do with the future feature values of interest rate and GDP growth? This is another potential data leakage issue, where data used to train the model is not available to create new predictions in the future. You might be thinking, no problem we can just create a forecast of future interest rates and gdp growth right? Wrong. If you can produce accurate interest rate and GDP growth forecasts, then you shouldn't be reading this post. You should instead be sitting on your own private island, watching the return on your flagship hedge fund skyrocket. See where I'm going here? If you cannot perfectly predict future values of the feature you want to use, then you should consider not using that feature. You might be able to know with 100% certainty when a holiday or special event will take place, but not even expert economists can perfectly predict interest rate fluctuations. Instead you can look at using feature lags. Where instead of using real time interest rates or GDP growth you can instead use lags of them. For example, using a 3 or 12 month lag of each feature.  
+Ok, so we know not to split data randomly when training. Another thing to watch out for is how features are used in the model. In our time series housing example, we can use date information (month, quarter, etc) along with our macro features like interest rates and GDP growth. Let's say we follow the right approach, split the data based on time, and see that we get good results on the test data. We can now take our model into production and try to create a forecast for the future. But wait, what do we do with the future feature values of interest rate and GDP growth? This is another potential data leakage issue, where data used to train the model is not available to create new predictions in the future. You might be thinking, no problem we can just create a forecast of future interest rates and gdp growth right? Wrong. If you can produce accurate interest rate and GDP growth forecasts, then you shouldn't be reading this post. You should instead be sitting on your own private island, watching the return on your flagship hedge fund skyrocket. See where I'm going here? If you cannot perfectly predict future values of the feature you want to use, then you should consider not using that feature. You might be able to know with 100% certainty when a holiday or special event will take place, but not even expert economists can perfectly predict interest rate fluctuations. Instead you can look at using feature lags. Where instead of using real time interest rates or GDP growth you can instead use lags of them. For example, using a 3 or 12 month lag of each feature. Using lags in this example can help prevent [compounding errors](https://mftokic.github.io/posts/2024-04-11-time-series-past-future/#reversal) in your forecast.
 
 ### finnts
 
+Looking for a way to to never worry about the order of your time series data again? Have no fear because [finnts](https://microsoft.github.io/finnts/index.html) is here! Ok enough with the used car salesman talk. The finnts package is something myself and other outstanding team members have built to automate all of the tedious aspects related to time series forecasting. The package can automatically handle the proper splits of your data and has build in data leakage prevention. Check out the package to learn for yourself how easy forecasting can be. 
+
 ### Final Thoughts
+
+Remember, order is important in forecasting. Make sure you don't mix up your data when training models, and keep a look out for data leakage. Do this right and you just might get invited back to your nephew's birthday party next year.  
