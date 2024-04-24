@@ -1,0 +1,88 @@
+---
+title: "Time Series First Principles: The Magic Is In The Feature Engineering"
+description: "How you transform your data before model training can transform a mediocre forecast into a world class forecast"
+author: "Mike Tokic"
+date: "2024-04-29"
+categories: [time-series, machine-learning, finance]
+image: "image.png"
+draft: true
+---
+
+![](./image.png)
+
+### Time Series First Principles Series
+
+This post dives into the sixth principle of a good time series forecast, the magic is in the feature engineering. Check out the [initial post](https://mftokic.github.io/posts/2024-03-26-time-series-first-principles-initial/) in this series to get a high level view of each principle. 
+
+1. [Domain Expertise](https://mftokic.github.io/posts/2024-04-02-time-series-domain-expertise/)
+2. [Garbage In Garbage Out](https://mftokic.github.io/posts/2024-04-08-time-series-garbage/)
+3. [The Future Is Similar To The Past](https://mftokic.github.io/posts/2024-04-11-time-series-past-future/)
+4. [Higher Grain Higher Accuracy](https://mftokic.github.io/posts/2024-04-18-time-series-grain/)
+5. [Order Is Important](https://mftokic.github.io/posts/2024-04-23-time-series-order/)
+6. **The Magic Is In The Feature Engineering**
+7. Simple Models Are Better Models
+8. Capture Uncertainty
+9. Model Averages Are King
+10. Deep Learning Last
+
+### Turning Data Into Insight
+
+A machine learning (ML) model is only as good as the data it's fed. The process of transforming data, to make it easier for a model to learn from that data, is called feature engineering. It's a technical term that is actually very simple in nature. In the world of time series forecasting, feature engineering can make or break a good forecast. 
+
+Creating high quality features is a combination of strong domain expertise and data transformation skills. We have already covered how domain expertise impacts a forecast in a [previous post](https://mftokic.github.io/posts/2024-04-02-time-series-domain-expertise/), so this post will cover how simple data transformations can drastically improve the accuracy of a machine learning forecast. Check out each category of time series feature engineering below to learn more.   
+
+### Date Features
+
+The most common type of feature engineering for time series is around dates. Let's use the example time series below to illustrate each type of feature engineering. 
+
+| Date        | Sales ($) | Consumer Sentiment |
+|-------------|-----------|--------------------|
+| January 2023| 100,000   | 68                 |
+| February 2023| 110,000  | 67                 |
+| March 2023  | 120,000   | 65                 |
+| April 2023  | 115,000   | 70                 |
+| May 2023    | 130,000   | 72                 |
+| June 2023   | 125,000   | 73                 |
+| July 2023   | 135,000   | 74                 |
+| August 2023 | 140,000   | 75                 |
+| September 2023 | 130,000| 70                 |
+| October 2023 | 145,000  | 72                 |
+| November 2023 | 150,000 | 71                 |
+| December 2023 | 160,000 | 75                 |
+
+: Fake Time Series Data
+
+In this time series we would like to forecast monthly sales. We also have information about consumer sentiment that we can use to help forecast sales. A multivariate machine learning model cannot easily use the date column as is, so we have to do some data transformations (aka feature engineering) to make it easier for a model to understand how date information can help predict sales. Let's go through a few examples of new features we can create from the date column. It's important to note that after we create these new features it's a good idea to remove the original date column before training a ML model. 
+
+Since the data is monthly there is a lot of easy to create features we can use. We can pull out the specific month, quarter, and even year into their own columns to use as features. 
+
+| Date        | Month     | Quarter | Year |
+|-------------|-----------|---------|------|
+| January 2023| January   | Q1      | 2023 |
+| February 2023| February | Q1      | 2023 |
+| March 2023  | March     | Q1      | 2023 |
+| April 2023  | April     | Q2      | 2023 |
+| May 2023    | May       | Q2      | 2023 |
+| June 2023   | June      | Q2      | 2023 |
+| July 2023   | July      | Q3      | 2023 |
+| August 2023 | August    | Q3      | 2023 |
+| September 2023| September| Q3     | 2023 |
+| October 2023 | October  | Q4      | 2023 |
+| November 2023| November | Q4      | 2023 |
+| December 2023| December | Q4      | 2023 |
+
+That seems pretty straight forward right? There is even more juice to squeeze out of this original date column. 
+
+### Lag Features
+
+### Rolling Window Features
+
+### Polynomial Features
+
+### Reversal
+
+Too many features can increase model train time and lead to overfitting. 
+
+### finnts
+
+### Final Thoughts
