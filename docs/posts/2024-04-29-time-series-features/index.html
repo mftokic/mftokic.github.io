@@ -194,12 +194,13 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="turning-data-into-insight" class="level3">
 <h3 class="anchored" data-anchor-id="turning-data-into-insight">Turning Data Into Insight</h3>
-<p>A machine learning (ML) model is only as good as the data it’s fed. The process of transforming data, to make it easier for a model to learn from that data, is called feature engineering. It’s a technical term that is actually very simple in nature. In the world of time series forecasting, feature engineering can make or break a good forecast.</p>
+<p>A machine learning (ML) model is only as good as the data it’s fed. The process of transforming data, to make it easier for a model to learn from that data, is called feature engineering. It’s a technical term that is actually very simple in nature, really just data transformations. In the world of time series forecasting, feature engineering can make or break a good forecast.</p>
 <p>Creating high quality features is a combination of strong domain expertise and data transformation skills. We have already covered how domain expertise impacts a forecast in a <a href="https://mftokic.github.io/posts/2024-04-02-time-series-domain-expertise/">previous post</a>, so this post will cover how simple data transformations can drastically improve the accuracy of a machine learning forecast. Check out each category of time series feature engineering below to learn more.</p>
 </section>
 <section id="date-features" class="level3">
 <h3 class="anchored" data-anchor-id="date-features">Date Features</h3>
-<p>The most common type of feature engineering for time series is around dates. Let’s use the example time series below to illustrate each type of feature engineering.</p>
+<p>The most common type of feature engineering for time series is around dates. Date features allow us to capture seasonality patterns in our data. Think of seasonality as repeating peaks and valleys in our data. For example, our business might make most of it’s revenue in Q4 every year, with a subsequent dip in sales in Q1.</p>
+<p>Let’s use the example time series below to illustrate each type of feature engineering.</p>
 <table class="table">
 <caption>Fake Time Series Data</caption>
 <thead>
@@ -273,7 +274,7 @@ ul.task-list li input[type="checkbox"] {
 </tbody>
 </table>
 <p>In this time series we would like to forecast monthly sales. We also have information about consumer sentiment that we can use to help forecast sales. A multivariate machine learning model cannot easily use the date column as is, so we have to do some data transformations (aka feature engineering) to make it easier for a model to understand how date information can help predict sales. Let’s go through a few examples of new features we can create from the date column. It’s important to note that after we create these new features it’s a good idea to remove the original date column before training a ML model.</p>
-<p>Since the data is monthly there is a lot of easy to create features we can use. We can pull out the specific month, quarter, and even year into their own columns to use as features.</p>
+<p>Since the data is monthly there is a lot of easy to create features we can use. We can pull out the specific month, quarter, and even year into their own columns to use as features. If our data was at a daily level, we can even go deeper and get features related to day of the week, day of year, week of month, etc.</p>
 <table class="table">
 <thead>
 <tr class="header">
@@ -358,10 +359,204 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
-<p>That seems pretty straight forward right? There is even more juice to squeeze out of this original date column.</p>
+<p>That seems pretty straight forward right? Let’s keep squeezing our date fruit for more juice and see what other kinds of features we can create. Since this is a time series, adding some order of time can be helpful. This can be something as simple as an index starting at 1 (or even convert your date time a seconds format). This helps establish the proper order of our data and makes is easier for a model to pick up growing or declining trends over time. There is also slight differences in how many days there are from month to month, so we can add that too. If you don’t think that’s important then you have never been stung by the harsh mistress that is leap year. There have been multiple times where finance exec’s have dismissed forecasts for the quarter that includes February, where in the end we didn’t account for the fact that it was a leap year or we are one year removed from one. You can even take this one step further and add the number of business days for each month.</p>
+<table class="table">
+<caption>Adding a time index and other day related features</caption>
+<thead>
+<tr class="header">
+<th>Date</th>
+<th>Index</th>
+<th>Days in Month</th>
+<th>Business Days</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>January 2023</td>
+<td>1</td>
+<td>31</td>
+<td>22</td>
+</tr>
+<tr class="even">
+<td>February 2023</td>
+<td>2</td>
+<td>28</td>
+<td>20</td>
+</tr>
+<tr class="odd">
+<td>March 2023</td>
+<td>3</td>
+<td>31</td>
+<td>23</td>
+</tr>
+<tr class="even">
+<td>April 2023</td>
+<td>4</td>
+<td>30</td>
+<td>20</td>
+</tr>
+<tr class="odd">
+<td>May 2023</td>
+<td>5</td>
+<td>31</td>
+<td>23</td>
+</tr>
+<tr class="even">
+<td>June 2023</td>
+<td>6</td>
+<td>30</td>
+<td>22</td>
+</tr>
+<tr class="odd">
+<td>July 2023</td>
+<td>7</td>
+<td>31</td>
+<td>21</td>
+</tr>
+<tr class="even">
+<td>August 2023</td>
+<td>8</td>
+<td>31</td>
+<td>23</td>
+</tr>
+<tr class="odd">
+<td>September 2023</td>
+<td>9</td>
+<td>30</td>
+<td>21</td>
+</tr>
+<tr class="even">
+<td>October 2023</td>
+<td>10</td>
+<td>31</td>
+<td>22</td>
+</tr>
+<tr class="odd">
+<td>November 2023</td>
+<td>11</td>
+<td>30</td>
+<td>22</td>
+</tr>
+<tr class="even">
+<td>December 2023</td>
+<td>12</td>
+<td>31</td>
+<td>21</td>
+</tr>
+</tbody>
+</table>
+<p>To get the final drop of juice out of the date column, we can also add Fourier series features. A Fourier series feature in time series forecasting is a component that captures seasonal patterns using sine and cosine functions to model periodic cycles in the data. In a nutshell they are just recurring peaks and valleys that can occur at various date grains like monthly or daily. These features can help capture more complex seasonality in your data. The chart below shows some standard Fourier series at the monthly and quarterly grain.</p>
+<p><img src="./chart1.png" class="img-fluid"></p>
 </section>
 <section id="lag-features" class="level3">
 <h3 class="anchored" data-anchor-id="lag-features">Lag Features</h3>
+<p>Time series forecasting is all about learning about the past to forecast the future. In order to learn about the past we have to create lags on our data. Often what we’re trying to forecast today is correlated to what happened in the past. This is a concept known as autocorrelation. For our monthly forecast example, a 3 month lag may be highly correlated to sales with a 0 month lag (or sales today). Consumer sentiment can also be correlated with sales, but this time a lag of 6 might have higher correlation, since there is most likely a long delay between customer purchase patters and our company’s product. Lags can be created for any amount, depending on your domain knowledge of the business and results from more exploratory data analysis (deep dive for a different day).</p>
+<table class="table">
+<caption>Adding lag features</caption>
+<colgroup>
+<col style="width: 16%">
+<col style="width: 12%">
+<col style="width: 22%">
+<col style="width: 21%">
+<col style="width: 26%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Date</th>
+<th>Sales ($)</th>
+<th>Consumer Sentiment</th>
+<th>Sales 3-Month Lag</th>
+<th>Sentiment 6-Month Lag</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>January 2023</td>
+<td>100,000</td>
+<td>68</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>February 2023</td>
+<td>110,000</td>
+<td>67</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>March 2023</td>
+<td>120,000</td>
+<td>65</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>April 2023</td>
+<td>115,000</td>
+<td>70</td>
+<td>100,000</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>May 2023</td>
+<td>130,000</td>
+<td>72</td>
+<td>110,000</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>June 2023</td>
+<td>125,000</td>
+<td>73</td>
+<td>120,000</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>July 2023</td>
+<td>135,000</td>
+<td>74</td>
+<td>115,000</td>
+<td>68</td>
+</tr>
+<tr class="even">
+<td>August 2023</td>
+<td>140,000</td>
+<td>75</td>
+<td>130,000</td>
+<td>67</td>
+</tr>
+<tr class="odd">
+<td>September 2023</td>
+<td>130,000</td>
+<td>70</td>
+<td>125,000</td>
+<td>65</td>
+</tr>
+<tr class="even">
+<td>October 2023</td>
+<td>145,000</td>
+<td>72</td>
+<td>135,000</td>
+<td>70</td>
+</tr>
+<tr class="odd">
+<td>November 2023</td>
+<td>150,000</td>
+<td>71</td>
+<td>140,000</td>
+<td>72</td>
+</tr>
+<tr class="even">
+<td>December 2023</td>
+<td>160,000</td>
+<td>75</td>
+<td>130,000</td>
+<td>73</td>
+</tr>
+</tbody>
+</table>
+<p>Last thing I’ll say here is that you can also create leading features, especially for features that you know with 100% certainty ahead of time. For example, customers knowing of a new product launch in the future will definitely change how they purchase similar products you sell for the period leading up to the launch. Someone may hold off on buying a new iPhone until the latest one gets released in a few months. Same goes for cars and many other products.</p>
 </section>
 <section id="rolling-window-features" class="level3">
 <h3 class="anchored" data-anchor-id="rolling-window-features">Rolling Window Features</h3>
