@@ -31,6 +31,8 @@ A machine learning (ML) model is only as good as the data it's fed. The process 
 
 Creating high quality features is a combination of strong domain expertise and data transformation skills. We have already covered how domain expertise impacts a forecast in a [previous post](https://mftokic.github.io/posts/2024-04-02-time-series-domain-expertise/), so this post will cover how simple data transformations can drastically improve the accuracy of a machine learning forecast. Check out each category of time series feature engineering below to learn more.   
 
+### Stationary and Box Cox
+
 ### Date Features
 
 The most common type of feature engineering for time series is around dates. Date features allow us to capture seasonality patterns in our data. Think of seasonality as repeating peaks and valleys in our data. For example, our business might make most of it's revenue in Q4 every year, with a subsequent dip in sales in Q1. 
