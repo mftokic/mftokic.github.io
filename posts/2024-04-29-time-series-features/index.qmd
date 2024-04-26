@@ -117,16 +117,118 @@ Time series forecasting is all about learning about the past to forecast the fut
 
 : Adding lag features
 
-Last thing I'll say here is that you can also create leading features, especially for features that you know with 100% certainty ahead of time. For example, customers knowing of a new product launch in the future will definitely change how they purchase similar products you sell for the period leading up to the launch. Someone may hold off on buying a new iPhone until the latest one gets released in a few months. Same goes for cars and many other products.  
+Last thing I'll say here is that you can also create leading features, especially for features that you know with 100% certainty ahead of time. For example, customers knowing of a new product launch in the future will definitely change how they purchase similar products you sell for the periods leading up to the launch. Someone may hold off on buying a new iPhone until the latest one gets released in a few months. Same goes for cars and many other products.  
 
 ### Rolling Window Features
 
+Often using pure historical lags is not enough. The historical data of our target variable (what we want to forecast) can be very noisy, making it hard for a model to learn the proper trends and seasonality. One way to handle this is through rolling window transformations. 
+
+Rolling window features in time series forecasting help smooth out data, reduce noise, and capture essential trends and cycles by averaging or computing other statistics over a specified period. For a monthly forecast we can create rolling window features of averages, min/max, and other statistical calculations. 
+
+![](./chart2.png)
+
+: Rolling Window Averages aka Moving Average
+
+It's best to calculate rolling window features based on your existing lag features. That way there is no [data leakage](https://mftokic.github.io/posts/2024-04-23-time-series-order/#data-leakage) during initial model training. See below for example of creating a 3 month rolling window average of the 3 month sales lag. 
+
+| Date            | Sales ($) | Sales 3-Month Lag | 3-Month Rolling Avg |
+|-----------------|-----------|-------------------|---------------------|
+| January 2023    | 100,000   |                   |                     |
+| February 2023   | 110,000   |                   |                     |
+| March 2023      | 120,000   |                   |                     |
+| April 2023      | 115,000   | 100,000           |                     |
+| May 2023        | 130,000   | 110,000           |                     |
+| June 2023       | 125,000   | 120,000           | 110,000             |
+| July 2023       | 135,000   | 115,000           | 115,000             |
+| August 2023     | 140,000   | 130,000           | 121,667             |
+| September 2023  | 130,000   | 125,000           | 123,333             |
+| October 2023    | 145,000   | 135,000           | 130,000             |
+| November 2023   | 150,000   | 140,000           | 133,333             |
+| December 2023   | 160,000   | 130,000           | 135,000             |
+
+: Rolling 3 month average applied to the 3 month sales lag
+
 ### Polynomial Features
+
+The final type of feature engineering I'd like to discuss are polynomial transformations. Sometimes there is a non-linear relationship between your initial feature and the target variable. Some models, like ones that use decision trees, can handle this kind of relationship while others like linear regression cannot. To fix this we can transform the data via polynomials like squaring, cubing, and even taking the log of the initial feature. 
+
+Let's take our example monthly sales data and add some spice to it. This time creating an exponential relationship between consumer sentiment and sales. 
+
+| Date            | Sales ($)  | Consumer Sentiment |
+|-----------------|------------|--------------------|
+| January 2023    | 1,309,000  | 68                 |
+| February 2023   | 1,204,000  | 67                 |
+| March 2023      | 1,000,000  | 65                 |
+| April 2023      | 1,525,000  | 70                 |
+| May 2023        | 1,849,000  | 72                 |
+| June 2023       | 1,964,000  | 73                 |
+| July 2023       | 2,121,000  | 74                 |
+| August 2023     | 2,500,000  | 75                 |
+| September 2023  | 1,525,000  | 70                 |
+| October 2023    | 1,849,000  | 72                 |
+| November 2023   | 1,764,000  | 71                 |
+| December 2023   | 2,500,000  | 75                 |
+| January 2024    | 2,890,000  | 76                 |
+| February 2024   | 3,361,000  | 78                 |
+| March 2024      | 3,844,000  | 79                 |
+| April 2024      | 4,641,000  | 81                 |
+
+: Updated sales data with an exponential relationship with consumer sentiment
+
+When graphing the data, see how the increase in consumer sentiment has an exponential effect on sales? 
+
+![](./chart3.png)
+
+To account for this, we can square the values of consumer sentiment and create a new feature to use. This new feature will make it easier for models like linear regression to capture these kinds of non-linear relationships. 
+
+| Date            | Sales ($)  | Consumer Sentiment | Consumer Sentiment Squared  |
+|-----------------|------------|--------------------|-----------------------------|
+| January 2023    | 1,309,000  | 68                 | 4,624                       |
+| February 2023   | 1,204,000  | 67                 | 4,489                       |
+| March 2023      | 1,000,000  | 65                 | 4,225                       |
+| April 2023      | 1,525,000  | 70                 | 4,900                       |
+| May 2023        | 1,849,000  | 72                 | 5,184                       |
+| June 2023       | 1,964,000  | 73                 | 5,329                       |
+| July 2023       | 2,121,000  | 74                 | 5,476                       |
+| August 2023     | 2,500,000  | 75                 | 5,625                       |
+| September 2023  | 1,525,000  | 70                 | 4,900                       |
+| October 2023    | 1,849,000  | 72                 | 5,184                       |
+| November 2023   | 1,764,000  | 71                 | 5,041                       |
+| December 2023   | 2,500,000  | 75                 | 5,625                       |
+| January 2024    | 2,890,000  | 76                 | 5,776                       |
+| February 2024   | 3,361,000  | 78                 | 6,084                       |
+| March 2024      | 3,844,000  | 79                 | 6,241                       |
+| April 2024      | 4,641,000  | 81                 | 6,561                       |
+
+: New polynomial feature added
 
 ### Reversal
 
-Too many features can increase model train time and lead to overfitting. 
+Sometimes too much of a good thing can be a bad thing. Adding a lot of new features can increase the chance that a model overfits. Overfitting in machine learning occurs when a model learns to capture noise or random fluctuations in the training data, leading to poor generalization and high performance on training data but low performance on unseen data. The best way to prevent this kind of overfitting is to limit the number of features used to train a model. This will be discussed in greater detail in another post in this series. 
+
+Did you notice that when creating lags and rolling window features we had a lot of missing data at the start of the time series for those new features? This can be a problem. Some ML models do not like missing data, so we need to deal with those missing values. An easy way is to just drop the initial rows in the time series that have blank values for the new lags and rolling window features. This can work well if you have a lot of historical data. Dropping data can hurt model performance though, and if you don't have a lot of data to start with it becomes a less favorable option. You could also replace the missing values, either by using a simple model to impute the value or just use the closest available value in the time series to "fill in" the missing values. Both of these missing value replacement approaches have their own pros and cons but could be a better strategy then just simply dropping rows with missing values. 
+
+| Date            | Sales ($) | Sales 3-Month Lag | 3-Month Rolling Avg |
+|-----------------|-----------|-------------------|---------------------|
+| January 2023    | 100,000   | 100,000           | 110,000             |
+| February 2023   | 110,000   | 100,000           | 110,000             |
+| March 2023      | 120,000   | 100,000           | 110,000             |
+| April 2023      | 115,000   | 100,000           | 110,000             |
+| May 2023        | 130,000   | 110,000           | 110,000             |
+| June 2023       | 125,000   | 120,000           | 110,000             |
+| July 2023       | 135,000   | 115,000           | 115,000             |
+| August 2023     | 140,000   | 130,000           | 121,667             |
+| September 2023  | 130,000   | 125,000           | 123,333             |
+| October 2023    | 145,000   | 135,000           | 130,000             |
+| November 2023   | 150,000   | 140,000           | 133,333             |
+| December 2023   | 160,000   | 130,000           | 135,000             |
+
+: Filling in missing values with their closest available value
 
 ### finnts
 
+There's a lot to unpack on feature engineering for time series forecasting. Thankfully my package, [finnts](https://microsoft.github.io/finnts/index.html), can automatically handle all of the feature engineering for you. It does everything I called out in this post plus more. Check it out and see just how easy ML forecasting can be. 
+
 ### Final Thoughts
+
+Feature engineering is the backbone of successful time series forecasting, allowing models to uncover hidden patterns and relationships within the data, ultimately leading to more accurate predictions. By transforming raw data into meaningful features like date-related attributes, lag features, rolling window statistics, and polynomial transformations, we equip machine learning models with the necessary insights to make informed forecasts. However, it's crucial to strike a balance between adding informative features and avoiding overfitting, as too many features can lead to poor generalization on unseen data. With careful consideration and the right techniques, feature engineering becomes a powerful tool in the arsenal of any data scientist or analyst aiming to unlock the predictive potential of time series data.

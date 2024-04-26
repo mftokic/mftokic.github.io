@@ -556,23 +556,429 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
-<p>Last thing I’ll say here is that you can also create leading features, especially for features that you know with 100% certainty ahead of time. For example, customers knowing of a new product launch in the future will definitely change how they purchase similar products you sell for the period leading up to the launch. Someone may hold off on buying a new iPhone until the latest one gets released in a few months. Same goes for cars and many other products.</p>
+<p>Last thing I’ll say here is that you can also create leading features, especially for features that you know with 100% certainty ahead of time. For example, customers knowing of a new product launch in the future will definitely change how they purchase similar products you sell for the periods leading up to the launch. Someone may hold off on buying a new iPhone until the latest one gets released in a few months. Same goes for cars and many other products.</p>
 </section>
 <section id="rolling-window-features" class="level3">
 <h3 class="anchored" data-anchor-id="rolling-window-features">Rolling Window Features</h3>
+<p>Often using pure historical lags is not enough. The historical data of our target variable (what we want to forecast) can be very noisy, making it hard for a model to learn the proper trends and seasonality. One way to handle this is through rolling window transformations.</p>
+<p>Rolling window features in time series forecasting help smooth out data, reduce noise, and capture essential trends and cycles by averaging or computing other statistics over a specified period. For a monthly forecast we can create rolling window features of averages, min/max, and other statistical calculations.</p>
+<dl>
+<dt><img src="./chart2.png" class="img-fluid"></dt>
+<dd>
+<p>Rolling Window Averages aka Moving Average</p>
+</dd>
+</dl>
+<p>It’s best to calculate rolling window features based on your existing lag features. That way there is no <a href="https://mftokic.github.io/posts/2024-04-23-time-series-order/#data-leakage">data leakage</a> during initial model training. See below for example of creating a 3 month rolling window average of the 3 month sales lag.</p>
+<table class="table">
+<caption>Rolling 3 month average applied to the 3 month sales lag</caption>
+<colgroup>
+<col style="width: 25%">
+<col style="width: 16%">
+<col style="width: 27%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Date</th>
+<th>Sales ($)</th>
+<th>Sales 3-Month Lag</th>
+<th>3-Month Rolling Avg</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>January 2023</td>
+<td>100,000</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>February 2023</td>
+<td>110,000</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>March 2023</td>
+<td>120,000</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>April 2023</td>
+<td>115,000</td>
+<td>100,000</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>May 2023</td>
+<td>130,000</td>
+<td>110,000</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>June 2023</td>
+<td>125,000</td>
+<td>120,000</td>
+<td>110,000</td>
+</tr>
+<tr class="odd">
+<td>July 2023</td>
+<td>135,000</td>
+<td>115,000</td>
+<td>115,000</td>
+</tr>
+<tr class="even">
+<td>August 2023</td>
+<td>140,000</td>
+<td>130,000</td>
+<td>121,667</td>
+</tr>
+<tr class="odd">
+<td>September 2023</td>
+<td>130,000</td>
+<td>125,000</td>
+<td>123,333</td>
+</tr>
+<tr class="even">
+<td>October 2023</td>
+<td>145,000</td>
+<td>135,000</td>
+<td>130,000</td>
+</tr>
+<tr class="odd">
+<td>November 2023</td>
+<td>150,000</td>
+<td>140,000</td>
+<td>133,333</td>
+</tr>
+<tr class="even">
+<td>December 2023</td>
+<td>160,000</td>
+<td>130,000</td>
+<td>135,000</td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="polynomial-features" class="level3">
 <h3 class="anchored" data-anchor-id="polynomial-features">Polynomial Features</h3>
+<p>The final type of feature engineering I’d like to discuss are polynomial transformations. Sometimes there is a non-linear relationship between your initial feature and the target variable. Some models, like ones that use decision trees, can handle this kind of relationship while others like linear regression cannot. To fix this we can transform the data via polynomials like squaring, cubing, and even taking the log of the initial feature.</p>
+<p>Let’s take our example monthly sales data and add some spice to it. This time creating an exponential relationship between consumer sentiment and sales.</p>
+<table class="table">
+<caption>Updated sales data with an exponential relationship with consumer sentiment</caption>
+<thead>
+<tr class="header">
+<th>Date</th>
+<th>Sales ($)</th>
+<th>Consumer Sentiment</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>January 2023</td>
+<td>1,309,000</td>
+<td>68</td>
+</tr>
+<tr class="even">
+<td>February 2023</td>
+<td>1,204,000</td>
+<td>67</td>
+</tr>
+<tr class="odd">
+<td>March 2023</td>
+<td>1,000,000</td>
+<td>65</td>
+</tr>
+<tr class="even">
+<td>April 2023</td>
+<td>1,525,000</td>
+<td>70</td>
+</tr>
+<tr class="odd">
+<td>May 2023</td>
+<td>1,849,000</td>
+<td>72</td>
+</tr>
+<tr class="even">
+<td>June 2023</td>
+<td>1,964,000</td>
+<td>73</td>
+</tr>
+<tr class="odd">
+<td>July 2023</td>
+<td>2,121,000</td>
+<td>74</td>
+</tr>
+<tr class="even">
+<td>August 2023</td>
+<td>2,500,000</td>
+<td>75</td>
+</tr>
+<tr class="odd">
+<td>September 2023</td>
+<td>1,525,000</td>
+<td>70</td>
+</tr>
+<tr class="even">
+<td>October 2023</td>
+<td>1,849,000</td>
+<td>72</td>
+</tr>
+<tr class="odd">
+<td>November 2023</td>
+<td>1,764,000</td>
+<td>71</td>
+</tr>
+<tr class="even">
+<td>December 2023</td>
+<td>2,500,000</td>
+<td>75</td>
+</tr>
+<tr class="odd">
+<td>January 2024</td>
+<td>2,890,000</td>
+<td>76</td>
+</tr>
+<tr class="even">
+<td>February 2024</td>
+<td>3,361,000</td>
+<td>78</td>
+</tr>
+<tr class="odd">
+<td>March 2024</td>
+<td>3,844,000</td>
+<td>79</td>
+</tr>
+<tr class="even">
+<td>April 2024</td>
+<td>4,641,000</td>
+<td>81</td>
+</tr>
+</tbody>
+</table>
+<p>When graphing the data, see how the increase in consumer sentiment has an exponential effect on sales?</p>
+<p><img src="./chart3.png" class="img-fluid"></p>
+<p>To account for this, we can square the values of consumer sentiment and create a new feature to use. This new feature will make it easier for models like linear regression to capture these kinds of non-linear relationships.</p>
+<table class="table">
+<caption>New polynomial feature added</caption>
+<colgroup>
+<col style="width: 21%">
+<col style="width: 15%">
+<col style="width: 25%">
+<col style="width: 37%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Date</th>
+<th>Sales ($)</th>
+<th>Consumer Sentiment</th>
+<th>Consumer Sentiment Squared</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>January 2023</td>
+<td>1,309,000</td>
+<td>68</td>
+<td>4,624</td>
+</tr>
+<tr class="even">
+<td>February 2023</td>
+<td>1,204,000</td>
+<td>67</td>
+<td>4,489</td>
+</tr>
+<tr class="odd">
+<td>March 2023</td>
+<td>1,000,000</td>
+<td>65</td>
+<td>4,225</td>
+</tr>
+<tr class="even">
+<td>April 2023</td>
+<td>1,525,000</td>
+<td>70</td>
+<td>4,900</td>
+</tr>
+<tr class="odd">
+<td>May 2023</td>
+<td>1,849,000</td>
+<td>72</td>
+<td>5,184</td>
+</tr>
+<tr class="even">
+<td>June 2023</td>
+<td>1,964,000</td>
+<td>73</td>
+<td>5,329</td>
+</tr>
+<tr class="odd">
+<td>July 2023</td>
+<td>2,121,000</td>
+<td>74</td>
+<td>5,476</td>
+</tr>
+<tr class="even">
+<td>August 2023</td>
+<td>2,500,000</td>
+<td>75</td>
+<td>5,625</td>
+</tr>
+<tr class="odd">
+<td>September 2023</td>
+<td>1,525,000</td>
+<td>70</td>
+<td>4,900</td>
+</tr>
+<tr class="even">
+<td>October 2023</td>
+<td>1,849,000</td>
+<td>72</td>
+<td>5,184</td>
+</tr>
+<tr class="odd">
+<td>November 2023</td>
+<td>1,764,000</td>
+<td>71</td>
+<td>5,041</td>
+</tr>
+<tr class="even">
+<td>December 2023</td>
+<td>2,500,000</td>
+<td>75</td>
+<td>5,625</td>
+</tr>
+<tr class="odd">
+<td>January 2024</td>
+<td>2,890,000</td>
+<td>76</td>
+<td>5,776</td>
+</tr>
+<tr class="even">
+<td>February 2024</td>
+<td>3,361,000</td>
+<td>78</td>
+<td>6,084</td>
+</tr>
+<tr class="odd">
+<td>March 2024</td>
+<td>3,844,000</td>
+<td>79</td>
+<td>6,241</td>
+</tr>
+<tr class="even">
+<td>April 2024</td>
+<td>4,641,000</td>
+<td>81</td>
+<td>6,561</td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="reversal" class="level3">
 <h3 class="anchored" data-anchor-id="reversal">Reversal</h3>
-<p>Too many features can increase model train time and lead to overfitting.</p>
+<p>Sometimes too much of a good thing can be a bad thing. Adding a lot of new features can increase the chance that a model overfits. Overfitting in machine learning occurs when a model learns to capture noise or random fluctuations in the training data, leading to poor generalization and high performance on training data but low performance on unseen data. The best way to prevent this kind of overfitting is to limit the number of features used to train a model. This will be discussed in greater detail in another post in this series.</p>
+<p>Did you notice that when creating lags and rolling window features we had a lot of missing data at the start of the time series for those new features? This can be a problem. Some ML models do not like missing data, so we need to deal with those missing values. An easy way is to just drop the initial rows in the time series that have blank values for the new lags and rolling window features. This can work well if you have a lot of historical data. Dropping data can hurt model performance though, and if you don’t have a lot of data to start with it becomes a less favorable option. You could also replace the missing values, either by using a simple model to impute the value or just use the closest available value in the time series to “fill in” the missing values. Both of these missing value replacement approaches have their own pros and cons but could be a better strategy then just simply dropping rows with missing values.</p>
+<table class="table">
+<caption>Filling in missing values with their closest available value</caption>
+<colgroup>
+<col style="width: 25%">
+<col style="width: 16%">
+<col style="width: 27%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Date</th>
+<th>Sales ($)</th>
+<th>Sales 3-Month Lag</th>
+<th>3-Month Rolling Avg</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>January 2023</td>
+<td>100,000</td>
+<td>100,000</td>
+<td>110,000</td>
+</tr>
+<tr class="even">
+<td>February 2023</td>
+<td>110,000</td>
+<td>100,000</td>
+<td>110,000</td>
+</tr>
+<tr class="odd">
+<td>March 2023</td>
+<td>120,000</td>
+<td>100,000</td>
+<td>110,000</td>
+</tr>
+<tr class="even">
+<td>April 2023</td>
+<td>115,000</td>
+<td>100,000</td>
+<td>110,000</td>
+</tr>
+<tr class="odd">
+<td>May 2023</td>
+<td>130,000</td>
+<td>110,000</td>
+<td>110,000</td>
+</tr>
+<tr class="even">
+<td>June 2023</td>
+<td>125,000</td>
+<td>120,000</td>
+<td>110,000</td>
+</tr>
+<tr class="odd">
+<td>July 2023</td>
+<td>135,000</td>
+<td>115,000</td>
+<td>115,000</td>
+</tr>
+<tr class="even">
+<td>August 2023</td>
+<td>140,000</td>
+<td>130,000</td>
+<td>121,667</td>
+</tr>
+<tr class="odd">
+<td>September 2023</td>
+<td>130,000</td>
+<td>125,000</td>
+<td>123,333</td>
+</tr>
+<tr class="even">
+<td>October 2023</td>
+<td>145,000</td>
+<td>135,000</td>
+<td>130,000</td>
+</tr>
+<tr class="odd">
+<td>November 2023</td>
+<td>150,000</td>
+<td>140,000</td>
+<td>133,333</td>
+</tr>
+<tr class="even">
+<td>December 2023</td>
+<td>160,000</td>
+<td>130,000</td>
+<td>135,000</td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="finnts" class="level3">
 <h3 class="anchored" data-anchor-id="finnts">finnts</h3>
+<p>There’s a lot to unpack on feature engineering for time series forecasting. Thankfully my package, <a href="https://microsoft.github.io/finnts/index.html">finnts</a>, can automatically handle all of the feature engineering for you. It does everything I called out in this post plus more. Check it out and see just how easy ML forecasting can be.</p>
 </section>
 <section id="final-thoughts" class="level3">
 <h3 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h3>
+<p>Feature engineering is the backbone of successful time series forecasting, allowing models to uncover hidden patterns and relationships within the data, ultimately leading to more accurate predictions. By transforming raw data into meaningful features like date-related attributes, lag features, rolling window statistics, and polynomial transformations, we equip machine learning models with the necessary insights to make informed forecasts. However, it’s crucial to strike a balance between adding informative features and avoiding overfitting, as too many features can lead to poor generalization on unseen data. With careful consideration and the right techniques, feature engineering becomes a powerful tool in the arsenal of any data scientist or analyst aiming to unlock the predictive potential of time series data.</p>
 
 
 </section>
