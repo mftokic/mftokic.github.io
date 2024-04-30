@@ -31,8 +31,6 @@ A machine learning (ML) model is only as good as the data it's fed. The process 
 
 Creating high quality features is a combination of strong domain expertise and data transformation skills. We have already covered how domain expertise impacts a forecast in a [previous post](https://mftokic.github.io/posts/2024-04-02-time-series-domain-expertise/), so this post will cover how simple data transformations can drastically improve the accuracy of a machine learning forecast. Check out each category of time series feature engineering below to learn more.   
 
-### Stationary and Box Cox
-
 ### Date Features
 
 The most common type of feature engineering for time series is around dates. Date features allow us to capture seasonality patterns in our data. Think of seasonality as repeating peaks and valleys in our data. For example, our business might make most of it's revenue in Q4 every year, with a subsequent dip in sales in Q1. 
@@ -226,6 +224,18 @@ Did you notice that when creating lags and rolling window features we had a lot 
 | December 2023   | 160,000   | 130,000           | 135,000             |
 
 : Filling in missing values with their closest available value
+
+### Other Pre-Processing
+
+One thing I wanted to add that technically isn't considered feature engineering are other data pre-processing methods. These are things you apply before you start your feature engineering process. They are specific time series forecasting and can greatly improve forecast accuracy. Here are two pre-processing methods you should know about. 
+
+First is making your data stationary. This is a time series technical term that pretty much means removing the trend component of your data, where the time series has a constant mean and standard deviation. We can make a time series stationary by the process of differencing. This involves taking the difference from one period to another and using that as the new time series to train models with. Check out the example below. See how the upward trend gets removed when we simply use the difference between months instead of the original monthly values? Some machine learning models, like ones that rely on decision trees, cannot extrapolate trends. So differencing the data removes any trend pattern, making it a lot easier for these models to produce high quality forecasts. 
+
+![](./chart4.png)
+
+Another pre-processing technique is a box-cox transformation. This helps remove any exponentially increasing trends by applying various types of power transformations. For example, taking the log of your time series. Removing non-linear trends can make it a lot easier for a model to create accurate forecasts. See the example below of a time series with a non-linear trend. We can then apply a box-cox transformation and then differnce the data. See how nice the final time series looks? It will be way easier for a ML model to learn the patterns in the final transformed time series. 
+
+
 
 ### finnts
 
