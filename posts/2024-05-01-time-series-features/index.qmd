@@ -5,7 +5,6 @@ author: "Mike Tokic"
 date: "2024-05-01"
 categories: [time-series, machine-learning, finance]
 image: "image.png"
-draft: true
 ---
 
 ![](./image.png)
@@ -19,7 +18,7 @@ This post dives into the sixth principle of a good time series forecast, the mag
 3. [The Future Is Similar To The Past](https://mftokic.github.io/posts/2024-04-11-time-series-past-future/)
 4. [Higher Grain Higher Accuracy](https://mftokic.github.io/posts/2024-04-18-time-series-grain/)
 5. [Order Is Important](https://mftokic.github.io/posts/2024-04-23-time-series-order/)
-6. **The Magic Is In The Feature Engineering**
+6. [**The Magic Is In The Feature Engineering**](https://mftokic.github.io/posts/2024-05-01-time-series-features/)
 7. Simple Models Are Better Models
 8. Capture Uncertainty
 9. Model Averages Are King
@@ -33,7 +32,7 @@ Creating high quality features is a combination of strong domain expertise and d
 
 ### Date Features
 
-The most common type of feature engineering for time series is around dates. Date features allow us to capture seasonality patterns in our data. Think of seasonality as repeating peaks and valleys in our data. For example, our business might make most of it's revenue in Q4 every year, with a subsequent dip in sales in Q1. 
+The most common type of feature engineering for time series is around dates. Date features allow us to capture seasonality patterns in our data. Think of seasonality as repeating peaks and valleys in our data. For example, our business might make most of its revenue in Q4 every year, with a subsequent dip in sales in Q1. 
 
 Let's use the example time series below to illustrate each type of feature engineering. 
 
@@ -56,7 +55,7 @@ Let's use the example time series below to illustrate each type of feature engin
 
 In this time series we would like to forecast monthly sales. We also have information about consumer sentiment that we can use to help forecast sales. A multivariate machine learning model cannot easily use the date column as is, so we have to do some data transformations (aka feature engineering) to make it easier for a model to understand how date information can help predict sales. Let's go through a few examples of new features we can create from the date column. It's important to note that after we create these new features it's a good idea to remove the original date column before training a ML model. 
 
-Since the data is monthly there is a lot of easy to create features we can use. We can pull out the specific month, quarter, and even year into their own columns to use as features. If our data was at a daily level, we can even go deeper and get features related to day of the week, day of year, week of month, etc. 
+Since the data is monthly there are a lot of simple features we can use. We can pull out the specific month, quarter, and even year into their own columns to use as features. If our data was at a daily level, we can even go deeper and get features related to day of the week, day of year, week of month, etc. 
 
 | Date        | Month     | Quarter | Year |
 |-------------|-----------|---------|------|
@@ -73,7 +72,7 @@ Since the data is monthly there is a lot of easy to create features we can use. 
 | November 2023| November | Q4      | 2023 |
 | December 2023| December | Q4      | 2023 |
 
-That seems pretty straight forward right? Let's keep squeezing our date fruit for more juice and see what other kinds of features we can create. Since this is a time series, adding some order of time can be helpful. This can be something as simple as an index starting at 1 (or even convert your date time a seconds format). This helps establish the proper order of our data and makes is easier for a model to pick up growing or declining trends over time. There is also slight differences in how many days there are from month to month, so we can add that too. If you don't think that's important then you have never been stung by the harsh mistress that is leap year. There have been multiple times where finance exec's have dismissed forecasts for the quarter that includes February, where in the end we didn't account for the fact that it was a leap year or we are one year removed from one. You can even take this one step further and add the number of business days for each month. 
+That seems pretty straight forward right? Let's keep squeezing our date fruit for more juice and see what other kinds of features we can create. Since this is a time series, adding some order of time can be helpful. This can be something as simple as an index starting at 1 (or even convert your date to a seconds format). This helps establish the proper order of our data and makes is easier for a model to pick up growing or declining trends over time. There is also slight differences in how many days there are from month to month, so we can add that too. If you don't think that's important then you have never been stung by the harsh mistress that is leap year. There have been multiple times where finance exec's have dismissed forecasts for the quarter that includes February, where in the end we didn't account for the fact that it was a leap year or we are one year removed from one. You can even take this one step further and add the number of business days for each month. 
 
 | Date         | Index | Days in Month | Business Days |
 |--------------|-------|---------------|---------------|
@@ -98,7 +97,7 @@ To get the final drop of juice out of the date column, we can also add Fourier s
 
 ### Lag Features
 
-Time series forecasting is all about learning about the past to forecast the future. In order to learn about the past we have to create lags on our data. Often what we're trying to forecast today is correlated to what happened in the past. This is a concept known as autocorrelation. For our monthly forecast example, a 3 month lag may be highly correlated to sales with a 0 month lag (or sales today). Consumer sentiment can also be correlated with sales, but this time a lag of 6 might have higher correlation, since there is most likely a long delay between customer purchase patters and our company's product. Lags can be created for any amount, depending on your domain knowledge of the business and results from more exploratory data analysis (deep dive for a different day). 
+Time series forecasting is all about learning from the past to forecast the future. In order to learn about the past we have to create lags on our data. Often what we're trying to forecast today is correlated to what happened in the past. This is a concept known as autocorrelation. For our monthly forecast example, a 3 month lag may be highly correlated to sales with a 0 month lag (or sales today). Consumer sentiment can also be correlated with sales, but this time a lag of 6 might have higher correlation, since there is most likely a long delay between customer purchase patters and how it affects our company's product. Lags can be created for any amount, depending on your domain knowledge of the business and results from more exploratory data analysis (deep dive for a different day). 
 
 | Date         | Sales ($) | Consumer Sentiment | Sales 3-Month Lag | Sentiment 6-Month Lag |
 |--------------|-----------|--------------------|-------------------|-----------------------|

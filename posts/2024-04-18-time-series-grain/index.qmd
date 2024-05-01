@@ -18,7 +18,7 @@ This post dives into the fourth principle of a good time series forecast, the hi
 3. [The Future Is Similar To The Past](https://mftokic.github.io/posts/2024-04-11-time-series-past-future/)
 4. [**Higher Grain Higher Accuracy**](https://mftokic.github.io/posts/2024-04-18-time-series-grain/)
 5. [Order Is Important](https://mftokic.github.io/posts/2024-04-23-time-series-order/)
-6. The Magic Is In The Feature Engineering
+6. [The Magic Is In The Feature Engineering](https://mftokic.github.io/posts/2024-05-01-time-series-features/)
 7. Simple Models Are Better Models
 8. Capture Uncertainty
 9. Model Averages Are King
