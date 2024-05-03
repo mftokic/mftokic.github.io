@@ -52,7 +52,7 @@ There are many other methods for feature selection, but are out of the scope of 
 
 ### Simple Models
 
-Simplifying our data is helpful, but sometimes simplifying our models is even better. When starting a new forecast project, you might feel tempted to go out and build an advanced deep learning model, using all of the latest bells and whistles. That model may show promising results, but often a simpler model like linear regression can get the same or even better results. Models like linear regression is faster to train and have better model interpretability. 
+Simplifying our data is helpful, but sometimes simplifying our models is even better. When starting a new forecast project, you might feel tempted to go out and build an advanced deep learning model, using all of the latest bells and whistles. That model may show promising results, but often a simpler model like linear regression can get the same or even better results. Models like linear regression are faster to train and have better model interpretability. 
 
 ![](./image2.png)
 
