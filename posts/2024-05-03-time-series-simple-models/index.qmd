@@ -1,11 +1,10 @@
 ---
-title: "Time Series First Principles: The Magic Is In The Feature Engineering"
-description: "How you transform your data before model training can transform a mediocre forecast into a world class forecast"
+title: "Time Series First Principles: Simple Models Are Better Models"
+description: "Like occam's razor, the best model is often the one with the least amount of inputs"
 author: "Mike Tokic"
 date: "2024-05-03"
 categories: [time-series, machine-learning, finance]
 image: "image.png"
-draft: true
 ---
 
 ![](./image.png)
@@ -20,7 +19,7 @@ This post dives into the seventh principle of a good time series forecast, simpl
 4. [Higher Grain Higher Accuracy](https://mftokic.github.io/posts/2024-04-18-time-series-grain/)
 5. [Order Is Important](https://mftokic.github.io/posts/2024-04-23-time-series-order/)
 6. [The Magic Is In The Feature Engineering](https://mftokic.github.io/posts/2024-05-01-time-series-features/)
-7. **Simple Models Are Better Models**
+7. [**Simple Models Are Better Models**](https://mftokic.github.io/posts/2024-05-03-time-series-simple-models/)
 8. Capture Uncertainty
 9. Model Averages Are King
 10. Deep Learning Last
@@ -33,9 +32,13 @@ Often in life, just like the ACT english section, it's usually the simplest appr
 
 ### More Features, More Problems
 
-In the world of time series forecasting, there are so many ways we can do feature engineering. Learn more about feature engineering in a [previous post](https://mftokic.github.io/posts/2024-05-01-time-series-features/). A dataset containing two columns, a date and value column, can be transformed into 100+ new features. This can easily get out of hand once we add external regressors, or outside variables like consumer sentiment or inflation data and create new features from them. 
+In the world of time series forecasting, there are so many ways we can do feature engineering. Learn more about feature engineering in a [previous post](https://mftokic.github.io/posts/2024-05-01-time-series-features/). A dataset containing two columns, a date and value column, can be transformed into 100+ new features. This can easily get out of hand once we add external regressors (outside variables like consumer sentiment or inflation data) and create new features from them. 
 
-Each feature you add to a dataset hurts your model in multiple ways. First it can slow down model training, meaning it will take longer to train the model. This may not seem like a big deal with small datasets but once you start having tens of thousands of rows in a dataset, adding a new feature can really slow things down. Second, adding more features can lead to overfitting, meaning your model might be very accurate on the data it was trained on but cannot generalize well to unseen data in the future. Your model will learn from the noise in the data instead of the signal. Third, adding more features makes it harder to explain the model's predictions. If you can't explain your forecast to non-technical business partners, then the forecast may not be used by anyone. I've seen this countless times in my work. An accurate model doesn't help anyone if the end user ultimately wants to know how the prediction was created. More on that in [this post](https://mftokic.github.io/posts/2023-02-11-three-levels-of-ml-adoption/). 
+Each feature you add to a dataset hurts your model in multiple ways. 
+
+1. Train Time: It can slow down model training, meaning it will take longer to train the model. This may not seem like a big deal with small datasets but once you start having tens of thousands of rows in a dataset, adding a new feature can really slow things down. 
+2. Overfitting: Adding more features can lead to overfitting, meaning your model might be very accurate on the data it was trained on but cannot generalize well to unseen data in the future. Your model will learn from the noise in the data instead of the signal. 
+3. Interpretability: Adding more features makes it harder to explain the model's predictions. If you can't explain your forecast to non-technical business partners, then the forecast may not be used by anyone. I've seen this countless times in my work. An accurate model doesn't help anyone if the end user ultimately wants to know how the prediction was created. More on that in [this post](https://mftokic.github.io/posts/2023-02-11-three-levels-of-ml-adoption/). 
 
 ### Feature Selection
 
@@ -43,13 +46,13 @@ One way to simplify your data before model fitting is to implement a feature sel
 
 1. Domain Expertise: Remove features that don't make sense to you as a human. For example, the annual rain fall in Iceland might be perfectly correlated to Coca Cola sales in South America, but it doesn't pass our smell test of being a factor that impacts the business. When in doubt take it out. 
 2. Correlation: If a feature has a strong correlation to the target variable (what we want to forecast) then we keep it in, but only after it passes our domain knowledge smell test. 
-3. Model Specific: Some models, like certain flavors of linear regression, have built in feature selection or feature importance. We can use that info to remove features and retrain on any kind of ML model. 
+3. Model Specific: Some models, like certain flavors of linear regression, have built in feature selection or feature importance. We can use that info to remove features and can then retrain on any kind of ML model. 
 
 There are many other methods for feature selection, but are out of the scope of this post. The ones called out above are a good starting point. 
 
 ### Simple Models
 
-Simplifying our data is helpful, but sometimes simplifying our models is even better. When starting a new forecast project, you might feel tempted to go out and build an advanced deep learning model, using all of the latest bells and whistles. That model may show promising results, but often a simpler model like linear regression model can get the same or even better results. A model like linear regression is faster to train and has better model interpretability. 
+Simplifying our data is helpful, but sometimes simplifying our models is even better. When starting a new forecast project, you might feel tempted to go out and build an advanced deep learning model, using all of the latest bells and whistles. That model may show promising results, but often a simpler model like linear regression can get the same or even better results. Models like linear regression is faster to train and have better model interpretability. 
 
 ![](./image2.png)
 
@@ -57,7 +60,7 @@ We can even go one level deeper and not use any features at all. Univariate stat
 
 ### finnts
 
-My forecasting package, finnts, has built in feature selection and other techniques to ensure simple models are built in ways that produce accurate forecasts. Check out the package and see for yourself. 
+My forecasting package, [finnts](https://microsoft.github.io/finnts/index.html), has built in feature selection and other techniques to ensure simple models are built in ways that produce accurate forecasts. Check out the package and see for yourself. 
 
 ### Final Thoughts
 

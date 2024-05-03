@@ -10,7 +10,83 @@
 <atom:link href="https://mftokic.github.io/index.xml" rel="self" type="application/rss+xml"/>
 <description>A collection of thoughts on things from the mind of Mike Tokic</description>
 <generator>quarto-1.3.450</generator>
-<lastBuildDate>Wed, 01 May 2024 07:00:00 GMT</lastBuildDate>
+<lastBuildDate>Fri, 03 May 2024 07:00:00 GMT</lastBuildDate>
+<item>
+  <title>Time Series First Principles: Simple Models Are Better Models</title>
+  <dc:creator>Mike Tokic</dc:creator>
+  <link>https://mftokic.github.io/posts/2024-05-03-time-series-simple-models/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p><img src="https://mftokic.github.io/posts/2024-05-03-time-series-simple-models/image.png" class="img-fluid"></p>
+<section id="time-series-first-principles-series" class="level3">
+<h3 class="anchored" data-anchor-id="time-series-first-principles-series">Time Series First Principles Series</h3>
+<p>This post dives into the seventh principle of a good time series forecast, simple models are better models. Check out the <a href="https://mftokic.github.io/posts/2024-03-26-time-series-first-principles-initial/">initial post</a> in this series to get a high level view of each principle.</p>
+<ol type="1">
+<li><a href="https://mftokic.github.io/posts/2024-04-02-time-series-domain-expertise/">Domain Expertise</a></li>
+<li><a href="https://mftokic.github.io/posts/2024-04-08-time-series-garbage/">Garbage In Garbage Out</a></li>
+<li><a href="https://mftokic.github.io/posts/2024-04-11-time-series-past-future/">The Future Is Similar To The Past</a></li>
+<li><a href="https://mftokic.github.io/posts/2024-04-18-time-series-grain/">Higher Grain Higher Accuracy</a></li>
+<li><a href="https://mftokic.github.io/posts/2024-04-23-time-series-order/">Order Is Important</a></li>
+<li><a href="https://mftokic.github.io/posts/2024-05-01-time-series-features/">The Magic Is In The Feature Engineering</a></li>
+<li><a href="https://mftokic.github.io/posts/2024-05-03-time-series-simple-models/"><strong>Simple Models Are Better Models</strong></a></li>
+<li>Capture Uncertainty</li>
+<li>Model Averages Are King</li>
+<li>Deep Learning Last</li>
+</ol>
+</section>
+<section id="occams-ml-model-razor" class="level3">
+<h3 class="anchored" data-anchor-id="occams-ml-model-razor">Occam’s ML Model Razor</h3>
+<p>William of Ockham was a 14th-century English Franciscan friar, philosopher, and theologian. In his work he preached that for most things in life the simplest explanation is the correct one. I’ve learned this inadvertently in my life many times. For example, when I was studying for the ACT in high school a teacher told me that on the english questions it’s usually the shortest answer that is often correct. You could get a decent score just by following this one rule, even if you couldn’t read or speak english. This one tip saved my ass more than I’d like to admit, and I could read and speak english. Or so I thought.</p>
+<p>Often in life, just like the ACT english section, it’s usually the simplest approaches that provide the best results. You can hire a fitness coach and buy all the supplements in the world but you’ll probably get similar results following a handful of simple exercise and eating tips. The same applies in the world of machine learning. The more complexity you add to your data and models, the less likely they are going to be useful in the end. Let’s walk through how simplicity helps in all aspects of machine learning, from the data you use all the way down to models you train.</p>
+</section>
+<section id="more-features-more-problems" class="level3">
+<h3 class="anchored" data-anchor-id="more-features-more-problems">More Features, More Problems</h3>
+<p>In the world of time series forecasting, there are so many ways we can do feature engineering. Learn more about feature engineering in a <a href="https://mftokic.github.io/posts/2024-05-01-time-series-features/">previous post</a>. A dataset containing two columns, a date and value column, can be transformed into 100+ new features. This can easily get out of hand once we add external regressors (outside variables like consumer sentiment or inflation data) and create new features from them.</p>
+<p>Each feature you add to a dataset hurts your model in multiple ways.</p>
+<ol type="1">
+<li>Train Time: It can slow down model training, meaning it will take longer to train the model. This may not seem like a big deal with small datasets but once you start having tens of thousands of rows in a dataset, adding a new feature can really slow things down.</li>
+<li>Overfitting: Adding more features can lead to overfitting, meaning your model might be very accurate on the data it was trained on but cannot generalize well to unseen data in the future. Your model will learn from the noise in the data instead of the signal.</li>
+<li>Interpretability: Adding more features makes it harder to explain the model’s predictions. If you can’t explain your forecast to non-technical business partners, then the forecast may not be used by anyone. I’ve seen this countless times in my work. An accurate model doesn’t help anyone if the end user ultimately wants to know how the prediction was created. More on that in <a href="https://mftokic.github.io/posts/2023-02-11-three-levels-of-ml-adoption/">this post</a>.</li>
+</ol>
+</section>
+<section id="feature-selection" class="level3">
+<h3 class="anchored" data-anchor-id="feature-selection">Feature Selection</h3>
+<p>One way to simplify your data before model fitting is to implement a feature selection process. It’s called selection but it’s more like removal, where we drop any features that do not contribute to a model that can generalize well to new data. Here are a few techniques for feature selection.</p>
+<ol type="1">
+<li>Domain Expertise: Remove features that don’t make sense to you as a human. For example, the annual rain fall in Iceland might be perfectly correlated to Coca Cola sales in South America, but it doesn’t pass our smell test of being a factor that impacts the business. When in doubt take it out.</li>
+<li>Correlation: If a feature has a strong correlation to the target variable (what we want to forecast) then we keep it in, but only after it passes our domain knowledge smell test.</li>
+<li>Model Specific: Some models, like certain flavors of linear regression, have built in feature selection or feature importance. We can use that info to remove features and can then retrain on any kind of ML model.</li>
+</ol>
+<p>There are many other methods for feature selection, but are out of the scope of this post. The ones called out above are a good starting point.</p>
+</section>
+<section id="simple-models" class="level3">
+<h3 class="anchored" data-anchor-id="simple-models">Simple Models</h3>
+<p>Simplifying our data is helpful, but sometimes simplifying our models is even better. When starting a new forecast project, you might feel tempted to go out and build an advanced deep learning model, using all of the latest bells and whistles. That model may show promising results, but often a simpler model like linear regression can get the same or even better results. Models like linear regression is faster to train and have better model interpretability.</p>
+<p><img src="https://mftokic.github.io/posts/2024-05-03-time-series-simple-models/image2.png" class="img-fluid"></p>
+<p>We can even go one level deeper and not use any features at all. Univariate statistical models like ARIMA or exponential smoothing are classic time series forecasting models that only need one column of data, the historical values of your target variable. That’s what makes them univariate (one variable). They have built in feature engineering under the hood that allows them to learn from historical trends and seasonality in the data, so no additional work is needed to create features. Often in time series forecasting competitions a large team of deep learning researchers can just barely beat a single person team who uses simple models like ARIMA or random forest models. More on that in a future post.</p>
+</section>
+<section id="finnts" class="level3">
+<h3 class="anchored" data-anchor-id="finnts">finnts</h3>
+<p>My forecasting package, <a href="https://microsoft.github.io/finnts/index.html">finnts</a>, has built in feature selection and other techniques to ensure simple models are built in ways that produce accurate forecasts. Check out the package and see for yourself.</p>
+</section>
+<section id="final-thoughts" class="level3">
+<h3 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h3>
+<p>Ultimately, the goal of any forecasting model is to provide clear, accurate, and quick results. Simpler models often meet these criteria better than complex ones because they’re easier to understand, faster to run, and just as accurate. By focusing on simplicity and minimizing inputs, we ensure that our forecasts are not only effective but also user-friendly. This approach doesn’t just save time; it makes the insights gained from the data accessible to everyone involved in the decision-making process. Simplicity, therefore, isn’t just a principle; it’s a practical strategy for better forecasting.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>time-series</category>
+  <category>machine-learning</category>
+  <category>finance</category>
+  <guid>https://mftokic.github.io/posts/2024-05-03-time-series-simple-models/index.html</guid>
+  <pubDate>Fri, 03 May 2024 07:00:00 GMT</pubDate>
+  <media:content url="https://mftokic.github.io/posts/2024-05-03-time-series-simple-models/image.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
 <item>
   <title>Time Series First Principles: The Magic Is In The Feature Engineering</title>
   <dc:creator>Mike Tokic</dc:creator>
@@ -31,7 +107,7 @@
 <li><a href="https://mftokic.github.io/posts/2024-04-18-time-series-grain/">Higher Grain Higher Accuracy</a></li>
 <li><a href="https://mftokic.github.io/posts/2024-04-23-time-series-order/">Order Is Important</a></li>
 <li><a href="https://mftokic.github.io/posts/2024-05-01-time-series-features/"><strong>The Magic Is In The Feature Engineering</strong></a></li>
-<li>Simple Models Are Better Models</li>
+<li><a href="https://mftokic.github.io/posts/2024-05-03-time-series-simple-models/">Simple Models Are Better Models</a></li>
 <li>Capture Uncertainty</li>
 <li>Model Averages Are King</li>
 <li>Deep Learning Last</li>
@@ -864,7 +940,7 @@
 <li><a href="https://mftokic.github.io/posts/2024-04-18-time-series-grain/">Higher Grain Higher Accuracy</a></li>
 <li><a href="https://mftokic.github.io/posts/2024-04-23-time-series-order/"><strong>Order Is Important</strong></a></li>
 <li><a href="https://mftokic.github.io/posts/2024-05-01-time-series-features/">The Magic Is In The Feature Engineering</a></li>
-<li>Simple Models Are Better Models</li>
+<li><a href="https://mftokic.github.io/posts/2024-05-03-time-series-simple-models/">Simple Models Are Better Models</a></li>
 <li>Capture Uncertainty</li>
 <li>Model Averages Are King</li>
 <li>Deep Learning Last</li>
@@ -1260,7 +1336,7 @@
 <li><a href="https://mftokic.github.io/posts/2024-04-18-time-series-grain/"><strong>Higher Grain Higher Accuracy</strong></a></li>
 <li><a href="https://mftokic.github.io/posts/2024-04-23-time-series-order/">Order Is Important</a></li>
 <li><a href="https://mftokic.github.io/posts/2024-05-01-time-series-features/">The Magic Is In The Feature Engineering</a></li>
-<li>Simple Models Are Better Models</li>
+<li><a href="https://mftokic.github.io/posts/2024-05-03-time-series-simple-models/">Simple Models Are Better Models</a></li>
 <li>Capture Uncertainty</li>
 <li>Model Averages Are King</li>
 <li>Deep Learning Last</li>
@@ -1793,7 +1869,7 @@
 <li><a href="https://mftokic.github.io/posts/2024-04-18-time-series-grain/">Higher Grain Higher Accuracy</a></li>
 <li><a href="https://mftokic.github.io/posts/2024-04-23-time-series-order/">Order Is Important</a></li>
 <li><a href="https://mftokic.github.io/posts/2024-05-01-time-series-features/">The Magic Is In The Feature Engineering</a></li>
-<li>Simple Models Are Better Models</li>
+<li><a href="https://mftokic.github.io/posts/2024-05-03-time-series-simple-models/">Simple Models Are Better Models</a></li>
 <li>Capture Uncertainty</li>
 <li>Model Averages Are King</li>
 <li>Deep Learning Last</li>
@@ -1866,7 +1942,7 @@
 <li><a href="https://mftokic.github.io/posts/2024-04-18-time-series-grain/">Higher Grain Higher Accuracy</a></li>
 <li><a href="https://mftokic.github.io/posts/2024-04-23-time-series-order/">Order Is Important</a></li>
 <li><a href="https://mftokic.github.io/posts/2024-05-01-time-series-features/">The Magic Is In The Feature Engineering</a></li>
-<li>Simple Models Are Better Models</li>
+<li><a href="https://mftokic.github.io/posts/2024-05-03-time-series-simple-models/">Simple Models Are Better Models</a></li>
 <li>Capture Uncertainty</li>
 <li>Model Averages Are King</li>
 <li>Deep Learning Last</li>
@@ -1998,7 +2074,7 @@
 <li><a href="https://mftokic.github.io/posts/2024-04-18-time-series-grain/">Higher Grain Higher Accuracy</a></li>
 <li><a href="https://mftokic.github.io/posts/2024-04-23-time-series-order/">Order Is Important</a></li>
 <li><a href="https://mftokic.github.io/posts/2024-05-01-time-series-features/">The Magic Is In The Feature Engineering</a></li>
-<li>Simple Models Are Better Models</li>
+<li><a href="https://mftokic.github.io/posts/2024-05-03-time-series-simple-models/">Simple Models Are Better Models</a></li>
 <li>Capture Uncertainty</li>
 <li>Model Averages Are King</li>
 <li>Deep Learning Last</li>
@@ -2060,7 +2136,7 @@
 <li><a href="https://mftokic.github.io/posts/2024-04-18-time-series-grain/"><strong>Higher Grain Higher Accuracy</strong></a>: Forecasting by country is often more accurate than forecasting by city. Forecasting by month is often more accurate than forecasting by day.</li>
 <li><a href="https://mftokic.github.io/posts/2024-04-23-time-series-order/"><strong>Order Is Important</strong></a>: When time is involved, how your data is ordered makes all the difference.</li>
 <li><a href="https://mftokic.github.io/posts/2024-05-01-time-series-features/"><strong>The Magic Is In The Feature Engineering</strong></a>: How you transform your data before model training can transform a mediocre forecast into a world class forecast.</li>
-<li><strong>Simple Models Are Better Models</strong>: Like occam’s razor, the best model is often the one with the least amount of inputs.</li>
+<li><a href="https://mftokic.github.io/posts/2024-05-03-time-series-simple-models/"><strong>Simple Models Are Better Models</strong></a>: Like occam’s razor, the best model is often the one with the least amount of inputs.</li>
 <li><strong>Capture Uncertainty</strong>: Showing the back testing results and future uncertainty of a model’s forecast builds more trust.</li>
 <li><strong>Model Averages Are King</strong>: Usually a simple average of multiple models is more accurate than just one model’s prediction.</li>
 <li><strong>Deep Learning Last</strong>: Deep learning isn’t as effective as more traditional ML models.</li>
@@ -2606,65 +2682,6 @@
   <guid>https://mftokic.github.io/posts/2024-01-05-weekend-reads/index.html</guid>
   <pubDate>Fri, 05 Jan 2024 08:00:00 GMT</pubDate>
   <media:content url="https://mftokic.github.io/posts/2024-01-05-weekend-reads/image.png" medium="image" type="image/png" height="144" width="144"/>
-</item>
-<item>
-  <title>Thoughts on The Almanack of Naval Ravikant</title>
-  <dc:creator>Mike Tokic</dc:creator>
-  <link>https://mftokic.github.io/posts/2023-12-30-naval-book/index.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<p><img src="https://mftokic.github.io/posts/2023-12-30-naval-book/image.jpg" class="img-fluid"></p>
-<p>The Almanack of Naval Ravikant by Eric Jorgenson is something I like to read every few months. Eric was able to take all public content from Naval and put it into one place. I love that idea and think Eric will be successful with many other thought leaders.</p>
-<p>Meet Naval Ravikant: a modern philosopher-entrepreneur and the co-founder of AngelList. Renowned for his deep insights on technology, investing, and the art of living, Ravikant has become a luminary in Silicon Valley. Beyond his success with startups like X (Twitter) and Postmates, he captivates audiences with his profound perspectives on life and happiness, shared on his popular podcast and Twitter feed.</p>
-<p>Enjoy some of Naval’s best quotes and ideas I found most interesting.</p>
-<section id="types-of-leverage" class="level3">
-<h3 class="anchored" data-anchor-id="types-of-leverage">Types of Leverage</h3>
-<blockquote class="blockquote">
-<p>Labor means people working for you. It’s the oldest and most fought-over form of leverage. Labor leverage will impress your parents, but don’t waste your life chasing it. Money is a good form of leverage. It means every time you make a decision, you multiply it with money. It’s probably been the most dominate form of leverage in the last century.<br>
-Code and media are permissionless leverage. They’re the leverage behind the newly rich. You can create software and media that works for you while you sleep.</p>
-</blockquote>
-<p>Focus on permissionless leverage. Often people think the next step in their career is managing people. That’s how they get more money, more power, more status. Is Taylor Swift Time’s 2023 person of the year because she is a great manager or because she is the best in the world at media (music, video, merch)? We’re quickly starting to see more one person empires being built. Through media with influencer’s, and through code like Satoshi Nakamoto (inventor of Bitcoin). Instead of trying to grow you career through scaling of people and capital, try the route with no gatekeepers.</p>
-<p>Balaji Srinivasan made an interesting point that once a robot can do something, you’ve turned labor into capital. Meaning you just need the money to purchase the robot and then code to program it. Not long from now we might see managers only overseeing physical robots operating in the world of atoms (doing physical work) or AI agents operating in the world of bits (traditional knowledge work). The skills needed to manage these new digital workers revolve around writing code and coordination. Not traditional management skills.</p>
-</section>
-<section id="build-or-sell" class="level3">
-<h3 class="anchored" data-anchor-id="build-or-sell">Build or Sell</h3>
-<blockquote class="blockquote">
-<p>Learn to sell. Learn to build. If you can do both, you will be unstoppable.</p>
-</blockquote>
-<p>I believe Bill Gates said this back in his heyday at Microsoft. This is the most powerful piece of advice in the book. Most businesses boil down to a product or service to sell. The most important people at a company either build that product or sell that product. If you do not do work like that today at your company, you might want to consider changing jobs. These roles have the greatest potential for impact on the world, and create the most financial rewards.</p>
-</section>
-<section id="specific-knowledge" class="level3">
-<h3 class="anchored" data-anchor-id="specific-knowledge">Specific Knowledge</h3>
-<blockquote class="blockquote">
-<p>Specific knowledge is knowledge you cannot be trained for. If society can train you, it can train someone else and replace you. When specific knowledge is taught, it’s through apprenticeships, not schools.</p>
-</blockquote>
-<p>This is how you can prevent AI from taking your job. If what you do can’t be explained in a book, class, or YouTube videos, there is a good chance it will be hard for an AI model to figure out how to do it well.</p>
-</section>
-<section id="be-you" class="level3">
-<h3 class="anchored" data-anchor-id="be-you">Be You</h3>
-<blockquote class="blockquote">
-<p>The way to get out of the competition trap is to be authentic, to find the thing you know how to do better than anybody. You know how to do it better because you love it, and no one can compete with you. If you love to do it, be authentic, and then figure out how to map that to what society actually wants. Apply some leverage and put your name on it. You take the risks, but you gain the rewards, have ownership and equity in what you’re doing, and just crank it up. Your goal in life is to find the people, business, project, or art that needs you the most. There is something out there just for you. What you don’t want to do is build checklists and decision frameworks built on what other people are doing. You’re never going to be them. You’ll never be good at being somebody else. Technology democratizes consumption but consolidates production. The best person in the world at anything gets to do it for everyone.</p>
-</blockquote>
-<p>Nothing to add here, Naval hit the nail on the head.</p>
-</section>
-<section id="lifelong-learning" class="level3">
-<h3 class="anchored" data-anchor-id="lifelong-learning">Lifelong Learning</h3>
-<blockquote class="blockquote">
-<p>The most important skill for getting rich is becoming a perpetual learner. You have to know how to learn anything you want to learn. The old model of making money is going to school for four years, getting your degree, and working as a professional for thirty years. But things change fast now. Now, you have to come up to speed on a new profession within nine months, and it’s obsolete four years later. But within those three productive years, you can get very wealthy.</p>
-</blockquote>
-<p>ChatGPT was released by OpenAI about a year ago. In that time, people have had the opportunity to get up to speed on using generative AI models like GPT-3.5 and now GPT-4. There was no class in using these models, only the documentation on OpenAI’s website and videos on YouTube. For the brave folks who went ahead and learned how to use these models, the world will be theres the next three years while everyone else catches up. Learning how to use GPT-4 in your company to improve a product or become more productive is a form of permissionless leverage. Something of a superpower. The recent AI hype cycle might be winding down, but people with these skills are in demand. A few years from now another technology or idea might come out, another thing that’s not taught in schools. Never stop learning, never stop growing.</p>
-
-
-</section>
-
- ]]></description>
-  <category>books</category>
-  <guid>https://mftokic.github.io/posts/2023-12-30-naval-book/index.html</guid>
-  <pubDate>Sat, 30 Dec 2023 08:00:00 GMT</pubDate>
-  <media:content url="https://mftokic.github.io/posts/2023-12-30-naval-book/image.jpg" medium="image" type="image/jpeg"/>
 </item>
 </channel>
 </rss>
