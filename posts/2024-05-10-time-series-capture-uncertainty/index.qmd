@@ -1,0 +1,72 @@
+---
+title: "Time Series First Principles: Capture Uncertainty"
+description: "Showing the back testing results and future uncertainty of a model's forecast builds more trust"
+author: "Mike Tokic"
+date: "2024-05-10"
+categories: [time-series, machine-learning, finance]
+image: "image.png"
+draft: true
+---
+
+![](./image.png)
+
+### Time Series First Principles Series
+
+This post dives into the eighth principle of a good time series forecast, capture uncertainty. Check out the [initial post](https://mftokic.github.io/posts/2024-03-26-time-series-first-principles-initial/) in this series to get a high level view of each principle. 
+
+1. [Domain Expertise](https://mftokic.github.io/posts/2024-04-02-time-series-domain-expertise/)
+2. [Garbage In Garbage Out](https://mftokic.github.io/posts/2024-04-08-time-series-garbage/)
+3. [The Future Is Similar To The Past](https://mftokic.github.io/posts/2024-04-11-time-series-past-future/)
+4. [Higher Grain Higher Accuracy](https://mftokic.github.io/posts/2024-04-18-time-series-grain/)
+5. [Order Is Important](https://mftokic.github.io/posts/2024-04-23-time-series-order/)
+6. [The Magic Is In The Feature Engineering](https://mftokic.github.io/posts/2024-05-01-time-series-features/)
+7. [Simple Models Are Better Models](https://mftokic.github.io/posts/2024-05-03-time-series-simple-models/)
+8. **Capture Uncertainty**
+9. Model Averages Are King
+10. Deep Learning Last
+
+### Building Trust
+
+Would you give your retirement savings to a hedge fund manager because they asked nicely? Probably not. Instead, you would like to do your research about them. Ask them how well they performed in the market historically, and also see how they expect the future markets to unravel in the near term. If their answer to those questions is, "I don't have a historical track record" and "I have no clue what the future holds" then you are probably not going to give them even one penny of your hard earned money. The same holds true for using a time series forecast created by machine learning (ML) models. In order to build trust with the end user of the forecast, you need to show them how a similar forecast would have performed historically and also quantify some aspect about the future. Let's dive into each one. 
+
+### Past Uncertainty
+
+Before a ML model can be used to forecast the future, we need to see how it has handled the past. This is called back testing, where we see how a model performed historically. This can give us a good proxy around how it could perform in the future. 
+
+Back testing at its core is all about training a model on a portion of your historical data set (training data), then using the trained model on another portion of the historical data (testing data). This can be as simple as using the first 80% of your historical data to train a model, and use the last 20% for testing. Check out a [previous post](https://mftokic.github.io/posts/2024-04-23-time-series-order/) to learn more about why the order of that train/test split is important. 
+
+There are also more advanced methods of doing this, like time series cross-validation. This involves many rounds of training a model and then creating a prediction on the testing data. Time series cross-validation can be used to tune model hyperparameters (inputs a model cannot learn from but must be given by a human) but is especially useful for model back testing. Check out the chart below that shows how we can effectively back test using a time series cross-validation approach. Each pass has it's own train and test split, and the testing splits can overlap from one pass to another. 
+
+![](./chart1.png)
+
+: Source: Uber Engineering
+
+In order to capture how accurate the back testing is, we need to calculate a metric that summarizes the model's performance on the testing data splits. There are countless metrics we can use, each with their own pros and cons. That kind of discussion is out of scope for this post but let's highlight a few common ones you could use in determining how accurate a model is during back testing. 
+
+1. **Mean Absolute Error (MAE)**
+    - **Description**: MAE measures the average magnitude of the errors in a set of forecasts, without considering their direction. It's calculated as the average of the absolute differences between forecasts and actual observations.
+    - **Strengths**: MAE is straightforward and easy to interpret as it directly represents average error magnitude.
+    - **Weaknesses**: MAE treats all errors with the same weight, thus large errors have the same influence as small ones, which might not be optimal for all applications.
+2. **Root Mean Squared Error (RMSE)**
+    - **Description**: RMSE is the square root of the mean of the squared errors. It measures the average magnitude of the error, with the squaring giving higher weight to larger errors.
+    - **Strengths**: RMSE is sensitive to outliers and provides a measure of how large errors are when they occur, which can be crucial for many practical applications.
+    - **Weaknesses**: Like MSE, RMSE can be heavily influenced by outliers and large errors, possibly leading to overestimations of the typical error if the error distribution is skewed.
+3. **Mean Absolute Percentage Error (MAPE)**
+    - **Description**: MAPE expresses accuracy as a percentage, and it measures the size of the error in percentage terms. It is calculated as the average of the absolute errors divided by the actual values, expressed as a percentage.
+    - **Strengths**: MAPE is scale-independent and provides a clear interpretation in terms of percentage errors, making it easy to communicate.
+    - **Weaknesses**: MAPE can be highly skewed when dealing with values close to zero, and it disproportionately penalizes underestimations compared to overestimations.
+
+### Future Uncertainty
+
+
+
+### Reversal
+
+
+
+### finnts
+
+
+
+### Final Thoughts
+
