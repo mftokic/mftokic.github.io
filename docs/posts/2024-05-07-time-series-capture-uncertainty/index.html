@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Mike Tokic">
-<meta name="dcterms.date" content="2024-05-10">
+<meta name="dcterms.date" content="2024-05-07">
 <meta name="description" content="Showing the back testing results and future uncertainty of a model’s forecast builds more trust">
 
 <title>Thoughts on Things - Time Series First Principles: Capture Uncertainty</title>
@@ -68,13 +68,13 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Thoughts on Things - Time Series First Principles: Capture Uncertainty">
 <meta property="og:description" content="Showing the back testing results and future uncertainty of a model’s forecast builds more trust">
-<meta property="og:image" content="https://mftokic.github.io/posts/2024-05-10-time-series-capture-uncertainty/image.png">
+<meta property="og:image" content="https://mftokic.github.io/posts/2024-05-07-time-series-capture-uncertainty/image.png">
 <meta property="og:site-name" content="Thoughts on Things">
 <meta property="og:image:height" content="1024">
 <meta property="og:image:width" content="1024">
 <meta name="twitter:title" content="Thoughts on Things - Time Series First Principles: Capture Uncertainty">
 <meta name="twitter:description" content="Showing the back testing results and future uncertainty of a model’s forecast builds more trust">
-<meta name="twitter:image" content="https://mftokic.github.io/posts/2024-05-10-time-series-capture-uncertainty/image.png">
+<meta name="twitter:image" content="https://mftokic.github.io/posts/2024-05-07-time-series-capture-uncertainty/image.png">
 <meta name="twitter:image-height" content="1024">
 <meta name="twitter:image-width" content="1024">
 <meta name="twitter:card" content="summary_large_image">
@@ -157,7 +157,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">May 10, 2024</p>
+        <p class="date">May 7, 2024</p>
       </div>
     </div>
     
@@ -231,15 +231,22 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="future-uncertainty" class="level3">
 <h3 class="anchored" data-anchor-id="future-uncertainty">Future Uncertainty</h3>
+<p>Now that we’ve quantified how well our model works historically, we can just give the future forecast to our end user right? Not so fast. Our model might say that next month our company’s product will make $100, but if that’s all the info we provide to the end user of that forecast that’s not a good way to build trust. Instead we need to show how confident we are in that $100 forecast, how likely are we to hit that number? That’s where prediction intervals come in.</p>
+<p>Prediction intervals help quantify the future uncertainty in our model’s forecast. They are statistical ranges, typically based on the forecast error, used to indicate the likelihood that the future value of a time series will fall within a specified range at a certain confidence level. Common ranges for a prediction interval are 80% and 95%. For example, the future forecast may be $100 but have a 95% prediction interval of $75 and $125. This means that there is a 95% likelihood that the future value will fall between $75 and $125. The tighter the range, the less uncertainty there is in the forecast. Below is an example forecast with 80% and 95% prediction intervals.</p>
+<p><img src="./chart2.png" class="img-fluid"></p>
 </section>
 <section id="reversal" class="level3">
 <h3 class="anchored" data-anchor-id="reversal">Reversal</h3>
+<p>The back testing process can only ever be a proxy of what kind of results to expect on the future forecast. It follows the assumption that <a href="https://mftokic.github.io/posts/2024-04-11-time-series-past-future/">the future will be similar to the past</a>. Sometimes this is not the case, and future results may be worse than historical back testing performance.</p>
+<p>While prediction intervals help quantify uncertainty, they also do not do a perfect job. There may be times where the future forecast will fall outside of the ranges. It’s not the end of the world when it does, but instead shows that the future is often different than what happened in the past. This is where strong domain knowledge comes in to understand what’s truly an outlier and what’s a new fundamental factor in your business going forward. For example, a new product launch in the future is hard to quantify with a prediction interval, but once it happens we can learn from that information and try to capture it the next time we train our model.</p>
 </section>
 <section id="finnts" class="level3">
 <h3 class="anchored" data-anchor-id="finnts">finnts</h3>
+<p>Back testing and prediction intervals is tough work. Thankfully my forecasting package, finnts, takes care of both of these for you. You can even customize the back testing process to fit your needs. Check out the package and see just how easy forecasting can be.</p>
 </section>
 <section id="final-thoughts" class="level3">
 <h3 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h3>
+<p>Capturing uncertainty in time series forecasting is essential for creating robust forecasts that stakeholders can rely on. Utilizing back testing and prediction intervals not only strengthens the credibility of forecasts but also provides users with a clearer perspective on potential risks and variations. In the end these approaches help build trust with the forecast end user. The more trust we can build, the more likely the ML forecast will be used.</p>
 
 
 </section>

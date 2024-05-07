@@ -2,7 +2,7 @@
 title: "Time Series First Principles: Capture Uncertainty"
 description: "Showing the back testing results and future uncertainty of a model's forecast builds more trust"
 author: "Mike Tokic"
-date: "2024-05-10"
+date: "2024-05-07"
 categories: [time-series, machine-learning, finance]
 image: "image.png"
 draft: true
@@ -58,15 +58,22 @@ In order to capture how accurate the back testing is, we need to calculate a met
 
 ### Future Uncertainty
 
+Now that we've quantified how well our model works historically, we can just give the future forecast to our end user right? Not so fast. Our model might say that next month our company's product will make $100, but if that's all the info we provide to the end user of that forecast that's not a good way to build trust. Instead we need to show how confident we are in that $100 forecast, how likely are we to hit that number? That's where prediction intervals come in. 
 
+Prediction intervals help quantify the future uncertainty in our model's forecast. They are statistical ranges, typically based on the forecast error, used to indicate the likelihood that the future value of a time series will fall within a specified range at a certain confidence level. Common ranges for a prediction interval are 80% and 95%. For example, the future forecast may be $100 but have a 95% prediction interval of $75 and $125. This means that there is a 95% likelihood that the future value will fall between $75 and $125. The tighter the range, the less uncertainty there is in the forecast. Below is an example forecast with 80% and 95% prediction intervals. 
+
+![](./chart2.png)
 
 ### Reversal
 
+The back testing process can only ever be a proxy of what kind of results to expect on the future forecast. It follows the assumption that [the future will be similar to the past](https://mftokic.github.io/posts/2024-04-11-time-series-past-future/). Sometimes this is not the case, and future results may be worse than historical back testing performance. 
 
+While prediction intervals help quantify uncertainty, they also do not do a perfect job. There may be times where the future forecast will fall outside of the ranges. It's not the end of the world when it does, but instead shows that the future is often different than what happened in the past. This is where strong domain knowledge comes in to understand what's truly an outlier and what's a new fundamental factor in your business going forward. For example, a new product launch in the future is hard to quantify with a prediction interval, but once it happens we can learn from that information and try to capture it the next time we train our model. 
 
 ### finnts
 
-
+Back testing and prediction intervals is tough work. Thankfully my forecasting package, finnts, takes care of both of these for you. You can even customize the back testing process to fit your needs. Check out the package and see just how easy forecasting can be. 
 
 ### Final Thoughts
 
+Capturing uncertainty in time series forecasting is essential for creating robust forecasts that stakeholders can rely on.  Utilizing back testing and prediction intervals not only strengthens the credibility of forecasts but also provides users with a clearer perspective on potential risks and variations. In the end these approaches help build trust with the forecast end user. The more trust we can build, the more likely the ML forecast will be used. 
