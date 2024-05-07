@@ -187,7 +187,7 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="https://mftokic.github.io/posts/2024-04-23-time-series-order/">Order Is Important</a></li>
 <li><a href="https://mftokic.github.io/posts/2024-05-01-time-series-features/">The Magic Is In The Feature Engineering</a></li>
 <li><a href="https://mftokic.github.io/posts/2024-05-03-time-series-simple-models/">Simple Models Are Better Models</a></li>
-<li><strong>Capture Uncertainty</strong></li>
+<li><a href="https://mftokic.github.io/posts/2024-05-07-time-series-capture-uncertainty/"><strong>Capture Uncertainty</strong></a></li>
 <li>Model Averages Are King</li>
 <li>Deep Learning Last</li>
 </ol>
@@ -200,7 +200,7 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="past-uncertainty">Past Uncertainty</h3>
 <p>Before a ML model can be used to forecast the future, we need to see how it has handled the past. This is called back testing, where we see how a model performed historically. This can give us a good proxy around how it could perform in the future.</p>
 <p>Back testing at its core is all about training a model on a portion of your historical data set (training data), then using the trained model on another portion of the historical data (testing data). This can be as simple as using the first 80% of your historical data to train a model, and use the last 20% for testing. Check out a <a href="https://mftokic.github.io/posts/2024-04-23-time-series-order/">previous post</a> to learn more about why the order of that train/test split is important.</p>
-<p>There are also more advanced methods of doing this, like time series cross-validation. This involves many rounds of training a model and then creating a prediction on the testing data. Time series cross-validation can be used to tune model hyperparameters (inputs a model cannot learn from but must be given by a human) but is especially useful for model back testing. Check out the chart below that shows how we can effectively back test using a time series cross-validation approach. Each pass has it’s own train and test split, and the testing splits can overlap from one pass to another.</p>
+<p>There are also more advanced methods of doing this, like time series cross-validation. This involves many rounds of training a model and then creating a prediction on the testing data. Time series cross-validation can be used to tune model hyperparameters (inputs a model cannot learn from but must be given by a human) but is especially useful for model back testing. Check out the chart below that shows how we can effectively back test using a time series cross-validation approach. Each pass has its own train and test split, and the testing splits can overlap from one pass to another.</p>
 <dl>
 <dt><img src="./chart1.png" class="img-fluid"></dt>
 <dd>
@@ -231,7 +231,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="future-uncertainty" class="level3">
 <h3 class="anchored" data-anchor-id="future-uncertainty">Future Uncertainty</h3>
-<p>Now that we’ve quantified how well our model works historically, we can just give the future forecast to our end user right? Not so fast. Our model might say that next month our company’s product will make $100, but if that’s all the info we provide to the end user of that forecast that’s not a good way to build trust. Instead we need to show how confident we are in that $100 forecast, how likely are we to hit that number? That’s where prediction intervals come in.</p>
+<p>Now that we’ve quantified how well our model works historically, we can just give the future forecast to our end user right? Not so fast. Our model might say that next month our company’s product will make $100, but if that’s all the info we provide to the end user of that forecast that’s not a good way to build trust. Instead we need to show how confident we are in that $100 forecast. How likely are we to hit that number? That’s where prediction intervals come in.</p>
 <p>Prediction intervals help quantify the future uncertainty in our model’s forecast. They are statistical ranges, typically based on the forecast error, used to indicate the likelihood that the future value of a time series will fall within a specified range at a certain confidence level. Common ranges for a prediction interval are 80% and 95%. For example, the future forecast may be $100 but have a 95% prediction interval of $75 and $125. This means that there is a 95% likelihood that the future value will fall between $75 and $125. The tighter the range, the less uncertainty there is in the forecast. Below is an example forecast with 80% and 95% prediction intervals.</p>
 <p><img src="./chart2.png" class="img-fluid"></p>
 </section>
@@ -242,7 +242,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="finnts" class="level3">
 <h3 class="anchored" data-anchor-id="finnts">finnts</h3>
-<p>Back testing and prediction intervals is tough work. Thankfully my forecasting package, finnts, takes care of both of these for you. You can even customize the back testing process to fit your needs. Check out the package and see just how easy forecasting can be.</p>
+<p>Back testing and prediction intervals is tough work. Thankfully my forecasting package, <a href="https://microsoft.github.io/finnts/index.html">finnts</a>, takes care of both of these for you. You can even customize the back testing process to fit your needs. Check out the package and see just how easy forecasting can be.</p>
 </section>
 <section id="final-thoughts" class="level3">
 <h3 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h3>
