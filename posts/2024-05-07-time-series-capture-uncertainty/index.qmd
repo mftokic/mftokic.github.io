@@ -26,7 +26,7 @@ This post dives into the eighth principle of a good time series forecast, captur
 
 ### Building Trust
 
-Would you give your retirement savings to a hedge fund manager because they asked nicely? Probably not. Instead, you would like to do your research about them. Ask them how well they performed in the market historically, and also see how they expect the future markets to unravel in the near term. If their answer to those questions is, "I don't have a historical track record" and "I have no clue what the future holds" then you are probably not going to give them even one penny of your hard earned money. The same holds true for using a time series forecast created by machine learning (ML) models. In order to build trust with the end user of the forecast, you need to show them how a similar forecast would have performed historically and also quantify some aspect about the future. Let's dive into each one. 
+Would you give your retirement savings to a hedge fund manager because they asked nicely? Probably not. Instead, you would like to do your research about them. Ask them how well they performed in the market historically, and also see how they expect the future markets to unravel in the near term. If their answer to those questions are, "I don't have a historical track record" and "I have no clue what the future holds" then you are probably not going to give them one penny of your hard earned money. The same holds true for using a time series forecast created by machine learning (ML) models. In order to build trust with the end user of the forecast, you need to show them how a similar forecast would have performed historically and also quantify some aspect about the future. Let's dive into each one. 
 
 ### Past Uncertainty
 
