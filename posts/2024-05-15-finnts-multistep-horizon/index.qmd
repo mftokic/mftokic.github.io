@@ -1,0 +1,44 @@
+---
+title: "Multistep Horizon Forecasting With finnts"
+description: "New feature that improves forecast accuracy"
+author: "Mike Tokic"
+date: "2024-05-15"
+categories: [time-series, machine-learning, finance, finnts]
+image: "image.png"
+draft: true
+---
+
+![](./image.png)
+
+### TLDR
+
+I'm excited to announce that we just released a new feature in our machine learning forecast package, [finnts](https://microsoft.github.io/finnts/index.html), centered around multistep horizon forecasting. It's a mouthful to say but at a high level it helps improve forecast accuracy by optimizing models to be accurate at each period of a forecast horizon. For example, a 3 month forecast would then be optimized for the forecast in each month (period) of the future forecast. 
+
+Let's dive in to how multivariate modeling used to work in the package and how multistep horizon forecasting can help. 
+
+### How It Used to Work
+
+Let's use an example of a monthly revenue forecast for our business's main product. 
+
+| Date       | Revenue |
+|------------|---------|
+| 2023-01-01 | 120     |
+| 2023-02-01 | 135     |
+| 2023-03-01 | 140     |
+| 2023-04-01 | 145     |
+| 2023-05-01 | 150     |
+| 2023-06-01 | 155     |
+| 2023-07-01 | 160     |
+| 2023-08-01 | 165     |
+| 2023-09-01 | 170     |
+| 2023-10-01 | 175     |
+| 2023-11-01 | 180     |
+| 2023-12-01 | 185     |
+
+If we wanted to forecast the next 3 months of revenue using multivariate machine learning models we would have to do some [feature engineering](https://mftokic.github.io/posts/2024-05-01-time-series-features/) to get our data in good shape. This involves creating lags on our <span title="This is the helper text that provides more information about the word.">target variable</span>.
+
+### How Multistep Horizon Forecasting Works
+
+### Reversal
+
+### Final Thoughts
