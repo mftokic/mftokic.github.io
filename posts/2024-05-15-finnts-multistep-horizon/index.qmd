@@ -35,7 +35,7 @@ Let's use an example of a monthly revenue forecast for our business's main produ
 | 2023-11-01 | 180     |
 | 2023-12-01 | 185     |
 
-If we wanted to forecast the next 3 months of revenue using multivariate machine learning models we would have to do some [feature engineering](https://mftokic.github.io/posts/2024-05-01-time-series-features/) to get our data in good shape. This involves creating lags on our <span title="This is the helper text that provides more information about the word.">target variable</span>.
+If we wanted to forecast the next 3 months of revenue using multivariate machine learning models we would have to do some [feature engineering](https://mftokic.github.io/posts/2024-05-01-time-series-features/) to get our data in good shape. This involves creating lags on our <span style="text-decoration: underline; cursor: help;" title="This is the helper text that provides more information about the word.">target variable</span>.
 
 ### How Multistep Horizon Forecasting Works
 
