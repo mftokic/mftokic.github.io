@@ -2,7 +2,7 @@
 title: "Multistep Horizon Forecasting With finnts"
 description: "New feature that improves forecast accuracy"
 author: "Mike Tokic"
-date: "2024-05-15"
+date: "2024-05-10"
 categories: [time-series, machine-learning, finance, finnts]
 image: "image.png"
 draft: true
