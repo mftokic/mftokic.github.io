@@ -2,15 +2,14 @@
 title: "Multistep Horizon Forecasting With finnts"
 description: "New feature that improves forecast accuracy"
 author: "Mike Tokic"
-date: "2024-05-10"
+date: "2024-05-13"
 categories: [time-series, machine-learning, finance, finnts]
 image: "image.png"
-draft: true
 ---
 
 ![](./image.png)
 
-### TLDR
+### TL;DR
 
 I'm excited to announce that we just released a new feature in our machine learning forecast package, [finnts](https://microsoft.github.io/finnts), centered around multistep horizon forecasting. It's a mouthful to say but at a high level it helps improve forecast accuracy by optimizing models to be accurate at each period of a forecast horizon. For example, a 3 month forecast would then be optimized for the forecast in each month (period) of the future forecast. 
 
