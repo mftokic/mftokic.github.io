@@ -1,0 +1,48 @@
+---
+title: "Time Series First Principles: Model Averages Are King"
+description: "Usually a simple average of multiple models is more accurate than just one model's prediction"
+author: "Mike Tokic"
+date: "2024-05-20"
+categories: [time-series, machine-learning, finance]
+image: "image.png"
+draft: true
+---
+
+![](./image.png)
+
+### Time Series First Principles Series
+
+This post dives into the ninth principle of a good time series forecast, model averages are king. Check out the [initial post](https://mftokic.github.io/posts/2024-03-26-time-series-first-principles-initial/) in this series to get a high level view of each principle. 
+
+1. [Domain Expertise](https://mftokic.github.io/posts/2024-04-02-time-series-domain-expertise/)
+2. [Garbage In Garbage Out](https://mftokic.github.io/posts/2024-04-08-time-series-garbage/)
+3. [The Future Is Similar To The Past](https://mftokic.github.io/posts/2024-04-11-time-series-past-future/)
+4. [Higher Grain Higher Accuracy](https://mftokic.github.io/posts/2024-04-18-time-series-grain/)
+5. [Order Is Important](https://mftokic.github.io/posts/2024-04-23-time-series-order/)
+6. [The Magic Is In The Feature Engineering](https://mftokic.github.io/posts/2024-05-01-time-series-features/)
+7. [Simple Models Are Better Models](https://mftokic.github.io/posts/2024-05-03-time-series-simple-models/)
+8. [Capture Uncertainty](https://mftokic.github.io/posts/2024-05-07-time-series-capture-uncertainty/)
+9. **Model Averages Are King**
+10. Deep Learning Last
+
+### Wisdom of the Crowds
+
+In 1906, famed statistician Francis Galton went to a county fair for some fun. While there he came upon a competition to guess the weight of an ox. Eight hundred people entered the competition but the guesses were all over the place, some too high, some too low. Francis was a big numbers guy, so he took all of the guesses home with him and ran the numbers. He found out that the average of all the guesses was only one pound away from the actual weight of the ox, which weighed 1,198 pounds. That's an error of less than 0.08%.  What he stumbled upon that day is now know as the wisdom of the crowds. 
+
+The concept of wisdom of the crowds states that the collective wisdom of a group of individuals is usually more accurate than that of a single expert. When guessing the weight of the ox, the overestimates and underestimates of regular people cancelled each other out. Creating an average prediction that was more accurate and any single person's estimate. 
+
+This principle is especially true when it comes to machine learning forecasting. Usually it's not one single model that performs the best, but instead a simple average of multiple models. Where specific model overpredictions and underpredictions smooth out into a forecast that is more accurate than any one model. Don't believe me? Let's look at some cold hard data. 
+
+### Model Average Example
+
+
+
+### Reversal 
+
+Changes prediction intervals. 
+
+Makes interpretability harder. 
+
+### finnts
+
+### Final Thoughts
