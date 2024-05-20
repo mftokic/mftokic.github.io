@@ -1,5 +1,5 @@
 ---
-title: "Time Series First Principles: Model Averages Are King"
+title: "Time Series First Principles: Model Combinations Are King"
 description: "Usually a simple average of multiple models is more accurate than just one model's prediction"
 author: "Mike Tokic"
 date: "2024-05-20"
@@ -12,7 +12,7 @@ draft: true
 
 ### Time Series First Principles Series
 
-This post dives into the ninth principle of a good time series forecast, model averages are king. Check out the [initial post](https://mftokic.github.io/posts/2024-03-26-time-series-first-principles-initial/) in this series to get a high level view of each principle. 
+This post dives into the ninth principle of a good time series forecast, model combinations are king. Check out the [initial post](https://mftokic.github.io/posts/2024-03-26-time-series-first-principles-initial/) in this series to get a high level view of each principle. 
 
 1. [Domain Expertise](https://mftokic.github.io/posts/2024-04-02-time-series-domain-expertise/)
 2. [Garbage In Garbage Out](https://mftokic.github.io/posts/2024-04-08-time-series-garbage/)
@@ -22,7 +22,7 @@ This post dives into the ninth principle of a good time series forecast, model a
 6. [The Magic Is In The Feature Engineering](https://mftokic.github.io/posts/2024-05-01-time-series-features/)
 7. [Simple Models Are Better Models](https://mftokic.github.io/posts/2024-05-03-time-series-simple-models/)
 8. [Capture Uncertainty](https://mftokic.github.io/posts/2024-05-07-time-series-capture-uncertainty/)
-9. **Model Averages Are King**
+9. **Model Combinations Are King**
 10. Deep Learning Last
 
 ### Wisdom of the Crowds
@@ -31,11 +31,54 @@ In 1906, famed statistician Francis Galton went to a county fair for some fun. W
 
 The concept of wisdom of the crowds states that the collective wisdom of a group of individuals is usually more accurate than that of a single expert. When guessing the weight of the ox, the overestimates and underestimates of regular people cancelled each other out. Creating an average prediction that was more accurate and any single person's estimate. 
 
-This principle is especially true when it comes to machine learning forecasting. Usually it's not one single model that performs the best, but instead a simple average of multiple models. Where specific model overpredictions and underpredictions smooth out into a forecast that is more accurate than any one model. Don't believe me? Let's look at some cold hard data. 
+This principle is especially true when it comes to machine learning forecasting. Usually it's not one single model that performs the best, but instead a combination of multiple models. Where specific model overpredictions and underpredictions smooth out into a forecast that is more accurate than any one model. Let's take a look at how we can combine models into more accurate forecasts. 
 
-### Model Average Example
+### Types of Model Combinations
 
+There are many different ways individual model forecasts can be combined to create more accurate forecasts. For today we'll cover the most common approaches. If you'd like to dive deeper I recommend this [amazing paper](https://robjhyndman.com/publications/combinations/index.html) by our forecasting Godfather Rob Hyndman. 
 
+1. **Simple Average**: As simple as it sounds. Just take the forecasts from individual models and average them together. 
+2. **Ensemble Models**: Feed the individual model forecasts as features into a machine learning model, and have the model come up with the correct weighted combination. 
+3. **Hierarchical Reconciliation**: This involves forecasting at different aggregations of the data set based on it's inherent hierarchies, then reconciling the down to the lowest level (bottoms up). For example forecasting by city, country, continent, and global level then reconciling each forecast down to the city level. This reconciliation can be thought as combining different forecasts together to create something more accurate.   
+
+Do these actually work in practice? Let's review forecasting competitions. 
+
+### Forecasting Competitions
+
+https://robjhyndman.com/publications/combinations/index.html
+
+### Model Combination Example
+
+Let's walk through a simple example around how averaging the predictions of more than one model can outperform any single model. Below is an example monthly time series we will try to back test the last 12 months. 
+
+![](./chart1.png)
+
+To keep things simple we can just run a few models to get the back testing results for the last year of the data. We'll use various univariate time series models. Ignore the types of models used. Instead, let's just see how each model did on it's own. Learn more about accuracy metrics in a [previous post](https://mftokic.github.io/posts/2024-05-07-time-series-capture-uncertainty/). 
+
+![](./chart2.png)
+
+| Model    |     MAPE |      MAE |     RMSE |
+|:---------|---------:|---------:|---------:|
+| arima    |  2.16413 |  4.12251 |  5.07297 |
+| croston  | 10.2275  | 19.6291  | 20.0888  |
+| nnetar   |  2.80059 |  5.39289 |  6.33857 |
+| stlm-ets |  1.951   |  3.736   |  4.60884 |
+| tbats    |  1.85945 |  3.5164  |  4.05475 |
+| theta    |  2.45133 |  4.69199 |  5.49973 |
+
+: Accuracy By Single Model
+
+It looks like the tbats model performs the best across the board. But what if we combine different models together? The top two models are tbats and stlm-ets, what if we combine them together? Let's see how the results change. 
+
+![](./chart3.png)
+
+| Model          |    MAPE |     MAE |    RMSE |
+|:---------------|--------:|--------:|--------:|
+| stlm-ets_tbats | 1.84532 | 3.50949 | 3.98118 |
+
+: Accuracy By Average Model
+
+Even better results! See how creating simple model averages can improve the results. Averaging the results can help smooth out any under or over forecasts, creating more accurate models. 
 
 ### Reversal 
 
