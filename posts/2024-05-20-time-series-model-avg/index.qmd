@@ -31,25 +31,19 @@ In 1906, famed statistician Francis Galton went to a county fair for some fun. W
 
 The concept of wisdom of the crowds states that the collective wisdom of a group of individuals is usually more accurate than that of a single expert. When guessing the weight of the ox, the overestimates and underestimates of regular people cancelled each other out. Creating an average prediction that was more accurate and any single person's estimate. 
 
-This principle is especially true when it comes to machine learning forecasting. Usually it's not one single model that performs the best, but instead a combination of multiple models. Where specific model overpredictions and underpredictions smooth out into a forecast that is more accurate than any one model. Let's take a look at how we can combine models into more accurate forecasts. 
+This principle is especially true when it comes to machine learning forecasting. Usually it's not one single model that performs the best, but instead a combination of multiple models. Let's take a look at how we can combine models into more accurate forecasts. 
 
 ### Types of Model Combinations
 
 There are many different ways individual model forecasts can be combined to create more accurate forecasts. For today we'll cover the most common approaches. If you'd like to dive deeper I recommend this [amazing paper](https://robjhyndman.com/publications/combinations/index.html) by our forecasting Godfather Rob Hyndman. 
 
 1. **Simple Average**: As simple as it sounds. Just take the forecasts from individual models and average them together. 
-2. **Ensemble Models**: Feed the individual model forecasts as features into a machine learning model, and have the model come up with the correct weighted combination. 
-3. **Hierarchical Reconciliation**: This involves forecasting at different aggregations of the data set based on it's inherent hierarchies, then reconciling the down to the lowest level (bottoms up). For example forecasting by city, country, continent, and global level then reconciling each forecast down to the city level. This reconciliation can be thought as combining different forecasts together to create something more accurate.   
-
-Do these actually work in practice? Let's review forecasting competitions. 
-
-### Forecasting Competitions
-
-https://robjhyndman.com/publications/combinations/index.html
+2. **Ensemble Models**: Feed the individual model forecasts as features into a machine learning model, and have the model come up with the correct weighted combination. This is also known as "model stacking". 
+3. **Hierarchical Reconciliation**: This involves forecasting at different aggregations of the data set based on its inherent hierarchies, then reconciling the down to the lowest level (bottoms up) using a statistical process. For example forecasting by city, country, continent, and global level then reconciling each forecast down to the city level. This reconciliation can be thought as combining different forecasts together to create something more accurate. This approach has more nuances, and will be covered in another post.   
 
 ### Model Combination Example
 
-Let's walk through a simple example around how averaging the predictions of more than one model can outperform any single model. Below is an example monthly time series we will try to back test the last 12 months. 
+Let's walk through a simple example around how combining the predictions of more than one model can outperform any single model. Below is an example monthly time series we will try to back test the last 12 months. 
 
 ![](./chart1.png)
 
@@ -57,28 +51,30 @@ To keep things simple we can just run a few models to get the back testing resul
 
 ![](./chart2.png)
 
-| Model    |     MAPE |      MAE |     RMSE |
-|:---------|---------:|---------:|---------:|
-| arima    |  2.16413 |  4.12251 |  5.07297 |
-| croston  | 10.2275  | 19.6291  | 20.0888  |
-| nnetar   |  2.80059 |  5.39289 |  6.33857 |
-| stlm-ets |  1.951   |  3.736   |  4.60884 |
-| tbats    |  1.85945 |  3.5164  |  4.05475 |
-| theta    |  2.45133 |  4.69199 |  5.49973 |
+| Model       |    MAPE   |    MAE     |   RMSE    |
+|-------------|-----------|------------|-----------|
+| arima       |  1.973448 |  3.760466  |  4.676953 |
+| croston     | 10.182240 | 19.542784  | 20.004738 |
+| nnetar      |  9.770954 | 18.368904  | 26.001192 |
+| stlm-ets    |  1.924362 |  3.682060  |  4.590760 |
+| tbats       |  1.855084 |  3.513180  |  4.049060 |
+| theta       |  2.464353 |  4.717486  |  5.524042 |
 
 : Accuracy By Single Model
 
-It looks like the tbats model performs the best across the board. But what if we combine different models together? The top two models are tbats and stlm-ets, what if we combine them together? Let's see how the results change. 
+It looks like the tbats model performs the best across the board with stlm-ets and arima not far behind. What if we averaged the three of them together? Let's see how the results change. 
 
 ![](./chart3.png)
 
-| Model          |    MAPE |     MAE |    RMSE |
-|:---------------|--------:|--------:|--------:|
-| stlm-ets_tbats | 1.84532 | 3.50949 | 3.98118 |
+| Model                |    MAPE   |    MAE     |   RMSE    |
+|----------------------|-----------|------------|-----------|
+| arima_stlm-ets_tbats |  1.844505 |  3.511298  |  3.993039 |
 
 : Accuracy By Average Model
 
-Even better results! See how creating simple model averages can improve the results. Averaging the results can help smooth out any under or over forecasts, creating more accurate models. 
+Even better results! See how creating simple model averages can improve the results? Averaging the results can help smooth out any under or over forecasts, creating more accurate models. 
+
+Simple model averages are often the quickest way to improved forecast accuracy. Another way is to create an ensemble model that can create the weights on it's own. Let's feed the predictions from each model into a linear regression model and have it determine the optimal weights. Note, I'm intentionally skipping over the process of having separate test and validation sets for this kind of ensembling approach, which is a topic for another day. 
 
 ### Reversal 
 
