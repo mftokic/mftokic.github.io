@@ -53,14 +53,14 @@ To keep things simple we can just run a few models to get the back testing resul
 
 | Model       |    MAPE   |    MAE     |   RMSE    |
 |-------------|-----------|------------|-----------|
-| arima       |  1.973448 |  3.760466  |  4.676953 |
-| croston     | 10.182240 | 19.542784  | 20.004738 |
-| nnetar      |  9.770954 | 18.368904  | 26.001192 |
-| stlm-ets    |  1.924362 |  3.682060  |  4.590760 |
-| tbats       |  1.855084 |  3.513180  |  4.049060 |
-| theta       |  2.464353 |  4.717486  |  5.524042 |
+| arima       |  1.97     |  3.76      |  4.68     |
+| croston     | 10.18     | 19.54      | 20.01     |
+| nnetar      |  9.77     | 18.37      | 26.00     |
+| stlm-ets    |  1.92     |  3.68      |  4.59     |
+| tbats       |  1.86     |  3.51      |  4.05     |
+| theta       |  2.46     |  4.71      |  5.52     |
 
-: Accuracy By Single Model
+: Accuracy by Single Model
 
 It looks like the tbats model performs the best across the board with stlm-ets and arima not far behind. What if we averaged the three of them together? Let's see how the results change. 
 
@@ -68,20 +68,36 @@ It looks like the tbats model performs the best across the board with stlm-ets a
 
 | Model                |    MAPE   |    MAE     |   RMSE    |
 |----------------------|-----------|------------|-----------|
-| arima_stlm-ets_tbats |  1.844505 |  3.511298  |  3.993039 |
+| arima_stlm-ets_tbats |  1.84     |  3.51      |  3.99     |
 
-: Accuracy By Average Model
+: Accuracy for Average Model
 
 Even better results! See how creating simple model averages can improve the results? Averaging the results can help smooth out any under or over forecasts, creating more accurate models. 
 
-Simple model averages are often the quickest way to improved forecast accuracy. Another way is to create an ensemble model that can create the weights on it's own. Let's feed the predictions from each model into a linear regression model and have it determine the optimal weights. Note, I'm intentionally skipping over the process of having separate test and validation sets for this kind of ensembling approach, which is a topic for another day. 
+Simple model averages are often the quickest way to improved forecast accuracy. Another way is to create an ensemble model that can create the weights on its own. Let's feed the predictions from each model into a linear regression model and have it determine the optimal weights. 
+
+![](./chart4.png)
+
+| Model                |    MAPE   |    MAE     |   RMSE    |
+|----------------------|-----------|------------|-----------|
+| Ensemble             |  1.81     |  3.40      |  3.65     |
+
+: Accuracy for Ensemble Model
+
+Alight more accurate results! By feeding each individual model forecast into a final ensemble model, we were able to get a more accurate forecast. 
 
 ### Reversal 
 
-Changes prediction intervals. 
+When trying to combine models, there is always a risk of overfitting. Meaning the combination approach (like simple average or ensemble) could have great accuracy on the back test data but not generalize well to new unseen data in our future forecast. To prevent that we can make sure to back test on enough historical data to prove our combination approach works well for more than just a period or two. We can also have separate validation and test splits in the back testing to see how combinations made on one data set can generalize well when tested on the other. 
 
-Makes interpretability harder. 
+[Prediction intervals](https://mftokic.github.io/posts/2024-05-07-time-series-capture-uncertainty/#future-uncertainty) are harder to create. Simply combining the 80% and 95% prediction intervals of multiple models together is not going to fully capture the uncertainty of forecasts created by the new model combination. So we would need to re-create the intervals based on the results of the new combined model.  
+
+Similar to prediction intervals, combining models can also make it harder to interpret them. Since instead of just understanding one model and its predictions we now have to understand how multiple models work and are combined to get the final forecast. 
 
 ### finnts
 
+Model combinations can be hard to do effectively. Thankfully my forecasting package, [finnts](https://microsoft.github.io/finnts/index.html), is here to help! It automatically handles every kind of model combination method listed in this post. Check out the package and see just how easy forecasting can be. 
+
 ### Final Thoughts
+
+Just like the county fair crowd nailed the ox's weight, combining multiple models in time series forecasting yields more accurate predictions by balancing out individual errors. When you're forecasting, remember to embrace the collective wisdom of models for better results!

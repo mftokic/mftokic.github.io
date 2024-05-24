@@ -10,7 +10,7 @@
 <meta name="dcterms.date" content="2024-05-20">
 <meta name="description" content="Usually a simple average of multiple models is more accurate than just one model’s prediction">
 
-<title>Thoughts on Things - Time Series First Principles: Model Averages Are King</title>
+<title>Thoughts on Things - Time Series First Principles: Model Combinations Are King</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -66,13 +66,17 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Thoughts on Things - Time Series First Principles: Model Averages Are King">
+<meta property="og:title" content="Thoughts on Things - Time Series First Principles: Model Combinations Are King">
 <meta property="og:description" content="Usually a simple average of multiple models is more accurate than just one model’s prediction">
 <meta property="og:image" content="https://mftokic.github.io/posts/2024-05-20-time-series-model-avg/image.png">
 <meta property="og:site-name" content="Thoughts on Things">
-<meta name="twitter:title" content="Thoughts on Things - Time Series First Principles: Model Averages Are King">
+<meta property="og:image:height" content="1024">
+<meta property="og:image:width" content="1024">
+<meta name="twitter:title" content="Thoughts on Things - Time Series First Principles: Model Combinations Are King">
 <meta name="twitter:description" content="Usually a simple average of multiple models is more accurate than just one model’s prediction">
 <meta name="twitter:image" content="https://mftokic.github.io/posts/2024-05-20-time-series-model-avg/image.png">
+<meta name="twitter:image-height" content="1024">
+<meta name="twitter:image-width" content="1024">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -126,7 +130,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Time Series First Principles: Model Averages Are King</h1>
+      <h1 class="title">Time Series First Principles: Model Combinations Are King</h1>
                   <div>
         <div class="description">
           Usually a simple average of multiple models is more accurate than just one model’s prediction
@@ -174,7 +178,7 @@ ul.task-list li input[type="checkbox"] {
 <p><img src="./image.png" class="img-fluid"></p>
 <section id="time-series-first-principles-series" class="level3">
 <h3 class="anchored" data-anchor-id="time-series-first-principles-series">Time Series First Principles Series</h3>
-<p>This post dives into the ninth principle of a good time series forecast, model averages are king. Check out the <a href="https://mftokic.github.io/posts/2024-03-26-time-series-first-principles-initial/">initial post</a> in this series to get a high level view of each principle.</p>
+<p>This post dives into the ninth principle of a good time series forecast, model combinations are king. Check out the <a href="https://mftokic.github.io/posts/2024-03-26-time-series-first-principles-initial/">initial post</a> in this series to get a high level view of each principle.</p>
 <ol type="1">
 <li><a href="https://mftokic.github.io/posts/2024-04-02-time-series-domain-expertise/">Domain Expertise</a></li>
 <li><a href="https://mftokic.github.io/posts/2024-04-08-time-series-garbage/">Garbage In Garbage Out</a></li>
@@ -184,7 +188,7 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="https://mftokic.github.io/posts/2024-05-01-time-series-features/">The Magic Is In The Feature Engineering</a></li>
 <li><a href="https://mftokic.github.io/posts/2024-05-03-time-series-simple-models/">Simple Models Are Better Models</a></li>
 <li><a href="https://mftokic.github.io/posts/2024-05-07-time-series-capture-uncertainty/">Capture Uncertainty</a></li>
-<li><strong>Model Averages Are King</strong></li>
+<li><strong>Model Combinations Are King</strong></li>
 <li>Deep Learning Last</li>
 </ol>
 </section>
@@ -192,21 +196,130 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="wisdom-of-the-crowds">Wisdom of the Crowds</h3>
 <p>In 1906, famed statistician Francis Galton went to a county fair for some fun. While there he came upon a competition to guess the weight of an ox. Eight hundred people entered the competition but the guesses were all over the place, some too high, some too low. Francis was a big numbers guy, so he took all of the guesses home with him and ran the numbers. He found out that the average of all the guesses was only one pound away from the actual weight of the ox, which weighed 1,198 pounds. That’s an error of less than 0.08%. What he stumbled upon that day is now know as the wisdom of the crowds.</p>
 <p>The concept of wisdom of the crowds states that the collective wisdom of a group of individuals is usually more accurate than that of a single expert. When guessing the weight of the ox, the overestimates and underestimates of regular people cancelled each other out. Creating an average prediction that was more accurate and any single person’s estimate.</p>
-<p>This principle is especially true when it comes to machine learning forecasting. Usually it’s not one single model that performs the best, but instead a simple average of multiple models. Where specific model overpredictions and underpredictions smooth out into a forecast that is more accurate than any one model. Don’t believe me? Let’s look at some cold hard data.</p>
+<p>This principle is especially true when it comes to machine learning forecasting. Usually it’s not one single model that performs the best, but instead a combination of multiple models. Let’s take a look at how we can combine models into more accurate forecasts.</p>
 </section>
-<section id="model-average-example" class="level3">
-<h3 class="anchored" data-anchor-id="model-average-example">Model Average Example</h3>
+<section id="types-of-model-combinations" class="level3">
+<h3 class="anchored" data-anchor-id="types-of-model-combinations">Types of Model Combinations</h3>
+<p>There are many different ways individual model forecasts can be combined to create more accurate forecasts. For today we’ll cover the most common approaches. If you’d like to dive deeper I recommend this <a href="https://robjhyndman.com/publications/combinations/index.html">amazing paper</a> by our forecasting Godfather Rob Hyndman.</p>
+<ol type="1">
+<li><strong>Simple Average</strong>: As simple as it sounds. Just take the forecasts from individual models and average them together.</li>
+<li><strong>Ensemble Models</strong>: Feed the individual model forecasts as features into a machine learning model, and have the model come up with the correct weighted combination. This is also known as “model stacking”.</li>
+<li><strong>Hierarchical Reconciliation</strong>: This involves forecasting at different aggregations of the data set based on its inherent hierarchies, then reconciling the down to the lowest level (bottoms up) using a statistical process. For example forecasting by city, country, continent, and global level then reconciling each forecast down to the city level. This reconciliation can be thought as combining different forecasts together to create something more accurate. This approach has more nuances, and will be covered in another post.</li>
+</ol>
+</section>
+<section id="model-combination-example" class="level3">
+<h3 class="anchored" data-anchor-id="model-combination-example">Model Combination Example</h3>
+<p>Let’s walk through a simple example around how combining the predictions of more than one model can outperform any single model. Below is an example monthly time series we will try to back test the last 12 months.</p>
+<p><img src="./chart1.png" class="img-fluid"></p>
+<p>To keep things simple we can just run a few models to get the back testing results for the last year of the data. We’ll use various univariate time series models. Ignore the types of models used. Instead, let’s just see how each model did on it’s own. Learn more about accuracy metrics in a <a href="https://mftokic.github.io/posts/2024-05-07-time-series-capture-uncertainty/">previous post</a>.</p>
+<p><img src="./chart2.png" class="img-fluid"></p>
+<table class="table">
+<caption>Accuracy by Single Model</caption>
+<thead>
+<tr class="header">
+<th>Model</th>
+<th>MAPE</th>
+<th>MAE</th>
+<th>RMSE</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>arima</td>
+<td>1.97</td>
+<td>3.76</td>
+<td>4.68</td>
+</tr>
+<tr class="even">
+<td>croston</td>
+<td>10.18</td>
+<td>19.54</td>
+<td>20.01</td>
+</tr>
+<tr class="odd">
+<td>nnetar</td>
+<td>9.77</td>
+<td>18.37</td>
+<td>26.00</td>
+</tr>
+<tr class="even">
+<td>stlm-ets</td>
+<td>1.92</td>
+<td>3.68</td>
+<td>4.59</td>
+</tr>
+<tr class="odd">
+<td>tbats</td>
+<td>1.86</td>
+<td>3.51</td>
+<td>4.05</td>
+</tr>
+<tr class="even">
+<td>theta</td>
+<td>2.46</td>
+<td>4.71</td>
+<td>5.52</td>
+</tr>
+</tbody>
+</table>
+<p>It looks like the tbats model performs the best across the board with stlm-ets and arima not far behind. What if we averaged the three of them together? Let’s see how the results change.</p>
+<p><img src="./chart3.png" class="img-fluid"></p>
+<table class="table">
+<caption>Accuracy for Average Model</caption>
+<thead>
+<tr class="header">
+<th>Model</th>
+<th>MAPE</th>
+<th>MAE</th>
+<th>RMSE</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>arima_stlm-ets_tbats</td>
+<td>1.84</td>
+<td>3.51</td>
+<td>3.99</td>
+</tr>
+</tbody>
+</table>
+<p>Even better results! See how creating simple model averages can improve the results? Averaging the results can help smooth out any under or over forecasts, creating more accurate models.</p>
+<p>Simple model averages are often the quickest way to improved forecast accuracy. Another way is to create an ensemble model that can create the weights on its own. Let’s feed the predictions from each model into a linear regression model and have it determine the optimal weights.</p>
+<p><img src="./chart4.png" class="img-fluid"></p>
+<table class="table">
+<caption>Accuracy for Ensemble Model</caption>
+<thead>
+<tr class="header">
+<th>Model</th>
+<th>MAPE</th>
+<th>MAE</th>
+<th>RMSE</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Ensemble</td>
+<td>1.81</td>
+<td>3.40</td>
+<td>3.65</td>
+</tr>
+</tbody>
+</table>
+<p>Alight more accurate results! By feeding each individual model forecast into a final ensemble model, we were able to get a more accurate forecast.</p>
 </section>
 <section id="reversal" class="level3">
 <h3 class="anchored" data-anchor-id="reversal">Reversal</h3>
-<p>Changes prediction intervals.</p>
-<p>Makes interpretability harder.</p>
+<p>When trying to combine models, there is always a risk of overfitting. Meaning the combination approach (like simple average or ensemble) could have great accuracy on the back test data but not generalize well to new unseen data in our future forecast. To prevent that we can make sure to back test on enough historical data to prove our combination approach works well for more than just a period or two. We can also have separate validation and test splits in the back testing to see how combinations made on one data set can generalize well when tested on the other.</p>
+<p><a href="https://mftokic.github.io/posts/2024-05-07-time-series-capture-uncertainty/#future-uncertainty">Prediction intervals</a> are harder to create. Simply combining the 80% and 95% prediction intervals of multiple models together is not going to fully capture the uncertainty of forecasts created by the new model combination. So we would need to re-create the intervals based on the results of the new combined model.</p>
+<p>Similar to prediction intervals, combining models can also make it harder to interpret them. Since instead of just understanding one model and its predictions we now have to understand how multiple models work and are combined to get the final forecast.</p>
 </section>
 <section id="finnts" class="level3">
 <h3 class="anchored" data-anchor-id="finnts">finnts</h3>
+<p>Model combinations can be hard to do effectively. Thankfully my forecasting package, <a href="https://microsoft.github.io/finnts/index.html">finnts</a>, is here to help! It automatically handles every kind of model combination method listed in this post. Check out the package and see just how easy forecasting can be.</p>
 </section>
 <section id="final-thoughts" class="level3">
 <h3 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h3>
+<p>Just like the county fair crowd nailed the ox’s weight, combining multiple models in time series forecasting yields more accurate predictions by balancing out individual errors. When you’re forecasting, remember to embrace the collective wisdom of models for better results!</p>
 
 
 </section>
