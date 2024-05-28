@@ -21,7 +21,7 @@ This post dives into the sixth principle of a good time series forecast, the mag
 6. [**The Magic Is In The Feature Engineering**](https://mftokic.github.io/posts/2024-05-01-time-series-features/)
 7. [Simple Models Are Better Models](https://mftokic.github.io/posts/2024-05-03-time-series-simple-models/)
 8. [Capture Uncertainty](https://mftokic.github.io/posts/2024-05-07-time-series-capture-uncertainty/)
-9. Model Combinations Are King
+9. [Model Combinations Are King](https://mftokic.github.io/posts/2024-05-28-time-series-model-avg/)
 10. Deep Learning Last
 
 ### Turning Data Into Insight

@@ -8,7 +8,7 @@
 
 <meta name="author" content="Mike Tokic">
 <meta name="dcterms.date" content="2024-05-28">
-<meta name="description" content="Usually a simple average of multiple models is more accurate than just one model’s prediction">
+<meta name="description" content="Usually a combination of multiple models is more accurate than just one model’s prediction">
 
 <title>Thoughts on Things - Time Series First Principles: Model Combinations Are King</title>
 <style>
@@ -39,10 +39,12 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -67,13 +69,13 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Thoughts on Things - Time Series First Principles: Model Combinations Are King">
-<meta property="og:description" content="Usually a simple average of multiple models is more accurate than just one model’s prediction">
+<meta property="og:description" content="Usually a combination of multiple models is more accurate than just one model’s prediction">
 <meta property="og:image" content="https://mftokic.github.io/posts/2024-05-28-time-series-model-avg/image.png">
 <meta property="og:site-name" content="Thoughts on Things">
 <meta property="og:image:height" content="1024">
 <meta property="og:image:width" content="1024">
 <meta name="twitter:title" content="Thoughts on Things - Time Series First Principles: Model Combinations Are King">
-<meta name="twitter:description" content="Usually a simple average of multiple models is more accurate than just one model’s prediction">
+<meta name="twitter:description" content="Usually a combination of multiple models is more accurate than just one model’s prediction">
 <meta name="twitter:image" content="https://mftokic.github.io/posts/2024-05-28-time-series-model-avg/image.png">
 <meta name="twitter:image-height" content="1024">
 <meta name="twitter:image-width" content="1024">
@@ -121,6 +123,7 @@ ul.task-list li input[type="checkbox"] {
   </li>  
 </ul>
             <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
@@ -133,7 +136,7 @@ ul.task-list li input[type="checkbox"] {
       <h1 class="title">Time Series First Principles: Model Combinations Are King</h1>
                   <div>
         <div class="description">
-          Usually a simple average of multiple models is more accurate than just one model’s prediction
+          Usually a combination of multiple models is more accurate than just one model’s prediction
         </div>
       </div>
                           <div class="quarto-categories">
@@ -188,15 +191,15 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="https://mftokic.github.io/posts/2024-05-01-time-series-features/">The Magic Is In The Feature Engineering</a></li>
 <li><a href="https://mftokic.github.io/posts/2024-05-03-time-series-simple-models/">Simple Models Are Better Models</a></li>
 <li><a href="https://mftokic.github.io/posts/2024-05-07-time-series-capture-uncertainty/">Capture Uncertainty</a></li>
-<li><strong>Model Combinations Are King</strong></li>
+<li><a href="https://mftokic.github.io/posts/2024-05-28-time-series-model-avg/"><strong>Model Combinations Are King</strong></a></li>
 <li>Deep Learning Last</li>
 </ol>
 </section>
 <section id="wisdom-of-the-crowds" class="level3">
 <h3 class="anchored" data-anchor-id="wisdom-of-the-crowds">Wisdom of the Crowds</h3>
-<p>In 1906, famed statistician Francis Galton went to a county fair for some fun. While there he came upon a competition to guess the weight of an ox. Eight hundred people entered the competition but the guesses were all over the place, some too high, some too low. Francis was a big numbers guy, so he took all of the guesses home with him and ran the numbers. He found out that the average of all the guesses was only one pound away from the actual weight of the ox, which weighed 1,198 pounds. That’s an error of less than 0.08%. What he stumbled upon that day is now know as the wisdom of the crowds.</p>
+<p>In 1906, famed statistician Francis Galton went to a county fair for some fun. While there he came upon a competition to guess the weight of an ox. Eight hundred people entered the competition but the guesses were all over the place, some too high, some too low. Francis was a big numbers guy, so he took all of the guesses home with him and crunched the data. He found out that the average of all the guesses was only one pound away from the actual weight of the ox, which weighed 1,198 pounds. That’s an error of less than 0.08%. What he stumbled upon that day is now know as the wisdom of the crowds.</p>
 <p>The concept of wisdom of the crowds states that the collective wisdom of a group of individuals is usually more accurate than that of a single expert. When guessing the weight of the ox, the overestimates and underestimates of regular people cancelled each other out. Creating an average prediction that was more accurate and any single person’s estimate.</p>
-<p>This principle is especially true when it comes to machine learning forecasting. Usually it’s not one single model that performs the best, but instead a combination of multiple models. Let’s take a look at how we can combine models into more accurate forecasts.</p>
+<p>This principle is important in machine learning forecasting. Usually it’s not one single model that performs the best, but instead a combination of multiple models. Let’s take a look at how we can combine models into more accurate forecasts.</p>
 </section>
 <section id="types-of-model-combinations" class="level3">
 <h3 class="anchored" data-anchor-id="types-of-model-combinations">Types of Model Combinations</h3>
@@ -209,7 +212,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="model-combination-example" class="level3">
 <h3 class="anchored" data-anchor-id="model-combination-example">Model Combination Example</h3>
-<p>Let’s walk through a simple example around how combining the predictions of more than one model can outperform any single model. Below is an example monthly time series we will try to back test the last 12 months.</p>
+<p>Let’s walk through a simple example around how combining the predictions of more than one model can outperform any single model. Below is an example monthly time series. We will try to back test the last 12 months of the historical data.</p>
 <p><img src="./chart1.png" class="img-fluid"></p>
 <p>To keep things simple we can just run a few models to get the back testing results for the last year of the data. We’ll use various univariate time series models. Ignore the types of models used. Instead, let’s just see how each model did on it’s own. Learn more about accuracy metrics in a <a href="https://mftokic.github.io/posts/2024-05-07-time-series-capture-uncertainty/">previous post</a>.</p>
 <p><img src="./chart2.png" class="img-fluid"></p>
@@ -311,7 +314,7 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="reversal">Reversal</h3>
 <p>When trying to combine models, there is always a risk of overfitting. Meaning the combination approach (like simple average or ensemble) could have great accuracy on the back test data but not generalize well to new unseen data in our future forecast. To prevent that we can make sure to back test on enough historical data to prove our combination approach works well for more than just a period or two. We can also have separate validation and test splits in the back testing to see how combinations made on one data set can generalize well when tested on the other.</p>
 <p><a href="https://mftokic.github.io/posts/2024-05-07-time-series-capture-uncertainty/#future-uncertainty">Prediction intervals</a> are harder to create. Simply combining the 80% and 95% prediction intervals of multiple models together is not going to fully capture the uncertainty of forecasts created by the new model combination. So we would need to re-create the intervals based on the results of the new combined model.</p>
-<p>Similar to prediction intervals, combining models can also make it harder to interpret them. Since instead of just understanding one model and its predictions we now have to understand how multiple models work and are combined to get the final forecast.</p>
+<p>Similar to prediction intervals, combining models can also make it harder to interpret them. Instead of just understanding one model and its predictions, we now have to understand how multiple models work and are combined to get the final forecast.</p>
 </section>
 <section id="finnts" class="level3">
 <h3 class="anchored" data-anchor-id="finnts">finnts</h3>
@@ -345,6 +348,121 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {

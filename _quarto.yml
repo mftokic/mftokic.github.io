@@ -22,7 +22,9 @@ website:
         href: index.xml
 format:
   html:
-    theme: cyborg
+    theme:
+      light: flatly
+      dark: cyborg
     css: styles.css
 
 
