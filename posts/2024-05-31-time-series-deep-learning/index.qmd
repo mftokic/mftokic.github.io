@@ -1,0 +1,32 @@
+---
+title: "Time Series First Principles: Deep Learning Last"
+description: "Deep learning isn't as effective as more traditional ML models"
+author: "Mike Tokic"
+date: "2024-05-31"
+categories: [time-series, machine-learning, finance]
+image: "image.png"
+draft: true
+---
+
+![](./image.png)
+
+### Time Series First Principles Series
+
+This post dives into the tenth and final principle of a good time series forecast, deep learning last. Check out the [initial post](https://mftokic.github.io/posts/2024-03-26-time-series-first-principles-initial/) in this series to get a high level view of each principle. 
+
+1. [Domain Expertise](https://mftokic.github.io/posts/2024-04-02-time-series-domain-expertise/)
+2. [Garbage In Garbage Out](https://mftokic.github.io/posts/2024-04-08-time-series-garbage/)
+3. [The Future Is Similar To The Past](https://mftokic.github.io/posts/2024-04-11-time-series-past-future/)
+4. [Higher Grain Higher Accuracy](https://mftokic.github.io/posts/2024-04-18-time-series-grain/)
+5. [Order Is Important](https://mftokic.github.io/posts/2024-04-23-time-series-order/)
+6. [The Magic Is In The Feature Engineering](https://mftokic.github.io/posts/2024-05-01-time-series-features/)
+7. [Simple Models Are Better Models](https://mftokic.github.io/posts/2024-05-03-time-series-simple-models/)
+8. [Capture Uncertainty](https://mftokic.github.io/posts/2024-05-07-time-series-capture-uncertainty/)
+9. [Model Combinations Are King](https://mftokic.github.io/posts/2024-05-28-time-series-model-avg/)
+10. **Deep Learning Last**
+
+### Reversal 
+
+### finnts
+
+### Final Thoughts
