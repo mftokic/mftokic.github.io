@@ -21,7 +21,7 @@ This post dives into the fourth principle of a good time series forecast, the hi
 6. [The Magic Is In The Feature Engineering](https://mftokic.github.io/posts/2024-05-01-time-series-features/)
 7. [Simple Models Are Better Models](https://mftokic.github.io/posts/2024-05-03-time-series-simple-models/)
 8. [Capture Uncertainty](https://mftokic.github.io/posts/2024-05-07-time-series-capture-uncertainty/)
-9. Model Averages Are King
+9. Model Combinations Are King
 10. Deep Learning Last
 
 ### Clear Skies

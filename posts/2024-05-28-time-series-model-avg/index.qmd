@@ -2,7 +2,7 @@
 title: "Time Series First Principles: Model Combinations Are King"
 description: "Usually a simple average of multiple models is more accurate than just one model's prediction"
 author: "Mike Tokic"
-date: "2024-05-20"
+date: "2024-05-28"
 categories: [time-series, machine-learning, finance]
 image: "image.png"
 draft: true
