@@ -33,26 +33,27 @@ Since deep learning is getting all the hype nowadays, it can be tempting to go s
 
 ### Reasons To Use Deep Learning Last
 
-#### 1. **Lack of Quality Data**
+#### **Lack of Quality Data**
 
 Deep learning can work well if you have thousands, or better yet millions, of observations in your historical data. In my job we might be trying to forecast a monthly time series for a single product, but only have the last three years of historical data. That's 36 data points. This lack of data is a common problem at my company, where new products are released constantly (meaning they have limited data) and our business shifts so often that even historical years from six years ago may not be relevant to where our business is headed. If you don't have tons of historical data, it becomes very hard to train an accurate deep learning model. 
 
-#### 2. **Expensive Hardware**
+#### **Expensive Hardware**
 
 Deep learning requires millions of matrix algebra calculations. Think of it as multiplying two sets of tables together. Regular computers have CPUs (central processing unit), which are designed for sequential processing. Even if you have 10+ CPUs on a computer, it will take a while to crank through the millions of matrix operations needed to train a deep learning model. GPUs on the other hand, are specialized to have thousands of cores and parallelize matrix operations effectively. They were initially built for video game graphics, hence the name graphical processing unit, but in recent years have stumbled across a new use case in training deep learning models. This is why Nvidia is the third most valuable company at the time of this writing, because they are the leading manufacturer of GPUs. These GPUs are hard to build, making them expensive to buy or rent from a cloud provider. Because they are expensive to use, they make it harder for anyone to start using them, the barrier to entry is too high. With non-deep learning models you can start training them on your computer with CPUs after reading this, but to train a deep learning model you either have to camp out at Best Buy to purchase a Nvidia H100 or jump through a lot of hoops with a cloud provided to rent one by the minute. The juice may not be worth the squeeze. 
 
-#### 3. **Bigger Black Box**
+#### **Bigger Black Box**
 
 Deep learning models are often harder to interpret than other machine learning models. This is due to them having up to billions of parameters (model inputs) that are abstracted between multiple layers where some are hidden. This means one layer of parameters feeds into another layer of parameters. There are ways to interpret the inner workings of these models, but they are often just an educated guess. Can anyone explain how a deep learning model like GPT-4 came up with its answer? Not likely. 
 
-#### 4. **Specialized Expertise**:
+#### **Specialized Expertise**:
 
 These models take a special kind of expertise to train properly. 
 
 ### What to Use Instead
 
-1. **Univariate Models**: 
-2. **Traditional ML Models**: 
+#### **Univariate Models**
+
+#### **Traditional ML Models**
 
 ### Reversal 
 
