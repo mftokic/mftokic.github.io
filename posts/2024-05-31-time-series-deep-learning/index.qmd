@@ -45,27 +45,36 @@ Deep learning requires millions of matrix algebra calculations. Think of it as m
 
 Deep learning models are often harder to interpret than other machine learning models. This is due to them having up to billions of parameters (model inputs) that are abstracted between multiple layers where some are hidden. This means one layer of parameters feeds into another layer of parameters. There are ways to interpret the inner workings of these models, but they are often just an educated guess. Can anyone explain how a deep learning model like GPT-4 came up with its answer? Not likely. 
 
-#### **Specialized Expertise**:
-
-These models take a special kind of expertise to train properly. 
-
 ### What to Use Instead
+
+Maybe I've convinced you to not chase after the shiny thing and try something non-deep learning first. What model should I use instead? Here is what to try first. Once you have tried these models and evaluated their performance, you can then see if the juice is worth the squeeze with deep learning. 
 
 #### **Univariate Models**
 
+These are models that only need one variable, historical values of what you're trying to forecast. Univariate models are more statistics than machine learning, and are custom built for time series. They train very fast and are tuned for each specific time series in your data. One weakness is some of these models cannot take in other outside data in the form of features. With that said they are a terrific starting point for any new forecasting project. Often they can get you the required accuracy needed, and if they don't they can serve as the benchmark to beat with other models. Here are a few common univariate models. 
+
+- **ARIMA**: An ARIMA (AutoRegressive Integrated Moving Average) model predicts future values in a time series by combining differencing (modeling the difference between periods), autoregression (using past values), and moving averages (using past forecast errors).
+- **Exponential Smoothing**: Forecasts future values in a time series by applying decreasingly weighted averages of past observations, giving more importance to recent data points to capture trends and seasonal patterns.
+- **Seasonal Naive**: Predicts future values by simply repeating the observations from the same season of the previous period, assuming that future patterns will mimic past seasonal cycles.
+
 #### **Traditional ML Models**
+
+After trying univariate models, it's time to try more traditional machine learning models. These are models built specifically for tabular data, or data that can live in a sql table or excel spreadsheet. These models are multivariate, which allow them to incorporate outside variables as features to improve their forecast accuracy. They require more handling than a model like ARIMA, since they need [feature engineering](https://mftokic.github.io/posts/2024-05-01-time-series-features/index.html) and proper [time series cross-validation](https://mftokic.github.io/posts/2024-05-01-time-series-features/index.html). Multivariate models can also learn across multiple time series at the same time, instead of being trained on just a single time series like a univarite model. Here are a few common multivariate models. 
+
+- **Linear Regression**: Predicts future values by fitting a line to the historical data, where the line represents the relationship between the dependent variable and one or more independent variables.
+- **XGBoost**: Predicts future values using an ensemble of decision trees, boosting their performance by iteratively correcting errors from previous trees, resulting in a highly accurate and robust prediction model.
+- **Cubist**: Predicts future values by combining decision trees with linear regression models, creating rule-based predictions that incorporate linear relationships within each segment of the data for greater accuracy.
 
 ### Reversal 
 
-Forecasting competitions
+Do mega retail corporations like Amazon or Walmart only use ARIMA or linear regression models when trying to forecast the millions of product skus in their universe? Probably not. When the stakes are that high, and they can hire hundreds of data scientists to forecast, then they most likely build their own custom deep learning approaches that can learn from billions of data points to produce robust forecasts. With limitless resources and data, deep learning becomes easy. Assume you are not them. 
 
-If data and resources are plentiful, then use deep learning. 
-
-Newer LLMs like TimeGPT
+Exciting startups like Nixtla have been doing great work on deep learning transformer models. These are the types of models that power products like GPT-4 from OpenAI. They built something called [TimeGPT-1](https://docs.nixtla.io/), which is a generative model for time series. They trained this model on billions of publicly available time series, creating the first GPT model tailored to time series. What required special hardware and tons of data to train can now be a simple API call in any programming language. This is a potential game changer and can completely change how forecast is done, turning it more into a software engineering problem than a data science problem. Keep a close eye on this space as innovations like this can move at light speed. 
 
 ### Final Thoughts
 
-Final thoughts on deep learning
+While deep learning holds great promise and can offer high accuracy in certain scenarios, it is often not the best starting point for most forecasting projects. The need for extensive data, expensive hardware, and the complexity of interpreting deep learning models make it a less practical choice compared to more traditional methods. Starting with simpler, well-established models like ARIMA, exponential smoothing, or traditional machine learning models often provides sufficient accuracy with lower costs and greater interpretability. As innovations continue to emerge, especially with models like TimeGPT-1, the landscape of time series forecasting may shift, making deep learning more accessible and practical. However, for now, prioritize simpler, more transparent models and reserve deep learning as a last resort when simpler methods fall short.
 
 ### Series Wrap Up
 
+That's a wrap on our [First Principles in Time Series Forecasting](https://mftokic.github.io/posts/2024-03-26-time-series-first-principles-initial/) series! My goal was to walk through core concepts of creating a strong time series forecast. Instead of diving deep into code and super technical concepts, I wanted to give timeless knowledge that will serve anyone who builds or consumes time series forecasts. Hopefully you enjoyed the series and learned a lot 🤞. 
