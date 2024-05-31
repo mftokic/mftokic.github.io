@@ -10,7 +10,99 @@
 <atom:link href="https://mftokic.github.io/index.xml" rel="self" type="application/rss+xml"/>
 <description>A collection of thoughts on things from the mind of Mike Tokic</description>
 <generator>quarto-1.3.450</generator>
-<lastBuildDate>Tue, 28 May 2024 07:00:00 GMT</lastBuildDate>
+<lastBuildDate>Fri, 31 May 2024 07:00:00 GMT</lastBuildDate>
+<item>
+  <title>Time Series First Principles: Deep Learning Last</title>
+  <dc:creator>Mike Tokic</dc:creator>
+  <link>https://mftokic.github.io/posts/2024-05-31-time-series-deep-learning/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p><img src="https://mftokic.github.io/posts/2024-05-31-time-series-deep-learning/image.png" class="img-fluid"></p>
+<section id="time-series-first-principles-series" class="level3">
+<h3 class="anchored" data-anchor-id="time-series-first-principles-series">Time Series First Principles Series</h3>
+<p>This post dives into the tenth and final principle of a good time series forecast, deep learning last. Check out the <a href="https://mftokic.github.io/posts/2024-03-26-time-series-first-principles-initial/">initial post</a> in this series to get a high level view of each principle.</p>
+<ol type="1">
+<li><a href="https://mftokic.github.io/posts/2024-04-02-time-series-domain-expertise/">Domain Expertise</a></li>
+<li><a href="https://mftokic.github.io/posts/2024-04-08-time-series-garbage/">Garbage In Garbage Out</a></li>
+<li><a href="https://mftokic.github.io/posts/2024-04-11-time-series-past-future/">The Future Is Similar To The Past</a></li>
+<li><a href="https://mftokic.github.io/posts/2024-04-18-time-series-grain/">Higher Grain Higher Accuracy</a></li>
+<li><a href="https://mftokic.github.io/posts/2024-04-23-time-series-order/">Order Is Important</a></li>
+<li><a href="https://mftokic.github.io/posts/2024-05-01-time-series-features/">The Magic Is In The Feature Engineering</a></li>
+<li><a href="https://mftokic.github.io/posts/2024-05-03-time-series-simple-models/">Simple Models Are Better Models</a></li>
+<li><a href="https://mftokic.github.io/posts/2024-05-07-time-series-capture-uncertainty/">Capture Uncertainty</a></li>
+<li><a href="https://mftokic.github.io/posts/2024-05-28-time-series-model-avg/">Model Combinations Are King</a></li>
+<li><a href="https://mftokic.github.io/posts/2024-05-31-time-series-deep-learning/"><strong>Deep Learning Last</strong></a></li>
+</ol>
+</section>
+<section id="the-shiny-new-thing" class="level3">
+<h3 class="anchored" data-anchor-id="the-shiny-new-thing">The Shiny New Thing</h3>
+<p>Deep learning is the latest frontier in the field of machine learning. It’s a subset of machine learning that uses neural networks with many layers (hence “deep”) to model complex patterns in data. These neural networks are built to resemble how human brains work. There are a lot of different types of deep learning models. Even the latest large language models from OpenAI are using deep learning techniques.</p>
+<p>Since deep learning is getting all the hype nowadays, it can be tempting to go straight to training deep learning models when starting a new forecasting project. This is a bad idea. While deep learning can be very effective, there are many reasons I’ll call out in this post that make deep learning hard to use for forecasting projects. You can still use a deep learning model in your forecast, but I recommend exhausting all other avenues before trying deep learning. Let’s dive into why deep learning should be tried last.</p>
+</section>
+<section id="reasons-to-use-deep-learning-last" class="level3">
+<h3 class="anchored" data-anchor-id="reasons-to-use-deep-learning-last">Reasons To Use Deep Learning Last</h3>
+<section id="lack-of-quality-data" class="level4">
+<h4 class="anchored" data-anchor-id="lack-of-quality-data"><strong>Lack of Quality Data</strong></h4>
+<p>Deep learning can work well if you have thousands, or better yet millions, of observations in your historical data. In my job we might be trying to forecast a monthly time series for a single product, but only have the last three years of historical data. That’s 36 data points. This lack of data is a common problem at my company, where new products are released constantly (meaning they have limited data) and our business shifts so often that even historical years from six years ago may not be relevant to where our business is headed. If you don’t have tons of historical data, it becomes very hard to train an accurate deep learning model.</p>
+</section>
+<section id="expensive-hardware" class="level4">
+<h4 class="anchored" data-anchor-id="expensive-hardware"><strong>Expensive Hardware</strong></h4>
+<p>Deep learning requires millions of matrix algebra calculations. Think of it as multiplying two sets of tables together. Regular computers have CPUs (central processing unit), which are designed for sequential processing. Even if you have 10+ CPUs on a computer, it will take a while to crank through the millions of matrix operations needed to train a deep learning model. GPUs on the other hand, are specialized to have thousands of cores and parallelize matrix operations effectively. They were initially built for video game graphics, hence the name graphical processing unit, but in recent years have stumbled across a new use case in training deep learning models. This is why Nvidia is the third most valuable company at the time of this writing, since they are the leading manufacturer of GPUs. These GPUs are hard to build, making them expensive to buy or rent from a cloud provider. Because they are expensive to use, they make it harder for anyone to start using them. With non-deep learning models you can start training them on your local computer, but to train a deep learning model you either have to camp out at Best Buy to purchase a Nvidia H100 or jump through a lot of hoops with a cloud provided to rent one by the minute. The juice may not be worth the squeeze.</p>
+</section>
+<section id="bigger-black-box" class="level4">
+<h4 class="anchored" data-anchor-id="bigger-black-box"><strong>Bigger Black Box</strong></h4>
+<p>Deep learning models are often harder to interpret than other machine learning models. This is due to them having up to billions of parameters (model inputs) that are abstracted between multiple layers. This means one layer of parameters feeds into another layer of parameters. There are ways to interpret the inner workings of these models, but they are often just an educated guess. Can anyone explain how a deep learning model like GPT-4 came up with its answer? Not likely.</p>
+</section>
+</section>
+<section id="what-to-use-instead" class="level3">
+<h3 class="anchored" data-anchor-id="what-to-use-instead">What to Use Instead</h3>
+<p>Maybe I’ve convinced you to not chase after the shiny thing and try something non-deep learning first. What model should I use instead? Here is what to try first. Once you have tried these models and evaluated their performance, you can then see if the juice is worth the squeeze with deep learning.</p>
+<section id="univariate-models" class="level4">
+<h4 class="anchored" data-anchor-id="univariate-models"><strong>Univariate Models</strong></h4>
+<p>These are models that only need one variable, historical values of what you’re trying to forecast. Univariate models are more statistics than machine learning, and are custom built for time series. They train very fast and are tuned for each specific time series in your data. One weakness is some of these models cannot take in outside data in the form of features. With that said they are a terrific starting point for any new forecasting project. Often they can get you the required accuracy needed, and if they don’t they can serve as the benchmark to beat with other models. Here are a few common univariate models to try first.</p>
+<ul>
+<li><strong>ARIMA</strong>: An ARIMA (AutoRegressive Integrated Moving Average) model predicts future values in a time series by combining differencing (modeling the difference between periods), autoregression (using past values), and moving averages (using past forecast errors).</li>
+<li><strong>Exponential Smoothing</strong>: Forecasts future values in a time series by applying decreasingly weighted averages of past observations, giving more importance to recent data points to capture trends and seasonal patterns.</li>
+<li><strong>Seasonal Naive</strong>: Predicts future values by simply repeating the observations from the same season of the previous period, assuming that future patterns will mimic past seasonal cycles.</li>
+</ul>
+</section>
+<section id="traditional-ml-models" class="level4">
+<h4 class="anchored" data-anchor-id="traditional-ml-models"><strong>Traditional ML Models</strong></h4>
+<p>After trying univariate models, it’s time to try more traditional machine learning models. These are models built specifically for tabular data, or data that can live in a SQL table or excel spreadsheet. These models are multivariate, which allow them to incorporate outside variables as features to improve their forecast accuracy. They require more handling than a model like ARIMA, since they need <a href="https://mftokic.github.io/posts/2024-05-01-time-series-features/index.html">feature engineering</a> and proper <a href="https://mftokic.github.io/posts/2024-05-01-time-series-features/index.html">time series cross-validation</a>. Multivariate models can also learn across multiple time series at the same time, instead of being trained on just a single time series like a univarite model. Here are a few common multivariate models.</p>
+<ul>
+<li><strong>Linear Regression</strong>: Predicts future values by fitting a line to the historical data, where the line represents the relationship between the dependent variable and one or more independent variables.</li>
+<li><strong>XGBoost</strong>: Predicts future values using an ensemble of decision trees, boosting their performance by iteratively correcting errors from previous trees, resulting in a highly accurate and robust prediction model.</li>
+<li><strong>Cubist</strong>: Predicts future values by combining decision trees with linear regression models, creating rule-based predictions that incorporate linear relationships within each segment of the data for greater accuracy.</li>
+</ul>
+</section>
+</section>
+<section id="reversal" class="level3">
+<h3 class="anchored" data-anchor-id="reversal">Reversal</h3>
+<p>Do mega retail corporations like Amazon or Walmart only use ARIMA or linear regression models when trying to forecast the millions of product skus in their universe? Probably not. When the stakes are that high, and they can hire hundreds of data scientists to forecast, then they most likely build their own custom deep learning approaches that can learn from billions of data points to produce robust forecasts. With limitless resources and data, deep learning becomes easy. Assume you are not them.</p>
+<p>Exciting startups like Nixtla have been doing great work on deep learning transformer models. These are the types of models that power products like GPT-4 from OpenAI. They built something called <a href="https://docs.nixtla.io/">TimeGPT-1</a>, which is a generative model for time series. They trained this model on billions of publicly available time series, creating the first GPT model tailored to time series. What required special hardware and tons of data to train can now be a simple API call in any programming language. This is a potential game changer and can completely change how forecasting is done, turning it more into a software engineering problem than a data science problem. Keep a close eye on this space as innovations like this can move at light speed.</p>
+</section>
+<section id="final-thoughts" class="level3">
+<h3 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h3>
+<p>While deep learning holds great promise and can offer high accuracy in certain scenarios, it is often not the best starting point for most forecasting projects. The need for extensive data, expensive hardware, and the complexity of interpreting deep learning models make it a less practical choice compared to more traditional methods. Starting with simpler, well-established models like ARIMA, exponential smoothing, or traditional machine learning models often provides sufficient accuracy with lower costs and greater interpretability. As innovations continue to emerge, especially with models like TimeGPT-1, the landscape of time series forecasting may shift, making deep learning more accessible and practical. However, for now, prioritize simpler, more transparent models and reserve deep learning as a last resort when simpler methods fall short.</p>
+</section>
+<section id="series-wrap-up" class="level3">
+<h3 class="anchored" data-anchor-id="series-wrap-up">Series Wrap Up</h3>
+<p>That’s a wrap on our <a href="https://mftokic.github.io/posts/2024-03-26-time-series-first-principles-initial/">First Principles in Time Series Forecasting</a> series! My goal was to walk through core concepts of creating a strong time series forecast. Instead of diving deep into code and super technical concepts, I wanted to give timeless knowledge that will serve anyone who builds or consumes time series forecasts. Hopefully you enjoyed the series and learned a lot 🤞.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>time-series</category>
+  <category>machine-learning</category>
+  <category>finance</category>
+  <guid>https://mftokic.github.io/posts/2024-05-31-time-series-deep-learning/index.html</guid>
+  <pubDate>Fri, 31 May 2024 07:00:00 GMT</pubDate>
+  <media:content url="https://mftokic.github.io/posts/2024-05-31-time-series-deep-learning/image.png" medium="image" type="image/png" height="96" width="144"/>
+</item>
 <item>
   <title>Time Series First Principles: Model Combinations Are King</title>
   <dc:creator>Mike Tokic</dc:creator>
@@ -2962,53 +3054,6 @@
   <guid>https://mftokic.github.io/posts/2024-02-19-frp-journey/index.html</guid>
   <pubDate>Mon, 19 Feb 2024 08:00:00 GMT</pubDate>
   <media:content url="https://mftokic.github.io/posts/2024-02-19-frp-journey/image.png" medium="image" type="image/png" height="144" width="144"/>
-</item>
-<item>
-  <title>Weekend Reads (2/16/24)</title>
-  <dc:creator>Mike Tokic</dc:creator>
-  <link>https://mftokic.github.io/posts/2024-02-16-weekend-reads/index.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<p><img src="https://mftokic.github.io/posts/2024-02-16-weekend-reads/image.png" class="img-fluid"></p>
-<section id="articles" class="level2">
-<h2 class="anchored" data-anchor-id="articles">Articles</h2>
-<ul>
-<li><a href="https://www.readtrung.com/p/8-lessons-from-curb-your-enthusiasm">8 Lessons from “Curb Your Enthusiasm”</a></li>
-<li><a href="https://every.to/chain-of-thought/the-knowledge-economy-is-over-welcome-to-the-allocation-economy/">The Knowledge Economy Is Over. Welcome to the Allocation Economy</a></li>
-<li><a href="https://www.nytimes.com/2024/02/08/well/live/ozempic-muscle-loss-exercise.html">The Race Is On to Stop Ozempic Muscle Loss</a></li>
-<li><a href="https://waitbutwhy.com/2024/02/vision-pro.html">All My Thoughts After 40 Hours in the Vision Pro</a></li>
-</ul>
-</section>
-<section id="tweets" class="level2">
-<h2 class="anchored" data-anchor-id="tweets">Tweets</h2>
-<ul>
-<li><a href="https://twitter.com/george__mack/status/1751522832545107992">High Agency by George Mack</a></li>
-<li><a href="https://twitter.com/trungtphan/status/1757590076027281580?s=46&amp;t=8Xa2BngQ9d359SJzFrCFMA">Vision Pro Teardown by Trung Phan</a></li>
-</ul>
-</section>
-<section id="books" class="level2">
-<h2 class="anchored" data-anchor-id="books">Books</h2>
-<ul>
-<li><a href="https://www.amazon.com/Boys-Boat-Americans-Berlin-Olympics-ebook/dp/B00AEBETU2/ref=tmm_kin_swatch_0?_encoding=UTF8&amp;dib_tag=se&amp;dib=eyJ2IjoiMSJ9.KquVRXnik3uOg8hxrLmJfP_LahKB4s1W46vzNAgAb9wvj80R1_rinS9btDIvVMLrc4mooEEO2d9FMOJYI2OsrGfzFHNWTUH8LtJNa0moro5FM4CWZttdApwLepeP_x0lB_8eIRJXq3y7CcHf-Kn6a2p3hBhsY_P32sHQg7u7D5JEHOE4aAkLflmwMHHIPTd56wISovn7vw3oTtFnSPVL5yx8vuz-GGhu6En1F9ZeHoQ.0GJBdgRORD33beQuLvtA3nEpCNE0wzbCf6HNbAENZVg&amp;qid=1708101446&amp;sr=8-1">The Boys in the Boat by Daniel James Brown</a></li>
-</ul>
-</section>
-<section id="products" class="level2">
-<h2 class="anchored" data-anchor-id="products">Products</h2>
-<ul>
-<li><a href="https://mauinuivenison.com/collections/butcher-shop/products/sugar-free-pepper-stick-24-pack">Maui Nui Sugar Free Venison Jerky</a></li>
-</ul>
-
-
-</section>
-
- ]]></description>
-  <category>weekend-reads</category>
-  <guid>https://mftokic.github.io/posts/2024-02-16-weekend-reads/index.html</guid>
-  <pubDate>Fri, 16 Feb 2024 08:00:00 GMT</pubDate>
-  <media:content url="https://mftokic.github.io/posts/2024-02-16-weekend-reads/image.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 </channel>
 </rss>
