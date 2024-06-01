@@ -5,6 +5,7 @@ author: "Mike Tokic"
 date: "2024-06-04"
 categories: [machine-learning, finance]
 image: "image.png"
+draft: true
 ---
 
 ![](./image.png)

@@ -1,0 +1,53 @@
+---
+title: "How to Master Storytelling"
+description: "Shaan Puri Discussing Storytelling on the How I Write Podcast"
+author: "Mike Tokic"
+date: "2024-06-04"
+categories: [podcast, learning]
+image: "image.png"
+draft: true
+---
+
+![](./image.png)
+
+### Opening Thoughts
+
+Shaan Puri is an entrepreneur and content creator known for his work in the tech industry and his popular podcast "My First Million." He has been involved in various startups and business ventures and is recognized for his insights into entrepreneurship, technology, and business strategy. A few months ago he was on the also popular "How I Write" podcast. While on the show he blew my mind with tons of great ideas around storytelling. I learned a ton and wanted to show the best ideas here. Check them out below! [Also here is a link to the episode](https://www.youtube.com/watch?v=Z2BnqYArwaw&list=PLrxUIdme2aVnB6z5BwgIJx0rJjKrl7Qlc&index=12). 
+
+### Binge Bank
+
+If someone wanted to learn more about you, what would they do? Maybe they are a recruiter, trying to offer you the perfect job. Maybe they're an entrepreneur trying to find their next co-founder. Or maybe it's a cute girl you're about to have dinner with. Chances are the only things they can find on you is your social media presence, and hopefully not any mugshots. 
+
+Shaan recommends creating a binge bank for yourself. Where in one hour someone's opinion of you will drastically grow. Think of it as a bank of content that someone can go down the rabbit hole on you. Blogs, videos, newsclippings. Whatever content that gives someone all access pass to how your brain works and who you are as a person. This binge bank can become more powerful than a resume, because it shows your true self, while also showcasing how you communicate. 
+
+After hearing this I started to curate my own binge bank. I added a [Start Here](https://mftokic.github.io/start_here.html) section to my personal site. On this page I have links to posts that best describe me and my capabilities. Right now it's small but one day I hope to grow it to the binge banks of people like [Ryan Holiday](https://ryanholiday.net/best-articles/), [Tim Ferriss](https://tim.blog/new-start-here/), or [Mark Manson](https://markmanson.net/articles). 
+
+### Aaron Sorkin's 30 Second Masterclass
+
+> "I worship at the alter of intention and obstacle."
+> 
+> — Aaron Sorkin
+
+Aaron Sorkin is a famous screenwriter. Creating hits like the TV show "The West Wing" or movies like "The Social Network". When asked about storytelling. His simple advice was that every story needs to have a clear intention and obstacle. 
+
+In any story the main character has a have a clear intention. What do they want? Why do they want it? After that you need an obstacle. Who or what is trying to stop them from getting their intention? It's fundamental to every story, but doesn't have to be life and death. Every movie you have ever seen has this. If it didn't you probably hated the movie. 
+
+### Adding Humor in Storytelling
+
+> "Comedy is a low status game."
+>
+> — Hasan Minhaj 
+
+
+### Hooks vs Frames
+
+Everyone has seen Twitter/X threads that start with something like "The unbelievable story of xyz person doing xyz thing". It's maximum clickbait and makes me cringe every time I see it. These are tactics that try to hook a reader into continuing to engage in the content. Instead of creating hooks, Shaan recommends creating the right frame for a story. 
+
+A good example of framing is a popular X thread Shaan wrote about an audio streaming app called Clubhouse. 
+
+![](./image2.png)
+
+![](./image3.png)
+
+### Closing Thoughts
+
