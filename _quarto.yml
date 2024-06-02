@@ -10,7 +10,6 @@ website:
   google-analytics: "G-LPFFKTCPJX"
   favicon: logo.png
   description: "A collection of thoughts on things from the mind of Mike Tokic"
-  margin-header: subscribe.html
   navbar:
     right:
       - text: "Start Here"
