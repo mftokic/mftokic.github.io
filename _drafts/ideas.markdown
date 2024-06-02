@@ -6,6 +6,7 @@
 - How Time Series Models Works
 - On device LLMs are going to win, meaning open-source wins and it'll be free
 - Microsoft Machine Learning Journey Story
+- Religion is the most powerful story in the world
 - Why I hold bitcoin and eth
 - Priorities, tradeoffs, incentives
 - Main ideas from Clear Thinking by Shane Parish
