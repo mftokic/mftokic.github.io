@@ -4,6 +4,8 @@
 - How hierarchical forecasting works
 - Time Series EDA
 - How Time Series Models Works
+- On device LLMs are going to win, meaning open-source wins and it'll be free
+- Microsoft Machine Learning Journey Story
 - Why I hold bitcoin and eth
 - Priorities, tradeoffs, incentives
 - Main ideas from Clear Thinking by Shane Parish
