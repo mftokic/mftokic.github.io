@@ -5,7 +5,10 @@
 - Time Series EDA
 - How Time Series Models Works
 - On device LLMs are going to win, meaning open-source wins and it'll be free
-- Microsoft Machine Learning Journey Story
+- Microsoft Machine Learning Forecast Journey Story
+    - First ML FCST in Finance
+    - Commercial Predict Origin Story
+    - Finn Origin Story
 - Religion is the most powerful story in the world
 - Why I hold bitcoin and eth
 - Priorities, tradeoffs, incentives
