@@ -1,5 +1,5 @@
 ---
-title: "How to Master Storytelling"
+title: "How To Master Storytelling"
 description: "No one remembers charts and numbers. They only remember stories. The best story always wins. Just don't tell stories about your vacation. No one wants to hear that."
 author: "Mike Tokic"
 date: "2024-06-04"
@@ -11,7 +11,7 @@ image: "image.png"
 
 Our dumb caveman brains can't remember everything. There is too much information passing through our heads each day. The only thing that sticks are stories. Either ones we tell ourselves or ones we hear from others. Don't believe me? Let's play a game. Tell me what you had for lunch last week on Tuesday. Now tell me the plot to the first Star War's movie. Ha gotcha. Stories stick. More than anything else in this world. Whoever can tell the best stories has the power to do great things in our world. 
 
-Shaan Puri is an entrepreneur and content creator. Known for his work in the tech industry and his popular podcast "My First Million." A few months ago he was on the popular ["How I Write" podcast]*https://www.youtube.com/watch?v=Z2BnqYArwaw&list=PLrxUIdme2aVnB6z5BwgIJx0rJjKrl7Qlc&index=12. While on the show he blew my mind with tons of great ideas around storytelling. I learned a lot and wanted to share the best ideas here.
+Shaan Puri is an entrepreneur and content creator. Known for his work in the tech industry and his popular podcast "My First Million." A few months ago he was on the popular ["How I Write" podcast](https://www.youtube.com/watch?v=Z2BnqYArwaw&list=PLrxUIdme2aVnB6z5BwgIJx0rJjKrl7Qlc&index=12). While on the show he blew my mind with tons of great ideas around storytelling. I learned a lot and wanted to share the best ideas here.
 
 ### Aaron Sorkin's 30 Second Masterclass
 
