@@ -1,0 +1,41 @@
+---
+title: "Microsoft Finance ML Forecasting Journey: Part One"
+description: "Going from 0 to 1 with machine learning"
+author: "Mike Tokic"
+date: "2024-06-10"
+categories: [finance, machine-learning, forecasting]
+image: "image.png"
+draft: true
+---
+
+![](./image.png)
+
+### Paradigm Shift
+
+In the summer of 2015 AI and machine learning (ML) weren't terms you'd hear every day. Maybe you'd hear the word "big data" being thrown around business circles but no one really knew what it meant. There was a lot of data being captured about our world. Somehow we could "mine" the data to get some value out of it. No one really knew. Something at Microsoft changed that year. There was a shiny new product called [Azure Machine Learning](https://techcrunch.com/2015/02/18/microsoft-officially-launches-azure-machine-learning-big-data-platform/?guccounter=1&guce_referrer=aHR0cHM6Ly93d3cuYmluZy5jb20v&guce_referrer_sig=AQAAAE95NY6ZC1q7S3u9eB-VRujlcx7hEFnu35ya9daztiyij3JgOLZWH9VqOfmNl6FuEi2KTbr67hu2aoyrIMUYcUGPoDhzEDsXRJ01LUAF0c-VUU_lHdUhGzLcW5FQYKZwXQJ93c3qzwocA3_WIi-5Z4VXcKJGnaD-1E40xMI6LRnB). 
+
+The service allowed anyone to start mining their data up in the cloud. You could train models and serve them through APIs. In finance, those words meant nothing. To a Microsoft finance worker the term "train a model" meant training the new employee on building excel models. Everything was done by hand and with care. Especially forecasting our financial statements. The CFO of Microsoft, Amy Hood, thought differently. What if we could use the new product to improve some of the manual work we did in finance? Could we have these models be trained to forecast our business? It was a tough question, no one in finance at a time was really qualified to answer it. She had to go ask the expert. 
+
+### Getting The Ball Rolling
+
+Amy went to the legend himself. The head of Microsoft's cloud, Scott Guthrie. King of the cloud and wearing red polo shirts. Amy wanted to see if Scott's engineering team could help them build machine learning models that would allow them to forecast the business. Thankfully Scott said yes and lent a few data scientists to help the finance org get off the ground. 
+
+The big ticket item was forecasting revenue. Instead of starting small with one specific area they tackled the whole pie at once. Amy wanted a quarterly global revenue forecast by each of Microsoft's major products. This forecast could be used internally to compare against the manual forecasts being created by sales finance and product finance teams. The ML forecast could either confirm or contradict these bottoms up forecasts made by humans. Allow them to either adjust their forecasts or make sure they know what's main reason the forecast is different than ML. The ML forecast could also be used externally when talking to wall street analysts around earnings expectations. 
+
+The results were strong. When looking at total revenue the ML forecast was around 1-2% off on average, compared to the manual forecast of 2-4%. 
+
+### Keeping The Ball Rolling
+
+The game officially changed. The finance team could now just rely 100% on ML going forward right? Not so fast! Who would keep training these models? What if we wanted to forecast at a more granular level? Scott's data scientists couldn't help forever. They had their own jobs in engineering to get back to. In order to fix this Amy had to hire some data science talent. People who knew what they were doing. Similar to the engineers on Scott's team. 
+
+Hiring your first data scientist is a hard thing to do. Creating a career path for them in a non-technical team like finance makes it harder. As a first step, a team of vendor data scientists were hired. Enough help to take the work done by Scott's team and keep it going. Even expand it to other areas. The hope was to eventually turn a vendor data scientist team into a team of full time employees. 
+
+These data scientists were the brave souls who walked with no path. Feeling their way through the dark as they went. Without them the finance team wouldn't be were they are today. 
+
+### Final Thoughts
+
+Borrow -> Rent -> Buy
+
+What's the biggest opportunity? 
+
+Start at the top, work your way down
