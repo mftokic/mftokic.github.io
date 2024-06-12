@@ -2,190 +2,194 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://mftokic.github.io/start_here.html</loc>
-    <lastmod>2024-06-12T15:17:11.938Z</lastmod>
+    <lastmod>2024-06-12T15:25:57.649Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mftokic.github.io/posts/2024-06-12-msft-ml-fcst-journey-1/index.html</loc>
+    <lastmod>2024-06-12T15:25:53.714Z</lastmod>
   </url>
   <url>
     <loc>https://mftokic.github.io/posts/2024-05-31-time-series-deep-learning/index.html</loc>
-    <lastmod>2024-06-12T15:17:00.778Z</lastmod>
+    <lastmod>2024-06-12T15:25:48.964Z</lastmod>
   </url>
   <url>
     <loc>https://mftokic.github.io/posts/2024-05-13-finnts-multistep-horizon/index.html</loc>
-    <lastmod>2024-06-12T15:16:55.033Z</lastmod>
+    <lastmod>2024-06-12T15:25:41.061Z</lastmod>
   </url>
   <url>
     <loc>https://mftokic.github.io/posts/2024-05-03-time-series-simple-models/index.html</loc>
-    <lastmod>2024-06-12T15:16:49.010Z</lastmod>
+    <lastmod>2024-06-12T15:25:34.117Z</lastmod>
   </url>
   <url>
     <loc>https://mftokic.github.io/posts/2024-04-23-time-series-order/index.html</loc>
-    <lastmod>2024-06-12T15:16:39.421Z</lastmod>
+    <lastmod>2024-06-12T15:25:27.781Z</lastmod>
   </url>
   <url>
     <loc>https://mftokic.github.io/posts/2024-04-18-time-series-grain/index.html</loc>
-    <lastmod>2024-06-12T15:16:33.005Z</lastmod>
+    <lastmod>2024-06-12T15:25:22.079Z</lastmod>
   </url>
   <url>
     <loc>https://mftokic.github.io/posts/2024-04-11-time-series-past-future/index.html</loc>
-    <lastmod>2024-06-12T15:16:27.816Z</lastmod>
+    <lastmod>2024-06-12T15:25:14.859Z</lastmod>
   </url>
   <url>
     <loc>https://mftokic.github.io/posts/2024-04-05-weekend-reads/index.html</loc>
-    <lastmod>2024-06-12T15:16:22.314Z</lastmod>
+    <lastmod>2024-06-12T15:25:08.660Z</lastmod>
   </url>
   <url>
     <loc>https://mftokic.github.io/posts/2024-03-26-time-series-first-principles-initial/index.html</loc>
-    <lastmod>2024-06-12T15:16:18.036Z</lastmod>
+    <lastmod>2024-06-12T15:25:02.402Z</lastmod>
   </url>
   <url>
     <loc>https://mftokic.github.io/posts/2024-03-16-weekend-reads/index.html</loc>
-    <lastmod>2024-06-12T15:16:13.453Z</lastmod>
+    <lastmod>2024-06-12T15:24:58.282Z</lastmod>
   </url>
   <url>
     <loc>https://mftokic.github.io/posts/2024-02-23-weekend-reads/index.html</loc>
-    <lastmod>2024-06-12T15:16:06.996Z</lastmod>
+    <lastmod>2024-06-12T15:24:54.042Z</lastmod>
   </url>
   <url>
     <loc>https://mftokic.github.io/posts/2024-02-16-weekend-reads/index.html</loc>
-    <lastmod>2024-06-12T15:15:57.182Z</lastmod>
+    <lastmod>2024-06-12T15:24:45.425Z</lastmod>
   </url>
   <url>
     <loc>https://mftokic.github.io/posts/2024-01-12-weekend-reads/index.html</loc>
-    <lastmod>2024-06-12T15:15:52.441Z</lastmod>
+    <lastmod>2024-06-12T15:24:40.673Z</lastmod>
   </url>
   <url>
     <loc>https://mftokic.github.io/posts/2023-12-30-naval-book/index.html</loc>
-    <lastmod>2024-06-12T15:15:47.027Z</lastmod>
+    <lastmod>2024-06-12T15:24:37.199Z</lastmod>
   </url>
   <url>
     <loc>https://mftokic.github.io/posts/2023-12-11-ai-specialization/index.html</loc>
-    <lastmod>2024-06-12T15:15:40.981Z</lastmod>
+    <lastmod>2024-06-12T15:24:32.224Z</lastmod>
   </url>
   <url>
     <loc>https://mftokic.github.io/posts/2023-11-24-llm-in-finance/index.html</loc>
-    <lastmod>2024-06-12T15:15:34.210Z</lastmod>
+    <lastmod>2024-06-12T15:24:27.600Z</lastmod>
   </url>
   <url>
     <loc>https://mftokic.github.io/posts/2023-02-12-language-wars/index.html</loc>
-    <lastmod>2024-06-12T15:15:28.499Z</lastmod>
+    <lastmod>2024-06-12T15:24:23.227Z</lastmod>
   </url>
   <url>
     <loc>https://mftokic.github.io/posts/2023-01-01-new-year-resolutions/index.html</loc>
-    <lastmod>2024-06-12T15:15:21.989Z</lastmod>
+    <lastmod>2024-06-12T15:24:16.722Z</lastmod>
   </url>
   <url>
     <loc>https://mftokic.github.io/posts/2022-09-25-quarto-switch/index.html</loc>
-    <lastmod>2024-06-12T15:15:17.288Z</lastmod>
+    <lastmod>2024-06-12T15:24:12.508Z</lastmod>
   </url>
   <url>
     <loc>https://mftokic.github.io/posts/2021-09-13-intro-finnts/index.html</loc>
-    <lastmod>2024-06-12T15:15:13.105Z</lastmod>
+    <lastmod>2024-06-12T15:24:08.081Z</lastmod>
   </url>
   <url>
     <loc>https://mftokic.github.io/posts/2021-08-24-probono-stretch-projects/index.html</loc>
-    <lastmod>2024-06-12T15:15:07.290Z</lastmod>
+    <lastmod>2024-06-12T15:24:03.177Z</lastmod>
   </url>
   <url>
     <loc>https://mftokic.github.io/posts/2021-08-17-screenplays-vscode/index.html</loc>
-    <lastmod>2024-06-12T15:15:02.057Z</lastmod>
+    <lastmod>2024-06-12T15:23:58.692Z</lastmod>
   </url>
   <url>
     <loc>https://mftokic.github.io/posts/2021-08-10-bridging-ml-gap/index.html</loc>
-    <lastmod>2024-06-12T15:14:56.701Z</lastmod>
+    <lastmod>2024-06-12T15:23:53.993Z</lastmod>
   </url>
   <url>
     <loc>https://mftokic.github.io/about.html</loc>
-    <lastmod>2024-06-12T15:14:31.953Z</lastmod>
+    <lastmod>2024-06-12T15:23:28.758Z</lastmod>
   </url>
   <url>
     <loc>https://mftokic.github.io/index.html</loc>
-    <lastmod>2024-06-12T15:14:47.943Z</lastmod>
+    <lastmod>2024-06-12T15:23:50.936Z</lastmod>
   </url>
   <url>
     <loc>https://mftokic.github.io/posts/2021-08-12-freecodecamp-appreciation/index.html</loc>
-    <lastmod>2024-06-12T15:14:59.538Z</lastmod>
+    <lastmod>2024-06-12T15:23:56.509Z</lastmod>
   </url>
   <url>
     <loc>https://mftokic.github.io/posts/2021-08-19-why-courses-stink/index.html</loc>
-    <lastmod>2024-06-12T15:15:04.687Z</lastmod>
+    <lastmod>2024-06-12T15:24:00.952Z</lastmod>
   </url>
   <url>
     <loc>https://mftokic.github.io/posts/2021-08-26-personal-user-manual/index.html</loc>
-    <lastmod>2024-06-12T15:15:10.882Z</lastmod>
+    <lastmod>2024-06-12T15:24:05.857Z</lastmod>
   </url>
   <url>
     <loc>https://mftokic.github.io/posts/2021-12-03-finance-aa-book/index.html</loc>
-    <lastmod>2024-06-12T15:15:15.149Z</lastmod>
+    <lastmod>2024-06-12T15:24:10.046Z</lastmod>
   </url>
   <url>
     <loc>https://mftokic.github.io/posts/2023-02-11-three-levels-of-ml-adoption/index.html</loc>
-    <lastmod>2024-06-12T15:15:24.902Z</lastmod>
+    <lastmod>2024-06-12T15:24:19.949Z</lastmod>
   </url>
   <url>
     <loc>https://mftokic.github.io/posts/2023-10-19-aa-tam/index.html</loc>
-    <lastmod>2024-06-12T15:15:31.800Z</lastmod>
+    <lastmod>2024-06-12T15:24:25.445Z</lastmod>
   </url>
   <url>
     <loc>https://mftokic.github.io/posts/2023-12-09-weekend-reads/index.html</loc>
-    <lastmod>2024-06-12T15:15:37.188Z</lastmod>
+    <lastmod>2024-06-12T15:24:29.725Z</lastmod>
   </url>
   <url>
     <loc>https://mftokic.github.io/posts/2023-12-22-weekend-reads/index.html</loc>
-    <lastmod>2024-06-12T15:15:43.962Z</lastmod>
+    <lastmod>2024-06-12T15:24:34.619Z</lastmod>
   </url>
   <url>
     <loc>https://mftokic.github.io/posts/2024-01-05-weekend-reads/index.html</loc>
-    <lastmod>2024-06-12T15:15:49.626Z</lastmod>
+    <lastmod>2024-06-12T15:24:39.041Z</lastmod>
   </url>
   <url>
     <loc>https://mftokic.github.io/posts/2024-01-26-weekend-reads/index.html</loc>
-    <lastmod>2024-06-12T15:15:55.148Z</lastmod>
+    <lastmod>2024-06-12T15:24:42.666Z</lastmod>
   </url>
   <url>
     <loc>https://mftokic.github.io/posts/2024-02-19-frp-journey/index.html</loc>
-    <lastmod>2024-06-12T15:16:04.050Z</lastmod>
+    <lastmod>2024-06-12T15:24:51.775Z</lastmod>
   </url>
   <url>
     <loc>https://mftokic.github.io/posts/2024-03-13-power-pursuits/index.html</loc>
-    <lastmod>2024-06-12T15:16:11.203Z</lastmod>
+    <lastmod>2024-06-12T15:24:56.280Z</lastmod>
   </url>
   <url>
     <loc>https://mftokic.github.io/posts/2024-03-22-weekend-reads/index.html</loc>
-    <lastmod>2024-06-12T15:16:15.869Z</lastmod>
+    <lastmod>2024-06-12T15:25:00.469Z</lastmod>
   </url>
   <url>
     <loc>https://mftokic.github.io/posts/2024-04-02-time-series-domain-expertise/index.html</loc>
-    <lastmod>2024-06-12T15:16:20.387Z</lastmod>
+    <lastmod>2024-06-12T15:25:05.708Z</lastmod>
   </url>
   <url>
     <loc>https://mftokic.github.io/posts/2024-04-08-time-series-garbage/index.html</loc>
-    <lastmod>2024-06-12T15:16:25.208Z</lastmod>
+    <lastmod>2024-06-12T15:25:11.805Z</lastmod>
   </url>
   <url>
     <loc>https://mftokic.github.io/posts/2024-04-12-weekend-reads/index.html</loc>
-    <lastmod>2024-06-12T15:16:29.625Z</lastmod>
+    <lastmod>2024-06-12T15:25:17.354Z</lastmod>
   </url>
   <url>
     <loc>https://mftokic.github.io/posts/2024-04-19-weekend-reads/index.html</loc>
-    <lastmod>2024-06-12T15:16:36.000Z</lastmod>
+    <lastmod>2024-06-12T15:25:24.563Z</lastmod>
   </url>
   <url>
     <loc>https://mftokic.github.io/posts/2024-05-01-time-series-features/index.html</loc>
-    <lastmod>2024-06-12T15:16:45.221Z</lastmod>
+    <lastmod>2024-06-12T15:25:31.701Z</lastmod>
   </url>
   <url>
     <loc>https://mftokic.github.io/posts/2024-05-07-time-series-capture-uncertainty/index.html</loc>
-    <lastmod>2024-06-12T15:16:52.659Z</lastmod>
+    <lastmod>2024-06-12T15:25:37.707Z</lastmod>
   </url>
   <url>
     <loc>https://mftokic.github.io/posts/2024-05-28-time-series-model-avg/index.html</loc>
-    <lastmod>2024-06-12T15:16:57.704Z</lastmod>
+    <lastmod>2024-06-12T15:25:46.050Z</lastmod>
   </url>
   <url>
     <loc>https://mftokic.github.io/posts/2024-06-04-how-to-master-storytelling/index.html</loc>
-    <lastmod>2024-06-12T15:17:03.692Z</lastmod>
+    <lastmod>2024-06-12T15:25:51.404Z</lastmod>
   </url>
   <url>
     <loc>https://mftokic.github.io/software.html</loc>
-    <lastmod>2024-06-12T15:17:09.627Z</lastmod>
+    <lastmod>2024-06-12T15:25:55.659Z</lastmod>
   </url>
 </urlset>
