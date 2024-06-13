@@ -1,0 +1,44 @@
+---
+title: "Microsoft Finance ML Forecasting Journey: Part Two"
+description: "Tackling our largest forecast process with machine learning"
+author: "Mike Tokic"
+date: "2024-06-17"
+categories: [finance, machine-learning, forecasting]
+image: "image.png"
+draft: true
+---
+
+![](./image.png)
+
+The success of Microsoft finance's first machine learning (ML) forecast spread like wildfire throughout finance. The ML forecast was shared with all finance leaders, so naturally knowledge of what ML could do trickled down to more people across the organization. Eventually the news came to a team in central finance. Think of this team as Microsoft's core FP&A team across the entire company. After seeing the accuracy at a worldwide level, this team saw the potential of machine learning. They knew it could help in the biggest forecast process at Microsoft. The commercial field forecast. This forecast is created by finance members who sit in the "field". Offices all around the world where they support the sales teams for a specific geography. How could they take a world wide forecast by product and break it down into specific countries all across the world? Well buckle up gang, it's time to find out! This is how a tool called "Commercial Predict" was born. 
+
+### How Things Used to Work
+
+Before we dive into all the ML goodness, we have to understand how the old way used to work. I know, it's kind of like eating your vegetables but we just have to do it real fast then we can get to the fun parts. 
+
+In the past, each finance team in the field was responsible for their own forecast each quarter. These forecasts would happen in "CFO forecast cycles". With cycles happening in October, January, and April. Microsoft's fiscal year runs from July - June so these forecast cycles happen at the start of Q2, Q3, and Q4. The forecast at the start of Q1 is budget but that's a story for a different day. Each cycle, a forecast would be created for the remainder of the fiscal year. 
+
+Microsoft sales products in over 100 countries, and most of those countries has a sales team that tries to sell products to companies in that country or geographical region. IF there's a sales team, then there is a finance team who supports them. This means there are dozens of sales finance teams who each CFO forecast cycle are responsible for creating a quarterly forecast for the rest of the fiscal year. Each team was on their own. How they forecasted was tribal knowledge, only known to few. Each team in each geography had their own secret recipe of how the forecasting was done. This meant that each team most likely had their own custom excel model that would create the forecast. This model needed to be handled with care. Since each quarter it would have to be rolled over and prepared for the next forecast cycle. Anyone who has ever created and owned a financial model in excel knows the anxiety faced with trying to build and maintain one. These models were complex, and you said a prayer every time you opened the file. Hoping it wouldn't crash your machine because it was so large. 
+
+Once each team in the field had their forecast for their geography, it would get sent up the food chain. Forecasts from each country would be combined to form higher level aggregations in Microsoft's sales territories. Each aggregation added more countries and continents together. Until you got the total world wide number for the entire commercial business. When each forecast would get added together at a higher level of that geographical hierarchy, senior finance leaders had the opportunity to make adjustments to that forecast. Based on their domain knowledge of the business. With each new forecast aggregation, a new opportunity for leaders to adjust the forecast happened. Eventually the forecast the CFO, Amy Hood, saw was something completely different than what was initially created by each sales finance team for their specific geography. 
+
+Layers upon layers of bias were added to the forecast. Some was good bias that could improve forecast accuracy, but often it was too many cooks in the forecast kitchen. Too many people touching a forecast that didn't need to be touched. Resulting in worse accuracy and more confusion once the books were closed at quarter end. This process would take upwards of a month every quarter. From the initial forecast created by field team all the way up the food chain to the CFO. In the spirit of every good infomercial, "there just has to be a better way!". 
+
+Now you know why finance had to do something different. Drastically different. 
+
+### Excel Prototype Built in a Redmond Garage
+
+All good things start from humble beginnings. The team in CFT wanted to centralize the field forecast process for the commercial business. Create a single way that everyone in the field would follow to create a forecast. In order to make this a reality, they started with the swiss army knife of every finance professional. That's right. You guessed it. They started with excel. 
+
+The team created an excel prototype of a single model that every field finance team could use. It may have been just as big as 
+
+### Building the Tool
+
+
+### Evolutions
+
+
+### Lessons Learned
+
+
+### Final Thoughts
