@@ -1,8 +1,8 @@
 ---
 title: "Inner Circles of Life"
-description: "How things change as we get older"
+description: "How priorities change as we get older"
 author: "Mike Tokic"
-date: "2024-06-16"
+date: "2024-06-20"
 categories: [life]
 image: "image.png"
 draft: true
