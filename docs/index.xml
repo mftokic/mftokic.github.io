@@ -6,16 +6,17 @@
       version="2.0">
 <channel>
 <title>Thoughts on Things</title>
-<link>https://mftokic.github.io/index.html</link>
+<link>https://mftokic.github.io/</link>
 <atom:link href="https://mftokic.github.io/index.xml" rel="self" type="application/rss+xml"/>
 <description>A collection of thoughts on things from the mind of Mike Tokic</description>
-<generator>quarto-1.3.450</generator>
+<generator>quarto-1.5.45</generator>
 <lastBuildDate>Wed, 12 Jun 2024 07:00:00 GMT</lastBuildDate>
 <item>
   <title>Microsoft Finance ML Forecasting Journey: Part One</title>
   <dc:creator>Mike Tokic</dc:creator>
-  <link>https://mftokic.github.io/posts/2024-06-12-msft-ml-fcst-journey-1/index.html</link>
+  <link>https://mftokic.github.io/posts/2024-06-12-msft-ml-fcst-journey-1/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -65,15 +66,16 @@
   <category>finance</category>
   <category>machine-learning</category>
   <category>forecasting</category>
-  <guid>https://mftokic.github.io/posts/2024-06-12-msft-ml-fcst-journey-1/index.html</guid>
+  <guid>https://mftokic.github.io/posts/2024-06-12-msft-ml-fcst-journey-1/</guid>
   <pubDate>Wed, 12 Jun 2024 07:00:00 GMT</pubDate>
   <media:content url="https://mftokic.github.io/posts/2024-06-12-msft-ml-fcst-journey-1/image.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
   <title>How To Master Storytelling</title>
   <dc:creator>Mike Tokic</dc:creator>
-  <link>https://mftokic.github.io/posts/2024-06-04-how-to-master-storytelling/index.html</link>
+  <link>https://mftokic.github.io/posts/2024-06-04-how-to-master-storytelling/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -141,15 +143,16 @@
  ]]></description>
   <category>podcast</category>
   <category>learning</category>
-  <guid>https://mftokic.github.io/posts/2024-06-04-how-to-master-storytelling/index.html</guid>
+  <guid>https://mftokic.github.io/posts/2024-06-04-how-to-master-storytelling/</guid>
   <pubDate>Tue, 04 Jun 2024 07:00:00 GMT</pubDate>
   <media:content url="https://mftokic.github.io/posts/2024-06-04-how-to-master-storytelling/image.png" medium="image" type="image/png" height="78" width="144"/>
 </item>
 <item>
   <title>Time Series First Principles: Deep Learning Last</title>
   <dc:creator>Mike Tokic</dc:creator>
-  <link>https://mftokic.github.io/posts/2024-05-31-time-series-deep-learning/index.html</link>
+  <link>https://mftokic.github.io/posts/2024-05-31-time-series-deep-learning/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -233,15 +236,16 @@
   <category>time-series</category>
   <category>machine-learning</category>
   <category>finance</category>
-  <guid>https://mftokic.github.io/posts/2024-05-31-time-series-deep-learning/index.html</guid>
+  <guid>https://mftokic.github.io/posts/2024-05-31-time-series-deep-learning/</guid>
   <pubDate>Fri, 31 May 2024 07:00:00 GMT</pubDate>
   <media:content url="https://mftokic.github.io/posts/2024-05-31-time-series-deep-learning/image.png" medium="image" type="image/png" height="96" width="144"/>
 </item>
 <item>
   <title>Time Series First Principles: Model Combinations Are King</title>
   <dc:creator>Mike Tokic</dc:creator>
-  <link>https://mftokic.github.io/posts/2024-05-28-time-series-model-avg/index.html</link>
+  <link>https://mftokic.github.io/posts/2024-05-28-time-series-model-avg/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -284,7 +288,7 @@
 <p><img src="https://mftokic.github.io/posts/2024-05-28-time-series-model-avg/chart1.png" class="img-fluid"></p>
 <p>To keep things simple we can just run a few models to get the back testing results for the last year of the data. We’ll use various univariate time series models. Ignore the types of models used. Instead, let’s just see how each model did on it’s own. Learn more about accuracy metrics in a <a href="https://mftokic.github.io/posts/2024-05-07-time-series-capture-uncertainty/">previous post</a>.</p>
 <p><img src="https://mftokic.github.io/posts/2024-05-28-time-series-model-avg/chart2.png" class="img-fluid"></p>
-<table class="table">
+<table class="caption-top table">
 <caption>Accuracy by Single Model</caption>
 <thead>
 <tr class="header">
@@ -335,7 +339,7 @@
 </table>
 <p>It looks like the tbats model performs the best across the board with stlm-ets and arima not far behind. What if we averaged the three of them together? Let’s see how the results change.</p>
 <p><img src="https://mftokic.github.io/posts/2024-05-28-time-series-model-avg/chart3.png" class="img-fluid"></p>
-<table class="table">
+<table class="caption-top table">
 <caption>Accuracy for Average Model</caption>
 <thead>
 <tr class="header">
@@ -357,7 +361,7 @@
 <p>Even better results! See how creating simple model averages can improve the results? Averaging the results can help smooth out any under or over forecasts, creating more accurate models.</p>
 <p>Simple model averages are often the quickest way to improved forecast accuracy. Another way is to create an ensemble model that can create the weights on its own. Let’s feed the predictions from each model into a linear regression model and have it determine the optimal weights.</p>
 <p><img src="https://mftokic.github.io/posts/2024-05-28-time-series-model-avg/chart4.png" class="img-fluid"></p>
-<table class="table">
+<table class="caption-top table">
 <caption>Accuracy for Ensemble Model</caption>
 <thead>
 <tr class="header">
@@ -399,15 +403,16 @@
   <category>time-series</category>
   <category>machine-learning</category>
   <category>finance</category>
-  <guid>https://mftokic.github.io/posts/2024-05-28-time-series-model-avg/index.html</guid>
+  <guid>https://mftokic.github.io/posts/2024-05-28-time-series-model-avg/</guid>
   <pubDate>Tue, 28 May 2024 07:00:00 GMT</pubDate>
   <media:content url="https://mftokic.github.io/posts/2024-05-28-time-series-model-avg/image.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
   <title>Multistep Horizon Forecasting With finnts</title>
   <dc:creator>Mike Tokic</dc:creator>
-  <link>https://mftokic.github.io/posts/2024-05-13-finnts-multistep-horizon/index.html</link>
+  <link>https://mftokic.github.io/posts/2024-05-13-finnts-multistep-horizon/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -421,7 +426,7 @@
 <section id="how-it-used-to-work" class="level3">
 <h3 class="anchored" data-anchor-id="how-it-used-to-work">How It Used to Work</h3>
 <p>Let’s use an example of a monthly revenue forecast for our business’s main product. In practice we would want more than a year of data but let’s just keep it simple today.</p>
-<table class="table">
+<table class="caption-top table">
 <thead>
 <tr class="header">
 <th>Date</th>
@@ -480,7 +485,7 @@
 </tbody>
 </table>
 <p>If we wanted to forecast the next 3 months of revenue using multivariate machine learning models we would have to do some <a href="https://mftokic.github.io/posts/2024-05-01-time-series-features/">feature engineering</a> to get our data in good shape. This involves creating lags on our <span style="text-decoration: underline; cursor: help;" title="What we want to forecast, in this case Revenue.">target variable</span>. Let’s try create some lags on this data.</p>
-<table class="table">
+<table class="caption-top table">
 <thead>
 <tr class="header">
 <th>Date</th>
@@ -630,15 +635,16 @@
   <category>machine-learning</category>
   <category>finance</category>
   <category>finnts</category>
-  <guid>https://mftokic.github.io/posts/2024-05-13-finnts-multistep-horizon/index.html</guid>
+  <guid>https://mftokic.github.io/posts/2024-05-13-finnts-multistep-horizon/</guid>
   <pubDate>Mon, 13 May 2024 07:00:00 GMT</pubDate>
   <media:content url="https://mftokic.github.io/posts/2024-05-13-finnts-multistep-horizon/image.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
   <title>Time Series First Principles: Capture Uncertainty</title>
   <dc:creator>Mike Tokic</dc:creator>
-  <link>https://mftokic.github.io/posts/2024-05-07-time-series-capture-uncertainty/index.html</link>
+  <link>https://mftokic.github.io/posts/2024-05-07-time-series-capture-uncertainty/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -723,15 +729,16 @@
   <category>time-series</category>
   <category>machine-learning</category>
   <category>finance</category>
-  <guid>https://mftokic.github.io/posts/2024-05-07-time-series-capture-uncertainty/index.html</guid>
+  <guid>https://mftokic.github.io/posts/2024-05-07-time-series-capture-uncertainty/</guid>
   <pubDate>Tue, 07 May 2024 07:00:00 GMT</pubDate>
   <media:content url="https://mftokic.github.io/posts/2024-05-07-time-series-capture-uncertainty/image.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
   <title>Time Series First Principles: Simple Models Are Better Models</title>
   <dc:creator>Mike Tokic</dc:creator>
-  <link>https://mftokic.github.io/posts/2024-05-03-time-series-simple-models/index.html</link>
+  <link>https://mftokic.github.io/posts/2024-05-03-time-series-simple-models/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -799,15 +806,16 @@
   <category>time-series</category>
   <category>machine-learning</category>
   <category>finance</category>
-  <guid>https://mftokic.github.io/posts/2024-05-03-time-series-simple-models/index.html</guid>
+  <guid>https://mftokic.github.io/posts/2024-05-03-time-series-simple-models/</guid>
   <pubDate>Fri, 03 May 2024 07:00:00 GMT</pubDate>
   <media:content url="https://mftokic.github.io/posts/2024-05-03-time-series-simple-models/image.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
   <title>Time Series First Principles: The Magic Is In The Feature Engineering</title>
   <dc:creator>Mike Tokic</dc:creator>
-  <link>https://mftokic.github.io/posts/2024-05-01-time-series-features/index.html</link>
+  <link>https://mftokic.github.io/posts/2024-05-01-time-series-features/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -838,7 +846,7 @@
 <h3 class="anchored" data-anchor-id="date-features">Date Features</h3>
 <p>The most common type of feature engineering for time series is around dates. Date features allow us to capture seasonality patterns in our data. Think of seasonality as repeating peaks and valleys in our data. For example, our business might make most of its revenue in Q4 every year, with a subsequent dip in sales in Q1.</p>
 <p>Let’s use the example time series below to illustrate each type of feature engineering.</p>
-<table class="table">
+<table class="caption-top table">
 <caption>Fake Time Series Data</caption>
 <thead>
 <tr class="header">
@@ -912,7 +920,7 @@
 </table>
 <p>In this time series we would like to forecast monthly sales. We also have information about consumer sentiment that we can use to help forecast sales. A multivariate machine learning model cannot easily use the date column as is, so we have to do some data transformations (aka feature engineering) to make it easier for a model to understand how date information can help predict sales. Let’s go through a few examples of new features we can create from the date column. It’s important to note that after we create these new features it’s a good idea to remove the original date column before training a ML model.</p>
 <p>Since the data is monthly there are a lot of simple features we can use. We can pull out the specific month, quarter, and even year into their own columns to use as features. If our data was at a daily level, we can even go deeper and get features related to day of the week, day of year, week of month, etc.</p>
-<table class="table">
+<table class="caption-top table">
 <thead>
 <tr class="header">
 <th>Date</th>
@@ -997,7 +1005,7 @@
 </tbody>
 </table>
 <p>That seems pretty straight forward right? Let’s keep squeezing our date fruit for more juice and see what other kinds of features we can create. Since this is a time series, adding some order of time can be helpful. This can be something as simple as an index starting at 1 (or even convert your date to a seconds format). This helps establish the proper order of our data and makes is easier for a model to pick up growing or declining trends over time. There is also slight differences in how many days there are from month to month, so we can add that too. If you don’t think that’s important then you have never been stung by the harsh mistress that is leap year. There have been multiple times where finance exec’s have dismissed forecasts for the quarter that includes February, where in the end we didn’t account for the fact that it was a leap year or we are one year removed from one. You can even take this one step further and add the number of business days for each month.</p>
-<table class="table">
+<table class="caption-top table">
 <caption>Adding a time index and other day related features</caption>
 <thead>
 <tr class="header">
@@ -1088,7 +1096,7 @@
 <section id="lag-features" class="level3">
 <h3 class="anchored" data-anchor-id="lag-features">Lag Features</h3>
 <p>Time series forecasting is all about learning from the past to forecast the future. In order to learn about the past we have to create lags on our data. Often what we’re trying to forecast today is correlated to what happened in the past. This is a concept known as autocorrelation. For our monthly forecast example, a 3 month lag may be highly correlated to sales with a 0 month lag (or sales today). Consumer sentiment can also be correlated with sales, but this time a lag of 6 might have higher correlation, since there is most likely a long delay between customer purchase patters and how it affects our company’s product. Lags can be created for any amount, depending on your domain knowledge of the business and results from more exploratory data analysis (deep dive for a different day).</p>
-<table class="table">
+<table class="caption-top table">
 <caption>Adding lag features</caption>
 <colgroup>
 <col style="width: 16%">
@@ -1206,7 +1214,7 @@
 </dd>
 </dl>
 <p>It’s best to calculate rolling window features based on your existing lag features. That way there is no <a href="https://mftokic.github.io/posts/2024-04-23-time-series-order/#data-leakage">data leakage</a> during initial model training. See below for example of creating a 3 month rolling window average of the 3 month sales lag.</p>
-<table class="table">
+<table class="caption-top table">
 <caption>Rolling 3 month average applied to the 3 month sales lag</caption>
 <colgroup>
 <col style="width: 25%">
@@ -1302,7 +1310,7 @@
 <h3 class="anchored" data-anchor-id="polynomial-features">Polynomial Features</h3>
 <p>The final type of feature engineering I’d like to discuss are polynomial transformations. Sometimes there is a non-linear relationship between your initial feature and the target variable. Some models, like ones that use decision trees, can handle this kind of relationship while others like linear regression cannot. To fix this we can transform the data via polynomials like squaring, cubing, and even taking the log of the initial feature.</p>
 <p>Let’s take our example monthly sales data and add some spice to it. This time creating an exponential relationship between consumer sentiment and sales.</p>
-<table class="table">
+<table class="caption-top table">
 <caption>Updated sales data with an exponential relationship with consumer sentiment</caption>
 <thead>
 <tr class="header">
@@ -1397,7 +1405,7 @@
 <p>When graphing the data, see how the increase in consumer sentiment has an exponential effect on sales?</p>
 <p><img src="https://mftokic.github.io/posts/2024-05-01-time-series-features/chart3.png" class="img-fluid"></p>
 <p>To account for this, we can square the values of consumer sentiment and create a new feature to use. This new feature will make it easier for models like linear regression to capture these kinds of non-linear relationships.</p>
-<table class="table">
+<table class="caption-top table">
 <caption>New polynomial feature added</caption>
 <colgroup>
 <col style="width: 21%">
@@ -1517,7 +1525,7 @@
 <h3 class="anchored" data-anchor-id="reversal">Reversal</h3>
 <p>Sometimes too much of a good thing can be a bad thing. Adding a lot of new features can increase the chance that a model overfits. Overfitting in machine learning occurs when a model learns to capture noise or random fluctuations in the training data, leading to poor generalization and high performance on training data but low performance on unseen data. The best way to prevent this kind of overfitting is to limit the number of features used to train a model. This will be discussed in greater detail in another post in this series.</p>
 <p>Did you notice that when creating lags and rolling window features we had a lot of missing data at the start of the time series for those new features? This can be a problem. Some ML models do not like missing data, so we need to deal with those missing values. An easy way is to just drop the initial rows in the time series that have blank values for the new lags and rolling window features. This can work well if you have a lot of historical data. Dropping data can hurt model performance though, and if you don’t have a lot of data to start with it becomes a less favorable option. You could also replace the missing values, either by using a simple model to impute the value or just use the closest available value in the time series to “fill in” the missing values. Both of these missing value replacement approaches have their own pros and cons but could be a better strategy then just simply dropping rows with missing values.</p>
-<table class="table">
+<table class="caption-top table">
 <caption>Filling in missing values with their closest available value</caption>
 <colgroup>
 <col style="width: 25%">
@@ -1632,15 +1640,16 @@
   <category>time-series</category>
   <category>machine-learning</category>
   <category>finance</category>
-  <guid>https://mftokic.github.io/posts/2024-05-01-time-series-features/index.html</guid>
+  <guid>https://mftokic.github.io/posts/2024-05-01-time-series-features/</guid>
   <pubDate>Wed, 01 May 2024 07:00:00 GMT</pubDate>
   <media:content url="https://mftokic.github.io/posts/2024-05-01-time-series-features/image.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
   <title>Time Series First Principles: Order Is Important</title>
   <dc:creator>Mike Tokic</dc:creator>
-  <link>https://mftokic.github.io/posts/2024-04-23-time-series-order/index.html</link>
+  <link>https://mftokic.github.io/posts/2024-04-23-time-series-order/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -1672,7 +1681,7 @@
 <p>Training any sort of machine learning model often requires two separate historical data sets. One that is used to train the initial model, then another that is set aside to create predictions based on the initial model. We can then see how accurate the predictions were on the test data set. This ensures that our new ML model can generalize well to new and unseen data, making sure our model doesn’t overfit to the training data.</p>
 <p>Common ML approaches like classification and regression don’t need a lot of sophistication when splitting up the historical data between a training set and a testing set. Often it will be split randomly. This is similar to making a smoothie. You can randomly throw in bananas, apples, spinach, and blueberries. All without having to think about the order of when you do it.</p>
 <p>Take the below housing data. This is a traditional regression problem. Let’s use the total square feet and number of bedrooms to predict how much the house will cost. We can randomly split 80% of the data to train the model, then hold out 20% of the data to test how accurate the model is. Randomly splitting the data ensures we get a healthy mix of different data in each split.</p>
-<table class="table">
+<table class="caption-top table">
 <caption>Example fake housing data for a regression model</caption>
 <thead>
 <tr class="header">
@@ -1746,7 +1755,7 @@
 </tbody>
 </table>
 <p>A time series has a built in order to it. It’s said right there in the name, time. Ignoring the order based on time can have disastrous consequences, resulting in your final future forecast not being accurate. Just like baking a cake, we need to make sure how we train a model is done in the right order. When splitting a historical time series into a training set and a testing set, splitting not at random but based on time is the proper way to go. Using the oldest data as the training set and the newest data as the testing set makes sure we respect the order of our data based on time. The example table below is a made up time series of the price of one specific house. In reality we would need a lot more data to train a good time series model but just be cool for a minute and go with me on this one. The split column now has the test data set at the very end instead of randomly split across time. We can now use <a href="https://developers.google.com/machine-learning/crash-course/framing/ml-terminology">features</a> like interest rates and gdp growth to help us forecast the price of this house over time. The first 9 months of data will train the model, and the final 3 months will be used to test the model’s accuracy.</p>
-<table class="table">
+<table class="caption-top table">
 <caption>Example fake time series for the price of a specific house</caption>
 <colgroup>
 <col style="width: 24%">
@@ -1856,7 +1865,7 @@
 <h3 class="anchored" data-anchor-id="data-leakage">Data Leakage</h3>
 <p>Whenever time is involved in machine learning, the probability of shooting yourself in the foot rises. This has to do with the concept of <a href="https://machinelearningmastery.com/data-leakage-machine-learning/">data leakage</a>. Data leakage occurs when information from outside the training dataset is used to create the model, leading it to make overly optimistic predictions. It can also happen when we train with data that may not be available in the future when we need to create new predictions.</p>
 <p>In time series forecasting we have already discussed one component of data leakage, related to splitting the data correctly based on time. Take the below table, instead of splitting properly by time the data is now split randomly. Our model can now “see ahead in time” when training, and in effect cheat when being evaluated on the testing splits. For example, for the test observation in July 2002 the model can learn from data on either side of that month. Figuring out previous and future trends and seasonality. This makes it easy to predict what the housing cost in July should be, since it has information before and after that month. With this approach our test accuracy will be a lot better than in the previous example where the splits are based on time. Future forecast performance will suffer though, since we have now trained and chosen a model that may only be good at figuring out how to extrapolate between two points, instead of trying to create predictions on unseen data in the future.</p>
-<table class="table">
+<table class="caption-top table">
 <caption>Incorrect train and test splits</caption>
 <colgroup>
 <col style="width: 24%">
@@ -1978,15 +1987,16 @@
   <category>time-series</category>
   <category>machine-learning</category>
   <category>finance</category>
-  <guid>https://mftokic.github.io/posts/2024-04-23-time-series-order/index.html</guid>
+  <guid>https://mftokic.github.io/posts/2024-04-23-time-series-order/</guid>
   <pubDate>Tue, 23 Apr 2024 07:00:00 GMT</pubDate>
   <media:content url="https://mftokic.github.io/posts/2024-04-23-time-series-order/image.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
   <title>Weekend Reads (4/19/24)</title>
   <dc:creator>Mike Tokic</dc:creator>
-  <link>https://mftokic.github.io/posts/2024-04-19-weekend-reads/index.html</link>
+  <link>https://mftokic.github.io/posts/2024-04-19-weekend-reads/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -2028,15 +2038,16 @@
 
  ]]></description>
   <category>weekend-reads</category>
-  <guid>https://mftokic.github.io/posts/2024-04-19-weekend-reads/index.html</guid>
+  <guid>https://mftokic.github.io/posts/2024-04-19-weekend-reads/</guid>
   <pubDate>Fri, 19 Apr 2024 07:00:00 GMT</pubDate>
   <media:content url="https://mftokic.github.io/posts/2024-04-19-weekend-reads/image.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
   <title>Time Series First Principles: Higher Grain Higher Accuracy</title>
   <dc:creator>Mike Tokic</dc:creator>
-  <link>https://mftokic.github.io/posts/2024-04-18-time-series-grain/index.html</link>
+  <link>https://mftokic.github.io/posts/2024-04-18-time-series-grain/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -2093,7 +2104,7 @@
 <h3 class="anchored" data-anchor-id="allocations">Allocations</h3>
 <p>Another option is to take a forecast at a higher grain and allocate it down to a lower grain using simple allocation logic. This process can replace the more complicated hierarchical forecasting discussed earlier. Simple allocations can be done in two ways.</p>
 <p>The first is to take historical values and create a percent split to apply to the final forecast. For example we can create a forecast at the country-level, then split that out by city. The split percent by city (allocation percent) can be calculated based on how much each city was the percent of total country over the last few years. This can be broken down by period. So you can get a specific percent split for each month on average in the past. This approach helps maintain historical seasonality across each time series (each city). See the charts below for an example of using two historical years of monthly data to create the final allocation percentages.</p>
-<table class="table">
+<table class="caption-top table">
 <caption>Historical splits by city</caption>
 <thead>
 <tr class="header">
@@ -2178,7 +2189,7 @@
 </tr>
 </tbody>
 </table>
-<table class="table">
+<table class="caption-top table">
 <caption>Average of city split by month</caption>
 <thead>
 <tr class="header">
@@ -2227,7 +2238,7 @@
 </tr>
 </tbody>
 </table>
-<table class="table">
+<table class="caption-top table">
 <caption>Final forecast using the city splits</caption>
 <colgroup>
 <col style="width: 8%">
@@ -2315,7 +2326,7 @@
 </tbody>
 </table>
 <p>The second approach is to use a future forecast to create the allocation splits. For example we can create future forecasts at the country-level and also at the city-level. Then we can create the split percent for each city by taking the city forecast and summing it up to the country-level, then taking the percent split for each city. These splits can then be applied to the final country-level forecast to get the final forecast by city. This approach uses the more robust country-level forecast, while still trying to capture future changing trends and seasonality by city.</p>
-<table class="table">
+<table class="caption-top table">
 <caption>Initial forecast, where country and each city are forecasted separately</caption>
 <colgroup>
 <col style="width: 12%">
@@ -2378,7 +2389,7 @@
 </tr>
 </tbody>
 </table>
-<table class="table">
+<table class="caption-top table">
 <caption>Calculating the percent splits by city</caption>
 <thead>
 <tr class="header">
@@ -2427,7 +2438,7 @@
 </tr>
 </tbody>
 </table>
-<table class="table">
+<table class="caption-top table">
 <caption>Final forecast after applying the city splits to the country-level forecast</caption>
 <colgroup>
 <col style="width: 12%">
@@ -2505,15 +2516,16 @@
   <category>time-series</category>
   <category>machine-learning</category>
   <category>finance</category>
-  <guid>https://mftokic.github.io/posts/2024-04-18-time-series-grain/index.html</guid>
+  <guid>https://mftokic.github.io/posts/2024-04-18-time-series-grain/</guid>
   <pubDate>Thu, 18 Apr 2024 07:00:00 GMT</pubDate>
   <media:content url="https://mftokic.github.io/posts/2024-04-18-time-series-grain/image.png" medium="image" type="image/png" height="82" width="144"/>
 </item>
 <item>
   <title>Weekend Reads (4/12/24)</title>
   <dc:creator>Mike Tokic</dc:creator>
-  <link>https://mftokic.github.io/posts/2024-04-12-weekend-reads/index.html</link>
+  <link>https://mftokic.github.io/posts/2024-04-12-weekend-reads/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -2561,15 +2573,16 @@
 
  ]]></description>
   <category>weekend-reads</category>
-  <guid>https://mftokic.github.io/posts/2024-04-12-weekend-reads/index.html</guid>
+  <guid>https://mftokic.github.io/posts/2024-04-12-weekend-reads/</guid>
   <pubDate>Fri, 12 Apr 2024 07:00:00 GMT</pubDate>
   <media:content url="https://mftokic.github.io/posts/2024-04-12-weekend-reads/image.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
   <title>Time Series First Principles: The Future Is Similar To The Past</title>
   <dc:creator>Mike Tokic</dc:creator>
-  <link>https://mftokic.github.io/posts/2024-04-11-time-series-past-future/index.html</link>
+  <link>https://mftokic.github.io/posts/2024-04-11-time-series-past-future/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -2634,15 +2647,16 @@
   <category>time-series</category>
   <category>machine-learning</category>
   <category>finance</category>
-  <guid>https://mftokic.github.io/posts/2024-04-11-time-series-past-future/index.html</guid>
+  <guid>https://mftokic.github.io/posts/2024-04-11-time-series-past-future/</guid>
   <pubDate>Thu, 11 Apr 2024 07:00:00 GMT</pubDate>
   <media:content url="https://mftokic.github.io/posts/2024-04-11-time-series-past-future/image.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
   <title>Time Series First Principles: Garbage In, Garbage Out</title>
   <dc:creator>Mike Tokic</dc:creator>
-  <link>https://mftokic.github.io/posts/2024-04-08-time-series-garbage/index.html</link>
+  <link>https://mftokic.github.io/posts/2024-04-08-time-series-garbage/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -2715,15 +2729,16 @@
   <category>time-series</category>
   <category>machine-learning</category>
   <category>finance</category>
-  <guid>https://mftokic.github.io/posts/2024-04-08-time-series-garbage/index.html</guid>
+  <guid>https://mftokic.github.io/posts/2024-04-08-time-series-garbage/</guid>
   <pubDate>Mon, 08 Apr 2024 07:00:00 GMT</pubDate>
   <media:content url="https://mftokic.github.io/posts/2024-04-08-time-series-garbage/image.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
   <title>Weekend Reads (4/5/24)</title>
   <dc:creator>Mike Tokic</dc:creator>
-  <link>https://mftokic.github.io/posts/2024-04-05-weekend-reads/index.html</link>
+  <link>https://mftokic.github.io/posts/2024-04-05-weekend-reads/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -2766,15 +2781,16 @@
 
  ]]></description>
   <category>weekend-reads</category>
-  <guid>https://mftokic.github.io/posts/2024-04-05-weekend-reads/index.html</guid>
+  <guid>https://mftokic.github.io/posts/2024-04-05-weekend-reads/</guid>
   <pubDate>Fri, 05 Apr 2024 07:00:00 GMT</pubDate>
   <media:content url="https://mftokic.github.io/posts/2024-04-05-weekend-reads/image.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
   <title>Time Series First Principles: Domain Expertise</title>
   <dc:creator>Mike Tokic</dc:creator>
-  <link>https://mftokic.github.io/posts/2024-04-02-time-series-domain-expertise/index.html</link>
+  <link>https://mftokic.github.io/posts/2024-04-02-time-series-domain-expertise/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -2828,15 +2844,16 @@
   <category>time-series</category>
   <category>machine-learning</category>
   <category>finance</category>
-  <guid>https://mftokic.github.io/posts/2024-04-02-time-series-domain-expertise/index.html</guid>
+  <guid>https://mftokic.github.io/posts/2024-04-02-time-series-domain-expertise/</guid>
   <pubDate>Tue, 02 Apr 2024 07:00:00 GMT</pubDate>
   <media:content url="https://mftokic.github.io/posts/2024-04-02-time-series-domain-expertise/image.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
   <title>Thoughts on First Principles in Time Series Forecasting</title>
   <dc:creator>Mike Tokic</dc:creator>
-  <link>https://mftokic.github.io/posts/2024-03-26-time-series-first-principles-initial/index.html</link>
+  <link>https://mftokic.github.io/posts/2024-03-26-time-series-first-principles-initial/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -2868,15 +2885,16 @@
   <category>time-series</category>
   <category>machine-learning</category>
   <category>finance</category>
-  <guid>https://mftokic.github.io/posts/2024-03-26-time-series-first-principles-initial/index.html</guid>
+  <guid>https://mftokic.github.io/posts/2024-03-26-time-series-first-principles-initial/</guid>
   <pubDate>Tue, 26 Mar 2024 07:00:00 GMT</pubDate>
   <media:content url="https://mftokic.github.io/posts/2024-03-26-time-series-first-principles-initial/image.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
   <title>Weekend Reads (3/22/24)</title>
   <dc:creator>Mike Tokic</dc:creator>
-  <link>https://mftokic.github.io/posts/2024-03-22-weekend-reads/index.html</link>
+  <link>https://mftokic.github.io/posts/2024-03-22-weekend-reads/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -2923,15 +2941,16 @@
 
  ]]></description>
   <category>weekend-reads</category>
-  <guid>https://mftokic.github.io/posts/2024-03-22-weekend-reads/index.html</guid>
+  <guid>https://mftokic.github.io/posts/2024-03-22-weekend-reads/</guid>
   <pubDate>Fri, 22 Mar 2024 07:00:00 GMT</pubDate>
   <media:content url="https://mftokic.github.io/posts/2024-03-22-weekend-reads/image.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
   <title>Weekend Reads (3/16/24)</title>
   <dc:creator>Mike Tokic</dc:creator>
-  <link>https://mftokic.github.io/posts/2024-03-16-weekend-reads/index.html</link>
+  <link>https://mftokic.github.io/posts/2024-03-16-weekend-reads/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -2972,15 +2991,16 @@
 
  ]]></description>
   <category>weekend-reads</category>
-  <guid>https://mftokic.github.io/posts/2024-03-16-weekend-reads/index.html</guid>
+  <guid>https://mftokic.github.io/posts/2024-03-16-weekend-reads/</guid>
   <pubDate>Sat, 16 Mar 2024 07:00:00 GMT</pubDate>
   <media:content url="https://mftokic.github.io/posts/2024-03-16-weekend-reads/image.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
   <title>Thoughts on Power</title>
   <dc:creator>Mike Tokic</dc:creator>
-  <link>https://mftokic.github.io/posts/2024-03-13-power-pursuits/index.html</link>
+  <link>https://mftokic.github.io/posts/2024-03-13-power-pursuits/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -3021,7 +3041,7 @@
 
  ]]></description>
   <category>life</category>
-  <guid>https://mftokic.github.io/posts/2024-03-13-power-pursuits/index.html</guid>
+  <guid>https://mftokic.github.io/posts/2024-03-13-power-pursuits/</guid>
   <pubDate>Wed, 13 Mar 2024 07:00:00 GMT</pubDate>
   <media:content url="https://mftokic.github.io/posts/2024-03-13-power-pursuits/image.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
