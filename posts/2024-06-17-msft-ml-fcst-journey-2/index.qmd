@@ -28,17 +28,50 @@ Now you know why finance had to do something different. Drastically different.
 
 ### Excel Prototype Built in a Redmond Garage
 
-All good things start from humble beginnings. The team in CFT wanted to centralize the field forecast process for the commercial business. Create a single way that everyone in the field would follow to create a forecast. In order to make this a reality, they started with the swiss army knife of every finance professional. That's right. You guessed it. They started with excel. 
+All good things start from humble beginnings. The team in CFT wanted to centralize the field forecast process for the commercial business. Create a single way that everyone in the field would follow to create a forecast. In order to make this a reality, they started with the swiss army knife of every finance professional. That's right. You guessed it. They started with excel. Like any innovative project, it quickly became their baby. And all babies need a name. The named it Commercial Predict. 
 
-The team created an excel prototype of a single model that every field finance team could use. It may have been just as big as 
+The team created an excel prototype of a single model that every field finance team could use. It was a combination of the old and the new. First was old but reliable PxQ forecasts. Where you take what's in a sales pipeline for a quarter and multiply it by how many deals on average we have closed in similar historical quarters. Second was classic CAGR and year over year percentage growths, which acutally still work quite well. These traditional methods were combined with more statistical rigor. Something more along the lines of machine learning. They built by hand, formula by formula, exponential smoothing statistical models. A common model in time series forecasting. It's more stats than machine learning, but still performed really well. Today exponential smoothing is a simple function call in excel, but this team built it from scratch. I tip my cap to them, because that was hard to do. 
+
+Now there were multiple forecasting methods in this mega excel model. The beauty of the idea is that someone could come into the model and choose what methods they wanted to use to forecast a specific geography, customer segment, and product. Users could even combine multiple methods together to get a more accurate forecast. This was powerful because someone could use the PxQ sales pipeline method for products that depended on big customer deals landing, and use the other methods for things that had more stable trends and seasonality. 
+
+It was genious prorotype. The team was able to take this to their leadership team and show how one single approach to do forecasting in the field could save thousands of days of combined human effort across the field every year. One mega model to rule them all. With the promise to cut forecasting down by 50%. Would it work though? To test it out, the team ran this excel model alongside the traditional bottoms up forecast process from each field team. They could then compare the results and even track accuracy across the old and new ways. The results were good. The new prototype was the same or even better than the existing process, but was 50% faster. 
+
+The new approach was fast, and it was accurate. The roadblock before adopting the new approach was to get everyone in the field to agree on what level they should forecast at. This historically was a difficult subject to discuss, with everyone having differing opinions. Thankfully this was solved by getting the buy in from the top senior finance leaders in central finance and the field. Once that happened everyone was able to get on board. 
+
+Ok, so the team had a cool protoype that knew worked well. But if they just used that excel model, then they are still maintaining a model that is messy and requires constant upkeep. It would be hard to scale. They needed something more robust. A real tool that was built by engineers. Thankfully there was a team who could do just that. 
 
 ### Building the Tool
 
+The vendor team who was created to take over the [initial ML forecasts](https://mftokic.github.io/posts/2024-06-12-msft-ml-fcst-journey-1/) was the up to the task. They had the data science knowledge, but the data engineering and software engineering needed to build a software tool to scale out the excel prototype was missing. So the team got other vendors to fill in those gaps. Now there was a team of engineers all capable of making the tool a reality. 
+
+The first version of the production level Commercial Predict tool had to be built fast, before the next CFO forecast cycle. V1 was built into excel as an add-in field users could download and connect to. It needed to combine new machine learning methods with traditional PxQ and CAGR/YoY run rate methods. 
+
+Here's how it worked. 
+
+1. Data engineers would pull historical revenue and sales pipeline data. All of the forecasts methods were precomputed and saved in a database that was turned into a cube. This would be the starting point for all field members. Instead of calculating these by hand in their old excel models, it would be precomputed for them. At scale. 
+2. The forecasts in the cube were then served to users in a custom excel file. Each field team could come into the tool and select the geography, products, and segments they were responsible for forecasting. After making these selections, all of the forecast methods would populate in the excel. 
+3. Users could then see each forecast method and see which ones pass their smell test of what they expect to happen in the business based on their domain knowledge. They could then choose a specific forecast method to use, or combine multiple methods together to get a more robust forecast. Finally there might be things these forecast methods don't know about. Like upcoming tax changes or product strategy changes. Field users could ultimately make manually adjustments to the final forecast. 
+4. Once the final forecast was created, they could save it back to the cube. This allowed finance leaders to see the forecast creation in real time. Also it would prevent the classic "excel crash without saving" headache we've all been through in the past. 
+5. Once the forecast was complete for each field team, a static output file was created at the touch of the button. Teams could take this output and load it into the final planning system. 
+
+Before official launch, training sessions were held to make sure everyone knew how to use it. It was also a good opportunity to fix any bugs in the tool. This resulted in some late nights and even weekend shifts, but the job got done. The tool was launched and the rest is history. 
+
+We were able to go from a forecast process of 21 business days, down to just 10. It was a revolution. This saved Microsoft millions of dollars each year of human capital. Finance teams in the field could now forecast faster, with less headaches, and prevent the layering of bias that was a staple of the previous way. 
 
 ### Evolutions
 
+After this launched in 2018, the Commercial Predict tool has gone through a lot of iterations. What started in excel then moved into a web based tool. Then back to excel. With each iteration, we got better at the machine learning section. Better at adding more features to give users more control over the final forecast. 
+
+Eventually Commercial Predict evolved into a much broader solution called Fusion in 2022. Think of it as a tool that could still do the commercial field forecast process but now also take on other forecasts that are done within Microsoft finance. A true one stop shop for all things planning. Fusion is an excel add-in with a built in UI on the side of excel. Kind of like how excel copilot opens on the side of your excel tab, Fusion could do the same. A user could select what forecast they want to do, select the parts they're responsible for forecasting, and Fusion would populate the blank excel file with all of the information they need to finalize their forecast. Methods like PxQ and machine learning are still ran ahead of time. They UI was truly dynamic. You could take any excel file and open the Fusion app inside to get going on the forecast. 
 
 ### Lessons Learned
 
+#### Iterate Iterate Iterate 
 
-### Final Thoughts
+#### Combine the old with the new
+
+#### Senior leadership buy in 
+
+#### Final Thoughts
+
+Who knows, maybe this will evolve again in the future. Our businesses never stop changing. So the way we forecast will also change. Thankfully People of course are still resistant to using these centralized tool. But that happens with any new technology. It 
