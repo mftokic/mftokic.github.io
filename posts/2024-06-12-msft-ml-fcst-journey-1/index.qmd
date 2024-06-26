@@ -9,6 +9,11 @@ image: "image.png"
 
 ![](./image.png)
 
+This is a multipart series:
+
+- [Part One](https://mftokic.github.io/posts/2024-06-12-msft-ml-fcst-journey-1/)
+- [Part Two](https://mftokic.github.io/posts/2024-06-26-msft-ml-fcst-journey-2/)  
+
 Ever wonder how Microsoft Finance got started with machine learning? It didn't just happen overnight. It started small and grew from calculated steps. In this post and a few others I want to tell the journey of how we got started. Gather round children! It's story time. 
 
 ### Paradigm Shift

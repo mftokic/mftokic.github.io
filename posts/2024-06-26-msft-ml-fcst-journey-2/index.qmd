@@ -2,7 +2,7 @@
 title: "Microsoft Finance ML Forecasting Journey: Part Two"
 description: "Centralizing our largest forecast process with machine learning"
 author: "Mike Tokic"
-date: "2024-06-25"
+date: "2024-06-26"
 categories: [finance, machine-learning, forecasting]
 image: "image.png"
 ---
@@ -10,6 +10,7 @@ image: "image.png"
 ![](./image.png)
 
 This is a multipart series:
+
 - [Part One](https://mftokic.github.io/posts/2024-06-12-msft-ml-fcst-journey-1/)
 - [Part Two](https://mftokic.github.io/posts/2024-06-26-msft-ml-fcst-journey-2/)  
 
@@ -83,7 +84,7 @@ ML didn't outright replace every part of the commercial field forecast. Instead 
 
 A forecast process is like a ship. The bigger the ship, the harder it is to change course. So the bigger the forecast process, the higher the buy in needed from a senior leader. Getting a GM or CVP level support allowed us to supercharge the change management. It's easy to get bogged down in arguing with senior finance managers about how a forecast process should be done. Once a CVP (someone who reports to the CFO) comes in and says this is how we're going to do it. Then everyone gets on board and starts turning the wheel of the ship togethger to change direction. The commercial field forecast had to get support from GM and CVP level leaders or else it would have taken years to change it instead of months. 
 
-#### Final Thoughts
+### Final Thoughts
 
 The hardest part of any ML project comes down to people. Training models is easy, convincing people to use them is hard. It takes time. It takes senior leader buy in. It takes an open mind to rethink how your job can be done. It might be hard, but in the end it's worth it. 
 
