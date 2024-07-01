@@ -1,8 +1,8 @@
 ---
-title: "Microsoft Finance ML Forecasting Journey: Part Two"
-description: "Centralizing our largest forecast process with machine learning"
+title: "Microsoft Finance ML Forecasting Journey: Part Three"
+description: "Democratizing machine learning to everyone in finance"
 author: "Mike Tokic"
-date: "2024-06-26"
+date: "2024-07-01"
 categories: [finance, machine-learning, forecasting]
 image: "image.png"
 draft: true
@@ -16,11 +16,33 @@ This is a multipart series:
 - [Part Two](https://mftokic.github.io/posts/2024-06-26-msft-ml-fcst-journey-2/)  
 - [Part Three]()
 
+By now you should know how we started our machine learning (ML) forecast journey and how we applied it to Microsoft's largest forecast process. But the fun doesn't stop there. We were able to tranform the biggest forecast process, but not every forecast process. There are hundreds more forecast processes in finance that are still in the dark ages. Essentially people with paper and pen creating these forecasts (written down in excel models). Not knowing the potential ML can have on their job. All of these forecasts are important, but cannot scale in centralized tools like we discussed in [part two](https://mftokic.github.io/posts/2024-06-26-msft-ml-fcst-journey-2/). Something else had to be done. Centralizing processes can help solve many problems but not all problems. Sometimes you have to build democratized tools that give the power back to the people. That's exactly what we did with ML forecasting. Keep reading to find out how.  
+
 ### Total Adressable Market
 
-### Prototype 
+There are around 5,000 full time employees who work for Amy Hood, the CFO of Microsoft. They do a lot of things. Some are considered finance roles while others are not. About 40% of these employees do some sort of predicting the future. This is the "planning" in "financial planning and analysis" roles in corporate finance. These predictions are often around future financial metrics. Like how much revenue a product will make next month or how much headcount we will have on a specific engineering team. Let's run the numbers to see how much time, and in essence money, is spent doing this one simple job of forecasting. 
 
-### Scaling Up
+- 5,000 finance employees
+- 40% create forecasts
+- Spend ~4 days a quarter creating forecasts (very conservative number)
+
+Doing the math this equals around 24,000 days of human effort spent every year forecasting (24,000 = 5,000 x .40 x 12). If the average finance headcount costs Microsoft $250,000 year (salary, benefits, office space, etc) then the total cost of forecasting is around $24,000,000 ($1,000 per day x 24,000 days). Yep, that's 24 million a year just crunching numbers in excel. This is also a pretty conservative estimate. I know some teams who spend weeks every quarter just forecasting, so it could easily be higher. 
+
+Think of this 24m as the total addressable market (TAM) for forecasting in Microsoft finance. 
+
+The largest forecast process we discussed in part two only saves 10% of this 24m number. So we have a long ways to go in making a dent in this TAM. Unforuntately we cannot create 9 more centralized forecast solutions to cover the TAM. There is a long tail effect here, where the last 50-80% of forecasting might be done by 100+ forecast processes. We simply cannot create ML forecasts for everyone. There are not enough data scientists and data engineers needed to do that. 
+
+But hang on a second, what if we flip the script on that idea? Instead of having a dozen data scientists and data engineers maintain 100 ML forecast solutions. What if we have 100 regular finance people maintain their own single ML forecast? 
+
+### Self Serve Ice Cream Prototype
+
+I graduated [Microsoft's Finance Rotation Program](https://mftokic.github.io/posts/2024-02-19-frp-journey/) (FRP) in the fall of 2018. My full time post program role was on the same business intelligence team as my fourth rotation. Basically I stuck around until they gave me a job. In that job I supported the Bing finance team. I helped them build ML forecasts for things like search volume and revenue on the Bing platform. It was my first true ML job where I wrote code and had legit business partners. It was awesome. Writing code to train models each day was a dream come true. 
+
+Initially I wrote code to create models to forecast search volume. Pretty soon that spread to trying to calculate search rates, or how much money we could make off "x" amount of search volume. This PxQ approach would be used to get to search revenue. I created monthly forecasts, then weekly, then daily. Each time I had to rewrite the code to purspose fit it for the specific task at hand. 
+
+### Scaling Up on Replay
+
+### Future State
 
 ### Lessons Learned
 
@@ -31,3 +53,5 @@ This is a multipart series:
 #### Leap of Faith
 
 ### Final Thoughts
+
+[finnts](https://microsoft.github.io/finnts/index.html)

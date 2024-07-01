@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Mike Tokic">
-<meta name="dcterms.date" content="2024-06-04">
-<meta name="description" content="Series On Understanding Core ML Concepts">
+<meta name="dcterms.date" content="2024-07-01">
+<meta name="description" content="Democratizing machine learning to everyone in finance">
 
-<title>Machine Learning Basics – Thoughts on Things</title>
+<title>Microsoft Finance ML Forecasting Journey: Part Three – Thoughts on Things</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -85,13 +85,13 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Thoughts on Things - Machine Learning Basics">
-<meta property="og:description" content="Series On Understanding Core ML Concepts">
-<meta property="og:image" content="https://mftokic.github.io/posts/2024-06-04-ml-basics/image.png">
+<meta property="og:title" content="Thoughts on Things - Microsoft Finance ML Forecasting Journey: Part Three">
+<meta property="og:description" content="Democratizing machine learning to everyone in finance">
+<meta property="og:image" content="https://mftokic.github.io/posts/2024-07-01-msft-ml-fcst-journey-3/image.png">
 <meta property="og:site_name" content="Thoughts on Things">
-<meta name="twitter:title" content="Thoughts on Things - Machine Learning Basics">
-<meta name="twitter:description" content="Series On Understanding Core ML Concepts">
-<meta name="twitter:image" content="https://mftokic.github.io/posts/2024-06-04-ml-basics/image.png">
+<meta name="twitter:title" content="Thoughts on Things - Microsoft Finance ML Forecasting Journey: Part Three">
+<meta name="twitter:description" content="Democratizing machine learning to everyone in finance">
+<meta name="twitter:image" content="https://mftokic.github.io/posts/2024-07-01-msft-ml-fcst-journey-3/image.png">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -146,15 +146,16 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Machine Learning Basics</h1>
+      <h1 class="title">Microsoft Finance ML Forecasting Journey: Part Three</h1>
                   <div>
         <div class="description">
-          Series On Understanding Core ML Concepts
+          Democratizing machine learning to everyone in finance
         </div>
       </div>
                           <div class="quarto-categories">
-                <div class="quarto-category">machine-learning</div>
                 <div class="quarto-category">finance</div>
+                <div class="quarto-category">machine-learning</div>
+                <div class="quarto-category">forecasting</div>
               </div>
                   </div>
   </div>
@@ -172,7 +173,7 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">June 4, 2024</p>
+        <p class="date">July 1, 2024</p>
       </div>
     </div>
     
@@ -192,8 +193,56 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 
 
 <p><img src="./image.png" class="img-fluid"></p>
+<p>This is a multipart series:</p>
+<ul>
+<li><a href="https://mftokic.github.io/posts/2024-06-12-msft-ml-fcst-journey-1/">Part One</a></li>
+<li><a href="https://mftokic.github.io/posts/2024-06-26-msft-ml-fcst-journey-2/">Part Two</a><br>
+</li>
+<li><a href="">Part Three</a></li>
+</ul>
+<p>By now you should know how we started our machine learning (ML) forecast journey and how we applied it to Microsoft’s largest forecast process. But the fun doesn’t stop there. We were able to tranform the biggest forecast process, but not every forecast process. There are hundreds more forecast processes in finance that are still in the dark ages. Essentially people with paper and pen creating these forecasts (written down in excel models). Not knowing the potential ML can have on their job. All of these forecasts are important, but cannot scale in centralized tools like we discussed in <a href="https://mftokic.github.io/posts/2024-06-26-msft-ml-fcst-journey-2/">part two</a>. Something else had to be done. Centralizing processes can help solve many problems but not all problems. Sometimes you have to build democratized tools that give the power back to the people. That’s exactly what we did with ML forecasting. Keep reading to find out how.</p>
+<section id="total-adressable-market" class="level3">
+<h3 class="anchored" data-anchor-id="total-adressable-market">Total Adressable Market</h3>
+<p>There are around 5,000 full time employees who work for Amy Hood, the CFO of Microsoft. They do a lot of things. Some are considered finance roles while others are not. About 40% of these employees do some sort of predicting the future. This is the “planning” in “financial planning and analysis” roles in corporate finance. These predictions are often around future financial metrics. Like how much revenue a product will make next month or how much headcount we will have on a specific engineering team. Let’s run the numbers to see how much time, and in essence money, is spent doing this one simple job of forecasting.</p>
+<ul>
+<li>5,000 finance employees</li>
+<li>40% create forecasts</li>
+<li>Spend ~4 days a quarter creating forecasts (very conservative number)</li>
+</ul>
+<p>Doing the math this equals around 24,000 days of human effort spent every year forecasting (24,000 = 5,000 x .40 x 12). If the average finance headcount costs Microsoft $250,000 year (salary, benefits, office space, etc) then the total cost of forecasting is around $24,000,000 ($1,000 per day x 24,000 days). Yep, that’s 24 million a year just crunching numbers in excel. This is also a pretty conservative estimate. I know some teams who spend weeks every quarter just forecasting, so it could easily be higher.</p>
+<p>Think of this 24m as the total addressable market (TAM) for forecasting in Microsoft finance.</p>
+<p>The largest forecast process we discussed in part two only saves 10% of this 24m number. So we have a long ways to go in making a dent in this TAM. Unforuntately we cannot create 9 more centralized forecast solutions to cover the TAM. There is a long tail effect here, where the last 50-80% of forecasting might be done by 100+ forecast processes. We simply cannot create ML forecasts for everyone. There are not enough data scientists and data engineers needed to do that.</p>
+<p>But hang on a second, what if we flip the script on that idea? Instead of having a dozen data scientists and data engineers maintain 100 ML forecast solutions. What if we have 100 regular finance people maintain their own single ML forecast?</p>
+</section>
+<section id="self-serve-ice-cream-prototype" class="level3">
+<h3 class="anchored" data-anchor-id="self-serve-ice-cream-prototype">Self Serve Ice Cream Prototype</h3>
+<p>I graduated <a href="https://mftokic.github.io/posts/2024-02-19-frp-journey/">Microsoft’s Finance Rotation Program</a> (FRP) in the fall of 2018. My full time post program role was on the same business intelligence team as my fourth rotation. Basically I stuck around until they gave me a job. In that job I supported the Bing finance team. I helped them build ML forecasts for things like search volume and revenue on the Bing platform. It was my first true ML job where I wrote code and had legit business partners. It was awesome. Writing code to train models each day was a dream come true.</p>
+<p>Initially I wrote code to create models to forecast search volume. Pretty soon that spread to trying to calculate search rates, or how much money we could make off “x” amount of search volume. This PxQ approach would be used to get to search revenue. I created monthly forecasts, then weekly, then daily. Each time I had to rewrite the code to purspose fit it for the specific task at hand.</p>
+</section>
+<section id="scaling-up-on-replay" class="level3">
+<h3 class="anchored" data-anchor-id="scaling-up-on-replay">Scaling Up on Replay</h3>
+</section>
+<section id="future-state" class="level3">
+<h3 class="anchored" data-anchor-id="future-state">Future State</h3>
+</section>
+<section id="lessons-learned" class="level3">
+<h3 class="anchored" data-anchor-id="lessons-learned">Lessons Learned</h3>
+<section id="paradigm-shift" class="level4">
+<h4 class="anchored" data-anchor-id="paradigm-shift">Paradigm Shift</h4>
+</section>
+<section id="duplication-of-work" class="level4">
+<h4 class="anchored" data-anchor-id="duplication-of-work">Duplication of Work</h4>
+</section>
+<section id="leap-of-faith" class="level4">
+<h4 class="anchored" data-anchor-id="leap-of-faith">Leap of Faith</h4>
+</section>
+</section>
+<section id="final-thoughts" class="level3">
+<h3 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h3>
+<p><a href="https://microsoft.github.io/finnts/index.html">finnts</a></p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
