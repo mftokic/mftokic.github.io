@@ -56,23 +56,47 @@ All great tools need a name. Most things at Microsoft are acronymns, which every
 
 I rolled out an early beta of Finn at Microsoft's company wide hackathon in July 2019. Finance employees bravely signed up to be my guinne pigs for three days. They would stop by, bring some historical data they want forecasted, and attempt to use the tool. They got confused at times. And even more times the tool broke on a corner case with their data. It was glorious. Fixing bugs on the fly and seeing people use something you've built, even be a little excited about it, was like nothing I've ever experienced. I knew this was it for me, I had to make this work. 
 
-The hackathon was a medium success. Less than 10 people showed up, but those who did gave amazing feedback that I used to make the tool better. I was now ready to officially launch it to the masses. Before the big launch, I demoed it to my BI team, and people laughed. Yep, laughed. They joked that 
+The hackathon was a medium success. Less than 10 people showed up, but those who did gave amazing feedback that I used to make the tool better. I was now ready to officially launch it to the masses. Before the big launch, I demoed it to my BI team, and people laughed. Yep, laughed. People said it was too complex and no one in finance would follow the steps needed to submit a forecast run. It was hard to hear but good feedback. I continued to iterate. 
+
+By the fall of 2019 Finn was ready for launch. We held training sessions, presented at CVP level all hands meetings, and basically told everyone I knew that they could start using Finn. Machine learning was still so new to people, so there were always people willing to try it out. With each passing month I would gather feedback, making improvements, and slowly usage grew.  
 
 ### Scaling Up
 
-Moving to Replay. Migrating to Azure ML. Creating open-source package. Getting more users. 
+Finn was an interesting tool with a terrible UI. The UI was an excel template uploaded through a Power Automate flow. It wasn't pretty but it worked. The tool needed a facelift, something to take it to the next level. Thankfully at this time my BI team was working on another tool called "Replay". It was touted as an internal portal for custom built apps specific to Microsoft Finance. The first big feature was going to be centralized reporting. They were also interested in adding other apps into the mix. We pitched them Finn and thankfully they agreed to add a Finn app. 
+
+The newest Finn app launched alongside the new Replay site in March 2021. People could now go to a legit website, upload an excel or csv file, click through a UI to adjust various inputs, then click submit. The ML magic would happen behind the scenes. Then they could come back to the site and see when their ML run finished. Even download the output files. A user could submit a ML forecast run in 10 clicks of their mouse. It was magnificent. 
+
+In order to make this happen we had to completely rebuilt the ML backend of Finn. Moving away from on-prem servers and into the cloud on Azure. This involved things like data lakes and Azure Machine Learning. We were able to migrate the Finn API to an Azure ML pipeline. Allowing for better scale and monitoring. The core modeling code also got an upgrade. We partnered with the Chief Economist team within Microsoft Research to make the ML brain of Finn more robust. The data scientists on the Chief Economist team were amazing mentors to me. I learned years worth of knowledge within months. It goes to show how a good mentor can make all the difference. 
+
+After giving the core ML code a makeover, we realized that we could package it up and make it open-source. Allowing other finance teams at other companies to use the exact same forecast process we use at Microsoft. This was released as an R packaged called [finnts](https://microsoft.github.io/finnts/index.html). Anyone can now take the code and use it, free of charge. 
+
+We also realized that not everyone wants to use the self-serve UI to get a forecast. Sometimes people still want to use code, so we built a more general purpose API that allows anyone to call Finn on demand via API and give them a forecast on their specific data lake. Various engineering teams in Treasury, FinOps, etc now call Finn via API to produce forecasts on demand and at scale. This is how the Fusion tool mentioned in [Part Two](https://mftokic.github.io/posts/2024-06-26-msft-ml-fcst-journey-2/) uses Finn today.
 
 ### Future State
+
+Finn continues to change almost on a monthly basis. There are hundreds of things we want to add or improve in the tool. Here are a few that come to mind. 
+
+1. **Forecast Accuracy**: Always a top priority. No one will use a ML forecast if it's less accurate than the previous manual forecast. There are countless ways we can make Finn more accurate. Thankfully all of them will be made available in the open-source [finnts](https://microsoft.github.io/finnts/index.html) package.
+2. **Model Interpretability**: Once finance users get the level of accuracy needed, their next question is always around knowing how these models created the forecast. This is our next top priority that we are now starting to work on. 
+3. **Forecast Adjustments**: ML forecasts may not capture everything about the future. There might be changes in business strategy, new product launches, or tax changes that could affect the forecast. This is where human domain knowledge comes in the form of manual adjustments. We want to create a way for ML to do the initial 80% of the work, and allow humans to come in for the last 20% and easily make and track manual forecast adjustments when needed. 
 
 ### Lessons Learned
 
 #### Paradigm Shift
 
+Going from a manual forecast done in excel to a ML forecast requires a large paradigm shift in the brain of a finance person. You're going from a deterministic process, where you know all the inputs and formulas used to create the forecast. To a probabilistic one, where there is this black box that takes in data and spits out a forecast. There are ways to explain what's going on in the black box, but they are not perfect. You will not be able to trace through a ML forecast step by step like you can with a good excel model. So finance people need to change their mindset and know the potential tradeoffs of using ML. It boils down to a change in control. From letting a human control the entire forecast to now letting a machine control most of the process.   
+
 #### Duplication of Work
+
+Most of the time people do not stop their manual forecast process and immediately switch to a 100% ML powered forecast. Often there needs to be overlap between the old process and the new process. This can be a few months (or even years) where ML is ran alongside the manual forecast process. With ML serving as a triangulation point until the team is ready to make the switch. This creates a duplicate of effort. Finance people barely have enough time to do their current job to sometimes learn a new way of doing it. That's when senior leadership needs to kick in to help their teams prioritize using ML. Not just as a nice to have but to eventually change how their jobs get done. To do that brings us to the next lesson, taking the leap of faith. 
 
 #### Leap of Faith
 
+You know that [scene in the Dark Knight Rises](https://youtu.be/DjffIi2Pl7M?si=UWMjRJphxhIKnY-u) where Batman escapes the third world prison? The reason he escaped was because he literally took a leap of faith, without the rope. Using ML as a trinagulation point is like jumping with the rope attached to you. You will never truly have ML help you because you can always fall back on the manual forecast. I've seen some teams use Finn for years but only ever as a triangulation point. In order to truly get the benefits of ML, you need to take the leap of faith. Jump without a rope. Ditch the manual forecast. It seems scary at first, but soon you'll be laughing at how much time you spent forecasting each month.  
+
 #### Invest in Youth
+
+FRPs who haven't learned any bad habits. Who don't know any other way of doing it. 
 
 ### Final Thoughts
 
