@@ -10,7 +10,107 @@
 <atom:link href="https://mftokic.github.io/index.xml" rel="self" type="application/rss+xml"/>
 <description>A collection of thoughts on things from the mind of Mike Tokic</description>
 <generator>quarto-1.5.45</generator>
-<lastBuildDate>Fri, 28 Jun 2024 07:00:00 GMT</lastBuildDate>
+<lastBuildDate>Mon, 15 Jul 2024 07:00:00 GMT</lastBuildDate>
+<item>
+  <title>Microsoft Finance ML Forecasting Journey: Part Three</title>
+  <dc:creator>Mike Tokic</dc:creator>
+  <link>https://mftokic.github.io/posts/2024-07-15-msft-ml-fcst-journey-3/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p><img src="https://mftokic.github.io/posts/2024-07-15-msft-ml-fcst-journey-3/image.png" class="img-fluid"></p>
+<p>This is a multipart series:</p>
+<ul>
+<li><a href="https://mftokic.github.io/posts/2024-06-12-msft-ml-fcst-journey-1/">Part One</a></li>
+<li><a href="https://mftokic.github.io/posts/2024-06-26-msft-ml-fcst-journey-2/">Part Two</a><br>
+</li>
+<li><a href="https://mftokic.github.io/posts/2024-07-15-msft-ml-fcst-journey-3/">Part Three</a></li>
+</ul>
+<p>By now you should know how we started our machine learning (ML) forecast journey and how we applied it to Microsoft’s largest forecast process. But the fun doesn’t stop there. We were able to transform the biggest forecast process, but not every forecast process. There are hundreds more forecast processes in finance that are still in the dark ages. Essentially people with paper and pen creating these forecasts (written down inside excel models). Not knowing the potential ML can have on their job. All of these forecasts are important, but cannot scale in centralized tools like we discussed in <a href="https://mftokic.github.io/posts/2024-06-26-msft-ml-fcst-journey-2/">part two</a>. Something else had to be done. Centralizing processes can help solve many problems but not all problems. Sometimes you have to build democratized tools that give the power back to the people. That’s exactly what we did with ML forecasting. Keep reading to find out how.</p>
+<section id="total-addressable-market" class="level3">
+<h3 class="anchored" data-anchor-id="total-addressable-market">Total Addressable Market</h3>
+<p>There are around 5,000 full time employees who work for Amy Hood, the CFO of Microsoft. They do a lot of different jobs. Some are considered finance roles while others are not. About 40% of these employees do some sort of predicting the future. This is the “planning” in “financial planning and analysis” roles in corporate finance. These predictions are often around future financial metrics. Like how much revenue a product will make next month or how much headcount we will have on a specific engineering team. Let’s run the numbers to see how much time, and in essence money, is spent doing this one simple job of forecasting.</p>
+<ul>
+<li>5,000 finance employees</li>
+<li>40% create forecasts</li>
+<li>Spend ~4 days a quarter creating forecasts (very conservative number)</li>
+</ul>
+<p>Doing the math this equals around 24,000 days of human effort spent every year forecasting (24,000 = 5,000 x .40 x 12). If the average finance headcount costs Microsoft $250,000 year (salary, benefits, office space, etc) then the total cost of forecasting is around $24,000,000 ($1,000 per day x 24,000 days). Yep, that’s 24 million a year just crunching numbers in excel. This is also a pretty conservative estimate. I know some teams who spend weeks every quarter just forecasting, so it could easily be higher.</p>
+<p>Think of this 24 million as the total addressable market (TAM) for forecasting in Microsoft finance.</p>
+<p>The largest forecast process we discussed in part two only saves 10% of this 24 million. So we have a long ways to go in making a dent in this TAM. Unfortunately we cannot create 9 more centralized forecast solutions to cover the TAM. There is a long tail effect here, where the last 50-60% of forecasting might be done by 100+ forecast processes. We simply cannot create ML forecasts for everyone. There are not enough data scientists and data engineers needed to do that.</p>
+<p>But hang on a second, what if we flip the script on that idea? Instead of having a dozen data scientists and data engineers maintain 100 ML forecast solutions. What if we have 100 regular finance people maintain their own single ML forecast? This is how a tool called “Finn” was born.</p>
+</section>
+<section id="self-serve-ice-cream-prototype" class="level3">
+<h3 class="anchored" data-anchor-id="self-serve-ice-cream-prototype">Self Serve Ice Cream Prototype</h3>
+<p>I graduated <a href="https://mftokic.github.io/posts/2024-02-19-frp-journey/">Microsoft’s Finance Rotation Program</a> (FRP) in the fall of 2018. My full time post program role was on the same business intelligence team as my fourth rotation. Basically I stuck around until they gave me a job. In that job I supported the Bing finance team. I helped them build ML forecasts for things like search volume and revenue on the Bing platform. It was my first true ML job where I wrote code and had legit business partners. It was awesome. Writing code to train models each day was a dream come true.</p>
+<p>Initially I wrote code to create models to forecast search volume. Pretty soon that spread to trying to calculate search rates, or how much money we could make off “x” amount of search volume. This PxQ approach would be used to get to search revenue. I created monthly forecasts, then weekly, then daily. Each time I had to rewrite the code to purpose fit it for the specific task at hand.</p>
+<p>Pretty soon I started to turn the custom code written for each forecast task into reusable components that could be used across all forecast projects. Just take the code and plug ’n play with new historical data. It was fun to build and I was learning a lot. This meant that I was always on the hook for producing new forecasts though. Each time the Bing finance team needed an updated forecast, I had to be there to run it, create a report, and send it to them. I was now the data scientist training the ML models, the ML engineer serving the final outputs, and also the PM creating the final report and working with the business partner. I quickly learned that this was impossible to scale.</p>
+<p>What really cemented the scale issue was when another team, called Device Market Intelligence (DMI), heard about the work in Bing and wanted it applied to their market analytics of the Windows PC ecosystem. I was able to take the reusable code and apply it to DMI PC shipment forecasts, but I was still the human in the loop. Always on call to update forecasts and make tweaks as I got business partner feedback. I needed to scale myself.</p>
+<p>It was around this time that I was at my desk having just come back from lunch. I was thinking about ice cream, and how awesome those self serve ice cream machines are. Where you can make the worlds largest ice cream cone or a huge sundae in a bowl. As a random thought I wrote down “self serve machine learning” on a sticky note and stuck it on my computer monitor. I didn’t give much thought to it, but thought it was cool enough to write down to make sure I didn’t forget it.</p>
+<p>Months rolled by. I continued to run ML forecasts for both the Bing and DMI finance teams. Each time manually pulling the data and kicking off ML runs. Then sending them the outputs via excel report. It was at this time that I spoke with a coworker about an automation project that blew my mind. They were able to create an API that could kick off a large forecast process on demand. Without having to manually run code. Basically you press a button and the rest of the process takes care of itself. This started to turn the wheels in my head. What if I could take my reusable ML forecasting code and put it behind this kind of automated process?</p>
+<p>I couldn’t stop thinking about it. How could I create a way to let someone kick off a ML forecast run without needing to come talk to me? Could they pull their own historical data, upload it inside of some tool, then an hour later get back a forecast they could use? I had no clue how to do this but wanted to figure how.</p>
+<p>Over a few months I was able to put together a god awful prototype. One that allowed a user to fill out an excel template that had tabs to add their historical data and tabs to control certain inputs like forecast horizon. They could then upload that file into a Microsoft Power Automate flow. This flow would take their file, copy it to a shared server, then kick off an API that would run the ML forecast process. After it finished running the user would get an email with a link to where they could download the ML output results. It was all built with chewing gum and duct tape, but it worked. It actually worked. I felt like a super hero.</p>
+<p>All great tools need a name. Most things at Microsoft are acronyms, which everyone hates. There is literally an internal company acronym lookup tool because there are so many. So I wanted to create a name that wasn’t an acronym, but also kind of described what it did. In essence it was a tool for financial forecasting. I settled on a one syllable word that kind of had finance in the name. I called it “Finn”. When I told this to my manager, they said “are you sure”? And “ok we can always update the name later”. The name stuck and is still around today. Sadly people still think it’s an acronym.</p>
+<p>I rolled out an early beta of Finn at Microsoft’s company wide hackathon in July 2019. Finance employees bravely signed up to be my guienne pigs for three days. They would stop by, bring some historical data they want forecasted, and attempt to use the tool. They got confused at times. And even more times the tool broke on a corner case with their data. It was glorious. Fixing bugs on the fly and seeing people use something I’ve built, even be a little excited about it, was like nothing I’ve ever experienced. I knew this was it for me, I had to make this work.</p>
+<p>The hackathon was a medium success. Less than 10 people showed up, but those who did gave amazing feedback that I used to make the tool better. I was now ready to officially launch it to the masses. Before the big launch, I demoed it to my BI team, and people laughed. Yep, laughed. People said it was too complex and no one in finance would follow the steps needed to submit a forecast run. It was hard to hear but good feedback. I continued to iterate.</p>
+<p>By the fall of 2019 Finn was ready for launch. We held training sessions, presented at CVP level all hands meetings, and basically told everyone I knew that they could start using Finn. Machine learning was still so new to people, so there were always people willing to try it out. With each passing month I would gather feedback, making improvements, and slowly usage grew.</p>
+</section>
+<section id="scaling-up" class="level3">
+<h3 class="anchored" data-anchor-id="scaling-up">Scaling Up</h3>
+<p>Finn was an interesting tool with a terrible UI. The UI was an excel template uploaded through a Power Automate flow. It wasn’t pretty but it worked. The tool needed a facelift, something to take it to the next level. Thankfully at this time my BI team was working on another tool called “Replay”. It was touted as an internal portal for custom built apps specific to Microsoft Finance. The first big feature was going to be centralized reporting. They were also interested in adding other apps into the mix. We pitched them Finn and thankfully they agreed to add a Finn app.</p>
+<p>The newest Finn app launched alongside the new Replay site in March 2021. People could now go to a legit website, upload an excel or csv file, click through a UI to adjust various inputs, then click submit. The ML magic would happen behind the scenes. Then they could come back to the site and see when their ML run finished. Even download the output files. A user could submit a ML forecast run in 10 clicks of their mouse. It was magnificent.</p>
+<p>In order to make this happen we had to completely rebuild the ML backend of Finn. Moving away from on-prem servers and into the cloud on Azure. This involved things like data lakes and Azure Machine Learning. We were able to migrate the Finn API to an Azure ML pipeline. Allowing for better scale and monitoring. The core modeling code also got an upgrade. We partnered with the Chief Economist team within Microsoft Research to make the ML brain of Finn more robust. The data scientists on the Chief Economist team were amazing mentors to me. I learned years worth of knowledge within months. It goes to show how a good mentor can make all the difference.</p>
+<p>After giving the core ML code a makeover, we realized that we could package it up and make it open-source. Allowing other finance teams at other companies to use the exact same forecast process we use at Microsoft. This was released as an R packaged called <a href="https://microsoft.github.io/finnts/index.html">finnts</a>. Anyone can now take the code off the shelf and use it, free of charge.</p>
+<p>We also realized that not everyone wants to use the self-serve UI to get a forecast. Sometimes people still want to use code, so we built a more general purpose API that allows anyone to call Finn on demand via API and give them a forecast on their specific data lake. Various engineering teams in Treasury, FinOps, etc now call Finn via API to produce forecasts on demand and at scale. This is how the Fusion tool mentioned in <a href="https://mftokic.github.io/posts/2024-06-26-msft-ml-fcst-journey-2/">Part Two</a> uses Finn today.</p>
+</section>
+<section id="future-state" class="level3">
+<h3 class="anchored" data-anchor-id="future-state">Future State</h3>
+<p>Finn continues to change almost on a monthly basis. There are hundreds of things we want to add or improve in the tool. Here are a few that come to mind.</p>
+<ol type="1">
+<li><strong>Forecast Accuracy</strong>: Always a top priority. No one will use a ML forecast if it’s less accurate than the previous manual forecast. There are countless ways we can make Finn more accurate. Thankfully all of them will be made available in the open-source <a href="https://microsoft.github.io/finnts/index.html">finnts</a> package.</li>
+<li><strong>Model Interpretability</strong>: Once finance users get the level of accuracy needed, their next question is always around knowing how these models created the forecast. This is our next top priority that we are now starting to work on.</li>
+<li><strong>Forecast Adjustments</strong>: ML forecasts may not capture everything about the future. There might be changes in business strategy, new product launches, or tax changes that could affect the forecast. This is where human domain knowledge comes in the form of manual adjustments. We want to create a way for ML to do the initial 80% of the work, and allow humans to come in for the last 20% and easily make and track manual forecast adjustments when needed.</li>
+</ol>
+</section>
+<section id="lessons-learned" class="level3">
+<h3 class="anchored" data-anchor-id="lessons-learned">Lessons Learned</h3>
+<section id="paradigm-shift" class="level4">
+<h4 class="anchored" data-anchor-id="paradigm-shift">Paradigm Shift</h4>
+<p>Going from a manual forecast done in excel to a ML forecast requires a large paradigm shift in the brain of a finance person. You’re going from a deterministic process, where you know all the inputs and formulas used to create the forecast. To a probabilistic one, where there is this black box that takes in data and spits out a forecast. There are ways to explain what’s going on in the black box, but they are not perfect. You will not be able to trace through a ML forecast step by step like you can with a good excel model. So finance people need to change their mindset and know the potential tradeoffs of using ML. It boils down to a change in control. From letting a human control the entire forecast to now letting a machine control most of the process. As AI technology gets better, we will all turn into a form of a manager. Instead of managing people, we will manage little AI employees (or agents) to do our work for us. The sooner you embrace this, the bigger the impact you will have going forward into this AI future.</p>
+</section>
+<section id="duplication-of-work" class="level4">
+<h4 class="anchored" data-anchor-id="duplication-of-work">Duplication of Work</h4>
+<p>Most of the time people do not stop their manual forecast process and immediately switch to a 100% ML powered forecast. Often there needs to be overlap between the old process and the new process. This can be a few months (or even years) where ML is ran alongside the manual forecast process. With ML serving as a triangulation point until the team is ready to make the switch. This creates a duplicate of effort. Finance people barely have enough time to do their current job to sometimes learn a new way of doing it. That’s when senior leadership needs to kick in to help their teams prioritize using ML. Not just as a nice to have but to eventually change how their jobs get done. To do that brings us to the next lesson, taking the leap of faith.</p>
+</section>
+<section id="leap-of-faith" class="level4">
+<h4 class="anchored" data-anchor-id="leap-of-faith">Leap of Faith</h4>
+<p>You know that <a href="https://youtu.be/DjffIi2Pl7M?si=UWMjRJphxhIKnY-u">scene in the Dark Knight Rises</a> where Batman escapes the third world prison? The reason he escaped was because he literally took a leap of faith, without the rope. Using ML as a triangulation point is like jumping with the rope attached to you. You will never truly have ML help you because you can always fall back on the manual forecast. I’ve seen some teams use Finn for years but only ever as a triangulation point. In order to truly get the benefits of ML, you need to take the leap of faith. Jump without a rope. Ditch the manual forecast. It seems scary at first, but soon you’ll be laughing at how much time you spent forecasting each month.</p>
+<p>The best way to take a leap of faith is having senior leaders give you the kick in the butt to make the jump to full ML. If senior leaders aren’t expecting to see ML usage grow on their team, adoption will slow to only those employees brave enough to jump by themselves. That’s a small number. Get higher ups to buy in and lead the way.</p>
+</section>
+<section id="invest-in-youth" class="level4">
+<h4 class="anchored" data-anchor-id="invest-in-youth">Invest in Youth</h4>
+<p>It’s a lot easier to teach someone fresh out of school to use ML compared to a senior employee who has built excel models for 20 years. Younger people are more open to technology. They have no bad habits to unlearn. They don’t know any other way of doing things. These are the people you want to equip with ML tools. If they use ML in their initial jobs, once they become a senior executive they will make sure ML use becomes standard on their teams. This is kind of like planting trees. It takes time to see results, but one day you will have an entire forest of ML experts leading the charge.</p>
+</section>
+</section>
+<section id="final-thoughts" class="level3">
+<h3 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h3>
+<p>This wraps up our three part series on ML forecasting in Microsoft finance. I started at the beginning with our first ever solution in <a href="https://mftokic.github.io/posts/2024-06-12-msft-ml-fcst-journey-1/">Part One</a>, then discussed how we built tools to centralize the forecasting process in <a href="https://mftokic.github.io/posts/2024-06-26-msft-ml-fcst-journey-2/">Part Two</a>, and finally I wrapped up with telling you how we decentralized ML to everyone in Finance in <a href="https://mftokic.github.io/posts/2024-07-15-msft-ml-fcst-journey-3/">Part Three</a>. If you’d like to use the same forecasting techniques as we do at Microsoft, check out our free forecasting package called <a href="https://microsoft.github.io/finnts/index.html">finnts</a>.</p>
+<p>May the MAPE ever be in your favor. Happy forecasting!</p>
+
+
+</section>
+
+ ]]></description>
+  <category>finance</category>
+  <category>machine-learning</category>
+  <category>forecasting</category>
+  <guid>https://mftokic.github.io/posts/2024-07-15-msft-ml-fcst-journey-3/</guid>
+  <pubDate>Mon, 15 Jul 2024 07:00:00 GMT</pubDate>
+  <media:content url="https://mftokic.github.io/posts/2024-07-15-msft-ml-fcst-journey-3/image.png" medium="image" type="image/png" height="82" width="144"/>
+</item>
 <item>
   <title>Inner Circles of Life</title>
   <dc:creator>Mike Tokic</dc:creator>
@@ -3099,62 +3199,6 @@
   <guid>https://mftokic.github.io/posts/2024-03-26-time-series-first-principles-initial/</guid>
   <pubDate>Tue, 26 Mar 2024 07:00:00 GMT</pubDate>
   <media:content url="https://mftokic.github.io/posts/2024-03-26-time-series-first-principles-initial/image.png" medium="image" type="image/png" height="144" width="144"/>
-</item>
-<item>
-  <title>Weekend Reads (3/22/24)</title>
-  <dc:creator>Mike Tokic</dc:creator>
-  <link>https://mftokic.github.io/posts/2024-03-22-weekend-reads/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p><img src="https://mftokic.github.io/posts/2024-03-22-weekend-reads/image.png" class="img-fluid"></p>
-<section id="articles" class="level2">
-<h2 class="anchored" data-anchor-id="articles">Articles</h2>
-<ul>
-<li><a href="https://world.hey.com/dhh/developers-are-on-edge-4dfcf9c1">DHH On Coding AI Agents</a></li>
-<li><a href="https://collabfund.com/blog/the-thin-line/">When Confidence Backfires</a></li>
-</ul>
-</section>
-<section id="videos" class="level2">
-<h2 class="anchored" data-anchor-id="videos">Videos</h2>
-<ul>
-<li><a href="https://youtu.be/NdxFctWShtc?si=pFzzxt7EctaREoZY">Sahil Bloom on Building Life Systems</a></li>
-<li><a href="https://youtu.be/jvqFAi7vkBc?si=v654_j6USVkIUGNx">Sam Altman on Lex Friedman</a></li>
-<li><a href="https://youtu.be/lXLBTBBil2U?si=yEU-YxYkgusDFkEd">Jensen Huang at Stanford GSB</a></li>
-<li><a href="https://youtu.be/uMajFsCkzxY?si=fwzKDf-jfCK-ZyKT">TikTok Ban, AI, and more on All In</a></li>
-</ul>
-</section>
-<section id="podcasts" class="level2">
-<h2 class="anchored" data-anchor-id="podcasts">Podcasts</h2>
-<ul>
-<li><a href="https://open.spotify.com/episode/11oI0JELKOohCSEwz8WOQD?si=1648IhapTUOdkaanwRM4Ug">Morgan Housel on Modern Wisdom</a></li>
-</ul>
-</section>
-<section id="tweets" class="level2">
-<h2 class="anchored" data-anchor-id="tweets">Tweets</h2>
-<ul>
-<li><a href="https://x.com/BallsackSports/status/1770999544911626266?s=20">Grateful that Kansas won their first round game</a></li>
-<li><a href="https://x.com/george__mack/status/1769376253524496607?s=20">How Momentum Rules Your Life</a></li>
-<li><a href="https://x.com/Feynmanism_/status/1753767517762596903?s=20">Cognitive Biases</a></li>
-</ul>
-</section>
-<section id="books" class="level2">
-<h2 class="anchored" data-anchor-id="books">Books</h2>
-<ul>
-<li><a href="https://www.amazon.com/Numbers-Game-Everything-About-Soccer-ebook/dp/B00BPDR3E2/ref=tmm_kin_swatch_0?_encoding=UTF8&amp;dib_tag=se&amp;dib=eyJ2IjoiMSJ9.rmUGJqVG-UDO-EJgjWaUjPm0ug1og2SXZQ8GiC45XXxuQBtP7Zt81fkEWNptjyu6-K4Lk6Dq4pKN867arj5xDiLron2Zl7KN5-fjRRh1w15sNA0UvwnPtIKnfWqyQEGEd475FjsPSiNH_CVWG5956NWPyp4f2j9I5mYgWmxLceICvMI-j9WKDdR5Xn9MwPaRwzIg0N5GNI9U_r2gIstQ0RlZhNonJR2TyxycZexvtKY.7_sZ4hdeMz5-fU0BCzqT3rFyOo0klmjutMl3rZ_qpn4&amp;qid=1711121115&amp;sr=8-4">The Numbers Game by Chris Anderson</a></li>
-</ul>
-
-
-</section>
-
- ]]></description>
-  <category>weekend-reads</category>
-  <guid>https://mftokic.github.io/posts/2024-03-22-weekend-reads/</guid>
-  <pubDate>Fri, 22 Mar 2024 07:00:00 GMT</pubDate>
-  <media:content url="https://mftokic.github.io/posts/2024-03-22-weekend-reads/image.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 </channel>
 </rss>
