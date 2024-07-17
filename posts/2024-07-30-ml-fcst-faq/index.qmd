@@ -14,32 +14,31 @@ Over the last few years I've presented to hundreds of people outside of Microsof
 
 ### Data
 
-- Getting high quality historical data
-- Using Drivers
+- [Getting high quality historical data](#historical-data)
+- Using third party data
 - New info not found in the training data, one time events
-- Handling Missing Data
-- Handling Outliers
+- Handling outliers
 
 ### Technical 
 
-- Interpreting the Black Box
+- Interpreting the black box
 - What models to use, should we use deep learning
 - What programming language or framework to use
-- Using Large Language Models like ChatGPT to forecast
-- What level of accuracy is good? 
+- Using large language models like ChatGPT to forecast
+- What level of accuracy is good
 
 ### Humans
 
 - How to make forecast owners accountable for the ML number
-- Building Trust in ML Forecast
-- Who owns the ML creation process? 
-- How to get started with ML? 
+- Building Trust in the ML forecast
+- Who owns the ML creation process 
+- How to get started with ML
 - Going from ML as a triangulation point to replacing manual human forecasts
-- Building data science talent in finance. 
+- Building data science talent in finance
 
 ## Data
 
-### Test
+### Getting high quality historical data {#historical-data}
 
 ## Technical
 
