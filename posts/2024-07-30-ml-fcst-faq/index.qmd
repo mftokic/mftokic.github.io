@@ -10,16 +10,16 @@ draft: true
 
 Over the last few years I've presented to hundreds of people outside of Microsoft around how we approach machine learning (ML) forecasting within Microsoft finance. A lot of great questions were asked during those conversations. With many overlaps around common themes. In this post I want to highlight some of the most commonly asked questions and my take on answering them. Hopefully this can be a quick reference for anyone ML curious or want to deepen the ML work being done on their teams. Use the table of contents to skip around to the sections you're most interested in. If there are any topics missing please reach out to me and I will continue to update this post. 
 
-## FAQ Table of Contents
+## FAQ Table of Contents {#toc}
 
-### Data
+### [Data](#data)
 
 - [Getting high quality historical data](#historical-data)
-- Using third party data
-- New info not found in the training data, one time events
-- Handling outliers
+- [Using third party data](#third-party-data)
+- [New info not found in the training data, one time events](#one-time-events)
+- [Handling outliers](#outliers)
 
-### Technical 
+### [Technical](#technical) 
 
 - Interpreting the black box
 - What models to use, should we use deep learning
@@ -27,7 +27,7 @@ Over the last few years I've presented to hundreds of people outside of Microsof
 - Using large language models like ChatGPT to forecast
 - What level of accuracy is good
 
-### Humans
+### [Humans](#humans)
 
 - How to make forecast owners accountable for the ML number
 - Building Trust in the ML forecast
@@ -36,14 +36,24 @@ Over the last few years I've presented to hundreds of people outside of Microsof
 - Going from ML as a triangulation point to replacing manual human forecasts
 - Building data science talent in finance
 
-## Data
+## Data {#data}
 
 ### Getting high quality historical data {#historical-data}
 
-## Technical
+Test test test.
+
+[Back to Table of Contents](#toc)
+
+### Using third party data {#third-party-data}
+
+### New info not found in training data and one time events {#one-time-events}
+
+### Handling Outliers {#outliers}
+
+## Technical {#technical}
 
 ### Test
 
-## Humans
+## Humans {#humans}
 
 ### Test
