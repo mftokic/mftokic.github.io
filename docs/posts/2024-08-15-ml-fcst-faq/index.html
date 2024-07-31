@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Mike Tokic">
-<meta name="dcterms.date" content="2024-07-30">
+<meta name="dcterms.date" content="2024-08-15">
 <meta name="description" content="Straightforward answers to all of your ML forecast questions">
 
 <title>FAQ on Machine Learning Forecasting – Thoughts on Things</title>
@@ -87,11 +87,11 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Thoughts on Things - FAQ on Machine Learning Forecasting">
 <meta property="og:description" content="Straightforward answers to all of your ML forecast questions">
-<meta property="og:image" content="https://mftokic.github.io/posts/2024-07-30-ml-fcst-faq/image.png">
+<meta property="og:image" content="https://mftokic.github.io/posts/2024-08-15-ml-fcst-faq/image.png">
 <meta property="og:site_name" content="Thoughts on Things">
 <meta name="twitter:title" content="Thoughts on Things - FAQ on Machine Learning Forecasting">
 <meta name="twitter:description" content="Straightforward answers to all of your ML forecast questions">
-<meta name="twitter:image" content="https://mftokic.github.io/posts/2024-07-30-ml-fcst-faq/image.png">
+<meta name="twitter:image" content="https://mftokic.github.io/posts/2024-08-15-ml-fcst-faq/image.png">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -173,7 +173,7 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">July 30, 2024</p>
+        <p class="date">August 15, 2024</p>
       </div>
     </div>
     
@@ -207,11 +207,11 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 <section id="technical" class="level3">
 <h3 class="anchored" data-anchor-id="technical"><a href="#technical">Technical</a></h3>
 <ul>
-<li>Interpreting the black box</li>
-<li>What models to use, should we use deep learning</li>
-<li>What programming language or framework to use</li>
-<li>Using large language models like ChatGPT to forecast</li>
-<li>What level of accuracy is good</li>
+<li><a href="#black-box">Interpreting the black box</a></li>
+<li><a href="#models">What models to use, should we use deep learning</a></li>
+<li><a href="#language">What programming language or framework to use</a></li>
+<li><a href="#llm">Using large language models like ChatGPT to forecast</a></li>
+<li><a href="#accuracy">What level of accuracy is good</a></li>
 </ul>
 </section>
 <section id="humans" class="level3">
@@ -253,21 +253,52 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 </section>
 <section id="one-time-events" class="level3">
 <h3 class="anchored" data-anchor-id="one-time-events">New info not found in training data and one time events</h3>
+<p>If you are changing the price of your product in three months, this is most likely going to impact your future revenue forecast. But if you have never changed the price of your product before, then a ML model cannot learn from that information. For a model to learn from one time events, it needs to be present in the historical data a model is trained on. <a href="https://mftokic.github.io/posts/2024-04-11-time-series-past-future/">The future must always learn from the past</a>.</p>
+<p><a href="#toc">Back to Table of Contents</a></p>
 </section>
 <section id="outliers" class="level3">
 <h3 class="anchored" data-anchor-id="outliers">Handling Outliers</h3>
+<p><a href="https://mftokic.github.io/posts/2024-04-11-time-series-past-future/">Outliers</a> in your data can have a bad impact on your future forecast. It can hurt accuracy or give false signals of the future. There are many ways to deal with outliers. The easiest way is to use statistical methods to identify and remove them. Treating them as a missing value you can then replace. Sometimes outliers are more subtle, and take a trained eye to spot them. This is where the <a href="https://mftokic.github.io/posts/2024-04-02-time-series-domain-expertise/">domain expertise</a> of a person comes into play.</p>
+<p><a href="#toc">Back to Table of Contents</a></p>
 </section>
 </section>
 <section id="technical" class="level2">
 <h2 class="anchored" data-anchor-id="technical">Technical</h2>
-<section id="test" class="level3">
-<h3 class="anchored" data-anchor-id="test">Test</h3>
+<section id="black-box" class="level3">
+<h3 class="anchored" data-anchor-id="black-box">Interpreting the black box</h3>
+<p>This one is a toughie. When a person creates a forecast manually, most often using excel, someone else can come into that financial model and trace cell by cell exactly what’s going on. Going from input data, to assumptions, to the formulas that create the final output. This is the kind of exactitude that allows accountants to sleep peacefully at night. Everything is in order and everything is perfectly understood. But we are not accountants. This is finance. We have to make calls about the future that are uncertain. We can never have 100% certainty that something is going to happen. If that’s the case then your company is doing something illegal. Get out now!</p>
+<p>The biggest paradigm shift someone has to make with machine learning is giving up this total control of the forecast. And in essence take a <a href="https://mftokic.github.io/posts/2024-07-15-msft-ml-fcst-journey-3/#leap-of-faith">leap of faith</a>. Machine learning models are enigmas. Sometimes akin to magic. The cannot be perfectly understood because the capture non-linear relationships in data that a human never could. That’s why we have them, because they can work better and faster than our human brains in some tasks.</p>
+<p>There are ways to understand these models, but they cannot be perfectly audited like a manual forecast done in excel. Instead they have to be interrogated. Not like a criminal wanted for war crimes but more like a therapist talking to their patient. There is no way to know exactly what’s going on inside of their patients mind. But they can start to ask questions that can give clues into what’s going on and see why the person has past decisions in their life.</p>
+<p>The best resource I know on explaining ML models is <a href="https://christophm.github.io/interpretable-ml-book/">Interpretable Machine Learning</a> by Christoph Molnar. Here’s a quick overview of the method’s described in the book.</p>
+<ul>
+<li><strong>Model Specific:</strong> These are models like linear regression or a single decision tree where we can see exactly what’s going on under the hood. The model structure is more like an excel formula we can trace step by step. But because they are easy to explain, they are simple in nature and may not produce the most accurate forecast. That is the tradeoff between having a forecast that can be easily explained versus having a forecast that is the most accurate. The more accurate the forecast, the more likely you cannot explain it perfectly.</li>
+<li><strong>Model Agnostic:</strong> For more advanced models like gradient boosted trees and deep learning, we can use methods that approximate what’s going on under the hood of a complex model. This is when we have to act like a therapist and start asking questions to our model and see what answers it gives back. There are two ways of doing this.
+<ul>
+<li><strong>Global Interpretability:</strong> This uses methods that can see overall what’s impacting the model the most. For example you can see what input variable (or feature) is the most important in the model overall.<br>
+</li>
+<li><strong>Local Interpretability:</strong> This uses methods to see what’s going on for each individual forecast data point. For example you can see for a specific future forecast what’s impact that number the most.</li>
+</ul></li>
+</ul>
+<p>The last thought I’d leave you with is this. Have you ever not used ChatGPT because you couldn’t get an explanation of its answer? For example maybe you asked it to help you write some excel formulas to format dates. Do you trust the output it gave you because the excel formula was correct or because it could tell you exactly how it came to that conclusion? What if the explanation it gave was made up or a hallucination? If the excel formula is correct you would still use it right? Even the CEO of OpenAI, Sam Altman, cannot explain how models like GPT-4 think under the hood. But hey, ChatGPT was still the fastest growing product of all time. Sometimes imperfect interpretability is ok. But maybe your CEO is demanding an explanation of the forecast numbers, so this is <a href="https://mftokic.github.io/posts/2023-02-11-three-levels-of-ml-adoption/">still a hard problem to solve in finance</a>.</p>
+<p><a href="#toc">Back to Table of Contents</a></p>
+</section>
+<section id="models" class="level3">
+<h3 class="anchored" data-anchor-id="models">What models to use, should we use deep learning</h3>
+</section>
+<section id="language" class="level3">
+<h3 class="anchored" data-anchor-id="language">What programming language or framework to use</h3>
+</section>
+<section id="llm" class="level3">
+<h3 class="anchored" data-anchor-id="llm">Using large language models like ChatGPT to forecast</h3>
+</section>
+<section id="accuracy" class="level3">
+<h3 class="anchored" data-anchor-id="accuracy">What level of accuracy is good</h3>
 </section>
 </section>
 <section id="humans" class="level2">
 <h2 class="anchored" data-anchor-id="humans">Humans</h2>
-<section id="test-1" class="level3">
-<h3 class="anchored" data-anchor-id="test-1">Test</h3>
+<section id="test" class="level3">
+<h3 class="anchored" data-anchor-id="test">Test</h3>
 
 
 </section>
