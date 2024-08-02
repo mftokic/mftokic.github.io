@@ -159,9 +159,15 @@ Even going from a 3% MAPE to a 2% MAPE is a big achievement. Because it's a lot 
 
 ### How to make forecast owners accountable for the ML number {#accountability}
 
+Having a ML model automate your forecast process is great, until you have to tell your CFO why your quarterly forecast is off by X%. It was MLs fault is not the right answer. But it's hard for a human to be on the hook for work that a machine did for them. Maybe the ML forecast came from another engineering team, so the final owner of the forecast maybe had no part in creating the forecast. This can make accountability hard. 
 
+In order to get people on board with transitioning more of their work to ML, you need senior leadership buy in. People at the top need to be invested in the promise of ML and the tradeoffs it might provide. Since you cannot audit a ML forecast like you can with an excel model (tracing cell by cell) there is an essential leap of faith that has to happen. 
 
 ### Building Trust in the ML forecast {#trust}
+
+Historical accuracy
+Prediction intervals
+Interpretability 
 
 ### Who owns the ML creation process {#ownership}
 
