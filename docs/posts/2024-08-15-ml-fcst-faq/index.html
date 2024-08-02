@@ -192,7 +192,7 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 
 
 
-<p>Over the last few years I’ve presented to hundreds of people outside of Microsoft around how we approach machine learning (ML) forecasting within Microsoft finance. A lot of great questions were asked during those conversations. With many overlaps around common themes. In this post I want to highlight some of the most commonly asked questions and my take on answering them. Hopefully this can be a quick reference for anyone ML curious or want to deepen the ML work being done on their teams. Use the table of contents to skip around to the sections you’re most interested in. If there are any topics missing please reach out to me and I will continue to update this post.</p>
+<p>Over the last few years I’ve presented to hundreds of people outside of Microsoft around how we approach machine learning (ML) forecasting within Microsoft finance. A lot of great questions were asked during those conversations. With many overlaps around common themes. In this post I want to highlight some of the most commonly asked questions and my take on answering them. Hopefully this can be a quick reference for anyone ML curious or want to deepen the ML work being done on their teams. Use the table of contents to skip around to the sections you’re most interested in. If there are any topics missing please reach out to me via <a href="https://www.linkedin.com/in/michaeltokic/">LinkedIn</a> and I will continue to update this post.</p>
 <section id="toc" class="level2">
 <h2 class="anchored" data-anchor-id="toc">FAQ Table of Contents</h2>
 <section id="data" class="level3">
@@ -320,14 +320,41 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 <section id="accuracy" class="level3">
 <h3 class="anchored" data-anchor-id="accuracy">What level of accuracy is good</h3>
 <p>There is no right answer. It all depends on the specific data you are using and how it compares to non ML approaches you have done previously.</p>
-<p>A common metric in time series forecasting is the MAPE error metric. MAPE stands for mean absolute percentage error. This is very similar to variance to forecast percent metrics you might already use. Think of it as the average percent error (as an absolute value) across every forecasted data point. There are plenty of other metrics out there, but MAPE is a good one since it’s not dependant on scale and percents are easy to wrap your head around.</p>
-<p>A MAPE of 5% means that on average, your forecast is off plus or minus 5%. So the closer to zero the better. If you ask any finance person what kind of MAPE they want for their forecast, almost all of them will say less than 1%. Or more than 99% accuracy.</p>
+<p>A common metric in time series forecasting is the MAPE error metric. MAPE stands for mean absolute percentage error. This is very similar to variance to forecast percent metrics you might already use. Think of it as the average percent error (as an absolute value) across every forecasted data point. There are plenty of other metrics out there, but MAPE is a good one since it’s not dependant on scale and percents are easy for anyone to wrap their head around.</p>
+<p>A MAPE of 5% means that on average, your forecast is off plus or minus 5%. So the closer to zero the better. If you ask any finance person what kind of MAPE they want for their forecast, almost all of them will say less than 1%. Or more than 99% accuracy. Think of accuracy as the inverse of MAPE. Maybe the ML forecast has a MAPE of 10%, but your previous manual excel model ended up having a 20% MAPE. The ML forecast has a 50% reduction in forecast error, even though it’s still in the double digits. So evaluating ML is always relative to what kind of performance you got with other forecast methods probably done in excel.</p>
+<p>With that said, here are some rules of thumb I use when running my own ML forecasts.</p>
+<ul>
+<li><strong>Daily and Weekly Data</strong>: Less than a 10% MAPE is terrific. But even MAPEs as high as 30% are ok, because often we might sum up a daily forecast to a monthly or quarterly level. And when evaluated at that aggregate level you may start to have drastically improved MAPEs.</li>
+<li><strong>Monthly, Quarterly, Yearly Data</strong>: There are a few levels of accuracy that I think are good at this level. Again, it’s all relative to what kind of performance you had before using ML.
+<ul>
+<li>Less than a 5% MAPE is good</li>
+<li>Less than a 3% MAPE is great</li>
+<li>Less than a 1% MAPE is amazing</li>
+</ul></li>
+</ul>
+<p>Even going from a 3% MAPE to a 2% MAPE is a big achievement. Because it’s a lot harder to do that than to go from a 15% MAPE to a 10% MAPE. It’s still the same level of improvement but once you get closer to zero the MAPE improvements seem to happen on a log scale. Where each percentage point you reduce continues to get harder as you get closer to zero.</p>
+<p><a href="#toc">Back to Table of Contents</a></p>
 </section>
 </section>
 <section id="humans" class="level2">
 <h2 class="anchored" data-anchor-id="humans">Humans</h2>
-<section id="test" class="level3">
-<h3 class="anchored" data-anchor-id="test">Test</h3>
+<section id="accountability" class="level3">
+<h3 class="anchored" data-anchor-id="accountability">How to make forecast owners accountable for the ML number</h3>
+</section>
+<section id="trust" class="level3">
+<h3 class="anchored" data-anchor-id="trust">Building Trust in the ML forecast</h3>
+</section>
+<section id="ownership" class="level3">
+<h3 class="anchored" data-anchor-id="ownership">Who owns the ML creation process</h3>
+</section>
+<section id="starting" class="level3">
+<h3 class="anchored" data-anchor-id="starting">How to get started with ML</h3>
+</section>
+<section id="migrating" class="level3">
+<h3 class="anchored" data-anchor-id="migrating">Going from ML as a triangulation point to replacing manual human forecasts</h3>
+</section>
+<section id="talent" class="level3">
+<h3 class="anchored" data-anchor-id="talent">Building data science talent in finance</h3>
 
 
 </section>
