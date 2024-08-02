@@ -29,12 +29,12 @@ Over the last few years I've presented to hundreds of people outside of Microsof
 
 ### [Humans](#humans)
 
-- How to make forecast owners accountable for the ML number
-- Building Trust in the ML forecast
-- Who owns the ML creation process 
-- How to get started with ML
-- Going from ML as a triangulation point to replacing manual human forecasts
-- Building data science talent in finance
+- [How to make forecast owners accountable for the ML number](#accountability)
+- [Building Trust in the ML forecast](#trust)
+- [Who owns the ML creation process](#ownership) 
+- [How to get started with ML](#starting)
+- [Going from ML as a triangulation point to replacing manual human forecasts](#migrating)
+- [Building data science talent in finance](#talent)
 
 ## Data {#data}
 
@@ -158,6 +158,8 @@ Even going from a 3% MAPE to a 2% MAPE is a big achievement. Because it's a lot 
 ## Humans {#humans}
 
 ### How to make forecast owners accountable for the ML number {#accountability}
+
+
 
 ### Building Trust in the ML forecast {#trust}
 
