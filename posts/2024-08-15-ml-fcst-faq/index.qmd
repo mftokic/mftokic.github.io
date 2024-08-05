@@ -159,15 +159,25 @@ Even going from a 3% MAPE to a 2% MAPE is a big achievement. Because it's a lot 
 
 ### How to make forecast owners accountable for the ML number {#accountability}
 
-Having a ML model automate your forecast process is great, until you have to tell your CFO why your quarterly forecast is off by X%. It was MLs fault is not the right answer. But it's hard for a human to be on the hook for work that a machine did for them. Maybe the ML forecast came from another engineering team, so the final owner of the forecast maybe had no part in creating the forecast. This can make accountability hard. 
+Having a ML model automate your forecast process is great, until you have to tell your CFO why your quarterly forecast is off by xyz%. "It was ML's fault" is not the right answer. But it's hard for a human to be on the hook for work that a machine did for them. Maybe the ML forecast came from another engineering team, so the final owner of the forecast maybe had no part in creating the forecast. This can make accountability hard. 
 
 In order to get people on board with transitioning more of their work to ML, you need senior leadership buy in. People at the top need to be invested in the promise of ML and the tradeoffs it might provide. Since you cannot audit a ML forecast like you can with an excel model (tracing cell by cell) there is an essential leap of faith that has to happen. 
 
+In addition to having senior leadership buy in to improve accountability, being able to adjust the output from ML can also help. Financial analysts can impart their domain expertise about their business by making small manual adjustments to the ML forecast. That way ML can get you 80% of the way to a completed forecast, and a human might make adjustments on that final 20% to finalize the forecast. Having the forecast owners be "humans in the loop" of a ML process adds a sense of ownership, which can then improve accountability. 
+
+A final way to improve accountability is through the [Ikea effect](https://insidebe.com/articles/the-ikea-effect/). Which states that we value things more if we are involved in making them. The best way for this to work is if the final forecast owners create their own ML forecast through self-serve tools that abstract away the complex of ML and allows analysts to upload data and get back forecasts with a few clicks of their mouse. This is exactly [what we did in Microsoft finance](https://mftokic.github.io/posts/2024-07-15-msft-ml-fcst-journey-3/) and it has worked out well so far.  
+
+[Back to Table of Contents](#toc)
+
 ### Building Trust in the ML forecast {#trust}
 
-Historical accuracy
-Prediction intervals
-Interpretability 
+Building trust in the ML forecast is the hardest part of using ML. There are three ways that have worked well in helping non-technical financial forecast owners warm up to and fully transition to using ML to forecast. 
+
+- **Historical Accuracy**: The best way to get someone on board with a forecast into the future is to show them how well a similar forecast has performed in the past. It's not a perfect proxy for future performance but gives the end user a good idea of how well a ML model is performing. Common performance metrics to use are [MAPE](https://en.wikipedia.org/wiki/Mean_absolute_percentage_error) (mean absolute percentage error) and [RMSE](https://en.wikipedia.org/wiki/Root_mean_square_deviation) (root mean squared error). MAPE is similar to existing variance to forecast calcs already done by financial analysts so it's a good error metric to convey past performance. When calculating historical performance, aka back testing, it's a good idea to create hypothetical forecasts for the most recent periods of your data. Making sure you cover enough historical time to ensure your ML model is robust. For example with a monthly forecast. You might want to just forecast the next 3 months into the future. If you have 5+ years of historical data you could have 4 historical back tests where you train a model and produce a 3 month forecast for each of the last 4 quarters in your historical data. 
+- **Prediction Intervals**: Understanding the uncertainty of the future forecast can also help build trust. Think of prediction intervals as upper and lower bounds of the future forecast that convey a certain percent of probability that the future value will land in between these bounds. Common prediction intervals are 80% and 95%. For example, you might have a future forecast of $100 for next month, with a 80% prediction interval of $80 and $120. This means there is an 80% chance that the actual value of next month will be between $80 and $120. So the tighter the prediction interval, the better. Having an prediction interval that's +-5% of the forecasted value gives more comfort to the end user than one that's +-30%. Just make sure that the end user of the forecast knows that those upper and lower bounds are not neccesarally a "bull case" and "bear case" of what could happen in the future, like they might be used to in other financial modelling. But instead just a way to capture the uncertainty of the future prediction. 
+- **Interpretability**: Finally another good way to build trust is being able to explain how a future ML forecast was created. You will not be able to perfectly explain it like you can an excel model (by tracing through it cell by cell). But you can use [methods](#black-box) to poke and prod a model to see what might be going on under the hood. 
+
+[Back to Table of Contents](#toc)
 
 ### Who owns the ML creation process {#ownership}
 
