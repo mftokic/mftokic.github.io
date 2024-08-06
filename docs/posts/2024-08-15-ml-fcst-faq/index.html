@@ -358,15 +358,41 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 </section>
 <section id="ownership" class="level3">
 <h3 class="anchored" data-anchor-id="ownership">Who owns the ML creation process</h3>
+<p>Being at Microsoft we are lucky to have engineering teams (sometimes called IT in other companies) that sit inside of finance and report to the CFO. This allows us to have software engineers who are solely focused on improving the lived experience of each of the 5,000+ employees under the CFO.</p>
+<p>On those engineering teams there are people like myself who work on ML. Most of my time is spent helping produce and evangelize ML forecasting. My team has built two unique ways of how ML gets created and consumed by financial analysts.</p>
+<ul>
+<li><strong>Standard API</strong>: This allows other engineering teams to call upon ML on demand to get a forecast. Without needing to set up the infrastructure to train and serve models. This process works hand in hand with <a href="https://mftokic.github.io/posts/2024-06-26-msft-ml-fcst-journey-2/">other forecast centralization efforts we’ve done</a>.</li>
+<li><strong>Self-Serve UI</strong>: On the other end of the spectrum is to have tools that allow any financial analysts to produce their own forecast with a few clicks of their mouse. This allows us to scale ML to every single person in finance, without needing to rely on an engineering team to help produce a forecast. The tool we built for this is called Finn, and you can <a href="https://mftokic.github.io/posts/2024-07-15-msft-ml-fcst-journey-3/">learn more about it here</a>.</li>
+</ul>
+<p><a href="#toc">Back to Table of Contents</a></p>
 </section>
 <section id="starting" class="level3">
 <h3 class="anchored" data-anchor-id="starting">How to get started with ML</h3>
+<p>Getting the ball rolling can seem like an insurmountable task. Thankfully it’s been easier than ever to get started with ML. <a href="https://mftokic.github.io/posts/2024-06-12-msft-ml-fcst-journey-1/">Check out how we got started</a> back in 2015.</p>
+<p>Another way to make quick wins is to use something pre-built off the shelf that’s ready to go. Thankfully you can use it for free! We have open-sourced our ML forecasting code into a standard package called <a href="https://microsoft.github.io/finnts/index.html">finnts</a>. You can have your engineers take this code and quickly get up and running with ML forecasts within a week. It condenses almost 10 years of trial and error in Microsoft finance down to code that works at scale in production. Try it!</p>
+<p><a href="#toc">Back to Table of Contents</a></p>
 </section>
 <section id="migrating" class="level3">
 <h3 class="anchored" data-anchor-id="migrating">Going from ML as a triangulation point to replacing manual human forecasts</h3>
+<p>There’s a saying that 80% of ML projects <a href="https://d2iq.com/blog/why-87-of-ai-ml-projects-never-make-it-into-production-and-how-to-fix-it">never make it into production</a>. This definitely applies to ML forecasting, but in a different way. Better put, 80% of ML forecast projects never make it past the triangulation point phase.</p>
+<p>There are three distinct phases of adopting a ML forecast.</p>
+<ol type="1">
+<li><strong>Initial Development</strong>: Going from initial idea to a first prototype. Trying to see what a ML forecast would look like and if accuracy is good or not.</li>
+<li><strong>Triangulation Point</strong>: Using a ML forecast every month or quarter alongside your existing manual forecast process. ML is another data point you “triangulate” with the actual forecast you will be using. So ML is nice to have but not required.</li>
+<li><strong>Baseline Forecast</strong>: Using a ML forecast to replace your manual process. Where now the first step in your forecast cycle is to produce the ML forecast and build on top of it. Using the ML forecast as the initial “baseline” foundation. You have no “burned the ships” of your manual process never to look back. You are in it to win it with ML.</li>
+</ol>
+<p>It’s easy to go from phase 1 to phase 2. With tools like <a href="https://microsoft.github.io/finnts/index.html">finnts</a> you can get a new forecast up and running in less than a day. But most ML forecasts go to the triangulation point stage and die. It’s kind of a bummer but a fact of life. Here are some tips to break through the resistance and get all the way to phase 3.</p>
+<ul>
+<li>Have a timeline. Finance teams are busy. There is always more to do in the time allotted to do it. So having deadlines helps move work along. Instead of a “one day we will switch to ML” attitude you need a deadline like “we will switch to ML within the next two quarters”. This instills a sense of urgency and gets things moving. I’ve seen ML projects stall for 2+ years because there wasn’t a timeline set in place. An answer like “we’ll move to ML sometime this fiscal year” is not good enough. Keep pushing until a deadline is agreed upon, and do all you can to stick to it.</li>
+<li>Get leadership buy in. The quickest way to change a financial analysts behavior is to have them hear it from their boss. Getting senior leadership buy in helps with the ongoing issue of prioritization. If the leaders make it a priority then every person on their team has no choice but to make it a priority. Things start to move a lot faster once that happens.</li>
+<li>If accuracy is a concern, establish a benchmark to beat.</li>
+<li>Squeaky wheel gets the grease. Constant contact with the end ML forecast user helps speed things up.</li>
+</ul>
+<p><a href="#toc">Back to Table of Contents</a></p>
 </section>
 <section id="talent" class="level3">
 <h3 class="anchored" data-anchor-id="talent">Building data science talent in finance</h3>
+<p><a href="#toc">Back to Table of Contents</a></p>
 
 
 </section>
