@@ -1,0 +1,11 @@
+---
+title: "My Path from Finance Intern to Senior Software Engineer at Microsoft"
+description: "How I transitioned into a technical engineering role with zero coding knowledge"
+author: "Mike Tokic"
+date: "2024-08-15"
+categories: [life, finance, career]
+image: "image.png"
+draft: true
+---
+
+![](./image.png)

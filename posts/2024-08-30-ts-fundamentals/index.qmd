@@ -2,7 +2,7 @@
 title: "Thoughts On Time Series Forecasting Fundamentals"
 description: "Series On Understanding Core ML Concepts in Forecasting"
 author: "Mike Tokic"
-date: "2024-08-13"
+date: "2024-08-30"
 categories: [machine-learning, finance, time-series]
 image: "image.png"
 draft: true
