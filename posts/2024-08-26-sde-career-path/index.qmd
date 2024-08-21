@@ -1,0 +1,55 @@
+---
+title: "My Path from Finance Intern to Senior Software Engineer at Microsoft"
+description: "How I transitioned into a technical engineering role with zero coding knowledge"
+author: "Mike Tokic"
+date: "2024-08-26"
+categories: [life, finance, career]
+image: "image.png"
+draft: true
+---
+
+![](./image.png)
+
+I have previously written about my journey in [Microsoft's Finance Rotation Program (FRP)](https://mftokic.github.io/posts/2024-02-19-frp-journey/). That details the first half of my career and how I got my first engineering job, but not what I do today. Today I'm a senior software engineer. Most of my time is spent on building and operating machine learning systems used by others across the finance organization. When I came to Microsoft as an intern in 2015 I couldn't write one line of code. But over the years I worked at it and now write code every day. It's been a hard journey, but also a fun one. If you are like me and are interested in making the switch, here are some pieces of advice that might help you. Like all advice, take it with a grain of salt. Advice is like getting last years winning lottery numbers. They might have worked for that person in the past, but it may not work for you. Anyways I hope you find it helpful. 
+
+### Focus on Slope over Intercept
+
+When I came back as a full time employee after my internship, I kept seeing these new signs everywhere. Talking about something called a ["growth mindset"](https://hbr.org/2016/01/what-having-a-growth-mindset-actually-means). During my internship these words were never mentioned, now they are taped to every blank wall on campus. What's going on? Microsoft's CEO, Satya Nadella, was in the midst of working on a culture shift at the company. Trying to go from employees that were "know it alls" to a more improved "learn it all". This new attitude was perfect for me because I knew jack squat about coding, and I wanted to learn. 
+
+If you want to be a software engineer, there are two ways to go about it. The first and most common is to go to school and get a degree. The second is to figure it out on your own, aka the learn it yourself path. Both paths have their pros and cons. 
+
+Two paths to follow. School smarts vs street smarts. School smarts gets you hired for your first job. Everything after is street smarts. Or experience. Street smarts allows you to skip the line of people with school smarts and go through the third door. Doing leet coding is what everyone else does. I've seen too many people get a masters in analytics, AI, CS, etc only to get a job that does none of that. It's a shame. Don't settle. Don't give up. Shipping 10 projects is more impressive than acing 10 classes. 
+
+The learning never stops. In fact it only get's harder. Not the learning itself (maybe it does), but taking the time to learn. Build the habit now, stay curious.  
+
+### Real Coders Ship
+
+Real coders ship. They don't just take classes and read books. My learning only started when I put the books down and started pulling real data and training real models. 
+
+Real work over building a "portfolio". Real work is messy, and is the best indicator of future performance to an employer. Projects to add to a portfolio allow you to control all the variables, which is not how the real world works. 
+
+### AI is Your Friend
+
+Learning partner, coding buddy. 
+
+### Use Your Competitive Advantage
+
+Business domain knowledge combined with technical knowledge is a deadly combination. So is being able to communicate complex things in simple terms. The midwit meme, where forecast accuracy improved is better than explaining all the new models and techniques you implemented. 
+
+### Baby Steps, Not One Giant Leap
+
+Right time, right place, right people.  
+
+Crawl, walk, then run with new technology. Get it working on your computer. Then move it up into the cloud. Then build a production ready system. Those steps can take years. That's ok. 
+
+Go from business partner, to program manager, to software engineer is a lot easier than skipping directly to software engineer. 
+
+### Getting Promoted
+
+You get promoted when what you build has impact. Not just for building cool or complex things. Most impact with technology can boil down to time savings, money savings, and being more precise, increasing revenue or profitability. You work needs to boil down to numbers. Not what you shipped but what happened after you shipped it. What get's measured gets managed. What gets measured gets promoted. Training a deep learning model is cool but shipping a simple linear regression in half the time might get you promoted twice as fast. Everyone is in sales. Once you build it, you have to sell it. If you can build and sell, you will be unstoppable. Ask your boss what you need to do this year to get promoted, then do those things. Ruthlessly prioritize and execute. Ignore everything else. 
+
+### Final Thoughts
+
+Why learning to code is important. Life is all about leverage. Knowing code gives you the most leverage over any other form (all except content). Most people want to be managers. Pretty soon everyone will be one, just not managing people. But instead managing AI people, or bots, who will do your work for you.
+
+It takes balls to move to a new field. People who just do what their boss tells them to do will never have the guts to do it. It takes a certain amount of agency to do it. 
