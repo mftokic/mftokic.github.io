@@ -10,7 +10,58 @@
 <atom:link href="https://mftokic.github.io/index.xml" rel="self" type="application/rss+xml"/>
 <description>A collection of thoughts on things from the mind of Mike Tokic</description>
 <generator>quarto-1.5.45</generator>
-<lastBuildDate>Mon, 12 Aug 2024 07:00:00 GMT</lastBuildDate>
+<lastBuildDate>Fri, 23 Aug 2024 07:00:00 GMT</lastBuildDate>
+<item>
+  <title>Weekend Reads (8/23/24)</title>
+  <dc:creator>Mike Tokic</dc:creator>
+  <link>https://mftokic.github.io/posts/2034-08-23-weekend-reads/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p><img src="https://mftokic.github.io/posts/2034-08-23-weekend-reads/image.png" class="img-fluid"></p>
+<section id="articles" class="level2">
+<h2 class="anchored" data-anchor-id="articles">Articles</h2>
+<ul>
+<li><a href="https://mftokic.github.io/posts/2024-08-12-ml-fcst-faq/">Simple Answers to Hard ML Forecasting Questions</a></li>
+<li><a href="https://info.deeplearning.ai/llm-price-war-black-forests-powerful-open-image-generator-the-high-cost-of-ai-leadership-machine-translation-goes-agentic?ecid=ACsprvurcocB85Yj2tmm-kaWhU7MjIxZkryFxNSQQ4iYRIhIzhvbptMewhYJmzlP30TSYdWmaxLc&amp;utm_campaign=The%20Batch&amp;utm_medium=email&amp;_hsmi=320139015&amp;utm_content=320139015&amp;utm_source=hs_email">LLM Performance vs Price</a></li>
+<li><a href="https://fortune.com/2024/08/14/google-eric-schmidt-working-from-home-ai-openai/">Ex Google CEO on Work From Home</a></li>
+<li><a href="https://www.wired.com/story/the-english-premier-league-has-a-new-iphone-powered-offside-detection-system/">Fixing Offsides in Soccer for Good</a></li>
+<li><a href="https://www.popsci.com/technology/ai-tongue-scanner/">AI Tongue Scans Spot Disease Early</a></li>
+</ul>
+</section>
+<section id="videos" class="level2">
+<h2 class="anchored" data-anchor-id="videos">Videos</h2>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=FyLwVyJ9uXw">Breathing Expert on Diary of a CEO</a></li>
+</ul>
+</section>
+<section id="podcasts" class="level2">
+<h2 class="anchored" data-anchor-id="podcasts">Podcasts</h2>
+<ul>
+<li><a href="https://open.spotify.com/episode/2DFsA7qIdjZZukcCRbBRhI?si=mck3VapCQLilUMkwV1xkhA&amp;nd=1&amp;dlsi=d2c18c0011b14af7#login">Peter Thiel on Joe Rogan</a></li>
+<li><a href="https://open.spotify.com/episode/6KBpL2XfR9VdojbKNpE7cX?si=74CSFwnNQXavZTUYX6VpIA&amp;context=spotify%3Acollection%3Apodcasts%3Aepisodes&amp;nd=1&amp;dlsi=fced64e3e9304a60">Pieter Levels on Lex Fridman</a></li>
+</ul>
+</section>
+<section id="movies" class="level2">
+<h2 class="anchored" data-anchor-id="movies">Movies</h2>
+<ul>
+<li><a href="https://truefilms.com/kumare/">Kumare</a></li>
+<li><a href="https://truefilms.com/10-mph/">10 mph</a></li>
+<li><a href="https://truefilms.com/bill-cunningham/">Bill Cunningham New York</a></li>
+</ul>
+
+
+</section>
+
+ ]]></description>
+  <category>weekend-reads</category>
+  <guid>https://mftokic.github.io/posts/2034-08-23-weekend-reads/</guid>
+  <pubDate>Fri, 23 Aug 2024 07:00:00 GMT</pubDate>
+  <media:content url="https://mftokic.github.io/posts/2034-08-23-weekend-reads/image.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
 <item>
   <title>FAQ on Machine Learning Forecasting</title>
   <dc:creator>Mike Tokic</dc:creator>
@@ -3336,69 +3387,6 @@
   <guid>https://mftokic.github.io/posts/2024-04-05-weekend-reads/</guid>
   <pubDate>Fri, 05 Apr 2024 07:00:00 GMT</pubDate>
   <media:content url="https://mftokic.github.io/posts/2024-04-05-weekend-reads/image.png" medium="image" type="image/png" height="144" width="144"/>
-</item>
-<item>
-  <title>Time Series First Principles: Domain Expertise</title>
-  <dc:creator>Mike Tokic</dc:creator>
-  <link>https://mftokic.github.io/posts/2024-04-02-time-series-domain-expertise/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p><img src="https://mftokic.github.io/posts/2024-04-02-time-series-domain-expertise/image.png" class="img-fluid"></p>
-<section id="time-series-first-principles-series" class="level3">
-<h3 class="anchored" data-anchor-id="time-series-first-principles-series">Time Series First Principles Series</h3>
-<p>This post dives into the first principle of a good time series forecast, domain expertise. Check out the <a href="https://mftokic.github.io/posts/2024-03-26-time-series-first-principles-initial/">initial post</a> to get a high level view of each principle.</p>
-<ol type="1">
-<li><a href="https://mftokic.github.io/posts/2024-04-02-time-series-domain-expertise/"><strong>Domain Expertise</strong></a></li>
-<li><a href="https://mftokic.github.io/posts/2024-04-08-time-series-garbage/">Garbage In Garbage Out</a></li>
-<li><a href="https://mftokic.github.io/posts/2024-04-11-time-series-past-future/">The Future Is Similar To The Past</a></li>
-<li><a href="https://mftokic.github.io/posts/2024-04-18-time-series-grain/">Higher Grain Higher Accuracy</a></li>
-<li><a href="https://mftokic.github.io/posts/2024-04-23-time-series-order/">Order Is Important</a></li>
-<li><a href="https://mftokic.github.io/posts/2024-05-01-time-series-features/">The Magic Is In The Feature Engineering</a></li>
-<li><a href="https://mftokic.github.io/posts/2024-05-03-time-series-simple-models/">Simple Models Are Better Models</a></li>
-<li><a href="https://mftokic.github.io/posts/2024-05-07-time-series-capture-uncertainty/">Capture Uncertainty</a></li>
-<li><a href="https://mftokic.github.io/posts/2024-05-28-time-series-model-avg/">Model Combinations Are King</a></li>
-<li><a href="https://mftokic.github.io/posts/2024-05-31-time-series-deep-learning/">Deep Learning Last</a></li>
-</ol>
-</section>
-<section id="introduction" class="level3">
-<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
-<p>Any data scientist worth their salt can create a time series forecast for you. They can pull some data, train some machine learning (ML) models, and give you a forecast. All with you out of the loop. If that’s the case at your company, run! This is a big red flag. While that can sometimes yield good results, often the most important ingredient is missing, which is strong domain expertise about what you’re trying to forecast. This is where strong understanding of the business and market forces come into play. You know, the stuff that finance people excel at. Pairing robust ML models with strong domain expertise about the area being forecasted always yields the most accurate forecast. It also increases trust in that forecast, since the humans using that forecast know the model took into account important factors that influence the business. In this post we’ll use a hypothetical example of a company’s real estate spending to showcase the importance of domain expertise.</p>
-</section>
-<section id="translating-domain-expertise-into-features" class="level3">
-<h3 class="anchored" data-anchor-id="translating-domain-expertise-into-features">Translating Domain Expertise Into Features</h3>
-<p>How does domain expertise change how a ML model is created? This can manifest in many forms. The most common is changing the kind of data used in training a model. Variables that a model learns from are called “features”. Let’s apply this to our real estate spend forecast example. In the last few years, COVID and the work from home revolution have changed how people come into work. This changes how many people drink coffee, use the copier, and even which buildings stay in operation for a company. Simply pulling historical building expense data and training a model could get you ok results, but to get to peak performance you need domain expertise around what actually moves the needle for building expenses. Example features could be the square footage of a building, how many people actually badge into that building each month, even the periods where COVID was at its worse and a work from home mandate was in effect. All of these things are custom knowledge, most likely kept inside the heads of the finance workers who oversee the real estate space within a finance org.</p>
-</section>
-<section id="iteration-is-key" class="level3">
-<h3 class="anchored" data-anchor-id="iteration-is-key">Iteration is Key</h3>
-<p>Throwing all of your ideas as features into a model from the start is usually not a good idea. Instead having multiple rounds of iteration is key. In the real estate example, it’s best to start out with no external features. Just use historical spend to forecast future spend. Starting with this simpler approach can sometimes get you 90% of the accuracy you need, maybe even 100% if there are stable trends and seasonality that carries into the future. Run this first to see what the initial accuracy is, and if it doesn’t meet your requirements that when we can refine by adding new data.</p>
-<p>Once you have the baseline, you can look deeper into the accuracy results to see where the forecast is performing poorly. This is where domain knowledge kicks in. Poor initial forecast performance can be fixed by asking the domain expert if there is a difference between what the model knows and what a human knows. If there is a gap, can that be quantified as data to teach a model? This kind of insight can be added into a model with easy to find numeric data, or even as binary yes or no values (1 or 0) to denote when a specific one off event happened. This iterative process is where the magic happens.</p>
-<p>For the real estate forecast, maybe there was a period where expenses jumped sharply in one month and stayed at that new level for the rest of the year. This will be hard for a ML model to understand or even anticipate, but the domain expert of the real estate space knows that in that specific month there were two new building openings. So the expenses of course jumped up a significant degree and stayed like that going forward. Knowing this, we can get historical square footage information and add it into our model. We can even incorporate future buildings that might be removed or added going forward. This will help a model understand how changes in total buildings impact spend.</p>
-<p>So we added total square footage to our model and the results improved compared to our initial baseline of no external features. But it didn’t move the needle that much. Even though our company might be adding more buildings, in recent years the spend may not have a perfect correlation with added square footage. Knowing this, the domain expert recommends using anonymous badge in data to see who is actually coming into work. Pre-covid this data may not have been useful, since most buildings were always at max capacity with everyone coming to work each day. Now in a post-covid world this has changed forever. Some teams might only be in their assigned building 2-3 days a week. Or maybe they never returned in person, deciding instead to buy ranches in Wyoming with fast WiFi. Combining the square footage and badge in data into the model yielded fantastic results, much better than the initial baseline.</p>
-<p>After reviewing the improved results with the domain expert, the future forecast still seems a little low compared to the domain experts expectations. The domain expert has one last idea, trying to teach the model how COVID impacted spending. This can be quantified as a binary variable, where in all rows of the data we add a 1 if COVID was impacting the world, and 0 when it wasn’t. This means from early 2020 - early 2022 we have values of 1 and every period before and after we give a value of 0. A model can now understand that what happened over those two years was mostly a one off situation that is not expected going forward. After the ML model is trained with this new insight the back testing now looks great and the future forecast matches the expectations of the domain expert.</p>
-</section>
-<section id="reversal" class="level3">
-<h3 class="anchored" data-anchor-id="reversal">Reversal</h3>
-<p>Getting high quality data to use as features in a model is always a good idea. There are times though where the amount of historical feature data might be lacking. For example, we may not be able to get more than 3 years of historical square footage data for our real estate expense forecast, even though we can get 5 years of historical spend data. What should we do? We can shorten the historical spend data to the last 3 years to match the square footage data, but having less data can sometimes degrade model performance. So in some cases choosing to use the full 5 years of historical spend without the square footage data is the best approach that yields the best accuracy.</p>
-<p>When facing this dilemma, try both approaches and see how accuracy is effected. I’ve seen many times that using more historical data of what you’re trying to forecast is often more accurate than shortening that data to combine it with external features.</p>
-</section>
-<section id="final-thoughts" class="level3">
-<h3 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h3>
-<p>Starting any ML process without a business domain expert in the room is always a bad mistake. They are the cheat code in the video game that gets you to level 20 in half the time. Involving them early and often while also adopting a quick iteration approach can create a world class forecast that is trusted by the ultimate end users, which often are the domain experts themselves. At the end of the day most ML forecasts come down to trust by the end user. That’s why domain expertise is the first principle in building quality time series forecasts.</p>
-
-
-</section>
-
- ]]></description>
-  <category>time-series</category>
-  <category>machine-learning</category>
-  <category>finance</category>
-  <guid>https://mftokic.github.io/posts/2024-04-02-time-series-domain-expertise/</guid>
-  <pubDate>Tue, 02 Apr 2024 07:00:00 GMT</pubDate>
-  <media:content url="https://mftokic.github.io/posts/2024-04-02-time-series-domain-expertise/image.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 </channel>
 </rss>

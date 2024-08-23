@@ -1,0 +1,33 @@
+---
+title: "Weekend Reads (8/23/24)"
+description: "Interesting things I found on the internet this week"
+author: "Mike Tokic"
+date: "2024-08-23"
+categories: [weekend-reads]
+image: "image.png"
+---
+
+![](./image.png)
+
+## Articles
+
+- [Simple Answers to Hard ML Forecasting Questions](https://mftokic.github.io/posts/2024-08-12-ml-fcst-faq/)
+- [LLM Performance vs Price](https://info.deeplearning.ai/llm-price-war-black-forests-powerful-open-image-generator-the-high-cost-of-ai-leadership-machine-translation-goes-agentic?ecid=ACsprvurcocB85Yj2tmm-kaWhU7MjIxZkryFxNSQQ4iYRIhIzhvbptMewhYJmzlP30TSYdWmaxLc&utm_campaign=The%20Batch&utm_medium=email&_hsmi=320139015&utm_content=320139015&utm_source=hs_email)
+- [Ex Google CEO on Work From Home](https://fortune.com/2024/08/14/google-eric-schmidt-working-from-home-ai-openai/)
+- [Fixing Offsides in Soccer for Good](https://www.wired.com/story/the-english-premier-league-has-a-new-iphone-powered-offside-detection-system/)
+- [AI Tongue Scans Spot Disease Early](https://www.popsci.com/technology/ai-tongue-scanner/)
+
+## Videos
+
+- [Breathing Expert on Diary of a CEO](https://www.youtube.com/watch?v=FyLwVyJ9uXw)
+
+## Podcasts
+
+- [Peter Thiel on Joe Rogan](https://open.spotify.com/episode/2DFsA7qIdjZZukcCRbBRhI?si=mck3VapCQLilUMkwV1xkhA&nd=1&dlsi=d2c18c0011b14af7#login)
+- [Pieter Levels on Lex Fridman](https://open.spotify.com/episode/6KBpL2XfR9VdojbKNpE7cX?si=74CSFwnNQXavZTUYX6VpIA&context=spotify%3Acollection%3Apodcasts%3Aepisodes&nd=1&dlsi=fced64e3e9304a60)
+
+## Movies
+
+- [Kumare](https://truefilms.com/kumare/)
+- [10 mph](https://truefilms.com/10-mph/)
+- [Bill Cunningham New York](https://truefilms.com/bill-cunningham/)
