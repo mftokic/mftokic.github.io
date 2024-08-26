@@ -30,32 +30,59 @@ Last thing I'll say about learning is that I've seen too many people get a maste
 
 ### Real Coders Ship
 
-Real coders ship. They don't just take classes and read books. My learning only started when I put the books down and started pulling real data and training real models. Shipping 10 projects is more impressive than acing 10 classes. 
+Real coders ship. They don't just take classes and read books. My learning only started when I put the books down and started pulling real data and training real machine learning models. Projects that actually helped my team in my current job, even if that job wasn't software engineering. Shipping 10 projects is more impressive than acing 10 classes. 
 
-Real work over building a "portfolio". Real work is messy, and is the best indicator of future performance to an employer. Projects to add to a portfolio allow you to control all the variables, which is not how the real world works. 
+Some people create a "porfolio" of projects and have it live on their GitHub. I don't think that's a good idea. Real work is messy, and is the best indicator of future performance to an employer. Projects in a portfolio allow you to control all the variables, which is not how the real world works. 
+
+You can have public GitHub repos that show as samples of your work. But they should not be sample projects. They should either be pieces of work that you applied in your real job made open source and accessable to others. Or side projects where you wanted to build something cool to help you in your personal life. For example if you built your own website for your wedding, and had the code in a GitHub repo for hiring managers to see your coding chops. 
 
 ### AI is Your Friend
 
-Learning partner, coding buddy. 
+In this post ChatGPT era, all technical work becomes 100x easier to learn. You don't need school, or even books. You can, for free, start using a large language model (LLM) to start learning coding concepts and even have it ask you technical questions to test your learning. 
+
+ChatGPT and other tools like GitHub Copilot now become your coding buddy, always there to help you when you get stuck or don't know how to do something. Any new kid on the coding block can now get up to speed on languages like Python quickly because they have a personal AI tutor available 24/7. 
 
 ### Use Your Competitive Advantage
 
-Business domain knowledge combined with technical knowledge is a deadly combination. So is being able to communicate complex things in simple terms. The midwit meme, where forecast accuracy improved is better than explaining all the new models and techniques you implemented. 
+Some people feel like coming into software engineering from a nontechnical discipline is a major handicap. I actually think it's a superpower. If you come from a business background you actually have something other engineers do not. Business domain knowledge combined with technical knowledge is a deadly combination. You now understand both sides of the coin. You know how to make decisions about the business (through the lens of marketing, finance, sales) and can now go and build things that improve how the business serves customers. 
+
+For me having a finance background first, then learning coding second was a good combination. It created a lot of skills that are now invaluable. For example the skill of communicating things in simple terms. When I was building machine learning solutions for finance users, no one cared about the sophistication about my model or how much feature engineering I applied to the data. They just wanted to know how it worked at a high level and if it actually worked by showing improvements in a certain metric. I've seen traditional data scientists/engineers try to explain their work to regular people and it can sometimes be like nails on a chalkboard. It's painful to watch because they cannot explain themselves in plain english. And if the end user can't understand how something works, then they won't trust it, which means they won't use it. 
+
+If you can build and you can sell, you will be unstoppable. 
 
 ### Baby Steps, Not One Giant Leap
 
-Right time, right place, right people.  
+Don't go and build the next social networking app on your first coding project. Take it easy, take it slow. Crawl, walk, then run with new technology. Here is a good workflow for learning progression. 
 
-Crawl, walk, then run with new technology. Get it working on your computer. Then move it up into the cloud. Then build a production ready system. Those steps can take years. That's ok. 
+1. Crawl: Get some code working on your computer.
+2. Walk: Move that code up into the cloud and have it run on a different machine that's not yours.
+3. Run: Build a production ready system with proper CI/CD, unit testing, version control, etc.
 
-Go from business partner, to program manager, to software engineer is a lot easier than skipping directly to software engineer. 
+Those steps can take years, and that's ok. You might even get a software engineering job with just knowledge of #1. But as you progress you will eventually figure out #2 and #3. The same can be said for the actual job progression. 
+
+1. Business Partner: You are the business person who works with the engineers. 
+2. Program Manager: Now you are the middleman between the business partner and the software engineer. This is an engineering role, and in some companies like Microsoft your compensation will be the same as an engineer. 
+3. Software Engineer: You now build things, in collaboration with the program manager who tells you what the business partner needs. 
+
+Go from business partner, to program manager, to software engineer is a lot easier than skipping directly to software engineer. When I graduated the FRP my first role title was "IT Solution Manager". I still don't know what that means. Overall I was basically a program manager that coded on the side when no one was looking. Eventually that side coding turned into real solutions I pitched to my manager and got into production. Which eventually led me to working solely on building things. Then I finally got the title of software engineer. It didn't happen overnight, but it was possible. 
 
 ### Getting Promoted
 
-You get promoted when what you build has impact. Not just for building cool or complex things. Most impact with technology can boil down to time savings, money savings, and being more precise, increasing revenue or profitability. You work needs to boil down to numbers. Not what you shipped but what happened after you shipped it. What get's measured gets managed. What gets measured gets promoted. Training a deep learning model is cool but shipping a simple linear regression in half the time might get you promoted twice as fast. Everyone is in sales. Once you build it, you have to sell it. If you can build and sell, you will be unstoppable. Ask your boss what you need to do this year to get promoted, then do those things. Ruthlessly prioritize and execute. Ignore everything else. 
+Ok so maybe you now have a sweet engineering gig. Now what? How do you grow your career? Let's talk about getting promoted. 
+
+You get promoted when what you build has impact. Not just for building cool or complex things. Most impact with technology can boil down to a few things. 
+
+1. Time savings
+2. Money savings 
+3. Being more precise  
+4. Increasing revenue or profitability 
+
+You work needs to boil down to numbers. Not what you shipped but what happened after you shipped it. **What gets measured gets managed. What gets measured gets promoted.** Training a deep learning model is cool but shipping a simple linear regression in half the time might get you promoted twice as fast. Everyone is in sales. Once you build it, you have to sell it. If you can build and sell, you will be unstoppable. Ask your boss what you need to do this year to get promoted, then do those things. Ruthlessly prioritize and execute. Ignore everything else. 
 
 ### Final Thoughts
 
-Why learning to code is important. Life is all about leverage. Knowing code gives you the most leverage over any other form (all except content). Most people want to be managers. Pretty soon everyone will be one, just not managing people. But instead managing AI people, or bots, who will do your work for you.
+Learning to code is important. Life is all about leverage. The best types of leverage in the world are permissionless leverage. Things with no marginal costs of replication. This kind of leverage are things like code and content (podcasts, blog posts, etc.). 
 
-It takes balls to move to a new field. People who just do what their boss tells them to do will never have the guts to do it. It takes a certain amount of agency to do it. 
+Most people want to be managers. That's another type of leverage, labor or human capital leverage. Pretty soon everyone will be a manager, just not managing people. But instead managing AI people, or bots, who will do your work for you.
+
+It takes guts to move to a new field. People who just do what their boss tells them to do will never have the guts to do it. It takes a certain amount of agency to do it. If you are considering or are already in the process of doing it, I salute you. The world needs more people like you. Good luck!

@@ -9,19 +9,19 @@
 <link>https://mftokic.github.io/</link>
 <atom:link href="https://mftokic.github.io/index.xml" rel="self" type="application/rss+xml"/>
 <description>A collection of thoughts on things from the mind of Mike Tokic</description>
-<generator>quarto-1.5.45</generator>
+<generator>quarto-1.5.56</generator>
 <lastBuildDate>Fri, 23 Aug 2024 07:00:00 GMT</lastBuildDate>
 <item>
   <title>Weekend Reads (8/23/24)</title>
   <dc:creator>Mike Tokic</dc:creator>
-  <link>https://mftokic.github.io/posts/2034-08-23-weekend-reads/</link>
+  <link>https://mftokic.github.io/posts/2024-08-23-weekend-reads/</link>
   <description><![CDATA[ 
 
 
 
 
 
-<p><img src="https://mftokic.github.io/posts/2034-08-23-weekend-reads/image.png" class="img-fluid"></p>
+<p><img src="https://mftokic.github.io/posts/2024-08-23-weekend-reads/image.png" class="img-fluid"></p>
 <section id="articles" class="level2">
 <h2 class="anchored" data-anchor-id="articles">Articles</h2>
 <ul>
@@ -58,9 +58,9 @@
 
  ]]></description>
   <category>weekend-reads</category>
-  <guid>https://mftokic.github.io/posts/2034-08-23-weekend-reads/</guid>
+  <guid>https://mftokic.github.io/posts/2024-08-23-weekend-reads/</guid>
   <pubDate>Fri, 23 Aug 2024 07:00:00 GMT</pubDate>
-  <media:content url="https://mftokic.github.io/posts/2034-08-23-weekend-reads/image.png" medium="image" type="image/png" height="144" width="144"/>
+  <media:content url="https://mftokic.github.io/posts/2024-08-23-weekend-reads/image.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
   <title>FAQ on Machine Learning Forecasting</title>
