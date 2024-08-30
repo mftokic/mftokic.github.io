@@ -1,0 +1,39 @@
+---
+title: "Weekend Reads (8/30/24)"
+description: "Interesting things I found on the internet this week"
+author: "Mike Tokic"
+date: "2024-08-30"
+categories: [weekend-reads]
+image: "image.png"
+---
+
+![](./image.png)
+
+## Articles
+
+- [Elon Musk's Foundation Page](https://www.muskfoundation.org/): money talks, wealth whispers
+- [Thiel Fellowship App](https://thielfellowship.org/apply): should be the application for most jobs
+- [Prompt Engineering Fundamentals](https://eugeneyan.com/writing/prompting/)
+
+## Videos
+
+- [24 Controversial Truths About Success and Failure on Modern Wisdom](https://www.youtube.com/watch?v=WO5m-roVzjg)
+- One of a Kind Guy on My First Million
+    - [Part 1](https://www.youtube.com/watch?v=SVwLEocqK0E)
+    - [Part 2](https://www.youtube.com/watch?v=W_oJJtSvCcA)
+- [Incentive Masterclass on My First Million](https://www.youtube.com/watch?v=TRnoCjPzmV8)
+- [WHOOP CEO on Diary of a CEO](https://www.youtube.com/watch?v=qDw8zT7pCdQ)
+- [New OpenAI Developments on AI for Humans](https://www.youtube.com/watch?v=ROuPd-Cwrbo)
+
+## Tweets
+
+- [Amazon CEO Automates Tech Debt with AI](https://x.com/ajassy/status/1826608791741493281)
+
+## Products
+
+- [Headband That Puts You to Sleep](https://elemindtech.com/)
+
+## Songs 
+
+- [Mona Lisa by Lil Wayne](https://open.spotify.com/track/0dbTQYW3Ad1FTzIA9t90E8?si=Zky16-6eRf--T-1ZIV82NQ&nd=1&dlsi=16a2bd4780d24517)
+
