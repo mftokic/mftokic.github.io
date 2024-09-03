@@ -2,7 +2,7 @@
 title: "My Path from Finance Intern to Senior Software Engineer at Microsoft"
 description: "How I transitioned into a technical engineering role with zero coding knowledge"
 author: "Mike Tokic"
-date: "2024-08-27"
+date: "2024-09-03"
 categories: [life, finance, career]
 image: "image.png"
 draft: true
@@ -10,13 +10,15 @@ draft: true
 
 ![](./image.png)
 
-I have previously written about my journey in [Microsoft's Finance Rotation Program (FRP)](https://mftokic.github.io/posts/2024-02-19-frp-journey/). That details the first half of my career and how I got my first engineering job, but not what I do today. Today I'm a senior software engineer. Most of my time is spent on building and operating machine learning systems used by others across the finance organization. When I came to Microsoft as an intern in 2015 I couldn't write one line of code. But over the years I worked at it and now write code every day. It's been a hard journey, but also a fun one. If you are like me and are interested in making the switch, here are some pieces of advice that might help you. Like all advice, take it with a grain of salt. Advice is like getting last years winning lottery numbers. They might have worked for that person in the past, but it may not work for you. Anyways I hope you find it helpful. 
+I write code every day as a senior software engineer at Microsoft. But I didn't use to. Back when I came to Microsoft as an intern in summer 2015 I was just your ordinary finance intern. The only code I knew how to write was excel formulas. During the summer I realized the power of data+code and made it my mission to figure it out. 
+
+I have previously written about my journey in [Microsoft's Finance Rotation Program (FRP)](https://mftokic.github.io/posts/2024-02-19-frp-journey/). That details the first half of my career and how I got my first engineering job, but not what I do today as a senior software engineer. Most of my time is spent on building and operating machine learning systems used by others across the finance organization. It's been a hard journey, but also a fun one. If you are like me and are interested in making the switch, here are some pieces of advice that might help you. Like all advice, take it with a grain of salt. Advice is like getting last years winning lottery numbers. They might have worked for that person in the past, but it may not work for you. Anyways I hope you find it helpful. 
 
 ### Focus on Slope over Intercept
 
 When I came back as a full time employee after my internship, I kept seeing these new signs everywhere talking about something called a ["growth mindset"](https://hbr.org/2016/01/what-having-a-growth-mindset-actually-means). During my internship these words were never mentioned, now they are taped to every blank wall on campus. What's going on? Microsoft's CEO, Satya Nadella, was in the midst of working on a culture shift at the company. Trying to go from employees that were "know it alls" to a more improved "learn it all". This new attitude was perfect for me because I knew jack squat about coding, and I wanted to learn. 
 
-If you want to pivot your career into software engineering, there are two ways to go about it. The first and most common is to go to school and get a degree. The second is to figure it out on your own, aka the learn it yourself path. Both paths have their pros and cons. Going to school is the more direct path, but self-learning may have a different kind of benefit. If you've only ever learned how to code on your own, then you are setting yourself up for lifelong learning. As opposed to someone who went to school, who is used to classroom learning. The learning never stops once you start coding for money, so have the skill to learn proactively and not on a predetermined schedule is a super power. 
+If you want to pivot your career into software engineering, there are two ways to go about it. The first and most common is to go to school and get a degree. The second is to figure it out on your own, aka the learn it yourself path. Both paths have their pros and cons. Going to school is the more direct path, but self-learning may have a different kind of benefit. If you've only ever learned how to code on your own, then you are setting yourself up for lifelong learning. As opposed to someone who went to school, who is used to classroom learning. The learning never stops once you start coding for money, so having the skill to learn proactively and not on a predetermined schedule is a super power. 
 
 Having technical knowledge from school puts you ahead of someone else who is just starting to learn on their own. But if that self-taught person is learning at a pace higher than the school smart person, eventually their trajectories will cross and the self-taught coder will surpass them. Think of it like a graph. Where school knowledge gives you a high Y intercept, a good starting point, but the rate of your learning every day after is the slope. The most important thing is to focus on the slope over the intercept.  
 
@@ -38,7 +40,7 @@ You can have public GitHub repos that show as samples of your work. But they sho
 
 ### AI is Your Friend
 
-In this post ChatGPT era, all technical work becomes 100x easier to learn. You don't need school, or even books. You can, for free, start using a large language model (LLM) to start learning coding concepts and even have it ask you technical questions to test your learning. 
+In this post ChatGPT era, all technical work becomes 100x easier to learn. You don't need school, or even books. You can, for free, start using a large language model (LLM) to learn coding concepts and even have it ask you technical questions to test your learning. 
 
 ChatGPT and other tools like GitHub Copilot now become your coding buddy, always there to help you when you get stuck or don't know how to do something. Any new kid on the coding block can now get up to speed on languages like Python quickly because they have a personal AI tutor available 24/7. 
 
@@ -46,13 +48,13 @@ ChatGPT and other tools like GitHub Copilot now become your coding buddy, always
 
 Some people feel like coming into software engineering from a nontechnical discipline is a major handicap. I actually think it's a superpower. If you come from a business background you actually have something other engineers do not. Business domain knowledge combined with technical knowledge is a deadly combination. You now understand both sides of the coin. You know how to make decisions about the business (through the lens of marketing, finance, sales) and can now go and build things that improve how the business serves customers. 
 
-For me having a finance background first, then learning coding second was a good combination. It created a lot of skills that are now invaluable. For example the skill of communicating things in simple terms. When I was building machine learning solutions for finance users, no one cared about the sophistication about my model or how much feature engineering I applied to the data. They just wanted to know how it worked at a high level and if it actually worked by showing improvements in a certain metric. I've seen traditional data scientists/engineers try to explain their work to regular people and it can sometimes be like nails on a chalkboard. It's painful to watch because they cannot explain themselves in plain english. And if the end user can't understand how something works, then they won't trust it, which means they won't use it. 
+For me having a finance background first, then learning coding second was a good combination. It created a lot of skills that are now invaluable. For example the skill of communicating things in simple terms. When I was building machine learning solutions for finance users, no one cared about the sophistication about my model or how much feature engineering I applied to the data. They just wanted to know how the solution worked at a high level and if it actually worked by showing improvements in a certain metric. I've seen traditional data scientists/engineers try to explain their work to regular people and it can sometimes be like nails on a chalkboard. It's painful to watch because they cannot explain themselves in plain english. And if the end user can't understand how something works, then they won't trust it, which means they won't use it. 
 
-If you can build and you can sell, you will be unstoppable. 
+Usually being 80% competent at two skills can create more impact than being 99% competent in a single skill. Focus on combining skills. If you can build and you can sell, you will be unstoppable. 
 
 ### Baby Steps, Not One Giant Leap
 
-Don't go and build the next social networking app on your first coding project. Take it easy, take it slow. Crawl, walk, then run with new technology. Here is a good workflow for learning progression. 
+Don't go and build the next social networking app on your first coding project. Crawl, walk, then run with new technology. Here is a good workflow for learning progression. 
 
 1. Crawl: Get some code working on your computer.
 2. Walk: Move that code up into the cloud and have it run on a different machine that's not yours.
@@ -64,7 +66,7 @@ Those steps can take years, and that's ok. You might even get a software enginee
 2. Program Manager: Now you are the middleman between the business partner and the software engineer. This is an engineering role, and in some companies like Microsoft your compensation will be the same as an engineer. 
 3. Software Engineer: You now build things, in collaboration with the program manager who tells you what the business partner needs. 
 
-Go from business partner, to program manager, to software engineer is a lot easier than skipping directly to software engineer. When I graduated the FRP my first role title was "IT Solution Manager". I still don't know what that means. Overall I was basically a program manager that coded on the side when no one was looking. Eventually that side coding turned into real solutions I pitched to my manager and got into production. Which eventually led me to working solely on building things. Then I finally got the title of software engineer. It didn't happen overnight, but it was possible. 
+Going from business partner, to program manager, to software engineer is a lot easier than skipping directly to software engineer. When I graduated the FRP my first role title was "IT Solution Manager". I still don't know what that means. Overall I was basically a program manager that coded on the side when no one was looking. Eventually that side coding turned into real solutions I pitched to my manager and got into production. Which eventually led me to working solely on building things. Then I finally got the title of software engineer. It didn't happen overnight, but it was possible. 
 
 ### Getting Promoted
 
@@ -74,14 +76,14 @@ You get promoted when what you build has impact. Not just for building cool or c
 
 1. Time savings
 2. Money savings 
-3. Being more precise  
+3. Being more precise (like building a more accuracy ML model) 
 4. Increasing revenue or profitability 
 
-You work needs to boil down to numbers. Not what you shipped but what happened after you shipped it. **What gets measured gets managed. What gets measured gets promoted.** Training a deep learning model is cool but shipping a simple linear regression in half the time might get you promoted twice as fast. Everyone is in sales. Once you build it, you have to sell it. If you can build and sell, you will be unstoppable. Ask your boss what you need to do this year to get promoted, then do those things. Ruthlessly prioritize and execute. Ignore everything else. 
+You work needs to boil down to numbers. Not what you shipped but what happened after you shipped it. Most impact is money and time. Either saving it or getting more of it. **What gets measured gets managed. What gets measured gets promoted.** Training a deep learning model is cool but shipping a simple linear regression in half the time might get you promoted twice as fast. Everyone is in sales. Once you build it, you have to sell it. If you can build and sell, you will be unstoppable. Ask your boss what you need to do this year to get promoted, then do those things. Ruthlessly prioritize and execute. Ignore everything else. 
 
 ### Final Thoughts
 
-Learning to code is important. Life is all about leverage. The best types of leverage in the world are permissionless leverage. They have no marginal costs of replication. These are things like code and content (podcasts, blog posts, etc.). Why do you think I wrote this? Because this kind of content has leverage, meaning it scales easier. It's easier to write this once then to give the same advice to 100 people who ask for it. Save your keystrokes folks. That's why this personal blog exists. Hopefully it's helpful to you my dear reader 😊. 
+Learning to code is important. Life is all about leverage. The best types of leverage in the world are permissionless leverage. They have no marginal costs of replication. These are things like code and content (podcasts, blog posts, etc.). Why do you think I wrote this? Because this kind of content has leverage, meaning it can scale. It's easier to write this once then to give the same advice to 100 people who ask for it. Save your keystrokes folks. That's why this personal blog exists. Hopefully it's helpful to you my dear reader 😊. 
 
 Pretty soon everyone will be a manager, just not managing people. You will manage AI people, or bots, who will do your work for you. Knowing how technology works will help you grow your leverage, whether you're a software engineer or not. Most things 50 years from now will boil down to AI doing the thinking plus executing digital tasks, and robots executing physical tasks. What do you think those run on? You guessed it, code. Software will eat the entire world, it's just a matter of time. I'd rather be giving our robot overlords instructions then taking instructions from them. Everyone will have a choice. Take the red pill. Go all the way down the rabbit hole.  
 
