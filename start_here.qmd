@@ -12,6 +12,7 @@ title: "Learn How I Think"
 ### Career
 
 - [My Journey in Microsoft's Finance Rotation Program](https://mftokic.github.io/posts/2024-02-19-frp-journey/)
+- [Going from Finance Intern to Senior Software Engineer at Microsoft](https://mftokic.github.io/posts/2024-09-04-sde-career-path/)
 - [Personal User Manual](https://mftokic.github.io/posts/2021-08-26-personal-user-manual/)
 
 ### Life
