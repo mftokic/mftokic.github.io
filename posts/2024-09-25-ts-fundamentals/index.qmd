@@ -2,8 +2,8 @@
 title: "Thoughts On Time Series Forecasting Fundamentals"
 description: "Understanding Core ML Concepts in Forecasting"
 author: "Mike Tokic"
-date: "2024-10-01"
-categories: [machine-learning, finance, time-series]
+date: "2024-09-25"
+categories: [machine-learning, time-series]
 image: "image.png"
 draft: true
 ---
@@ -44,6 +44,7 @@ The sequence of what you learn is just as important as what content you learn. B
     - Random Forest
     - Gradient Boosting (XGBoost, LightGBM)
     - Feature Selection
+    - Mutlistep Horizon, Autoregressive
 8. Model Training Lifecycle
     - Train/Test Splits
     - Time Series Cross Validation 
