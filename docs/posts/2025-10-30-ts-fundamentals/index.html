@@ -2,13 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.56">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Mike Tokic">
-<meta name="dcterms.date" content="2024-08-30">
-<meta name="description" content="Series On Understanding Core ML Concepts in Forecasting">
+<meta name="dcterms.date" content="2024-10-01">
+<meta name="description" content="Understanding Core ML Concepts in Forecasting">
 
 <title>Thoughts On Time Series Forecasting Fundamentals – Thoughts on Things</title>
 <style>
@@ -86,12 +86,12 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Thoughts On Time Series Forecasting Fundamentals – Thoughts on Things">
-<meta property="og:description" content="Series On Understanding Core ML Concepts in Forecasting">
-<meta property="og:image" content="https://mftokic.github.io/posts/2025-08-30-ts-fundamentals/image.png">
+<meta property="og:description" content="Understanding Core ML Concepts in Forecasting">
+<meta property="og:image" content="https://mftokic.github.io/posts/2025-10-30-ts-fundamentals/image.png">
 <meta property="og:site_name" content="Thoughts on Things">
 <meta name="twitter:title" content="Thoughts On Time Series Forecasting Fundamentals – Thoughts on Things">
-<meta name="twitter:description" content="Series On Understanding Core ML Concepts in Forecasting">
-<meta name="twitter:image" content="https://mftokic.github.io/posts/2025-08-30-ts-fundamentals/image.png">
+<meta name="twitter:description" content="Understanding Core ML Concepts in Forecasting">
+<meta name="twitter:image" content="https://mftokic.github.io/posts/2025-10-30-ts-fundamentals/image.png">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -149,7 +149,7 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
       <h1 class="title">Thoughts On Time Series Forecasting Fundamentals</h1>
                   <div>
         <div class="description">
-          Series On Understanding Core ML Concepts in Forecasting
+          Understanding Core ML Concepts in Forecasting
         </div>
       </div>
                           <div class="quarto-categories">
@@ -173,7 +173,7 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">August 30, 2024</p>
+        <p class="date">October 1, 2024</p>
       </div>
     </div>
     
@@ -193,29 +193,33 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 
 
 <p><img src="./image.png" class="img-fluid"></p>
-<ul>
+<p>The ability to create forecasts about the future is a superpower. Machine learning (ML) models take this to another level by increasing forecast accuracy while reducing the time spent creating the forecast. Using ML might seem a little scary at first. You may not know where to start. Put intro ML course into Bing and you’ll probably get millions of links. Which ones are good? Why do they cost $5,000? That’s why I wanted to create a gentle introduction to time series forecasting with ML. Where I start from first principles and work our way up to shipping forecasts in production. The intent is to cover the core theory of ML forecasting, and less on the code itself. The code can come later, but anyone who consumes the outputs from ML or helps train ML models needs a strong understanding of how this process works.</p>
+<p>The sequence of what you learn is just as important as what content you learn. Below I have developed a learning path that takes you from absolute beginning and slowly adds new concepts until you are a forecasting master! Please click on each link in order to get up to speed, or skip around to any topic where you want to dive into again. Don’t try to know this all out in a day, take your time, take notes, and maybe even paste some of the posts into your favorite AI tool to quiz you on the topics. Happy learning!</p>
+<section id="our-learning-journey" class="level3">
+<h3 class="anchored" data-anchor-id="our-learning-journey">Our Learning Journey</h3>
+<ol type="1">
 <li>What the heck is a time series?</li>
-<li>Let’s check out some data</li>
 <li>Exploratory Data Analysis
 <ul>
-<li>Autocorrelation</li>
 <li>Time Series Decomposition</li>
+<li>Autocorrelation</li>
 <li>Missing Values, Outliers</li>
-<li>Feature Analysis</li>
+<li>External Regressors</li>
 </ul></li>
 <li>Data Cleaning
 <ul>
 <li>Missing Values</li>
 <li>Outliers</li>
 <li>Box Cox Transformation</li>
-<li>Differencing</li>
+<li>Stationary</li>
 </ul></li>
 <li>Univariate Models
 <ul>
 <li>ARIMA</li>
 <li>Exponential Smoothing</li>
-<li>Seasonal Naive</li>
+<li>Simple benchmarks</li>
 </ul></li>
+<li>Evaluation Metrics</li>
 <li>Feature Engineering
 <ul>
 <li>Date</li>
@@ -265,9 +269,10 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 <li>Parallel Computing</li>
 <li>Model Training and Serving</li>
 </ul></li>
-</ul>
+</ol>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
