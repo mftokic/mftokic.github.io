@@ -1,0 +1,34 @@
+---
+title: "Thoughts On Time Series Forecasting Fundamentals"
+description: "Understanding Core ML Concepts in Forecasting"
+author: "Mike Tokic"
+date: "2024-09-25"
+categories: [machine-learning, time-series]
+image: "image.png"
+draft: true
+---
+
+### AI's Are Like Onions, We Both Have Layers
+
+There's a lot of terminology in the world of artificial intelligence. It has a lot of layers to it. The practice of time series forecasting is many layers down. How deep? Let's start peeling back the layers. 
+
+![](./image2.png)
+
+#### Artificial Intelligence
+
+Artificial Intelligence, or AI, can be described as the ability for machines to learn and think like humans. It's as simple as that. While that's an easy thing to say, it's a hard thing to do. AI has been around since the mid 20th century, with a lot of ups and downs. There are multiple subdisciplines of AI. Things like robotics and expert systems. But the biggest and most important is machine learning. 
+
+#### Machine Learning
+
+Machine Learning, or ML, is all about creating algorithms learn on their own from data. ML turns the idea of traditional programming on its head. Traditional programming is all about writing out explicit instructions or rules, in the form of code, that tell a computer what to do. ML on the other hand is code in the form of an algorithm where the rules are learned from training data. It's a unique paradigm shift that has unlocked countless advancements in computing. Self-driving cars, human genome sequencing, and yes even forecasting has all been driven by these algorithms that can learn. Similar to AI, the world of ML has multiple disciplines. The one we're interested in is regression. 
+
+<insert ML explanation graphic>
+
+#### Supervised Learning
+
+#### Regression
+
+#### Time Series
+
+### Time Series Example
+

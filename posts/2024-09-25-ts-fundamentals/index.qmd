@@ -1,0 +1,65 @@
+---
+title: "Thoughts On Time Series Forecasting Fundamentals"
+description: "Understanding Core ML Concepts in Forecasting"
+author: "Mike Tokic"
+date: "2024-09-25"
+categories: [machine-learning, time-series]
+image: "image.png"
+---
+
+The ability to create forecasts about the future is a superpower. Machine learning (ML) models take this to another level by increasing forecast accuracy while reducing the time spent creating the forecast. Using ML might seem a little scary at first. You may not know where to start. Type "intro ML course" into Bing and you'll probably get millions of links. Which ones are good? Why do they cost $5,000? That's why I wanted to create a gentle introduction to time series forecasting with ML. Where I start from first principles and work our way up to shipping forecasts in production. The intent is to cover the core theory of ML forecasting, and less on the code itself. The code can come later, but anyone who consumes the outputs from ML or helps train ML models needs a strong understanding of how this process works. 
+
+The sequence of what you learn is just as important as what content you learn. I have developed a learning path that takes you from absolute beginner and slowly adds new concepts until you're a forecasting master! Please click on each link in order to get up to speed, or skip around to any topic you want to dive into again. Don't try to read this all in a day, take your time, take notes, and maybe even paste some of the posts into your favorite AI tool to quiz yourself on the topics. Happy learning!
+
+### Our Learning Journey
+1. What's a time series? 
+2. Exploratory Data Analysis
+    - Time Series Decomposition
+    - Autocorrelation
+    - Missing Values, Outliers 
+    - External Regressors
+3. Data Cleaning
+    - Missing Values
+    - Outliers
+    - Box Cox Transformation
+    - Stationary
+4. Univariate Models
+    - ARIMA
+    - Exponential Smoothing
+    - Simple Benchmark Models
+5. Evaluation Metrics
+6. Feature Engineering
+    - Date 
+    - Target Variable
+    - External Regressors
+7. Multivariate Models
+    - Local Models
+    - Global Models
+    - Hyperparameter Tuning
+    - Linear Regression
+    - Decision Trees
+    - Random Forest
+    - Gradient Boosting (XGBoost, LightGBM)
+    - Feature Selection
+    - Mutlistep Horizon, Autoregressive
+8. Model Training Lifecycle
+    - Train/Test Splits
+    - Time Series Cross Validation 
+    - Evaluation Metrics
+9. Hierarchical Forecasting
+    - Standard Hierarchy
+    - Grouped Hierarchy
+10. Combining Models
+    - Simple Averages
+    - Weighted Averaged
+    - Ensemble Models
+11. Prediction Intervals
+12. Model Interpretability 
+    - Model Specific
+    - Model Agnostic
+        - Global Methods
+        - Local Methods
+13. Forecasts in Production
+    - Parallel Computing
+    - Model Training and Serving
+
