@@ -21,12 +21,13 @@
 
 
 
+<p><img src="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/image.png" class="img-fluid"></p>
 <p>The ability to create forecasts about the future is a superpower. Machine learning (ML) models take this to another level by increasing forecast accuracy while reducing the time spent creating the forecast. Using ML might seem a little scary at first. You may not know where to start. Type “intro ML course” into Bing and you’ll probably get millions of links. Which ones are good? Why do they cost $5,000? That’s why I wanted to create a gentle introduction to time series forecasting with ML. Where I start from first principles and work our way up to shipping forecasts in production. The intent is to cover the core theory of ML forecasting, and less on the code itself. The code can come later, but anyone who consumes the outputs from ML or helps train ML models needs a strong understanding of how this process works.</p>
 <p>The sequence of what you learn is just as important as what content you learn. I have developed a learning path that takes you from absolute beginner and slowly adds new concepts until you’re a forecasting master! Please click on each link in order to get up to speed, or skip around to any topic you want to dive into again. Don’t try to read this all in a day, take your time, take notes, and maybe even paste some of the posts into your favorite AI tool to quiz yourself on the topics. Happy learning!</p>
 <section id="our-learning-journey" class="level3">
 <h3 class="anchored" data-anchor-id="our-learning-journey">Our Learning Journey</h3>
 <ol type="1">
-<li>What’s a time series?</li>
+<li>What the heck is a time series?</li>
 <li>Exploratory Data Analysis
 <ul>
 <li>Time Series Decomposition</li>
@@ -45,7 +46,7 @@
 <ul>
 <li>ARIMA</li>
 <li>Exponential Smoothing</li>
-<li>Simple Benchmark Models</li>
+<li>Simple benchmarks</li>
 </ul></li>
 <li>Evaluation Metrics</li>
 <li>Feature Engineering
