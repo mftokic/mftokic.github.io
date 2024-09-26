@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Mike Tokic">
-<meta name="dcterms.date" content="2021-08-17">
-<meta name="description" content="Open sourcing screenwriting">
+<meta name="dcterms.date" content="2024-09-25">
+<meta name="description" content="Understanding Core ML Concepts in Forecasting">
 
-<title>Writing Screenplays in VS Code – Thoughts on Things</title>
+<title>Thoughts On Time Series Forecasting Fundamentals – Thoughts on Things</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -81,21 +81,24 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 </script>
+<meta name="quarto:status" content="draft">
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Writing Screenplays in VS Code – Thoughts on Things">
-<meta property="og:description" content="Open sourcing screenwriting">
+<meta property="og:title" content="Thoughts On Time Series Forecasting Fundamentals – Thoughts on Things">
+<meta property="og:description" content="Understanding Core ML Concepts in Forecasting">
+<meta property="og:image" content="https://mftokic.github.io/posts/2024-09-26-ts-fundamentals-whats-a-time-series/image.png">
 <meta property="og:site_name" content="Thoughts on Things">
-<meta name="twitter:title" content="Writing Screenplays in VS Code – Thoughts on Things">
-<meta name="twitter:description" content="Open sourcing screenwriting">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Thoughts On Time Series Forecasting Fundamentals – Thoughts on Things">
+<meta name="twitter:description" content="Understanding Core ML Concepts in Forecasting">
+<meta name="twitter:image" content="https://mftokic.github.io/posts/2024-09-26-ts-fundamentals-whats-a-time-series/image.png">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner"><div id="quarto-draft-alert" class="alert alert-warning"><i class="bi bi-pencil-square"></i>Draft</div>
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -143,16 +146,15 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Writing Screenplays in VS Code</h1>
+      <h1 class="title">Thoughts On Time Series Forecasting Fundamentals</h1>
                   <div>
         <div class="description">
-          Open sourcing screenwriting
+          Understanding Core ML Concepts in Forecasting
         </div>
       </div>
                           <div class="quarto-categories">
-                <div class="quarto-category">code</div>
-                <div class="quarto-category">movies-tv</div>
-                <div class="quarto-category">open-source</div>
+                <div class="quarto-category">machine-learning</div>
+                <div class="quarto-category">time-series</div>
               </div>
                   </div>
   </div>
@@ -170,7 +172,7 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">August 17, 2021</p>
+        <p class="date">September 25, 2024</p>
       </div>
     </div>
     
@@ -189,15 +191,34 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 
 
 
-<p>Today there are a lot of tools for people to write screenplays. Most of them are paid and require hundreds of dollars. I recently stumbled across a VS Code add called <a href="https://marketplace.visualstudio.com/items?itemName=piersdeseilligny.betterfountain">Better Fountain</a> that allows you to turn simple markdown documents into a professionally formatted screenplay. It is built upon an open source tool called Fountain, that is a bare bones screenwriting tool that is free and easy to use.</p>
-<p>Why the heck would you want to write a screenplay is VS Code? I was asking myself the same thing. If you come from a coding background, this is an easy transition. Heck, I’m writing this post currently in a markdown file within VS Code 😎. What I think is most interesting is the tools we use to code can now be applied to the older art of storytelling with screenwriting.</p>
-<p>The biggest tool most coders leverage is some sort of version control. VS Code easily integrates with GitHub, so you can push your latest script (screenplay) changes to version control and track their changes with ease. Side note, kinda funny how folks in Hollywood call their screenplays “scripts”. Guess coding and storytelling are more alike then we thought.</p>
-<p>What makes the idea of hosting your script on GitHub is how it could be seen by others. It could be a public repository, and essentially open source. An open source movie? That would be crazy. What if others could read the script and make updates through pull requests? It could be the best version of fan fiction. What if others could read the script, upvote it in some way (using GitHub stars) to catch the eyes of top directors and film studios? That way a movie could already be audience approved beforehand.</p>
-<p>This becomes very interesting when you add in the idea of block chain and smart contracts. If a movie studio wants to pick it up and take it into production, everyone who contributed to the script in the GitHub repo could automatically receive some sort of pre-arranged compensation when the movie gets made. There could even be new types of open source licenses built for these kinds of projects that have specified terms around compensating people who made the project possible.</p>
-<p>There could also be some kind of crypto coin created for the repo, which would allow movie studios to buy into the project and either fund change requests to the script or set up a subsequent sequel or second season. The possibilities get more exciting the more I think about them.</p>
-<p>To close this out, let’s list out everything that makes this a horrible idea. The biggest thing that comes to mind is that people don’t want to know what’s going to happen in a movie or tv show. Having the script publicly available somewhere like GitHub could ruin any twists or cliffhangers in a script, but at the same time we run into the same problem today if someone watches a movie anytime after opening day. Everyone knew the plot to Harry Potter before each movie was released, but people lined up around the corner to go watch them anyway. Maybe open source movies are not such a bad thing after all.</p>
+<section id="ais-are-like-onions-we-both-have-layers" class="level3">
+<h3 class="anchored" data-anchor-id="ais-are-like-onions-we-both-have-layers">AI’s Are Like Onions, We Both Have Layers</h3>
+<p>There’s a lot of terminology in the world of artificial intelligence. It has a lot of layers to it. The practice of time series forecasting is many layers down. How deep? Let’s start peeling back the layers.</p>
+<p><img src="./image2.png" class="img-fluid"></p>
+<section id="artificial-intelligence" class="level4">
+<h4 class="anchored" data-anchor-id="artificial-intelligence">Artificial Intelligence</h4>
+<p>Artificial Intelligence, or AI, can be described as the ability for machines to learn and think like humans. It’s as simple as that. While that’s an easy thing to say, it’s a hard thing to do. AI has been around since the mid 20th century, with a lot of ups and downs. There are multiple subdisciplines of AI. Things like robotics and expert systems. But the biggest and most important is machine learning.</p>
+</section>
+<section id="machine-learning" class="level4">
+<h4 class="anchored" data-anchor-id="machine-learning">Machine Learning</h4>
+<p>Machine Learning, or ML, is all about creating algorithms learn on their own from data. ML turns the idea of traditional programming on its head. Traditional programming is all about writing out explicit instructions or rules, in the form of code, that tell a computer what to do. ML on the other hand is code in the form of an algorithm where the rules are learned from training data. It’s a unique paradigm shift that has unlocked countless advancements in computing. Self-driving cars, human genome sequencing, and yes even forecasting has all been driven by these algorithms that can learn. Similar to AI, the world of ML has multiple disciplines. The one we’re interested in is regression.</p>
+<p><insert ml="" explanation="" graphic=""></insert></p>
+</section>
+<section id="supervised-learning" class="level4">
+<h4 class="anchored" data-anchor-id="supervised-learning">Supervised Learning</h4>
+</section>
+<section id="regression" class="level4">
+<h4 class="anchored" data-anchor-id="regression">Regression</h4>
+</section>
+<section id="time-series" class="level4">
+<h4 class="anchored" data-anchor-id="time-series">Time Series</h4>
+</section>
+</section>
+<section id="time-series-example" class="level3">
+<h3 class="anchored" data-anchor-id="time-series-example">Time Series Example</h3>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
