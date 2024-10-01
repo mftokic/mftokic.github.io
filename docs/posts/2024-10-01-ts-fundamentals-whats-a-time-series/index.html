@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Mike Tokic">
-<meta name="dcterms.date" content="2024-09-25">
-<meta name="description" content="Understanding Core ML Concepts in Forecasting">
+<meta name="dcterms.date" content="2024-10-01">
+<meta name="description" content="Overview of AI and How Time Series Fits In">
 
-<title>Thoughts On Time Series Forecasting Fundamentals – Thoughts on Things</title>
+<title>What’s a Time Series? – Thoughts on Things</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -85,13 +85,17 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Thoughts On Time Series Forecasting Fundamentals – Thoughts on Things">
-<meta property="og:description" content="Understanding Core ML Concepts in Forecasting">
-<meta property="og:image" content="https://mftokic.github.io/posts/2024-09-26-ts-fundamentals-whats-a-time-series/image.png">
+<meta property="og:title" content="What’s a Time Series? – Thoughts on Things">
+<meta property="og:description" content="Overview of AI and How Time Series Fits In">
+<meta property="og:image" content="https://mftokic.github.io/posts/2024-10-01-ts-fundamentals-whats-a-time-series/image.png">
 <meta property="og:site_name" content="Thoughts on Things">
-<meta name="twitter:title" content="Thoughts On Time Series Forecasting Fundamentals – Thoughts on Things">
-<meta name="twitter:description" content="Understanding Core ML Concepts in Forecasting">
-<meta name="twitter:image" content="https://mftokic.github.io/posts/2024-09-26-ts-fundamentals-whats-a-time-series/image.png">
+<meta property="og:image:height" content="1024">
+<meta property="og:image:width" content="1024">
+<meta name="twitter:title" content="What’s a Time Series? – Thoughts on Things">
+<meta name="twitter:description" content="Overview of AI and How Time Series Fits In">
+<meta name="twitter:image" content="https://mftokic.github.io/posts/2024-10-01-ts-fundamentals-whats-a-time-series/image.png">
+<meta name="twitter:image-height" content="1024">
+<meta name="twitter:image-width" content="1024">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -146,10 +150,10 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Thoughts On Time Series Forecasting Fundamentals</h1>
+      <h1 class="title">What’s a Time Series?</h1>
                   <div>
         <div class="description">
-          Understanding Core ML Concepts in Forecasting
+          Overview of AI and How Time Series Fits In
         </div>
       </div>
                           <div class="quarto-categories">
@@ -172,7 +176,7 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">September 25, 2024</p>
+        <p class="date">October 1, 2024</p>
       </div>
     </div>
     
@@ -191,6 +195,7 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 
 
 
+<p><strong>This post is part of a larger learning series around time series forecasting fundamentals. <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/">Check out the learning path</a> to see other posts in the series.</strong></p>
 <section id="ais-are-like-onions-we-both-have-layers" class="level3">
 <h3 class="anchored" data-anchor-id="ais-are-like-onions-we-both-have-layers">AI’s Are Like Onions, We Both Have Layers</h3>
 <p>There’s a lot of terminology in the world of artificial intelligence. It has a lot of layers to it. The practice of time series forecasting is many layers down. How deep? Let’s start peeling back the layers.</p>
@@ -202,20 +207,31 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 <section id="machine-learning" class="level4">
 <h4 class="anchored" data-anchor-id="machine-learning">Machine Learning</h4>
 <p>Machine Learning, or ML, is all about creating algorithms learn on their own from data. ML turns the idea of traditional programming on its head. Traditional programming is all about writing out explicit instructions or rules, in the form of code, that tell a computer what to do. ML on the other hand is code in the form of an algorithm where the rules are learned from training data. It’s a unique paradigm shift that has unlocked countless advancements in computing. Self-driving cars, human genome sequencing, and yes even forecasting has all been driven by these algorithms that can learn. Similar to AI, the world of ML has multiple disciplines. The one we’re interested in is regression.</p>
-<p><insert ml="" explanation="" graphic=""></insert></p>
+<p><img src="./image3.png" class="img-fluid"> <a href="https://contenteratechspace.com/how-different-are-conventional-programming-and-machine-learning/">image source</a></p>
 </section>
 <section id="supervised-learning" class="level4">
 <h4 class="anchored" data-anchor-id="supervised-learning">Supervised Learning</h4>
+<p>Supervised learning is a type of machine learning where you teach a computer to make predictions or decisions using examples. It’s like teaching a child to identify animals by showing them pictures of different animals and telling them what each one is. In supervised learning, you give the computer a bunch of “input” data (like pictures of animals) and the correct “output” (the names of the animals). The computer learns from these examples, and over time it gets better at predicting the outputs based on new inputs it hasn’t seen before. There are a few different flavors of supervised learning, but in this learning series we care about regression.</p>
 </section>
 <section id="regression" class="level4">
 <h4 class="anchored" data-anchor-id="regression">Regression</h4>
+<p>Regression is a type of supervised learning method that helps predict a numerical value based on past data. Imagine you want to predict the price of a house based on its size, location, and number of rooms. Regression analyzes the historical data of house prices and their characteristics to find a relationship. Once this relationship is understood, you can input the characteristics of any house and the regression model will predict its price. Essentially, it’s like creating a formula that says how different factors, like size or location, affect the price.</p>
+<p>Traditional regression modeling usually doesn’t have a time component, but when you need to predict a number over time, that’s when we enter the crazy world of time series.</p>
 </section>
 <section id="time-series" class="level4">
 <h4 class="anchored" data-anchor-id="time-series">Time Series</h4>
+<p>A time series is a series of numerical data points recorded at regular intervals. For example the highest temperature each day over the last 10 years can be thought of as one time series. If we have that temperature data for 50 cities, then we have 50 time series in our dataset. A time series can be at any kind of time interval. Yearly, quarterly, monthly, daily, hourly, etc. You get the idea.</p>
+<p>The art of forecasting is just taking historical time series data, and feeding it into a model that can learn from historical trends and seasonality patterns. Ultimately creating a future prediction for the next few periods of time.</p>
+<p>Most regression models in machine learning can be turned into a time series forecast model by the process of incorporating time dependant data as features through a process called feature engineering. A feature is just a variable in your dataset that can be used to help predict your target variable. The process of creating features before you train a model is called feature engineering. The target variable is what you want to predict going forward. These machine learning regression models can be thought of as multivariate models, since they can incorporate many different variables or features into a model.</p>
+<p>Let’s apply this to a quick example. For a monthly revenue time series forecast, our target variable will be the revenue variable in our dataset. And we can create features like month of the year, how much money we made in the same month last year, etc. to help predict revenue.</p>
+<p>There are also models that only exist in the world of time series forecasting. These are more statistical models and less machine learning models. Meaning they operate like equations that can applied to your data compared to a machine learning model that tries to learn the patterns underlying the data. These models are often univariate, which means that you only need the historical target variable values accompanied by a timestamp (list of dates) to train these models. While they might be simple in nature, they are still very useful even today. Often beating more complex models like deep learning.</p>
 </section>
 </section>
 <section id="time-series-example" class="level3">
 <h3 class="anchored" data-anchor-id="time-series-example">Time Series Example</h3>
+<p>Now that we’ve peeled back all of the layers on time series forecasting, let’s take a look at some data. In this learning series I will be using the most common time series that applies to every company in the world, historical revenue. The data we’ll use is completely made up, but created in a way to illustrate a lot of the learning concepts throughout the series. The sales data is recoded at a monthly level, broken out by countries our hypothetical company operates in and what products it sells. Let’s take a quick look at the data.</p>
+<p><a href="./example_ts_data.xlsx">You can find the raw data here.</a></p>
+<p><img src="./chart1.png" class="img-fluid"></p>
 
 
 </section>
