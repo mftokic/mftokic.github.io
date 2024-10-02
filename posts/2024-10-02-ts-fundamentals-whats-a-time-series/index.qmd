@@ -5,7 +5,6 @@ author: "Mike Tokic"
 date: "2024-10-02"
 categories: [machine-learning, time-series]
 image: "image.png"
-draft: true
 ---
 
 *This post is part of a larger learning series around time series forecasting fundamentals. [Check out the learning path](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/) to see other posts in the series.* 
