@@ -10,7 +10,7 @@
 <meta name="dcterms.date" content="2024-10-02">
 <meta name="description" content="Overview of AI and How Time Series Fits In">
 
-<title>What’s a Time Series? – Thoughts on Things</title>
+<title>What’s A Time Series? – Thoughts on Things</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -85,13 +85,13 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="What’s a Time Series? – Thoughts on Things">
+<meta property="og:title" content="What’s A Time Series? – Thoughts on Things">
 <meta property="og:description" content="Overview of AI and How Time Series Fits In">
 <meta property="og:image" content="https://mftokic.github.io/posts/2024-10-02-ts-fundamentals-whats-a-time-series/image.png">
 <meta property="og:site_name" content="Thoughts on Things">
 <meta property="og:image:height" content="1024">
 <meta property="og:image:width" content="1024">
-<meta name="twitter:title" content="What’s a Time Series? – Thoughts on Things">
+<meta name="twitter:title" content="What’s A Time Series? – Thoughts on Things">
 <meta name="twitter:description" content="Overview of AI and How Time Series Fits In">
 <meta name="twitter:image" content="https://mftokic.github.io/posts/2024-10-02-ts-fundamentals-whats-a-time-series/image.png">
 <meta name="twitter:image-height" content="1024">
@@ -150,7 +150,7 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">What’s a Time Series?</h1>
+      <h1 class="title">What’s A Time Series?</h1>
                   <div>
         <div class="description">
           Overview of AI and How Time Series Fits In
@@ -198,7 +198,7 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 <p><em>This post is part of a larger learning series around time series forecasting fundamentals. <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/">Check out the learning path</a> to see other posts in the series.</em></p>
 <section id="ais-are-like-onions-we-both-have-layers" class="level3">
 <h3 class="anchored" data-anchor-id="ais-are-like-onions-we-both-have-layers">AI’s Are Like Onions, We Both Have Layers</h3>
-<p>There’s a lot of terminology in the world of artificial intelligence. It has a lot of layers to it. The practice of time series forecasting is many layers down. How deep? Let’s start peeling back the layers.</p>
+<p>There’s a lot of terminology in the world of artificial intelligence. With a lot of layers to it. The practice of time series forecasting is many layers down. How deep? Let’s start peeling back the layers.</p>
 <p><img src="./image2.png" class="img-fluid"></p>
 <section id="artificial-intelligence" class="level4">
 <h4 class="anchored" data-anchor-id="artificial-intelligence">Artificial Intelligence</h4>
@@ -207,7 +207,14 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 <section id="machine-learning" class="level4">
 <h4 class="anchored" data-anchor-id="machine-learning">Machine Learning</h4>
 <p>Machine Learning, or ML, is all about creating algorithms learn on their own from data. ML turns the idea of traditional programming on its head. Traditional programming is all about writing out explicit instructions or rules, in the form of code, that tell a computer what to do. ML on the other hand is code in the form of an algorithm where the rules are learned from training data. It’s a unique paradigm shift that has unlocked countless advancements in computing. Self-driving cars, human genome sequencing, and yes even forecasting has all been driven by these algorithms that can learn. Similar to AI, the world of ML has multiple disciplines. The one we’re interested in is regression.</p>
-<p><img src="./image3.png" class="img-fluid"></p>
+<div class="text-center">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image3.png" class="img-fluid figure-img"></p>
+<figcaption>Picture describing how ML is different from programming.</figcaption>
+</figure>
+</div>
+</div>
 <p><a href="https://contenteratechspace.com/how-different-are-conventional-programming-and-machine-learning/">image source</a></p>
 </section>
 <section id="supervised-learning" class="level4">
@@ -216,7 +223,7 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 </section>
 <section id="regression" class="level4">
 <h4 class="anchored" data-anchor-id="regression">Regression</h4>
-<p>Regression is a type of supervised learning method that helps predict a numerical value based on past data. Imagine you want to predict the price of a house based on its size, location, and number of rooms. Regression analyzes the historical data of house prices and their characteristics to find a relationship. Once this relationship is understood, you can input the characteristics of any house and the regression model will predict its price. Essentially, it’s like creating a formula that says how different factors, like size or location, affect the price.</p>
+<p>Regression is a type of supervised learning method that helps predict a numerical value based on past data. Imagine you want to predict the price of a house based on its size, location, and number of rooms. Regression analyzes the historical data of house prices and their characteristics to find a relationship. Once this relationship is understood, you can input the characteristics of any house and the regression model will predict its price.</p>
 <p>Traditional regression modeling usually doesn’t have a time component, but when you need to predict a number over time, that’s when we enter the crazy world of time series.</p>
 </section>
 <section id="time-series" class="level4">
@@ -237,7 +244,7 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 </section>
 <section id="final-thoughts" class="level3">
 <h3 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h3>
-<p>Time series is a very niche corner in AI universe. It may seem small but in reality every company in the world deals with time series. They make up most financial data like sales and are top of mind for every person in the C-suite. You should now know what a time series is and understand more of the common terms you will hear around machine learning. Now that we have a good foundation of terminology, lets explore the data even more in the next post.</p>
+<p>Time series is a very niche corner in the AI universe. It may seem small but in reality every company in the world deals with time series. They make up most financial data like sales and are top of mind for every leader in the C-suite. You should now know what a time series is and understand more of the common terms you will hear around machine learning. Now that we have a good foundation of terminology, lets explore the data even more in the next post.</p>
 
 
 </section>

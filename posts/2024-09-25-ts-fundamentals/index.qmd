@@ -12,7 +12,7 @@ The ability to create forecasts about the future is a superpower. Machine learni
 The sequence of what you learn is just as important as what content you learn. I have developed a learning path that takes you from absolute beginner and slowly adds new concepts until you're a forecasting master! Please click on each link in order to get up to speed, or skip around to any topic you want to dive into again. Don't try to read this all in a day, take your time, take notes, and maybe even paste some of the posts into your favorite AI tool to quiz yourself on the topics. Happy learning!
 
 ### Our Learning Journey
-1. What's a time series? 
+1. [What's a time series?](https://mftokic.github.io/posts/2024-10-02-ts-fundamentals-whats-a-time-series/) 
 2. Exploratory Data Analysis
     - Time Series Decomposition
     - Autocorrelation
@@ -62,4 +62,6 @@ The sequence of what you learn is just as important as what content you learn. I
 13. Forecasts in Production
     - Parallel Computing
     - Model Training and Serving
+14. Appendix
+    - ML Term Glossary
 
