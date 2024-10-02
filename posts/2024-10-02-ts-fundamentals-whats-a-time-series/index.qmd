@@ -22,10 +22,10 @@ Artificial Intelligence, or AI, can be described as the ability for machines to 
 
 #### Machine Learning
 
-Machine Learning, or ML, is all about creating algorithms learn on their own from data. ML turns the idea of traditional programming on its head. Traditional programming is all about writing out explicit instructions or rules, in the form of code, that tell a computer what to do. ML on the other hand is code in the form of an algorithm where the rules are learned from training data. It's a unique paradigm shift that has unlocked countless advancements in computing. Self-driving cars, human genome sequencing, and yes even forecasting has all been driven by these algorithms that can learn. Similar to AI, the world of ML has multiple disciplines. The one we're interested in is regression. 
+Machine Learning, or ML, is all about creating algorithms learn on their own from data. ML turns the idea of traditional programming on its head. Traditional programming is all about writing out explicit instructions or rules, in the form of code, that tell a computer what to do. ML on the other hand is code in the form of an algorithm where the rules are learned from training data. It's a unique paradigm shift that has unlocked countless advancements in computing. Self-driving cars, human genome sequencing, and yes even forecasting has all been driven by these algorithms that can learn. Similar to AI, the world of ML has multiple disciplines. The one we're interested in is supervised learning. 
 
 ::: { .text-center }
-![Picture describing how ML is different from programming.](./image3.png)
+![](./image3.png)
 :::
 
 [image source](https://contenteratechspace.com/how-different-are-conventional-programming-and-machine-learning/)
