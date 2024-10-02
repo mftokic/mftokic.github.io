@@ -1,14 +1,14 @@
 ---
-title: "What's a Time Series?"
+title: "What's A Time Series?"
 description: "Overview of AI and How Time Series Fits In"
 author: "Mike Tokic"
-date: "2024-10-01"
+date: "2024-10-02"
 categories: [machine-learning, time-series]
 image: "image.png"
 draft: true
 ---
 
-**This post is part of a larger learning series around time series forecasting fundamentals. [Check out the learning path](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/) to see other posts in the series.**  
+*This post is part of a larger learning series around time series forecasting fundamentals. [Check out the learning path](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/) to see other posts in the series.* 
 
 ### AI's Are Like Onions, We Both Have Layers
 
@@ -25,6 +25,7 @@ Artificial Intelligence, or AI, can be described as the ability for machines to 
 Machine Learning, or ML, is all about creating algorithms learn on their own from data. ML turns the idea of traditional programming on its head. Traditional programming is all about writing out explicit instructions or rules, in the form of code, that tell a computer what to do. ML on the other hand is code in the form of an algorithm where the rules are learned from training data. It's a unique paradigm shift that has unlocked countless advancements in computing. Self-driving cars, human genome sequencing, and yes even forecasting has all been driven by these algorithms that can learn. Similar to AI, the world of ML has multiple disciplines. The one we're interested in is regression. 
 
 ![](./image3.png)
+
 [image source](https://contenteratechspace.com/how-different-are-conventional-programming-and-machine-learning/)
 
 #### Supervised Learning
@@ -56,3 +57,9 @@ Now that we've peeled back all of the layers on time series forecasting, let's t
 [You can find the raw data here.](./example_ts_data.xlsx) 
 
 ![](./chart1.png)
+
+In the data there are sales for two countries across two products. This means we have four unique time series we can forecast. One for each unique combination of country and product. Throughout this learning series we will use this data as an example as we work through different time series concepts. 
+
+### Final Thoughts
+
+Time series is a very niche corner in AI universe. It may seem small but in reality every company in the world deals with time series. They make up most financial data like sales and are top of mind for every person in the C-suite. You should now know what a time series is and understand more of the common terms you will hear around machine learning. Now that we have a good foundation of terminology, lets explore the data even more in the next post. 

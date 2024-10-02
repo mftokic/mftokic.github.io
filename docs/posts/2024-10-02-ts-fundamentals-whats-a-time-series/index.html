@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Mike Tokic">
-<meta name="dcterms.date" content="2024-10-01">
+<meta name="dcterms.date" content="2024-10-02">
 <meta name="description" content="Overview of AI and How Time Series Fits In">
 
 <title>What’s a Time Series? – Thoughts on Things</title>
@@ -87,13 +87,13 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="What’s a Time Series? – Thoughts on Things">
 <meta property="og:description" content="Overview of AI and How Time Series Fits In">
-<meta property="og:image" content="https://mftokic.github.io/posts/2024-10-01-ts-fundamentals-whats-a-time-series/image.png">
+<meta property="og:image" content="https://mftokic.github.io/posts/2024-10-02-ts-fundamentals-whats-a-time-series/image.png">
 <meta property="og:site_name" content="Thoughts on Things">
 <meta property="og:image:height" content="1024">
 <meta property="og:image:width" content="1024">
 <meta name="twitter:title" content="What’s a Time Series? – Thoughts on Things">
 <meta name="twitter:description" content="Overview of AI and How Time Series Fits In">
-<meta name="twitter:image" content="https://mftokic.github.io/posts/2024-10-01-ts-fundamentals-whats-a-time-series/image.png">
+<meta name="twitter:image" content="https://mftokic.github.io/posts/2024-10-02-ts-fundamentals-whats-a-time-series/image.png">
 <meta name="twitter:image-height" content="1024">
 <meta name="twitter:image-width" content="1024">
 <meta name="twitter:card" content="summary_large_image">
@@ -176,7 +176,7 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">October 1, 2024</p>
+        <p class="date">October 2, 2024</p>
       </div>
     </div>
     
@@ -195,7 +195,7 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 
 
 
-<p><strong>This post is part of a larger learning series around time series forecasting fundamentals. <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/">Check out the learning path</a> to see other posts in the series.</strong></p>
+<p><em>This post is part of a larger learning series around time series forecasting fundamentals. <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/">Check out the learning path</a> to see other posts in the series.</em></p>
 <section id="ais-are-like-onions-we-both-have-layers" class="level3">
 <h3 class="anchored" data-anchor-id="ais-are-like-onions-we-both-have-layers">AI’s Are Like Onions, We Both Have Layers</h3>
 <p>There’s a lot of terminology in the world of artificial intelligence. It has a lot of layers to it. The practice of time series forecasting is many layers down. How deep? Let’s start peeling back the layers.</p>
@@ -207,7 +207,8 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 <section id="machine-learning" class="level4">
 <h4 class="anchored" data-anchor-id="machine-learning">Machine Learning</h4>
 <p>Machine Learning, or ML, is all about creating algorithms learn on their own from data. ML turns the idea of traditional programming on its head. Traditional programming is all about writing out explicit instructions or rules, in the form of code, that tell a computer what to do. ML on the other hand is code in the form of an algorithm where the rules are learned from training data. It’s a unique paradigm shift that has unlocked countless advancements in computing. Self-driving cars, human genome sequencing, and yes even forecasting has all been driven by these algorithms that can learn. Similar to AI, the world of ML has multiple disciplines. The one we’re interested in is regression.</p>
-<p><img src="./image3.png" class="img-fluid"> <a href="https://contenteratechspace.com/how-different-are-conventional-programming-and-machine-learning/">image source</a></p>
+<p><img src="./image3.png" class="img-fluid"></p>
+<p><a href="https://contenteratechspace.com/how-different-are-conventional-programming-and-machine-learning/">image source</a></p>
 </section>
 <section id="supervised-learning" class="level4">
 <h4 class="anchored" data-anchor-id="supervised-learning">Supervised Learning</h4>
@@ -232,6 +233,11 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 <p>Now that we’ve peeled back all of the layers on time series forecasting, let’s take a look at some data. In this learning series I will be using the most common time series that applies to every company in the world, historical revenue. The data we’ll use is completely made up, but created in a way to illustrate a lot of the learning concepts throughout the series. The sales data is recoded at a monthly level, broken out by countries our hypothetical company operates in and what products it sells. Let’s take a quick look at the data.</p>
 <p><a href="./example_ts_data.xlsx">You can find the raw data here.</a></p>
 <p><img src="./chart1.png" class="img-fluid"></p>
+<p>In the data there are sales for two countries across two products. This means we have four unique time series we can forecast. One for each unique combination of country and product. Throughout this learning series we will use this data as an example as we work through different time series concepts.</p>
+</section>
+<section id="final-thoughts" class="level3">
+<h3 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h3>
+<p>Time series is a very niche corner in AI universe. It may seem small but in reality every company in the world deals with time series. They make up most financial data like sales and are top of mind for every person in the C-suite. You should now know what a time series is and understand more of the common terms you will hear around machine learning. Now that we have a good foundation of terminology, lets explore the data even more in the next post.</p>
 
 
 </section>
