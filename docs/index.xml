@@ -129,9 +129,9 @@
 <h3 class="anchored" data-anchor-id="our-learning-journey">Our Learning Journey</h3>
 <ol type="1">
 <li><a href="https://mftokic.github.io/posts/2024-10-02-ts-fundamentals-whats-a-time-series/">What’s a time series?</a></li>
-<li>Exploratory Data Analysis (in progress)
+<li><a href="https://mftokic.github.io/posts/2024-10-03-ts-fundamentals-eda/">Exploratory Data Analysis</a>
 <ul>
-<li>Shape of the Data</li>
+<li>Shape of the Data (in progress)</li>
 <li>Time Series Decomposition</li>
 <li>Autocorrelation</li>
 <li>Missing Values, Outliers</li>
