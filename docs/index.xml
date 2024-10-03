@@ -10,7 +10,43 @@
 <atom:link href="https://mftokic.github.io/index.xml" rel="self" type="application/rss+xml"/>
 <description>A collection of thoughts on things from the mind of Mike Tokic</description>
 <generator>quarto-1.5.57</generator>
-<lastBuildDate>Wed, 02 Oct 2024 07:00:00 GMT</lastBuildDate>
+<lastBuildDate>Thu, 03 Oct 2024 07:00:00 GMT</lastBuildDate>
+<item>
+  <title>Exploratory Data Analysis For Time Series</title>
+  <dc:creator>Mike Tokic</dc:creator>
+  <link>https://mftokic.github.io/posts/2024-10-03-ts-fundamentals-eda/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p><em>This post is part of a larger learning series around time series forecasting fundamentals. <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/">Check out the learning path</a> to see other posts in the series.</em></p>
+<section id="exploratory-data-analysis-overview" class="level3">
+<h3 class="anchored" data-anchor-id="exploratory-data-analysis-overview">Exploratory Data Analysis Overview</h3>
+<p>Exploratory data analysis, or EDA, is the process of understanding the patterns in your data before you train any machine learning model. It’s the first step in the data science lifecycle. Blindly throwing your data into a model before understanding it yourself is a recipe for disaster. If your data is garbage, you will create a garbage forecast. <a href="https://mftokic.github.io/posts/2024-04-08-time-series-garbage/">Gargbage in, garbage out.</a></p>
+</section>
+<section id="eda-for-time-series" class="level3">
+<h3 class="anchored" data-anchor-id="eda-for-time-series">EDA for Time Series</h3>
+<p>Applying EDA to time series data is a unique process, different from every other kind of data used in machine learning. Here are the building blocks of good time series EDA. Click on each to explore further.</p>
+<ul>
+<li>Shape of the Data (in progress)</li>
+<li>Time Series Decomposition</li>
+<li>Autocorrelation</li>
+<li>Missing Values, Outliers</li>
+<li>External Regressors</li>
+</ul>
+
+
+</section>
+
+ ]]></description>
+  <category>machine-learning</category>
+  <category>time-series</category>
+  <guid>https://mftokic.github.io/posts/2024-10-03-ts-fundamentals-eda/</guid>
+  <pubDate>Thu, 03 Oct 2024 07:00:00 GMT</pubDate>
+  <media:content url="https://mftokic.github.io/posts/2024-10-03-ts-fundamentals-eda/image.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
 <item>
   <title>What’s A Time Series?</title>
   <dc:creator>Mike Tokic</dc:creator>
@@ -93,8 +129,9 @@
 <h3 class="anchored" data-anchor-id="our-learning-journey">Our Learning Journey</h3>
 <ol type="1">
 <li><a href="https://mftokic.github.io/posts/2024-10-02-ts-fundamentals-whats-a-time-series/">What’s a time series?</a></li>
-<li>Exploratory Data Analysis
+<li>Exploratory Data Analysis (in progress)
 <ul>
+<li>Shape of the Data</li>
 <li>Time Series Decomposition</li>
 <li>Autocorrelation</li>
 <li>Missing Values, Outliers</li>
@@ -2959,484 +2996,6 @@
   <guid>https://mftokic.github.io/posts/2024-04-19-weekend-reads/</guid>
   <pubDate>Fri, 19 Apr 2024 07:00:00 GMT</pubDate>
   <media:content url="https://mftokic.github.io/posts/2024-04-19-weekend-reads/image.png" medium="image" type="image/png" height="144" width="144"/>
-</item>
-<item>
-  <title>Time Series First Principles: Higher Grain Higher Accuracy</title>
-  <dc:creator>Mike Tokic</dc:creator>
-  <link>https://mftokic.github.io/posts/2024-04-18-time-series-grain/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p><img src="https://mftokic.github.io/posts/2024-04-18-time-series-grain/image.png" class="img-fluid"></p>
-<section id="time-series-first-principles-series" class="level3">
-<h3 class="anchored" data-anchor-id="time-series-first-principles-series">Time Series First Principles Series</h3>
-<p>This post dives into the fourth principle of a good time series forecast, the higher the grain the higher the accuracy. Check out the <a href="https://mftokic.github.io/posts/2024-03-26-time-series-first-principles-initial/">initial post</a> in this series to get a high level view of each principle.</p>
-<ol type="1">
-<li><a href="https://mftokic.github.io/posts/2024-04-02-time-series-domain-expertise/">Domain Expertise</a></li>
-<li><a href="https://mftokic.github.io/posts/2024-04-08-time-series-garbage/">Garbage In Garbage Out</a></li>
-<li><a href="https://mftokic.github.io/posts/2024-04-11-time-series-past-future/">The Future Is Similar To The Past</a></li>
-<li><a href="https://mftokic.github.io/posts/2024-04-18-time-series-grain/"><strong>Higher Grain Higher Accuracy</strong></a></li>
-<li><a href="https://mftokic.github.io/posts/2024-04-23-time-series-order/">Order Is Important</a></li>
-<li><a href="https://mftokic.github.io/posts/2024-05-01-time-series-features/">The Magic Is In The Feature Engineering</a></li>
-<li><a href="https://mftokic.github.io/posts/2024-05-03-time-series-simple-models/">Simple Models Are Better Models</a></li>
-<li><a href="https://mftokic.github.io/posts/2024-05-07-time-series-capture-uncertainty/">Capture Uncertainty</a></li>
-<li><a href="https://mftokic.github.io/posts/2024-05-28-time-series-model-avg/">Model Combinations Are King</a></li>
-<li><a href="https://mftokic.github.io/posts/2024-05-31-time-series-deep-learning/">Deep Learning Last</a></li>
-</ol>
-</section>
-<section id="clear-skies" class="level3">
-<h3 class="anchored" data-anchor-id="clear-skies">Clear Skies</h3>
-<p>When planes take off from the ground they climb high into the sky. During that 5-10 minute period passengers have to stay seated with their seatbelt fastened. It’s only after the plane reaches 10,000 feet people can start to get up and move around the plane. Eventually the plane can reach an altitude of 40,000 feet. To compare, the peak of Mount Everest is 29,000 feet off the ground. Planes go up that high because it’s easier to fly the plane and more efficient. If planes flew a few feet off the ground it would be a lot bumpier ride, having to deal with changing weather and turbulence.</p>
-<p>Forecasting is similar to flying a plane. Training a machine learning (ML) model at a higher grain of data is akin to a plane climbing in altitude. There is less turbulence (noise) in the data and your forecast has a better chance of being more accurate. You can either climb in altitude at the individual time series grain, or by the date grain. Let’s discuss each of them along with other methods.</p>
-</section>
-<section id="time-series-grain" class="level3">
-<h3 class="anchored" data-anchor-id="time-series-grain">Time Series Grain</h3>
-<p>Think of a higher time series grain as an aggregation of your original data. For example you might have product sales across a bunch of cities, where each city is a time series. Individual cities might have hard to model trend and seasonality, but when combined at a total country-level, it can be easier to model. Take the example charts below. Each city might be noisy but climbing in altitude up to the county level makes it easier to spot trends and seasonality.</p>
-<p><img src="https://mftokic.github.io/posts/2024-04-18-time-series-grain/chart2.png" class="img-fluid"> <img src="https://mftokic.github.io/posts/2024-04-18-time-series-grain/chart1.png" class="img-fluid"></p>
-</section>
-<section id="date-grain" class="level3">
-<h3 class="anchored" data-anchor-id="date-grain">Date Grain</h3>
-<p>In a perfect world we would be able to forecast our businesses down to the day, or even minute, across the next 10 years. This is sadly not the case. The more granular you try to forecast at the date grain, the noisier the data is going to be, and the harder it will be to create accurate forecasts. Unless there is an absolute need to forecast at a certain level, I almost always recommend a higher date grain. Take the example charts below. See how aggregating daily data to a monthly date grain level makes it easier to spot trends and seasonality.</p>
-<p><img src="https://mftokic.github.io/posts/2024-04-18-time-series-grain/chart3.png" class="img-fluid"> <img src="https://mftokic.github.io/posts/2024-04-18-time-series-grain/chart4.png" class="img-fluid"></p>
-<p>In the finance org, the most common date grain to forecast at is month. This gives a healthy balance of being able to forecast long periods of time while also being able to update your forecast with new historical data every few weeks.</p>
-<p>Here is another important point to call out. The longer your forecast horizon, the higher the date grain you should forecast at. Here are some recommendations based on your forecast horizon (how many periods you want to forecast). For example, if you’re trying to forecast out the next 6 months at the daily grain, you might get better results if you aggregate up to the monthly grain and forecast by month instead.</p>
-<ul>
-<li>Daily Grain: 1-90 day forecast horizon</li>
-<li>Weekly Grain: 1-12 week forecast horizon</li>
-<li>Monthly Grain: 1-18 month forecast horizon</li>
-<li>Quarterly Grain: 1-8 quarter forecast horizon</li>
-<li>Yearly Grain: more than 1 year forecast horizon</li>
-</ul>
-</section>
-<section id="hierarchical-forecasting" class="level3">
-<h3 class="anchored" data-anchor-id="hierarchical-forecasting">Hierarchical Forecasting</h3>
-<p>A potential “best of both worlds” solution to the data grain issue is to use a hierarchical forecast. This is where you can train models at different grains of the data, then use a statistical process to reconcile each forecast together so they are in sync. Our forecasting godfather, Rob Hyndman, has done a lot of great work in this space. Here is a <a href="https://otexts.com/fpp3/hierarchical.html">chapter from his book</a> on hierarchical forecasting.</p>
-<p>Let’s go back to our time series grain example. Using a hierarchical forecast you could train models and create forecasts for each city, then do the same at the total country-level, then finally do the same at a total world wide level across all countries. This is a standard hierarchical approach shown in the chart below. This hierarchical process blends a “bottoms up” forecast of creating predictions at the lowest level by city, with a “tops down” forecast of creating predictions at the highest global level. A statistical process is then used to make the “tops down” forecast equal the “bottoms up” forecast, optimizing for accuracy at all levels of the hierarchy.</p>
-<p><img src="https://mftokic.github.io/posts/2024-04-18-time-series-grain/chart5.png" class="img-fluid"></p>
-<p>The same idea can be applied at the date grain too. Where you can forecast at the daily level, weekly level, and monthly level. Then use a reconciliation process to get the final forecast at the daily level that is also accurate when summing up by month. This can work well if a monthly forecast is more accurate, but the final forecast needs to be at a daily level.</p>
-</section>
-<section id="allocations" class="level3">
-<h3 class="anchored" data-anchor-id="allocations">Allocations</h3>
-<p>Another option is to take a forecast at a higher grain and allocate it down to a lower grain using simple allocation logic. This process can replace the more complicated hierarchical forecasting discussed earlier. Simple allocations can be done in two ways.</p>
-<p>The first is to take historical values and create a percent split to apply to the final forecast. For example we can create a forecast at the country-level, then split that out by city. The split percent by city (allocation percent) can be calculated based on how much each city was the percent of total country over the last few years. This can be broken down by period. So you can get a specific percent split for each month on average in the past. This approach helps maintain historical seasonality across each time series (each city). See the charts below for an example of using two historical years of monthly data to create the final allocation percentages.</p>
-<table class="caption-top table">
-<caption>Historical splits by city</caption>
-<thead>
-<tr class="header">
-<th>Month</th>
-<th>City A %</th>
-<th>City B %</th>
-<th>City C %</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Jan 2021</td>
-<td>30.87%</td>
-<td>30.08%</td>
-<td>39.05%</td>
-</tr>
-<tr class="even">
-<td>Feb 2021</td>
-<td>28.11%</td>
-<td>23.90%</td>
-<td>47.99%</td>
-</tr>
-<tr class="odd">
-<td>Mar 2021</td>
-<td>23.77%</td>
-<td>47.43%</td>
-<td>28.81%</td>
-</tr>
-<tr class="even">
-<td>Apr 2021</td>
-<td>31.26%</td>
-<td>18.42%</td>
-<td>50.32%</td>
-</tr>
-<tr class="odd">
-<td>May 2021</td>
-<td>39.50%</td>
-<td>34.08%</td>
-<td>26.42%</td>
-</tr>
-<tr class="even">
-<td>Jun 2021</td>
-<td>50.58%</td>
-<td>30.98%</td>
-<td>18.44%</td>
-</tr>
-<tr class="odd">
-<td>Jan 2022</td>
-<td>36.33%</td>
-<td>31.79%</td>
-<td>31.88%</td>
-</tr>
-<tr class="even">
-<td>Feb 2022</td>
-<td>19.79%</td>
-<td>40.74%</td>
-<td>39.47%</td>
-</tr>
-<tr class="odd">
-<td>Mar 2022</td>
-<td>19.95%</td>
-<td>28.99%</td>
-<td>51.06%</td>
-</tr>
-<tr class="even">
-<td>Apr 2022</td>
-<td>20.37%</td>
-<td>26.76%</td>
-<td>52.87%</td>
-</tr>
-<tr class="odd">
-<td>May 2022</td>
-<td>41.37%</td>
-<td>41.53%</td>
-<td>17.10%</td>
-</tr>
-<tr class="even">
-<td>Jun 2022</td>
-<td>43.86%</td>
-<td>41.10%</td>
-<td>15.04%</td>
-</tr>
-</tbody>
-</table>
-<table class="caption-top table">
-<caption>Average of city split by month</caption>
-<thead>
-<tr class="header">
-<th>Month</th>
-<th>City A %</th>
-<th>City B %</th>
-<th>City C %</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Jan</td>
-<td>33.60%</td>
-<td>30.93%</td>
-<td>35.46%</td>
-</tr>
-<tr class="even">
-<td>Feb</td>
-<td>23.95%</td>
-<td>32.32%</td>
-<td>43.73%</td>
-</tr>
-<tr class="odd">
-<td>Mar</td>
-<td>21.86%</td>
-<td>38.21%</td>
-<td>39.93%</td>
-</tr>
-<tr class="even">
-<td>Apr</td>
-<td>25.82%</td>
-<td>22.59%</td>
-<td>51.60%</td>
-</tr>
-<tr class="odd">
-<td>May</td>
-<td>40.43%</td>
-<td>37.81%</td>
-<td>21.76%</td>
-</tr>
-<tr class="even">
-<td>Jun</td>
-<td>47.22%</td>
-<td>36.04%</td>
-<td>16.74%</td>
-</tr>
-</tbody>
-</table>
-<table class="caption-top table">
-<caption>Final forecast using the city splits</caption>
-<colgroup>
-<col style="width: 8%">
-<col style="width: 16%">
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 15%">
-<col style="width: 15%">
-<col style="width: 15%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Month</th>
-<th style="text-align: right;">Country Forecast</th>
-<th style="text-align: right;">City A %</th>
-<th style="text-align: right;">City B %</th>
-<th style="text-align: right;">City C %</th>
-<th style="text-align: right;">City A Forecast</th>
-<th style="text-align: right;">City B Forecast</th>
-<th style="text-align: right;">City C Forecast</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Jan 2023</td>
-<td style="text-align: right;">15000</td>
-<td style="text-align: right;">33.60</td>
-<td style="text-align: right;">30.93</td>
-<td style="text-align: right;">35.46</td>
-<td style="text-align: right;">5040</td>
-<td style="text-align: right;">4639.5</td>
-<td style="text-align: right;">5319</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Feb 2023</td>
-<td style="text-align: right;">15200</td>
-<td style="text-align: right;">23.95</td>
-<td style="text-align: right;">32.32</td>
-<td style="text-align: right;">43.73</td>
-<td style="text-align: right;">3640.4</td>
-<td style="text-align: right;">4912.64</td>
-<td style="text-align: right;">6646.96</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Mar 2023</td>
-<td style="text-align: right;">15400</td>
-<td style="text-align: right;">21.86</td>
-<td style="text-align: right;">38.21</td>
-<td style="text-align: right;">39.93</td>
-<td style="text-align: right;">3366.44</td>
-<td style="text-align: right;">5884.34</td>
-<td style="text-align: right;">6149.22</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Apr 2023</td>
-<td style="text-align: right;">15600</td>
-<td style="text-align: right;">25.82</td>
-<td style="text-align: right;">22.59</td>
-<td style="text-align: right;">51.60</td>
-<td style="text-align: right;">4027.92</td>
-<td style="text-align: right;">3524.04</td>
-<td style="text-align: right;">8049.6</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">May 2023</td>
-<td style="text-align: right;">15800</td>
-<td style="text-align: right;">40.43</td>
-<td style="text-align: right;">37.81</td>
-<td style="text-align: right;">21.76</td>
-<td style="text-align: right;">6387.94</td>
-<td style="text-align: right;">5973.98</td>
-<td style="text-align: right;">3438.08</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Jun 2023</td>
-<td style="text-align: right;">16000</td>
-<td style="text-align: right;">47.22</td>
-<td style="text-align: right;">36.04</td>
-<td style="text-align: right;">16.74</td>
-<td style="text-align: right;">7555.2</td>
-<td style="text-align: right;">5766.4</td>
-<td style="text-align: right;">2678.4</td>
-</tr>
-</tbody>
-</table>
-<p>The second approach is to use a future forecast to create the allocation splits. For example we can create future forecasts at the country-level and also at the city-level. Then we can create the split percent for each city by taking the city forecast and summing it up to the country-level, then taking the percent split for each city. These splits can then be applied to the final country-level forecast to get the final forecast by city. This approach uses the more robust country-level forecast, while still trying to capture future changing trends and seasonality by city.</p>
-<table class="caption-top table">
-<caption>Initial forecast, where country and each city are forecasted separately</caption>
-<colgroup>
-<col style="width: 12%">
-<col style="width: 22%">
-<col style="width: 21%">
-<col style="width: 21%">
-<col style="width: 21%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Month</th>
-<th>Country Forecast</th>
-<th>City A Forecast</th>
-<th>City B Forecast</th>
-<th>City C Forecast</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Jan 2023</td>
-<td>10,000</td>
-<td>4,000</td>
-<td>3,500</td>
-<td>2,000</td>
-</tr>
-<tr class="even">
-<td>Feb 2023</td>
-<td>10,500</td>
-<td>4,200</td>
-<td>3,000</td>
-<td>3,300</td>
-</tr>
-<tr class="odd">
-<td>Mar 2023</td>
-<td>11,000</td>
-<td>4,500</td>
-<td>3,200</td>
-<td>3,300</td>
-</tr>
-<tr class="even">
-<td>Apr 2023</td>
-<td>11,500</td>
-<td>4,800</td>
-<td>3,400</td>
-<td>3,300</td>
-</tr>
-<tr class="odd">
-<td>May 2023</td>
-<td>12,000</td>
-<td>5,000</td>
-<td>3,500</td>
-<td>3,500</td>
-</tr>
-<tr class="even">
-<td>Jun 2023</td>
-<td>12,500</td>
-<td>5,200</td>
-<td>3,800</td>
-<td>3,500</td>
-</tr>
-</tbody>
-</table>
-<table class="caption-top table">
-<caption>Calculating the percent splits by city</caption>
-<thead>
-<tr class="header">
-<th>Month</th>
-<th>City A %</th>
-<th>City B %</th>
-<th>City C %</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Jan 2023</td>
-<td>42.11%</td>
-<td>36.84%</td>
-<td>21.05%</td>
-</tr>
-<tr class="even">
-<td>Feb 2023</td>
-<td>40.00%</td>
-<td>28.57%</td>
-<td>31.43%</td>
-</tr>
-<tr class="odd">
-<td>Mar 2023</td>
-<td>40.91%</td>
-<td>29.09%</td>
-<td>30.00%</td>
-</tr>
-<tr class="even">
-<td>Apr 2023</td>
-<td>41.74%</td>
-<td>29.57%</td>
-<td>28.70%</td>
-</tr>
-<tr class="odd">
-<td>May 2023</td>
-<td>41.67%</td>
-<td>29.17%</td>
-<td>29.17%</td>
-</tr>
-<tr class="even">
-<td>Jun 2023</td>
-<td>41.60%</td>
-<td>30.40%</td>
-<td>28.00%</td>
-</tr>
-</tbody>
-</table>
-<table class="caption-top table">
-<caption>Final forecast after applying the city splits to the country-level forecast</caption>
-<colgroup>
-<col style="width: 12%">
-<col style="width: 29%">
-<col style="width: 29%">
-<col style="width: 29%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Month</th>
-<th>City A Final Forecast</th>
-<th>City B Final Forecast</th>
-<th>City C Final Forecast</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Jan 2023</td>
-<td>4,211</td>
-<td>3,684</td>
-<td>2,105</td>
-</tr>
-<tr class="even">
-<td>Feb 2023</td>
-<td>4,200</td>
-<td>3,000</td>
-<td>3,300</td>
-</tr>
-<tr class="odd">
-<td>Mar 2023</td>
-<td>4,500</td>
-<td>3,200</td>
-<td>3,300</td>
-</tr>
-<tr class="even">
-<td>Apr 2023</td>
-<td>4,800</td>
-<td>3,400</td>
-<td>3,300</td>
-</tr>
-<tr class="odd">
-<td>May 2023</td>
-<td>5,000</td>
-<td>3,500</td>
-<td>3,500</td>
-</tr>
-<tr class="even">
-<td>Jun 2023</td>
-<td>5,200</td>
-<td>3,800</td>
-<td>3,500</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="reversal" class="level3">
-<h3 class="anchored" data-anchor-id="reversal">Reversal</h3>
-<p>A more granular forecast can sometimes be more accurate, especially if the more detailed grain uncovers more stable trends and seasonality that can be modeled. Take for example a product whose sales are impacted by Chinese New Year. That holiday doesn’t happen on the same day every year, and it can even happen in different months. Sometimes in January, and sometimes in February. Since it happens over multiple days the split between the two months can change drastically from year to year. Creating a forecast at the daily level, adding information around when Chinese New Year is happening, could result in a more accurate forecast. You could also take the approach of a monthly forecast, and have a numeric feature that lists how many days of Chinese New Year falls within each month.</p>
-<p>If your initial data at the higher grain is noisy or has low forecast accuracy, consider asking the domain expert if there could be more insightful trends and seasonality at a lower grain.</p>
-</section>
-<section id="finnts" class="level3">
-<h3 class="anchored" data-anchor-id="finnts">finnts</h3>
-<p>Hierarchical forecasting is a tricky business, thankfully my open-source package <a href="https://microsoft.github.io/finnts/index.html">finnts</a> can automatically do hierarchical forecasting. The package can even use external regressors (features) in the hierarchical approach! Today finnts supports hierarchical forecasting at the time series grain. Hopefully one day we will implement hierarchical forecasting at the date grain, stay tuned. This is the same package I use internally at my job, allowing my company to replace hundreds of billions of manual forecasts with machine learning. Check out the package and see for yourself.</p>
-</section>
-<section id="final-thoughts" class="level3">
-<h3 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h3>
-<p>Just as pilots navigate to higher altitudes to find smoother skies and better efficiency, so too must we elevate our approach to data granularity in forecasting when needed. By stepping back from the minutiae of daily or city-level data and ascending to monthly or country-level aggregations, we enable our models to capture more coherent patterns and deliver forecasts with improved precision. This strategic shift—from a granular view to a broader perspective—is not just about avoiding turbulence; it’s about leveraging stability to enhance predictability.</p>
-<p>However, the real magic often lies in blending these approaches through hierarchical forecasting. This method combines the detailed insights available at lower levels with the clarity and simplicity of higher-level forecasts, ensuring both depth and breadth in our predictive capabilities. As we continue to refine our techniques and tools, like the finnts package, we are paving the way for a future where complex, multi-tiered forecasting is as streamlined as a flight cruising at 40,000 feet.</p>
-<p>In your journey through data, remember that the right altitude can make all the difference. Rising above the noise can provide not just clearer views, but also far-reaching insights. So, buckle up—we’re about to take forecasting to new heights.</p>
-
-
-</section>
-
- ]]></description>
-  <category>time-series</category>
-  <category>machine-learning</category>
-  <category>finance</category>
-  <guid>https://mftokic.github.io/posts/2024-04-18-time-series-grain/</guid>
-  <pubDate>Thu, 18 Apr 2024 07:00:00 GMT</pubDate>
-  <media:content url="https://mftokic.github.io/posts/2024-04-18-time-series-grain/image.png" medium="image" type="image/png" height="82" width="144"/>
 </item>
 </channel>
 </rss>

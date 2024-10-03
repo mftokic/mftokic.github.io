@@ -13,7 +13,8 @@ The sequence of what you learn is just as important as what content you learn. I
 
 ### Our Learning Journey
 1. [What's a time series?](https://mftokic.github.io/posts/2024-10-02-ts-fundamentals-whats-a-time-series/) 
-2. Exploratory Data Analysis
+2. Exploratory Data Analysis (in progress)
+    - Shape of the Data
     - Time Series Decomposition
     - Autocorrelation
     - Missing Values, Outliers 

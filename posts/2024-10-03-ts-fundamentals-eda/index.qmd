@@ -1,0 +1,24 @@
+---
+title: "Exploratory Data Analysis For Time Series"
+description: "Understanding your data creates better forecasts"
+author: "Mike Tokic"
+date: "2024-10-03"
+categories: [machine-learning, time-series]
+image: "image.png"
+---
+
+*This post is part of a larger learning series around time series forecasting fundamentals. [Check out the learning path](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/) to see other posts in the series.* 
+
+### Exploratory Data Analysis Overview
+
+Exploratory data analysis, or EDA, is the process of understanding the patterns in your data before you train any machine learning model. It's the first step in the data science lifecycle. Blindly throwing your data into a model before understanding it yourself is a recipe for disaster. If your data is garbage, you will create a garbage forecast. [Gargbage in, garbage out.](https://mftokic.github.io/posts/2024-04-08-time-series-garbage/) 
+
+### EDA for Time Series
+
+Applying EDA to time series data is a unique process, different from every other kind of data used in machine learning. Here are the building blocks of good time series EDA. Click on each to explore further. 
+
+- Shape of the Data (in progress)
+- Time Series Decomposition
+- Autocorrelation
+- Missing Values, Outliers 
+- External Regressors

@@ -1,0 +1,29 @@
+---
+title: "Machine Learning Glossary"
+description: "Simple definitions to complex terms"
+author: "Mike Tokic"
+date: "2025-01-01"
+categories: [machine-learning, time-series]
+image: "image.png"
+draft: true
+---
+
+- Arima
+- Artificial Intelligence (AI)
+- Dependant Variable
+- Exploratory Data Analysis (EDA)
+- Exponential Smoothing
+- External Regressors
+- Feature
+- Feature Engineering
+- Independent Variable
+- Machine Learning (ML)
+- Multivariate Model
+- Regression
+- Seasonality
+- Supervised Learning
+- Target Variable
+- Time Series
+- Timestamp
+- Trend
+- Univariate Model
