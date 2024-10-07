@@ -1,0 +1,17 @@
+---
+title: "Exploratory Data Analysis: Shape of the Data"
+description: "Start to understand how your time series data looks"
+author: "Mike Tokic"
+date: "2024-10-09"
+categories: [machine-learning, time-series]
+image: "image.png"
+draft: true
+---
+
+*This post is part of a larger learning series around time series forecasting fundamentals. [Check out the learning path](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/) to see other posts in the series.* 
+
+The example data used in this series [can be found here.](./example_ts_data.xlsx) 
+
+### Initial Data Smell Test
+
+The first step of exploratory data analysis for time series is getting a feel for the data at a high level. This doesn't involve complex statistical analysis. Just simple charts to see how things look. When analyzing these charts we'll use the most underrated concept in machine learning. The human smell test. This involves using your eye balls to look at the data and understand what could be going on based on your domain experience about the area the data tries to explain. Let's chart the time series in a few ways and give it a smell test.   
