@@ -15,3 +15,17 @@ The example data used in this series [can be found here.](./example_ts_data.xlsx
 ### Initial Data Smell Test
 
 The first step of exploratory data analysis for time series is getting a feel for the data at a high level. This doesn't involve complex statistical analysis. Just simple charts to see how things look. When analyzing these charts we'll use the most underrated concept in machine learning. The human smell test. This involves using your eye balls to look at the data and understand what could be going on based on your domain experience about the area the data tries to explain. Let's chart the time series in a few ways and give it a smell test.   
+
+![Total revenue by month](./chart1.png)
+
+Test
+
+![Total country revenue by month](./chart2.png)
+
+Test
+
+![Total product revenue by month](./chart3.png)
+
+Test
+
+![Revenue for each individual time series by month](./chart4.png)
