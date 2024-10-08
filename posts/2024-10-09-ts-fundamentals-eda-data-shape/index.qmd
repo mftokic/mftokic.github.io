@@ -8,6 +8,16 @@ image: "image.png"
 draft: true
 ---
 
+<style>
+.figure {
+    text-align: center;
+}
+
+.figure figcaption {
+    text-align: center;
+}
+</style>
+
 *This post is part of a larger learning series around time series forecasting fundamentals. [Check out the learning path](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/) to see other posts in the series.* 
 
 The example data used in this series [can be found here.](./example_ts_data.xlsx) 
