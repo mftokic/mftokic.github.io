@@ -21,6 +21,7 @@ draft: true
 - Multivariate Model
 - Regression
 - Seasonality
+- Smell Test
 - Supervised Learning
 - Target Variable
 - Time Series
