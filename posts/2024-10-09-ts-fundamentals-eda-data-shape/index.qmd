@@ -42,4 +42,11 @@ Looking at revenue by product tells a similar story as revenue by country. Cooki
 
 ![Revenue for each individual time series by month](./chart4.png)
 
-Finally we can view each time series individually. Our initial hunches at higher aggregations are now confirmed. We can see Canada cookie sales have those crazy spikes. After talking to our sales and marketing teams, we learn that the spikes are caused by new cookie product launches. Ice cream sales in Canada is the one series with the exponential growth. 
+Finally we can view each time series individually. Our initial hunches at higher aggregations are now confirmed. We can see Canada cookie sales have those crazy spikes. After talking to our sales and marketing teams, we learn that the spikes are caused by new cookie product launches. Ice cream sales in Canada is the one series with the exponential growth. Both don't have much seasonality. 
+
+Revenue in the United States is all about seasonality. Cookie sales show an interesting dip in 2020 but seem to rebound in 2021. This could be caused by the impact of COVID. Ice cream sales has both strong trend and seasonality. This will make it easy to forecast going forward. 
+
+### Final Thoughts
+
+We have now completed our initial smell test of the historical data. Based on our domain knowledge of the business we can start to understand what happened in the past, and use that information to help us create a better future forecast. The smell test was easy on this dataset since there are only four time series. You might be working with thousands of time series at your company, so higher level smell checks might be the only thing you can do. There are more automated ways at analyzing the data. These methods will be explored more in future posts. 
+

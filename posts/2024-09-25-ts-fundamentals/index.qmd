@@ -50,6 +50,7 @@ The sequence of what you learn is just as important as what content you learn. I
 9. Hierarchical Forecasting
     - Standard Hierarchy
     - Grouped Hierarchy
+    - Clustering
 10. Combining Models
     - Simple Averages
     - Weighted Averaged
