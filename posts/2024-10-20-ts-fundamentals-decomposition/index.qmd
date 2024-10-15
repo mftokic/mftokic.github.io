@@ -1,0 +1,15 @@
+---
+title: "Exploratory Data Analysis: Time Series Decomposition"
+description: "Understanding trend and seasonality patterns"
+author: "Mike Tokic"
+date: "2024-10-20"
+categories: [machine-learning, time-series]
+image: "image.png"
+draft: true
+---
+
+Why understanding trend and seasonality is important. 
+
+How to break out trend and seasonality. 
+
+STL decomposition. How to get insights from the chart. 

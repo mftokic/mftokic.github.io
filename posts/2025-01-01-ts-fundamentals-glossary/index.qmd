@@ -8,23 +8,25 @@ image: "image.png"
 draft: true
 ---
 
-- Arima
+- ARIMA
 - Artificial Intelligence (AI)
 - Dependant Variable
 - Exploratory Data Analysis (EDA)
 - Exponential Smoothing
-- External Regressors
+- External Regressors (xregs)
 - Feature
 - Feature Engineering
 - Independent Variable
 - Machine Learning (ML)
 - Multivariate Model
+- Outlier
 - Regression
 - Seasonality
 - Smell Test
 - Supervised Learning
 - Target Variable
 - Time Series
+- Time Series Decomposition
 - Timestamp
 - Trend
 - Univariate Model
