@@ -10,7 +10,76 @@
 <atom:link href="https://mftokic.github.io/index.xml" rel="self" type="application/rss+xml"/>
 <description>A collection of thoughts on things from the mind of Mike Tokic</description>
 <generator>quarto-1.5.57</generator>
-<lastBuildDate>Thu, 03 Oct 2024 07:00:00 GMT</lastBuildDate>
+<lastBuildDate>Tue, 15 Oct 2024 07:00:00 GMT</lastBuildDate>
+<item>
+  <title>Exploratory Data Analysis: Shape of the Data</title>
+  <dc:creator>Mike Tokic</dc:creator>
+  <link>https://mftokic.github.io/posts/2024-10-15-ts-fundamentals-eda-data-shape/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<style>
+.figure {
+    text-align: center;
+}
+
+.figure figcaption {
+    text-align: center;
+}
+</style>
+<p><em>This post is part of the <a href="https://mftokic.github.io/posts/2024-10-03-ts-fundamentals-eda/">exploratory data analysis chapter</a> within a larger learning series around time series forecasting fundamentals. <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/">Check out the main learning path</a> to see other posts in the series.</em></p>
+<p>The example data used in this series <a href="https://github.com/mftokic/mftokic.github.io/blob/main/posts/2024-10-02-ts-fundamentals-whats-a-time-series/example_ts_data.csv">can be found here.</a></p>
+<section id="initial-data-smell-test" class="level3">
+<h3 class="anchored" data-anchor-id="initial-data-smell-test">Initial Data Smell Test</h3>
+<p>The first step of exploratory data analysis for time series is getting a feel for the data at a high level. This doesn’t involve complex statistical analysis. Just simple charts to see how things look. When analyzing these charts we’ll use the most underrated concept in machine learning. The human smell test. This involves using your eye balls to look at the data and understand what could be going on based on your <a href="https://mftokic.github.io/posts/2024-04-02-time-series-domain-expertise/">domain experience</a>. Let’s chart the time series in a few ways and give it a smell test.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://mftokic.github.io/posts/2024-10-15-ts-fundamentals-eda-data-shape/chart1.png" class="img-fluid figure-img"></p>
+<figcaption>Total revenue by month</figcaption>
+</figure>
+</div>
+<p>Looking at the data all up shows a pretty stable upward trend with a few bumps in the data. Right now it’s hard to tell if those bumps in 2019 and 2021 are outliers or not. We would have to dig deeper into the data. The trend seems to be growing exponentially. Meaning it’s not a straight line but instead one that seems to grow faster each year. This kind of hockey stick growth is what all businesses aspire to. Lastly it’s hard to tell if there is any strong seasonality.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://mftokic.github.io/posts/2024-10-15-ts-fundamentals-eda-data-shape/chart2.png" class="img-fluid figure-img"></p>
+<figcaption>Total country revenue by month</figcaption>
+</figure>
+</div>
+<p>Breaking out the data by each country gives us a better picture of what’s going on in our monthly sales. Canada is the country with the exponential growth, combined with a few spikes in some months. These spikes could be one off events that are unpredictable, or something happened in those months that can be quantified in data.</p>
+<p>Revenue in the United States has more of a linear upward trend with strong seasonality. There is something strange going on in 2020 though. Any guesses on what that could be?</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://mftokic.github.io/posts/2024-10-15-ts-fundamentals-eda-data-shape/chart3.png" class="img-fluid figure-img"></p>
+<figcaption>Total product revenue by month</figcaption>
+</figure>
+</div>
+<p>Looking at revenue by product tells a similar story as revenue by country. Cookie sales seem to be a lot more bumpier than ice cream, which is more stable and growing fast.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://mftokic.github.io/posts/2024-10-15-ts-fundamentals-eda-data-shape/chart4.png" class="img-fluid figure-img"></p>
+<figcaption>Revenue for each individual time series by month</figcaption>
+</figure>
+</div>
+<p>Finally we can view each time series individually. Our initial hunches at higher aggregations are now confirmed. We can see Canada cookie sales have those crazy spikes. After talking to our sales and marketing teams, we learn that the spikes are caused by new cookie product launches. Ice cream sales in Canada is the one series with the exponential growth. Both don’t have much seasonality.</p>
+<p>Revenue in the United States is all about seasonality. Cookie sales show an interesting dip in 2020 but seem to rebound in 2021. This could be caused by the impact of COVID. Ice cream sales has both strong trend and seasonality. This will make it easy to forecast going forward. The more stable the trends and seasonality in your time series, the easier it is to create an accurate future forecast. <a href="https://mftokic.github.io/posts/2024-04-11-time-series-past-future/">The future should always resemble the past.</a></p>
+</section>
+<section id="final-thoughts" class="level3">
+<h3 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h3>
+<p>We have now completed our initial smell test of the historical data. Based on our domain knowledge of the business we can start to understand what happened in the past, and use that information to help us create a better future forecast. The smell test was easy on this dataset since there are only four time series. You might be working with thousands of time series at your company, so higher level smell checks might be the only thing you can do. There are more automated ways at analyzing the data, and will be explored more in future posts.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>machine-learning</category>
+  <category>time-series</category>
+  <guid>https://mftokic.github.io/posts/2024-10-15-ts-fundamentals-eda-data-shape/</guid>
+  <pubDate>Tue, 15 Oct 2024 07:00:00 GMT</pubDate>
+  <media:content url="https://mftokic.github.io/posts/2024-10-15-ts-fundamentals-eda-data-shape/image.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
 <item>
   <title>Exploratory Data Analysis For Time Series</title>
   <dc:creator>Mike Tokic</dc:creator>
@@ -30,8 +99,8 @@
 <h3 class="anchored" data-anchor-id="eda-for-time-series">EDA for Time Series</h3>
 <p>Applying EDA to time series data is a unique process, different from every other kind of data used in machine learning. Here are the building blocks of good time series EDA. Click on each to explore further.</p>
 <ul>
-<li>Shape of the Data (in progress)</li>
-<li>Time Series Decomposition</li>
+<li><a href="https://mftokic.github.io/posts/2024-10-15-ts-fundamentals-eda-data-shape/">Shape of the Data</a></li>
+<li>Time Series Decomposition (in progress)</li>
 <li>Autocorrelation</li>
 <li>Missing Values, Outliers</li>
 <li>External Regressors</li>
@@ -95,7 +164,7 @@
 <section id="time-series-example" class="level3">
 <h3 class="anchored" data-anchor-id="time-series-example">Time Series Example</h3>
 <p>Now that we’ve peeled back all of the layers on time series forecasting, let’s take a look at some data. In this learning series I will be using the most common time series that applies to every company in the world, historical revenue. The data we’ll use is completely made up, but created in a way to illustrate a lot of the learning concepts throughout the series. The sales data is recoded at a monthly level, broken out by countries our hypothetical company operates in and what products it sells. Let’s take a quick look at the data.</p>
-<p><a href="./example_ts_data.xlsx">You can find the raw data here.</a></p>
+<p><a href="https://github.com/mftokic/mftokic.github.io/blob/main/posts/2024-10-02-ts-fundamentals-whats-a-time-series/example_ts_data.csv">You can find the raw data here.</a></p>
 <p><img src="https://mftokic.github.io/posts/2024-10-02-ts-fundamentals-whats-a-time-series/chart1.png" class="img-fluid"></p>
 <p>In the data there are sales for two countries across two products. This means we have four unique time series we can forecast. One for each unique combination of country and product. Throughout this learning series we will use this data as an example as we work through different time series concepts.</p>
 </section>
@@ -131,8 +200,8 @@
 <li><a href="https://mftokic.github.io/posts/2024-10-02-ts-fundamentals-whats-a-time-series/">What’s a time series?</a></li>
 <li><a href="https://mftokic.github.io/posts/2024-10-03-ts-fundamentals-eda/">Exploratory Data Analysis</a>
 <ul>
-<li>Shape of the Data (in progress)</li>
-<li>Time Series Decomposition</li>
+<li><a href="https://mftokic.github.io/posts/2024-10-15-ts-fundamentals-eda-data-shape/">Shape of the Data</a></li>
+<li>Time Series Decomposition (in progress)</li>
 <li>Autocorrelation</li>
 <li>Missing Values, Outliers</li>
 <li>External Regressors</li>
@@ -2946,57 +3015,6 @@
   <guid>https://mftokic.github.io/posts/2024-04-23-time-series-order/</guid>
   <pubDate>Tue, 23 Apr 2024 07:00:00 GMT</pubDate>
   <media:content url="https://mftokic.github.io/posts/2024-04-23-time-series-order/image.png" medium="image" type="image/png" height="144" width="144"/>
-</item>
-<item>
-  <title>Weekend Reads (4/19/24)</title>
-  <dc:creator>Mike Tokic</dc:creator>
-  <link>https://mftokic.github.io/posts/2024-04-19-weekend-reads/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p><img src="https://mftokic.github.io/posts/2024-04-19-weekend-reads/image.png" class="img-fluid"></p>
-<section id="articles" class="level2">
-<h2 class="anchored" data-anchor-id="articles">Articles</h2>
-<ul>
-<li><a href="https://hbr.org/2023/12/use-strategic-thinking-to-create-the-life-you-want">Use Strategic Thinking to Create the Life You Want</a></li>
-<li><a href="https://www.maximiliankiener.com/digitalprojects/time/">How Time Flies</a></li>
-<li><a href="https://mftokic.github.io/posts/2024-04-18-time-series-grain/">Time Series First Principles: Higher Grain, Higher Accuracy</a></li>
-</ul>
-</section>
-<section id="videos" class="level2">
-<h2 class="anchored" data-anchor-id="videos">Videos</h2>
-<ul>
-<li><a href="https://www.youtube.com/watch?v=5N4UFl9G00A">Dave Chappelle - Unforgiven</a></li>
-<li><a href="https://www.youtube.com/watch?v=-9ROlCeB5FQ">Balaji on AI Gods</a></li>
-<li><a href="https://www.youtube.com/watch?v=SEnuWRLMI88">Building Laser Focus</a></li>
-<li><a href="https://www.youtube.com/watch?v=5qGItht6U0E">Overrated and Underrated Habits</a></li>
-<li><a href="https://www.youtube.com/watch?v=FPFqB1P9BIo">Lessons Learned on Writing</a></li>
-</ul>
-</section>
-<section id="sites" class="level2">
-<h2 class="anchored" data-anchor-id="sites">Sites</h2>
-<ul>
-<li><a href="https://suno.com/">Make Music with AI</a></li>
-</ul>
-</section>
-<section id="tweets" class="level2">
-<h2 class="anchored" data-anchor-id="tweets">Tweets</h2>
-<ul>
-<li><a href="https://twitter.com/trungtphan/status/1780794237426323918?s=46&amp;t=8Xa2BngQ9d359SJzFrCFMA">Building an Engineering Dream Team</a></li>
-<li><a href="https://twitter.com/tunguz/status/1779532581274570991?s=46&amp;t=8Xa2BngQ9d359SJzFrCFMA">Experiences &gt; Things</a></li>
-</ul>
-
-
-</section>
-
- ]]></description>
-  <category>weekend-reads</category>
-  <guid>https://mftokic.github.io/posts/2024-04-19-weekend-reads/</guid>
-  <pubDate>Fri, 19 Apr 2024 07:00:00 GMT</pubDate>
-  <media:content url="https://mftokic.github.io/posts/2024-04-19-weekend-reads/image.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 </channel>
 </rss>

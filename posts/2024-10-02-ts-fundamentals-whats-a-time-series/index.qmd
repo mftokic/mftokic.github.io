@@ -55,7 +55,7 @@ There are also models that only exist in the world of time series forecasting. T
 
 Now that we've peeled back all of the layers on time series forecasting, let's take a look at some data. In this learning series I will be using the most common time series that applies to every company in the world, historical revenue. The data we'll use is completely made up, but created in a way to illustrate a lot of the learning concepts throughout the series. The sales data is recoded at a monthly level, broken out by countries our hypothetical company operates in and what products it sells. Let's take a quick look at the data. 
 
-[You can find the raw data here.](./example_ts_data.xlsx) 
+[You can find the raw data here.](https://github.com/mftokic/mftokic.github.io/blob/main/posts/2024-10-02-ts-fundamentals-whats-a-time-series/example_ts_data.csv) 
 
 ![](./chart1.png)
 

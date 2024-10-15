@@ -81,7 +81,6 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 </script>
-<meta name="quarto:status" content="draft">
 
 
 <link rel="stylesheet" href="../../styles.css">
@@ -102,7 +101,7 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 <body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner"><div id="quarto-draft-alert" class="alert alert-warning"><i class="bi bi-pencil-square"></i>Draft</div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -205,10 +204,10 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 }
 </style>
 <p><em>This post is part of the <a href="https://mftokic.github.io/posts/2024-10-03-ts-fundamentals-eda/">exploratory data analysis chapter</a> within a larger learning series around time series forecasting fundamentals. <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/">Check out the main learning path</a> to see other posts in the series.</em></p>
-<p>The example data used in this series <a href="./example_ts_data.csv">can be found here.</a></p>
+<p>The example data used in this series <a href="https://github.com/mftokic/mftokic.github.io/blob/main/posts/2024-10-02-ts-fundamentals-whats-a-time-series/example_ts_data.csv">can be found here.</a></p>
 <section id="initial-data-smell-test" class="level3">
 <h3 class="anchored" data-anchor-id="initial-data-smell-test">Initial Data Smell Test</h3>
-<p>The first step of exploratory data analysis for time series is getting a feel for the data at a high level. This doesn’t involve complex statistical analysis. Just simple charts to see how things look. When analyzing these charts we’ll use the most underrated concept in machine learning. The human smell test. This involves using your eye balls to look at the data and understand what could be going on based on your domain experience about the area the data tries to explain. Let’s chart the time series in a few ways and give it a smell test.</p>
+<p>The first step of exploratory data analysis for time series is getting a feel for the data at a high level. This doesn’t involve complex statistical analysis. Just simple charts to see how things look. When analyzing these charts we’ll use the most underrated concept in machine learning. The human smell test. This involves using your eye balls to look at the data and understand what could be going on based on your <a href="https://mftokic.github.io/posts/2024-04-02-time-series-domain-expertise/">domain experience</a>. Let’s chart the time series in a few ways and give it a smell test.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="./chart1.png" class="img-fluid figure-img"></p>
@@ -222,8 +221,8 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 <figcaption>Total country revenue by month</figcaption>
 </figure>
 </div>
-<p>Breaking out the data by each country is now giving us a better picture of what’s going on in our monthly sales. Canada is the country with the exponential growth, combined with a few spikes in some months. These spikes could be one off events that are unpredictable, or something happened in those months that can be quantified in data.</p>
-<p>Revenue in the United States has more of a linear upward trend with strong seasonality. There is something strange going on in 2020 though.</p>
+<p>Breaking out the data by each country gives us a better picture of what’s going on in our monthly sales. Canada is the country with the exponential growth, combined with a few spikes in some months. These spikes could be one off events that are unpredictable, or something happened in those months that can be quantified in data.</p>
+<p>Revenue in the United States has more of a linear upward trend with strong seasonality. There is something strange going on in 2020 though. Any guesses on what that could be?</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="./chart3.png" class="img-fluid figure-img"></p>
@@ -238,11 +237,11 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 </figure>
 </div>
 <p>Finally we can view each time series individually. Our initial hunches at higher aggregations are now confirmed. We can see Canada cookie sales have those crazy spikes. After talking to our sales and marketing teams, we learn that the spikes are caused by new cookie product launches. Ice cream sales in Canada is the one series with the exponential growth. Both don’t have much seasonality.</p>
-<p>Revenue in the United States is all about seasonality. Cookie sales show an interesting dip in 2020 but seem to rebound in 2021. This could be caused by the impact of COVID. Ice cream sales has both strong trend and seasonality. This will make it easy to forecast going forward.</p>
+<p>Revenue in the United States is all about seasonality. Cookie sales show an interesting dip in 2020 but seem to rebound in 2021. This could be caused by the impact of COVID. Ice cream sales has both strong trend and seasonality. This will make it easy to forecast going forward. The more stable the trends and seasonality in your time series, the easier it is to create an accurate future forecast. <a href="https://mftokic.github.io/posts/2024-04-11-time-series-past-future/">The future should always resemble the past.</a></p>
 </section>
 <section id="final-thoughts" class="level3">
 <h3 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h3>
-<p>We have now completed our initial smell test of the historical data. Based on our domain knowledge of the business we can start to understand what happened in the past, and use that information to help us create a better future forecast. The smell test was easy on this dataset since there are only four time series. You might be working with thousands of time series at your company, so higher level smell checks might be the only thing you can do. There are more automated ways at analyzing the data. These methods will be explored more in future posts.</p>
+<p>We have now completed our initial smell test of the historical data. Based on our domain knowledge of the business we can start to understand what happened in the past, and use that information to help us create a better future forecast. The smell test was easy on this dataset since there are only four time series. You might be working with thousands of time series at your company, so higher level smell checks might be the only thing you can do. There are more automated ways at analyzing the data, and will be explored more in future posts.</p>
 
 
 </section>

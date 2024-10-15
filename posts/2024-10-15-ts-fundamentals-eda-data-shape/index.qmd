@@ -5,7 +5,6 @@ author: "Mike Tokic"
 date: "2024-10-15"
 categories: [machine-learning, time-series]
 image: "image.png"
-draft: true
 ---
 
 <style>
@@ -20,11 +19,11 @@ draft: true
 
 *This post is part of the [exploratory data analysis chapter](https://mftokic.github.io/posts/2024-10-03-ts-fundamentals-eda/) within a larger learning series around time series forecasting fundamentals. [Check out the main learning path](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/) to see other posts in the series.* 
 
-The example data used in this series [can be found here.](./example_ts_data.csv) 
+The example data used in this series [can be found here.](https://github.com/mftokic/mftokic.github.io/blob/main/posts/2024-10-02-ts-fundamentals-whats-a-time-series/example_ts_data.csv) 
 
 ### Initial Data Smell Test
 
-The first step of exploratory data analysis for time series is getting a feel for the data at a high level. This doesn't involve complex statistical analysis. Just simple charts to see how things look. When analyzing these charts we'll use the most underrated concept in machine learning. The human smell test. This involves using your eye balls to look at the data and understand what could be going on based on your domain experience about the area the data tries to explain. Let's chart the time series in a few ways and give it a smell test.   
+The first step of exploratory data analysis for time series is getting a feel for the data at a high level. This doesn't involve complex statistical analysis. Just simple charts to see how things look. When analyzing these charts we'll use the most underrated concept in machine learning. The human smell test. This involves using your eye balls to look at the data and understand what could be going on based on your [domain experience](https://mftokic.github.io/posts/2024-04-02-time-series-domain-expertise/). Let's chart the time series in a few ways and give it a smell test.   
 
 ![Total revenue by month](./chart1.png)
 
@@ -32,9 +31,9 @@ Looking at the data all up shows a pretty stable upward trend with a few bumps i
 
 ![Total country revenue by month](./chart2.png)
 
-Breaking out the data by each country is now giving us a better picture of what's going on in our monthly sales. Canada is the country with the exponential growth, combined with a few spikes in some months. These spikes could be one off events that are unpredictable, or something happened in those months that can be quantified in data. 
+Breaking out the data by each country gives us a better picture of what's going on in our monthly sales. Canada is the country with the exponential growth, combined with a few spikes in some months. These spikes could be one off events that are unpredictable, or something happened in those months that can be quantified in data. 
 
-Revenue in the United States has more of a linear upward trend with strong seasonality. There is something strange going on in 2020 though. 
+Revenue in the United States has more of a linear upward trend with strong seasonality. There is something strange going on in 2020 though. Any guesses on what that could be?
 
 ![Total product revenue by month](./chart3.png)
 
@@ -44,9 +43,9 @@ Looking at revenue by product tells a similar story as revenue by country. Cooki
 
 Finally we can view each time series individually. Our initial hunches at higher aggregations are now confirmed. We can see Canada cookie sales have those crazy spikes. After talking to our sales and marketing teams, we learn that the spikes are caused by new cookie product launches. Ice cream sales in Canada is the one series with the exponential growth. Both don't have much seasonality. 
 
-Revenue in the United States is all about seasonality. Cookie sales show an interesting dip in 2020 but seem to rebound in 2021. This could be caused by the impact of COVID. Ice cream sales has both strong trend and seasonality. This will make it easy to forecast going forward. 
+Revenue in the United States is all about seasonality. Cookie sales show an interesting dip in 2020 but seem to rebound in 2021. This could be caused by the impact of COVID. Ice cream sales has both strong trend and seasonality. This will make it easy to forecast going forward. The more stable the trends and seasonality in your time series, the easier it is to create an accurate future forecast. [The future should always resemble the past.](https://mftokic.github.io/posts/2024-04-11-time-series-past-future/) 
 
 ### Final Thoughts
 
-We have now completed our initial smell test of the historical data. Based on our domain knowledge of the business we can start to understand what happened in the past, and use that information to help us create a better future forecast. The smell test was easy on this dataset since there are only four time series. You might be working with thousands of time series at your company, so higher level smell checks might be the only thing you can do. There are more automated ways at analyzing the data. These methods will be explored more in future posts. 
+We have now completed our initial smell test of the historical data. Based on our domain knowledge of the business we can start to understand what happened in the past, and use that information to help us create a better future forecast. The smell test was easy on this dataset since there are only four time series. You might be working with thousands of time series at your company, so higher level smell checks might be the only thing you can do. There are more automated ways at analyzing the data, and will be explored more in future posts. 
 
