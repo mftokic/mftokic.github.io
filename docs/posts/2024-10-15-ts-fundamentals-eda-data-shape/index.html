@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Mike Tokic">
-<meta name="dcterms.date" content="2024-10-09">
+<meta name="dcterms.date" content="2024-10-15">
 <meta name="description" content="Start to understand how your time series data looks">
 
 <title>Exploratory Data Analysis: Shape of the Data – Thoughts on Things</title>
@@ -87,13 +87,13 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Exploratory Data Analysis: Shape of the Data – Thoughts on Things">
 <meta property="og:description" content="Start to understand how your time series data looks">
-<meta property="og:image" content="https://mftokic.github.io/posts/2024-10-09-ts-fundamentals-eda-data-shape/image.png">
+<meta property="og:image" content="https://mftokic.github.io/posts/2024-10-15-ts-fundamentals-eda-data-shape/image.png">
 <meta property="og:site_name" content="Thoughts on Things">
 <meta property="og:image:height" content="1024">
 <meta property="og:image:width" content="1024">
 <meta name="twitter:title" content="Exploratory Data Analysis: Shape of the Data – Thoughts on Things">
 <meta name="twitter:description" content="Start to understand how your time series data looks">
-<meta name="twitter:image" content="https://mftokic.github.io/posts/2024-10-09-ts-fundamentals-eda-data-shape/image.png">
+<meta name="twitter:image" content="https://mftokic.github.io/posts/2024-10-15-ts-fundamentals-eda-data-shape/image.png">
 <meta name="twitter:image-height" content="1024">
 <meta name="twitter:image-width" content="1024">
 <meta name="twitter:card" content="summary_large_image">
@@ -176,7 +176,7 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">October 9, 2024</p>
+        <p class="date">October 15, 2024</p>
       </div>
     </div>
     
@@ -204,8 +204,8 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
     text-align: center;
 }
 </style>
-<p><em>This post is part of a larger learning series around time series forecasting fundamentals. <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/">Check out the learning path</a> to see other posts in the series.</em></p>
-<p>The example data used in this series <a href="./example_ts_data.xlsx">can be found here.</a></p>
+<p><em>This post is part of the <a href="https://mftokic.github.io/posts/2024-10-03-ts-fundamentals-eda/">exploratory data analysis chapter</a> within a larger learning series around time series forecasting fundamentals. <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/">Check out the main learning path</a> to see other posts in the series.</em></p>
+<p>The example data used in this series <a href="./example_ts_data.csv">can be found here.</a></p>
 <section id="initial-data-smell-test" class="level3">
 <h3 class="anchored" data-anchor-id="initial-data-smell-test">Initial Data Smell Test</h3>
 <p>The first step of exploratory data analysis for time series is getting a feel for the data at a high level. This doesn’t involve complex statistical analysis. Just simple charts to see how things look. When analyzing these charts we’ll use the most underrated concept in machine learning. The human smell test. This involves using your eye balls to look at the data and understand what could be going on based on your domain experience about the area the data tries to explain. Let’s chart the time series in a few ways and give it a smell test.</p>
