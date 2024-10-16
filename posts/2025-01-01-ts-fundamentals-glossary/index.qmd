@@ -18,6 +18,7 @@ draft: true
 - Feature Engineering
 - Independent Variable
 - Machine Learning (ML)
+- Moving Average (MA)
 - Multivariate Model
 - Outlier
 - Regression
@@ -30,3 +31,4 @@ draft: true
 - Timestamp
 - Trend
 - Univariate Model
+- White Noise

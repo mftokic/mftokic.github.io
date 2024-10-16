@@ -8,8 +8,28 @@ image: "image.png"
 draft: true
 ---
 
-Why understanding trend and seasonality is important. 
+*This post is part of the [exploratory data analysis chapter](https://mftokic.github.io/posts/2024-10-03-ts-fundamentals-eda/) within a larger learning series around time series forecasting fundamentals. [Check out the main learning path](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/) to see other posts in the series.* 
 
-How to break out trend and seasonality. 
+The example data used in this series [can be found here.](https://github.com/mftokic/mftokic.github.io/blob/main/posts/2024-10-02-ts-fundamentals-whats-a-time-series/example_ts_data.csv) 
+
+### Your Data is so Trendy
+
+Every single time series you have ever seen has a trend and seasonality. If they don't, then they are random white noise. A trend is just values steadily rising or falling over time. You could have a rising trend in some years, then a falling trend in others. Below is a chart with a strong trend but weak seasonality. 
+
+![](./chart1.png)
+
+Seasonality just means that your data has a recurring seasonal pattern. For example your data could spike during the holiday season from Oct-Dec, then fall drastically from Jan-Jun. Your seasonality could also change over time. Below is a chart with strong seasonality but weak trend. 
+
+![](./chart2.png)
+
+### Breaking Out Trend and seasonality
+
+We can isolate the trend component of a time series using simple methods like moving averages. 
+
+Moving averages. Additive and multiplicative decomposition. 
+
+### STL Decomposition
 
 STL decomposition. How to get insights from the chart. 
+
+### Final Thoughts
