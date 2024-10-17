@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Mike Tokic">
-<meta name="dcterms.date" content="2025-01-01">
-<meta name="description" content="Simple definitions to complex terms">
+<meta name="dcterms.date" content="2024-10-20">
+<meta name="description" content="Understanding trend and seasonality patterns">
 
-<title>Machine Learning Glossary – Thoughts on Things</title>
+<title>Exploratory Data Analysis: Time Series Decomposition – Thoughts on Things</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -85,13 +85,17 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Machine Learning Glossary – Thoughts on Things">
-<meta property="og:description" content="Simple definitions to complex terms">
-<meta property="og:image" content="https://mftokic.github.io/posts/2025-01-01-ts-fundamentals-glossary/image.png">
+<meta property="og:title" content="Exploratory Data Analysis: Time Series Decomposition – Thoughts on Things">
+<meta property="og:description" content="Understanding trend and seasonality patterns">
+<meta property="og:image" content="https://mftokic.github.io/posts/2024-10-20-ts-fundamentals-decomposition/image.png">
 <meta property="og:site_name" content="Thoughts on Things">
-<meta name="twitter:title" content="Machine Learning Glossary – Thoughts on Things">
-<meta name="twitter:description" content="Simple definitions to complex terms">
-<meta name="twitter:image" content="https://mftokic.github.io/posts/2025-01-01-ts-fundamentals-glossary/image.png">
+<meta property="og:image:height" content="1024">
+<meta property="og:image:width" content="1024">
+<meta name="twitter:title" content="Exploratory Data Analysis: Time Series Decomposition – Thoughts on Things">
+<meta name="twitter:description" content="Understanding trend and seasonality patterns">
+<meta name="twitter:image" content="https://mftokic.github.io/posts/2024-10-20-ts-fundamentals-decomposition/image.png">
+<meta name="twitter:image-height" content="1024">
+<meta name="twitter:image-width" content="1024">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -146,10 +150,10 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Machine Learning Glossary</h1>
+      <h1 class="title">Exploratory Data Analysis: Time Series Decomposition</h1>
                   <div>
         <div class="description">
-          Simple definitions to complex terms
+          Understanding trend and seasonality patterns
         </div>
       </div>
                           <div class="quarto-categories">
@@ -172,7 +176,7 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">January 1, 2025</p>
+        <p class="date">October 20, 2024</p>
       </div>
     </div>
     
@@ -191,35 +195,32 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 
 
 
-<ul>
-<li>ARIMA</li>
-<li>Artificial Intelligence (AI)</li>
-<li>Dependant Variable</li>
-<li>Exploratory Data Analysis (EDA)</li>
-<li>Exponential Smoothing</li>
-<li>External Regressors (xregs)</li>
-<li>Feature</li>
-<li>Feature Engineering</li>
-<li>Independent Variable</li>
-<li>Machine Learning (ML)</li>
-<li>Moving Average (MA)</li>
-<li>Multivariate Model</li>
-<li>Outlier</li>
-<li>Regression</li>
-<li>Remainder</li>
-<li>Seasonality</li>
-<li>Smell Test</li>
-<li>Supervised Learning</li>
-<li>Target Variable</li>
-<li>Time Series</li>
-<li>Time Series Decomposition</li>
-<li>Timestamp</li>
-<li>Trend</li>
-<li>Univariate Model</li>
-<li>White Noise</li>
-</ul>
+<p><em>This post is part of the <a href="https://mftokic.github.io/posts/2024-10-03-ts-fundamentals-eda/">exploratory data analysis chapter</a> within a larger learning series around time series forecasting fundamentals. <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/">Check out the main learning path</a> to see other posts in the series.</em></p>
+<p>The example data used in this series <a href="https://github.com/mftokic/mftokic.github.io/blob/main/posts/2024-10-02-ts-fundamentals-whats-a-time-series/example_ts_data.csv">can be found here.</a></p>
+<section id="your-data-is-so-trendy" class="level3">
+<h3 class="anchored" data-anchor-id="your-data-is-so-trendy">Your Data is so Trendy</h3>
+<p>Every single time series you have ever seen has a trend and seasonality. If they don’t, then they are random white noise. A trend is just values steadily rising or falling over time. You could have a rising trend in some years, then a falling trend in others. Below is a chart with a strong trend but weak seasonality.</p>
+<p><img src="./chart1.png" class="img-fluid"></p>
+<p>Seasonality just means that your data has a recurring seasonal pattern. For example your data could spike during the holiday season from Oct-Dec, then fall drastically from Jan-Jun.&nbsp;Your seasonality could also change over time. Below is a chart with strong seasonality but weak trend.</p>
+<p><img src="./chart2.png" class="img-fluid"></p>
+</section>
+<section id="breaking-out-trend-and-seasonality-with-additive-decomposition" class="level3">
+<h3 class="anchored" data-anchor-id="breaking-out-trend-and-seasonality-with-additive-decomposition">Breaking Out Trend and Seasonality with Additive Decomposition</h3>
+<p>We can isolate the trend component of a time series using simple methods like moving averages (MA). These are just simple averages over a span of time. Let’s take a time series from our example revenue data and create a moving average. In the first chart below we used a <a href="https://otexts.com/fpp3/moving-averages.html#estimating-the-trend-cycle-with-seasonal-data">2x12-MA</a>. This moving average now isolates the trend of the time series. We can see a dip in trend around 2020 then a strong rebound going forward. The moving average doesn’t start and end at the same time as our time series, since we need a burn in period to start creating the averages. If we wanted to detrend the time series we can subtract the new trend series from our original revenue, shown in the second chart below.</p>
+<p><img src="./chart3.png" class="img-fluid"></p>
+<p><img src="./chart4.png" class="img-fluid"></p>
+<p>Next we can get the seasonal component of our data. This is very straightforward. All we have to do is take our detrended series and calculate the average revenue for each month of the year.</p>
+<p>Finally we can get the final piece of our decomposition, the remainder series.</p>
+</section>
+<section id="stl-decomposition" class="level3">
+<h3 class="anchored" data-anchor-id="stl-decomposition">STL Decomposition</h3>
+<p>STL decomposition. How to get insights from the chart.</p>
+</section>
+<section id="final-thoughts" class="level3">
+<h3 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h3>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

@@ -22,11 +22,17 @@ Seasonality just means that your data has a recurring seasonal pattern. For exam
 
 ![](./chart2.png)
 
-### Breaking Out Trend and seasonality
+### Breaking Out Trend and Seasonality with Additive Decomposition
 
-We can isolate the trend component of a time series using simple methods like moving averages. 
+We can isolate the trend component of a time series using simple methods like moving averages (MA). These are just simple averages over a span of time. Let's take a time series from our example revenue data and create a moving average. In the first chart below we used a [2x12-MA](https://otexts.com/fpp3/moving-averages.html#estimating-the-trend-cycle-with-seasonal-data). This moving average now isolates the trend of the time series. We can see a dip in trend around 2020 then a strong rebound going forward. The moving average doesn't start and end at the same time as our time series, since we need a burn in period to start creating the averages. If we wanted to detrend the time series we can subtract the new trend series from our original revenue, shown in the second chart below. 
 
-Moving averages. Additive and multiplicative decomposition. 
+![](./chart3.png)
+
+![](./chart4.png)
+
+Next we can get the seasonal component of our data. This is very straightforward. All we have to do is take our detrended series and calculate the average revenue for each month of the year. 
+
+Finally we can get the final piece of our decomposition, the remainder series. 
 
 ### STL Decomposition
 
