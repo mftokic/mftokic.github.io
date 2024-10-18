@@ -30,9 +30,13 @@ We can isolate the trend component of a time series using simple methods like mo
 
 ![](./chart4.png)
 
-Next we can get the seasonal component of our data. This is very straightforward. All we have to do is take our detrended series and calculate the average revenue for each month of the year. 
+Next we can get the seasonal component of our data. This is very straightforward. All we have to do is take our detrended series and calculate the average revenue for each month of the year. After getting the average value per month, we can divide by the total average across all months. This ensures that the seasonal values of each month add to zero. Then we repeat the final values per month across all years. The final result is shown below. Now we can see there is very strong seasonal patterns at certain times of the year. Some quarters have high sales, while others do not. This kind of repeatable pattern will be very important for us when it comes to training models. 
 
-Finally we can get the final piece of our decomposition, the remainder series. 
+![](./chart5.png)
+
+Finally we can get the final piece of our decomposition, the remainder series. This is everything that couldn't be explained by the trend and seasonal components. Simply take the original revenue time series, subtract the trend and seasonal components, and bam you have the remainder series. See below. 
+
+![](./chart6.png)
 
 ### STL Decomposition
 
