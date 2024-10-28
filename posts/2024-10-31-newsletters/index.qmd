@@ -1,0 +1,43 @@
+---
+title: "Newsletters Stink"
+description: "We Need a YouTube for Blogs"
+author: "Mike Tokic"
+date: "2024-10-20"
+categories: [machine-learning, learning]
+image: "image.png"
+draft: true
+---
+
+### Too Many, Too Fast
+
+When I open my email, I cringe. I have hundreds of unread emails. Not from coworkers about important work. But instead from the many newsletters that every influential person on the internet now has. When I signed up for these newsletters, I was excited. Insights delivered right to my mailbox! What was initially 3-4 newsletter emails a week quickly turned into over two dozen. For someone who likes the practice of inbox zero this caused unneeded stress. 
+
+In order to offload these emails into another place for reading, I signed up for services like ReadWise. Which has a great reading app you can have newsletters automatically get sent to. This was helpful at first, but eventually turned back into email. When I look at my "feed" on the Reader app, I have 121 unseen newsletter emails. That's insane. I cannot read all of these, nor do I want to. Something needs to change. 
+
+### Why Newsletters Stink
+
+Newsletters serve a good purpose. They are a way to push out content and build audiences. Which can lead lead to $ for their creators. These good intentions come with some drawbacks. Let's call them out. 
+
+1. **Push, no Pull**: Newsletters get thrusted upon us once we sign up. Some get sent every single day. This kind of push process creates build ups of unread articles in our mailboxes. The bottleneck is us. It's our time. We don't have a lot and we want to make the most of it. Ideally we would instead prefer a pull approach where once we read one newsletter, we then get the next one. Instead of having 20 stacked up in our inboxes. 
+
+2. **New is Not Always Better**: The "news" in newsletter is what makes them bad. I think we all know that consuming news is not good for us. It raises our anxiety and is a form of entertainment junk food. Instead of always getting the freshest take on business or technology today, you'd probably get more insight from articles written years ago that are timeless. Reading a Paul Graham essay on building a business written 10 years ago is probably better than getting a newsletter from someone today who has only build one business. Also there is pressure for creators to push these out on a regular cadence, which means quality goes down. Pushing 4 newsletters out a month will most likely lead to less quality then taking the time to write one newsletter over 1-2 months. New and more is not always better. We need more evergreen content. 
+
+3. **Archives Are Graveyards**: Have you ever gone looking through old newsletters from your favorite creator? Probably not. Only the brave of heart dive into the dumpster of a creators website and dig around for little nuggets of gold. There might be a newsletter from five years ago that could change your life, but to find it you might have to dig through dozens of others about the NFT market in 2021 that no one cares about anymore. Again, see my point ini #2. We need a better way of finding the best evergreen content. 
+
+4. **No Personalization**: Once you sign up for a newsletter, you are at the mercy of reading all of them. Regardless of the content in each one. This might be ok if the newsletter author writes about one thing, but a disaster when they are wide ranging. For example, let's say Joe Rogan had a newsletter (he doesn't but let's pretend). You might love all of the content around culture, politics, and comedy but absolutely hate it every time he talks about the UFC. Maybe you don't like MMA, and could care less who Connor McGregor may fight next. We need a better way of finding the best content relevant to our interests.
+
+5. **They Replaced Blogs**: People that used to write blogs now write newsletters. What a shame! You could in theory just take the posts you used to publish to your blog and now just send out via newsletter. But people don't do that anymore. What a bummer. We need more blogs and less newsletters. 
+
+### Who Does Things Right
+
+You know who does things right? YouTube. They have it all figured out. Instead of seeing a list of videos in chronological order, they show you what videos you might be most interested in. Not just from channels you follow but for any channel. You can interact with videos you like by watching them multiple times, liking the video, or subscribing to the channel. This ensures you see more content like it. Or if you hate the video you can give the thumbs down, click on "show me less of this", or even block the channel entirely. With a few smart features they fixed every thing that is wrong with other forms of content like newsletters and blogs. 
+
+When I open up my YouTube homepage on the app, I see a sea of great options. The first video recommended on the page is for a podcast I like that just posted a new video two hours ago. As I scroll I see content from last week, last month, even as far back as two years ago. These are all things that interest me, not just the latest content from channels I follow. I even see content from channels I've never heard about, but is chosen based on my interest in other liked videos. This is why YouTube dominates. 
+
+![](./image2.png)
+
+[Source - Variety](https://variety.com/vip/netflix-vs-youtube-post-streaming-wars-1236143341/)
+
+### Make Blogs Great Again
+
+Make it more like youtube, and better than Medium. Allow for anyone to link their blogs. No news, only evergreen content. Add AI components that let you explore insights in a different way. 
