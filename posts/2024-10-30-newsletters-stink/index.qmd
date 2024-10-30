@@ -2,7 +2,7 @@
 title: "Newsletters Stink"
 description: "We Need a YouTube for Blogs"
 author: "Mike Tokic"
-date: "2024-10-20"
+date: "2024-10-30"
 categories: [machine-learning, learning]
 image: "image.png"
 draft: true
@@ -40,4 +40,8 @@ When I open up my YouTube homepage on the app, I see a sea of great options. The
 
 ### Make Blogs Great Again
 
-Make it more like youtube, and better than Medium. Allow for anyone to link their blogs. No news, only evergreen content. Add AI components that let you explore insights in a different way. 
+Ideally there should be a service that is like YouTube but for blogs. Anyone who has a blog can connect their site to the service, and posts are algorithmically provided to the user based on what the user likes. It won't be what causes the most outrage or reactions, but instead what makes them entertained or more informed. The site would have no news, just evergreen content that's just as relevant next year as it is now. Sites like Medium try to do this today, but their biggest flaw is that they live behind a walled garden. Meaning a blog owner has to only post their stuff to Medium and not on their own site. This is not ideal. Since you now have to play by Mediums rules and all of your content now lives on a platform you don't control. You could argue YouTube is the same but YouTube is the only way people consume user submitted video content today. There is no second choice. Compared to blogs where anyone can host their own for free via GitHub (that's what I do). 
+
+There could also be amazing AI features built into this new blog recommendation service. What if all blog posts on the site were indexed and you could ask questions about the blog via GenAI? Imagine having a conversation with Paul Graham, powered by every piece of advice he has ever written about building businesses or technology. It would basically be a mentor on demand. Always ready to bounce ideas off of or think through hard problems. 
+
+The world has too many new(s) things. We need to make old things, like blogs, new again. 
