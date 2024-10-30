@@ -5,7 +5,6 @@ author: "Mike Tokic"
 date: "2024-10-30"
 categories: [machine-learning, learning]
 image: "image.png"
-draft: true
 ---
 
 ### Too Many, Too Fast

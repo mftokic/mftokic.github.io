@@ -10,7 +10,56 @@
 <atom:link href="https://mftokic.github.io/index.xml" rel="self" type="application/rss+xml"/>
 <description>A collection of thoughts on things from the mind of Mike Tokic</description>
 <generator>quarto-1.5.57</generator>
-<lastBuildDate>Tue, 15 Oct 2024 07:00:00 GMT</lastBuildDate>
+<lastBuildDate>Wed, 30 Oct 2024 07:00:00 GMT</lastBuildDate>
+<item>
+  <title>Newsletters Stink</title>
+  <dc:creator>Mike Tokic</dc:creator>
+  <link>https://mftokic.github.io/posts/2024-10-30-newsletters-stink/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="too-many-too-fast" class="level3">
+<h3 class="anchored" data-anchor-id="too-many-too-fast">Too Many, Too Fast</h3>
+<p>When I open my email, I cringe. I have hundreds of unread emails. Not from coworkers about important work. But instead from the many newsletters that every influential person on the internet now has. When I signed up for these newsletters, I was excited. Insights delivered right to my mailbox! What was initially 3-4 newsletter emails a week quickly turned into over two dozen. For someone who likes the practice of inbox zero this caused unneeded stress.</p>
+<p>In order to offload these emails into another place for reading, I signed up for services like ReadWise. Which has a great reading app you can have newsletters automatically get sent to. This was helpful at first, but eventually turned back into email. When I look at my “feed” on the Reader app, I have 121 unseen newsletter emails. That’s insane. I cannot read all of these, nor do I want to. Something needs to change.</p>
+</section>
+<section id="why-newsletters-stink" class="level3">
+<h3 class="anchored" data-anchor-id="why-newsletters-stink">Why Newsletters Stink</h3>
+<p>Newsletters serve a good purpose. They are a way to push out content and build audiences. Which can lead lead to $ for their creators. These good intentions come with some drawbacks. Let’s call them out.</p>
+<ol type="1">
+<li><p><strong>Push, no Pull</strong>: Newsletters get thrusted upon us once we sign up. Some get sent every single day. This kind of push process creates build ups of unread articles in our mailboxes. The bottleneck is us. It’s our time. We don’t have a lot and we want to make the most of it. Ideally we would instead prefer a pull approach where once we read one newsletter, we then get the next one. Instead of having 20 stacked up in our inboxes.</p></li>
+<li><p><strong>New is Not Always Better</strong>: The “news” in newsletter is what makes them bad. I think we all know that consuming news is not good for us. It raises our anxiety and is a form of entertainment junk food. Instead of always getting the freshest take on business or technology today, you’d probably get more insight from articles written years ago that are timeless. Reading a Paul Graham essay on building a business written 10 years ago is probably better than getting a newsletter from someone today who has only build one business. Also there is pressure for creators to push these out on a regular cadence, which means quality goes down. Pushing 4 newsletters out a month will most likely lead to less quality then taking the time to write one newsletter over 1-2 months. New and more is not always better. We need more evergreen content.</p></li>
+<li><p><strong>Archives Are Graveyards</strong>: Have you ever gone looking through old newsletters from your favorite creator? Probably not. Only the brave of heart dive into the dumpster of a creators website and dig around for little nuggets of gold. There might be a newsletter from five years ago that could change your life, but to find it you might have to dig through dozens of others about the NFT market in 2021 that no one cares about anymore. Again, see my point ini #2. We need a better way of finding the best evergreen content.</p></li>
+<li><p><strong>No Personalization</strong>: Once you sign up for a newsletter, you are at the mercy of reading all of them. Regardless of the content in each one. This might be ok if the newsletter author writes about one thing, but a disaster when they are wide ranging. For example, let’s say Joe Rogan had a newsletter (he doesn’t but let’s pretend). You might love all of the content around culture, politics, and comedy but absolutely hate it every time he talks about the UFC. Maybe you don’t like MMA, and could care less who Connor McGregor may fight next. We need a better way of finding the best content relevant to our interests.</p></li>
+<li><p><strong>They Replaced Blogs</strong>: People that used to write blogs now write newsletters. What a shame! You could in theory just take the posts you used to publish to your blog and now just send out via newsletter. But people don’t do that anymore. What a bummer. We need more blogs and less newsletters.</p></li>
+</ol>
+</section>
+<section id="who-does-things-right" class="level3">
+<h3 class="anchored" data-anchor-id="who-does-things-right">Who Does Things Right</h3>
+<p>You know who does things right? YouTube. They have it all figured out. Instead of seeing a list of videos in chronological order, they show you what videos you might be most interested in. Not just from channels you follow but for any channel. You can interact with videos you like by watching them multiple times, liking the video, or subscribing to the channel. This ensures you see more content like it. Or if you hate the video you can give the thumbs down, click on “show me less of this”, or even block the channel entirely. With a few smart features they fixed every thing that is wrong with other forms of content like newsletters and blogs.</p>
+<p>When I open up my YouTube homepage on the app, I see a sea of great options. The first video recommended on the page is for a podcast I like that just posted a new video two hours ago. As I scroll I see content from last week, last month, even as far back as two years ago. These are all things that interest me, not just the latest content from channels I follow. I even see content from channels I’ve never heard about, but is chosen based on my interest in other liked videos. This is why YouTube dominates.</p>
+<p><img src="https://mftokic.github.io/posts/2024-10-30-newsletters-stink/image2.png" class="img-fluid"></p>
+<p><a href="https://variety.com/vip/netflix-vs-youtube-post-streaming-wars-1236143341/">Source - Variety</a></p>
+</section>
+<section id="make-blogs-great-again" class="level3">
+<h3 class="anchored" data-anchor-id="make-blogs-great-again">Make Blogs Great Again</h3>
+<p>Ideally there should be a service that is like YouTube but for blogs. Anyone who has a blog can connect their site to the service, and posts are algorithmically provided to the user based on what the user likes. It won’t be what causes the most outrage or reactions, but instead what makes them entertained or more informed. The site would have no news, just evergreen content that’s just as relevant next year as it is now. Sites like Medium try to do this today, but their biggest flaw is that they live behind a walled garden. Meaning a blog owner has to only post their stuff to Medium and not on their own site. This is not ideal. Since you now have to play by Mediums rules and all of your content now lives on a platform you don’t control. You could argue YouTube is the same but YouTube is the only way people consume user submitted video content today. There is no second choice. Compared to blogs where anyone can host their own for free via GitHub (that’s what I do).</p>
+<p>There could also be amazing AI features built into this new blog recommendation service. What if all blog posts on the site were indexed and you could ask questions about the blog via GenAI? Imagine having a conversation with Paul Graham, powered by every piece of advice he has ever written about building businesses or technology. It would basically be a mentor on demand. Always ready to bounce ideas off of or think through hard problems.</p>
+<p>The world has too many new(s) things. We need to make old things, like blogs, new again.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>machine-learning</category>
+  <category>learning</category>
+  <guid>https://mftokic.github.io/posts/2024-10-30-newsletters-stink/</guid>
+  <pubDate>Wed, 30 Oct 2024 07:00:00 GMT</pubDate>
+  <media:content url="https://mftokic.github.io/posts/2024-10-30-newsletters-stink/image.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
 <item>
   <title>Exploratory Data Analysis: Shape of the Data</title>
   <dc:creator>Mike Tokic</dc:creator>
@@ -2668,353 +2717,6 @@
   <guid>https://mftokic.github.io/posts/2024-05-01-time-series-features/</guid>
   <pubDate>Wed, 01 May 2024 07:00:00 GMT</pubDate>
   <media:content url="https://mftokic.github.io/posts/2024-05-01-time-series-features/image.png" medium="image" type="image/png" height="144" width="144"/>
-</item>
-<item>
-  <title>Time Series First Principles: Order Is Important</title>
-  <dc:creator>Mike Tokic</dc:creator>
-  <link>https://mftokic.github.io/posts/2024-04-23-time-series-order/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p><img src="https://mftokic.github.io/posts/2024-04-23-time-series-order/image.png" class="img-fluid"></p>
-<section id="time-series-first-principles-series" class="level3">
-<h3 class="anchored" data-anchor-id="time-series-first-principles-series">Time Series First Principles Series</h3>
-<p>This post dives into the fifth principle of a good time series forecast, order is important. Check out the <a href="https://mftokic.github.io/posts/2024-03-26-time-series-first-principles-initial/">initial post</a> in this series to get a high level view of each principle.</p>
-<ol type="1">
-<li><a href="https://mftokic.github.io/posts/2024-04-02-time-series-domain-expertise/">Domain Expertise</a></li>
-<li><a href="https://mftokic.github.io/posts/2024-04-08-time-series-garbage/">Garbage In Garbage Out</a></li>
-<li><a href="https://mftokic.github.io/posts/2024-04-11-time-series-past-future/">The Future Is Similar To The Past</a></li>
-<li><a href="https://mftokic.github.io/posts/2024-04-18-time-series-grain/">Higher Grain Higher Accuracy</a></li>
-<li><a href="https://mftokic.github.io/posts/2024-04-23-time-series-order/"><strong>Order Is Important</strong></a></li>
-<li><a href="https://mftokic.github.io/posts/2024-05-01-time-series-features/">The Magic Is In The Feature Engineering</a></li>
-<li><a href="https://mftokic.github.io/posts/2024-05-03-time-series-simple-models/">Simple Models Are Better Models</a></li>
-<li><a href="https://mftokic.github.io/posts/2024-05-07-time-series-capture-uncertainty/">Capture Uncertainty</a></li>
-<li><a href="https://mftokic.github.io/posts/2024-05-28-time-series-model-avg/">Model Combinations Are King</a></li>
-<li><a href="https://mftokic.github.io/posts/2024-05-31-time-series-deep-learning/">Deep Learning Last</a></li>
-</ol>
-</section>
-<section id="baking-cakes-over-making-smoothies" class="level3">
-<h3 class="anchored" data-anchor-id="baking-cakes-over-making-smoothies">Baking Cakes Over Making Smoothies</h3>
-<p>Machine learning (ML) is a lot like cooking. You have various ingredients and can combine them together in clever ways to make for a tasty dish. Most machine learning approaches like classification (predicting an outcome) and regression (predicting a number) can follow a similar process to making a smoothie. We can take some data (fruits and veggies) and blend it all together inside of our model blender.</p>
-<p>Time series forecasting is a whole other beast. It still technically falls under the regression family tree but has to be handled very differently. Forecasting is more like baking a cake, where the order in which you do things is very important. For example, you cannot switch when you add the eggs and when you add the frosting. If you do you will certainly not be invited back to your nephew’s birthday party next year. In order to bake something tasty please follow the below guidance.</p>
-</section>
-<section id="time-series-training" class="level3">
-<h3 class="anchored" data-anchor-id="time-series-training">Time Series Training</h3>
-<p>Training any sort of machine learning model often requires two separate historical data sets. One that is used to train the initial model, then another that is set aside to create predictions based on the initial model. We can then see how accurate the predictions were on the test data set. This ensures that our new ML model can generalize well to new and unseen data, making sure our model doesn’t overfit to the training data.</p>
-<p>Common ML approaches like classification and regression don’t need a lot of sophistication when splitting up the historical data between a training set and a testing set. Often it will be split randomly. This is similar to making a smoothie. You can randomly throw in bananas, apples, spinach, and blueberries. All without having to think about the order of when you do it.</p>
-<p>Take the below housing data. This is a traditional regression problem. Let’s use the total square feet and number of bedrooms to predict how much the house will cost. We can randomly split 80% of the data to train the model, then hold out 20% of the data to test how accurate the model is. Randomly splitting the data ensures we get a healthy mix of different data in each split.</p>
-<table class="caption-top table">
-<caption>Example fake housing data for a regression model</caption>
-<thead>
-<tr class="header">
-<th>Square_Feet</th>
-<th>Bedrooms</th>
-<th>Total_Cost</th>
-<th>Split</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>3774</td>
-<td>2</td>
-<td>822732</td>
-<td>Training</td>
-</tr>
-<tr class="even">
-<td>1460</td>
-<td>1</td>
-<td>245280</td>
-<td>Training</td>
-</tr>
-<tr class="odd">
-<td>1894</td>
-<td>4</td>
-<td>602292</td>
-<td>Training</td>
-</tr>
-<tr class="even">
-<td>1730</td>
-<td>4</td>
-<td>550140</td>
-<td>Training</td>
-</tr>
-<tr class="odd">
-<td><strong>1695</strong></td>
-<td><strong>4</strong></td>
-<td><strong>539010</strong></td>
-<td><strong>Testing</strong></td>
-</tr>
-<tr class="even">
-<td>3692</td>
-<td>5</td>
-<td>1358656</td>
-<td>Training</td>
-</tr>
-<tr class="odd">
-<td>2238</td>
-<td>1</td>
-<td>375984</td>
-<td>Training</td>
-</tr>
-<tr class="even">
-<td>2769</td>
-<td>5</td>
-<td>1018992</td>
-<td>Training</td>
-</tr>
-<tr class="odd">
-<td><strong>1066</strong></td>
-<td><strong>5</strong></td>
-<td><strong>392288</strong></td>
-<td><strong>Testing</strong></td>
-</tr>
-<tr class="even">
-<td>1838</td>
-<td>1</td>
-<td>308784</td>
-<td>Training</td>
-</tr>
-</tbody>
-</table>
-<p>A time series has a built in order to it. It’s said right there in the name, time. Ignoring the order based on time can have disastrous consequences, resulting in your final future forecast not being accurate. Just like baking a cake, we need to make sure how we train a model is done in the right order. When splitting a historical time series into a training set and a testing set, splitting not at random but based on time is the proper way to go. Using the oldest data as the training set and the newest data as the testing set makes sure we respect the order of our data based on time. The example table below is a made up time series of the price of one specific house. In reality we would need a lot more data to train a good time series model but just be cool for a minute and go with me on this one. The split column now has the test data set at the very end instead of randomly split across time. We can now use <a href="https://developers.google.com/machine-learning/crash-course/framing/ml-terminology">features</a> like interest rates and gdp growth to help us forecast the price of this house over time. The first 9 months of data will train the model, and the final 3 months will be used to test the model’s accuracy.</p>
-<table class="caption-top table">
-<caption>Example fake time series for the price of a specific house</caption>
-<colgroup>
-<col style="width: 24%">
-<col style="width: 23%">
-<col style="width: 18%">
-<col style="width: 18%">
-<col style="width: 15%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Date</th>
-<th>Interest_Rate</th>
-<th>GDP_Growth</th>
-<th>Total_Cost</th>
-<th>Split</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>January 2002</td>
-<td>3.43635</td>
-<td>1.58111</td>
-<td>315052</td>
-<td>Training</td>
-</tr>
-<tr class="even">
-<td>February 2002</td>
-<td>4.87679</td>
-<td>0.03085</td>
-<td>314723</td>
-<td>Training</td>
-</tr>
-<tr class="odd">
-<td>March 2002</td>
-<td>4.32998</td>
-<td>-0.04544</td>
-<td>312854</td>
-<td>Training</td>
-</tr>
-<tr class="even">
-<td>April 2002</td>
-<td>3.99665</td>
-<td>-0.04149</td>
-<td>311865</td>
-<td>Training</td>
-</tr>
-<tr class="odd">
-<td>May 2002</td>
-<td>2.89005</td>
-<td>0.26061</td>
-<td>309452</td>
-<td>Training</td>
-</tr>
-<tr class="even">
-<td>June 2002</td>
-<td>2.88999</td>
-<td>0.81189</td>
-<td>311106</td>
-<td>Training</td>
-</tr>
-<tr class="odd">
-<td>July 2002</td>
-<td>2.64521</td>
-<td>0.57986</td>
-<td>309675</td>
-<td>Training</td>
-</tr>
-<tr class="even">
-<td>August 2002</td>
-<td>4.66544</td>
-<td>0.22807</td>
-<td>314681</td>
-<td>Training</td>
-</tr>
-<tr class="odd">
-<td>September 2002</td>
-<td>4.00279</td>
-<td>1.02963</td>
-<td>315097</td>
-<td>Training</td>
-</tr>
-<tr class="even">
-<td><strong>October 2002</strong></td>
-<td><strong>4.27018</strong></td>
-<td><strong>-0.15127</strong></td>
-<td><strong>312357</strong></td>
-<td><strong>Testing</strong></td>
-</tr>
-<tr class="odd">
-<td><strong>November 2002</strong></td>
-<td><strong>2.55146</strong></td>
-<td><strong>0.23036</strong></td>
-<td><strong>308345</strong></td>
-<td><strong>Testing</strong></td>
-</tr>
-<tr class="even">
-<td><strong>December 2002</strong></td>
-<td><strong>4.92477</strong></td>
-<td><strong>0.41591</strong></td>
-<td><strong>316022</strong></td>
-<td><strong>Testing</strong></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="data-leakage" class="level3">
-<h3 class="anchored" data-anchor-id="data-leakage">Data Leakage</h3>
-<p>Whenever time is involved in machine learning, the probability of shooting yourself in the foot rises. This has to do with the concept of <a href="https://machinelearningmastery.com/data-leakage-machine-learning/">data leakage</a>. Data leakage occurs when information from outside the training dataset is used to create the model, leading it to make overly optimistic predictions. It can also happen when we train with data that may not be available in the future when we need to create new predictions.</p>
-<p>In time series forecasting we have already discussed one component of data leakage, related to splitting the data correctly based on time. Take the below table, instead of splitting properly by time the data is now split randomly. Our model can now “see ahead in time” when training, and in effect cheat when being evaluated on the testing splits. For example, for the test observation in July 2002 the model can learn from data on either side of that month. Figuring out previous and future trends and seasonality. This makes it easy to predict what the housing cost in July should be, since it has information before and after that month. With this approach our test accuracy will be a lot better than in the previous example where the splits are based on time. Future forecast performance will suffer though, since we have now trained and chosen a model that may only be good at figuring out how to extrapolate between two points, instead of trying to create predictions on unseen data in the future.</p>
-<table class="caption-top table">
-<caption>Incorrect train and test splits</caption>
-<colgroup>
-<col style="width: 24%">
-<col style="width: 23%">
-<col style="width: 18%">
-<col style="width: 18%">
-<col style="width: 15%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Date</th>
-<th>Interest_Rate</th>
-<th>GDP_Growth</th>
-<th>Total_Cost</th>
-<th>Split</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>January 2002</td>
-<td>3.43635</td>
-<td>1.58111</td>
-<td>315052</td>
-<td>Training</td>
-</tr>
-<tr class="even">
-<td><strong>February 2002</strong></td>
-<td><strong>4.87679</strong></td>
-<td><strong>0.03085</strong></td>
-<td><strong>314723</strong></td>
-<td><strong>Testing</strong></td>
-</tr>
-<tr class="odd">
-<td>March 2002</td>
-<td>4.32998</td>
-<td>-0.04544</td>
-<td>312854</td>
-<td>Training</td>
-</tr>
-<tr class="even">
-<td>April 2002</td>
-<td>3.99665</td>
-<td>-0.04149</td>
-<td>311865</td>
-<td>Training</td>
-</tr>
-<tr class="odd">
-<td>May 2002</td>
-<td>2.89005</td>
-<td>0.26061</td>
-<td>309452</td>
-<td>Training</td>
-</tr>
-<tr class="even">
-<td>June 2002</td>
-<td>2.88999</td>
-<td>0.81189</td>
-<td>311106</td>
-<td>Training</td>
-</tr>
-<tr class="odd">
-<td><strong>July 2002</strong></td>
-<td><strong>2.64521</strong></td>
-<td><strong>0.57986</strong></td>
-<td><strong>309675</strong></td>
-<td><strong>Testing</strong></td>
-</tr>
-<tr class="even">
-<td>August 2002</td>
-<td>4.66544</td>
-<td>0.22807</td>
-<td>314681</td>
-<td>Training</td>
-</tr>
-<tr class="odd">
-<td>September 2002</td>
-<td>4.00279</td>
-<td>1.02963</td>
-<td>315097</td>
-<td>Training</td>
-</tr>
-<tr class="even">
-<td>October 2002</td>
-<td>4.27018</td>
-<td>-0.15127</td>
-<td>312357</td>
-<td>Training</td>
-</tr>
-<tr class="odd">
-<td>November 2002</td>
-<td>2.55146</td>
-<td>0.23036</td>
-<td>308345</td>
-<td>Training</td>
-</tr>
-<tr class="even">
-<td><strong>December 2002</strong></td>
-<td><strong>4.92477</strong></td>
-<td><strong>0.41591</strong></td>
-<td><strong>316022</strong></td>
-<td><strong>Testing</strong></td>
-</tr>
-</tbody>
-</table>
-<p>Ok, so we know not to split data randomly when training. Another thing to watch out for is how features are used in the model. In our time series housing example, we can use date information (month, quarter, etc) along with our macro features like interest rates and GDP growth. Let’s say we follow the right approach, split the data based on time, and see that we get good results on the test data. We can now take our model into production and try to create a forecast for the future. But wait, what do we do with the future feature values of interest rate and GDP growth? This is another potential data leakage issue, where data used to train the model is not available to create new predictions in the future. You might be thinking, no problem we can just create a forecast of future interest rates and gdp growth right? Wrong. If you can produce accurate interest rate and GDP growth forecasts, then you shouldn’t be reading this post. You should instead be sitting on your own private island, watching the return on your flagship hedge fund skyrocket. See where I’m going here? If you cannot perfectly predict future values of the feature you want to use, then you should consider not using that feature. You might be able to know with 100% certainty when a holiday or special event will take place, but not even expert economists can perfectly predict interest rate fluctuations. Instead you can look at using feature lags. Where instead of using real time interest rates or GDP growth you can instead use lags of them. For example, using a 3 or 12 month lag of each feature. Using lags in this example can help prevent <a href="https://mftokic.github.io/posts/2024-04-11-time-series-past-future/#reversal">compounding errors</a> in your forecast.</p>
-</section>
-<section id="finnts" class="level3">
-<h3 class="anchored" data-anchor-id="finnts">finnts</h3>
-<p>Looking for a way to to never worry about the order of your time series data again? Have no fear because <a href="https://microsoft.github.io/finnts/index.html">finnts</a> is here! Ok enough with the used car salesman talk. The finnts package is something myself and other outstanding team members have built to automate all of the tedious aspects related to time series forecasting. The package can automatically handle the proper splits of your data and has build in data leakage prevention. Check out the package to learn for yourself how easy forecasting can be.</p>
-</section>
-<section id="final-thoughts" class="level3">
-<h3 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h3>
-<p>Remember, order is important in forecasting. Make sure you don’t mix up your data when training models, and keep a look out for data leakage. Do this right and you just might get invited back to your nephew’s birthday party next year.</p>
-
-
-</section>
-
- ]]></description>
-  <category>time-series</category>
-  <category>machine-learning</category>
-  <category>finance</category>
-  <guid>https://mftokic.github.io/posts/2024-04-23-time-series-order/</guid>
-  <pubDate>Tue, 23 Apr 2024 07:00:00 GMT</pubDate>
-  <media:content url="https://mftokic.github.io/posts/2024-04-23-time-series-order/image.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 </channel>
 </rss>
