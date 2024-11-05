@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Mike Tokic">
-<meta name="dcterms.date" content="2024-10-20">
+<meta name="dcterms.date" content="2024-11-20">
 <meta name="description" content="Understanding trend and seasonality patterns">
 
 <title>Exploratory Data Analysis: Time Series Decomposition – Thoughts on Things</title>
@@ -87,13 +87,13 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Exploratory Data Analysis: Time Series Decomposition – Thoughts on Things">
 <meta property="og:description" content="Understanding trend and seasonality patterns">
-<meta property="og:image" content="https://mftokic.github.io/posts/2024-10-20-ts-fundamentals-decomposition/image.png">
+<meta property="og:image" content="https://mftokic.github.io/posts/2024-11-20-ts-fundamentals-decomposition/image.png">
 <meta property="og:site_name" content="Thoughts on Things">
 <meta property="og:image:height" content="1024">
 <meta property="og:image:width" content="1024">
 <meta name="twitter:title" content="Exploratory Data Analysis: Time Series Decomposition – Thoughts on Things">
 <meta name="twitter:description" content="Understanding trend and seasonality patterns">
-<meta name="twitter:image" content="https://mftokic.github.io/posts/2024-10-20-ts-fundamentals-decomposition/image.png">
+<meta name="twitter:image" content="https://mftokic.github.io/posts/2024-11-20-ts-fundamentals-decomposition/image.png">
 <meta name="twitter:image-height" content="1024">
 <meta name="twitter:image-width" content="1024">
 <meta name="twitter:card" content="summary_large_image">
@@ -176,7 +176,7 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">October 20, 2024</p>
+        <p class="date">November 20, 2024</p>
       </div>
     </div>
     
@@ -211,12 +211,42 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 <p><img src="./chart4.png" class="img-fluid"></p>
 <p>Next we can get the seasonal component of our data. This is very straightforward. All we have to do is take our detrended series and calculate the average revenue for each month of the year. After getting the average value per month, we can divide by the total average across all months. This ensures that the seasonal values of each month add to zero. Then we repeat the final values per month across all years. The final result is shown below. Now we can see there is very strong seasonal patterns at certain times of the year. Some quarters have high sales, while others do not. This kind of repeatable pattern will be very important for us when it comes to training models.</p>
 <p><img src="./chart5.png" class="img-fluid"></p>
-<p>Finally we can get the final piece of our decomposition, the remainder series. This is everything that couldn’t be explained by the trend and seasonal components. Simply take the original revenue time series, subtract the trend and seasonal components, and bam you have the remainder series. See below.</p>
+<p>Finally we can get the final piece of our decomposition, the remainder (aka residual) series. This is everything that couldn’t be explained by the trend and seasonal components. Simply take the original revenue time series, subtract the trend and seasonal components, and bam you have the remainder series. See below.</p>
 <p><img src="./chart6.png" class="img-fluid"></p>
 </section>
 <section id="stl-decomposition" class="level3">
 <h3 class="anchored" data-anchor-id="stl-decomposition">STL Decomposition</h3>
-<p>STL decomposition. How to get insights from the chart.</p>
+<p>The additive decomposition approach can work very well if your data has a linear trend and stable seasonality. But if the series is growing exponentially, or has changing seasonality, then more advanced methods are needed. This is where STL decomposition comes in. STL is an acronym for “Seasonal and Trend decomposition using Loess”, while loess is a smoothing method for estimating nonlinear relationships. This smoothing process allows for changing seasonality, a more complex understanding of the trend component, and more resistance to outliers. Here is the STL process broken down step by step.</p>
+<ol type="1">
+<li>Extract Initial Seasonal Component
+<ul>
+<li>First, STL identifies the seasonal pattern in the data. It does this by looking at the regular repeating cycles (e.g., monthly or weekly patterns).</li>
+<li>Using Loess smoothing, it calculates a rough seasonal pattern that captures these cycles. Loess is like drawing a smooth line through points that wiggle up and down in a regular pattern.</li>
+<li>This step gives an initial estimate of what the seasonal pattern looks like.</li>
+</ul></li>
+<li>Remove Seasonality to Estimate the Trend
+<ul>
+<li>After finding the initial seasonal component, STL subtracts it from the data to get a rough idea of the trend (the overall up or down direction).</li>
+<li>Loess smoothing is applied again to the deseasonalized data (data without seasonal patterns) to create a smooth trend line.</li>
+</ul></li>
+<li>Refine the Seasonal and Trend Components
+<ul>
+<li>STL repeats the process in cycles, fine-tuning both the trend and seasonal estimates.</li>
+<li>Each cycle alternates between smoothing the seasonal component and the trend component, adjusting them with each pass to better fit the data.</li>
+<li>By repeating this process, STL allows the seasonal component to change over time if necessary and captures any evolving trends.</li>
+</ul></li>
+<li>Calculate the Residual
+<ul>
+<li>Once the trend and seasonal components are finalized, STL subtracts both from the original data. What’s left is the residual component, representing the random, unpredictable part of the data.</li>
+<li>This residual is what can’t be explained by the regular trend or seasonal patterns, capturing any noise or outliers.</li>
+</ul></li>
+</ol>
+<p>Here is the output of a STL decomposition. Each component can be added together to get the original time series, just like additive decomposition.</p>
+<p><img src="./chart7.png" class="img-fluid"></p>
+</section>
+<section id="reading-the-tea-leaves" class="level3">
+<h3 class="anchored" data-anchor-id="reading-the-tea-leaves">Reading the Tea Leaves</h3>
+<p>How to get insights from the chart.</p>
 </section>
 <section id="final-thoughts" class="level3">
 <h3 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h3>

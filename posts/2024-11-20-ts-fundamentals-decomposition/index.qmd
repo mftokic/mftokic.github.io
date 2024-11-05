@@ -2,7 +2,7 @@
 title: "Exploratory Data Analysis: Time Series Decomposition"
 description: "Understanding trend and seasonality patterns"
 author: "Mike Tokic"
-date: "2024-10-20"
+date: "2024-11-20"
 categories: [machine-learning, time-series]
 image: "image.png"
 draft: true
@@ -34,12 +34,35 @@ Next we can get the seasonal component of our data. This is very straightforward
 
 ![](./chart5.png)
 
-Finally we can get the final piece of our decomposition, the remainder series. This is everything that couldn't be explained by the trend and seasonal components. Simply take the original revenue time series, subtract the trend and seasonal components, and bam you have the remainder series. See below. 
+Finally we can get the final piece of our decomposition, the remainder (aka residual) series. This is everything that couldn't be explained by the trend and seasonal components. Simply take the original revenue time series, subtract the trend and seasonal components, and bam you have the remainder series. See below. 
 
 ![](./chart6.png)
 
 ### STL Decomposition
 
-STL decomposition. How to get insights from the chart. 
+The additive decomposition approach can work very well if your data has a linear trend and stable seasonality. But if the series is growing exponentially, or has changing seasonality, then more advanced methods are needed. This is where STL decomposition comes in. STL is an acronym for “Seasonal and Trend decomposition using Loess”, while loess is a smoothing method for estimating nonlinear relationships. This smoothing process allows for changing seasonality, a more complex understanding of the trend component, and more resistance to outliers. Here is the STL process broken down step by step. 
+
+1. Extract Initial Seasonal Component
+    - First, STL identifies the seasonal pattern in the data. It does this by looking at the regular repeating cycles (e.g., monthly or weekly patterns).
+    - Using Loess smoothing, it calculates a rough seasonal pattern that captures these cycles. Loess is like drawing a smooth line through points that wiggle up and down in a regular pattern.
+    - This step gives an initial estimate of what the seasonal pattern looks like.
+2. Remove Seasonality to Estimate the Trend
+    - After finding the initial seasonal component, STL subtracts it from the data to get a rough idea of the trend (the overall up or down direction).
+    - Loess smoothing is applied again to the deseasonalized data (data without seasonal patterns) to create a smooth trend line.
+3. Refine the Seasonal and Trend Components
+    - STL repeats the process in cycles, fine-tuning both the trend and seasonal estimates.
+    - Each cycle alternates between smoothing the seasonal component and the trend component, adjusting them with each pass to better fit the data.
+    - By repeating this process, STL allows the seasonal component to change over time if necessary and captures any evolving trends.
+4. Calculate the Residual
+    - Once the trend and seasonal components are finalized, STL subtracts both from the original data. What’s left is the residual component, representing the random, unpredictable part of the data.
+    - This residual is what can’t be explained by the regular trend or seasonal patterns, capturing any noise or outliers. 
+
+Here is the output of a STL decomposition. Each component can be added together to get the original time series, just like additive decomposition. 
+
+![](./chart7.png)
+
+### Reading the Tea Leaves
+
+How to get insights from the chart. 
 
 ### Final Thoughts

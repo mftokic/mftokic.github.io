@@ -1,6 +1,6 @@
 ---
 title: "Newsletters Stink"
-description: "We Need a YouTube for Blogs"
+description: "We need a YouTube for blogs"
 author: "Mike Tokic"
 date: "2024-10-30"
 categories: [machine-learning, learning]
