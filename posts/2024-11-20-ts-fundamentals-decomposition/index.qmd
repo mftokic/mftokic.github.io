@@ -63,6 +63,14 @@ Here is the output of a STL decomposition. Each component can be added together 
 
 ### Reading the Tea Leaves
 
-How to get insights from the chart. 
+Understanding the outputs of time series decomposition can be more of an art than science. The more you do it, the more your data intuition grows about what's happening. Looking at the results of STL decomposition tells us a few things. 
+
+1. There has been mostly a stable trend over the years, except for a strange dip in 2020. 
+2. Seasonality is strong with repeating peaks and valleys across the years. But it does seem to be growing with each passing year. 
+3. Most of the residual points hover around zero, which is ideal. Having the residual component have an average of zero and a constant standard deviation over time means the data is just white noise, or things that can't be explained. We do see a large drop in 2020 though...
+
+This analysis shows us that there is most likely an outlier in 2020 that seriously impacted our data. If you don't have a guess as to what this might be than you might have been living under a rock the last decade. The impact is from COVID-19. Thankfully this impact can be taken care of later in our modeling process. But for now it's good that we identify it and get the domain knowledge to know what could have caused it. 
 
 ### Final Thoughts
+
+Decomposing a time series is often one of the first things an accomplished data scientist does before training any kind of machine learning model. Breaking the time series into its components allows us to understand the potential forces that is impacting the trend of the data and if there are any outliers in the data. Knowing this allows us to change our approach when training models. Which leads to more accurate forecasts down the road. 
