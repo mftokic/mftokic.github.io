@@ -2,9 +2,9 @@
 title: "Exploratory Data Analysis: Time Series Decomposition"
 description: "Understanding trend and seasonality patterns"
 author: "Mike Tokic"
-date: "2024-11-20"
+date: "2024-11-06"
 categories: [machine-learning, time-series]
-image: "image.png"
+image: "chart7.png"
 draft: true
 ---
 
@@ -22,6 +22,8 @@ Seasonality just means that your data has a recurring seasonal pattern. For exam
 
 ![](./chart2.png)
 
+In order to better understand the trend and seasonal patterns in your data, you need to isolate them into separate components. This is done through a process called time series decomposition. This process breaks out a time series into three separate parts: trend, seasonality, and remainder. The remainder component is just parts of your time series that can't be explained by the trend and seasonal component. Let's try decomposing a time series from our example data set. 
+
 ### Breaking Out Trend and Seasonality with Additive Decomposition
 
 We can isolate the trend component of a time series using simple methods like moving averages (MA). These are just simple averages over a span of time. Let's take a time series from our example revenue data and create a moving average. In the first chart below we used a [2x12-MA](https://otexts.com/fpp3/moving-averages.html#estimating-the-trend-cycle-with-seasonal-data). This moving average now isolates the trend of the time series. We can see a dip in trend around 2020 then a strong rebound going forward. The moving average doesn't start and end at the same time as our time series, since we need a burn in period to start creating the averages. If we wanted to detrend the time series we can subtract the new trend series from our original revenue, shown in the second chart below. 
@@ -34,7 +36,7 @@ Next we can get the seasonal component of our data. This is very straightforward
 
 ![](./chart5.png)
 
-Finally we can get the final piece of our decomposition, the remainder (aka residual) series. This is everything that couldn't be explained by the trend and seasonal components. Simply take the original revenue time series, subtract the trend and seasonal components, and bam you have the remainder series. See below. 
+Finally we can get the final piece of our decomposition, the remainder (aka residual) series. This is everything that couldn't be explained by the trend and seasonal components. Simply take the original revenue time series, subtract the trend and seasonal components, and bam you have the remainder series.
 
 ![](./chart6.png)
 
@@ -44,7 +46,7 @@ The additive decomposition approach can work very well if your data has a linear
 
 1. Extract Initial Seasonal Component
     - First, STL identifies the seasonal pattern in the data. It does this by looking at the regular repeating cycles (e.g., monthly or weekly patterns).
-    - Using Loess smoothing, it calculates a rough seasonal pattern that captures these cycles. Loess is like drawing a smooth line through points that wiggle up and down in a regular pattern.
+    - Using Loess smoothing, it calculates a rough seasonal pattern that captures these cycles.
     - This step gives an initial estimate of what the seasonal pattern looks like.
 2. Remove Seasonality to Estimate the Trend
     - After finding the initial seasonal component, STL subtracts it from the data to get a rough idea of the trend (the overall up or down direction).
@@ -53,9 +55,9 @@ The additive decomposition approach can work very well if your data has a linear
     - STL repeats the process in cycles, fine-tuning both the trend and seasonal estimates.
     - Each cycle alternates between smoothing the seasonal component and the trend component, adjusting them with each pass to better fit the data.
     - By repeating this process, STL allows the seasonal component to change over time if necessary and captures any evolving trends.
-4. Calculate the Residual
-    - Once the trend and seasonal components are finalized, STL subtracts both from the original data. What’s left is the residual component, representing the random, unpredictable part of the data.
-    - This residual is what can’t be explained by the regular trend or seasonal patterns, capturing any noise or outliers. 
+4. Calculate the Remainder
+    - Once the trend and seasonal components are finalized, STL subtracts both from the original data. What’s left is the remainder component, representing the random, unpredictable part of the data.
+    - This remainder is what can’t be explained by the regular trend or seasonal patterns, capturing any noise or outliers. 
 
 Here is the output of a STL decomposition. Each component can be added together to get the original time series, just like additive decomposition. 
 
@@ -63,7 +65,7 @@ Here is the output of a STL decomposition. Each component can be added together 
 
 ### Reading the Tea Leaves
 
-Understanding the outputs of time series decomposition can be more of an art than science. The more you do it, the more your data intuition grows about what's happening. Looking at the results of STL decomposition tells us a few things. 
+Understanding the outputs of time series decomposition can be more of an art than science. The more you do it, the more your data intuition grows about what's happening. Looking at the results of STL decomposition tells us a few things for our time series. 
 
 1. There has been mostly a stable trend over the years, except for a strange dip in 2020. 
 2. Seasonality is strong with repeating peaks and valleys across the years. But it does seem to be growing with each passing year. 
@@ -73,4 +75,4 @@ This analysis shows us that there is most likely an outlier in 2020 that serious
 
 ### Final Thoughts
 
-Decomposing a time series is often one of the first things an accomplished data scientist does before training any kind of machine learning model. Breaking the time series into its components allows us to understand the potential forces that is impacting the trend of the data and if there are any outliers in the data. Knowing this allows us to change our approach when training models. Which leads to more accurate forecasts down the road. 
+Decomposing a time series is often one of the first things an accomplished data scientist does before training any kind of machine learning model. Breaking the time series into its components allows us to understand the potential forces that is impacting the trend of the data and if there are any outliers in the data. Knowing this allows us to change our approach when training models. Ultimately leading to more accurate forecasts down the road. 
