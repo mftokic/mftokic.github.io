@@ -18,7 +18,7 @@ Exploratory data analysis, or EDA, is the process of understanding the patterns 
 Applying EDA to time series data is a unique process, different from every other kind of data used in machine learning. Here are the building blocks of good time series EDA. Click on each to explore further. 
 
 - [Shape of the Data](https://mftokic.github.io/posts/2024-10-15-ts-fundamentals-eda-data-shape/)
-- Time Series Decomposition (in progress)
-- Autocorrelation
+- [Time Series Decomposition](https://mftokic.github.io/posts/2024-11-06-ts-fundamentals-decomposition/)
+- Autocorrelation (in progress)
 - Missing Values, Outliers 
 - External Regressors

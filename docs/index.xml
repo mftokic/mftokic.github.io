@@ -10,7 +10,91 @@
 <atom:link href="https://mftokic.github.io/index.xml" rel="self" type="application/rss+xml"/>
 <description>A collection of thoughts on things from the mind of Mike Tokic</description>
 <generator>quarto-1.5.57</generator>
-<lastBuildDate>Wed, 30 Oct 2024 07:00:00 GMT</lastBuildDate>
+<lastBuildDate>Wed, 06 Nov 2024 08:00:00 GMT</lastBuildDate>
+<item>
+  <title>Exploratory Data Analysis: Time Series Decomposition</title>
+  <dc:creator>Mike Tokic</dc:creator>
+  <link>https://mftokic.github.io/posts/2024-11-06-ts-fundamentals-decomposition/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p><em>This post is part of the <a href="https://mftokic.github.io/posts/2024-10-03-ts-fundamentals-eda/">exploratory data analysis chapter</a> within a larger learning series around time series forecasting fundamentals. <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/">Check out the main learning path</a> to see other posts in the series.</em></p>
+<p><strong>The example data used in this series <a href="https://github.com/mftokic/mftokic.github.io/blob/main/posts/2024-10-02-ts-fundamentals-whats-a-time-series/example_ts_data.csv">can be found here.</a> You can also find the <a href="https://github.com/mftokic/mftokic.github.io/blob/main/notebooks/2024-11-06-ts-fundamentals-decomposition.ipynb">python code used in this post here.</a></strong></p>
+<section id="your-data-is-so-trendy" class="level3">
+<h3 class="anchored" data-anchor-id="your-data-is-so-trendy">Your Data is so Trendy</h3>
+<p>Every single time series you have ever seen has a trend and seasonality. If they don’t, then they are random white noise. A trend is just values steadily rising or falling over time. You could have a rising trend in some years, then a falling trend in others. Below is a chart with a strong trend but weak seasonality.</p>
+<p><img src="https://mftokic.github.io/posts/2024-11-06-ts-fundamentals-decomposition/chart1.png" class="img-fluid"></p>
+<p>Seasonality just means that your data has a recurring seasonal pattern. For example your data could spike during the holiday season from Oct-Dec, then fall drastically from Jan-Jun.&nbsp;Your seasonality could also change over time. Below is a chart with strong seasonality but weak trend.</p>
+<p><img src="https://mftokic.github.io/posts/2024-11-06-ts-fundamentals-decomposition/chart2.png" class="img-fluid"></p>
+<p>In order to better understand the trend and seasonal patterns in your data, you need to isolate them into separate components. This is done through a process called time series decomposition. This process breaks out a time series into three separate parts: trend, seasonality, and remainder. The remainder component is just parts of your time series that can’t be explained by the trend and seasonal component. Let’s try decomposing a time series from our example data set.</p>
+</section>
+<section id="breaking-out-trend-and-seasonality-with-additive-decomposition" class="level3">
+<h3 class="anchored" data-anchor-id="breaking-out-trend-and-seasonality-with-additive-decomposition">Breaking Out Trend and Seasonality with Additive Decomposition</h3>
+<p>We can isolate the trend component of a time series using simple methods like moving averages (MA). These are just simple averages over a span of time. Let’s take a time series from our example revenue data and create a moving average. In the first chart below we used a <a href="https://otexts.com/fpp3/moving-averages.html#estimating-the-trend-cycle-with-seasonal-data">2x12-MA</a>. This moving average now isolates the trend of the time series. We can see a dip in trend around 2020 then a strong rebound going forward. The moving average doesn’t start and end at the same time as our time series, since we need a burn in period to start creating the averages. If we wanted to detrend the time series we can subtract the new trend series from our original revenue, shown in the second chart below.</p>
+<p><img src="https://mftokic.github.io/posts/2024-11-06-ts-fundamentals-decomposition/chart3.png" class="img-fluid"></p>
+<p><img src="https://mftokic.github.io/posts/2024-11-06-ts-fundamentals-decomposition/chart4.png" class="img-fluid"></p>
+<p>Next we can get the seasonal component of our data. This is very straightforward. All we have to do is take our detrended series and calculate the average revenue for each month of the year. After getting the average value per month, we can divide by the total average across all months. This ensures that the seasonal values of each month add to zero. Then we repeat the final values per month across all years. The final result is shown below. Now we can see there is very strong seasonal patterns at certain times of the year. Some quarters have high sales, while others do not. This kind of repeatable pattern will be very important for us when it comes to training models.</p>
+<p><img src="https://mftokic.github.io/posts/2024-11-06-ts-fundamentals-decomposition/chart5.png" class="img-fluid"></p>
+<p>Finally we can get the final piece of our decomposition, the remainder (aka residual) series. This is everything that couldn’t be explained by the trend and seasonal components. Simply take the original revenue time series, subtract the trend and seasonal components, and bam you have the remainder series.</p>
+<p><img src="https://mftokic.github.io/posts/2024-11-06-ts-fundamentals-decomposition/chart6.png" class="img-fluid"></p>
+</section>
+<section id="stl-decomposition" class="level3">
+<h3 class="anchored" data-anchor-id="stl-decomposition">STL Decomposition</h3>
+<p>The additive decomposition approach can work very well if your data has a linear trend and stable seasonality. But if the series is growing exponentially, or has changing seasonality, then more advanced methods are needed. This is where STL decomposition comes in. STL is an acronym for “Seasonal and Trend decomposition using Loess”, while loess is a smoothing method for estimating nonlinear relationships. This smoothing process allows for changing seasonality, a more complex understanding of the trend component, and more resistance to outliers. Here is the STL process broken down step by step.</p>
+<ol type="1">
+<li>Extract Initial Seasonal Component
+<ul>
+<li>First, STL identifies the seasonal pattern in the data. It does this by looking at the regular repeating cycles (e.g., monthly or weekly patterns).</li>
+<li>Using Loess smoothing, it calculates a rough seasonal pattern that captures these cycles.</li>
+<li>This step gives an initial estimate of what the seasonal pattern looks like.</li>
+</ul></li>
+<li>Remove Seasonality to Estimate the Trend
+<ul>
+<li>After finding the initial seasonal component, STL subtracts it from the data to get a rough idea of the trend (the overall up or down direction).</li>
+<li>Loess smoothing is applied again to the deseasonalized data (data without seasonal patterns) to create a smooth trend line.</li>
+</ul></li>
+<li>Refine the Seasonal and Trend Components
+<ul>
+<li>STL repeats the process in cycles, fine-tuning both the trend and seasonal estimates.</li>
+<li>Each cycle alternates between smoothing the seasonal component and the trend component, adjusting them with each pass to better fit the data.</li>
+<li>By repeating this process, STL allows the seasonal component to change over time if necessary and captures any evolving trends.</li>
+</ul></li>
+<li>Calculate the Remainder
+<ul>
+<li>Once the trend and seasonal components are finalized, STL subtracts both from the original data. What’s left is the remainder component, representing the random, unpredictable part of the data.</li>
+<li>This remainder is what can’t be explained by the regular trend or seasonal patterns, capturing any noise or outliers.</li>
+</ul></li>
+</ol>
+<p>Here is the output of a STL decomposition. Each component can be added together to get the original time series, just like additive decomposition.</p>
+<p><img src="https://mftokic.github.io/posts/2024-11-06-ts-fundamentals-decomposition/chart7.png" class="img-fluid"></p>
+</section>
+<section id="reading-the-tea-leaves" class="level3">
+<h3 class="anchored" data-anchor-id="reading-the-tea-leaves">Reading the Tea Leaves</h3>
+<p>Understanding the outputs of time series decomposition can be more of an art than science. The more you do it, the more your data intuition grows about what’s happening. Looking at the results of STL decomposition tells us a few things for our time series.</p>
+<ol type="1">
+<li>There has been mostly a stable trend over the years, except for a strange dip in 2020.</li>
+<li>Seasonality is strong with repeating peaks and valleys across the years. But it does seem to be growing with each passing year.</li>
+<li>Most of the residual points hover around zero, which is ideal. Having the residual component have an average of zero and a constant standard deviation over time means the data is just white noise, or things that can’t be explained. We do see a large drop in 2020 though…</li>
+</ol>
+<p>This analysis shows us that there is most likely an outlier in 2020 that seriously impacted our data. If you don’t have a guess as to what this might be than you might have been living under a rock the last decade. The impact is from COVID-19. Thankfully this impact can be taken care of later in our modeling process. But for now it’s good that we identify it and get the domain knowledge to know what could have caused it.</p>
+</section>
+<section id="final-thoughts" class="level3">
+<h3 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h3>
+<p>Decomposing a time series is often one of the first things an accomplished data scientist does before training any kind of machine learning model. Breaking the time series into its components allows us to understand the potential forces that is impacting the trend of the data and if there are any outliers in the data. Knowing this allows us to change our approach when training models. Ultimately leading to more accurate forecasts down the road.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>machine-learning</category>
+  <category>time-series</category>
+  <guid>https://mftokic.github.io/posts/2024-11-06-ts-fundamentals-decomposition/</guid>
+  <pubDate>Wed, 06 Nov 2024 08:00:00 GMT</pubDate>
+  <media:content url="https://mftokic.github.io/posts/2024-11-06-ts-fundamentals-decomposition/chart7.png" medium="image" type="image/png" height="115" width="144"/>
+</item>
 <item>
   <title>Newsletters Stink</title>
   <dc:creator>Mike Tokic</dc:creator>
@@ -149,8 +233,8 @@
 <p>Applying EDA to time series data is a unique process, different from every other kind of data used in machine learning. Here are the building blocks of good time series EDA. Click on each to explore further.</p>
 <ul>
 <li><a href="https://mftokic.github.io/posts/2024-10-15-ts-fundamentals-eda-data-shape/">Shape of the Data</a></li>
-<li>Time Series Decomposition (in progress)</li>
-<li>Autocorrelation</li>
+<li><a href="https://mftokic.github.io/posts/2024-11-06-ts-fundamentals-decomposition/">Time Series Decomposition</a></li>
+<li>Autocorrelation (in progress)</li>
 <li>Missing Values, Outliers</li>
 <li>External Regressors</li>
 </ul>
@@ -250,8 +334,8 @@
 <li><a href="https://mftokic.github.io/posts/2024-10-03-ts-fundamentals-eda/">Exploratory Data Analysis</a>
 <ul>
 <li><a href="https://mftokic.github.io/posts/2024-10-15-ts-fundamentals-eda-data-shape/">Shape of the Data</a></li>
-<li>Time Series Decomposition (in progress)</li>
-<li>Autocorrelation</li>
+<li><a href="https://mftokic.github.io/posts/2024-11-06-ts-fundamentals-decomposition/">Time Series Decomposition</a></li>
+<li>Autocorrelation (in progress)</li>
 <li>Missing Values, Outliers</li>
 <li>External Regressors</li>
 </ul></li>
@@ -1883,840 +1967,6 @@
   <guid>https://mftokic.github.io/posts/2024-05-03-time-series-simple-models/</guid>
   <pubDate>Fri, 03 May 2024 07:00:00 GMT</pubDate>
   <media:content url="https://mftokic.github.io/posts/2024-05-03-time-series-simple-models/image.png" medium="image" type="image/png" height="144" width="144"/>
-</item>
-<item>
-  <title>Time Series First Principles: The Magic Is In The Feature Engineering</title>
-  <dc:creator>Mike Tokic</dc:creator>
-  <link>https://mftokic.github.io/posts/2024-05-01-time-series-features/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p><img src="https://mftokic.github.io/posts/2024-05-01-time-series-features/image.png" class="img-fluid"></p>
-<section id="time-series-first-principles-series" class="level3">
-<h3 class="anchored" data-anchor-id="time-series-first-principles-series">Time Series First Principles Series</h3>
-<p>This post dives into the sixth principle of a good time series forecast, the magic is in the feature engineering. Check out the <a href="https://mftokic.github.io/posts/2024-03-26-time-series-first-principles-initial/">initial post</a> in this series to get a high level view of each principle.</p>
-<ol type="1">
-<li><a href="https://mftokic.github.io/posts/2024-04-02-time-series-domain-expertise/">Domain Expertise</a></li>
-<li><a href="https://mftokic.github.io/posts/2024-04-08-time-series-garbage/">Garbage In Garbage Out</a></li>
-<li><a href="https://mftokic.github.io/posts/2024-04-11-time-series-past-future/">The Future Is Similar To The Past</a></li>
-<li><a href="https://mftokic.github.io/posts/2024-04-18-time-series-grain/">Higher Grain Higher Accuracy</a></li>
-<li><a href="https://mftokic.github.io/posts/2024-04-23-time-series-order/">Order Is Important</a></li>
-<li><a href="https://mftokic.github.io/posts/2024-05-01-time-series-features/"><strong>The Magic Is In The Feature Engineering</strong></a></li>
-<li><a href="https://mftokic.github.io/posts/2024-05-03-time-series-simple-models/">Simple Models Are Better Models</a></li>
-<li><a href="https://mftokic.github.io/posts/2024-05-07-time-series-capture-uncertainty/">Capture Uncertainty</a></li>
-<li><a href="https://mftokic.github.io/posts/2024-05-28-time-series-model-avg/">Model Combinations Are King</a></li>
-<li><a href="https://mftokic.github.io/posts/2024-05-31-time-series-deep-learning/">Deep Learning Last</a></li>
-</ol>
-</section>
-<section id="turning-data-into-insight" class="level3">
-<h3 class="anchored" data-anchor-id="turning-data-into-insight">Turning Data Into Insight</h3>
-<p>A machine learning (ML) model is only as good as the data it’s fed. The process of transforming data, to make it easier for a model to learn from that data, is called feature engineering. It’s a technical term that is actually very simple in nature, really just data transformations. In the world of time series forecasting, feature engineering can make or break a good forecast.</p>
-<p>Creating high quality features is a combination of strong domain expertise and data transformation skills. We have already covered how domain expertise impacts a forecast in a <a href="https://mftokic.github.io/posts/2024-04-02-time-series-domain-expertise/">previous post</a>, so this post will cover how simple data transformations can drastically improve the accuracy of a machine learning forecast. Check out each category of time series feature engineering below to learn more.</p>
-</section>
-<section id="date-features" class="level3">
-<h3 class="anchored" data-anchor-id="date-features">Date Features</h3>
-<p>The most common type of feature engineering for time series is around dates. Date features allow us to capture seasonality patterns in our data. Think of seasonality as repeating peaks and valleys in our data. For example, our business might make most of its revenue in Q4 every year, with a subsequent dip in sales in Q1.</p>
-<p>Let’s use the example time series below to illustrate each type of feature engineering.</p>
-<table class="caption-top table">
-<caption>Fake Time Series Data</caption>
-<thead>
-<tr class="header">
-<th>Date</th>
-<th>Sales ($)</th>
-<th>Consumer Sentiment</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>January 2023</td>
-<td>100,000</td>
-<td>68</td>
-</tr>
-<tr class="even">
-<td>February 2023</td>
-<td>110,000</td>
-<td>67</td>
-</tr>
-<tr class="odd">
-<td>March 2023</td>
-<td>120,000</td>
-<td>65</td>
-</tr>
-<tr class="even">
-<td>April 2023</td>
-<td>115,000</td>
-<td>70</td>
-</tr>
-<tr class="odd">
-<td>May 2023</td>
-<td>130,000</td>
-<td>72</td>
-</tr>
-<tr class="even">
-<td>June 2023</td>
-<td>125,000</td>
-<td>73</td>
-</tr>
-<tr class="odd">
-<td>July 2023</td>
-<td>135,000</td>
-<td>74</td>
-</tr>
-<tr class="even">
-<td>August 2023</td>
-<td>140,000</td>
-<td>75</td>
-</tr>
-<tr class="odd">
-<td>September 2023</td>
-<td>130,000</td>
-<td>70</td>
-</tr>
-<tr class="even">
-<td>October 2023</td>
-<td>145,000</td>
-<td>72</td>
-</tr>
-<tr class="odd">
-<td>November 2023</td>
-<td>150,000</td>
-<td>71</td>
-</tr>
-<tr class="even">
-<td>December 2023</td>
-<td>160,000</td>
-<td>75</td>
-</tr>
-</tbody>
-</table>
-<p>In this time series we would like to forecast monthly sales. We also have information about consumer sentiment that we can use to help forecast sales. A multivariate machine learning model cannot easily use the date column as is, so we have to do some data transformations (aka feature engineering) to make it easier for a model to understand how date information can help predict sales. Let’s go through a few examples of new features we can create from the date column. It’s important to note that after we create these new features it’s a good idea to remove the original date column before training a ML model.</p>
-<p>Since the data is monthly there are a lot of simple features we can use. We can pull out the specific month, quarter, and even year into their own columns to use as features. If our data was at a daily level, we can even go deeper and get features related to day of the week, day of year, week of month, etc.</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Date</th>
-<th>Month</th>
-<th>Quarter</th>
-<th>Year</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>January 2023</td>
-<td>January</td>
-<td>Q1</td>
-<td>2023</td>
-</tr>
-<tr class="even">
-<td>February 2023</td>
-<td>February</td>
-<td>Q1</td>
-<td>2023</td>
-</tr>
-<tr class="odd">
-<td>March 2023</td>
-<td>March</td>
-<td>Q1</td>
-<td>2023</td>
-</tr>
-<tr class="even">
-<td>April 2023</td>
-<td>April</td>
-<td>Q2</td>
-<td>2023</td>
-</tr>
-<tr class="odd">
-<td>May 2023</td>
-<td>May</td>
-<td>Q2</td>
-<td>2023</td>
-</tr>
-<tr class="even">
-<td>June 2023</td>
-<td>June</td>
-<td>Q2</td>
-<td>2023</td>
-</tr>
-<tr class="odd">
-<td>July 2023</td>
-<td>July</td>
-<td>Q3</td>
-<td>2023</td>
-</tr>
-<tr class="even">
-<td>August 2023</td>
-<td>August</td>
-<td>Q3</td>
-<td>2023</td>
-</tr>
-<tr class="odd">
-<td>September 2023</td>
-<td>September</td>
-<td>Q3</td>
-<td>2023</td>
-</tr>
-<tr class="even">
-<td>October 2023</td>
-<td>October</td>
-<td>Q4</td>
-<td>2023</td>
-</tr>
-<tr class="odd">
-<td>November 2023</td>
-<td>November</td>
-<td>Q4</td>
-<td>2023</td>
-</tr>
-<tr class="even">
-<td>December 2023</td>
-<td>December</td>
-<td>Q4</td>
-<td>2023</td>
-</tr>
-</tbody>
-</table>
-<p>That seems pretty straight forward right? Let’s keep squeezing our date fruit for more juice and see what other kinds of features we can create. Since this is a time series, adding some order of time can be helpful. This can be something as simple as an index starting at 1 (or even convert your date to a seconds format). This helps establish the proper order of our data and makes is easier for a model to pick up growing or declining trends over time. There is also slight differences in how many days there are from month to month, so we can add that too. If you don’t think that’s important then you have never been stung by the harsh mistress that is leap year. There have been multiple times where finance exec’s have dismissed forecasts for the quarter that includes February, where in the end we didn’t account for the fact that it was a leap year or we are one year removed from one. You can even take this one step further and add the number of business days for each month.</p>
-<table class="caption-top table">
-<caption>Adding a time index and other day related features</caption>
-<thead>
-<tr class="header">
-<th>Date</th>
-<th>Index</th>
-<th>Days in Month</th>
-<th>Business Days</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>January 2023</td>
-<td>1</td>
-<td>31</td>
-<td>22</td>
-</tr>
-<tr class="even">
-<td>February 2023</td>
-<td>2</td>
-<td>28</td>
-<td>20</td>
-</tr>
-<tr class="odd">
-<td>March 2023</td>
-<td>3</td>
-<td>31</td>
-<td>23</td>
-</tr>
-<tr class="even">
-<td>April 2023</td>
-<td>4</td>
-<td>30</td>
-<td>20</td>
-</tr>
-<tr class="odd">
-<td>May 2023</td>
-<td>5</td>
-<td>31</td>
-<td>23</td>
-</tr>
-<tr class="even">
-<td>June 2023</td>
-<td>6</td>
-<td>30</td>
-<td>22</td>
-</tr>
-<tr class="odd">
-<td>July 2023</td>
-<td>7</td>
-<td>31</td>
-<td>21</td>
-</tr>
-<tr class="even">
-<td>August 2023</td>
-<td>8</td>
-<td>31</td>
-<td>23</td>
-</tr>
-<tr class="odd">
-<td>September 2023</td>
-<td>9</td>
-<td>30</td>
-<td>21</td>
-</tr>
-<tr class="even">
-<td>October 2023</td>
-<td>10</td>
-<td>31</td>
-<td>22</td>
-</tr>
-<tr class="odd">
-<td>November 2023</td>
-<td>11</td>
-<td>30</td>
-<td>22</td>
-</tr>
-<tr class="even">
-<td>December 2023</td>
-<td>12</td>
-<td>31</td>
-<td>21</td>
-</tr>
-</tbody>
-</table>
-<p>To get the final drop of juice out of the date column, we can also add Fourier series features. A Fourier series feature in time series forecasting is a component that captures seasonal patterns using sine and cosine functions to model periodic cycles in the data. In a nutshell they are just recurring peaks and valleys that can occur at various date grains like monthly or daily. These features can help capture more complex seasonality in your data. The chart below shows some standard Fourier series at the monthly and quarterly grain.</p>
-<p><img src="https://mftokic.github.io/posts/2024-05-01-time-series-features/chart1.png" class="img-fluid"></p>
-</section>
-<section id="lag-features" class="level3">
-<h3 class="anchored" data-anchor-id="lag-features">Lag Features</h3>
-<p>Time series forecasting is all about learning from the past to forecast the future. In order to learn about the past we have to create lags on our data. Often what we’re trying to forecast today is correlated to what happened in the past. This is a concept known as autocorrelation. For our monthly forecast example, a 3 month lag may be highly correlated to sales with a 0 month lag (or sales today). Consumer sentiment can also be correlated with sales, but this time a lag of 6 might have higher correlation, since there is most likely a long delay between customer purchase patters and how it affects our company’s product. Lags can be created for any amount, depending on your domain knowledge of the business and results from more exploratory data analysis (deep dive for a different day).</p>
-<table class="caption-top table">
-<caption>Adding lag features</caption>
-<colgroup>
-<col style="width: 16%">
-<col style="width: 12%">
-<col style="width: 22%">
-<col style="width: 21%">
-<col style="width: 26%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Date</th>
-<th>Sales ($)</th>
-<th>Consumer Sentiment</th>
-<th>Sales 3-Month Lag</th>
-<th>Sentiment 6-Month Lag</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>January 2023</td>
-<td>100,000</td>
-<td>68</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>February 2023</td>
-<td>110,000</td>
-<td>67</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>March 2023</td>
-<td>120,000</td>
-<td>65</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>April 2023</td>
-<td>115,000</td>
-<td>70</td>
-<td>100,000</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>May 2023</td>
-<td>130,000</td>
-<td>72</td>
-<td>110,000</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>June 2023</td>
-<td>125,000</td>
-<td>73</td>
-<td>120,000</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>July 2023</td>
-<td>135,000</td>
-<td>74</td>
-<td>115,000</td>
-<td>68</td>
-</tr>
-<tr class="even">
-<td>August 2023</td>
-<td>140,000</td>
-<td>75</td>
-<td>130,000</td>
-<td>67</td>
-</tr>
-<tr class="odd">
-<td>September 2023</td>
-<td>130,000</td>
-<td>70</td>
-<td>125,000</td>
-<td>65</td>
-</tr>
-<tr class="even">
-<td>October 2023</td>
-<td>145,000</td>
-<td>72</td>
-<td>135,000</td>
-<td>70</td>
-</tr>
-<tr class="odd">
-<td>November 2023</td>
-<td>150,000</td>
-<td>71</td>
-<td>140,000</td>
-<td>72</td>
-</tr>
-<tr class="even">
-<td>December 2023</td>
-<td>160,000</td>
-<td>75</td>
-<td>130,000</td>
-<td>73</td>
-</tr>
-</tbody>
-</table>
-<p>Last thing I’ll say here is that you can also create leading features, especially for features that you know with 100% certainty ahead of time. For example, customers knowing of a new product launch in the future will definitely change how they purchase similar products you sell for the periods leading up to the launch. Someone may hold off on buying a new iPhone until the latest one gets released in a few months. Same goes for cars and many other products.</p>
-</section>
-<section id="rolling-window-features" class="level3">
-<h3 class="anchored" data-anchor-id="rolling-window-features">Rolling Window Features</h3>
-<p>Often using pure historical lags is not enough. The historical data of our target variable (what we want to forecast) can be very noisy, making it hard for a model to learn the proper trends and seasonality. One way to handle this is through rolling window transformations.</p>
-<p>Rolling window features in time series forecasting help smooth out data, reduce noise, and capture essential trends and cycles by averaging or computing other statistics over a specified period. For a monthly forecast we can create rolling window features of averages, min/max, and other statistical calculations.</p>
-<dl>
-<dt><img src="https://mftokic.github.io/posts/2024-05-01-time-series-features/chart2.png" class="img-fluid"></dt>
-<dd>
-<p>Rolling Window Averages aka Moving Average</p>
-</dd>
-</dl>
-<p>It’s best to calculate rolling window features based on your existing lag features. That way there is no <a href="https://mftokic.github.io/posts/2024-04-23-time-series-order/#data-leakage">data leakage</a> during initial model training. See below for example of creating a 3 month rolling window average of the 3 month sales lag.</p>
-<table class="caption-top table">
-<caption>Rolling 3 month average applied to the 3 month sales lag</caption>
-<colgroup>
-<col style="width: 25%">
-<col style="width: 16%">
-<col style="width: 27%">
-<col style="width: 30%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Date</th>
-<th>Sales ($)</th>
-<th>Sales 3-Month Lag</th>
-<th>3-Month Rolling Avg</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>January 2023</td>
-<td>100,000</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>February 2023</td>
-<td>110,000</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>March 2023</td>
-<td>120,000</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>April 2023</td>
-<td>115,000</td>
-<td>100,000</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>May 2023</td>
-<td>130,000</td>
-<td>110,000</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>June 2023</td>
-<td>125,000</td>
-<td>120,000</td>
-<td>110,000</td>
-</tr>
-<tr class="odd">
-<td>July 2023</td>
-<td>135,000</td>
-<td>115,000</td>
-<td>115,000</td>
-</tr>
-<tr class="even">
-<td>August 2023</td>
-<td>140,000</td>
-<td>130,000</td>
-<td>121,667</td>
-</tr>
-<tr class="odd">
-<td>September 2023</td>
-<td>130,000</td>
-<td>125,000</td>
-<td>123,333</td>
-</tr>
-<tr class="even">
-<td>October 2023</td>
-<td>145,000</td>
-<td>135,000</td>
-<td>130,000</td>
-</tr>
-<tr class="odd">
-<td>November 2023</td>
-<td>150,000</td>
-<td>140,000</td>
-<td>133,333</td>
-</tr>
-<tr class="even">
-<td>December 2023</td>
-<td>160,000</td>
-<td>130,000</td>
-<td>135,000</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="polynomial-features" class="level3">
-<h3 class="anchored" data-anchor-id="polynomial-features">Polynomial Features</h3>
-<p>The final type of feature engineering I’d like to discuss are polynomial transformations. Sometimes there is a non-linear relationship between your initial feature and the target variable. Some models, like ones that use decision trees, can handle this kind of relationship while others like linear regression cannot. To fix this we can transform the data via polynomials like squaring, cubing, and even taking the log of the initial feature.</p>
-<p>Let’s take our example monthly sales data and add some spice to it. This time creating an exponential relationship between consumer sentiment and sales.</p>
-<table class="caption-top table">
-<caption>Updated sales data with an exponential relationship with consumer sentiment</caption>
-<thead>
-<tr class="header">
-<th>Date</th>
-<th>Sales ($)</th>
-<th>Consumer Sentiment</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>January 2023</td>
-<td>1,309,000</td>
-<td>68</td>
-</tr>
-<tr class="even">
-<td>February 2023</td>
-<td>1,204,000</td>
-<td>67</td>
-</tr>
-<tr class="odd">
-<td>March 2023</td>
-<td>1,000,000</td>
-<td>65</td>
-</tr>
-<tr class="even">
-<td>April 2023</td>
-<td>1,525,000</td>
-<td>70</td>
-</tr>
-<tr class="odd">
-<td>May 2023</td>
-<td>1,849,000</td>
-<td>72</td>
-</tr>
-<tr class="even">
-<td>June 2023</td>
-<td>1,964,000</td>
-<td>73</td>
-</tr>
-<tr class="odd">
-<td>July 2023</td>
-<td>2,121,000</td>
-<td>74</td>
-</tr>
-<tr class="even">
-<td>August 2023</td>
-<td>2,500,000</td>
-<td>75</td>
-</tr>
-<tr class="odd">
-<td>September 2023</td>
-<td>1,525,000</td>
-<td>70</td>
-</tr>
-<tr class="even">
-<td>October 2023</td>
-<td>1,849,000</td>
-<td>72</td>
-</tr>
-<tr class="odd">
-<td>November 2023</td>
-<td>1,764,000</td>
-<td>71</td>
-</tr>
-<tr class="even">
-<td>December 2023</td>
-<td>2,500,000</td>
-<td>75</td>
-</tr>
-<tr class="odd">
-<td>January 2024</td>
-<td>2,890,000</td>
-<td>76</td>
-</tr>
-<tr class="even">
-<td>February 2024</td>
-<td>3,361,000</td>
-<td>78</td>
-</tr>
-<tr class="odd">
-<td>March 2024</td>
-<td>3,844,000</td>
-<td>79</td>
-</tr>
-<tr class="even">
-<td>April 2024</td>
-<td>4,641,000</td>
-<td>81</td>
-</tr>
-</tbody>
-</table>
-<p>When graphing the data, see how the increase in consumer sentiment has an exponential effect on sales?</p>
-<p><img src="https://mftokic.github.io/posts/2024-05-01-time-series-features/chart3.png" class="img-fluid"></p>
-<p>To account for this, we can square the values of consumer sentiment and create a new feature to use. This new feature will make it easier for models like linear regression to capture these kinds of non-linear relationships.</p>
-<table class="caption-top table">
-<caption>New polynomial feature added</caption>
-<colgroup>
-<col style="width: 21%">
-<col style="width: 15%">
-<col style="width: 25%">
-<col style="width: 37%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Date</th>
-<th>Sales ($)</th>
-<th>Consumer Sentiment</th>
-<th>Consumer Sentiment Squared</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>January 2023</td>
-<td>1,309,000</td>
-<td>68</td>
-<td>4,624</td>
-</tr>
-<tr class="even">
-<td>February 2023</td>
-<td>1,204,000</td>
-<td>67</td>
-<td>4,489</td>
-</tr>
-<tr class="odd">
-<td>March 2023</td>
-<td>1,000,000</td>
-<td>65</td>
-<td>4,225</td>
-</tr>
-<tr class="even">
-<td>April 2023</td>
-<td>1,525,000</td>
-<td>70</td>
-<td>4,900</td>
-</tr>
-<tr class="odd">
-<td>May 2023</td>
-<td>1,849,000</td>
-<td>72</td>
-<td>5,184</td>
-</tr>
-<tr class="even">
-<td>June 2023</td>
-<td>1,964,000</td>
-<td>73</td>
-<td>5,329</td>
-</tr>
-<tr class="odd">
-<td>July 2023</td>
-<td>2,121,000</td>
-<td>74</td>
-<td>5,476</td>
-</tr>
-<tr class="even">
-<td>August 2023</td>
-<td>2,500,000</td>
-<td>75</td>
-<td>5,625</td>
-</tr>
-<tr class="odd">
-<td>September 2023</td>
-<td>1,525,000</td>
-<td>70</td>
-<td>4,900</td>
-</tr>
-<tr class="even">
-<td>October 2023</td>
-<td>1,849,000</td>
-<td>72</td>
-<td>5,184</td>
-</tr>
-<tr class="odd">
-<td>November 2023</td>
-<td>1,764,000</td>
-<td>71</td>
-<td>5,041</td>
-</tr>
-<tr class="even">
-<td>December 2023</td>
-<td>2,500,000</td>
-<td>75</td>
-<td>5,625</td>
-</tr>
-<tr class="odd">
-<td>January 2024</td>
-<td>2,890,000</td>
-<td>76</td>
-<td>5,776</td>
-</tr>
-<tr class="even">
-<td>February 2024</td>
-<td>3,361,000</td>
-<td>78</td>
-<td>6,084</td>
-</tr>
-<tr class="odd">
-<td>March 2024</td>
-<td>3,844,000</td>
-<td>79</td>
-<td>6,241</td>
-</tr>
-<tr class="even">
-<td>April 2024</td>
-<td>4,641,000</td>
-<td>81</td>
-<td>6,561</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="reversal" class="level3">
-<h3 class="anchored" data-anchor-id="reversal">Reversal</h3>
-<p>Sometimes too much of a good thing can be a bad thing. Adding a lot of new features can increase the chance that a model overfits. Overfitting in machine learning occurs when a model learns to capture noise or random fluctuations in the training data, leading to poor generalization and high performance on training data but low performance on unseen data. The best way to prevent this kind of overfitting is to limit the number of features used to train a model. This will be discussed in greater detail in another post in this series.</p>
-<p>Did you notice that when creating lags and rolling window features we had a lot of missing data at the start of the time series for those new features? This can be a problem. Some ML models do not like missing data, so we need to deal with those missing values. An easy way is to just drop the initial rows in the time series that have blank values for the new lags and rolling window features. This can work well if you have a lot of historical data. Dropping data can hurt model performance though, and if you don’t have a lot of data to start with it becomes a less favorable option. You could also replace the missing values, either by using a simple model to impute the value or just use the closest available value in the time series to “fill in” the missing values. Both of these missing value replacement approaches have their own pros and cons but could be a better strategy then just simply dropping rows with missing values.</p>
-<table class="caption-top table">
-<caption>Filling in missing values with their closest available value</caption>
-<colgroup>
-<col style="width: 25%">
-<col style="width: 16%">
-<col style="width: 27%">
-<col style="width: 30%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Date</th>
-<th>Sales ($)</th>
-<th>Sales 3-Month Lag</th>
-<th>3-Month Rolling Avg</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>January 2023</td>
-<td>100,000</td>
-<td>100,000</td>
-<td>110,000</td>
-</tr>
-<tr class="even">
-<td>February 2023</td>
-<td>110,000</td>
-<td>100,000</td>
-<td>110,000</td>
-</tr>
-<tr class="odd">
-<td>March 2023</td>
-<td>120,000</td>
-<td>100,000</td>
-<td>110,000</td>
-</tr>
-<tr class="even">
-<td>April 2023</td>
-<td>115,000</td>
-<td>100,000</td>
-<td>110,000</td>
-</tr>
-<tr class="odd">
-<td>May 2023</td>
-<td>130,000</td>
-<td>110,000</td>
-<td>110,000</td>
-</tr>
-<tr class="even">
-<td>June 2023</td>
-<td>125,000</td>
-<td>120,000</td>
-<td>110,000</td>
-</tr>
-<tr class="odd">
-<td>July 2023</td>
-<td>135,000</td>
-<td>115,000</td>
-<td>115,000</td>
-</tr>
-<tr class="even">
-<td>August 2023</td>
-<td>140,000</td>
-<td>130,000</td>
-<td>121,667</td>
-</tr>
-<tr class="odd">
-<td>September 2023</td>
-<td>130,000</td>
-<td>125,000</td>
-<td>123,333</td>
-</tr>
-<tr class="even">
-<td>October 2023</td>
-<td>145,000</td>
-<td>135,000</td>
-<td>130,000</td>
-</tr>
-<tr class="odd">
-<td>November 2023</td>
-<td>150,000</td>
-<td>140,000</td>
-<td>133,333</td>
-</tr>
-<tr class="even">
-<td>December 2023</td>
-<td>160,000</td>
-<td>130,000</td>
-<td>135,000</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="other-pre-processing" class="level3">
-<h3 class="anchored" data-anchor-id="other-pre-processing">Other Pre-Processing</h3>
-<p>One thing I wanted to add that technically isn’t considered feature engineering are other data pre-processing methods. These are things you apply before you start your feature engineering process. They are specific to time series forecasting and can greatly improve forecast accuracy. Here are two pre-processing methods you should know about.</p>
-<p>First is making your data stationary. This is a time series technical term that pretty much means removing the trend component of your data, where the time series has a constant mean and standard deviation. We can make a time series stationary by the process of differencing. This involves taking the difference between each date observation and using that as the new time series to train models with. Check out the example below. See how the upward trend gets removed when we simply use the difference between months instead of the original monthly values? Some machine learning models, like ones that rely on decision trees, cannot extrapolate trends. So differencing the data removes any trend pattern, making it a lot easier for these models to produce high quality forecasts.</p>
-<p><img src="https://mftokic.github.io/posts/2024-05-01-time-series-features/chart4.png" class="img-fluid"></p>
-<p>Another pre-processing technique is a box-cox transformation. This helps remove any exponentially increasing trends by applying various types of power transformations. For example, taking the log of your time series. Removing non-linear trends can make it a lot easier for a model to create accurate forecasts. See the example below of a time series with a non-linear trend. We can then apply a box-cox transformation and then difference the data. See how nice the final time series looks? It will be way easier for a ML model to learn the patterns in the final transformed time series.</p>
-<p><img src="https://mftokic.github.io/posts/2024-05-01-time-series-features/chart5.png" class="img-fluid"></p>
-</section>
-<section id="finnts" class="level3">
-<h3 class="anchored" data-anchor-id="finnts">finnts</h3>
-<p>There’s a lot to unpack on feature engineering for time series forecasting. Thankfully my package, <a href="https://microsoft.github.io/finnts/index.html">finnts</a>, can automatically handle all of the feature engineering for you. It does everything I called out in this post plus more. Check it out and see just how easy ML forecasting can be.</p>
-</section>
-<section id="final-thoughts" class="level3">
-<h3 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h3>
-<p>Feature engineering is the backbone of successful time series forecasting, allowing models to uncover hidden patterns and relationships within the data, ultimately leading to more accurate predictions. By transforming raw data into meaningful features like date-related attributes, lag features, rolling window statistics, and polynomial transformations, we equip machine learning models with the necessary insights to make informed forecasts. However, it’s crucial to strike a balance between adding informative features and avoiding overfitting, as too many features can lead to poor generalization on unseen data. With careful consideration and the right techniques, feature engineering becomes a powerful tool in the arsenal of any data scientist or analyst aiming to unlock the predictive potential of time series data.</p>
-
-
-</section>
-
- ]]></description>
-  <category>time-series</category>
-  <category>machine-learning</category>
-  <category>finance</category>
-  <guid>https://mftokic.github.io/posts/2024-05-01-time-series-features/</guid>
-  <pubDate>Wed, 01 May 2024 07:00:00 GMT</pubDate>
-  <media:content url="https://mftokic.github.io/posts/2024-05-01-time-series-features/image.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 </channel>
 </rss>

@@ -5,12 +5,11 @@ author: "Mike Tokic"
 date: "2024-11-06"
 categories: [machine-learning, time-series]
 image: "chart7.png"
-draft: true
 ---
 
 *This post is part of the [exploratory data analysis chapter](https://mftokic.github.io/posts/2024-10-03-ts-fundamentals-eda/) within a larger learning series around time series forecasting fundamentals. [Check out the main learning path](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/) to see other posts in the series.* 
 
-The example data used in this series [can be found here.](https://github.com/mftokic/mftokic.github.io/blob/main/posts/2024-10-02-ts-fundamentals-whats-a-time-series/example_ts_data.csv) 
+**The example data used in this series [can be found here.](https://github.com/mftokic/mftokic.github.io/blob/main/posts/2024-10-02-ts-fundamentals-whats-a-time-series/example_ts_data.csv) You can also find the [python code used in this post here.](https://github.com/mftokic/mftokic.github.io/blob/main/notebooks/2024-11-06-ts-fundamentals-decomposition.ipynb)**
 
 ### Your Data is so Trendy
 

@@ -15,8 +15,8 @@ The sequence of what you learn is just as important as what content you learn. I
 1. [What's a time series?](https://mftokic.github.io/posts/2024-10-02-ts-fundamentals-whats-a-time-series/) 
 2. [Exploratory Data Analysis](https://mftokic.github.io/posts/2024-10-03-ts-fundamentals-eda/)
     - [Shape of the Data](https://mftokic.github.io/posts/2024-10-15-ts-fundamentals-eda-data-shape/)
-    - Time Series Decomposition (in progress)
-    - Autocorrelation
+    - [Time Series Decomposition](https://mftokic.github.io/posts/2024-11-06-ts-fundamentals-decomposition/)
+    - Autocorrelation (in progress)
     - Missing Values, Outliers 
     - External Regressors
 3. Data Cleaning
