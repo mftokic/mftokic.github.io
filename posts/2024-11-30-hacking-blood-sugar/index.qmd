@@ -1,0 +1,10 @@
+---
+title: "Hacking My Blood Sugar with Fiber"
+description: "Eating donuts while having my body think is a salad"
+author: "Mike Tokic"
+date: "2024-11-20"
+categories: [life, learning]
+image: "image.png"
+draft: true
+---
+
