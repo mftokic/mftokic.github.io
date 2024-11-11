@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Mike Tokic">
-<meta name="dcterms.date" content="2025-01-01">
-<meta name="description" content="Simple definitions to complex terms">
+<meta name="dcterms.date" content="2024-11-11">
+<meta name="description" content="Understanding memory in time series">
 
-<title>Machine Learning Glossary – Thoughts on Things</title>
+<title>Exploratory Data Analysis: Autocorrelation – Thoughts on Things</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -85,13 +85,17 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Machine Learning Glossary – Thoughts on Things">
-<meta property="og:description" content="Simple definitions to complex terms">
-<meta property="og:image" content="https://mftokic.github.io/posts/2025-01-01-ts-fundamentals-glossary/image.png">
+<meta property="og:title" content="Exploratory Data Analysis: Autocorrelation – Thoughts on Things">
+<meta property="og:description" content="Understanding memory in time series">
+<meta property="og:image" content="https://mftokic.github.io/posts/2024-11-11-ts-fundamentals-autocorrelation/chart1.png">
 <meta property="og:site_name" content="Thoughts on Things">
-<meta name="twitter:title" content="Machine Learning Glossary – Thoughts on Things">
-<meta name="twitter:description" content="Simple definitions to complex terms">
-<meta name="twitter:image" content="https://mftokic.github.io/posts/2025-01-01-ts-fundamentals-glossary/image.png">
+<meta property="og:image:height" content="1638">
+<meta property="og:image:width" content="2525">
+<meta name="twitter:title" content="Exploratory Data Analysis: Autocorrelation – Thoughts on Things">
+<meta name="twitter:description" content="Understanding memory in time series">
+<meta name="twitter:image" content="https://mftokic.github.io/posts/2024-11-11-ts-fundamentals-autocorrelation/chart1.png">
+<meta name="twitter:image-height" content="1638">
+<meta name="twitter:image-width" content="2525">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -146,10 +150,10 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Machine Learning Glossary</h1>
+      <h1 class="title">Exploratory Data Analysis: Autocorrelation</h1>
                   <div>
         <div class="description">
-          Simple definitions to complex terms
+          Understanding memory in time series
         </div>
       </div>
                           <div class="quarto-categories">
@@ -172,7 +176,7 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">January 1, 2025</p>
+        <p class="date">November 11, 2024</p>
       </div>
     </div>
     
@@ -191,43 +195,32 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 
 
 
-<ul>
-<li>Additive Decomposition</li>
-<li>ARIMA</li>
-<li>Artificial Intelligence (AI)</li>
-<li>Autocorrelation (ACF)</li>
-<li>Confidence Interval</li>
-<li>Dependant Variable</li>
-<li>Exploratory Data Analysis (EDA)</li>
-<li>Exponential Smoothing</li>
-<li>External Regressors (xregs)</li>
-<li>Feature</li>
-<li>Feature Engineering</li>
-<li>Independent Variable</li>
-<li>Machine Learning (ML)</li>
-<li>Moving Average (MA)</li>
-<li>Multiplicative Decomposition</li>
-<li>Multivariate Model</li>
-<li>Outlier</li>
-<li>Partial Autocorrelation (PACF)</li>
-<li>Prediction Interval</li>
-<li>Regression</li>
-<li>Remainder</li>
-<li>Residual</li>
-<li>Seasonality</li>
-<li>Smell Test</li>
-<li>Statistically Significant</li>
-<li>Supervised Learning</li>
-<li>Target Variable</li>
-<li>Time Series</li>
-<li>Time Series Decomposition</li>
-<li>Timestamp</li>
-<li>Trend</li>
-<li>Univariate Model</li>
-<li>White Noise</li>
-</ul>
+<p><em>This post is part of the <a href="https://mftokic.github.io/posts/2024-10-03-ts-fundamentals-eda/">exploratory data analysis chapter</a> within a larger learning series around time series forecasting fundamentals. <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/">Check out the main learning path</a> to see other posts in the series.</em></p>
+<p><em>The example data used in this series <a href="https://github.com/mftokic/mftokic.github.io/blob/main/posts/2024-10-02-ts-fundamentals-whats-a-time-series/example_ts_data.csv">can be found here.</a> You can also find the <a href="">python code used in this post here.</a></em></p>
+<section id="time-series-data-has-memory" class="level3">
+<h3 class="anchored" data-anchor-id="time-series-data-has-memory">Time Series Data Has Memory</h3>
+<p>The biggest factor that differentiates a time series from another form of data is order. Each observation in a time series is ordered by well, you guessed it, time. Because of this order, there are unique relationships that develop in the data. Let’s take temperature for example. If today’s temperature is 70°F, and the temperature in the previous seven days was around 65-80, what do you think the temperature tomorrow will be? Probably not below freezing. It’ll most likely be similar to the temperature today. This memory about the past is one of the most powerful concepts in time series forecasting. It’s the concept of autocorrelation.</p>
+<p>Autocorrelation is when a value in a time series is related to previous values in that series. In simple terms, it measures how much the current value depends on past values. For example, if high temperatures today make it likely to have high temperatures tomorrow, the temperature series has a positive autocorrelation.</p>
+</section>
+<section id="calculating-autocorrelation" class="level3">
+<h3 class="anchored" data-anchor-id="calculating-autocorrelation">Calculating Autocorrelation</h3>
+<p>Getting the is as simple as computing the correlation of the existing time series with a lagged time series. For example let’s take a time series from our example data set, shown below.</p>
+<p><img src="./chart1.png" class="img-fluid"></p>
+<p>We can create lags of one month, two months, and onwards. Then calculate the correlation between the original time series (with a lag of 0) and these new lagged time series. The results of that process are shown below, with a lag up to 24 months.</p>
+<p><img src="./chart2.png" class="img-fluid"></p>
+<p>Correlation is shown on the y-axis and the lag amount is shown on the x-axis. The chart shows high autocorrelation for a lag of 0, 1, 12, and 24 months. A lag of 0 has a perfect correlation because it’s the exact same as the original time series. These lag correlations are shown as positive values, meaning that there is a positive correlation with the original time series. There are also above the shaded blue region of the chart. This shaded region is a confidence interval. This confidence interval helps us filter out lags that are not statistically significant, meaning they don’t have a correlation due to random chance. Any lag outside of the shaded region is significant and should have a real relationship with our original time series.</p>
+</section>
+<section id="partial-autocorrelation" class="level3">
+<h3 class="anchored" data-anchor-id="partial-autocorrelation">Partial Autocorrelation</h3>
+</section>
+<section id="reading-the-tea-leaves" class="level3">
+<h3 class="anchored" data-anchor-id="reading-the-tea-leaves">Reading the Tea Leaves</h3>
+</section>
+<section id="final-thoughts" class="level3">
+<h3 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h3>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

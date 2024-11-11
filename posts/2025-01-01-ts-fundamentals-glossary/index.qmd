@@ -11,6 +11,8 @@ draft: true
 - Additive Decomposition
 - ARIMA
 - Artificial Intelligence (AI)
+- Autocorrelation (ACF)
+- Confidence Interval
 - Dependant Variable
 - Exploratory Data Analysis (EDA)
 - Exponential Smoothing
@@ -23,10 +25,14 @@ draft: true
 - Multiplicative Decomposition
 - Multivariate Model
 - Outlier
+- Partial Autocorrelation (PACF)
+- Prediction Interval
 - Regression
 - Remainder
+- Residual
 - Seasonality
 - Smell Test
+- Statistically Significant
 - Supervised Learning
 - Target Variable
 - Time Series

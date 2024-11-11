@@ -1,0 +1,37 @@
+---
+title: "Exploratory Data Analysis: Autocorrelation"
+description: "Understanding memory in time series"
+author: "Mike Tokic"
+date: "2024-11-11"
+categories: [machine-learning, time-series]
+image: "chart1.png"
+draft: true
+---
+
+*This post is part of the [exploratory data analysis chapter](https://mftokic.github.io/posts/2024-10-03-ts-fundamentals-eda/) within a larger learning series around time series forecasting fundamentals. [Check out the main learning path](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/) to see other posts in the series.* 
+
+*The example data used in this series [can be found here.](https://github.com/mftokic/mftokic.github.io/blob/main/posts/2024-10-02-ts-fundamentals-whats-a-time-series/example_ts_data.csv) You can also find the [python code used in this post here.]()*
+
+### Time Series Data Has Memory
+
+The biggest factor that differentiates a time series from another form of data is order. Each observation in a time series is ordered by well, you guessed it, time. Because of this order, there are unique relationships that develop in the data. Let's take temperature for example. If today's temperature is 70°F, and the temperature in the previous seven days was around 65-80, what do you think the temperature tomorrow will be? Probably not below freezing. It'll most likely be similar to the temperature today. This memory about the past is one of the most powerful concepts in time series forecasting. It's the concept of autocorrelation. 
+
+Autocorrelation is when a value in a time series is related to previous values in that series. In simple terms, it measures how much the current value depends on past values. For example, if high temperatures today make it likely to have high temperatures tomorrow, the temperature series has a positive autocorrelation.
+
+### Calculating Autocorrelation
+
+Getting the is as simple as computing the correlation of the existing time series with a lagged time series. For example let's take a time series from our example data set, shown below. 
+
+![](./chart1.png)
+
+We can create lags of one month, two months, and onwards. Then calculate the correlation between the original time series (with a lag of 0) and these new lagged time series. The results of that process are shown below, with a lag up to 24 months. 
+
+![](./chart2.png)
+
+Correlation is shown on the y-axis and the lag amount is shown on the x-axis. The chart shows high autocorrelation for a lag of 0, 1, 12, and 24 months. A lag of 0 has a perfect correlation because it's the exact same as the original time series. These lag correlations are shown as positive values, meaning that there is a positive correlation with the original time series. There are also above the shaded blue region of the chart. This shaded region is a confidence interval. This confidence interval helps us filter out lags that are not statistically significant, meaning they don't have a correlation due to random chance. Any lag outside of the shaded region is significant and should have a real relationship with our original time series. 
+
+### Partial Autocorrelation
+
+### Reading the Tea Leaves
+
+### Final Thoughts
