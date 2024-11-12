@@ -10,7 +10,56 @@
 <atom:link href="https://mftokic.github.io/index.xml" rel="self" type="application/rss+xml"/>
 <description>A collection of thoughts on things from the mind of Mike Tokic</description>
 <generator>quarto-1.5.57</generator>
-<lastBuildDate>Fri, 08 Nov 2024 08:00:00 GMT</lastBuildDate>
+<lastBuildDate>Tue, 12 Nov 2024 08:00:00 GMT</lastBuildDate>
+<item>
+  <title>Exploratory Data Analysis: Autocorrelation</title>
+  <dc:creator>Mike Tokic</dc:creator>
+  <link>https://mftokic.github.io/posts/2024-11-12-ts-fundamentals-autocorrelation/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p><em>This post is part of the <a href="https://mftokic.github.io/posts/2024-10-03-ts-fundamentals-eda/">exploratory data analysis chapter</a> within a larger learning series around time series forecasting fundamentals. <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/">Check out the main learning path</a> to see other posts in the series.</em></p>
+<p><em>The example monthly data used in this series <a href="https://github.com/mftokic/mftokic.github.io/blob/main/posts/2024-10-02-ts-fundamentals-whats-a-time-series/example_ts_data.csv">can be found here.</a> You can also find the <a href="https://github.com/mftokic/mftokic.github.io/blob/main/notebooks/2024-11-12-ts-fundamentals-autocorrelation.ipynb">python code used in this post here.</a></em></p>
+<section id="time-series-data-has-memory" class="level3">
+<h3 class="anchored" data-anchor-id="time-series-data-has-memory">Time Series Data Has Memory</h3>
+<p>The biggest factor that differentiates a time series from another form of data is order. Each observation in a time series is ordered by well, you guessed it, time. Because of this order, there are unique relationships that develop in the data. Let’s take temperature for example. If today’s temperature is 70°F, and the temperature in the previous seven days was around 65-80, what do you think the temperature tomorrow will be? Probably not below freezing. It’ll most likely be similar to the temperature today. This memory about the past is one of the most powerful concepts in time series forecasting. It’s the concept of autocorrelation.</p>
+<p>Autocorrelation is when a value in a time series is related to previous values in that series. In simple terms, it measures how much the current value depends on past values. For example, if high temperatures today make it likely to have high temperatures tomorrow, the temperature series has a positive autocorrelation.</p>
+</section>
+<section id="calculating-autocorrelation" class="level3">
+<h3 class="anchored" data-anchor-id="calculating-autocorrelation">Calculating Autocorrelation</h3>
+<p>Getting the autocorrelation is as simple as computing the correlation of the existing time series with a lagged time series. For example let’s take a time series from our example data set, shown below.</p>
+<p><img src="https://mftokic.github.io/posts/2024-11-12-ts-fundamentals-autocorrelation/chart1.png" class="img-fluid"></p>
+<p>We can create lags of one month, two months, and onwards. Then calculate the correlation between the original time series (with a lag of 0) and these new lagged time series. The results of that process are shown below, with a lag up to 24 months.</p>
+<p><img src="https://mftokic.github.io/posts/2024-11-12-ts-fundamentals-autocorrelation/chart2.png" class="img-fluid"></p>
+<p>Correlation is shown on the y-axis and the lag amount is shown on the x-axis. The chart shows high autocorrelation for a lag of 0, 1, 12, and 24 months. A lag of 0 has a perfect correlation because it’s the exact same as the original time series. These lag correlations are shown as positive values, meaning that there is a positive correlation with the original time series. There are also above the shaded blue region of the chart. This shaded region is a confidence interval. This confidence interval helps us filter out lags that are not statistically significant, meaning they don’t have a correlation due to random chance. Any lag outside of the shaded region is significant and should have a real relationship with our original time series.</p>
+</section>
+<section id="partial-autocorrelation" class="level3">
+<h3 class="anchored" data-anchor-id="partial-autocorrelation">Partial Autocorrelation</h3>
+<p>Autocorrelation has one fatal flaw though. It can provide misleading correlations since it doesn’t account for correlations between lags. For example, there might be a very strong correlation with the original time series and lag 1 of the time series. Because of this correlation, there is a good chance that a lag 2 also shows a strong correlation. The lag 2 correlation might only be due to lag 2 having similar information to lag 1. So the end results could be misleading.</p>
+<p>To account for this, partial autocorrelation was created. This process takes into account the correlations between lags. Making sure that the end correlations are only connected to the original time series. It is the preferred method of analyzing autocorrelation. So make sure it’s part of your time series tool kit. Here is the partial autocorrelation of our example time series.</p>
+<p><img src="https://mftokic.github.io/posts/2024-11-12-ts-fundamentals-autocorrelation/chart3.png" class="img-fluid"></p>
+</section>
+<section id="reading-the-tea-leaves" class="level3">
+<h3 class="anchored" data-anchor-id="reading-the-tea-leaves">Reading the Tea Leaves</h3>
+<p>Let’s take a deeper look at the partial autocorrelation and see what insights it might provide. When looking at the partial autocorrelation chart, the biggest correlation is at lag 0. This makes sense since a lag of 0 is just the original time series, so there will be a perfect correlation of 1. Lag 1 shows a strong correlation, which makes sense, since it’s contains values closest to the original series. There are also strong correlations at lag 11, 12, and 13. This confirms our data has strong seasonality. The highest correlation is at lag 12, which means values today are highly correlated to values at the same time in the previous year (12 months ago). This information will be invaluable when we start to build models in the future.</p>
+</section>
+<section id="final-thoughts" class="level3">
+<h3 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h3>
+<p>Having strong partial autocorrelation in your time series will always lead to more accurate future forecasts. Especially if you expect <a href="https://mftokic.github.io/posts/2024-04-11-time-series-past-future/">the future to be similar to the past</a>. If your data has little or no correlation with historical lags, then it will be more difficult to train accurate models to forecast the future. Calculating partial autocorrelation should always be one of the first things you do when working with time series. It’s quickest way to start building intuition about your data.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>machine-learning</category>
+  <category>time-series</category>
+  <guid>https://mftokic.github.io/posts/2024-11-12-ts-fundamentals-autocorrelation/</guid>
+  <pubDate>Tue, 12 Nov 2024 08:00:00 GMT</pubDate>
+  <media:content url="https://mftokic.github.io/posts/2024-11-12-ts-fundamentals-autocorrelation/chart3.png" medium="image" type="image/png" height="110" width="144"/>
+</item>
 <item>
   <title>Why I Cancelled All My Streaming Apps</title>
   <dc:creator>Mike Tokic</dc:creator>
@@ -1836,100 +1885,6 @@
   <guid>https://mftokic.github.io/posts/2024-05-13-finnts-multistep-horizon/</guid>
   <pubDate>Mon, 13 May 2024 07:00:00 GMT</pubDate>
   <media:content url="https://mftokic.github.io/posts/2024-05-13-finnts-multistep-horizon/image.png" medium="image" type="image/png" height="144" width="144"/>
-</item>
-<item>
-  <title>Time Series First Principles: Capture Uncertainty</title>
-  <dc:creator>Mike Tokic</dc:creator>
-  <link>https://mftokic.github.io/posts/2024-05-07-time-series-capture-uncertainty/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p><img src="https://mftokic.github.io/posts/2024-05-07-time-series-capture-uncertainty/image.png" class="img-fluid"></p>
-<section id="time-series-first-principles-series" class="level3">
-<h3 class="anchored" data-anchor-id="time-series-first-principles-series">Time Series First Principles Series</h3>
-<p>This post dives into the eighth principle of a good time series forecast, capture uncertainty. Check out the <a href="https://mftokic.github.io/posts/2024-03-26-time-series-first-principles-initial/">initial post</a> in this series to get a high level view of each principle.</p>
-<ol type="1">
-<li><a href="https://mftokic.github.io/posts/2024-04-02-time-series-domain-expertise/">Domain Expertise</a></li>
-<li><a href="https://mftokic.github.io/posts/2024-04-08-time-series-garbage/">Garbage In Garbage Out</a></li>
-<li><a href="https://mftokic.github.io/posts/2024-04-11-time-series-past-future/">The Future Is Similar To The Past</a></li>
-<li><a href="https://mftokic.github.io/posts/2024-04-18-time-series-grain/">Higher Grain Higher Accuracy</a></li>
-<li><a href="https://mftokic.github.io/posts/2024-04-23-time-series-order/">Order Is Important</a></li>
-<li><a href="https://mftokic.github.io/posts/2024-05-01-time-series-features/">The Magic Is In The Feature Engineering</a></li>
-<li><a href="https://mftokic.github.io/posts/2024-05-03-time-series-simple-models/">Simple Models Are Better Models</a></li>
-<li><a href="https://mftokic.github.io/posts/2024-05-07-time-series-capture-uncertainty/"><strong>Capture Uncertainty</strong></a></li>
-<li><a href="https://mftokic.github.io/posts/2024-05-28-time-series-model-avg/">Model Combinations Are King</a></li>
-<li><a href="https://mftokic.github.io/posts/2024-05-31-time-series-deep-learning/">Deep Learning Last</a></li>
-</ol>
-</section>
-<section id="building-trust" class="level3">
-<h3 class="anchored" data-anchor-id="building-trust">Building Trust</h3>
-<p>Would you give your retirement savings to a hedge fund manager because they asked nicely? Probably not. Instead, you would like to do your research about them. Ask them how well they performed in the market historically, and also see how they expect the future markets to unravel in the near term. If their answer to those questions are, “I don’t have a historical track record” and “I have no clue what the future holds” then you are probably not going to give them one penny of your hard earned money. The same holds true for using a time series forecast created by machine learning (ML) models. In order to build trust with the end user of the forecast, you need to show them how a similar forecast would have performed historically and also quantify some aspect about the future. Let’s dive into each one.</p>
-</section>
-<section id="past-uncertainty" class="level3">
-<h3 class="anchored" data-anchor-id="past-uncertainty">Past Uncertainty</h3>
-<p>Before a ML model can be used to forecast the future, we need to see how it has handled the past. This is called back testing, where we see how a model performed historically. This can give us a good proxy around how it could perform in the future.</p>
-<p>Back testing at its core is all about training a model on a portion of your historical data set (training data), then using the trained model on another portion of the historical data (testing data). This can be as simple as using the first 80% of your historical data to train a model, and use the last 20% for testing. Check out a <a href="https://mftokic.github.io/posts/2024-04-23-time-series-order/">previous post</a> to learn more about why the order of that train/test split is important.</p>
-<p>There are also more advanced methods of doing this, like time series cross-validation. This involves many rounds of training a model and then creating a prediction on the testing data. Time series cross-validation can be used to tune model hyperparameters (inputs a model cannot learn from but must be given by a human) but is especially useful for model back testing. Check out the chart below that shows how we can effectively back test using a time series cross-validation approach. Each pass has its own train and test split, and the testing splits can overlap from one pass to another.</p>
-<dl>
-<dt><img src="https://mftokic.github.io/posts/2024-05-07-time-series-capture-uncertainty/chart1.png" class="img-fluid"></dt>
-<dd>
-<p>Source: Uber Engineering</p>
-</dd>
-</dl>
-<p>In order to capture how accurate the back testing is, we need to calculate a metric that summarizes the model’s performance on the testing data splits. There are countless metrics we can use, each with their own pros and cons. That kind of discussion is out of scope for this post but let’s highlight a few common ones you could use in determining how accurate a model is during back testing.</p>
-<ol type="1">
-<li><strong>Mean Absolute Error (MAE)</strong>
-<ul>
-<li><strong>Description</strong>: MAE measures the average magnitude of the errors in a set of forecasts, without considering their direction. It’s calculated as the average of the absolute differences between forecasts and actual observations.</li>
-<li><strong>Strengths</strong>: MAE is straightforward and easy to interpret as it directly represents average error magnitude.</li>
-<li><strong>Weaknesses</strong>: MAE treats all errors with the same weight, thus large errors have the same influence as small ones, which might not be optimal for all applications.</li>
-</ul></li>
-<li><strong>Root Mean Squared Error (RMSE)</strong>
-<ul>
-<li><strong>Description</strong>: RMSE is the square root of the mean of the squared errors. It measures the average magnitude of the error, with the squaring giving higher weight to larger errors.</li>
-<li><strong>Strengths</strong>: RMSE is sensitive to outliers and provides a measure of how large errors are when they occur, which can be crucial for many practical applications.</li>
-<li><strong>Weaknesses</strong>: Like MSE, RMSE can be heavily influenced by outliers and large errors, possibly leading to overestimations of the typical error if the error distribution is skewed.</li>
-</ul></li>
-<li><strong>Mean Absolute Percentage Error (MAPE)</strong>
-<ul>
-<li><strong>Description</strong>: MAPE expresses accuracy as a percentage, and it measures the size of the error in percentage terms. It is calculated as the average of the absolute errors divided by the actual values, expressed as a percentage.</li>
-<li><strong>Strengths</strong>: MAPE is scale-independent and provides a clear interpretation in terms of percentage errors, making it easy to communicate.</li>
-<li><strong>Weaknesses</strong>: MAPE can be highly skewed when dealing with values close to zero, and it disproportionately penalizes underestimations compared to overestimations.</li>
-</ul></li>
-</ol>
-</section>
-<section id="future-uncertainty" class="level3">
-<h3 class="anchored" data-anchor-id="future-uncertainty">Future Uncertainty</h3>
-<p>Now that we’ve quantified how well our model works historically, we can just give the future forecast to our end user right? Not so fast. Our model might say that next month our company’s product will make $100, but if that’s all the info we provide to the end user of that forecast that’s not a good way to build trust. Instead we need to show how confident we are in that $100 forecast. How likely are we to hit that number? That’s where prediction intervals come in.</p>
-<p>Prediction intervals help quantify the future uncertainty in our model’s forecast. They are statistical ranges, typically based on the forecast error, used to indicate the likelihood that the future value of a time series will fall within a specified range at a certain confidence level. Common ranges for a prediction interval are 80% and 95%. For example, the future forecast may be $100 but have a 95% prediction interval of $75 and $125. This means that there is a 95% likelihood that the future value will fall between $75 and $125. The tighter the range, the less uncertainty there is in the forecast. Below is an example forecast with 80% and 95% prediction intervals.</p>
-<p><img src="https://mftokic.github.io/posts/2024-05-07-time-series-capture-uncertainty/chart2.png" class="img-fluid"></p>
-</section>
-<section id="reversal" class="level3">
-<h3 class="anchored" data-anchor-id="reversal">Reversal</h3>
-<p>The back testing process can only ever be a proxy of what kind of results to expect on the future forecast. It follows the assumption that <a href="https://mftokic.github.io/posts/2024-04-11-time-series-past-future/">the future will be similar to the past</a>. Sometimes this is not the case, and future results may be worse than historical back testing performance.</p>
-<p>While prediction intervals help quantify uncertainty, they also do not do a perfect job. There may be times where the future forecast will fall outside of the ranges. It’s not the end of the world when it does, but instead shows that the future is often different than what happened in the past. This is where strong domain knowledge comes in to understand what’s truly an outlier and what’s a new fundamental factor in your business going forward. For example, a new product launch in the future is hard to quantify with a prediction interval, but once it happens we can learn from that information and try to capture it the next time we train our model.</p>
-</section>
-<section id="finnts" class="level3">
-<h3 class="anchored" data-anchor-id="finnts">finnts</h3>
-<p>Back testing and prediction intervals is tough work. Thankfully my forecasting package, <a href="https://microsoft.github.io/finnts/index.html">finnts</a>, takes care of both of these for you. You can even customize the back testing process to fit your needs. Check out the package and see just how easy forecasting can be.</p>
-</section>
-<section id="final-thoughts" class="level3">
-<h3 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h3>
-<p>Capturing uncertainty in time series forecasting is essential for creating robust forecasts that stakeholders can rely on. Utilizing back testing and prediction intervals not only strengthens the credibility of forecasts but also provides users with a clearer perspective on potential risks and variations. In the end these approaches help build trust with the forecast end user. The more trust we can build, the more likely the ML forecast will be used.</p>
-
-
-</section>
-
- ]]></description>
-  <category>time-series</category>
-  <category>machine-learning</category>
-  <category>finance</category>
-  <guid>https://mftokic.github.io/posts/2024-05-07-time-series-capture-uncertainty/</guid>
-  <pubDate>Tue, 07 May 2024 07:00:00 GMT</pubDate>
-  <media:content url="https://mftokic.github.io/posts/2024-05-07-time-series-capture-uncertainty/image.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 </channel>
 </rss>
