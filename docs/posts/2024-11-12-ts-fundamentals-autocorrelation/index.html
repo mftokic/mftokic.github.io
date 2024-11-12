@@ -204,7 +204,7 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 </section>
 <section id="calculating-autocorrelation" class="level3">
 <h3 class="anchored" data-anchor-id="calculating-autocorrelation">Calculating Autocorrelation</h3>
-<p>Getting the is as simple as computing the correlation of the existing time series with a lagged time series. For example let’s take a time series from our example data set, shown below.</p>
+<p>Getting the autocorrelation is as simple as computing the correlation of the existing time series with a lagged time series. For example let’s take a time series from our example data set, shown below.</p>
 <p><img src="./chart1.png" class="img-fluid"></p>
 <p>We can create lags of one month, two months, and onwards. Then calculate the correlation between the original time series (with a lag of 0) and these new lagged time series. The results of that process are shown below, with a lag up to 24 months.</p>
 <p><img src="./chart2.png" class="img-fluid"></p>
@@ -218,7 +218,7 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 </section>
 <section id="reading-the-tea-leaves" class="level3">
 <h3 class="anchored" data-anchor-id="reading-the-tea-leaves">Reading the Tea Leaves</h3>
-<p>Let’s take a deeper look at the partial autocorrelation and see what insights it might provide. When looking at the partial autocorrelation chart, the biggest correlation is at lag 0. This makes sense since a lag of 0 is just the original time series, so there will be a perfect correlation of 1. Lag 1 shows a strong correlation, which makes sense, since it’s contains values closest to the original series. There are also strong correlations at lag 11, 12, and 13. This confirms our data has strong seasonality. The highest correlation is at lag 12, which means values today are highly correlated to values at the same time in the previous year (12 months ago). This information will be invaluable when we start to build models in the future. Having this kind of strong correlation allows us to use historical patterns in a data to predict the future.</p>
+<p>Let’s take a deeper look at the partial autocorrelation and see what insights it might provide. When looking at the partial autocorrelation chart, the biggest correlation is at lag 0. This makes sense since a lag of 0 is just the original time series, so there will be a perfect correlation of 1. Lag 1 shows a strong correlation, which makes sense, since it’s contains values closest to the original series. There are also strong correlations at lag 11, 12, and 13. This confirms our data has strong seasonality. The highest correlation is at lag 12, which means values today are highly correlated to values at the same time in the previous year (12 months ago). This information will be invaluable when we start to build models in the future.</p>
 </section>
 <section id="final-thoughts" class="level3">
 <h3 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h3>

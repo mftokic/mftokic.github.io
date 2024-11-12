@@ -5,7 +5,6 @@ author: "Mike Tokic"
 date: "2024-11-12"
 categories: [machine-learning, time-series]
 image: "chart3.png"
-draft: true
 ---
 
 *This post is part of the [exploratory data analysis chapter](https://mftokic.github.io/posts/2024-10-03-ts-fundamentals-eda/) within a larger learning series around time series forecasting fundamentals. [Check out the main learning path](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/) to see other posts in the series.* 
@@ -20,7 +19,7 @@ Autocorrelation is when a value in a time series is related to previous values i
 
 ### Calculating Autocorrelation
 
-Getting the is as simple as computing the correlation of the existing time series with a lagged time series. For example let's take a time series from our example data set, shown below. 
+Getting the autocorrelation is as simple as computing the correlation of the existing time series with a lagged time series. For example let's take a time series from our example data set, shown below. 
 
 ![](./chart1.png)
 
@@ -40,7 +39,7 @@ To account for this, partial autocorrelation was created. This process takes int
 
 ### Reading the Tea Leaves
 
-Let's take a deeper look at the partial autocorrelation and see what insights it might provide. When looking at the partial autocorrelation chart, the biggest correlation is at lag 0. This makes sense since a lag of 0 is just the original time series, so there will be a perfect correlation of 1. Lag 1 shows a strong correlation, which makes sense, since it's contains values closest to the original series. There are also strong correlations at lag 11, 12, and 13. This confirms our data has strong seasonality. The highest correlation is at lag 12, which means values today are highly correlated to values at the same time in the previous year (12 months ago). This information will be invaluable when we start to build models in the future. Having this kind of strong correlation allows us to use historical patterns in a data to predict the future. 
+Let's take a deeper look at the partial autocorrelation and see what insights it might provide. When looking at the partial autocorrelation chart, the biggest correlation is at lag 0. This makes sense since a lag of 0 is just the original time series, so there will be a perfect correlation of 1. Lag 1 shows a strong correlation, which makes sense, since it's contains values closest to the original series. There are also strong correlations at lag 11, 12, and 13. This confirms our data has strong seasonality. The highest correlation is at lag 12, which means values today are highly correlated to values at the same time in the previous year (12 months ago). This information will be invaluable when we start to build models in the future. 
 
 ### Final Thoughts
 
