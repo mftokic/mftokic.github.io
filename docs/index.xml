@@ -62,7 +62,7 @@
 
 
 <p><em>This post is part of the <a href="https://mftokic.github.io/posts/2024-10-03-ts-fundamentals-eda/">exploratory data analysis chapter</a> within a larger learning series around time series forecasting fundamentals. <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/">Check out the main learning path</a> to see other posts in the series.</em></p>
-<p><em>The example data used in this series <a href="https://github.com/mftokic/mftokic.github.io/blob/main/posts/2024-10-02-ts-fundamentals-whats-a-time-series/example_ts_data.csv">can be found here.</a> You can also find the <a href="https://github.com/mftokic/mftokic.github.io/blob/main/notebooks/2024-11-06-ts-fundamentals-decomposition.ipynb">python code used in this post here.</a></em></p>
+<p><em>The example monthly data used in this series <a href="https://github.com/mftokic/mftokic.github.io/blob/main/posts/2024-10-02-ts-fundamentals-whats-a-time-series/example_ts_data.csv">can be found here.</a> You can also find the <a href="https://github.com/mftokic/mftokic.github.io/blob/main/notebooks/2024-11-06-ts-fundamentals-decomposition.ipynb">python code used in this post here.</a></em></p>
 <section id="your-data-is-so-trendy" class="level3">
 <h3 class="anchored" data-anchor-id="your-data-is-so-trendy">Your Data is so Trendy</h3>
 <p>Every single time series you have ever seen has a trend and seasonality. If they don’t, then they are random white noise. A trend is just values steadily rising or falling over time. You could have a rising trend in some years, then a falling trend in others. Below is a chart with a strong trend but weak seasonality.</p>

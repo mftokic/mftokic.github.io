@@ -13,6 +13,7 @@ draft: true
 - Artificial Intelligence (AI)
 - Autocorrelation (ACF)
 - Confidence Interval
+- Correlation
 - Dependant Variable
 - Exploratory Data Analysis (EDA)
 - Exponential Smoothing
@@ -20,6 +21,7 @@ draft: true
 - Feature
 - Feature Engineering
 - Independent Variable
+- Lag
 - Machine Learning (ML)
 - Moving Average (MA)
 - Multiplicative Decomposition
