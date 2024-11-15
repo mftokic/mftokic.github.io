@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/2024-11-15-hacking-blood-sugar/index.html",
       "/posts/2024-11-12-ts-fundamentals-autocorrelation/index.html",
       "/posts/2024-11-08-cancelled-streaming/index.html",
       "/posts/2024-11-06-ts-fundamentals-decomposition/index.html",
