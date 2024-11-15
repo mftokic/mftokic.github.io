@@ -1,5 +1,5 @@
 ---
-title: "Hacking My Blood Sugar with Fiber"
+title: "Hacking My Blood Sugar With Fiber"
 description: "Eating donuts while having my body think it's a salad"
 author: "Mike Tokic"
 date: "2024-11-15"
