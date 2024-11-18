@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Mike Tokic">
-<meta name="dcterms.date" content="2025-01-01">
-<meta name="description" content="Simple definitions to complex terms">
+<meta name="dcterms.date" content="2024-11-18">
+<meta name="description" content="Fixing issues in your time series data">
 
-<title>Machine Learning Glossary – Thoughts on Things</title>
+<title>Exploratory Data Analysis: Missing Data and Outliers – Thoughts on Things</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -85,13 +85,13 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Machine Learning Glossary – Thoughts on Things">
-<meta property="og:description" content="Simple definitions to complex terms">
-<meta property="og:image" content="https://mftokic.github.io/posts/2025-01-01-ts-fundamentals-glossary/image.png">
+<meta property="og:title" content="Exploratory Data Analysis: Missing Data and Outliers – Thoughts on Things">
+<meta property="og:description" content="Fixing issues in your time series data">
+<meta property="og:image" content="https://mftokic.github.io/posts/2024-11-18-ts-fundamentals-missing-outliers/image.png">
 <meta property="og:site_name" content="Thoughts on Things">
-<meta name="twitter:title" content="Machine Learning Glossary – Thoughts on Things">
-<meta name="twitter:description" content="Simple definitions to complex terms">
-<meta name="twitter:image" content="https://mftokic.github.io/posts/2025-01-01-ts-fundamentals-glossary/image.png">
+<meta name="twitter:title" content="Exploratory Data Analysis: Missing Data and Outliers – Thoughts on Things">
+<meta name="twitter:description" content="Fixing issues in your time series data">
+<meta name="twitter:image" content="https://mftokic.github.io/posts/2024-11-18-ts-fundamentals-missing-outliers/image.png">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -146,10 +146,10 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Machine Learning Glossary</h1>
+      <h1 class="title">Exploratory Data Analysis: Missing Data and Outliers</h1>
                   <div>
         <div class="description">
-          Simple definitions to complex terms
+          Fixing issues in your time series data
         </div>
       </div>
                           <div class="quarto-categories">
@@ -172,7 +172,7 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">January 1, 2025</p>
+        <p class="date">November 18, 2024</p>
       </div>
     </div>
     
@@ -191,51 +191,54 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 
 
 
+<p><em>This post is part of the <a href="https://mftokic.github.io/posts/2024-10-03-ts-fundamentals-eda/">exploratory data analysis chapter</a> within a larger learning series around time series forecasting fundamentals. <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/">Check out the main learning path</a> to see other posts in the series.</em></p>
+<p><em>The example monthly data used in this series <a href="https://github.com/mftokic/mftokic.github.io/blob/main/posts/2024-10-02-ts-fundamentals-whats-a-time-series/example_ts_data.csv">can be found here.</a> You can also find the <a href="https://github.com/mftokic/mftokic.github.io/blob/main/notebooks/2024-11-12-ts-fundamentals-autocorrelation.ipynb">python code used in this post here.</a></em></p>
+<section id="garbage-in-garbage-out" class="level3">
+<h3 class="anchored" data-anchor-id="garbage-in-garbage-out">Garbage In, Garbage Out</h3>
+<p>Having quality data helps produce quality forecasts. There’s an old saying in the data universe, <a href="https://mftokic.github.io/posts/2024-04-08-time-series-garbage/">garbage in, garbage out</a>. When your data is bad, you will get bad outcomes. The presence of missing data and outliers can reduce forecast accuracy. Which is a shame because they are so easy to fix.</p>
+</section>
+<section id="missing-data" class="level3">
+<h3 class="anchored" data-anchor-id="missing-data">Missing Data</h3>
+<p>Time series are unique from other types of data because they have a built in order, based on time. For this to work it’s important that each period of time is represented in the data. For example with a monthly data set spanning five years, we want there to be no missing value for any of the month’s during those five years. Having missing values creates challenges when trying to analyze and model the data, since most statistical and machine learning techniques assume all available time periods are present in the data. This leads to reduced forecast accuracy.</p>
+<p>There are a few ways data can be missing in a time series.</p>
+<ol type="1">
+<li><strong>Missing Completely at Random (MCAR)</strong>
 <ul>
-<li>Additive Decomposition</li>
-<li>ARIMA</li>
-<li>Artificial Intelligence (AI)</li>
-<li>Autocorrelation (ACF)</li>
-<li>Confidence Interval</li>
-<li>Correlation</li>
-<li>Dependant Variable</li>
-<li>Exploratory Data Analysis (EDA)</li>
-<li>Exponential Smoothing</li>
-<li>External Regressors (xregs)</li>
-<li>Feature</li>
-<li>Feature Engineering</li>
-<li>Independent Variable</li>
-<li>Lag</li>
-<li>Machine Learning (ML)</li>
-<li>Missing at Random (MAR)</li>
-<li>Missing Completely at Random (MCAR)</li>
-<li>Missing Data</li>
-<li>Mixed Mechanisms (Missing Data)</li>
-<li>Moving Average (MA)</li>
-<li>Multiplicative Decomposition</li>
-<li>Multivariate Model</li>
-<li>Not Missing at Random (NMAR)</li>
-<li>Outlier</li>
-<li>Partial Autocorrelation (PACF)</li>
-<li>Period</li>
-<li>Prediction Interval</li>
-<li>Regression</li>
-<li>Remainder</li>
-<li>Residual</li>
-<li>Seasonality</li>
-<li>Smell Test</li>
-<li>Statistically Significant</li>
-<li>Supervised Learning</li>
-<li>Target Variable</li>
-<li>Time Series</li>
-<li>Time Series Decomposition</li>
-<li>Timestamp</li>
-<li>Trend</li>
-<li>Univariate Model</li>
-<li>White Noise</li>
-</ul>
+<li>Meaning: Data is missing for no specific reason, it’s just random. The missing data doesn’t depend on any pattern or the actual value that’s missing.</li>
+<li>Example: A sensor that records the temperature randomly fails to record a value now and then.</li>
+</ul></li>
+<li><strong>Missing at Random (MAR)</strong>
+<ul>
+<li>Meaning: Data is missing for a reason that depends on other information you already have, but not on the missing values themselves. You can explain the missing data using the rest of the data.</li>
+<li>Example: A temperature sensor is more likely to fail during hot weather, but the failure doesn’t depend on the exact temperature value it would have recorded.</li>
+</ul></li>
+<li><strong>Not Missing at Random (NMAR)</strong>
+<ul>
+<li>Meaning: Data is missing because of the value itself, it’s missing for a reason related to what’s not recorded. The missing data is biased, and you need to understand why it’s missing to deal with it.</li>
+<li>Example: A temperature sensor doesn’t record very high temperatures because it shuts down when it overheats.</li>
+</ul></li>
+<li><strong>Mixed Mechanisms</strong>
+<ul>
+<li>Meaning: Missing data can be a mix of random, explainable, and biased causes.</li>
+<li>Example: Some values are randomly missed due to glitches (MCAR), some during maintenance periods (MAR), and others during extreme weather (NMAR).</li>
+</ul></li>
+</ol>
+<p>Most data I deal with is some combination of missing completely at random or not missing at random. For example there might be a months worth of revenue data missing in a system due to issues with the companies enterprise resource planning (ERP) system. So that data is missing completely at random. A system error created the missing data. Another example is having monthly revenue for three products, where two of the products have five full years of revenue data and the other only has the last three years of data. This is due to that third product being newer and only being sold in the last three years. So that data is not missing at random but is due to a specific reason.</p>
+<p>For the first two types of missing data (#1 and #2 in the list), it’s a good idea to use some sort of simple statistical model to interpolate what the missing value should be based on actual values on either side of the data.</p>
+<p><insert chart="" with="" missing="" data=""></insert></p>
+<p>For the third type of missing data, it’s usually a good idea to go talk to the owner of that data. Maybe missing data in a system is simply due to that observation having a value of 0, so to save memory they just don’t record that value in the system. The easy fix there is to go in and replace those values with zero. Handling missing data at the start or end of a time series.</p>
+<p>Flagging missing data.</p>
+</section>
+<section id="outliers" class="level3">
+<h3 class="anchored" data-anchor-id="outliers">Outliers</h3>
+<p>Why outliers are bad for models. How to spot outliers. How to fix outliers.</p>
+</section>
+<section id="final-thoughts" class="level3">
+<h3 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h3>
+<p>Wrap up.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

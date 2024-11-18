@@ -23,11 +23,17 @@ draft: true
 - Independent Variable
 - Lag
 - Machine Learning (ML)
+- Missing at Random (MAR)
+- Missing Completely at Random (MCAR)
+- Missing Data
+- Mixed Mechanisms (Missing Data)
 - Moving Average (MA)
 - Multiplicative Decomposition
 - Multivariate Model
+- Not Missing at Random (NMAR)
 - Outlier
 - Partial Autocorrelation (PACF)
+- Period
 - Prediction Interval
 - Regression
 - Remainder

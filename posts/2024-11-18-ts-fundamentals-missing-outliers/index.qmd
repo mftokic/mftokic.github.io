@@ -1,0 +1,54 @@
+---
+title: "Exploratory Data Analysis: Missing Data and Outliers"
+description: "Fixing issues in your time series data"
+author: "Mike Tokic"
+date: "2024-11-18"
+categories: [machine-learning, time-series]
+image: "image.png"
+draft: true
+---
+
+*This post is part of the [exploratory data analysis chapter](https://mftokic.github.io/posts/2024-10-03-ts-fundamentals-eda/) within a larger learning series around time series forecasting fundamentals. [Check out the main learning path](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/) to see other posts in the series.* 
+
+*The example monthly data used in this series [can be found here.](https://github.com/mftokic/mftokic.github.io/blob/main/posts/2024-10-02-ts-fundamentals-whats-a-time-series/example_ts_data.csv) You can also find the [python code used in this post here.](https://github.com/mftokic/mftokic.github.io/blob/main/notebooks/2024-11-12-ts-fundamentals-autocorrelation.ipynb)*
+
+### Garbage In, Garbage Out
+
+Having quality data helps produce quality forecasts. There's an old saying in the data universe, [garbage in, garbage out](https://mftokic.github.io/posts/2024-04-08-time-series-garbage/). When your data is bad, you will get bad outcomes. The presence of missing data and outliers can reduce forecast accuracy. Which is a shame because they are so easy to fix. 
+
+### Missing Data
+
+Time series are unique from other types of data because they have a built in order, based on time. For this to work it's important that each period of time is represented in the data. For example with a monthly data set spanning five years, we want there to be no missing value for any of the month's during those five years. Having missing values creates challenges when trying to analyze and model the data, since most statistical and machine learning techniques assume all available time periods are present in the data. This leads to reduced forecast accuracy. 
+
+There are a few ways data can be missing in a time series. 
+
+1. **Missing Completely at Random (MCAR)**
+    - Meaning: Data is missing for no specific reason, it’s just random. The missing data doesn’t depend on any pattern or the actual value that’s missing.
+    - Example: A sensor that records the temperature randomly fails to record a value now and then.
+2. **Missing at Random (MAR)**
+    - Meaning: Data is missing for a reason that depends on other information you already have, but not on the missing values themselves. You can explain the missing data using the rest of the data.
+    - Example: A temperature sensor is more likely to fail during hot weather, but the failure doesn’t depend on the exact temperature value it would have recorded.
+3. **Not Missing at Random (NMAR)**
+    - Meaning: Data is missing because of the value itself, it’s missing for a reason related to what’s not recorded. The missing data is biased, and you need to understand why it’s missing to deal with it.
+    - Example: A temperature sensor doesn’t record very high temperatures because it shuts down when it overheats.
+4. **Mixed Mechanisms**
+    - Meaning: Missing data can be a mix of random, explainable, and biased causes.
+    - Example: Some values are randomly missed due to glitches (MCAR), some during maintenance periods (MAR), and others during extreme weather (NMAR).
+
+Most data I deal with is some combination of missing completely at random or not missing at random. For example there might be a months worth of revenue data missing in a system due to issues with the companies enterprise resource planning (ERP) system. So that data is missing completely at random. A system error created the missing data. Another example is having monthly revenue for three products, where two of the products have five full years of revenue data and the other only has the last three years of data. This is due to that third product being newer and only being sold in the last three years. So that data is not missing at random but is due to a specific reason. 
+
+For the first two types of missing data (#1 and #2 in the list), it's a good idea to use some sort of simple statistical model to interpolate what the missing value should be based on actual values on either side of the data. 
+
+<insert chart with missing data> 
+
+For the third type of missing data, it's usually a good idea to go talk to the owner of that data. Maybe missing data in a system is simply due to that observation having a value of 0, so to save memory they just don't record that value in the system. The easy fix there is to go in and replace those values with zero. Handling missing data at the start or end of a time series. 
+
+Flagging missing data. 
+
+### Outliers
+
+Why outliers are bad for models. How to spot outliers. How to fix outliers. 
+
+### Final Thoughts
+
+Wrap up. 
