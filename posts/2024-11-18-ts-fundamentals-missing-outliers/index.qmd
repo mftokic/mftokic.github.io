@@ -10,7 +10,7 @@ draft: true
 
 *This post is part of the [exploratory data analysis chapter](https://mftokic.github.io/posts/2024-10-03-ts-fundamentals-eda/) within a larger learning series around time series forecasting fundamentals. [Check out the main learning path](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/) to see other posts in the series.* 
 
-*The example monthly data used in this series [can be found here.](https://github.com/mftokic/mftokic.github.io/blob/main/posts/2024-10-02-ts-fundamentals-whats-a-time-series/example_ts_data.csv) You can also find the [python code used in this post here.](https://github.com/mftokic/mftokic.github.io/blob/main/notebooks/2024-11-12-ts-fundamentals-autocorrelation.ipynb)*
+*The example monthly data used in this series [can be found here.](https://github.com/mftokic/mftokic.github.io/blob/main/posts/2024-10-02-ts-fundamentals-whats-a-time-series/example_ts_data.csv) You can also find the [python code used in this post here.]()*
 
 ### Garbage In, Garbage Out
 
@@ -37,9 +37,9 @@ There are a few ways data can be missing in a time series.
 
 Most data I deal with is some combination of missing completely at random or not missing at random. For example there might be a months worth of revenue data missing in a system due to issues with the companies enterprise resource planning (ERP) system. So that data is missing completely at random. A system error created the missing data. Another example is having monthly revenue for three products, where two of the products have five full years of revenue data and the other only has the last three years of data. This is due to that third product being newer and only being sold in the last three years. So that data is not missing at random but is due to a specific reason. 
 
-For the first two types of missing data (#1 and #2 in the list), it's a good idea to use some sort of simple statistical model to interpolate what the missing value should be based on actual values on either side of the data. 
+For the first two types of missing data (#1 and #2 in the list), it's a good idea to use some sort of simple statistical model to interpolate what the missing value should be based on actual values on either side of the data. Below is a monthly time series from our example data. I removed a few months at random. We can use a statistical model that breaks down the time series by trend, seasonality, and residual. Then predicts what the missing value should be. 
 
-<insert chart with missing data> 
+![](./chart1.png)
 
 For the third type of missing data, it's usually a good idea to go talk to the owner of that data. Maybe missing data in a system is simply due to that observation having a value of 0, so to save memory they just don't record that value in the system. The easy fix there is to go in and replace those values with zero. Handling missing data at the start or end of a time series. 
 
