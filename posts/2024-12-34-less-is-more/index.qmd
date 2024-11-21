@@ -1,0 +1,13 @@
+---
+title: "Less Data Can Lead to Better Forecasts"
+description: "test"
+author: "Mike Tokic"
+date: "2024-11-15"
+categories: [life, health]
+image: "image.png"
+draft: true
+---
+
+things I take each day to help me perform at my best. What I've tried over the years and what works. 
+
+When it's a good idea to use less data when creating time series forecasts. When the previous trends further in the past are not the same as current trends in more recent years. 

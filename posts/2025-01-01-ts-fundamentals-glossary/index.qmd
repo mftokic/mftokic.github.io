@@ -12,6 +12,7 @@ draft: true
 - ARIMA
 - Artificial Intelligence (AI)
 - Autocorrelation (ACF)
+- Back Testing
 - Confidence Interval
 - Correlation
 - Dependant Variable
@@ -21,12 +22,14 @@ draft: true
 - Feature
 - Feature Engineering
 - Independent Variable
+- Interquartile Range (IQR)
 - Lag
 - Machine Learning (ML)
 - Missing at Random (MAR)
 - Missing Completely at Random (MCAR)
 - Missing Data
 - Mixed Mechanisms (Missing Data)
+- Model
 - Moving Average (MA)
 - Multiplicative Decomposition
 - Multivariate Model
@@ -49,3 +52,4 @@ draft: true
 - Trend
 - Univariate Model
 - White Noise
+- Z-Score
