@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Mike Tokic">
-<meta name="dcterms.date" content="2024-11-18">
+<meta name="dcterms.date" content="2024-11-26">
 <meta name="description" content="Fixing issues in your time series data">
 
 <title>Exploratory Data Analysis: Missing Data and Outliers – Thoughts on Things</title>
@@ -87,11 +87,15 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Exploratory Data Analysis: Missing Data and Outliers – Thoughts on Things">
 <meta property="og:description" content="Fixing issues in your time series data">
-<meta property="og:image" content="https://mftokic.github.io/posts/2024-11-18-ts-fundamentals-missing-outliers/image.png">
+<meta property="og:image" content="https://mftokic.github.io/posts/2024-11-26-ts-fundamentals-missing-outliers/image.png">
 <meta property="og:site_name" content="Thoughts on Things">
+<meta property="og:image:height" content="1024">
+<meta property="og:image:width" content="1024">
 <meta name="twitter:title" content="Exploratory Data Analysis: Missing Data and Outliers – Thoughts on Things">
 <meta name="twitter:description" content="Fixing issues in your time series data">
-<meta name="twitter:image" content="https://mftokic.github.io/posts/2024-11-18-ts-fundamentals-missing-outliers/image.png">
+<meta name="twitter:image" content="https://mftokic.github.io/posts/2024-11-26-ts-fundamentals-missing-outliers/image.png">
+<meta name="twitter:image-height" content="1024">
+<meta name="twitter:image-width" content="1024">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -172,7 +176,7 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">November 18, 2024</p>
+        <p class="date">November 26, 2024</p>
       </div>
     </div>
     
@@ -192,7 +196,7 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 
 
 <p><em>This post is part of the <a href="https://mftokic.github.io/posts/2024-10-03-ts-fundamentals-eda/">exploratory data analysis chapter</a> within a larger learning series around time series forecasting fundamentals. <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/">Check out the main learning path</a> to see other posts in the series.</em></p>
-<p><em>The example monthly data used in this series <a href="https://github.com/mftokic/mftokic.github.io/blob/main/posts/2024-10-02-ts-fundamentals-whats-a-time-series/example_ts_data.csv">can be found here.</a> You can also find the <a href="">python code used in this post here.</a></em></p>
+<p><em>The example monthly data used in this series <a href="https://github.com/mftokic/mftokic.github.io/blob/main/posts/2024-10-02-ts-fundamentals-whats-a-time-series/example_ts_data.csv">can be found here.</a> You can also find the <a href="https://github.com/mftokic/mftokic.github.io/blob/main/notebooks/2024-11-26-ts-fundamentals-missing-outliers.ipynb">python code used in this post here.</a></em></p>
 <section id="garbage-in-garbage-out" class="level3">
 <h3 class="anchored" data-anchor-id="garbage-in-garbage-out">Garbage In, Garbage Out</h3>
 <p>Having quality data helps produce quality forecasts. There’s an old saying in the data universe, <a href="https://mftokic.github.io/posts/2024-04-08-time-series-garbage/">garbage in, garbage out</a>. When your data is bad, you will get bad outcomes. The presence of missing data and outliers can reduce forecast accuracy. Which is a shame because they are so easy to fix.</p>
@@ -338,11 +342,20 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 <li>Machine learning methods are powerful because they can handle non-linear, multi-dimensional, and non-Gaussian patterns, making them highly effective for complex time series. However, they require careful tuning and may need more data than simpler statistical approaches.</li>
 </ul></li>
 </ol>
-<p>How to fix outliers. Flagging outliers after we fix them.</p>
+<p>Let’s use the residual method and see if we can spot a few outliers in our time series. First we will <a href="https://mftokic.github.io/posts/2024-11-06-ts-fundamentals-decomposition/">decompose our time series</a>, then see what residuals are 3 or more standard deviations away from the average.</p>
+<p><img src="./chart3.png" class="img-fluid"></p>
+<p><img src="./chart4.png" class="img-fluid"></p>
+<p>There seems to be on major outlier in mid 2020, shown as outside of the dotted upper and lower range. Which is not surprising since our smell test could have told us the same thing. COVID-19 in 2020 was most likely the cause for the sudden change in trend and seasonality for those periods around 2020. We can now confirm it with the residual method for spotting outliers. How cool is that!</p>
+<p>Once we know the outliers in our data, there is a few things we can do to handle them.</p>
+<ol type="1">
+<li><strong>Do Nothing</strong>: Leave it alone, and let its presence impact our future forecast. This is a good approach if there is a structural change in the time series that you expect to carry onward in the future. For example COVID might have caused a permanent work from home revolution, which could impact your business that relies on growth in office space. So leaving it along would give the model insight into a change that is expected to continue in the future.</li>
+<li><strong>Flag It</strong>: Similar to flagging missing values, we can add a binary variable to our dataset. A value of 1 to indicate an outlier occurred, and a 0 when it did not. This will allow our model to understand true one time events that are not expected to happen again in the future. Making it less likely for a model to learn the change in pattern. COVID-19 was truly a one off thing, so flagging the outliers could be helpful for our time series.</li>
+<li><strong>Remove It</strong>: Remove the outlier, and treat it like a missing value. You can then use the methods discussed earlier to fill in the missing value with something that is more in line with future trends and seasonality. Combining this approach with adding an outlier flag from #2 is a solid approach.</li>
+</ol>
 </section>
 <section id="final-thoughts" class="level3">
 <h3 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h3>
-<p>Wrap up.</p>
+<p>Handling the presence of missing values and outliers can sometimes be more art than science, so always make sure to be adaptable in using the right approach for your use case. When done correctly, cleaning your data of missing values and outliers can help you understand your data while improving forecast accuracy.</p>
 
 
 </section>
