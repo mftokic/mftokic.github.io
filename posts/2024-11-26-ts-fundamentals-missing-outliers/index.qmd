@@ -5,7 +5,6 @@ author: "Mike Tokic"
 date: "2024-11-26"
 categories: [machine-learning, time-series]
 image: "image.png"
-draft: true
 ---
 
 *This post is part of the [exploratory data analysis chapter](https://mftokic.github.io/posts/2024-10-03-ts-fundamentals-eda/) within a larger learning series around time series forecasting fundamentals. [Check out the main learning path](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/) to see other posts in the series.* 
