@@ -17,8 +17,8 @@ The sequence of what you learn is just as important as what content you learn. I
     - [Shape of the Data](https://mftokic.github.io/posts/2024-10-15-ts-fundamentals-eda-data-shape/)
     - [Time Series Decomposition](https://mftokic.github.io/posts/2024-11-06-ts-fundamentals-decomposition/)
     - [Autocorrelation](https://mftokic.github.io/posts/2024-11-12-ts-fundamentals-autocorrelation/)
-    - Missing Values, Outliers (in progress)
-    - External Regressors
+    - [Missing Values, Outliers](https://mftokic.github.io/posts/2024-11-26-ts-fundamentals-missing-outliers/)
+    - External Regressors (in progress)
 3. Data Cleaning
     - Missing Values
     - Outliers
