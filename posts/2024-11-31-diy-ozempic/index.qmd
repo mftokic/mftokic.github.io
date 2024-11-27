@@ -1,9 +1,0 @@
----
-title: "DIY Ozempic for Half Price"
-description: "A supplement stack that creates GLP-1 Naturally"
-author: "Mike Tokic"
-date: "2024-11-3-"
-categories: [life, learning]
-image: "image.png"
-draft: true
----
