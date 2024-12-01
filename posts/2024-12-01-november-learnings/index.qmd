@@ -1,0 +1,74 @@
+---
+title: "November Learnings"
+description: "Random stuff I learned in November 2024"
+author: "Mike Tokic"
+date: "2024-12-01"
+categories: [life, learning]
+image: "image.png"
+draft: true
+---
+
+I love reading books, watching YouTube videos, listening to podcasts, you name it. Anything learning related is my jam. But I recently realized that if I don't take notes on what I'm learning, I will probably forget everything. Now when I hear something interesting, I write it down in an Apple note for that month. Below are some of the learnings I jotted down in November, summarized by ChatGPT. I hope you find them as interesting as I did. 
+
+### Personal Growth and Mindset
+- **Happiness and Presence**: True happiness comes from being present and avoiding overthinking. Expectations play a big role in happiness: reality minus expectations equals happiness.
+- **Action and Results**: Be impatient with actions but patient with results. Start quickly, but allow time for outcomes. Enthusiasm and belief are competitive advantages. Avoid the vicious cycle of inaction fueled by doubt.
+- **Overthinking**: Rumination is the #1 symptom of depression. Action is a better way to change your thoughts than overthinking.
+- **Quotes on Mindset**:
+    - "Knowledge is knowing what to do; wisdom is doing it."
+    - "Cynics get to be right, optimists get to be rich."
+    - "Ask a better question, get a better answer."
+    - "At the end of the day you’re going to feel some type of way. So why not feel unbeatable. Why not feel untouchable. Why not feel like the best to ever do it."
+
+### Productivity and Decision-Making
+- **Action Frameworks**:
+    - Time between deciding and acting defines success.
+    - Be clear on priorities: what you choose to work on is more important than how hard you work.
+    - Use tools like the Dickens Method to evaluate how today’s actions affect your future.
+- **Worry Management**: Schedule a time to worry instead of letting it linger. Outside of that window, maintain a zero-worry mindset.
+- **Teams and Companies**: Companies should be viewed as sports teams, not families—performance matters. Be clear about whether a role requires a commando (startup mindset), soldier (scaling), or policeman (stability).
+
+### Business and Sales
+- **Product-Market Fit**:
+    - Before product-market fit: founders must engage directly with customers in unscalable ways.
+    - After product-market fit: scale with sales staff and established processes.
+- **Sales Approach**:
+    - Use the problem-solution-specifics framework. If the customer disagrees about the problem, drop them.
+    - "Reality vs. narrative" moments are key opportunities for emerging tech.
+- **Wealth and Risk**:
+    - Wealth is a byproduct of knowledge.
+    - Risk is what remains after considering every possible variable.
+    - "Survive" is the golden rule for emerging technologies.
+
+### Society and Systems
+- **Social Observations**:
+    - Older industries prioritize regulation capture and splitting spoils over innovation.
+    - Traditions can empower tyranny when unquestioned.
+- **Homelessness and Addiction**:
+    - Addiction and trauma are major causes of death for homeless individuals. Programs like Haven for Hope in San Antonio show promise in recovery-based justice systems.
+    - Fentanyl is a growing public health crisis, being 50x more addictive than heroin.
+- **Economic Realities**:
+    - 78% of Americans live paycheck to paycheck.
+    - The first 15 years of mortgage payments largely benefit banks, not homeowners.
+
+### Storytelling and Communication
+- **Power of Stories**:
+    - Stories connect human brains like APIs. They involve intention, obstacle, and stakes.
+    - The best podcasters are "vibe architects," creating environments that feel like casual, engaging conversations.
+    - Great tweets follow principles of truth, novelty, and conciseness while being opinionated.
+- **Music and Stories**: Both resonate emotionally and inspire action.
+
+### Practical Knowledge and Insights
+- **General Insights**:
+    - Hanlon’s Razor: Never attribute to malice what can be explained by incompetence.
+    - Recruiting agencies charge ~25% of the first-year salary for hires.
+    - Warren Buffet owns more treasury bills than the U.S. government.
+    - Success is a window (external factors), and failure is a mirror (personal responsibility).
+- **Teaching and Learning**: Computer literacy has untapped potential. Teaching AI-based math instead of manual long division could redefine education.
+
+### Miscellaneous Wisdom
+- "Tradition is the crown of the tyrant."
+- "The larger the group, the worse the conversation."
+- "Trying to think your way out of overthinking is like sniffing your way out of a cocaine addiction."
+- "Life without love is the worst prison of all."
+- "Make your life your hobbies, but don’t make your hobbies your job."
