@@ -1,0 +1,44 @@
+---
+title: "Exploratory Data Analysis: External Regressors"
+description: "What outside forces impact our business?"
+author: "Mike Tokic"
+date: "2024-12-02"
+categories: [machine-learning, time-series]
+image: "image.png"
+draft: true
+---
+
+*This post is part of the [exploratory data analysis chapter](https://mftokic.github.io/posts/2024-10-03-ts-fundamentals-eda/) within a larger learning series around time series forecasting fundamentals. [Check out the main learning path](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/) to see other posts in the series.* 
+
+*The example monthly data used in this series [can be found here.](https://github.com/mftokic/mftokic.github.io/blob/main/posts/2024-10-02-ts-fundamentals-whats-a-time-series/example_ts_data.csv) You can also find the [python code used in this post here.](https://github.com/mftokic/mftokic.github.io/blob/main/notebooks/2024-11-26-ts-fundamentals-missing-outliers.ipynb)*
+
+### May The Outside Forces Be With You
+
+When creating a time series forecast, you really only need three columns. One to identify one time series from another, a timestamp (date) column, and your target variable. With these three things you can product a high quality forecasts. Unfortunately most time series do not live in a vacuum, and are subject to outside forces. These forces could be things like macroeconomic factors like inflation or consumer sentiment. The growing market share of your competitors. Or even when your product might go on sale. These are all external regressors (xregs), or outside data points that can be used to improve the predictive accuracy of our time series forecast. 
+
+External regressors come in many shapes and sizes. They are usually chosen based on the [domain expertise](https://mftokic.github.io/posts/2024-04-02-time-series-domain-expertise/) of whatever you're trying to forecast. Outside of a hunch they might work, how can we tell if they should be used in our time series forecast? Let's walk through a few methods to measure the relationship between external regressors and our target variable. 
+
+### Measuring Linear Relationships
+
+The most straightforward approach is a simple correlation analysis. We take the external regressor time series, and calculate the correlation against our target variable time series. This gives us a value between -1 and 1. Having either a strong negative correlation or positive correlation are both helpful. Here are a few rules of thumb to measure strong correlations of external regressors based on the date grain of your data. 
+
+- Year/Quarter/Month: Absolute value correlation of 0.5 or higher. 
+- Week/Day: Absolute value correlation of 0.2 or higher.  
+
+It's important to note that those values are arbitrary. This isn't a perfect threshold to use. So make sure you adjust that based on your own time series data. Let's take a time series from our example dataset and calculate the correlation against some sample consumer sentiment data. 
+
+
+
+Correlation, lags. 
+
+### Measuring Non-Linear Relationships
+
+Nonlinear relationships, lags. 
+
+### Dealing With Binary Regressors
+
+Seeing the predictive power of a 1/0 type regressor. 
+
+### Final Thoughts
+
+Correlation, not causation. 
