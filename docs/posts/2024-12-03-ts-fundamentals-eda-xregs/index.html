@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Mike Tokic">
-<meta name="dcterms.date" content="2024-12-02">
+<meta name="dcterms.date" content="2024-12-03">
 <meta name="description" content="What outside forces impact our business?">
 
 <title>Exploratory Data Analysis: External Regressors – Thoughts on Things</title>
@@ -87,11 +87,11 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Exploratory Data Analysis: External Regressors – Thoughts on Things">
 <meta property="og:description" content="What outside forces impact our business?">
-<meta property="og:image" content="https://mftokic.github.io/posts/2024-12-02-ts-fundamentals-eda-xregs/image.png">
+<meta property="og:image" content="https://mftokic.github.io/posts/2024-12-03-ts-fundamentals-eda-xregs/image.png">
 <meta property="og:site_name" content="Thoughts on Things">
 <meta name="twitter:title" content="Exploratory Data Analysis: External Regressors – Thoughts on Things">
 <meta name="twitter:description" content="What outside forces impact our business?">
-<meta name="twitter:image" content="https://mftokic.github.io/posts/2024-12-02-ts-fundamentals-eda-xregs/image.png">
+<meta name="twitter:image" content="https://mftokic.github.io/posts/2024-12-03-ts-fundamentals-eda-xregs/image.png">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -172,7 +172,7 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">December 2, 2024</p>
+        <p class="date">December 3, 2024</p>
       </div>
     </div>
     
@@ -205,7 +205,207 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 <li>Year/Quarter/Month: Absolute value correlation of 0.5 or higher.</li>
 <li>Week/Day: Absolute value correlation of 0.2 or higher.</li>
 </ul>
-<p>It’s important to note that those values are arbitrary. This isn’t a perfect threshold to use. So make sure you adjust that based on your own time series data. Let’s take a time series from our example dataset and calculate the correlation against some sample consumer sentiment data.</p>
+<p>It’s important to note that those values are arbitrary. This isn’t a perfect threshold to use. So make sure you adjust that based on your own time series data. Let’s take a time series from our example dataset and calculate the correlation against a few external regressors.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Date</th>
+<th>Country</th>
+<th>Product</th>
+<th>Revenue</th>
+<th>xreg1</th>
+<th>xreg2</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2019-01-01</td>
+<td>United States</td>
+<td>Cookies</td>
+<td>25</td>
+<td>12.37</td>
+<td>27</td>
+</tr>
+<tr class="even">
+<td>2019-02-01</td>
+<td>United States</td>
+<td>Cookies</td>
+<td>10</td>
+<td>15.73</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>2019-03-01</td>
+<td>United States</td>
+<td>Cookies</td>
+<td>15</td>
+<td>39.68</td>
+<td>67</td>
+</tr>
+<tr class="even">
+<td>2019-04-01</td>
+<td>United States</td>
+<td>Cookies</td>
+<td>45</td>
+<td>60.17</td>
+<td>95</td>
+</tr>
+<tr class="odd">
+<td>2019-05-01</td>
+<td>United States</td>
+<td>Cookies</td>
+<td>55</td>
+<td>72.84</td>
+<td>5</td>
+</tr>
+<tr class="even">
+<td>2019-06-01</td>
+<td>United States</td>
+<td>Cookies</td>
+<td>65</td>
+<td>53.31</td>
+<td>21</td>
+</tr>
+<tr class="odd">
+<td>2019-07-01</td>
+<td>United States</td>
+<td>Cookies</td>
+<td>25</td>
+<td>9.65</td>
+<td>31</td>
+</tr>
+<tr class="even">
+<td>2019-08-01</td>
+<td>United States</td>
+<td>Cookies</td>
+<td>15</td>
+<td>12.20</td>
+<td>3</td>
+</tr>
+<tr class="odd">
+<td>2019-09-01</td>
+<td>United States</td>
+<td>Cookies</td>
+<td>10</td>
+<td>10.04</td>
+<td>8</td>
+</tr>
+<tr class="even">
+<td>2019-10-01</td>
+<td>United States</td>
+<td>Cookies</td>
+<td>5</td>
+<td>19.62</td>
+<td>88</td>
+</tr>
+</tbody>
+</table>
+<p><img src="./chart1.png" class="img-fluid"></p>
+<p>The first external regressor (xreg1) seems to have similar trend and seasonality patterns as our revenue target variable. The second external regressor (xregs2) on the other hand is all over the place. Here is the correlation with each xreg.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Variable 1</th>
+<th>Variable 2</th>
+<th>Correlation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Revenue</td>
+<td>xreg1</td>
+<td>0.83</td>
+</tr>
+<tr class="even">
+<td>Revenue</td>
+<td>xreg2</td>
+<td>0.05</td>
+</tr>
+</tbody>
+</table>
+<p>The table confirms our initial smell test after reading the line chart. Xreg1 has a strong correlation, and xreg2 does not. This tells us that xreg1 could be a good candidate to use as a feature in our ML forecast model. What if we don’t know what xreg1 values are going to be in the future? That’s where calculating correlation on lags becomes valuable. We can calculate lags for 1 month, 2 months, 3 months, and onward to see if lag values of our external regressors can also be used as features.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Variable 1</th>
+<th>Variable 2</th>
+<th>Correlation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Revenue</td>
+<td>xreg1</td>
+<td>0.83</td>
+</tr>
+<tr class="even">
+<td>Revenue</td>
+<td>xreg2</td>
+<td>0.05</td>
+</tr>
+<tr class="odd">
+<td>Revenue</td>
+<td>xreg1_lag_1</td>
+<td>0.64</td>
+</tr>
+<tr class="even">
+<td>Revenue</td>
+<td>xreg1_lag_2</td>
+<td>0.24</td>
+</tr>
+<tr class="odd">
+<td>Revenue</td>
+<td>xreg1_lag_3</td>
+<td>-0.17</td>
+</tr>
+<tr class="even">
+<td>Revenue</td>
+<td>xreg1_lag_6</td>
+<td>-0.07</td>
+</tr>
+<tr class="odd">
+<td>Revenue</td>
+<td>xreg1_lag_9</td>
+<td>-0.43</td>
+</tr>
+<tr class="even">
+<td>Revenue</td>
+<td>xreg1_lag_12</td>
+<td>0.65</td>
+</tr>
+<tr class="odd">
+<td>Revenue</td>
+<td>xreg2_lag_1</td>
+<td>0.00</td>
+</tr>
+<tr class="even">
+<td>Revenue</td>
+<td>xreg2_lag_2</td>
+<td>-0.11</td>
+</tr>
+<tr class="odd">
+<td>Revenue</td>
+<td>xreg2_lag_3</td>
+<td>-0.15</td>
+</tr>
+<tr class="even">
+<td>Revenue</td>
+<td>xreg2_lag_6</td>
+<td>0.17</td>
+</tr>
+<tr class="odd">
+<td>Revenue</td>
+<td>xreg2_lag_9</td>
+<td>0.04</td>
+</tr>
+<tr class="even">
+<td>Revenue</td>
+<td>xreg2_lag_12</td>
+<td>0.15</td>
+</tr>
+</tbody>
+</table>
+<p>In addition to the original xreg1 (at lag 0), the 1 and 12 month lags also have a high correlation.</p>
 <p>Correlation, lags.</p>
 </section>
 <section id="measuring-non-linear-relationships" class="level3">

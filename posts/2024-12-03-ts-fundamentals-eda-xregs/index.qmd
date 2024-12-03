@@ -1,0 +1,85 @@
+---
+title: "Exploratory Data Analysis: External Regressors"
+description: "What outside forces impact our business?"
+author: "Mike Tokic"
+date: "2024-12-03"
+categories: [machine-learning, time-series]
+image: "image.png"
+draft: true
+---
+
+*This post is part of the [exploratory data analysis chapter](https://mftokic.github.io/posts/2024-10-03-ts-fundamentals-eda/) within a larger learning series around time series forecasting fundamentals. [Check out the main learning path](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/) to see other posts in the series.* 
+
+*The example monthly data used in this series [can be found here.](https://github.com/mftokic/mftokic.github.io/blob/main/posts/2024-10-02-ts-fundamentals-whats-a-time-series/example_ts_data.csv) You can also find the [python code used in this post here.](https://github.com/mftokic/mftokic.github.io/blob/main/notebooks/2024-11-26-ts-fundamentals-missing-outliers.ipynb)*
+
+### May The Outside Forces Be With You
+
+When creating a time series forecast, you really only need three columns. One to identify one time series from another, a timestamp (date) column, and your target variable. With these three things you can product a high quality forecasts. Unfortunately most time series do not live in a vacuum, and are subject to outside forces. These forces could be things like macroeconomic factors like inflation or consumer sentiment. The growing market share of your competitors. Or even when your product might go on sale. These are all external regressors (xregs), or outside data points that can be used to improve the predictive accuracy of our time series forecast. 
+
+External regressors come in many shapes and sizes. They are usually chosen based on the [domain expertise](https://mftokic.github.io/posts/2024-04-02-time-series-domain-expertise/) of whatever you're trying to forecast. Outside of a hunch they might work, how can we tell if they should be used in our time series forecast? Let's walk through a few methods to measure the relationship between external regressors and our target variable. 
+
+### Measuring Linear Relationships
+
+The most straightforward approach is a simple correlation analysis. We take the external regressor time series, and calculate the correlation against our target variable time series. This gives us a value between -1 and 1. Having either a strong negative correlation or positive correlation are both helpful. Here are a few rules of thumb to measure strong correlations of external regressors based on the date grain of your data. 
+
+- Year/Quarter/Month: Absolute value correlation of 0.5 or higher. 
+- Week/Day: Absolute value correlation of 0.2 or higher.  
+
+It's important to note that those values are arbitrary. This isn't a perfect threshold to use. So make sure you adjust that based on your own time series data. Let's take a time series from our example dataset and calculate the correlation against a few external regressors. 
+
+| Date       | Country        | Product  | Revenue | xreg1  | xreg2 |
+|------------|----------------|----------|---------|--------|-------|
+| 2019-01-01 | United States  | Cookies  |      25 |  12.37 |    27 |
+| 2019-02-01 | United States  | Cookies  |      10 |  15.73 |     2 |
+| 2019-03-01 | United States  | Cookies  |      15 |  39.68 |    67 |
+| 2019-04-01 | United States  | Cookies  |      45 |  60.17 |    95 |
+| 2019-05-01 | United States  | Cookies  |      55 |  72.84 |     5 |
+| 2019-06-01 | United States  | Cookies  |      65 |  53.31 |    21 |
+| 2019-07-01 | United States  | Cookies  |      25 |   9.65 |    31 |
+| 2019-08-01 | United States  | Cookies  |      15 |  12.20 |     3 |
+| 2019-09-01 | United States  | Cookies  |      10 |  10.04 |     8 |
+| 2019-10-01 | United States  | Cookies  |       5 |  19.62 |    88 |
+
+![](./chart1.png)
+
+The first external regressor (xreg1) seems to have similar trend and seasonality patterns as our revenue target variable. The second external regressor (xregs2) on the other hand is all over the place. Here is the correlation with each xreg. 
+
+| Variable 1 | Variable 2 | Correlation |
+|------------|------------|-------------|
+| Revenue    | xreg1      |        0.83 |
+| Revenue    | xreg2      |        0.05 |
+
+The table confirms our initial smell test after reading the line chart. Xreg1 has a strong correlation, and xreg2 does not. This tells us that xreg1 could be a good candidate to use as a feature in our ML forecast model. What if we don't know what xreg1 values are going to be in the future? That's where calculating correlation on lags becomes valuable. We can calculate lags for 1 month, 2 months, 3 months, and onward to see if lag values of our external regressors can also be used as features. 
+
+| Variable 1 | Variable 2     | Correlation |
+|------------|----------------|-------------|
+| Revenue    | xreg1          |        0.83 |
+| Revenue    | xreg2          |        0.05 |
+| Revenue    | xreg1_lag_1    |        0.64 |
+| Revenue    | xreg1_lag_2    |        0.24 |
+| Revenue    | xreg1_lag_3    |       -0.17 |
+| Revenue    | xreg1_lag_6    |       -0.07 |
+| Revenue    | xreg1_lag_9    |       -0.43 |
+| Revenue    | xreg1_lag_12   |        0.65 |
+| Revenue    | xreg2_lag_1    |        0.00 |
+| Revenue    | xreg2_lag_2    |       -0.11 |
+| Revenue    | xreg2_lag_3    |       -0.15 |
+| Revenue    | xreg2_lag_6    |        0.17 |
+| Revenue    | xreg2_lag_9    |        0.04 |
+| Revenue    | xreg2_lag_12   |        0.15 |
+
+In addition to the original xreg1 (at lag 0), the 1 and 12 month lags also have a high correlation. 
+
+Correlation, lags. 
+
+### Measuring Non-Linear Relationships
+
+Nonlinear relationships, lags. 
+
+### Dealing With Binary Regressors
+
+Seeing the predictive power of a 1/0 type regressor. 
+
+### Final Thoughts
+
+Correlation, not causation. 

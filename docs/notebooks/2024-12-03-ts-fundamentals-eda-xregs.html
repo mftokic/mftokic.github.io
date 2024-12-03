@@ -233,10 +233,7 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 <span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Date"</span>)</span>
 <span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Revenue"</span>)</span>
 <span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Cookies Revenue in the United States"</span>)</span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="co"># save the plot</span></span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="co"># plt.savefig("chart1", dpi = 300, bbox_inches = "tight")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>plt.legend()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="cell-5" class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Set a random seed for reproducibility</span></span>
@@ -244,83 +241,84 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>us_ck_corr <span class="op">=</span> us_ck_raw.copy()</span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate a new variable with 0.8 correlation</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> us_ck_corr.shape[<span class="dv">0</span>]</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>correlation_target <span class="op">=</span> <span class="fl">0.7</span></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>noise <span class="op">=</span> np.random.randn(n)  <span class="co"># Random noise</span></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>scale_noise <span class="op">=</span> np.sqrt(<span class="dv">1</span> <span class="op">-</span> correlation_target<span class="op">**</span><span class="dv">2</span>)  <span class="co"># Scale the noise</span></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>us_ck_corr[<span class="st">"xreg1"</span>] <span class="op">=</span> (correlation_target <span class="op">*</span> us_ck_corr[<span class="st">"Revenue"</span>]) <span class="op">+</span> (scale_noise <span class="op">*</span> noise)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate a new variable with strong correlation</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>correlation_target <span class="op">=</span> <span class="fl">0.9</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> us_ck_corr.shape[<span class="dv">0</span>]</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>noise <span class="op">=</span> np.random.randn(n)</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Orthogonalize noise to the original variable to ensure independence</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>noise <span class="op">=</span> noise <span class="op">-</span> np.dot(noise, us_ck_corr[<span class="st">"Revenue"</span>]) <span class="op">/</span> np.dot(us_ck_corr[<span class="st">"Revenue"</span>], us_ck_corr[<span class="st">"Revenue"</span>]) <span class="op">*</span> us_ck_corr[<span class="st">"Revenue"</span>]</span>
 <span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="co"># create a variable that has a weak correlation to the revenue column, create random values between 1 and 100</span></span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>us_ck_corr[<span class="st">"xreg2"</span>] <span class="op">=</span> random.sample(<span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">100</span>), us_ck_corr.shape[<span class="dv">0</span>])</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Scale the orthogonalized noise to match the desired correlation</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>noise <span class="op">=</span> noise <span class="op">/</span> np.linalg.norm(noise) <span class="op">*</span> np.sqrt(<span class="dv">1</span> <span class="op">-</span> correlation_target<span class="op">**</span><span class="dv">2</span>) <span class="op">*</span> np.linalg.norm(us_ck_corr[<span class="st">"Revenue"</span>])</span>
 <span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="co"># print the first few rows, formatting numbers to 2 decimal places</span></span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(us_ck_corr.head(<span class="dv">10</span>).<span class="bu">round</span>(<span class="dv">2</span>))</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the new variable</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>us_ck_corr[<span class="st">"xreg1"</span>] <span class="op">=</span> correlation_target <span class="op">*</span> us_ck_corr[<span class="st">"Revenue"</span>] <span class="op">+</span> noise</span>
 <span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a><span class="co"># plot the data with the new variables</span></span>
-<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
-<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>plt.plot(us_ck_corr.index, us_ck_corr[<span class="st">"Revenue"</span>], label<span class="op">=</span><span class="st">"Cookies Revenue"</span>)</span>
-<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>plt.plot(us_ck_corr.index, us_ck_corr[<span class="st">"xreg1"</span>], label<span class="op">=</span><span class="st">"Strong Correlation"</span>)</span>
-<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>plt.plot(us_ck_corr.index, us_ck_corr[<span class="st">"xreg2"</span>], label<span class="op">=</span><span class="st">"Weak Correlation"</span>)</span>
-<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Date"</span>)</span>
-<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Revenue"</span>)</span>
-<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Cookies Revenue in the United States"</span>)</span>
-<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
-<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a><span class="co"># save the plot</span></span>
-<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a><span class="co"># plt.savefig("chart2", dpi = 300, bbox_inches = "tight")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Verify the correlation</span></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>correlation <span class="op">=</span> us_ck_corr[<span class="st">"Revenue"</span>].corr(us_ck_corr[<span class="st">"xreg1"</span>])</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Correlation between Original and New_Var: </span><span class="sc">{</span>correlation<span class="sc">:.4f}</span><span class="ss">"</span>)</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a><span class="co"># create a variable that has a weak correlation to the revenue column, create random values between 1 and 100</span></span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>us_ck_corr[<span class="st">"xreg2"</span>] <span class="op">=</span> random.sample(<span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">100</span>), us_ck_corr.shape[<span class="dv">0</span>])</span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a><span class="co"># print the first few rows, formatting numbers to 2 decimal places</span></span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(us_ck_corr.head(<span class="dv">10</span>).<span class="bu">round</span>(<span class="dv">2</span>))</span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a><span class="co"># plot the data with the new variables as dotted lines</span></span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>plt.plot(us_ck_corr.index, us_ck_corr[<span class="st">"Revenue"</span>], label<span class="op">=</span><span class="st">"Cookies Revenue"</span>)</span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>plt.plot(us_ck_corr.index, us_ck_corr[<span class="st">"xreg1"</span>], label<span class="op">=</span><span class="st">"xreg1"</span>, linestyle <span class="op">=</span> <span class="st">"dotted"</span>)</span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>plt.plot(us_ck_corr.index, us_ck_corr[<span class="st">"xreg2"</span>], label<span class="op">=</span><span class="st">"xreg2"</span>, linestyle <span class="op">=</span> <span class="st">"dotted"</span>)</span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Date"</span>)</span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Revenue"</span>)</span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Cookies Revenue in the United States"</span>)</span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a><span class="co"># save the plot</span></span>
+<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a><span class="co"># plt.savefig("chart1", dpi = 300, bbox_inches = "tight")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="cell-6" class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>us_ck_corr[<span class="st">"Revenue"</span>].corr(us_ck_corr[<span class="st">"xreg1"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># calculate the correlation between the target variable and the new variables, dropping the date, country, and product columns</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>correlation <span class="op">=</span> us_ck_corr.drop(columns<span class="op">=</span>[<span class="st">"Country"</span>, <span class="st">"Product"</span>]).corr()</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># create a simple table to display the correlation values</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>correlation_table <span class="op">=</span> correlation.stack().reset_index()</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>correlation_table.columns <span class="op">=</span> [<span class="st">"Variable 1"</span>, <span class="st">"Variable 2"</span>, <span class="st">"Correlation"</span>]</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>correlation_table <span class="op">=</span> correlation_table[correlation_table[<span class="st">"Variable 1"</span>] <span class="op">==</span> <span class="st">"Revenue"</span>]</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>correlation_table <span class="op">=</span> correlation_table[correlation_table[<span class="st">"Variable 2"</span>] <span class="op">!=</span> <span class="st">"Revenue"</span>]</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="co"># print the correlation table, rounding the values to 2 decimal places</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(correlation_table.<span class="bu">round</span>(<span class="dv">2</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="cell-7" class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># calculate the correlation between the target variable and the new variables, dropping the date, country, and product columns</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>correlation <span class="op">=</span> us_ck_corr.drop(columns<span class="op">=</span>[<span class="st">"Country"</span>, <span class="st">"Product"</span>]).corr()</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co"># create a simple table to display the correlation values</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>correlation_table <span class="op">=</span> correlation.stack().reset_index()</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>correlation_table.columns <span class="op">=</span> [<span class="st">"Variable 1"</span>, <span class="st">"Variable 2"</span>, <span class="st">"Correlation"</span>]</span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>correlation_table <span class="op">=</span> correlation_table[correlation_table[<span class="st">"Variable 1"</span>] <span class="op">==</span> <span class="st">"Revenue"</span>]</span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>correlation_table <span class="op">=</span> correlation_table[correlation_table[<span class="st">"Variable 2"</span>] <span class="op">!=</span> <span class="st">"Revenue"</span>]</span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="co"># print the correlation table, rounding the values to 2 decimal places</span></span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(correlation_table.<span class="bu">round</span>(<span class="dv">2</span>))</span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="co"># save the plot</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div id="cell-8" class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>data_raw</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div id="cell-9" class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a random dataset</span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">42</span>)  <span class="co"># For reproducibility</span></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">100</span>  <span class="co"># Number of samples</span></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>data_raw <span class="op">=</span> pd.DataFrame({</span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Original"</span>: np.random.randn(n)  <span class="co"># Original variable</span></span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>})</span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate a new variable with a target correlation</span></span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>correlation_target <span class="op">=</span> <span class="fl">0.8</span></span>
-<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate random noise</span></span>
-<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>noise <span class="op">=</span> np.random.randn(n)</span>
-<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Orthogonalize noise to the original variable to ensure independence</span></span>
-<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>noise <span class="op">=</span> noise <span class="op">-</span> np.dot(noise, data_raw[<span class="st">"Original"</span>]) <span class="op">/</span> np.dot(data_raw[<span class="st">"Original"</span>], data_raw[<span class="st">"Original"</span>]) <span class="op">*</span> data_raw[<span class="st">"Original"</span>]</span>
-<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Scale the orthogonalized noise to match the desired correlation</span></span>
-<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>noise <span class="op">=</span> noise <span class="op">/</span> np.linalg.norm(noise) <span class="op">*</span> np.sqrt(<span class="dv">1</span> <span class="op">-</span> correlation_target<span class="op">**</span><span class="dv">2</span>) <span class="op">*</span> np.linalg.norm(data_raw[<span class="st">"Original"</span>])</span>
-<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the new variable</span></span>
-<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a>data_raw[<span class="st">"New_Var"</span>] <span class="op">=</span> correlation_target <span class="op">*</span> data_raw[<span class="st">"Original"</span>] <span class="op">+</span> noise</span>
-<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Verify the correlation</span></span>
-<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a>correlation <span class="op">=</span> data_raw[<span class="st">"Original"</span>].corr(data_raw[<span class="st">"New_Var"</span>])</span>
-<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Correlation between Original and New_Var: </span><span class="sc">{</span>correlation<span class="sc">:.4f}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># calculate lags of the xreg1 and xreg2 columns. Create 1, 2, 3, 6, 9, 12 lags</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>us_ck_corr[<span class="st">"xreg1_lag_1"</span>] <span class="op">=</span> us_ck_corr[<span class="st">"xreg1"</span>].shift(<span class="dv">1</span>)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>us_ck_corr[<span class="st">"xreg1_lag_2"</span>] <span class="op">=</span> us_ck_corr[<span class="st">"xreg1"</span>].shift(<span class="dv">2</span>)</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>us_ck_corr[<span class="st">"xreg1_lag_3"</span>] <span class="op">=</span> us_ck_corr[<span class="st">"xreg1"</span>].shift(<span class="dv">3</span>)</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>us_ck_corr[<span class="st">"xreg1_lag_6"</span>] <span class="op">=</span> us_ck_corr[<span class="st">"xreg1"</span>].shift(<span class="dv">6</span>)</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>us_ck_corr[<span class="st">"xreg1_lag_9"</span>] <span class="op">=</span> us_ck_corr[<span class="st">"xreg1"</span>].shift(<span class="dv">9</span>)</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>us_ck_corr[<span class="st">"xreg1_lag_12"</span>] <span class="op">=</span> us_ck_corr[<span class="st">"xreg1"</span>].shift(<span class="dv">12</span>)</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>us_ck_corr[<span class="st">"xreg2_lag_1"</span>] <span class="op">=</span> us_ck_corr[<span class="st">"xreg2"</span>].shift(<span class="dv">1</span>)</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>us_ck_corr[<span class="st">"xreg2_lag_2"</span>] <span class="op">=</span> us_ck_corr[<span class="st">"xreg2"</span>].shift(<span class="dv">2</span>)</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>us_ck_corr[<span class="st">"xreg2_lag_3"</span>] <span class="op">=</span> us_ck_corr[<span class="st">"xreg2"</span>].shift(<span class="dv">3</span>)</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>us_ck_corr[<span class="st">"xreg2_lag_6"</span>] <span class="op">=</span> us_ck_corr[<span class="st">"xreg2"</span>].shift(<span class="dv">6</span>)</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>us_ck_corr[<span class="st">"xreg2_lag_9"</span>] <span class="op">=</span> us_ck_corr[<span class="st">"xreg2"</span>].shift(<span class="dv">9</span>)</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>us_ck_corr[<span class="st">"xreg2_lag_12"</span>] <span class="op">=</span> us_ck_corr[<span class="st">"xreg2"</span>].shift(<span class="dv">12</span>)</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="co"># calculate the correlation between the target variable and the new variables, dropping the date, country, and product columns</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>relation <span class="op">=</span> us_ck_corr.drop(columns<span class="op">=</span>[<span class="st">"Country"</span>, <span class="st">"Product"</span>]).corr()</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a><span class="co"># create a simple table to display the correlation values</span></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>lag_table <span class="op">=</span> relation.stack().reset_index()</span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>lag_table.columns <span class="op">=</span> [<span class="st">"Variable 1"</span>, <span class="st">"Variable 2"</span>, <span class="st">"Correlation"</span>]</span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>lag_table <span class="op">=</span> lag_table[lag_table[<span class="st">"Variable 1"</span>] <span class="op">==</span> <span class="st">"Revenue"</span>]</span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>lag_table <span class="op">=</span> lag_table[lag_table[<span class="st">"Variable 2"</span>] <span class="op">!=</span> <span class="st">"Revenue"</span>]</span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a><span class="co"># print the correlation table, rounding the values to 2 decimal places</span></span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(lag_table.<span class="bu">round</span>(<span class="dv">2</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 
