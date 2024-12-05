@@ -2,7 +2,7 @@
 title: "Exploratory Data Analysis: External Regressors"
 description: "What outside forces impact our business?"
 author: "Mike Tokic"
-date: "2024-12-03"
+date: "2024-12-05"
 categories: [machine-learning, time-series]
 image: "image.png"
 draft: true
@@ -68,18 +68,69 @@ The table confirms our initial smell test after reading the line chart. Xreg1 ha
 | Revenue    | xreg2_lag_9    |        0.04 |
 | Revenue    | xreg2_lag_12   |        0.15 |
 
-In addition to the original xreg1 (at lag 0), the 1 and 12 month lags also have a high correlation. 
-
-Correlation, lags. 
+In addition to the original xreg1 (at lag 0), the 1 and 12 month lags also have a high correlation. A 12 month lag shows that there is strong seasonality in both our original time series and xreg1. This will be helpful once we start to train models. 
 
 ### Measuring Non-Linear Relationships
 
-Nonlinear relationships, lags. 
+Traditional correlation is great and all, but falls short if there are non-linear relationships between the variables. In order to capture non-linear relationships, we have to bring in some heavy firepower. Using either of the below approaches. 
+
+1. Mutual Information (MI)
+    - Overview:
+        - Measures the shared information between two variables (or time series).
+        - Captures linear and non-linear dependencies.
+        - Based on information theory: higher MI indicates more shared patterns or dependencies.
+    - Key Points:
+        - Values are always non-negative.
+        - MI = 0: No dependence (variables are independent).
+        - Higher MI: Greater dependency or shared information.
+    - Interpretation:
+        - MI doesn't distinguish between positive or negative relationships (unlike correlation).
+        - It only reflects the strength of dependency, not its direction or type.
+2. Distance Correlation (dCor)
+    - Overview:
+        - Measures the dependence between two variables by analyzing distances between all pairwise points.
+        - Captures both linear and non-linear relationships.
+        - Unlike MI, dCor is normalized to a specific range.
+    - Key Points:
+        - Values range from 0 to 1.
+        - dCor = 0: Variables are independent.
+        - dCor = 1: Perfect dependence (linear or non-linear).
+    - Interpretation:
+        - A value closer to 0: Weak or no dependency.
+        - A value closer to 1: Strong dependency.
+        - It is symmetric and doesn't distinguish between causation or directionality.
+
+Distance correlation is easier to understand and compare scores across different data sets, but mutual information can understand more complex non-linear relationships. So either can be helpful. Dealers choice on what you want to use. Let's calculate a mutual information score on our external regressors and their lags. 
+
+| Variable 1 | Variable 2     | Mutual Information |
+|------------|----------------|--------------------|
+| Revenue    | xreg1          | 0.52              |
+| Revenue    | xreg1_lag_1    | 0.18              |
+| Revenue    | xreg1_lag_2    | 0.00              |
+| Revenue    | xreg1_lag_3    | 0.01              |
+| Revenue    | xreg1_lag_6    | 0.00              |
+| Revenue    | xreg1_lag_9    | 0.04              |
+| Revenue    | xreg1_lag_12   | 0.05              |
+| Revenue    | xreg2          | 0.00              |
+| Revenue    | xreg2_lag_1    | 0.00              |
+| Revenue    | xreg2_lag_2    | 0.00              |
+| Revenue    | xreg2_lag_3    | 0.00              |
+| Revenue    | xreg2_lag_6    | 0.00              |
+| Revenue    | xreg2_lag_9    | 0.00              |
+| Revenue    | xreg2_lag_12   | 0.00              |
+
+Similar to regular correlation, xreg1 shows a strong relationship with revenue. But for MI it only has a relationship with lag 0 and lag 1. All other values are either very small or zero, meaning there is not strong relationship. This differs from the original correlation values. Usually it's a good idea to use a few of these methods together. If external regressors are flagged as important in more than one of these approaches, then it's safe to say they have some predictive power for our target variable. So for our data we can keep xreg1 to use in our model and drop xreg2 since it's mostly noise with no signal. 
 
 ### Dealing With Binary Regressors
 
+There's one final type of analysis we are missing. The above approaches will most likely not work when the external regressor is not a number or is a binary variable, which means having a value of one or zero (yes or no). 
+
 Seeing the predictive power of a 1/0 type regressor. 
+
+### Reversal
+
+Correlation, not causation. Multicolinearity. 
 
 ### Final Thoughts
 
-Correlation, not causation. 
+Wrap up. 

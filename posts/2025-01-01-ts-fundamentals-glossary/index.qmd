@@ -13,9 +13,11 @@ draft: true
 - Artificial Intelligence (AI)
 - Autocorrelation (ACF)
 - Back Testing
+- Binary Variable
 - Confidence Interval
 - Correlation
 - Dependant Variable
+- Distance Correlation (dCor)
 - Exploratory Data Analysis (EDA)
 - Exponential Smoothing
 - External Regressors (xregs)
@@ -33,6 +35,8 @@ draft: true
 - Moving Average (MA)
 - Multiplicative Decomposition
 - Multivariate Model
+- Mutual Information (MI)
+- Noise
 - Not Missing at Random (NMAR)
 - Outlier
 - Partial Autocorrelation (PACF)
@@ -42,6 +46,7 @@ draft: true
 - Remainder
 - Residual
 - Seasonality
+- Signal
 - Smell Test
 - Statistically Significant
 - Supervised Learning
