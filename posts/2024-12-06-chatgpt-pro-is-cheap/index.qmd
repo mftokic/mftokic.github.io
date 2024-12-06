@@ -1,6 +1,6 @@
 ---
 title: "ChatGPT Pro is Cheap"
-description: "If you think it's expensive, you're using AI wrong."
+description: "If you think it's expensive, you're using AI wrong"
 author: "Mike Tokic"
 date: "2024-12-06"
 categories: [AI, work]
