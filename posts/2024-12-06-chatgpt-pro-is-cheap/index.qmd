@@ -1,0 +1,27 @@
+---
+title: "ChatGPT Pro is Cheap"
+description: "If you think it's expensive, you're using AI wrong."
+author: "Mike Tokic"
+date: "2024-12-06"
+categories: [AI, work]
+image: "image.png"
+draft: true
+---
+
+The latest offering from OpenAI costs $200 a month, and it's actually a steal. It's called [ChatGPT Pro](https://openai.com/index/introducing-chatgpt-pro/) and it's 10x more expensive than their existing paid product called ChatGPT Plus. That sounds like a steep price tag but if you write code or do any complex reasoning for a living it could well be worth it. 
+
+Let's break down the math. The average software engineer in the United States [get's paid $105,000 a year](https://www.indeed.com/career/software-engineer/salaries). In Seattle and SF that can be 2-3x higher. But let's just use the average. The new ChatGPT Pro subscription costs around 2% of their annual salary. To be worth it the product needs to give them back the same amount in productivity. 
+
+- $105,000 salary
+- 250 days worked a year (50 weeks of 5 days, 2 weeks for vacation)
+- $420 daily salary (105000/250)
+
+If a dev makes $420 a day writing code, then paying $2,400 a year for ChatGPT Pro equals out to just under 6 days of their salary. The new models offered in ChatGPT Pro are the best in the world at coding. So it's safe to say using them will make a developer more productive. If using the service saves you one hour a week in time spent coding then it will have already paid for itself. 
+
+- 200x12 = $2,400
+- 2,400/420 = 5.7 days
+- 5.7x8 = 46 hours
+
+So by using the service you are technically getting 6 more hours of yearly productivity for free, which is about $32. Using the new service is actually putting more money in your pocket. 
+
+If you think paying buku bucks for services like this is stupid, well you are just not using them correctly. AI will become the most powerful form of leverage in the world, so not using it to its max today will only hurt you tomorrow. OpenAI said they will also be rolling out more features to the pro service going forward. This could include access to the next generation of models like GPT5 and access to their upcoming agents capabilities. Once these come out you will gladly fork over thousands a month for them, because they will allow you to get 2-3x more done. So paying $200 a month now might just be a steal. 
