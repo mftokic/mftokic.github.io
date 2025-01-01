@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Mike Tokic">
-<meta name="dcterms.date" content="2024-12-05">
-<meta name="description" content="What outside forces impact our business?">
+<meta name="dcterms.date" content="2024-12-30">
+<meta name="description" content="Making software personalized to every user">
 
-<title>Exploratory Data Analysis: External Regressors – Thoughts on Things</title>
+<title>80/20 SaaS – Thoughts on Things</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -85,13 +85,17 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Exploratory Data Analysis: External Regressors – Thoughts on Things">
-<meta property="og:description" content="What outside forces impact our business?">
-<meta property="og:image" content="https://mftokic.github.io/posts/2024-12-30-ts-fundamentals-eda-xregs/image.png">
+<meta property="og:title" content="80/20 SaaS – Thoughts on Things">
+<meta property="og:description" content="Making software personalized to every user">
+<meta property="og:image" content="https://mftokic.github.io/posts/2025-12-30-80-20-saas/image.png">
 <meta property="og:site_name" content="Thoughts on Things">
-<meta name="twitter:title" content="Exploratory Data Analysis: External Regressors – Thoughts on Things">
-<meta name="twitter:description" content="What outside forces impact our business?">
-<meta name="twitter:image" content="https://mftokic.github.io/posts/2024-12-30-ts-fundamentals-eda-xregs/image.png">
+<meta property="og:image:height" content="1024">
+<meta property="og:image:width" content="1024">
+<meta name="twitter:title" content="80/20 SaaS – Thoughts on Things">
+<meta name="twitter:description" content="Making software personalized to every user">
+<meta name="twitter:image" content="https://mftokic.github.io/posts/2025-12-30-80-20-saas/image.png">
+<meta name="twitter:image-height" content="1024">
+<meta name="twitter:image-width" content="1024">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -146,15 +150,14 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Exploratory Data Analysis: External Regressors</h1>
+      <h1 class="title">80/20 SaaS</h1>
                   <div>
         <div class="description">
-          What outside forces impact our business?
+          Making software personalized to every user
         </div>
       </div>
                           <div class="quarto-categories">
-                <div class="quarto-category">machine-learning</div>
-                <div class="quarto-category">time-series</div>
+                <div class="quarto-category">AI</div>
               </div>
                   </div>
   </div>
@@ -172,7 +175,7 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">December 5, 2024</p>
+        <p class="date">December 30, 2024</p>
       </div>
     </div>
     
@@ -191,367 +194,13 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 
 
 
-<p><em>This post is part of the <a href="https://mftokic.github.io/posts/2024-10-03-ts-fundamentals-eda/">exploratory data analysis chapter</a> within a larger learning series around time series forecasting fundamentals. <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/">Check out the main learning path</a> to see other posts in the series.</em></p>
-<p><em>The example monthly data used in this series <a href="https://github.com/mftokic/mftokic.github.io/blob/main/posts/2024-10-02-ts-fundamentals-whats-a-time-series/example_ts_data.csv">can be found here.</a> You can also find the <a href="https://github.com/mftokic/mftokic.github.io/blob/main/notebooks/2024-11-26-ts-fundamentals-missing-outliers.ipynb">python code used in this post here.</a></em></p>
-<section id="may-the-outside-forces-be-with-you" class="level3">
-<h3 class="anchored" data-anchor-id="may-the-outside-forces-be-with-you">May The Outside Forces Be With You</h3>
-<p>When creating a time series forecast, you really only need three columns. One to identify one time series from another, a timestamp (date) column, and your target variable. With these three things you can product a high quality forecasts. Unfortunately most time series do not live in a vacuum, and are subject to outside forces. These forces could be things like macroeconomic factors like inflation or consumer sentiment. The growing market share of your competitors. Or even when your product might go on sale. These are all external regressors (xregs), or outside data points that can be used to improve the predictive accuracy of our time series forecast.</p>
-<p>External regressors come in many shapes and sizes. They are usually chosen based on the <a href="https://mftokic.github.io/posts/2024-04-02-time-series-domain-expertise/">domain expertise</a> of whatever you’re trying to forecast. Outside of a hunch they might work, how can we tell if they should be used in our time series forecast? Let’s walk through a few methods to measure the relationship between external regressors and our target variable.</p>
-</section>
-<section id="measuring-linear-relationships" class="level3">
-<h3 class="anchored" data-anchor-id="measuring-linear-relationships">Measuring Linear Relationships</h3>
-<p>The most straightforward approach is a simple correlation analysis. We take the external regressor time series, and calculate the correlation against our target variable time series. This gives us a value between -1 and 1. Having either a strong negative correlation or positive correlation are both helpful. Here are a few rules of thumb to measure strong correlations of external regressors based on the date grain of your data.</p>
-<ul>
-<li>Year/Quarter/Month: Absolute value correlation of 0.5 or higher.</li>
-<li>Week/Day: Absolute value correlation of 0.2 or higher.</li>
-</ul>
-<p>It’s important to note that those values are arbitrary. This isn’t a perfect threshold to use. So make sure you adjust that based on your own time series data. Let’s take a time series from our example dataset and calculate the correlation against a few external regressors.</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Date</th>
-<th>Country</th>
-<th>Product</th>
-<th>Revenue</th>
-<th>xreg1</th>
-<th>xreg2</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>2019-01-01</td>
-<td>United States</td>
-<td>Cookies</td>
-<td>25</td>
-<td>12.37</td>
-<td>27</td>
-</tr>
-<tr class="even">
-<td>2019-02-01</td>
-<td>United States</td>
-<td>Cookies</td>
-<td>10</td>
-<td>15.73</td>
-<td>2</td>
-</tr>
-<tr class="odd">
-<td>2019-03-01</td>
-<td>United States</td>
-<td>Cookies</td>
-<td>15</td>
-<td>39.68</td>
-<td>67</td>
-</tr>
-<tr class="even">
-<td>2019-04-01</td>
-<td>United States</td>
-<td>Cookies</td>
-<td>45</td>
-<td>60.17</td>
-<td>95</td>
-</tr>
-<tr class="odd">
-<td>2019-05-01</td>
-<td>United States</td>
-<td>Cookies</td>
-<td>55</td>
-<td>72.84</td>
-<td>5</td>
-</tr>
-<tr class="even">
-<td>2019-06-01</td>
-<td>United States</td>
-<td>Cookies</td>
-<td>65</td>
-<td>53.31</td>
-<td>21</td>
-</tr>
-<tr class="odd">
-<td>2019-07-01</td>
-<td>United States</td>
-<td>Cookies</td>
-<td>25</td>
-<td>9.65</td>
-<td>31</td>
-</tr>
-<tr class="even">
-<td>2019-08-01</td>
-<td>United States</td>
-<td>Cookies</td>
-<td>15</td>
-<td>12.20</td>
-<td>3</td>
-</tr>
-<tr class="odd">
-<td>2019-09-01</td>
-<td>United States</td>
-<td>Cookies</td>
-<td>10</td>
-<td>10.04</td>
-<td>8</td>
-</tr>
-<tr class="even">
-<td>2019-10-01</td>
-<td>United States</td>
-<td>Cookies</td>
-<td>5</td>
-<td>19.62</td>
-<td>88</td>
-</tr>
-</tbody>
-</table>
-<p><img src="./chart1.png" class="img-fluid"></p>
-<p>The first external regressor (xreg1) seems to have similar trend and seasonality patterns as our revenue target variable. The second external regressor (xregs2) on the other hand is all over the place. Here is the correlation with each xreg.</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Variable 1</th>
-<th>Variable 2</th>
-<th>Correlation</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Revenue</td>
-<td>xreg1</td>
-<td>0.83</td>
-</tr>
-<tr class="even">
-<td>Revenue</td>
-<td>xreg2</td>
-<td>0.05</td>
-</tr>
-</tbody>
-</table>
-<p>The table confirms our initial smell test after reading the line chart. Xreg1 has a strong correlation, and xreg2 does not. This tells us that xreg1 could be a good candidate to use as a feature in our ML forecast model. What if we don’t know what xreg1 values are going to be in the future? That’s where calculating correlation on lags becomes valuable. We can calculate lags for 1 month, 2 months, 3 months, and onward to see if lag values of our external regressors can also be used as features.</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Variable 1</th>
-<th>Variable 2</th>
-<th>Correlation</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Revenue</td>
-<td>xreg1</td>
-<td>0.83</td>
-</tr>
-<tr class="even">
-<td>Revenue</td>
-<td>xreg2</td>
-<td>0.05</td>
-</tr>
-<tr class="odd">
-<td>Revenue</td>
-<td>xreg1_lag_1</td>
-<td>0.64</td>
-</tr>
-<tr class="even">
-<td>Revenue</td>
-<td>xreg1_lag_2</td>
-<td>0.24</td>
-</tr>
-<tr class="odd">
-<td>Revenue</td>
-<td>xreg1_lag_3</td>
-<td>-0.17</td>
-</tr>
-<tr class="even">
-<td>Revenue</td>
-<td>xreg1_lag_6</td>
-<td>-0.07</td>
-</tr>
-<tr class="odd">
-<td>Revenue</td>
-<td>xreg1_lag_9</td>
-<td>-0.43</td>
-</tr>
-<tr class="even">
-<td>Revenue</td>
-<td>xreg1_lag_12</td>
-<td>0.65</td>
-</tr>
-<tr class="odd">
-<td>Revenue</td>
-<td>xreg2_lag_1</td>
-<td>0.00</td>
-</tr>
-<tr class="even">
-<td>Revenue</td>
-<td>xreg2_lag_2</td>
-<td>-0.11</td>
-</tr>
-<tr class="odd">
-<td>Revenue</td>
-<td>xreg2_lag_3</td>
-<td>-0.15</td>
-</tr>
-<tr class="even">
-<td>Revenue</td>
-<td>xreg2_lag_6</td>
-<td>0.17</td>
-</tr>
-<tr class="odd">
-<td>Revenue</td>
-<td>xreg2_lag_9</td>
-<td>0.04</td>
-</tr>
-<tr class="even">
-<td>Revenue</td>
-<td>xreg2_lag_12</td>
-<td>0.15</td>
-</tr>
-</tbody>
-</table>
-<p>In addition to the original xreg1 (at lag 0), the 1 and 12 month lags also have a high correlation. A 12 month lag shows that there is strong seasonality in both our original time series and xreg1. This will be helpful once we start to train models.</p>
-</section>
-<section id="measuring-non-linear-relationships" class="level3">
-<h3 class="anchored" data-anchor-id="measuring-non-linear-relationships">Measuring Non-Linear Relationships</h3>
-<p>Traditional correlation is great and all, but falls short if there are non-linear relationships between the variables. In order to capture non-linear relationships, we have to bring in some heavy firepower. Using either of the below approaches.</p>
-<ol type="1">
-<li>Mutual Information (MI)
-<ul>
-<li>Overview:
-<ul>
-<li>Measures the shared information between two variables (or time series).</li>
-<li>Captures linear and non-linear dependencies.</li>
-<li>Based on information theory: higher MI indicates more shared patterns or dependencies.</li>
-</ul></li>
-<li>Key Points:
-<ul>
-<li>Values are always non-negative.</li>
-<li>MI = 0: No dependence (variables are independent).</li>
-<li>Higher MI: Greater dependency or shared information.</li>
-</ul></li>
-<li>Interpretation:
-<ul>
-<li>MI doesn’t distinguish between positive or negative relationships (unlike correlation).</li>
-<li>It only reflects the strength of dependency, not its direction or type.</li>
-</ul></li>
-</ul></li>
-<li>Distance Correlation (dCor)
-<ul>
-<li>Overview:
-<ul>
-<li>Measures the dependence between two variables by analyzing distances between all pairwise points.</li>
-<li>Captures both linear and non-linear relationships.</li>
-<li>Unlike MI, dCor is normalized to a specific range.</li>
-</ul></li>
-<li>Key Points:
-<ul>
-<li>Values range from 0 to 1.</li>
-<li>dCor = 0: Variables are independent.</li>
-<li>dCor = 1: Perfect dependence (linear or non-linear).</li>
-</ul></li>
-<li>Interpretation:
-<ul>
-<li>A value closer to 0: Weak or no dependency.</li>
-<li>A value closer to 1: Strong dependency.</li>
-<li>It is symmetric and doesn’t distinguish between causation or directionality.</li>
-</ul></li>
-</ul></li>
-</ol>
-<p>Distance correlation is easier to understand and compare scores across different data sets, but mutual information can understand more complex non-linear relationships. So either can be helpful. Dealers choice on what you want to use. Let’s calculate a mutual information score on our external regressors and their lags.</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Variable 1</th>
-<th>Variable 2</th>
-<th>Mutual Information</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Revenue</td>
-<td>xreg1</td>
-<td>0.52</td>
-</tr>
-<tr class="even">
-<td>Revenue</td>
-<td>xreg1_lag_1</td>
-<td>0.18</td>
-</tr>
-<tr class="odd">
-<td>Revenue</td>
-<td>xreg1_lag_2</td>
-<td>0.00</td>
-</tr>
-<tr class="even">
-<td>Revenue</td>
-<td>xreg1_lag_3</td>
-<td>0.01</td>
-</tr>
-<tr class="odd">
-<td>Revenue</td>
-<td>xreg1_lag_6</td>
-<td>0.00</td>
-</tr>
-<tr class="even">
-<td>Revenue</td>
-<td>xreg1_lag_9</td>
-<td>0.04</td>
-</tr>
-<tr class="odd">
-<td>Revenue</td>
-<td>xreg1_lag_12</td>
-<td>0.05</td>
-</tr>
-<tr class="even">
-<td>Revenue</td>
-<td>xreg2</td>
-<td>0.00</td>
-</tr>
-<tr class="odd">
-<td>Revenue</td>
-<td>xreg2_lag_1</td>
-<td>0.00</td>
-</tr>
-<tr class="even">
-<td>Revenue</td>
-<td>xreg2_lag_2</td>
-<td>0.00</td>
-</tr>
-<tr class="odd">
-<td>Revenue</td>
-<td>xreg2_lag_3</td>
-<td>0.00</td>
-</tr>
-<tr class="even">
-<td>Revenue</td>
-<td>xreg2_lag_6</td>
-<td>0.00</td>
-</tr>
-<tr class="odd">
-<td>Revenue</td>
-<td>xreg2_lag_9</td>
-<td>0.00</td>
-</tr>
-<tr class="even">
-<td>Revenue</td>
-<td>xreg2_lag_12</td>
-<td>0.00</td>
-</tr>
-</tbody>
-</table>
-<p>Similar to regular correlation, xreg1 shows a strong relationship with revenue. But for MI it only has a relationship with lag 0 and lag 1. All other values are either very small or zero, meaning there is not strong relationship. This differs from the original correlation values. Usually it’s a good idea to use a few of these methods together. If external regressors are flagged as important in more than one of these approaches, then it’s safe to say they have some predictive power for our target variable. So for our data we can keep xreg1 to use in our model and drop xreg2 since it’s mostly noise with no signal.</p>
-</section>
-<section id="dealing-with-binary-regressors" class="level3">
-<h3 class="anchored" data-anchor-id="dealing-with-binary-regressors">Dealing With Binary Regressors</h3>
-<p>There’s one final type of analysis we are missing. The above approaches will most likely not work when the external regressor is not a number or is a binary variable, which means having a value of one or zero (yes or no).</p>
-<p>Seeing the predictive power of a 1/0 type regressor.</p>
-</section>
-<section id="reversal" class="level3">
-<h3 class="anchored" data-anchor-id="reversal">Reversal</h3>
-<p>Correlation, not causation. Multicolinearity.</p>
-</section>
-<section id="final-thoughts" class="level3">
-<h3 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h3>
-<p>Wrap up.</p>
+<p>There’s an argument floating around saying that AI will be the death of software as a service (SaaS) companies. These companies make applications you access through the browser on your computer or an app on your phone. Most software you interact with today can be thought of as SaaS. The thinking is that AI will enable companies to build their own tools fast and cheap, instead of buying the same sort of functionality from a SaaS provider. AI can write the code alongside one or two developers, shrinking costs while still getting most of the functionality. I think this is a solid idea, but I’m not sure it’s the best approach. Instead I believe SaaS like companies should build 80% of the features needed in the core product, then allow users to augment the product through AI. Let’s walk through this with an example.</p>
+<p>Every company has a customer relationship management (CRM) software that helps them work with outside customers. These are products like Salesforce, Dynamics, and many others. Some of these products charge by seat, aka by user, so this can add up to a lot of costs for a large sales staff. A company may want to build their own internal version of a CRM by using AI and a few developers. They think they might be able to get most of the same functionality for +50% the cost, they could even tailor the software more towards their specific business needs. This is great in theory, but poor in execution.</p>
+<p>Should every company build a CRM system from scratch using AI? Probably not. Starting from zero is not fun and takes a lot of activation energy to get something off the ground and into production. A better way would be if the company could take a bare bones CRM off the shelf, that might have 80% of the core features they need, then use AI to customize the final 20% of features to fit their specific business needs.</p>
+<p>This 80/20 approach helps both SaaS providers and customers. The SaaS provider can keep their dev team small and save money, since they only have to build and maintain a core set of features that are not likely to change. Less development cost enables them to charge less for the product. Then the customer can take that core product off the shelf and add features to it. Ideally the SaaS product could have a built in AI feature where the customer could ask for new features, and the AI builds it for them into the SaaS product they use. All without bringing in developers. That way customers can get everything they want without the SaaS provider succumbing to feature creep, where by trying to satisfy every customer you end of satisfying none. Right now SaaS product makers have to build potentially thousands of features to meet the needs of thousands of customers. There needs to be a better way.</p>
+<p>If done correctly, the SaaS company now owns a platform. Which contains the core product offering, then thousands of branches of one off product versions that are requested by different customers. The company can charge a monthly flat rate for the core product, then an additional charge for every new feature requested and built by AI for each specific customer. Maintaining this kind of evolving platform is complex but removing that complexity away from customers is why customers give money to these companies. Whoever figures out this business model is set to thrive in the upcoming AI future. The crazy part is this kind of business model can only be created by startups. Since companies like Salesforce cannot burn their existing product to the ground and rebuild using this approach. They already have thousands of features that customers depend on, so they will continue to need thousands of developers to maintain and add to it. The future of SaaS will be won by new products, customized with AI, and most likely built from new startups.</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

@@ -5,7 +5,6 @@ author: "Mike Tokic"
 date: "2025-01-01"
 categories: [life, learning]
 image: "image.png"
-draft: True
 ---
 
 I love reading books, watching YouTube videos, listening to podcasts, you name it. Anything learning related is my jam. But I recently realized that if I don't take notes on what I'm learning, I will probably forget everything. Now when I hear something interesting, I write it down in an Apple note for that month. Below are some of the learnings I jotted down in December, summarized by ChatGPT. I hope you find them as interesting as I did. 
@@ -25,7 +24,7 @@ I love reading books, watching YouTube videos, listening to podcasts, you name i
   - C Corp if you want to sell eventually (consider QSBS after five years).
 
 #### Monetization & Branding
-- Even in a commodity space, **branding can create a unique edge** (e.g., Liquid Death).  
+- Even in a commodity space, **branding can create a unique edge** (e.g., Liquid Death water).  
 - “Startups fail, founders don’t”: Persistence leads to eventual success if you keep learning.
 
 #### Key Mindsets
@@ -52,7 +51,7 @@ I love reading books, watching YouTube videos, listening to podcasts, you name i
 - The moment you think “this might be a firing situation,” have a clarifying conversation about expectations.  
 - Firing ultimately benefits both parties if the role isn’t a fit.
 
-#### Hiring Strategy
+#### Hiring Strategy for New Business
 - **First hire:** Virtual assistant to free up time (low-risk, low-cost).  
 - **Second hire:** Sales/marketing to boost cash flow, then operations.  
 - **Hiring internationally** can be a “no-brainer” for cost savings (e.g., via Shepherd).
@@ -63,7 +62,7 @@ I love reading books, watching YouTube videos, listening to podcasts, you name i
 
 ### 3. Productivity & Personal Growth
 
-#### Daily “Vitamins” for Strength
+#### Daily “Vitamins” for Health
 - Walks/Nature  
 - 45 minutes of exercise  
 - Reading, YouTube (educational), Writing, Building  
@@ -71,12 +70,12 @@ I love reading books, watching YouTube videos, listening to podcasts, you name i
 - 150 grams of protein
 
 #### Preventing Burnout
-- Ask: **“Is this important? Will it make a difference?”**  
+- Ask: **“Is this important? Will it make a difference?”** Only focus on the important.  
 - Our **state determines our story**—manage your energy and emotions.
 
 #### Habits & Dopamine
 - **Dopamine gained without effort** (e.g., instant gratification) can be dangerous.  
-- **Good results** today come from consistent, small choices made previously (“slow is smooth, smooth is fast”).
+- **Good results** today come from consistent, small choices made previously.
 
 #### Time Freedom Over Money
 - Many people chase money for freedom but ironically lose freedom by obsessing over it.  
@@ -104,7 +103,7 @@ I love reading books, watching YouTube videos, listening to podcasts, you name i
 2. Is it **helpful**?  
 3. Is it **kind**?
 
-If not, discard it.
+If your thoughts are not one of these, discard it immediately.
 
 #### Socratic Method & Curiosity
 - Instead of disagreeing, ask questions to uncover someone’s reasoning.  
