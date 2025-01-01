@@ -1,0 +1,190 @@
+---
+title: "December Learnings"
+description: "Random stuff I learned in December 2024"
+author: "Mike Tokic"
+date: "2025-01-01"
+categories: [life, learning]
+image: "image.png"
+draft: True
+---
+
+I love reading books, watching YouTube videos, listening to podcasts, you name it. Anything learning related is my jam. But I recently realized that if I don't take notes on what I'm learning, I will probably forget everything. Now when I hear something interesting, I write it down in an Apple note for that month. Below are some of the learnings I jotted down in December, summarized by ChatGPT. I hope you find them as interesting as I did. 
+
+## 1. Business & Entrepreneurship
+
+### Passive Income & Productized Services
+- **Best passive income model:** Offer a service that helps companies make more money.  
+  - Ideally, “productize” your service so it’s standardized, repeatable, and less reliant on your day-to-day involvement.
+
+### Starting a Company From Scratch
+- **Validate demand first:** Ask people if they want what you’re selling; presell if possible.  
+- **Find a repeatable way to get customers** (test channels early).  
+- Build only after talking to potential customers; keep it simple until proven.  
+- **Know if you’re building to sell or building to run:**  
+  - LLC if you want to pay yourself along the way.  
+  - C Corp if you want to sell eventually (consider QSBS after five years).
+
+### Monetization & Branding
+- Even in a commodity space, **branding can create a unique edge** (e.g., Liquid Death).  
+- “Startups fail, founders don’t”: Persistence leads to eventual success if you keep learning.
+
+### Key Mindsets
+- **“The fundamental algorithm of life is to repeat what works.”**  
+- **Pair your primary metric with a “check” metric** (e.g., revenue + profit margin) to avoid over-optimizing in one direction.
+
+---
+
+## 2. Management & Leadership
+
+### Types of Delegation
+1. **Tell them what to do.**  
+2. **Allow them to make decisions.**  
+   - Aim for #2, but you might start with #1 until trust and competence are established.
+
+### Avoid “Monkeys on Your Back”
+- When employees bring a problem, coach them to leave with their own solution.  
+- Ask guiding questions (“Are you sure we need to do anything right now?”) instead of providing answers.
+
+### One Metric Management (Peter Thiel’s Approach)
+- Assign each employee exactly **one** main metric or goal.  
+- That’s all you focus on in 1:1s.  
+- They own the outputs and figure out the inputs themselves.
+
+### Firing & Role Clarification
+- The moment you think “this might be a firing situation,” have a clarifying conversation about expectations.  
+- Firing ultimately benefits both parties if the role isn’t a fit.
+
+### Hiring Strategy
+- **First hire:** Virtual assistant to free up time (low-risk, low-cost).  
+- **Second hire:** Sales/marketing to boost cash flow, then operations.  
+- **Hiring internationally** can be a “no-brainer” for cost savings (e.g., via Shepherd).
+
+### Who, Not How
+- When a problem arises, ask **“Who can solve this for me?”** instead of **“How will I solve it?”**  
+- This mindset shift helps you move from owning a ‘job’ to owning a ‘business.’
+
+---
+
+## 3. Productivity & Personal Growth
+
+### Daily “Vitamins” for Strength
+- Walks/Nature  
+- 45 minutes of exercise  
+- Reading, YouTube (educational), Writing, Building  
+- 1:1 time with family/friends  
+- 150 grams of protein
+
+### Preventing Burnout
+- Ask: **“Is this important? Will it make a difference?”**  
+- Our **state determines our story**—manage your energy and emotions.
+
+### Habits & Dopamine
+- **Dopamine gained without effort** (e.g., instant gratification) can be dangerous.  
+- **Good results** today come from consistent, small choices made previously (“slow is smooth, smooth is fast”).
+
+### Time Freedom Over Money
+- Many people chase money for freedom but ironically lose freedom by obsessing over it.  
+- Consider designing a life you enjoy **now**, rather than waiting for a financial milestone.
+
+---
+
+## 4. Health & Longevity
+
+### Key Factors
+- **Excess fat (adipose tissue)** has the largest negative impact.  
+- Maintain a healthy weight and an 80–90% healthy diet for most of the benefits.
+
+### Other Longevity Insights
+- Developing countries often have lower life spans due to poor indoor air quality.  
+- As you age, **vacations should be longer** because your body needs more time to relax.  
+- **Creativity** correlates with longevity.
+
+### Environmental & Lifestyle Factors
+- **Blue light** and **flickering LEDs** can contribute to stress or weight gain.  
+- **Posture** affects how much you believe your own thoughts—mind your physical stance.
+
+---
+
+## 5. Mindset & Philosophy
+
+### 3Q Filters Test (Jon Acuff)
+1. Is it **true**?  
+2. Is it **helpful**?  
+3. Is it **kind**?
+
+If not, discard it.
+
+### Socratic Method & Curiosity
+- Instead of disagreeing, ask questions to uncover someone’s reasoning.  
+- Serve as a “midwife” to help them birth new ideas rather than forcing your own.
+
+### Quotes & Wisdom
+- **“Content is about emotion, not information.”** —Shaan Puri  
+- **“Slow is smooth, smooth is fast.”**  
+- **“No one is wrong on purpose.”** —Socrates  
+- **“Make a sense of humor your default emotion.”** —Matthew McConaughey  
+- **“If you want to win, only run races where winning is up to you.”** —Epictetus
+
+### Identity Diversification
+- **Don’t let your job (or parenthood) be your sole identity.**  
+- Spread your sense of self across multiple areas for resilience.
+
+### Live Verb-Focused, Not Noun-Focused
+- Focus on what you **do**, not the title you hold.  
+- Prioritize experiences and meaningful actions over static labels.
+
+---
+
+## 6. Relationships & Social Insights
+
+### Delegation & Autonomy
+- Not every employee wants total autonomy; many prefer structure and a clear path to win.
+
+### Friendships & Connections
+- **“What is a friend? A single soul dwelling in two bodies.”** —Aristotle  
+- ~200 hours of shared experience can turn an acquaintance into a close friend.  
+- 25% of adults are estranged from a parent; relationships can be complex, so invest in those that matter.
+
+### Family & Societal Trends
+- People have fewer kids because **expectations** (and costs) for each child have gone up dramatically.
+
+### Handling Lows in Relationships
+- **“It’s the lows, not the highs, that make or break a relationship.”**  
+- Approach conflicts with empathy, short bursts of feedback, and open communication.
+
+---
+
+## 7. Planning & Year-End Reflection
+
+### Close Out the Year
+- Clear old emails, clothes, subscriptions; do a full evaluation.  
+- Implement a consistent “planning system” to incorporate mini-adventures regularly.
+
+### Adding One New Winning Habit per Quarter
+- **Incremental habit-building:** small, sustainable changes that compound over time.
+
+### Misogi (Year-Defining Challenge)
+- Each year, take on one big challenge or adventure.  
+- Meanwhile, schedule smaller weekly “mini-adventures” to stay engaged and curious.
+
+---
+
+## Common Threads
+
+1. **Empowerment Through Delegation & Systems**  
+   - From “One Metric Management” to “Who Not How,” there’s a recurring emphasis on freeing yourself from minutiae so you can focus on strategic, high-impact work.
+
+2. **Validation & Focus in Business**  
+   - Your notes repeatedly stress testing ideas early (e.g., presales), focusing on the one crucial metric or channel, and doubling down on what works.
+
+3. **Healthy Mind & Body for Sustainable Success**  
+   - Longevity strategies, stress management, and daily rituals (walks, exercise, reading) show a consistent theme of taking care of yourself to thrive over the long term.
+
+4. **Mindset Shifts & Philosophical Anchors**  
+   - Using the 3Q filter, the Socratic method, and quotes that highlight freedom, creativity, and identity diversification. Emphasizing how perspective, curiosity, and humor make life richer.
+
+5. **Importance of Connection & Relationships**  
+   - Whether it’s rotating leadership roles, maintaining close friendships, or supporting employees appropriately, relationships and the way you interact with people matter.
+
+6. **Continuous Reinvention & Reflection**  
+   - The idea of year-end reviews, building new habits quarterly, and tackling “misogi”-level goals underscores the desire for ongoing personal evolution and adaptability.
