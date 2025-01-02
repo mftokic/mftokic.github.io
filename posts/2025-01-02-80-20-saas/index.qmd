@@ -1,0 +1,103 @@
+---
+title: "80/20 SaaS: Why AI-Driven Customization Is the Future"
+description: "Making software personalized to every user"
+author: "Mike Tokic"
+date: "2025-01-02"
+categories: [AI]
+image: "image.png"
+draft: True
+---
+
+## Introduction: Will AI Kill SaaS?
+Artificial intelligence (AI) has advanced to a point where one or two developers, working with AI-generated code, can build functional software in a matter of weeks. That prospect has led some to conclude that it spells the end of Software-as-a-Service (SaaS). After all, why rent a platform if you can build a decent alternative in-house—cheaply and on-demand?
+
+However, I believe there’s a more practical way forward. Instead of entirely replacing SaaS with AI-built tools, **SaaS providers should deliver 80% of the core features** and allow customers to **customize the remaining 20%** via AI. This approach maintains the convenience of off-the-shelf software while offering personalized functionality.
+
+---
+
+## Why Some Believe AI Will Kill SaaS
+The primary argument for “AI replacing SaaS” goes like this:
+- **Lower Development Costs:** With AI writing boilerplate code, you need fewer developers.  
+- **Faster Time to Market:** AI can generate basic functionality quickly.  
+- **Tailored Features:** Instead of dealing with generic solutions, an in-house AI tool can theoretically be customized to meet specific business needs.
+
+On paper, this sounds like a dream come true for businesses. But the reality is more complicated. Building robust, production-grade software—from scratch, no less—requires **significant resources**, including project management, maintenance, and ongoing support. Most companies aren’t equipped (or willing) to handle the long-term overhead that comes with building and hosting complex systems themselves.
+
+---
+
+## Embracing the 80/20 Model
+Rather than viewing AI and SaaS as competing forces, I propose a hybrid model. The **80/20 approach** involves:
+
+1. **Core Product (80%)**  
+   - SaaS providers develop and maintain a set of core features that almost every customer needs—think user authentication, data storage, basic dashboards, etc. This allows them to keep their development teams lean and focus on rock-solid functionality.
+2. **Customer Customization (20%)**  
+   - Customers then use AI (offered as part of the SaaS platform) to build out the features that are specific to their individual business needs. This might involve specialized workflows, custom dashboards, or niche integrations.
+
+By dividing responsibilities this way, the SaaS provider avoids bloating its product with endless feature requests. Customers, in turn, get **exactly what they want** without having to pay for an army of developers.
+
+---
+
+## A CRM Example
+Consider Customer Relationship Management (CRM) software. Giants like Salesforce and Microsoft Dynamics offer thousands of features, but not every company needs each one. Despite the vast customization options, many organizations still find themselves **adapting to the CRM**, not the other way around.
+
+What if a startup CRM provider offers a bare-bones product that covers 80% of what most sales teams require. Contact management, basic analytics, and lead tracking, and then **invites customers to build the rest** with AI-driven tools? For instance:
+
+1. A sales manager wants automated follow-up emails that adapt to different time zones.  
+2. She types her request into the built-in AI feature: “Generate customized follow-up emails that go out at optimal local times for each lead.”  
+3. The AI creates this functionality on the fly, integrating it seamlessly into the CRM interface.
+
+No waiting for lengthy releases, no large development staff—just a straightforward 80% solution with a customizable 20%.
+
+---
+
+## Benefits for Both Sides
+
+### For SaaS Providers
+- **Lean Development Team:** Focus on a stable core, lowering overhead.  
+- **Reduced Feature Creep:** No more chasing every edge case. Let AI and customers handle that final 20%.  
+- **New Revenue Streams:** Providers can charge a flat monthly fee for the core product plus incremental fees for AI-built custom features.
+
+### For Customers
+- **Faster Customization:** No waiting for your feature request to pass through the SaaS provider’s roadmap.  
+- **Lower Costs:** Pay for essential features plus only the custom pieces you really need.  
+- **Reduced Risk:** Save time and money by not building entire applications from scratch.  
+
+---
+
+## Potential Challenges
+Of course, the 80/20 model comes with its own complexities:
+
+1. **Maintenance of Custom Features**  
+   - AI-generated features could break when the core platform updates. SaaS providers will need robust versioning and testing to ensure stability.
+2. **Security & Compliance**  
+   - As customers add custom modules, the platform must ensure data remains secure and compliant with regulations like GDPR or HIPAA.
+3. **Quality Control**  
+   - Who is responsible when an AI-built feature malfunctions? Customers will demand that providers offer at least minimal support for AI-generated functionality.
+4. **Training Data & Privacy**  
+   - AI systems rely on data to learn. Providers must have clear policies on how user data is used to train and improve models.
+
+---
+
+## Startups vs. Giants
+This business model has the potential to disrupt established SaaS giants. Companies like Salesforce and Microsoft **already offer** highly customizable platforms, but they are weighed down by **thousands of existing features**. Re-engineering their entire codebase to an AI-first platform would be like trying to rebuild an airplane in mid-flight.
+
+Enter the **new startups**:  
+- **Clean Slate:** They can design products from the ground up with an 80/20 approach.  
+- **Modern Architectures:** They can embed AI customization layers from day one, rather than retrofitting existing systems.  
+- **Agile Mindset:** Less legacy overhead means they can pivot faster to market demands.
+
+The incumbents won’t disappear overnight, but they may lose out on smaller, more agile customers who prefer a streamlined, customizable experience.
+
+---
+
+## Conclusion: Thriving in an AI Future
+AI may not spell the end of SaaS, but it **will** transform it. By offloading the final 20% of custom features to AI, SaaS providers can remain lean, stay focused on a reliable core, and still give customers the freedom to adapt software to their unique processes.
+
+### Final Thought
+Are you ready to adapt? If you’re a **SaaS provider**, consider slimming your product down to the essential core and building out an AI-driven customization layer. If you’re a **customer**, think about the time and money you could save by adopting an 80/20 approach, rather than building or buying bloated software.
+
+The future of SaaS will hinge on who best embraces this new reality. Those who see AI not as a rival to existing software, but as an ally in creating truly personal, on-demand solutions.
+
+---
+
+*Which side of the 80/20 equation is your business on?*
