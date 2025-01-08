@@ -18,7 +18,7 @@ website:
       - text: "Software"
         file: software.qmd
       - icon: linkedin
-        href: https://www.linkedin.com/in/mftokic/
+        href: https://www.linkedin.com/in/michaeltokic/
       - icon: github
         href: https://github.com/mftokic
       - icon: twitter

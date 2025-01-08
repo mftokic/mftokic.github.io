@@ -4,25 +4,21 @@ title: "About Me"
 
 Hi there, my name's Mike Tokic. I currently work at Microsoft where I help build things with machine learning. Here are my thoughts....on things. These thoughts are my personal opinions and do not reflect the ideas/beliefs of my employer. There, now I can say whatever I want. 
 
-Let's get in touch
-- [LinkedIn](https://www.linkedin.com/in/michaeltokic/)
-- GitHub
-  - [Personal](https://github.com/mftokic)
-  - [Work - Microsoft](https://github.com/mitokic)
-- [X](https://x.com/mftokic)
-
 ## Origin Story 
 In the summer of 2015, I was your run of the mill finance intern at Microsoft. Bright eyed and bushy tailed, I knew a little bit about business and almost
 everything about technology. Just kidding I knew nothing.
 
 Within a span of two weeks my life changed forever. 
 
-First, I saw a demo of Azure Machine Learning, and second our CFO Amy Hood told all the interns that AI will become very important in Finance one day. That was all I needed to hear to dedicate my life to figuring this AI and machine learning thing out, starting my quest to get data superpowers. Over the next few years, I taught myself how to use data and AI to help our business make better decisions. Successfully transitioning from a finance to engineering career track. I've helped democratize AI so everyone in finance can have data superpowers, no coding required. Nothing gets me more excited than building technology that fundamentally changes how people live their lives and giving other people data superpowers.
+First, I saw a demo of Azure Machine Learning, and second our CFO Amy Hood told all the interns that AI will become very important in Finance one day. That was all I needed to hear to dedicate my life to figuring this AI and machine learning thing out, starting my quest to get data superpowers. 
+
+Over the next few years, I taught myself how to use data and AI to help our business make better decisions. Successfully transitioning from a finance to engineering career track. I've helped democratize AI so everyone in finance can have data superpowers, no coding required. Nothing gets me more excited than building technology that fundamentally changes how people live their lives and giving other people data superpowers.
 
 ## Professional Experience  
 ### Microsoft  
 #### Senior Software Engineer  
-*October 2018 – Present*  
+*October 2018 – Present*
+
 - Lead advanced analytics efforts, building machine learning solutions for finance.  
 - Created a self-serve machine learning forecasting tool, replacing $450 billion of manual forecasts and saving $3 million annually.  
 - Developed and maintained machine learning APIs and pipelines using Azure ML and Synapse.  
