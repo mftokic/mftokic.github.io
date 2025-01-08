@@ -10,6 +10,9 @@ about:
     - icon: github
       text: Github
       href: https://github.com/mftokic
+    - icon: twitter
+      text: X
+      href: https://x.com/mftokic
 
 ---
 
@@ -17,3 +20,58 @@ Hi there, my name's Mike Tokic. I currently work at Microsoft where I help
 build things with machine learning. These are my thoughts....on things. 
 These thoughts are my personal opinions and do not reflect the ideas/beliefs 
 of my employer. There, now I can say whatever I want. 
+
+## Origin Story 
+In the summer of 2015, I was your run of the mill finance intern at Microsoft. Bright eyed and bushy tailed, I knew a little bit about business and almost
+everything about technology. Just kidding I knew nothing.
+
+Within a span of two weeks my life changed forever. 
+
+First, I saw a demo of Azure Machine Learning, and second our CFO Amy Hood told all the interns that AI will become very important in Finance one day. That was all I needed to hear to dedicate my life to figuring this AI and machine learning thing out, starting my quest to get data superpowers. Over the next few years, I taught myself how to use data and AI to help our business make better decisions. Successfully transitioning from a finance to engineering career track. I've helped democratize AI so everyone in finance can have data superpowers, no coding required. Nothing gets me more excited than building technology that fundamentally changes how people live their lives and giving other people data superpowers.
+
+## Professional Experience  
+### Microsoft  
+#### Senior Software Engineer  
+*October 2018 – Present*  
+- Lead advanced analytics efforts, building machine learning solutions for finance.  
+- Created a self-serve machine learning forecasting tool, replacing $450 billion of manual forecasts and saving $3 million annually.  
+- Developed and maintained machine learning APIs and pipelines using Azure ML and Synapse.  
+- Managed and mentored both interns and full-time employees, often upskilling direct reports with business backgrounds in data analytics and machine learning.  
+- Designed and ran an apprenticeship program for machine learning, mentoring over 75 early-career employees.  
+- Recognized as a top expert in AI and machine learning, presenting to CFOs and winning Modern Finance awards: Inspiring Teacher (2022) and Outstanding Accelerator (2023).  
+
+#### Finance Rotation Analyst  
+*July 2016 – October 2018 (2 years 4 months)*  
+**1st Rotation:** *Windows Finance COGS*  
+- Owned reporting for Windows royalties COGS, managing budgets, forecasts, and close analysis.  
+- Built a long-range planning model for multi-year business discussions.  
+- Developed an intellectual property model used in mobile phone licensing deal negotiations by the senior legal team.  
+
+**2nd Rotation:** *Worldwide Commercial Solutions Finance*  
+- Built Power BI reports used by senior leaders, training team members on the platform.  
+- Led analysis of a new data source revealing customer purchase patterns and developed a transition plan for its adoption.  
+
+**3rd Rotation:** *Finance Business Intelligence Services*  
+- Project managed the onboarding of a new centralized field forecast model for subsidiary finance leaders, saving $2.4 million annually.  
+
+**4th Rotation:** *Office/Dynamics/Bing Finance Business Intelligence*  
+- Partnered with a sales data science team to develop machine learning models predicting deal closures for sales pipeline forecasting.  
+- Built an R-based driver machine learning model to forecast Search revenue.  
+- Implemented natural language processing in Python to analyze United Nations policy PDFs for the Microsoft Airband initiative.  
+
+## Education  
+- **The University of Kansas**  
+  Bachelor’s Degree in Finance (2012 – 2016)  
+
+- **Microsoft Professional Program for Data Science**  
+  Data Science Certification (2017 – 2018)  
+
+- **DataCamp**  
+  Data Scientist with Python Certification (2017)
+
+## Awards & Honors  
+- Most Outstanding Senior in Finance Award  
+- CFA Institute Research Challenge Champion  
+- Finance Scholars Program
+- Business Honors Program  
+- Phi Kappa Psi Endowment Scholarship  

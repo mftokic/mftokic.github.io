@@ -532,6 +532,34 @@
     "text": "Hi there, my name’s Mike Tokic. I currently work at Microsoft where I help build things with machine learning. These are my thoughts….on things. These thoughts are my personal opinions and do not reflect the ideas/beliefs of my employer. There, now I can say whatever I want."
   },
   {
+    "objectID": "about.html#origin-story",
+    "href": "about.html#origin-story",
+    "title": "About",
+    "section": "Origin Story",
+    "text": "Origin Story\nIn the summer of 2015, I was your run of the mill finance intern at Microsoft. Bright eyed and bushy tailed, I knew a little bit about business and almost everything about technology. Just kidding I knew nothing.\nWithin a span of two weeks my life changed forever.\nFirst, I saw a demo of Azure Machine Learning, and second our CFO Amy Hood told all the interns that AI will become very important in Finance one day. That was all I needed to hear to dedicate my life to figuring this AI and machine learning thing out, starting my quest to get data superpowers. Over the next few years, I taught myself how to use data and AI to help our business make better decisions. Successfully transitioning from a finance to engineering career track. I’ve helped democratize AI so everyone in finance can have data superpowers, no coding required. Nothing gets me more excited than building technology that fundamentally changes how people live their lives and giving other people data superpowers."
+  },
+  {
+    "objectID": "about.html#professional-experience",
+    "href": "about.html#professional-experience",
+    "title": "About",
+    "section": "Professional Experience",
+    "text": "Professional Experience\n\nMicrosoft\n\nSenior Software Engineer\nOctober 2018 – Present\n- Lead advanced analytics efforts, building machine learning solutions for finance.\n- Created a self-serve machine learning forecasting tool, replacing $450 billion of manual forecasts and saving $3 million annually.\n- Developed and maintained machine learning APIs and pipelines using Azure ML and Synapse.\n- Managed and mentored both interns and full-time employees, often upskilling direct reports with business backgrounds in data analytics and machine learning.\n- Designed and ran an apprenticeship program for machine learning, mentoring over 75 early-career employees.\n- Recognized as a top expert in AI and machine learning, presenting to CFOs and winning Modern Finance awards: Inspiring Teacher (2022) and Outstanding Accelerator (2023).\n\n\nFinance Rotation Analyst\nJuly 2016 – October 2018 (2 years 4 months)\n1st Rotation: Windows Finance COGS\n- Owned reporting for Windows royalties COGS, managing budgets, forecasts, and close analysis.\n- Built a long-range planning model for multi-year business discussions.\n- Developed an intellectual property model used in mobile phone licensing deal negotiations by the senior legal team.\n2nd Rotation: Worldwide Commercial Solutions Finance\n- Built Power BI reports used by senior leaders, training team members on the platform.\n- Led analysis of a new data source revealing customer purchase patterns and developed a transition plan for its adoption.\n3rd Rotation: Finance Business Intelligence Services\n- Project managed the onboarding of a new centralized field forecast model for subsidiary finance leaders, saving $2.4 million annually.\n4th Rotation: Office/Dynamics/Bing Finance Business Intelligence\n- Partnered with a sales data science team to develop machine learning models predicting deal closures for sales pipeline forecasting.\n- Built an R-based driver machine learning model to forecast Search revenue.\n- Implemented natural language processing in Python to analyze United Nations policy PDFs for the Microsoft Airband initiative."
+  },
+  {
+    "objectID": "about.html#education",
+    "href": "about.html#education",
+    "title": "About",
+    "section": "Education",
+    "text": "Education\n\nThe University of Kansas\nBachelor’s Degree in Finance (2012 – 2016)\nMicrosoft Professional Program for Data Science\nData Science Certification (2017 – 2018)\nDataCamp\nData Scientist with Python Certification (2017)"
+  },
+  {
+    "objectID": "about.html#awards-honors",
+    "href": "about.html#awards-honors",
+    "title": "About",
+    "section": "Awards & Honors",
+    "text": "Awards & Honors\n\nMost Outstanding Senior in Finance Award\n\nCFA Institute Research Challenge Champion\n\nFinance Scholars Program\nBusiness Honors Program\n\nPhi Kappa Psi Endowment Scholarship"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Thoughts on Things",
