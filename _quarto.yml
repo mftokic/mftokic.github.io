@@ -17,8 +17,12 @@ website:
       - about.qmd
       - text: "Software"
         file: software.qmd
+      - icon: linkedin
+        href: https://www.linkedin.com/in/mftokic/
       - icon: github
         href: https://github.com/mftokic
+      - icon: twitter
+        href: https://twitter.com/mftokic
       - icon: rss
         href: index.xml
   draft-mode: unlinked  
