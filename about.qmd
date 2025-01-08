@@ -28,19 +28,23 @@ Over the next few years, I taught myself how to use data and AI to help our busi
 
 #### Finance Rotation Analyst  
 *July 2016 – October 2018 (2 years 4 months)*  
+
 **1st Rotation:** *Windows Finance COGS*  
 - Owned reporting for Windows royalties COGS, managing budgets, forecasts, and close analysis.  
 - Built a long-range planning model for multi-year business discussions.  
 - Developed an intellectual property model used in mobile phone licensing deal negotiations by the senior legal team.  
 
 **2nd Rotation:** *Worldwide Commercial Solutions Finance*  
+
 - Built Power BI reports used by senior leaders, training team members on the platform.  
 - Led analysis of a new data source revealing customer purchase patterns and developed a transition plan for its adoption.  
 
 **3rd Rotation:** *Finance Business Intelligence Services*  
+
 - Project managed the onboarding of a new centralized field forecast model for subsidiary finance leaders, saving $2.4 million annually.  
 
 **4th Rotation:** *Office/Dynamics/Bing Finance Business Intelligence*  
+
 - Partnered with a sales data science team to develop machine learning models predicting deal closures for sales pipeline forecasting.  
 - Built an R-based driver machine learning model to forecast Search revenue.  
 - Implemented natural language processing in Python to analyze United Nations policy PDFs for the Microsoft Airband initiative.  
