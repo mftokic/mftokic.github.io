@@ -5,3 +5,8 @@ title: "Software I've Written"
 ## R
 
 -   [finnts](https://microsoft.github.io/finnts/) - low code package for time series forecasting
+
+## Web Apps Built on Replit
+
+- [Decision Tracker](https://decision-tracker-mftokic.replit.app/login) - track your major decisions and analyze them in the future
+- [Workout Builder](https://workout-builder-mftokic.replit.app/) - use AI to create custom workouts tailored to your needs

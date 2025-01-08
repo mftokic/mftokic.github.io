@@ -30,6 +30,7 @@ Over the next few years, I taught myself how to use data and AI to help our busi
 *July 2016 – October 2018 (2 years 4 months)*  
 
 **1st Rotation:** *Windows Finance COGS*  
+
 - Owned reporting for Windows royalties COGS, managing budgets, forecasts, and close analysis.  
 - Built a long-range planning model for multi-year business discussions.  
 - Developed an intellectual property model used in mobile phone licensing deal negotiations by the senior legal team.  
