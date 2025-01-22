@@ -1,0 +1,12 @@
+---
+title: "Why LLMs Are the Most Important Technology Ever Created"
+description: "Why you'd bring chatgpt to a desert island"
+author: "Mike Tokic"
+date: "2025-01-25"
+categories: [AI, learning, school]
+image: "image.png"
+draft: true
+---
+
+For the first time in history, the answer to the following questions of "what item would you bring to a desert island" and "what item would you keep to start civilization over from scratch" is now the same thing. You would bring ChatGPT, or more generally a generative AI model. This proves that the most important thing in our world is access to knowledge. 
+
