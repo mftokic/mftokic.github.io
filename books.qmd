@@ -44,40 +44,39 @@ title: "Books That Changed My Life"
 - [The Great Mental Models](https://a.co/d/feiSnef) 
 - [Extreme Ownership](https://a.co/d/hJCx3ez) 
 - [The Dichotomy of Leadership](https://a.co/d/imGJCcX) 
-- The Coddling of the American Mind 
-- How Innovation Works 
-- Make Something Wonderful 
-- Excellent Advice for Living 
-- Stillness is the Key 
-- The Obstacle is the Way 
-- Ego is the Enemy 
-- The Algebra of Happiness
-- Essentialism 
-- In the Weeds
-- Principles
-- Walkable City
-- Discipline Equals Freedom
-- Atomic Habits
-- Read This Before Our Next Meeting 
-- Fear and Loathing in Las Vegas 
-- Build 
-- Homo Deus 
-- The 7 Habits of Highly Effective People 
-- A Mind for Numbers 
-- Drive 
-- The Algebra of Wealth 
-- Ready Player One 
-- Sapiens 
-- The Inevitable 
-- Breath 
-- Don't Tell Me I Can't 
-- Shantaram 
-- Red Rising
-- The Chronicles of Narnia
-- Steve Jobs
-- The New One Minute Manager
-- Greenlights 
-- The Four Hour Body
-- The Graveyard Book 
-- Creativity Inc 
-- Good to Great 
+- [The Coddling of the American Mind](https://a.co/d/fIAYoBg) 
+- [How Innovation Works](https://a.co/d/bpiMlYT)    
+- [Excellent Advice for Living](https://a.co/d/2d7dRml) 
+- [Stillness is the Key](https://a.co/d/gHVYK68) 
+- [The Obstacle is the Way](https://a.co/d/ftiqhOR) 
+- [Ego is the Enemy](https://a.co/d/6WGZdCX) 
+- [The Algebra of Happiness](https://a.co/d/ePmlrWu)
+- [Essentialism](https://a.co/d/9eFwdlI) 
+- [In the Weeds](https://a.co/d/aarVD7p)
+- [Principles](https://a.co/d/0PWw75o)
+- [Walkable City](https://a.co/d/5Ry8Tex)
+- [Discipline Equals Freedom](https://a.co/d/86hV0AC)
+- [Atomic Habits](https://a.co/d/8g41hIh)
+- [Read This Before Our Next Meeting](https://a.co/d/f1GQXHz) 
+- [Fear and Loathing in Las Vegas](https://a.co/d/2cHi515) 
+- [Build](https://a.co/d/3qN8L24) 
+- [Homo Deus](https://a.co/d/1YayXCD) 
+- [The 7 Habits of Highly Effective People](https://a.co/d/7hW4cRC) 
+- [A Mind for Numbers](https://a.co/d/981NWqD) 
+- [Drive](https://a.co/d/4MRjLVG) 
+- [The Algebra of Wealth](https://a.co/d/7eMvnCu) 
+- [Ready Player One](https://a.co/d/iliEDCu) 
+- [Sapiens](https://a.co/d/2mOShOL) 
+- [The Inevitable](https://a.co/d/d33xeb6) 
+- [Breath](https://a.co/d/aLiLd4n) 
+- [Don't Tell Me I Can't](https://a.co/d/17qTrlm) 
+- [Shantaram](https://a.co/d/h4XGW1K) 
+- [Red Rising](https://a.co/d/dpoc8nn)
+- [The Chronicles of Narnia](https://a.co/d/6gQl8do)
+- [Steve Jobs](https://a.co/d/cnQ1WZU)
+- [The New One Minute Manager](https://a.co/d/dEP66vU)
+- [Greenlights](https://a.co/d/h8jSR59) 
+- [The Four Hour Body](https://a.co/d/7ixne61)
+- [The Graveyard Book](https://a.co/d/3RzYHIR) 
+- [Creativity Inc](https://a.co/d/eaFWuT6) 
+- [Good to Great](https://a.co/d/9zpUo66) 
