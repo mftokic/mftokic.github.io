@@ -3,6 +3,7 @@ title: "Books That Changed My Life"
 ---
 
 - [The Alamanack of Naval Ravikant](https://a.co/d/crZWpii)
+    - [Review](https://mftokic.github.io/posts/2023-12-30-naval-book/)
 - [Zero to One](https://a.co/d/cHMChgC) 
 - [Tools of Titans](https://a.co/d/dQsTYXz)
 - [Born to Run](https://a.co/d/c6dUa5P) 
