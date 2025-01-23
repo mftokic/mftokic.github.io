@@ -17,6 +17,8 @@ website:
       - about.qmd
       - text: "Software"
         file: software.qmd
+      - text: "Books"
+        file: books.qmd
       - icon: linkedin
         href: https://www.linkedin.com/in/michaeltokic/
       - icon: github

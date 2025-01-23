@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Mike Tokic">
-<meta name="dcterms.date" content="2024-05-13">
-<meta name="description" content="New feature that improves forecast accuracy">
+<meta name="dcterms.date" content="2025-01-25">
+<meta name="description" content="Why you’d bring chatgpt to a desert island">
 
-<title>Multistep Horizon Forecasting With finnts – Thoughts on Things</title>
+<title>Why LLMs Are the Most Important Technology Ever Created – Thoughts on Things</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -81,27 +81,24 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 </script>
+<meta name="quarto:status" content="draft">
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Multistep Horizon Forecasting With finnts – Thoughts on Things">
-<meta property="og:description" content="New feature that improves forecast accuracy">
-<meta property="og:image" content="https://mftokic.github.io/posts/2024-05-13-finnts-multistep-horizon/image.png">
+<meta property="og:title" content="Why LLMs Are the Most Important Technology Ever Created – Thoughts on Things">
+<meta property="og:description" content="Why you’d bring chatgpt to a desert island">
+<meta property="og:image" content="https://mftokic.github.io/posts/2025-01-25-knowledge/image.png">
 <meta property="og:site_name" content="Thoughts on Things">
-<meta property="og:image:height" content="1024">
-<meta property="og:image:width" content="1024">
-<meta name="twitter:title" content="Multistep Horizon Forecasting With finnts – Thoughts on Things">
-<meta name="twitter:description" content="New feature that improves forecast accuracy">
-<meta name="twitter:image" content="https://mftokic.github.io/posts/2024-05-13-finnts-multistep-horizon/image.png">
-<meta name="twitter:image-height" content="1024">
-<meta name="twitter:image-width" content="1024">
+<meta name="twitter:title" content="Why LLMs Are the Most Important Technology Ever Created – Thoughts on Things">
+<meta name="twitter:description" content="Why you’d bring chatgpt to a desert island">
+<meta name="twitter:image" content="https://mftokic.github.io/posts/2025-01-25-knowledge/image.png">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner"><div id="quarto-draft-alert" class="alert alert-warning"><i class="bi bi-pencil-square"></i>Draft</div>
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -163,17 +160,16 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Multistep Horizon Forecasting With finnts</h1>
+      <h1 class="title">Why LLMs Are the Most Important Technology Ever Created</h1>
                   <div>
         <div class="description">
-          New feature that improves forecast accuracy
+          Why you’d bring chatgpt to a desert island
         </div>
       </div>
                           <div class="quarto-categories">
-                <div class="quarto-category">time-series</div>
-                <div class="quarto-category">machine-learning</div>
-                <div class="quarto-category">finance</div>
-                <div class="quarto-category">finnts</div>
+                <div class="quarto-category">AI</div>
+                <div class="quarto-category">learning</div>
+                <div class="quarto-category">school</div>
               </div>
                   </div>
   </div>
@@ -191,7 +187,7 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">May 13, 2024</p>
+        <p class="date">January 25, 2025</p>
       </div>
     </div>
     
@@ -210,218 +206,9 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 
 
 
-<p><img src="./image.png" class="img-fluid"></p>
-<section id="tldr" class="level3">
-<h3 class="anchored" data-anchor-id="tldr">TL;DR</h3>
-<p>I’m excited to announce that we just released a new feature in our machine learning forecast package, <a href="https://microsoft.github.io/finnts">finnts</a>, centered around multistep horizon forecasting. It’s a mouthful to say but at a high level it helps improve forecast accuracy by optimizing models to be accurate at each period of a forecast horizon. For example, a 3 month forecast would then be optimized for the forecast in each month (period) of the future forecast.</p>
-<p>Let’s dive in to how multivariate modeling used to work in the package and how multistep horizon forecasting can help.</p>
-</section>
-<section id="how-it-used-to-work" class="level3">
-<h3 class="anchored" data-anchor-id="how-it-used-to-work">How It Used to Work</h3>
-<p>Let’s use an example of a monthly revenue forecast for our business’s main product. In practice we would want more than a year of data but let’s just keep it simple today.</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Date</th>
-<th>Revenue</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>2023-01-01</td>
-<td>120</td>
-</tr>
-<tr class="even">
-<td>2023-02-01</td>
-<td>135</td>
-</tr>
-<tr class="odd">
-<td>2023-03-01</td>
-<td>140</td>
-</tr>
-<tr class="even">
-<td>2023-04-01</td>
-<td>145</td>
-</tr>
-<tr class="odd">
-<td>2023-05-01</td>
-<td>150</td>
-</tr>
-<tr class="even">
-<td>2023-06-01</td>
-<td>155</td>
-</tr>
-<tr class="odd">
-<td>2023-07-01</td>
-<td>160</td>
-</tr>
-<tr class="even">
-<td>2023-08-01</td>
-<td>165</td>
-</tr>
-<tr class="odd">
-<td>2023-09-01</td>
-<td>170</td>
-</tr>
-<tr class="even">
-<td>2023-10-01</td>
-<td>175</td>
-</tr>
-<tr class="odd">
-<td>2023-11-01</td>
-<td>180</td>
-</tr>
-<tr class="even">
-<td>2023-12-01</td>
-<td>185</td>
-</tr>
-</tbody>
-</table>
-<p>If we wanted to forecast the next 3 months of revenue using multivariate machine learning models we would have to do some <a href="https://mftokic.github.io/posts/2024-05-01-time-series-features/">feature engineering</a> to get our data in good shape. This involves creating lags on our <span style="text-decoration: underline; cursor: help;" title="What we want to forecast, in this case Revenue.">target variable</span>. Let’s try create some lags on this data.</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Date</th>
-<th>Revenue</th>
-<th>Revenue_Lag1</th>
-<th>Revenue_Lag2</th>
-<th>Revenue_Lag3</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>2023-01-01</td>
-<td>120</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>2023-02-01</td>
-<td>135</td>
-<td>120</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>2023-03-01</td>
-<td>140</td>
-<td>135</td>
-<td>120</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>2023-04-01</td>
-<td>145</td>
-<td>140</td>
-<td>135</td>
-<td>120</td>
-</tr>
-<tr class="odd">
-<td>2023-05-01</td>
-<td>150</td>
-<td>145</td>
-<td>140</td>
-<td>135</td>
-</tr>
-<tr class="even">
-<td>2023-06-01</td>
-<td>155</td>
-<td>150</td>
-<td>145</td>
-<td>140</td>
-</tr>
-<tr class="odd">
-<td>2023-07-01</td>
-<td>160</td>
-<td>155</td>
-<td>150</td>
-<td>145</td>
-</tr>
-<tr class="even">
-<td>2023-08-01</td>
-<td>165</td>
-<td>160</td>
-<td>155</td>
-<td>150</td>
-</tr>
-<tr class="odd">
-<td>2023-09-01</td>
-<td>170</td>
-<td>165</td>
-<td>160</td>
-<td>155</td>
-</tr>
-<tr class="even">
-<td>2023-10-01</td>
-<td>175</td>
-<td>170</td>
-<td>165</td>
-<td>160</td>
-</tr>
-<tr class="odd">
-<td>2023-11-01</td>
-<td>180</td>
-<td>175</td>
-<td>170</td>
-<td>165</td>
-</tr>
-<tr class="even">
-<td>2023-12-01</td>
-<td>185</td>
-<td>180</td>
-<td>175</td>
-<td>170</td>
-</tr>
-<tr class="odd">
-<td>2024-01-01</td>
-<td>???</td>
-<td>185</td>
-<td>180</td>
-<td>175</td>
-</tr>
-<tr class="even">
-<td>2024-02-01</td>
-<td>???</td>
-<td>???</td>
-<td>185</td>
-<td>180</td>
-</tr>
-<tr class="odd">
-<td>2024-03-01</td>
-<td>???</td>
-<td>???</td>
-<td>???</td>
-<td>185</td>
-</tr>
-</tbody>
-</table>
-<p>We added some rows onto the bottom of the data, to allow us to forecast out the next 3 months after our historical data ends. That’s what we have question marks “???” for those values. We also added lags for a 1 month, 2 month, and 3 month lag. But hey, looks like we have a problem. We have more question marks for a few future months for lag 1 and lag 2. If we wanted to forecast the next three months we wouldn’t be able to use those lags, since once we get out further in the <span style="text-decoration: underline; cursor: help;" title="How far out we want to forecast, in this case we have a forecast horizon of 3.">forecast horizon</span> we start to have missing lag data.</p>
-<p>This means that the smallest lag we could use would always be equal to or greater than the forecast horizon. Since our forecast horizon is 3 than the smallest lag we could use to train a model on would be lag 3. This approach can yield good results, but it removes a lot of potential signal in the data. Revenue next month is most likely impacted by how revenue grew in the current month, but if our forecast horizon is long a lot of this insight has to get thrown away before we can train models. Imagine a forecast horizon of 12. For a monthly forecast this limits our lags to 12 months or more, which is a really bummer since our business can drastically change within 3-6 months, and not using that information in our model can hurt forecast accuracy.</p>
-</section>
-<section id="how-multistep-horizon-forecasting-works" class="level3">
-<h3 class="anchored" data-anchor-id="how-multistep-horizon-forecasting-works">How Multistep Horizon Forecasting Works</h3>
-<p>Multistep horizon helps fix this issue that allows us to use smaller lags while still being able to have long forecast horizons. In our 3 month forecast horizon example, we can keep the lag 1 and lag 2 features, but how the model gets trained will be different.</p>
-<p>In the non-multistep horizon approach, a specific model is trained once on the data using lags that are equal or greater than the forecast horizon. When we run a multistep horizon approach, we can actually train multiple sub models under the hood of a specific model. In our 3 month forecast horizon, here’s how one model like linear regression will be trained.</p>
-<ul>
-<li>For the first month in the forecast horizon, we can use all available lags. Lag 1, lag 2, and lag 3 of revenue will all be used to predict the first month.</li>
-<li>In the second month of the forecast horizon, we will use lag 2 and 3 to predict the second month.</li>
-<li>In the third month of the forecast horizon, we will use lag 3 to predict the third month.</li>
-</ul>
-<p>Are you starting to get the hang of it? With multistep horizon forecasting we can still have one model that under the hood has multiple sub models that are each optimized on forecasting out a specific part of our forecast horizon. This allows us to have greater accuracy in the first few periods of our forecast horizon. In a non-mulitstep horizon approach, we are always optimizing for the last period in a forecast horizon. If the forecast horizon is 12 months, the way we do the feature engineering and train models is optimized for forecasting out the 12th month. When running a multistep horizon approach, we instead optimize for every period of the forecast horizon.</p>
-<p>This kind of approach is so crucial to forecasters in the corporate finance space. Often these financial analysts are tasked with always forecasting out the rest of the entire fiscal year, even though they might only care about the next 3 months, since they are most likely going to be re-creating a new forecast in the following quarter. Multistep horizon forecasting allows these analysts to still forecast out long forecast horizons like 9 or 12 months, while still being able to optimize for the next 1-3 months. How cool is that!</p>
-</section>
-<section id="reversal" class="level3">
-<h3 class="anchored" data-anchor-id="reversal">Reversal</h3>
-<p>If each specific model can have 2-5 sub models under the hood, the amount of time needed to train these models can multiply by the same amount. Make sure to keep that in mind if run time is a big factor in your forecasting process.</p>
-<p>A multistep horizon forecast may not result in a more accurate forecast for smaller forecast horizons. Some time series may have a strong relationship with a 12 month lag, but less with a 1 month or 2 month lag. This means there is strong yearly seasonality in the data. If there is not a strong relationship with 1 month or 2 month lag, then having multiple sub models optimize for each future month in a multistep horizon approach may not result in more accurate forecasts. Consider doing some <span style="text-decoration: underline; cursor: help;" title="Data analysis that helps us better understand our historical data before we start feature engineering and training models.">exploratory data analysis</span> to see what kind of relationships there are with historical lags of your target variable and other features.</p>
-</section>
-<section id="final-thoughts" class="level3">
-<h3 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h3>
-<p>The new multistep horizon forecasting approach in finnts allows users to create even more accurate forecasts, regardless of their forecast horizon length. If you’d like to learn more check out the <a href="https://microsoft.github.io/finnts/articles/models-used-in-finnts.html#multistep-horizon-models">official finnts documentation</a> to see how you can use the newest multistep horizon feature!</p>
+<p>For the first time in history, the answer to the following questions of “what item would you bring to a desert island” and “what item would you keep to start civilization over from scratch” is now the same thing. You would bring ChatGPT, or more generally a generative AI model. This proves that the most important thing in our world is access to knowledge.</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
