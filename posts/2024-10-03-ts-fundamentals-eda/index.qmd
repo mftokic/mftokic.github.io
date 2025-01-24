@@ -21,4 +21,4 @@ Applying EDA to time series data is a unique process, different from every other
 - [Time Series Decomposition](https://mftokic.github.io/posts/2024-11-06-ts-fundamentals-decomposition/)
 - [Autocorrelation](https://mftokic.github.io/posts/2024-11-12-ts-fundamentals-autocorrelation/)
 - [Missing Values, Outliers](https://mftokic.github.io/posts/2024-11-26-ts-fundamentals-missing-outliers/)
-- External Regressors (in progress)
+- External Regressors
