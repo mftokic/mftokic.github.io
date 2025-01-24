@@ -5,7 +5,6 @@ author: "Mike Tokic"
 date: "2025-01-24"
 categories: [machine-learning, time-series]
 image: "image.png"
-draft: true
 ---
 
 *This post is part of the [exploratory data analysis chapter](https://mftokic.github.io/posts/2024-10-03-ts-fundamentals-eda/) within a larger learning series around time series forecasting fundamentals. [Check out the main learning path](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/) to see other posts in the series.* 
@@ -14,9 +13,9 @@ draft: true
 
 ### May The Outside Forces Be With You
 
-When creating a time series forecast, you really only need three columns. One to identify one time series from another, a timestamp (date) column, and your target variable. With these three things you can product a high quality forecasts. Unfortunately most time series do not live in a vacuum, and are subject to outside forces. These forces could be things like macroeconomic factors like inflation or consumer sentiment. The growing market share of your competitors. Or even when your product might go on sale. These are all external regressors (xregs), or outside data points that can be used to improve the predictive accuracy of our time series forecast. 
+When creating a time series forecast, you really only need three columns. One to identify one time series from another, a timestamp (date) column, and your target variable. With these three things you can produce high quality forecasts. Unfortunately most time series do not live in a vacuum, and are subject to outside forces. These forces could be things like macroeconomic factors like inflation or consumer sentiment. The growing market share of your competitors. Or even when your product might go on sale. These are all external regressors (xregs), or outside data points that can be used to improve the predictive accuracy of our time series forecast. 
 
-External regressors come in many shapes and sizes. They are usually chosen based on the [domain expertise](https://mftokic.github.io/posts/2024-04-02-time-series-domain-expertise/) of whatever you're trying to forecast. Outside of a hunch they might work, how can we tell if they should be used in our time series forecast? Let's walk through a few methods to measure the relationship between external regressors and our target variable. 
+External regressors come in many shapes and sizes. They are usually chosen based on the [domain expertise](https://mftokic.github.io/posts/2024-04-02-time-series-domain-expertise/) of whatever you're trying to forecast. Outside of a hunch that they might work, how can we tell if they should be used in our time series forecast? Let's walk through a few methods to measure the relationship between external regressors and our target variable. 
 
 ### Measuring Linear Relationships
 
@@ -125,7 +124,7 @@ Similar to regular correlation, xreg1 shows a strong relationship with revenue. 
 
 There's one final type of analysis we are missing. Sometimes adding simple binary variables as external regressors can result in major accuracy improvements. These are 1 or 0 values that can represent a certain event or action happening. For example you might have new product launches in random months throughout the year. These can be represented with a 1 when there is a product launch, and a 0 when there is not. Without this binary data, a model may pick up on trends and patterns that may not repeat in the future. Your business might thrive during the months leading up to the US presidential election, but that only comes around every four years. So giving the model context of those events is important. 
 
-An interesting binary regressor in recent years has been a COVID-19 flag. This shows when COVID was impacting the world the most. When looking at the chart of our time series above, we can see a large dip in 2020. So it looks like COVID has a potential effect. Let's create a COVID flag for every month in 2020 and also create a second flag that contains random 1 and 0 values to see if we can determine which regressor is important to our specific time series. 
+An interesting binary regressor in recent years has been a COVID-19 flag. This shows when COVID was impacting the world the most. When looking at the chart of our time series above, we can see a large dip in 2020. So it looks like COVID has a potential effect. Let's create a COVID flag with a value of 1 for every month in 2020 and a value of 0 for all other months. We will also create a second flag that contains random 1 and 0 values to see if we can determine which regressor is important to our specific time series. 
 
 We can calculate a mutual information score for each one. 
 
@@ -136,19 +135,19 @@ We can calculate a mutual information score for each one.
 
 While the mutual information score for COVID is small, it's still above zero. Which proves that this COVID flag may help improve our models predictive performance. 
 
-Finally there are other ways to figure out the importance of external regressors, but most of them deal with training actual models. I'll wait on discussing those techniques until we build up some more foundational knowledge and eventually get the to sections on models themselves. Stay tuned. 
+Finally there are other ways to figure out the importance of external regressors, but most of them deal with training actual models. I'll wait on discussing those techniques until we build up some more foundational knowledge and eventually get to the sections on models themselves. Stay tuned. 
 
 ### Reversal
 
 When working with external regressors, it’s important to approach correlations and relationships critically. A strong correlation might suggest a connection, but it does not prove causation. This distinction is crucial, as relying on variables without clear logical links to your target can mislead your analysis and undermine your forecast.
 
-Another issue to watch for is multicollinearity. When external regressors are highly correlated with one another. Models can struggle to differentiate the effects of variables that overlap significantly, leading to instability in coefficient estimates and diminished interpretability. To mitigate this, examine the correlations among your regressors before including them. If two variables are redundant, consider removing or transforming one to reduce redundancy.
+Another issue to watch for is multicollinearity. This happens when external regressors are highly correlated with one another. Models can struggle to differentiate the effects of variables that overlap significantly, leading to instability in coefficient estimates and diminished interpretability. To mitigate this, examine the correlations among your regressors before including them. If two variables are redundant, consider removing or transforming one to reduce redundancy.
 
 Ultimately, external regressors should be chosen based on both statistical evidence and domain knowledge. They should have a clear, interpretable relationship with the target variable. Without this foundation, even the most promising-looking variables can introduce unnecessary complexity and noise.
 
 ### Final Thoughts
 
-Incorporating external regressors into your time series analysis can significantly enhance the accuracy and robustness of your forecasts when done carefully. The methods discussed, including correlation analysis and mutual information, are essential tools for evaluating potential regressors. However, they should always be applied alongside sound reasoning and a thorough understanding of the domain.
+Incorporating external regressors into your time series analysis can significantly enhance the accuracy and robustness of your forecasts when done carefully. The methods discussed, including correlation analysis and mutual information, are essential tools for evaluating potential regressors. However, they should always be applied alongside sound reasoning and a thorough understanding of the business.
 
 It’s also worth noting that the relationship between external regressors and your target may not always be straightforward. Non-linear relationships, lags, and interactions with other variables often require additional exploration to capture their full impact. This underscores the importance of iterative experimentation and validation throughout the forecasting process.
 
