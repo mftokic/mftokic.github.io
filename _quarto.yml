@@ -19,6 +19,8 @@ website:
         file: software.qmd
       - text: "Books"
         file: books.qmd
+      - text: "Ask My AI"
+        href: https://personal-blog-ai-chat-mftokic.replit.app/
       - icon: linkedin
         href: https://www.linkedin.com/in/michaeltokic/
       - icon: github
