@@ -1,0 +1,83 @@
+---
+title: "December Learnings"
+description: "Random stuff I learned in January 2025"
+author: "Mike Tokic"
+date: "2025-02-01"
+categories: [life, learning]
+image: "image.png"
+draft: True
+---
+
+I love reading books, watching YouTube videos, listening to podcasts, you name it. Anything learning related is my jam. But I recently realized that if I don't take notes on what I'm learning, I will probably forget everything. Now when I hear something interesting, I write it down in an Apple note for that month. Below are some of the learnings I jotted down in January, summarized by ChatGPT. I hope you find them as interesting as I did. 
+
+## 1. Work-Life Balance & Fulfillment
+- **Fun, not discipline**: Scheduling enjoyable activities each week prevents work from creeping into all free time.  
+- **Success definition**: True success is loving both your work and your personal life.  
+- **Capping success**: Decide how much growth you can handle without losing who you are.
+
+## 2. Tradeoffs & Decision-Making
+- **No perfect solutions**: Everything has pros and cons; success lies in choosing the right tradeoff.  
+- **Red flags**: If you find yourself thinking “but it’s so much money,” reassess your motives.  
+- **Fear of big goals**: While aiming high is less crowded, it can also be used as an excuse if you fail.
+
+## 3. Competition & High Performance
+- **Hidden costs**: Emulating high performers may mean accepting hidden sacrifices.  
+- **Consistency**: Deliberate, ongoing practice filters out those who can’t sustain effort.  
+- **Focus vs. Obsession**: The lazy lose to the average, the average lose to the focused, the focused lose to the obsessed.
+
+## 4. Adaptability & Innovation
+- **Pivot or perish**: Like Western Digital clinging to telegrams post-telephone, ignoring new tech can be fatal.  
+- **Company reinvention**: Nintendo, YouTube, and Slack all started with entirely different products.
+
+## 5. Human Needs & Motivations
+- **Beyond basics**: After food and shelter, people want affiliation, status, and freedom from fear.  
+- **Status & affiliation**: These drive many personal and social decisions, from kids to career choices.
+
+## 6. Simplicity & Execution
+- **Complexity as an enemy**: Simpler approaches often yield better execution (Tony Robbins).  
+- **Stress from neglect**: Stress arises from ignoring important tasks or problems.
+
+## 7. Personal Growth & Mindset
+- **Meditation zones**: Mindfulness, Support, Flow, and Awakening each expand consciousness in different ways.  
+- **Courage gap**: For most smart people, the missing piece is the bravery to act.  
+- **Thinking in writing**: Writing clarifies thoughts and fosters deeper understanding.
+
+## 8. Entrepreneurship & Career
+- **Keys to success**:  
+  1. **Courage** to start  
+  2. **Perseverance** to test multiple approaches  
+  3. **Skills** to build, sell, and harness luck  
+- **Building an audience**: Focus on the right followers, share your niche expertise, and aim for ongoing improvement.  
+- **If you don’t choose a goal**: Society will assign you one you might not want.
+
+## 9. Health & Well-Being
+- **Weight control**: Balance palatability with low calorie density.  
+- **Dental health**: Poor oral care can raise dementia risk by up to 30%.  
+- **Marriage vs. career**: A great marriage and an average job can be happier than a great job but unhappy marriage.
+
+## 10. Education & Parenting
+- **Raising a sovereign child**: Freedom over control; allow exploration and independent thought.  
+- **Scaffolding**: Provide temporary support or structure until a child (or learner) can handle it on their own.  
+- **Beware status games in youth**: Sports can become more about prestige than personal growth.
+
+## 11. Angel Investing & Business Acumen
+- **Founder first**: Investors should look at who’s running the startup more than the idea itself.  
+- **Pratfall effect**: Revealing small imperfections **after** showing competence makes you more relatable.
+
+## 12. Societal Observations & History
+- **Slowing progress**: Bigger scientific fields often have slower breakthroughs.  
+- **Policy & power**: Politicians can stifle innovation (e.g., Facebook’s Libra).  
+- **Odd facts**: 80% of US cash is in $100 bills; 70% of restaurant food is delivered.
+
+## 13. Influence & Conformity
+- **Preference falsification**: Publicly supporting what you don’t believe privately.  
+- **Conformity vs. prestige**: We follow the crowd for safety or follow those with status to elevate ourselves.
+
+## 14. AI & the Future of Work
+- **Leadership vs. management**: As AI handles tasks, leadership (direction, strategy) grows more important than micromanagement.  
+- **Using AI**: Either harness AI to assist your projects or risk falling behind.
+
+## 15. Overarching Wisdom
+- **“Enough” vs. “more”**: Don’t let the pursuit of endless growth blind you to the beauty of having enough.  
+- **Fail fast, learn faster**: The cost of being wrong is often lower than the cost of doing nothing.  
+- **Mind as friend**: Wisdom comes from taming your own mind.
