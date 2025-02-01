@@ -1,9 +1,0 @@
----
-title: "How to Find The Most Accurate Time Series Forecast"
-description: "Putting coats of paint on your forecasting masterpiece"
-author: "Mike Tokic"
-date: "2024-12-32"
-categories: [machine-learning]
-image: "image.png"
-draft: true
----

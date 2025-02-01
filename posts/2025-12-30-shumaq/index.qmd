@@ -1,9 +1,0 @@
----
-title: "Shumaq Appreciation Post"
-description: "Let's make this guy a star"
-author: "Mike Tokic"
-date: "2024-11-30"
-categories: [music]
-image: "image.png"
-draft: true
----
