@@ -1,0 +1,22 @@
+---
+title: "Data Cleaning For Time Series"
+description: "Clean data makes for accurate forecasts"
+author: "Mike Tokic"
+date: "2025-02-03"
+categories: [machine-learning, time-series]
+image: "image.png"
+---
+
+*This post is part of a larger learning series around time series forecasting fundamentals. [Check out the learning path](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/) to see other posts in the series.* 
+
+### Data Overview
+
+The result of exploratory data analysis can reveal a lot about your data. One factor it can bubble up is how clean the data is, and if there needs to be any interventions done before we start training models. Cleaning your data is an important next step.  If your data is garbage, you will create a garbage forecast. [Gargbage in, garbage out.](https://mftokic.github.io/posts/2024-04-08-time-series-garbage/) 
+
+### Data Cleaning for Time Series
+
+The way you clean your time series data is very different than of machine learning domains. Here are the building blocks of good data cleaning. Some are the same posts from previous chapters, but they still apply here. Click on each to explore further. 
+
+- [Missing Values, Outliers](https://mftokic.github.io/posts/2024-11-26-ts-fundamentals-missing-outliers/)
+- Box-Cox Transformation (in progress)
+- Stationary
