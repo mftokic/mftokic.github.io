@@ -12,10 +12,8 @@ draft: True
 
 *The example monthly data used in this series [can be found here.](https://github.com/mftokic/mftokic.github.io/blob/main/posts/2024-10-02-ts-fundamentals-whats-a-time-series/example_ts_data.csv) You can also find the [python code used in this post here.](https://github.com/mftokic/mftokic.github.io/blob/main/notebooks/2025-01-24-ts-fundamentals-eda-xregs.ipynb)*
 
-
-
+### Intro
 
 ### Reversal
-
 
 ### Final Thoughts

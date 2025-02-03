@@ -19,10 +19,9 @@ The sequence of what you learn is just as important as what content you learn. I
     - [Autocorrelation](https://mftokic.github.io/posts/2024-11-12-ts-fundamentals-autocorrelation/)
     - [Missing Values, Outliers](https://mftokic.github.io/posts/2024-11-26-ts-fundamentals-missing-outliers/)
     - [External Regressors](https://mftokic.github.io/posts/2025-01-24-ts-fundamentals-eda-xregs/)
-3. Data Cleaning
-    - Missing Values (in progress)
-    - Outliers
-    - Box Cox Transformation
+3. [Data Cleaning](https://mftokic.github.io/posts/2025-02-03-ts-fundamentals-data-cleaning/)
+    - [Missing Values, Outliers](https://mftokic.github.io/posts/2024-11-26-ts-fundamentals-missing-outliers/)
+    - Box Cox Transformation (in progress)
     - Stationary
 4. Univariate Models
     - ARIMA
