@@ -25,6 +25,7 @@ draft: true
 - External Regressors (xregs)
 - Feature
 - Feature Engineering
+- Homoscedastic
 - Independent Variable
 - Interquartile Range (IQR)
 - Lag
@@ -51,6 +52,7 @@ draft: true
 - Seasonality
 - Signal
 - Smell Test
+- Stationary
 - Statistically Significant
 - Supervised Learning
 - Target Variable
@@ -59,5 +61,6 @@ draft: true
 - Timestamp
 - Trend
 - Univariate Model
+- Variance
 - White Noise
 - Z-Score
