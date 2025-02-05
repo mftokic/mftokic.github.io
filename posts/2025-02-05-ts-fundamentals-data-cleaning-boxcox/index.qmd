@@ -2,7 +2,7 @@
 title: "Data Cleaning: Box-Cox Transformations"
 description: "Creating better trendlines in your time series"
 author: "Mike Tokic"
-date: "2025-02-04"
+date: "2025-02-05"
 categories: [machine-learning, time-series]
 image: "image.png"
 draft: True
@@ -10,7 +10,7 @@ draft: True
 
 *This post is part of the [data cleaning chapter](https://mftokic.github.io/posts/2025-02-03-ts-fundamentals-data-cleaning) within a larger learning series around time series forecasting fundamentals. [Check out the main learning path](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/) to see other posts in the series.* 
 
-*The example monthly data used in this series [can be found here.](https://github.com/mftokic/mftokic.github.io/blob/main/posts/2024-10-02-ts-fundamentals-whats-a-time-series/example_ts_data.csv) You can also find the [python code used in this post here.](https://github.com/mftokic/mftokic.github.io/blob/main/notebooks/2025-01-24-ts-fundamentals-eda-xregs.ipynb)*
+*The example monthly data used in this series [can be found here.](https://github.com/mftokic/mftokic.github.io/blob/main/posts/2024-10-02-ts-fundamentals-whats-a-time-series/example_ts_data.csv) You can also find the [python code used in this post here.](https://github.com/mftokic/mftokic.github.io/blob/main/notebooks/2025-02-05-ts-fundamentals-data-cleaning-boxcox.ipynb)*
 
 ### Keeping It In Between The Lines
 
@@ -44,12 +44,13 @@ The automated process chose a lambda value very close to zero. So it basically d
 
 ### Reversal
 
-Runaway exponential trends. 
+There are no perfect solutions, only tradeoffs. Here are a few when using box-cox transformations. 
 
-Time series can't be zero or negative. 
-
-Need to back transform the data after forecasting. 
-
-Removing opportunities for model explainability. 
+1. **Runaway exponential trends**: If your time series has exponential trend aspects, but isn't actually a true exponential trend, there can be big repercussions. A model might take that transformed data and start creating future forecasts that are astronomical in size, going from thousands to trillions in a few periods. A good example is a time series that is stable for most of its history, then at the very end it all of a sudden has tripled in value over one or two periods. A box-cox transformation will pick up on this and transform the data in a way that a model might pick up on as a trend that should grow into the future. So each subsequent forecast period might continue to triple in value. That's not good. 
+2. **Time series can't be zero or negative**: All zero values must be changed to be a placeholder value like 0.1 or 1, that way things like a log transformation can work. There also can't be any negative values, again because you can't take the log of a negative number, which in some time series is unavoidable.
+3. **Need to back transform the data after forecasting**: After you train a model and create a forecast on the transformed data, you must transform the forecast back to the original units. So you have to make sure you keep the lambda value used in the box-cox transformation handy, because you will need it to inverse the transformation. 
+4. **Less model interpretability**: Because a model is learning on transformed data, being able to explain the models decisions become harder. Know there is always a tradeoff between model accuracy and model interpretability. 
 
 ### Final Thoughts
+
+Box-Cox transformations are a powerful tool for taming exponential growth in time series, making trends easier to model and forecast. However, like any transformation, they come with tradeoffs—potentially misleading trends, the need for careful handling of zeros and negatives, and additional steps to back-transform predictions. Despite these challenges, applying Box-Cox correctly can make a significant difference in forecasting accuracy. The key takeaway? Use transformations thoughtfully, always validate their impact on your specific dataset, and remember that the best forecast starts with well-prepared data.
