@@ -81,7 +81,6 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 </script>
-<meta name="quarto:status" content="draft">
 
 
 <link rel="stylesheet" href="../../styles.css">
@@ -98,7 +97,7 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 <body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner"><div id="quarto-draft-alert" class="alert alert-warning"><i class="bi bi-pencil-square"></i>Draft</div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -213,8 +212,8 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 <p><em>The example monthly data used in this series <a href="https://github.com/mftokic/mftokic.github.io/blob/main/posts/2024-10-02-ts-fundamentals-whats-a-time-series/example_ts_data.csv">can be found here.</a> You can also find the <a href="https://github.com/mftokic/mftokic.github.io/blob/main/notebooks/2025-02-05-ts-fundamentals-data-cleaning-boxcox.ipynb">python code used in this post here.</a></em></p>
 <section id="keeping-it-in-between-the-lines" class="level3">
 <h3 class="anchored" data-anchor-id="keeping-it-in-between-the-lines">Keeping It In Between The Lines</h3>
-<p>Most of time series forecasting is all about trying to fit a line to your data. There are a million ways to do it, but at it’s core we want to fit a line that’s as close as possible to the original data and where we think future data points might lie.</p>
-<p>The easiest line to fit is already a straight line, or one that has linear growth. Consider the chart below. What do you think the future forecast will be? Pretty easy, a model can just extend the same linear upward growth going forward.</p>
+<p>Most of time series forecasting is all about trying to fit a line to your data. There are a million ways to do it, but at its core we want to fit a line that’s as close as possible to the original data and where we think future data points might lie.</p>
+<p>The easiest line to fit is already a straight line, or one that has linear growth. Consider the chart below. What do you think the future forecast will be? Pretty easy, a model can just extend the same upward linear growth going forward.</p>
 <p><img src="./chart1.png" class="img-fluid"></p>
 <p>We would always prefer to model a time series that has a linear trend. But often that’s not the case in businesses. Revenue might double every year, and that my friend is not a linear line, but instead an exponential one. A time series growing exponentially is harder for many models to forecast because most models expect the variance of the data to stay the same over time (more on this in the stationary post), and a expanding time series violates this assumption. Consider one of our example time series in our dataset below. See how it grows not at a linear pace but a hockey stick like exponential pace?</p>
 <p><img src="./chart2.png" class="img-fluid"></p>
@@ -242,7 +241,7 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 </section>
 <section id="final-thoughts" class="level3">
 <h3 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h3>
-<p>Box-Cox transformations are a powerful tool for taming exponential growth in time series, making trends easier to model and forecast. However, like any transformation, they come with tradeoffs—potentially misleading trends, the need for careful handling of zeros and negatives, and additional steps to back-transform predictions. Despite these challenges, applying Box-Cox correctly can make a significant difference in forecasting accuracy. The key takeaway? Use transformations thoughtfully, always validate their impact on your specific dataset, and remember that the best forecast starts with well-prepared data.</p>
+<p>Box-Cox transformations are a powerful tool for taming exponential growth in time series, making trends easier to model and forecast. However, like any transformation, they come with tradeoffs. Potentially misleading trends, the need for careful handling of zeros and negatives, and additional steps to back-transform predictions. Despite these challenges, applying box-cox correctly can make a significant difference in forecasting accuracy. The key takeaway? Use transformations thoughtfully, always validate their impact on your specific dataset, and remember that the best forecast starts with well-prepared data.</p>
 
 
 </section>

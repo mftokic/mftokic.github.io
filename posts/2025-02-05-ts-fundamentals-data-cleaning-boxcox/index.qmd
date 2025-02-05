@@ -5,7 +5,6 @@ author: "Mike Tokic"
 date: "2025-02-05"
 categories: [machine-learning, time-series]
 image: "image.png"
-draft: True
 ---
 
 *This post is part of the [data cleaning chapter](https://mftokic.github.io/posts/2025-02-03-ts-fundamentals-data-cleaning) within a larger learning series around time series forecasting fundamentals. [Check out the main learning path](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/) to see other posts in the series.* 
@@ -14,9 +13,9 @@ draft: True
 
 ### Keeping It In Between The Lines
 
-Most of time series forecasting is all about trying to fit a line to your data. There are a million ways to do it, but at it's core we want to fit a line that's as close as possible to the original data and where we think future data points might lie. 
+Most of time series forecasting is all about trying to fit a line to your data. There are a million ways to do it, but at its core we want to fit a line that's as close as possible to the original data and where we think future data points might lie. 
 
-The easiest line to fit is already a straight line, or one that has linear growth. Consider the chart below. What do you think the future forecast will be? Pretty easy, a model can just extend the same linear upward growth going forward. 
+The easiest line to fit is already a straight line, or one that has linear growth. Consider the chart below. What do you think the future forecast will be? Pretty easy, a model can just extend the same upward linear growth going forward. 
 
 ![](./chart1.png)
 
@@ -53,4 +52,4 @@ There are no perfect solutions, only tradeoffs. Here are a few when using box-co
 
 ### Final Thoughts
 
-Box-Cox transformations are a powerful tool for taming exponential growth in time series, making trends easier to model and forecast. However, like any transformation, they come with tradeoffs—potentially misleading trends, the need for careful handling of zeros and negatives, and additional steps to back-transform predictions. Despite these challenges, applying Box-Cox correctly can make a significant difference in forecasting accuracy. The key takeaway? Use transformations thoughtfully, always validate their impact on your specific dataset, and remember that the best forecast starts with well-prepared data.
+Box-Cox transformations are a powerful tool for taming exponential growth in time series, making trends easier to model and forecast. However, like any transformation, they come with tradeoffs. Potentially misleading trends, the need for careful handling of zeros and negatives, and additional steps to back-transform predictions. Despite these challenges, applying box-cox correctly can make a significant difference in forecasting accuracy. The key takeaway? Use transformations thoughtfully, always validate their impact on your specific dataset, and remember that the best forecast starts with well-prepared data.

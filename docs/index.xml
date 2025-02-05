@@ -10,7 +10,62 @@
 <atom:link href="https://mftokic.github.io/index.xml" rel="self" type="application/rss+xml"/>
 <description>A collection of thoughts on things from the mind of Mike Tokic</description>
 <generator>quarto-1.5.57</generator>
-<lastBuildDate>Mon, 03 Feb 2025 08:00:00 GMT</lastBuildDate>
+<lastBuildDate>Wed, 05 Feb 2025 08:00:00 GMT</lastBuildDate>
+<item>
+  <title>Data Cleaning: Box-Cox Transformations</title>
+  <dc:creator>Mike Tokic</dc:creator>
+  <link>https://mftokic.github.io/posts/2025-02-05-ts-fundamentals-data-cleaning-boxcox/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p><em>This post is part of the <a href="https://mftokic.github.io/posts/2025-02-03-ts-fundamentals-data-cleaning">data cleaning chapter</a> within a larger learning series around time series forecasting fundamentals. <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/">Check out the main learning path</a> to see other posts in the series.</em></p>
+<p><em>The example monthly data used in this series <a href="https://github.com/mftokic/mftokic.github.io/blob/main/posts/2024-10-02-ts-fundamentals-whats-a-time-series/example_ts_data.csv">can be found here.</a> You can also find the <a href="https://github.com/mftokic/mftokic.github.io/blob/main/notebooks/2025-02-05-ts-fundamentals-data-cleaning-boxcox.ipynb">python code used in this post here.</a></em></p>
+<section id="keeping-it-in-between-the-lines" class="level3">
+<h3 class="anchored" data-anchor-id="keeping-it-in-between-the-lines">Keeping It In Between The Lines</h3>
+<p>Most of time series forecasting is all about trying to fit a line to your data. There are a million ways to do it, but at its core we want to fit a line that’s as close as possible to the original data and where we think future data points might lie.</p>
+<p>The easiest line to fit is already a straight line, or one that has linear growth. Consider the chart below. What do you think the future forecast will be? Pretty easy, a model can just extend the same upward linear growth going forward.</p>
+<p><img src="https://mftokic.github.io/posts/2025-02-05-ts-fundamentals-data-cleaning-boxcox/chart1.png" class="img-fluid"></p>
+<p>We would always prefer to model a time series that has a linear trend. But often that’s not the case in businesses. Revenue might double every year, and that my friend is not a linear line, but instead an exponential one. A time series growing exponentially is harder for many models to forecast because most models expect the variance of the data to stay the same over time (more on this in the stationary post), and a expanding time series violates this assumption. Consider one of our example time series in our dataset below. See how it grows not at a linear pace but a hockey stick like exponential pace?</p>
+<p><img src="https://mftokic.github.io/posts/2025-02-05-ts-fundamentals-data-cleaning-boxcox/chart2.png" class="img-fluid"></p>
+<p>A good way to handle this exponential growth is to transform it into one that looks more linear. This is where a technique called a box-cox transformation comes in handy.</p>
+</section>
+<section id="box-cox-enters-the-chat" class="level3">
+<h3 class="anchored" data-anchor-id="box-cox-enters-the-chat">Box-Cox Enters The Chat</h3>
+<p>The Box-Cox transformation is a family of power transformations that aim to make data more normally distributed and stabilize its variance​. In simple terms, it transforms your original values using an exponent (λ, “lambda”) to reduce skewness.</p>
+<p>Lambda can take many values. A lambda of 0 corresponds to a log transform. A value of 0.5 is a square root transform. By transforming our data this way we can in essence de-scale the data to ensure any large spikes are dampened and easier for a model to fit the data. This can transform our data to be homoscedastic, or having constant variance. Let’s see how our time series looks after applying a few box-cox transformations.</p>
+<p><img src="https://mftokic.github.io/posts/2025-02-05-ts-fundamentals-data-cleaning-boxcox/chart3.png" class="img-fluid"></p>
+<p><img src="https://mftokic.github.io/posts/2025-02-05-ts-fundamentals-data-cleaning-boxcox/chart4.png" class="img-fluid"></p>
+<p>The log transformation (lambda = 0) seems to have done a great job at turning our exponential growth into linear growth. The square root transformation (lambda = 0.5) didn’t do as well. Choosing the right value of lambda is important, thankfully there is an automated process that can do it for us. Let’s see how the data looks with an optimal lambda value chosen automatically.</p>
+<p><img src="https://mftokic.github.io/posts/2025-02-05-ts-fundamentals-data-cleaning-boxcox/chart5.png" class="img-fluid"></p>
+<p>The automated process chose a lambda value very close to zero. So it basically did a simple log transformation. Now our data has become much easier to model correctly, how cool is that!</p>
+</section>
+<section id="reversal" class="level3">
+<h3 class="anchored" data-anchor-id="reversal">Reversal</h3>
+<p>There are no perfect solutions, only tradeoffs. Here are a few when using box-cox transformations.</p>
+<ol type="1">
+<li><strong>Runaway exponential trends</strong>: If your time series has exponential trend aspects, but isn’t actually a true exponential trend, there can be big repercussions. A model might take that transformed data and start creating future forecasts that are astronomical in size, going from thousands to trillions in a few periods. A good example is a time series that is stable for most of its history, then at the very end it all of a sudden has tripled in value over one or two periods. A box-cox transformation will pick up on this and transform the data in a way that a model might pick up on as a trend that should grow into the future. So each subsequent forecast period might continue to triple in value. That’s not good.</li>
+<li><strong>Time series can’t be zero or negative</strong>: All zero values must be changed to be a placeholder value like 0.1 or 1, that way things like a log transformation can work. There also can’t be any negative values, again because you can’t take the log of a negative number, which in some time series is unavoidable.</li>
+<li><strong>Need to back transform the data after forecasting</strong>: After you train a model and create a forecast on the transformed data, you must transform the forecast back to the original units. So you have to make sure you keep the lambda value used in the box-cox transformation handy, because you will need it to inverse the transformation.</li>
+<li><strong>Less model interpretability</strong>: Because a model is learning on transformed data, being able to explain the models decisions become harder. Know there is always a tradeoff between model accuracy and model interpretability.</li>
+</ol>
+</section>
+<section id="final-thoughts" class="level3">
+<h3 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h3>
+<p>Box-Cox transformations are a powerful tool for taming exponential growth in time series, making trends easier to model and forecast. However, like any transformation, they come with tradeoffs. Potentially misleading trends, the need for careful handling of zeros and negatives, and additional steps to back-transform predictions. Despite these challenges, applying box-cox correctly can make a significant difference in forecasting accuracy. The key takeaway? Use transformations thoughtfully, always validate their impact on your specific dataset, and remember that the best forecast starts with well-prepared data.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>machine-learning</category>
+  <category>time-series</category>
+  <guid>https://mftokic.github.io/posts/2025-02-05-ts-fundamentals-data-cleaning-boxcox/</guid>
+  <pubDate>Wed, 05 Feb 2025 08:00:00 GMT</pubDate>
+  <media:content url="https://mftokic.github.io/posts/2025-02-05-ts-fundamentals-data-cleaning-boxcox/image.png" medium="image" type="image/png"/>
+</item>
 <item>
   <title>Data Cleaning For Time Series</title>
   <dc:creator>Mike Tokic</dc:creator>
@@ -31,8 +86,8 @@
 <p>The way you clean your time series data is very different than of machine learning domains. Here are the building blocks of good data cleaning. Some are the same posts from previous chapters, but they still apply here. Click on each to explore further.</p>
 <ul>
 <li><a href="https://mftokic.github.io/posts/2024-11-26-ts-fundamentals-missing-outliers/">Missing Values, Outliers</a></li>
-<li>Box-Cox Transformation (in progress)</li>
-<li>Stationary</li>
+<li><a href="https://mftokic.github.io/posts/2025-02-05-ts-fundamentals-data-cleaning-boxcox/">Box-Cox Transformation</a></li>
+<li>Stationary (in progress)</li>
 </ul>
 
 
@@ -1955,110 +2010,6 @@
   <guid>https://mftokic.github.io/posts/2024-10-02-ts-fundamentals-whats-a-time-series/</guid>
   <pubDate>Wed, 02 Oct 2024 07:00:00 GMT</pubDate>
   <media:content url="https://mftokic.github.io/posts/2024-10-02-ts-fundamentals-whats-a-time-series/image.png" medium="image" type="image/png" height="144" width="144"/>
-</item>
-<item>
-  <title>Thoughts On Time Series Forecasting Fundamentals</title>
-  <dc:creator>Mike Tokic</dc:creator>
-  <link>https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>The ability to create forecasts about the future is a superpower. Machine learning (ML) models take this to another level by increasing forecast accuracy while reducing the time spent creating the forecast. Using ML might seem a little scary at first. You may not know where to start. Type “intro ML course” into Bing and you’ll probably get millions of links. Which ones are good? Why do they cost $5,000? That’s why I wanted to create a gentle introduction to time series forecasting with ML. Where I start from first principles and work our way up to shipping forecasts in production. The intent is to cover the core theory of ML forecasting, and less on the code itself. The code can come later, but anyone who consumes the outputs from ML or helps train ML models needs a strong understanding of how this process works.</p>
-<p>The sequence of what you learn is just as important as what content you learn. I have developed a learning path that takes you from absolute beginner and slowly adds new concepts until you’re a forecasting master! Please click on each link in order to get up to speed, or skip around to any topic you want to dive into again. Don’t try to read this all in a day, take your time, take notes, and maybe even paste some of the posts into your favorite AI tool to quiz yourself on the topics. Happy learning!</p>
-<section id="our-learning-journey" class="level3">
-<h3 class="anchored" data-anchor-id="our-learning-journey">Our Learning Journey</h3>
-<ol type="1">
-<li><a href="https://mftokic.github.io/posts/2024-10-02-ts-fundamentals-whats-a-time-series/">What’s a time series?</a></li>
-<li><a href="https://mftokic.github.io/posts/2024-10-03-ts-fundamentals-eda/">Exploratory Data Analysis</a>
-<ul>
-<li><a href="https://mftokic.github.io/posts/2024-10-15-ts-fundamentals-eda-data-shape/">Shape of the Data</a></li>
-<li><a href="https://mftokic.github.io/posts/2024-11-06-ts-fundamentals-decomposition/">Time Series Decomposition</a></li>
-<li><a href="https://mftokic.github.io/posts/2024-11-12-ts-fundamentals-autocorrelation/">Autocorrelation</a></li>
-<li><a href="https://mftokic.github.io/posts/2024-11-26-ts-fundamentals-missing-outliers/">Missing Values, Outliers</a></li>
-<li><a href="https://mftokic.github.io/posts/2025-01-24-ts-fundamentals-eda-xregs/">External Regressors</a></li>
-</ul></li>
-<li><a href="https://mftokic.github.io/posts/2025-02-03-ts-fundamentals-data-cleaning/">Data Cleaning</a>
-<ul>
-<li><a href="https://mftokic.github.io/posts/2024-11-26-ts-fundamentals-missing-outliers/">Missing Values, Outliers</a></li>
-<li>Box Cox Transformation (in progress)</li>
-<li>Stationary</li>
-</ul></li>
-<li>Univariate Models
-<ul>
-<li>ARIMA</li>
-<li>Exponential Smoothing</li>
-<li>Simple Benchmark Models</li>
-</ul></li>
-<li>Evaluation Metrics</li>
-<li>Feature Engineering
-<ul>
-<li>Date</li>
-<li>Target Variable</li>
-<li>External Regressors</li>
-</ul></li>
-<li>Multivariate Models
-<ul>
-<li>Local Models</li>
-<li>Global Models</li>
-<li>Hyperparameter Tuning</li>
-<li>Linear Regression</li>
-<li>Decision Trees</li>
-<li>Random Forest</li>
-<li>Gradient Boosting (XGBoost, LightGBM)</li>
-<li>Feature Selection</li>
-<li>Mutlistep Horizon, Autoregressive</li>
-</ul></li>
-<li>Model Training Lifecycle
-<ul>
-<li>Train/Test Splits</li>
-<li>Time Series Cross Validation</li>
-<li>Evaluation Metrics</li>
-</ul></li>
-<li>Hierarchical Forecasting
-<ul>
-<li>Standard Hierarchy</li>
-<li>Grouped Hierarchy</li>
-<li>Clustering</li>
-</ul></li>
-<li>Combining Models
-<ul>
-<li>Simple Averages</li>
-<li>Weighted Averaged</li>
-<li>Ensemble Models</li>
-</ul></li>
-<li>Prediction Intervals</li>
-<li>Model Interpretability
-<ul>
-<li>Model Specific</li>
-<li>Model Agnostic
-<ul>
-<li>Global Methods</li>
-<li>Local Methods</li>
-</ul></li>
-</ul></li>
-<li>Forecasts in Production
-<ul>
-<li>Parallel Computing</li>
-<li>Model Training and Serving</li>
-</ul></li>
-<li>Appendix
-<ul>
-<li>ML Term Glossary</li>
-</ul></li>
-</ol>
-
-
-</section>
-
- ]]></description>
-  <category>machine-learning</category>
-  <category>time-series</category>
-  <guid>https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/</guid>
-  <pubDate>Wed, 25 Sep 2024 07:00:00 GMT</pubDate>
-  <media:content url="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/image.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 </channel>
 </rss>

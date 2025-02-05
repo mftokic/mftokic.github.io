@@ -18,5 +18,5 @@ The result of exploratory data analysis can reveal a lot about your data. One fa
 The way you clean your time series data is very different than of machine learning domains. Here are the building blocks of good data cleaning. Some are the same posts from previous chapters, but they still apply here. Click on each to explore further. 
 
 - [Missing Values, Outliers](https://mftokic.github.io/posts/2024-11-26-ts-fundamentals-missing-outliers/)
-- Box-Cox Transformation (in progress)
-- Stationary
+- [Box-Cox Transformation](https://mftokic.github.io/posts/2025-02-05-ts-fundamentals-data-cleaning-boxcox/)
+- Stationary (in progress)
