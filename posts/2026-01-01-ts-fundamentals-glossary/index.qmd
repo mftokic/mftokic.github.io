@@ -2,7 +2,7 @@
 title: "Machine Learning Glossary"
 description: "Simple definitions to complex terms"
 author: "Mike Tokic"
-date: "2025-01-01"
+date: "2026-01-01"
 categories: [machine-learning, time-series]
 image: "image.png"
 draft: true
@@ -19,6 +19,7 @@ draft: true
 - Confidence Interval
 - Correlation
 - Dependant Variable
+- Differencing 
 - Distance Correlation (dCor)
 - Exploratory Data Analysis (EDA)
 - Exponential Smoothing
