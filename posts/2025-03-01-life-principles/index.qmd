@@ -1,0 +1,60 @@
+---
+title: "Life Principles"
+description: "How I try to live my best life"
+author: "Mike Tokic"
+date: "2025-03-01"
+categories: [life]
+image: "image.png"
+draft: True
+---
+
+### A Man Must Have a Code
+
+### Bias for Action
+
+### Sense of Urgency
+
+### High Agency
+
+### Zero Expectations
+
+### Time Over Money
+
+### Love Over Power
+
+### Giving Without Getting
+
+### Stay Present
+
+### Stagnation is Death
+
+### Keep it Simple
+
+### Incentives Matter 
+
+### Run Towards Fear 
+
+### Allergic to Status 
+
+### Don't Compare Yourself to Others
+
+### Do Things Worth Writing, Write Things Worth Reading 
+
+### What Would You Do If You Couldn't Fail?
+
+### What Makes for the Best Story?
+
+### Don't Be the Best, Be the Only
+
+### Did I Always Do My Best?
+
+### Stop Trying to Sound Smart
+
+### Hard Choices, Easy Life. Easy Choices, Hard Life.
+
+### Gear Over Stuff 
+
+### Avoid Scarcity Loops
+
+### Final Thoughts 
+
