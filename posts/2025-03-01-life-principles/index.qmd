@@ -10,7 +10,7 @@ draft: True
 
 ### A Man Must Have a Code
 
-Every person lives by a set of principles that govern their actions throughout life. They are either principles inherited by their family or society they were raised in (unconsciously), or principles that were chosen and updated by a person on their own (consciously). The best principles in life are ones you have thought through on your own. Evolving them over years of experience. Below are the top principles I like to live my life by.  
+Every person lives by a set of principles that govern their actions throughout life. They are either principles inherited by the society they were raised in (unconsciously), or principles that were chosen and updated by a person on their own (consciously). The best principles in life are ones you have thought through yourself. Below are the top principles I like to live my life by.  
 
 ### Bias for Action
 
@@ -32,7 +32,7 @@ George Mack does a good job discussing agency. [Here is a good twitter thread ex
 
 ### Zero Expectations
 
-When Charlie Munger was once asked about what it takes to live a happy life his response was simple, have low expectations. In a similar vein, Naval Ravikant states that happiness is a simple equation. Happiness = Reality - Expectations. 
+When Charlie Munger was asked about what it takes to live a happy life his response was simple, have low expectations. In a similar vein, Naval Ravikant states that happiness is a simple equation. Happiness = Reality - Expectations. 
 
 If you came to Seattle in January and expected it to be warm and sunny, you'd be bummed out if it was 50 degrees with a slight drizzle. Instead if you came expecting it to be cold and constantly raining, then you'd be pleasantly surprised to find out that it didn't rain much at all. The same external events happened in both examples, but the change in expectations made for a better outcome. 
 
@@ -40,7 +40,7 @@ It's ok to have high expectations for yourself, but having high expectations ove
 
 ### Time Over Money
 
-Control over how you spend your time is the ultimate freedom. It's the life razor I use to make most decisions in my life. 
+Control over how you spend your time is the ultimate freedom and source of power. It's the life razor I use to make most decisions in my life.
 
 ### Love Over Power
 
@@ -68,15 +68,11 @@ Charlie Munger once said "show me the incentive and I'll show you the behavior".
 
 ### Run Towards Fear 
 
-Usually the things you are the most afraid of are most important things that you need to do to improve your life. Scared of public speaking? Then getting good at it will probably change your life more than anything else. 
+Usually the things you are the most afraid of are the most important things that you need to do to improve your life. Scared of public speaking? Then getting good at it will probably change your life more than anything else. 
 
 ### Allergic to Status 
 
-Status will not create a fulfilling life. So I try not to do things that inflate my status. 
-
-### Don't Compare Yourself to Others
-
-Comparison if the thief of joy. Only compare yourself to who you were yesterday. 
+Increasing your status will not create a fulfilling life. So I try not to do things that inflate my status. Comparison is the thief of joy. Never compare yourself to others (aka your status compared to others), only compare yourself to who you were yesterday. 
 
 ### Do Things Worth Writing, Write Things Worth Reading 
 
