@@ -2,10 +2,9 @@
 title: "Life Principles"
 description: "How I try to live my best life"
 author: "Mike Tokic"
-date: "2025-03-01"
+date: "2025-02-24"
 categories: [life]
 image: "image.png"
-draft: True
 ---
 
 ### A Man Must Have a Code
@@ -14,7 +13,7 @@ Every person lives by a set of principles that govern their actions throughout l
 
 ### Bias for Action
 
-Action is the best answer to most problems. Sitting around waiting for something to happen to you rarely never works out. No one ever get's lucky sitting on their couch watching Netflix. Action creates luck, creates feedback, and also creates momentum. 
+Action is the best answer to most problems. Sitting around waiting for something to happen to you rarely works out. No one ever get's lucky sitting on their couch watching Netflix. Action creates luck, creates feedback, and also creates momentum. 
 
 ### Sense of Urgency
 
@@ -22,13 +21,13 @@ Life is short, and timelines are negotiable. Ever heard of the parkinson princip
 
 Reality is negotiable. Peter Thiel has a saying: "If you have a 10 year plan of how to get somewhere, you should ask: why can't I do this in 6 months?". The quality of your questions determines the quality of your life. 
 
-Combining a sense of urgency with a bias for action, you become an unstoppable force. 
+When you combine a sense of urgency with a bias for action, you become an unstoppable force. This brings us to my next principle.
 
 ### High Agency
 
 Who would you call to break you out of a third world prison? That person has a high sense of agency, which means they have have the ability to control what happens to them in life. Think of it as the opposite of a victim mentality. Agency is the combination of a bias for action with a sense of urgency. 
 
-George Mack does a good job discussing agency. [Here is a good twitter thread example](https://x.com/george__mack/status/1661426260327759902?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1661426260327759902%7Ctwgr%5E7eacc97032d4e2d008f3d1d669bb67c347937b2c%7Ctwcon%5Es1_&ref_url=https%3A%2F%2Fapp.beehiiv.com%2Flogin%3F_gl%3D11bn3wdj_gaNTI1OTM1NjEuMTY4NjMyNDQzMg.._ga_E6Y4WLQ2ECMTY4NjMyNDQzMi4xLjAuMTY4NjMyNDQzMi42MC4wLjA.&utm_source=clouds-and-dirt.beehiiv.com&utm_medium=referral&utm_campaign=lindy-library-the-0-1-of-ideas-i-ve-found). 
+George Mack does a good job discussing agency. [Here is a good example](https://x.com/george__mack/status/1661426260327759902?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1661426260327759902%7Ctwgr%5E7eacc97032d4e2d008f3d1d669bb67c347937b2c%7Ctwcon%5Es1_&ref_url=https%3A%2F%2Fapp.beehiiv.com%2Flogin%3F_gl%3D11bn3wdj_gaNTI1OTM1NjEuMTY4NjMyNDQzMg.._ga_E6Y4WLQ2ECMTY4NjMyNDQzMi4xLjAuMTY4NjMyNDQzMi42MC4wLjA.&utm_source=clouds-and-dirt.beehiiv.com&utm_medium=referral&utm_campaign=lindy-library-the-0-1-of-ideas-i-ve-found). 
 
 ### Zero Expectations
 
@@ -48,7 +47,7 @@ Most things we chase in life are a [form of power](https://mftokic.github.io/pos
 
 ### Giving Without Getting
 
-Giving away my time, attention, and skills with no expectations of something in return is very important to me. Nothing grinds my gears like someone doing a good deed in the world then immediately posting about it on social media. They are giving with the intention of receiving status in return. Which is a form of power that never satisfies. Giving yourself to others is an amazing act in and of itself, full stop. 
+Giving away my time, attention, and skills with no expectations of something in return is very important to me. Nothing grinds my gears like someone doing a good deed in the world then immediately posting about it on social media. They are giving with the intention of receiving status in return. Giving yourself to others is an amazing act in and of itself, full stop. 
 
 ### Stay Present
 
@@ -76,7 +75,7 @@ Increasing your status will not create a fulfilling life. So I try not to do thi
 
 ### Do Things Worth Writing, Write Things Worth Reading 
 
-This is a quote from Ben Franklin. I think it's a great life philosophy. I try to do both interesting things, and write interesting things. Heck, you are hopefully reading something interesting right now. 
+This is a quote from Ben Franklin. I think it's a great life philosophy. I try to do both interesting things, and write interesting things. Heck, you are hopefully reading something interesting right now! 
 
 ### What Would You Do If You Couldn't Fail?
 
@@ -124,6 +123,6 @@ Josh Waitzkin has a framework called [the most important question](https://www.y
 
 ### Final Thoughts 
 
-To live a quality life you must have quality principles. If you don't, you will be easily influenced to live an unauthentic life based on the expectations of society. Feel free to take some of mine to use as your own principles, or don't! I could care less. 
+To live a quality life you must have quality principles. If you don't, you will be easily influenced to live an unauthentic life based on the expectations of society. Feel free to take some of mine to use as your own principles, or don't! I could care less, because I have zero expectations about people reading this post. 
 
 [Photo Credit](https://www.hardwoodandhollywood.com/pop-culture-spin/2015/01/28/wire-five-omar-littles-greatest-quotes/)
