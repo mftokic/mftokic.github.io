@@ -1,5 +1,5 @@
 ---
-title: "December Learnings"
+title: "January Learnings"
 description: "Random stuff I learned in January 2025"
 author: "Mike Tokic"
 date: "2025-02-01"
