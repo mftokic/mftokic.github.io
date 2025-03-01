@@ -20,16 +20,14 @@ I love reading books, watching YouTube videos, listening to podcasts, you name i
 - **Mixture of Experts (MoE):** Architecture where subsets of neurons ("experts") activate selectively per task, significantly reducing computational overhead and inference costs.
 
 ### Economics of AI  
-- **Jevons Paradox:** Lowering the cost of AI increases its usage dramatically ([Wikipedia](https://en.wikipedia.org/wiki/Jevons_paradox)).
+- **Jevons Paradox:** Lowering the cost of AI increases its usage dramatically.
 - **Token Costs:** Input tokens (~¼ the cost of output tokens) allow parallel processing, whereas output tokens are sequential and auto-regressive.
 - **GPU Performance Factors:** Critical aspects for AI training and inference are Floating-point operations (FLOPS), Memory bandwidth (IO), and Chip interconnectedness.
 - **Cost Evolution of AI Models:** GPT-3 costs dropped drastically from ~$60 to ~$0.05 per million tokens between 2022 and 2024, a 1,200x reduction.
 
 ### Geopolitics and AI Chips  
-- Chinese companies circumvent U.S. Nvidia GPU export bans by routing purchases through third-party vendors in Singapore ([Reuters](https://www.reuters.com/technology/chinese-companies-bypass-chip-export-controls-via-singapore-2023-05-17/)).
+- Chinese companies circumvent U.S. Nvidia GPU export bans by routing purchases through third-party vendors in Singapore.
 - **DeepSeek Origin:** Began as a spinoff of the Chinese hedge fund "High Flyer," originally focused on GPU-based trading algorithms, later pivoting to AI models.
-
----
 
 ## Cognitive & Performance Optimization  
 
@@ -47,8 +45,6 @@ I love reading books, watching YouTube videos, listening to podcasts, you name i
 ### Quality Over Quantity  
 - Short bursts of deep work significantly outperform extended hours of moderate or distracted effort.
 
----
-
 ## Health & Fitness  
 
 ### Training Principles  
@@ -64,7 +60,7 @@ I love reading books, watching YouTube videos, listening to podcasts, you name i
 - Creatine (improves strength and power), Protein powder (supports muscle recovery), Multivitamins (general health), Carb powders (Gatorade, Powerade for energy replenishment), Caffeine (enhances workout focus).
 
 ### Risks of Sedentary Behavior  
-- Prolonged sitting significantly increases mortality risk; offset by regular activity and frequent movement breaks ([NCBI](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3404815/)).
+- Prolonged sitting significantly increases mortality risk; offset by regular activity and frequent movement breaks.
 
 ### Behavioral Eating Habit Adjustment  
 - When stressed or craving food, first take a 30-minute walk to distinguish genuine hunger from stress-induced urges.
@@ -93,10 +89,17 @@ I love reading books, watching YouTube videos, listening to podcasts, you name i
 - Genghis Khan’s aggressive strategies rooted partly in personal revenge and necessity after familial trauma.
 
 ### Korean Language Origins (Hangul)  
-- Hangul invented explicitly due to difficulty in learning complex Chinese characters. Designed for rapid acquisition, enhancing widespread literacy ([Wikipedia](https://en.wikipedia.org/wiki/Hangul)).
+- Hangul invented explicitly due to difficulty in learning complex Chinese characters. Designed for rapid acquisition, enhancing widespread literacy.
 
 ### Stanford’s "Touchy-Feely" Class  
-- "Interpersonal Dynamics" at Stanford GSB teaches emotional intelligence, authentic communication, and relationship-building skills via experiential T-group sessions ([Stanford GSB](https://www.gsb.stanford.edu/exec-ed/programs/interpersonal-dynamics-weekend-lab)).
+- "Interpersonal Dynamics" at Stanford GSB teaches emotional intelligence, authentic communication, and relationship-building skills via experiential T-group sessions.
+- 5 levels of communication
+    1. Ritual: classic conversations like general greeting
+    2. Extended ritual: asking about the weather or a recent sports game
+    3. Content: facts about a project or work items
+    4. Emotional self-disclosure: saying how you feel emotionally (I feel sad)
+    5. Neutral emotional self-disclosure: expressing emotion at another person (I feel proud of you, angry at you, etc)
+- To have strong relationships in life and career, you have to get to level 4 and 5
 
 ## Psychology & Behavioral Science  
 
@@ -121,8 +124,8 @@ I love reading books, watching YouTube videos, listening to podcasts, you name i
 ### Intriguing Observations  
 - Diamonds priced disproportionately at milestone sizes (2-carat vs. 1.99-carat).
 - Chronic strep throat indicates potential mold exposure.
-- Epstein-Barr virus (mono) infection necessary precursor for multiple sclerosis ([NIH](https://www.nih.gov/news-events/news-releases/epstein-barr-virus-linked-multiple-sclerosis)).
-- Icelandic dating app created by the government prevents accidental familial relationships ([Washington Post](https://www.washingtonpost.com/news/worldviews/wp/2013/04/18/in-iceland-a-country-of-cousins-a-website-to-avoid-incest/)).
+- Epstein-Barr virus (mono) infection necessary precursor for multiple sclerosis.
+- Icelandic dating app created by the government prevents accidental familial relationships.
 - Drug companies advertise heavily on news networks, indirectly shaping media narratives.
 
 ### Notable Quotes  
