@@ -10,15 +10,21 @@ draft: True
 
 ### What Gets Measured, Gets Managed
 
-Our bodies are mostly a mystery to a regular person. Everyone takes vitamins, but do they actually help your body operate better? If you don't know what kind of vitamins your body needs theres a good chance supplements you take every day are actively hurting your body or are simply being pissed down the drain (literally) unabsorbed by your body. Nobody wants to take something that is a waste of time or worse. So how do you know what nutrients your body needs? This is where understanding methylation in your body comes in. 
+Our bodies are mostly a mystery to a regular person. Everyone takes vitamins, but do they actually help your body operate better? If you don't know what kind of vitamins your body needs theres a good chance supplements you take every day are actively hurting your body or are simply being pissed down the drain (literally). Unabsorbed by your body. Nobody wants to take something that is a waste of time. So how do you know what nutrients your body needs? This is where understanding methylation in your body comes in. 
 
 ### What's Methylation 
 
-Methylation is the process of converting nutrients you eat into things your body can actually use. We eat crude oil, and our body processes it into gasoline to use for various processes that help us thrive. The issue is that our body rarely does this all perfectly. Many of us have gene mutations that inhibit this kind of conversation process. 
+Methylation is the process of converting nutrients you eat into things your body can actually use. We eat crude oil in the form of food, and our body processes it into gasoline in the form of nutrients to use for various processes that help us thrive. The issue is that our body rarely does this all perfectly. Many of us have gene mutations that inhibit this kind of conversation process. Let's walk through some of the most common gene mutations around methylation and see how we can make sure our bodies are operating at their maximal potential. 
 
 ### MTHFR
 
+Commonly known as the "mother fucker" gene, this one can be a real mother fucker. Up to 46% of people in the world carry this gene mutation. MTHFR deals with how our body handles the nutrient called folate. 
 
+Folate helps break down a compound in our body called homocysteine. When this compound is high
+
+Folate can be found in leafy greens and legumes. But the most common way we consume folate is through a compound called folic acid. Folic acid is the most common additive to our food. It's literally everwhere. 
+
+The methylated version of folate is what our body needs. 
 
 ### MTR 
 
@@ -35,6 +41,9 @@ Methylation is the process of converting nutrients you eat into things your body
 ### COMPT 
 
 
+### How They All Connect
+
+
 
 ### DNA Testing 
 
@@ -42,3 +51,4 @@ Methylation is the process of converting nutrients you eat into things your body
 
 ### Final Thoughts
 
+What kind of mutations do I have. 
