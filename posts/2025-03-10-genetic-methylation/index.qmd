@@ -55,10 +55,22 @@ Here's what to do if you have this gene mutation.
 - Limit alcohol, which depletes methyl donors and can interfere with B12 absorption
 - Avoid heavy metals (like mercury and lead) that bind to B12, making it unavailable for MTR to use
 - Take the methylated version of B12, either methylcobalamin or hydroxocobalamin found in [methylated multivitamins](https://a.co/d/fHQiO9z)
+    - FYI not everyone can process methylcobalamin, but 100% of humans can process hydroxocobalamin in their body
 
 ### MTRR 
 
+This gene works closely with the MTR gene, hence similar names. It helps reactivate B12 that was used by the MTR gene when converting homocysteine into methionine. Over time B12 can become oxidized when used by the MTR gene, so MTRR comes in to convert it back into its methylated form so it can be properly used again. MTRR is also important in the thyroid, helping convert one important thyroid hormone T4 into T3, which happens in your gut. 
 
+If you have this gene mutation, you might suffer from the following. 
+
+- Heart burn
+- Acid reflux
+- Thyroid issues
+- Short temper 
+- High blood pressure
+- Exacerbations of ADD, ADHD, OCD
+
+Follow the same guidelines as described in the MTR section above. Avoid the wrong types of B12 and make sure to take versions that your body can actually use. 
 
 ### AHCY 
 
