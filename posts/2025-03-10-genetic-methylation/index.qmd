@@ -74,7 +74,15 @@ Follow the same guidelines as described in the MTR section above. Avoid the wron
 
 ### AHCY 
 
+This gene helps break down S-Adenosylhomocysteine (SAH) into homocysteine and adenosine. This process is critical because SAH is a strong inhibitor of methylation enzymes. If it builds up, it slows down methylation reactions throughout the body. SAH is one of the most inflammatory compounds in your body, even worse than homocysteine. 
 
+This is a rare gene mutation to have, but people with it can have addictive tendencies. For example, addiction to video games as kids, then phones as teenagers, then drugs, alcohol, sugar, working out, eating, sex, shopping, working. This is caused by wide ranges in dopamine in the body, which is tied to our behaviors. So people with this mutation tend to seek out dopamine rewarding behavior. 
+
+If AHCY isn’t efficiently breaking down SAH, excess methionine intake might lead to toxic byproducts instead of proper methylation. So make sure you 
+
+Here's what to do if you have this gene mutation.
+
+- Consume collagen to ensure your ingesting enough glycine to help your body balance methionine (which ) 
 
 ### COMPT 
 
