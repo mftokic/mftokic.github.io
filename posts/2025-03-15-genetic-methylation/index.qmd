@@ -1,8 +1,8 @@
 ---
 title: "Your Genes Are Making You Sick"
-description: "How understanding genetic methylation can change your life"
+description: "Understanding genetic methylation can change your life"
 author: "Mike Tokic"
-date: "2025-03-10"
+date: "2025-03-15"
 categories: [life, health]
 image: "image.png"
 draft: True
@@ -100,16 +100,38 @@ Thankfully it's not all bad with this gene mutation. Because things like dopamin
 
 Here's what to do if you have this gene mutation.
 
-- xxx
+- Avoid green tea and quercitin (found in green tea and other supplements) at all costs. These can make your COMT symptoms much worse. 
+- If you have excess water retention around your belly, look into taking a diindolylmethane (DIM) supplement, which can help reduce that water retention by removing excess estrogen in your body.
+- Consider taking a trimethylglycine (TMG) supplement, which can help regulate the processes that maintain your neurotransmitters
 
 ### How They All Connect
 
+Processes in our body can be thought of like a group of construction workers passing sandbags to each other in a single line. One gene can do a process the body needs, then pass the output along to another gene to do another process, and so on. But if one of those genes can only pass along 4 sandbags instead of the 10 needed, then the most any of the downstream genes will get is 40% of what's required. 
 
+This is why understanding genetic methylation in our bodies is so important. Each of these 5 genes play a crucial role in making our bodies work. 
+
+Let's do a recap of each gene and what they do in our methylation process. 
+
+- MTHFR starts the process by making active folate (5-MTHF).
+- MTR uses 5-MTHF & B12 to convert homocysteine into methionine.
+- MTRR keeps MTR working by recharging B12.
+- AHCY clears out byproducts and provides fresh homocysteine.
+- COMT uses methylation to break down stress chemicals and estrogen.
+
+If any of these genes don’t work well, the whole system slows down! The fix is to support each gene with the right nutrients and to avoid things your body may not be able to handle. 
 
 ### DNA Testing 
 
+How the heck do I know if I have any gene mutations? This is where testing comes in. There are a lot of services out there that will do a genetic methylation test for you. They cost a few hundred dollars, but it's a test you only need to run once in your life. 
 
+It's a simple cheek swab you do at home then mail in. I used a service called [10X Health](https://10xhealthsystem.com/genetest/), but there are many providers out there who can help. 
 
 ### Final Thoughts
 
-What kind of mutations do I have. 
+I got my results back about a month ago, and things did not look good. I had mutations in all 5 genes except AHCY, with the MTHFR and COMT genes having the strongest mutation (meaning they don't work). These results are kind of like getting a personality test result. You start to understand who you are as a person more. Why you act and feel a certain way. You start to understand your parents and siblings so much more, because they most likely carry similar genes as you. It's life changing to receive information that shows you how to live a better life with 100% certainty. 
+
+My gene results showed that I had to really crack down on folic acid (MTHFR gene) and green tea/quercetin (COMT). I realized some of my most beloved foods and supplements, that are supposed to be healthy, actually contain things that are the worst to put into my body. Since cleaning those up I have had an easier time falling asleep, and my brain is working better than ever. It's also been easier to avoid processed food, because I know almost all of it contains things that my body cannot handle well. So the temptation to binge on them has been removed. Thank god!
+
+If you'd like to live up to your highest potential in life. Consider taking control of your genetics and get tested! It might just change your life. To learn more about genetic mythlation, [check out Gary Breka's channel on YouTube](https://www.youtube.com/@ultimatehumanpodcast), he's got tons of great info. 
+
+[Photo Credit](https://www.shutterstock.com/search/watson-crick-dna-model?cr=bc&gclid=c03f1496e24a1f3767de7343192784c5&gclsrc=3p.ds&image_type=illustration&kw=shutterstock&msclkid=c03f1496e24a1f3767de7343192784c5&pl=PPC_BNG_US_DSA-&utm_campaign=CO%3DUS_LG%3DEN_BU%3DIMG_AD%3DDSA_TS%3Dlggeneric_RG%3DAMER_AB%3DACQ_CH%3DSEM_OG%3DCONV_PB%3DMicrosoft-Ads&utm_content=FF%3DDSA-All-Pages_AU%3DSite+Visitors&utm_medium=cpc&utm_source=bing&utm_term=shutterstock)
