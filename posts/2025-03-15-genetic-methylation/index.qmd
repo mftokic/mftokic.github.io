@@ -5,22 +5,21 @@ author: "Mike Tokic"
 date: "2025-03-15"
 categories: [life, health]
 image: "image.png"
-draft: True
 ---
 
 ### What Gets Measured, Gets Managed
 
-Our bodies are mostly a mystery to a regular person. Everyone takes vitamins, but do they actually help your body operate better? If you don't know what kind of vitamins your body needs theres a good chance supplements you take every day are actively hurting your body or are simply being pissed down the drain (literally). Unabsorbed by your body. Nobody wants to take something that is a waste of time. So how do you know what nutrients your body needs? This is where understanding methylation in your body comes in. 
+Our bodies are mostly a mystery to a regular person. Everyone takes vitamins, but do they actually help your body operate better? If you don't know what kind of vitamins your body needs, there's a good chance supplements you take every day are actively hurting your body or are simply being pissed down the drain (literally). Nobody wants to take something that is a waste of time. So how do you know what nutrients your body needs? This is where understanding methylation in your body comes in. 
 
-### What's Methylation 
+### What's Methylation? 
 
-Methylation is the process of converting nutrients you eat into things your body can actually use. We eat crude oil in the form of food, and our body processes it into gasoline in the form of nutrients to use for various processes that help us thrive. The issue is that our body rarely does this all perfectly. Many of us have gene mutations that inhibit this kind of conversation process. Let's walk through some of the most common gene mutations around methylation and see how we can make sure our bodies are operating at their maximal potential. 
+Methylation is the process of converting nutrients you eat into things your body can actually use. We eat crude oil in the form of food, and our body uses methylation to process it into gasoline in to use for various processes that help us thrive. The issue is that our body rarely does this all perfectly. Many of us have gene mutations that inhibit this kind of conversation process. Let's walk through some of the most common gene mutations around methylation and see how we can make sure our bodies are operating at their maximal potential. 
 
 ### MTHFR
 
 Commonly known as the "mother fucker" gene, this one can be a real mother fucker. Up to 44% of people in the world carry this gene mutation. MTHFR deals with how our body handles the nutrient called folate. It translates the folate we get from our food into a form our bodies can use called methylfolate or 5-MTHF, which is the methylated version of folate. 
 
-5-MTHF helps break down a compound in our body called homocysteine. some have called it the most inflamatory compound in the human body. Inflammation is very bad for our body folks. When this compound is high all crazy types of things happen. Here are just a couple of things that are impacted. 
+5-MTHF helps break down a compound in our body called homocysteine. Which is one of the most inflammatory compound in the human body. Inflammation is very bad for our body folks. When this compound is high all crazy types of things happen. Here are just a couple of things that are impacted. 
 
 - Creating neurotransmitters 
 - DNA repair
@@ -40,7 +39,7 @@ I know this is kind of scary to read, but thankfully there is some good news. Th
 
 Similar to MTHFR, the MTR gene also plays in a role in regulating homocysteine by converting it into another compound called methionine. For this reaction to work, your body needs vitamin B12, specifically the methylated versions of B12 like methylcobalamin or hydroxocobalamin. 
 
-If you have this gene mutation, you may experience certain gut issues. 
+If you have this gene mutation, you may experience certain gut issues like these. 
 
 - Gas
 - Bloating 
@@ -48,7 +47,7 @@ If you have this gene mutation, you may experience certain gut issues.
 - Constipation 
 - Cramping 
 
-Supplementing with B12 is crucial for this gene mutation, but similar to MTHFR not all supplements are created equal. Stay away from a form of B12 called Cyanocobalamin. This form contains hydrogen cyanide, which is a known neurotoxin. It's also added into cheap energy drinks and even milk! Companies do this because it's cheap and they don't care, so care for yourself and avoid it at all costs.  
+Supplementing with B12 is crucial for this gene mutation, but similar to MTHFR not all supplements are created equal. Stay away from a form of B12 called Cyanocobalamin. This form contains hydrogen cyanide, which is a known neurotoxin. It's often added into cheap energy drinks and even milk! Companies do this because it's cheap and they don't care, so care for yourself and avoid it at all costs.  
 
 Here's what to do if you have this gene mutation.
 
@@ -101,8 +100,8 @@ Thankfully it's not all bad with this gene mutation. Because things like dopamin
 Here's what to do if you have this gene mutation.
 
 - Avoid green tea and quercitin (found in green tea and other supplements) at all costs. These can make your COMT symptoms much worse. 
-- If you have excess water retention around your belly, look into taking a diindolylmethane (DIM) supplement, which can help reduce that water retention by removing excess estrogen in your body.
-- Consider taking a trimethylglycine (TMG) supplement, which can help regulate the processes that maintain your neurotransmitters
+- If you have excess water retention around your belly, look into taking a [diindolylmethane (DIM) supplement](https://a.co/d/8Af2hyP), which can help reduce that water retention by removing excess estrogen in your body.
+- Consider taking a [trimethylglycine (TMG) supplement](https://a.co/d/eZ5ui5I), which can help regulate the processes that maintain your neurotransmitters
 
 ### How They All Connect
 
@@ -112,11 +111,11 @@ This is why understanding genetic methylation in our bodies is so important. Eac
 
 Let's do a recap of each gene and what they do in our methylation process. 
 
-- MTHFR starts the process by making active folate (5-MTHF).
-- MTR uses 5-MTHF & B12 to convert homocysteine into methionine.
-- MTRR keeps MTR working by recharging B12.
-- AHCY clears out byproducts and provides fresh homocysteine.
-- COMT uses methylation to break down stress chemicals and estrogen.
+1. MTHFR starts the process by making active folate (5-MTHF)
+2. MTR uses 5-MTHF & B12 to convert homocysteine into methionine
+3. MTRR keeps MTR working by recharging B12
+4. AHCY clears out byproducts and provides fresh homocysteine
+5. COMT uses methylation to break down stress chemicals and estrogen
 
 If any of these genes don’t work well, the whole system slows down! The fix is to support each gene with the right nutrients and to avoid things your body may not be able to handle. 
 
@@ -130,7 +129,7 @@ It's a simple cheek swab you do at home then mail in. I used a service called [1
 
 I got my results back about a month ago, and things did not look good. I had mutations in all 5 genes except AHCY, with the MTHFR and COMT genes having the strongest mutation (meaning they don't work). These results are kind of like getting a personality test result. You start to understand who you are as a person more. Why you act and feel a certain way. You start to understand your parents and siblings so much more, because they most likely carry similar genes as you. It's life changing to receive information that shows you how to live a better life with 100% certainty. 
 
-My gene results showed that I had to really crack down on folic acid (MTHFR gene) and green tea/quercetin (COMT). I realized some of my most beloved foods and supplements, that are supposed to be healthy, actually contain things that are the worst to put into my body. Since cleaning those up I have had an easier time falling asleep, and my brain is working better than ever. It's also been easier to avoid processed food, because I know almost all of it contains things that my body cannot handle well. So the temptation to binge on them has been removed. Thank god!
+My gene results showed that I had to really crack down on folic acid (MTHFR gene) and green tea/quercetin (COMT). I realized some of my most beloved foods and supplements, that are supposed to be healthy, actually contain things that are the worst to put into my body. Since cleaning those up I have had an easier time falling asleep, and my brain is working better than ever. It's also been easier to avoid processed food, because I know almost all of it contains things that my body cannot handle well. So the temptation to binge on them has been removed. Thank goodness!
 
 If you'd like to live up to your highest potential in life. Consider taking control of your genetics and get tested! It might just change your life. To learn more about genetic mythlation, [check out Gary Breka's channel on YouTube](https://www.youtube.com/@ultimatehumanpodcast), he's got tons of great info. 
 
