@@ -26,6 +26,7 @@ draft: true
 - External Regressors (xregs)
 - Feature
 - Feature Engineering
+- First Order Differencing
 - Homoscedastic
 - Independent Variable
 - Interquartile Range (IQR)
@@ -51,6 +52,8 @@ draft: true
 - Remainder
 - Residual
 - Seasonality
+- Seasonal Differencing
+- Second Order Differencing
 - Signal
 - Smell Test
 - Stationary

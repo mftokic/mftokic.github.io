@@ -5,12 +5,8 @@
     <lastmod>2025-02-24T15:37:59.315Z</lastmod>
   </url>
   <url>
-    <loc>https://mftokic.github.io/posts/2025-03-15-genetic-methylation/index.html</loc>
-    <lastmod>2025-03-15T22:40:21.641Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mftokic.github.io/posts/2025-02-24-life-principles/index.html</loc>
-    <lastmod>2025-02-24T15:29:18.867Z</lastmod>
+    <loc>https://mftokic.github.io/posts/2025-03-01-february-learnings/index.html</loc>
+    <lastmod>2025-03-01T20:10:51.687Z</lastmod>
   </url>
   <url>
     <loc>https://mftokic.github.io/posts/2025-02-05-ts-fundamentals-data-cleaning-boxcox/index.html</loc>
@@ -161,40 +157,44 @@
     <lastmod>2024-08-25T00:03:54.742Z</lastmod>
   </url>
   <url>
-    <loc>https://mftokic.github.io/notebooks/2025-01-24-ts-fundamentals-eda-xregs.html</loc>
-    <lastmod>2025-01-24T16:15:59.255Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mftokic.github.io/notebooks/2024-11-12-ts-fundamentals-autocorrelation.html</loc>
-    <lastmod>2024-12-01T16:21:13.590Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mftokic.github.io/index.html</loc>
-    <lastmod>2024-08-25T00:03:54.739Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mftokic.github.io/books.html</loc>
-    <lastmod>2025-02-23T17:04:28.726Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mftokic.github.io/about.html</loc>
-    <lastmod>2025-01-08T16:44:41.350Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mftokic.github.io/health.html</loc>
-    <lastmod>2025-03-02T16:48:20.629Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mftokic.github.io/notebooks/2024-11-06-ts-fundamentals-decomposition.html</loc>
-    <lastmod>2024-12-01T16:21:13.590Z</lastmod>
+    <loc>https://mftokic.github.io/notebooks/2025-02-05-ts-fundamentals-data-cleaning-boxcox.html</loc>
+    <lastmod>2025-02-05T15:52:13.832Z</lastmod>
   </url>
   <url>
     <loc>https://mftokic.github.io/notebooks/2024-11-26-ts-fundamentals-missing-outliers.html</loc>
     <lastmod>2024-12-01T16:21:13.590Z</lastmod>
   </url>
   <url>
-    <loc>https://mftokic.github.io/notebooks/2025-02-05-ts-fundamentals-data-cleaning-boxcox.html</loc>
-    <lastmod>2025-02-05T15:52:13.832Z</lastmod>
+    <loc>https://mftokic.github.io/notebooks/2024-11-06-ts-fundamentals-decomposition.html</loc>
+    <lastmod>2024-12-01T16:21:13.590Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mftokic.github.io/health.html</loc>
+    <lastmod>2025-03-02T16:48:20.629Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mftokic.github.io/about.html</loc>
+    <lastmod>2025-01-08T16:44:41.350Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mftokic.github.io/books.html</loc>
+    <lastmod>2025-02-23T17:04:28.726Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mftokic.github.io/index.html</loc>
+    <lastmod>2024-08-25T00:03:54.739Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mftokic.github.io/notebooks/2024-11-12-ts-fundamentals-autocorrelation.html</loc>
+    <lastmod>2024-12-01T16:21:13.590Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mftokic.github.io/notebooks/2025-01-24-ts-fundamentals-eda-xregs.html</loc>
+    <lastmod>2025-01-24T16:15:59.255Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mftokic.github.io/notebooks/2025-04-06-ts-fundamentals-data-stationary.html</loc>
+    <lastmod>2025-03-19T14:42:04.278Z</lastmod>
   </url>
   <url>
     <loc>https://mftokic.github.io/posts/2021-08-12-freecodecamp-appreciation/index.html</loc>
@@ -337,8 +337,12 @@
     <lastmod>2025-02-05T16:05:21.022Z</lastmod>
   </url>
   <url>
-    <loc>https://mftokic.github.io/posts/2025-03-01-february-learnings/index.html</loc>
-    <lastmod>2025-03-01T20:10:51.687Z</lastmod>
+    <loc>https://mftokic.github.io/posts/2025-02-24-life-principles/index.html</loc>
+    <lastmod>2025-02-24T15:29:18.867Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mftokic.github.io/posts/2025-03-15-genetic-methylation/index.html</loc>
+    <lastmod>2025-03-15T22:40:21.641Z</lastmod>
   </url>
   <url>
     <loc>https://mftokic.github.io/software.html</loc>

@@ -1,0 +1,55 @@
+---
+title: "Data Cleaning: Stationary"
+description: "Removing trends from your time series"
+author: "Mike Tokic"
+date: "2025-04-06"
+categories: [machine-learning, time-series]
+image: "image.png"
+draft: True
+---
+
+### Trends Are Hard 
+
+In the world of forecasting, many models need the trend component to be removed in order to learn the right signal from the data. The process of removing a trend (and sometimes seasonality) is called differencing. And differencing can make a time series become stationary. 
+
+Stationary just means that the time series has a constant mean and variance over time. Put simpler, it's a time series that looks kind of random with no discernable trend or repeating seasonality. If a time series does have a trend, then we can remove it through a process called differencing, which involves subtracting a value in one time period from a value in a previous time period. More on this later. 
+
+Some models need data to be stationary to ensure it's learning the correct relationships in the data, and doesn't get fooled from thinking trends will always remain the same. 
+
+Let's take a look at one of our time series. Does it look like it has a constant mean and variance over time? 
+
+![](./chart1.png)
+
+Hmmm, not really. Seems like there is an upward trend to the data. This means that the mean over time will also rise. It probably also has a slightly growing variance. Meaning the year over year growth amount is getting bigger and bigger. Let's see what we can do to make this data stationary through differencing. 
+
+### Types of Differencing
+
+There are two main types of differencing. The first is simply taking the difference between two consecutive periods. For example taking the sales in December and subtracting the sales in November (previous month). This is called first order differencing. Let's try that on our time series and see what happens. 
+
+![](./chart2.png)
+
+Ok it's looking a lot better! Our data is centered around zero, and doesn't seem to be growing in magnitude over time. Seems like it could be stationary! Another way to apply differencing is by doing it twice, this is called second order differencing. You start by doing a first order difference, then do that same process again on that data. So instead of ending up with the change from period to period. You have the change of the change from period to period. 
+
+- A first order difference measures the change in position over time, which is like velocity 
+- A second order difference measures the rate of change of the rate of change, which is like acceleration (the change in velocity over time)
+
+Taking a second order difference is done when the time series still doesn't have constant mean or variance. Let's take a second order difference of our example time series. 
+
+![](./chart3.png)
+
+Things changed a little, but not much. Seems like a second order difference may not always be necessary. The final way to difference your time series is through seasonal differencing. 
+
+### Checking if Your Data is Stationary
+
+Dicky fuller test. 
+
+### Back Transformations
+
+Converting back to original series. 
+
+### Reversal 
+
+Not all models need data to be stationary. 
+Harder for model interpretability, especially double differencing. 
+
+### Final Thoughts 
