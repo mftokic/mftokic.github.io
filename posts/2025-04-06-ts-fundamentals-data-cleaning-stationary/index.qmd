@@ -8,6 +8,10 @@ image: "image.png"
 draft: True
 ---
 
+*This post is part of the [data cleaning chapter](https://mftokic.github.io/posts/2025-02-03-ts-fundamentals-data-cleaning) within a larger learning series around time series forecasting fundamentals. [Check out the main learning path](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/) to see other posts in the series.* 
+
+*The example monthly data used in this series [can be found here.](https://github.com/mftokic/mftokic.github.io/blob/main/posts/2024-10-02-ts-fundamentals-whats-a-time-series/example_ts_data.csv) You can also find the [python code used in this post here.](https://github.com/mftokic/mftokic.github.io/blob/main/notebooks/2025-02-05-ts-fundamentals-data-cleaning-boxcox.ipynb)*
+
 ### Trends Are Hard 
 
 In the world of forecasting, many models need the trend component to be removed in order to learn the right signal from the data. The process of removing a trend (and sometimes seasonality) is called differencing. And differencing can make a time series become stationary. 
@@ -37,11 +41,21 @@ Taking a second order difference is done when the time series still doesn't have
 
 ![](./chart3.png)
 
-Things changed a little, but not much. Seems like a second order difference may not always be necessary. The final way to difference your time series is through seasonal differencing. 
+Things changed a little, but not much. Seems like a second order difference may not always be necessary. The final way to difference your time series is through seasonal differencing. This is the difference between an observation and the previous observation from the same season. For example with monthly sales, a season difference would be taking the difference between a month this year and the same month in the previous year. Taking a seasonal difference removes most seasonality in the data, hence the name. Let's see how our data looks by just taking a seasonal difference. 
+
+![](./chart4.png)
+
+The seasonal difference result looks good. Constant mean and variance throughout time. You can also combine both standard differencing with seasonal differencing. If your data has some seasonality, it's best to do the seasonal difference first, then take the first order difference after. Let's see how it looks. 
+
+![](./chart5.png)
+
+We now have a nice mean around zero and no major variance throughout the data. Nice! But how the heck do we know if the data is stationary once we difference it? 
 
 ### Checking if Your Data is Stationary
 
-Dicky fuller test. 
+In order to check if the data is stationary, either the original data or data that's been differenced, you can use something called a unit root test. Specially a Kwiatkowski-Phillips-Schmidt-Shin (KPSS) test. This kind of test runs a few statistical processes and lets you know if the data it was fed was stationary or not. We can take this once step further by leveraging tools that build on this test and tell you how many differences should be applied on your data. 
+
+Let's try running this test on our data and see how many differences we might need to make the data stationary. 
 
 ### Back Transformations
 
@@ -51,5 +65,6 @@ Converting back to original series.
 
 Not all models need data to be stationary. 
 Harder for model interpretability, especially double differencing. 
+Differencing removes historical data, especially seasonal. 
 
 ### Final Thoughts 

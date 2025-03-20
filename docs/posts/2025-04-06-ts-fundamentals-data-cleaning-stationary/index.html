@@ -213,6 +213,8 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 
 
 
+<p><em>This post is part of the <a href="https://mftokic.github.io/posts/2025-02-03-ts-fundamentals-data-cleaning">data cleaning chapter</a> within a larger learning series around time series forecasting fundamentals. <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/">Check out the main learning path</a> to see other posts in the series.</em></p>
+<p><em>The example monthly data used in this series <a href="https://github.com/mftokic/mftokic.github.io/blob/main/posts/2024-10-02-ts-fundamentals-whats-a-time-series/example_ts_data.csv">can be found here.</a> You can also find the <a href="https://github.com/mftokic/mftokic.github.io/blob/main/notebooks/2025-02-05-ts-fundamentals-data-cleaning-boxcox.ipynb">python code used in this post here.</a></em></p>
 <section id="trends-are-hard" class="level3">
 <h3 class="anchored" data-anchor-id="trends-are-hard">Trends Are Hard</h3>
 <p>In the world of forecasting, many models need the trend component to be removed in order to learn the right signal from the data. The process of removing a trend (and sometimes seasonality) is called differencing. And differencing can make a time series become stationary.</p>
@@ -233,11 +235,16 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 </ul>
 <p>Taking a second order difference is done when the time series still doesn’t have constant mean or variance. Let’s take a second order difference of our example time series.</p>
 <p><img src="./chart3.png" class="img-fluid"></p>
-<p>Things changed a little, but not much. Seems like a second order difference may not always be necessary. The final way to difference your time series is through seasonal differencing.</p>
+<p>Things changed a little, but not much. Seems like a second order difference may not always be necessary. The final way to difference your time series is through seasonal differencing. This is the difference between an observation and the previous observation from the same season. For example with monthly sales, a season difference would be taking the difference between a month this year and the same month in the previous year. Taking a seasonal difference removes most seasonality in the data, hence the name. Let’s see how our data looks by just taking a seasonal difference.</p>
+<p><img src="./chart4.png" class="img-fluid"></p>
+<p>The seasonal difference result looks good. Constant mean and variance throughout time. You can also combine both standard differencing with seasonal differencing. If your data has some seasonality, it’s best to do the seasonal difference first, then take the first order difference after. Let’s see how it looks.</p>
+<p><img src="./chart5.png" class="img-fluid"></p>
+<p>We now have a nice mean around zero and no major variance throughout the data. Nice! But how the heck do we know if the data is stationary once we difference it?</p>
 </section>
 <section id="checking-if-your-data-is-stationary" class="level3">
 <h3 class="anchored" data-anchor-id="checking-if-your-data-is-stationary">Checking if Your Data is Stationary</h3>
-<p>Dicky fuller test.</p>
+<p>In order to check if the data is stationary, either the original data or data that’s been differenced, you can use something called a unit root test. Specially a Kwiatkowski-Phillips-Schmidt-Shin (KPSS) test. This kind of test runs a few statistical processes and lets you know if the data it was fed was stationary or not. We can take this once step further by leveraging tools that build on this test and tell you how many differences should be applied on your data.</p>
+<p>Let’s try running this test on our data and see how many differences we might need to make the data stationary.</p>
 </section>
 <section id="back-transformations" class="level3">
 <h3 class="anchored" data-anchor-id="back-transformations">Back Transformations</h3>
@@ -245,7 +252,7 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 </section>
 <section id="reversal" class="level3">
 <h3 class="anchored" data-anchor-id="reversal">Reversal</h3>
-<p>Not all models need data to be stationary. Harder for model interpretability, especially double differencing.</p>
+<p>Not all models need data to be stationary. Harder for model interpretability, especially double differencing. Differencing removes historical data, especially seasonal.</p>
 </section>
 <section id="final-thoughts" class="level3">
 <h3 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h3>
