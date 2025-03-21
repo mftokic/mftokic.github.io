@@ -14,7 +14,7 @@
 <item>
   <title>Data Cleaning: Stationary</title>
   <dc:creator>Mike Tokic</dc:creator>
-  <link>https://mftokic.github.io/posts/2025-04-06-ts-fundamentals-data-cleaning-stationary/</link>
+  <link>https://mftokic.github.io/posts/2025-03-21-ts-fundamentals-data-cleaning-stationary/</link>
   <description><![CDATA[ 
 
 
@@ -29,24 +29,24 @@
 <p>Stationary just means that the time series has a constant mean and variance over time. Put simpler, it’s a time series that looks kind of random with no discernable trend or repeating seasonality. If a time series does have a trend, then we can remove it through a process called differencing, which involves subtracting a value in one time period from a value in a previous time period. More on this later.</p>
 <p>Some models need data to be stationary to ensure it’s learning the correct relationships in the data, and doesn’t get fooled from thinking trends will always remain the same.</p>
 <p>Let’s take a look at one of our time series. Does it look like it has a constant mean and variance over time?</p>
-<p><img src="https://mftokic.github.io/posts/2025-04-06-ts-fundamentals-data-cleaning-stationary/chart1.png" class="img-fluid"></p>
+<p><img src="https://mftokic.github.io/posts/2025-03-21-ts-fundamentals-data-cleaning-stationary/chart1.png" class="img-fluid"></p>
 <p>Hmmm, not really. Seems like there is an upward trend to the data. This means that the mean over time will also rise. It probably also has a slightly growing variance. Meaning the year over year growth amount is getting bigger and bigger. Let’s see what we can do to make this data stationary through differencing.</p>
 </section>
 <section id="types-of-differencing" class="level3">
 <h3 class="anchored" data-anchor-id="types-of-differencing">Types of Differencing</h3>
 <p>There are two main types of differencing. The first is simply taking the difference between two consecutive periods. For example taking the sales in December and subtracting the sales in November (previous month). This is called first order differencing. Let’s try that on our time series and see what happens.</p>
-<p><img src="https://mftokic.github.io/posts/2025-04-06-ts-fundamentals-data-cleaning-stationary/chart2.png" class="img-fluid"></p>
+<p><img src="https://mftokic.github.io/posts/2025-03-21-ts-fundamentals-data-cleaning-stationary/chart2.png" class="img-fluid"></p>
 <p>Ok it’s looking a lot better! Our data is centered around zero, and doesn’t seem to be growing in magnitude over time. Seems like it could be stationary! Another way to apply differencing is by doing it twice, this is called second order differencing. You start by doing a first order difference, then do that same process again on that data. So instead of ending up with the change from period to period. You have the change of the change from period to period.</p>
 <ul>
 <li>A first order difference measures the change in position over time, which is like velocity</li>
 <li>A second order difference measures the rate of change of the rate of change, which is like acceleration (the change in velocity over time)</li>
 </ul>
 <p>Taking a second order difference is done when the time series still doesn’t have constant mean or variance. Let’s take a second order difference of our example time series.</p>
-<p><img src="https://mftokic.github.io/posts/2025-04-06-ts-fundamentals-data-cleaning-stationary/chart3.png" class="img-fluid"></p>
+<p><img src="https://mftokic.github.io/posts/2025-03-21-ts-fundamentals-data-cleaning-stationary/chart3.png" class="img-fluid"></p>
 <p>Things changed a little, but not much. Seems like a second order difference may not always be necessary. The final way to difference your time series is through seasonal differencing. This is the difference between an observation and the previous observation from the same season. For example with monthly sales, a season difference would be taking the difference between a month this year and the same month in the previous year. Taking a seasonal difference removes most seasonality in the data, hence the name. Let’s see how our data looks by just taking a seasonal difference.</p>
-<p><img src="https://mftokic.github.io/posts/2025-04-06-ts-fundamentals-data-cleaning-stationary/chart4.png" class="img-fluid"></p>
+<p><img src="https://mftokic.github.io/posts/2025-03-21-ts-fundamentals-data-cleaning-stationary/chart4.png" class="img-fluid"></p>
 <p>The seasonal difference result looks good. Constant mean and variance throughout time. You can also combine both standard differencing with seasonal differencing. If your data has some seasonality, it’s best to do the seasonal difference first, then take the first order difference after. Let’s see how it looks.</p>
-<p><img src="https://mftokic.github.io/posts/2025-04-06-ts-fundamentals-data-cleaning-stationary/chart5.png" class="img-fluid"></p>
+<p><img src="https://mftokic.github.io/posts/2025-03-21-ts-fundamentals-data-cleaning-stationary/chart5.png" class="img-fluid"></p>
 <p>We now have a nice mean around zero and no major variance throughout the data. Nice! But how the heck do we know if the data is stationary once we difference it?</p>
 </section>
 <section id="checking-if-your-data-is-stationary" class="level3">
@@ -163,9 +163,9 @@
  ]]></description>
   <category>machine-learning</category>
   <category>time-series</category>
-  <guid>https://mftokic.github.io/posts/2025-04-06-ts-fundamentals-data-cleaning-stationary/</guid>
+  <guid>https://mftokic.github.io/posts/2025-03-21-ts-fundamentals-data-cleaning-stationary/</guid>
   <pubDate>Fri, 21 Mar 2025 07:00:00 GMT</pubDate>
-  <media:content url="https://mftokic.github.io/posts/2025-04-06-ts-fundamentals-data-cleaning-stationary/image.png" medium="image" type="image/png" height="82" width="144"/>
+  <media:content url="https://mftokic.github.io/posts/2025-03-21-ts-fundamentals-data-cleaning-stationary/image.png" medium="image" type="image/png" height="82" width="144"/>
 </item>
 <item>
   <title>Your Genes Are Making You Sick</title>
