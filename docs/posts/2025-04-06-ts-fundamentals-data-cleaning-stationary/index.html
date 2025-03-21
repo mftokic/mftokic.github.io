@@ -340,10 +340,14 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 </section>
 <section id="reversal" class="level3">
 <h3 class="anchored" data-anchor-id="reversal">Reversal</h3>
-<p>Not all models need data to be stationary. Harder for model interpretability, especially double differencing. Differencing removes historical data, especially seasonal.</p>
+<p>There are cases where differencing your data to ensure it’s stationary is not a good idea. Some models, like arima, have the differencing process built in. So you don’t need to do it beforehand. Other models, like standard linear regressions, do not need stationary data at all since they can easily learn from trends and seasonal patterns in the data.</p>
+<p>Differencing the data can also limit model interpretability, or the ability to explain the forecasted outputs. This becomes even harder once you start to difference your data two or more times, since you are not explaining changes between observations, but instead the change in the changes or even worse. This becomes near impossible to understand for any regular human that might use your forecasts.</p>
+<p>A final thing to call with differencing is that it can remove historical data from the beginning of your time series. This may not be a big deal with a first order difference, but taking a seasonal difference on a monthly data set will remove the first 12 months of the time series. That may not be impactful if you have 10+ years of historical data, but if you only have 3 years to start with this becomes very detrimental to the process. That’s why I try to limit any seasonal differencing when the amount of historical data is low.</p>
 </section>
 <section id="final-thoughts" class="level3">
 <h3 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h3>
+<p>Stationarity is fundamental to reliable forecasting because it ensures your models are learning stable, meaningful patterns rather than temporary or misleading trends. A stationary time series maintains a constant mean and variance over time, making its behavior predictable and easier for statistical models to learn from.</p>
+<p>Differencing is a powerful yet straightforward way to achieve stationarity, paving the path for more accurate forecasts. While simple first-order differencing often does the trick, be cautious with higher-order or seasonal differences, as they can reduce interpretability, remove valuable historical context, and complicate back transformations. Always prioritize the simplest approach that achieves stationarity, keeping both modeling and explanations clear and intuitive. Ultimately, knowing how—and when—to apply stationarity transformations is key to building robust, effective forecasts.</p>
 
 
 </section>
