@@ -245,10 +245,98 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 <h3 class="anchored" data-anchor-id="checking-if-your-data-is-stationary">Checking if Your Data is Stationary</h3>
 <p>In order to check if the data is stationary, either the original data or data that’s been differenced, you can use something called a unit root test. Specially a Kwiatkowski-Phillips-Schmidt-Shin (KPSS) test. This kind of test runs a few statistical processes and lets you know if the data it was fed was stationary or not. We can take this once step further by leveraging tools that build on this test and tell you how many differences should be applied on your data.</p>
 <p>Let’s try running this test on our data and see how many differences we might need to make the data stationary.</p>
+<ul>
+<li>First order difference: stationary ✅</li>
+<li>Second order difference: stationary ✅</li>
+<li>Seasonal difference: stationary ✅</li>
+<li>Seasonal and first order difference : stationary ✅</li>
+</ul>
+<p>Sweet! All of our differencing techniques each resulted in our data being stationary. It’s a good idea to pick the method that is the simplest way to get a stationary time series, which in our case is the first order difference. So we can use that going forward when training models.</p>
 </section>
 <section id="back-transformations" class="level3">
 <h3 class="anchored" data-anchor-id="back-transformations">Back Transformations</h3>
-<p>Converting back to original series.</p>
+<p>After you train a model and produce a forecast, the work is still not done. That forecast is the predicting the change between periods, not the actual values for that period. In order to get a final forecast we can use we need to transform that data back to the original units.</p>
+<p>To do this we need all original values of the time series. When we difference our data, the process creates missing values at the start of the time series, because we cannot calculate the difference of the first period of the data since it’s the first period of the data. So a first order difference has one missing value at the start of the time series, a second order difference has 2, and a seasonal difference has many more depending on the seasonal periods in the data.</p>
+<p>To get our final forecast we need to keep these original values, add them back to the differenced data, then start to add them up one by one. For a first order difference, that just means taking that original value in the first period, adding it to the differenced value in the second period, then adding that new value to the differenced value in the third period, and so on. It’s a daisy chained process to get the original data back. We carry this math forward into the future with our predictions, with the final output being our finished forecast!</p>
+<p>Here’s a super simple table breaking this down.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 19%">
+<col style="width: 35%">
+<col style="width: 32%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Month</th>
+<th>Original Series (Yₜ)</th>
+<th>1st Order Difference (ΔYₜ = Yₜ - Yₜ₋₁)</th>
+<th>Transformed Back to Original Units</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Jan 2024</td>
+<td>100</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td>Feb 2024</td>
+<td>105</td>
+<td>+5</td>
+<td>—</td>
+</tr>
+<tr class="odd">
+<td>Mar 2024</td>
+<td>108</td>
+<td>+3</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td>Apr 2024</td>
+<td>112</td>
+<td>+4</td>
+<td>—</td>
+</tr>
+<tr class="odd">
+<td>May 2024</td>
+<td>115</td>
+<td>+3</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td>Jun 2024</td>
+<td>118</td>
+<td>+3</td>
+<td>—</td>
+</tr>
+<tr class="odd">
+<td><strong>Forecast</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Jul 2024</td>
+<td>—</td>
+<td>+3 (forecasted)</td>
+<td>121 (118 + 3)</td>
+</tr>
+<tr class="odd">
+<td>Aug 2024</td>
+<td>—</td>
+<td>+3 (forecasted)</td>
+<td>124 (121 + 3)</td>
+</tr>
+<tr class="even">
+<td>Sep 2024</td>
+<td>—</td>
+<td>+3 (forecasted)</td>
+<td>127 (124 + 3)</td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="reversal" class="level3">
 <h3 class="anchored" data-anchor-id="reversal">Reversal</h3>

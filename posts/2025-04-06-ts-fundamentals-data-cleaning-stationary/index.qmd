@@ -57,9 +57,36 @@ In order to check if the data is stationary, either the original data or data th
 
 Let's try running this test on our data and see how many differences we might need to make the data stationary. 
 
+- First order difference: stationary ✅
+- Second order difference: stationary ✅
+- Seasonal difference: stationary ✅
+- Seasonal and first order difference : stationary ✅
+
+Sweet! All of our differencing techniques each resulted in our data being stationary. It's a good idea to pick the method that is the simplest way to get a stationary time series, which in our case is the first order difference. So we can use that going forward when training models. 
+
 ### Back Transformations
 
-Converting back to original series. 
+After you train a model and produce a forecast, the work is still not done. That forecast is the predicting the change between periods, not the actual values for that period. In order to get a final forecast we can use we need to transform that data back to the original units. 
+
+To do this we need all original values of the time series. When we difference our data, the process creates missing values at the start of the time series, because we cannot calculate the difference of the first period of the data since it's the first period of the data. So a first order difference has one missing value at the start of the time series, a second order difference has 2, and a seasonal difference has many more depending on the seasonal periods in the data. 
+
+To get our final forecast we need to keep these original values, add them back to the differenced data, then start to add them up one by one. For a first order difference, that just means taking that original value in the first period, adding it to the differenced value in the second period, then adding that new value to the differenced value in the third period, and so on. It's a daisy chained process to get the original data back. We carry this math forward into the future with our predictions, with the final output being our finished forecast! 
+
+Here's a super simple table breaking this down. 
+
+| Month        | Original Series (Yₜ)  | 1st Order Difference (ΔYₜ = Yₜ - Yₜ₋₁)   | Transformed Back to Original Units |
+|--------------|----------------------|----------------------------------------|------------------------------------|
+| Jan 2024     | 100                  | —                                      | —                                  |
+| Feb 2024     | 105                  | +5                                     | —                                  |
+| Mar 2024     | 108                  | +3                                     | —                                  |
+| Apr 2024     | 112                  | +4                                     | —                                  |
+| May 2024     | 115                  | +3                                     | —                                  |
+| Jun 2024     | 118                  | +3                                     | —                                  |
+| **Forecast** |                      |                                        |                                    |
+| Jul 2024     | —                    | +3 (forecasted)                        | 121 (118 + 3)                      |
+| Aug 2024     | —                    | +3 (forecasted)                        | 124 (121 + 3)                      |
+| Sep 2024     | —                    | +3 (forecasted)                        | 127 (124 + 3)                      |
+
 
 ### Reversal 
 
