@@ -74,19 +74,18 @@ To get our final forecast we need to keep these original values, add them back t
 
 Here's a super simple table breaking this down. 
 
-| Month        | Original Series (Yₜ)  | 1st Order Difference (ΔYₜ = Yₜ - Yₜ₋₁)   | Transformed Back to Original Units |
-|--------------|----------------------|----------------------------------------|------------------------------------|
-| Jan 2024     | 100                  | —                                      | —                                  |
-| Feb 2024     | 105                  | +5                                     | —                                  |
-| Mar 2024     | 108                  | +3                                     | —                                  |
-| Apr 2024     | 112                  | +4                                     | —                                  |
-| May 2024     | 115                  | +3                                     | —                                  |
-| Jun 2024     | 118                  | +3                                     | —                                  |
-| **Forecast** |                      |                                        |                                    |
-| Jul 2024     | —                    | +3 (forecasted)                        | 121 (118 + 3)                      |
-| Aug 2024     | —                    | +3 (forecasted)                        | 124 (121 + 3)                      |
-| Sep 2024     | —                    | +3 (forecasted)                        | 127 (124 + 3)                      |
-
+|    Month     | Original Series (Yₜ) | 1st Order Difference (ΔYₜ = Yₜ - Yₜ₋₁) | Transformed Back to Original Units |
+|:------------:|:--------------------:|:--------------------------------------:|:----------------------------------:|
+|   Jan 2024   |         100          |                   —                    |                 —                  |
+|   Feb 2024   |         105          |                  +5                    |                 —                  |
+|   Mar 2024   |         108          |                  +3                    |                 —                  |
+|   Apr 2024   |         112          |                  +4                    |                 —                  |
+|   May 2024   |         115          |                  +3                    |                 —                  |
+|   Jun 2024   |         118          |                  +3                    |                 —                  |
+| **Forecast** |          —           |                   —                    |                 —                  |
+|   Jul 2024   |          —           |             +3 (forecasted)            |            121 (118 + 3)           |
+|   Aug 2024   |          —           |             +3 (forecasted)            |            124 (121 + 3)           |
+|   Sep 2024   |          —           |             +3 (forecasted)            |            127 (124 + 3)           |
 
 ### Reversal 
 
