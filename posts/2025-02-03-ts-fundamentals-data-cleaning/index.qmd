@@ -19,4 +19,4 @@ The way you clean your time series data is very different than of machine learni
 
 - [Missing Values, Outliers](https://mftokic.github.io/posts/2024-11-26-ts-fundamentals-missing-outliers/)
 - [Box-Cox Transformation](https://mftokic.github.io/posts/2025-02-05-ts-fundamentals-data-cleaning-boxcox/)
-- Stationary (in progress)
+- [Stationary](https://mftokic.github.io/posts/2025-03-21-ts-fundamentals-data-cleaning-stationary/)

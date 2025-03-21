@@ -2,19 +2,18 @@
 title: "Data Cleaning: Stationary"
 description: "Removing trends from your time series"
 author: "Mike Tokic"
-date: "2025-04-06"
+date: "2025-03-21"
 categories: [machine-learning, time-series]
 image: "image.png"
-draft: True
 ---
 
 *This post is part of the [data cleaning chapter](https://mftokic.github.io/posts/2025-02-03-ts-fundamentals-data-cleaning) within a larger learning series around time series forecasting fundamentals. [Check out the main learning path](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/) to see other posts in the series.* 
 
-*The example monthly data used in this series [can be found here.](https://github.com/mftokic/mftokic.github.io/blob/main/posts/2024-10-02-ts-fundamentals-whats-a-time-series/example_ts_data.csv) You can also find the [python code used in this post here.](https://github.com/mftokic/mftokic.github.io/blob/main/notebooks/2025-02-05-ts-fundamentals-data-cleaning-boxcox.ipynb)*
+*The example monthly data used in this series [can be found here.](https://github.com/mftokic/mftokic.github.io/blob/main/posts/2024-10-02-ts-fundamentals-whats-a-time-series/example_ts_data.csv) You can also find the [python code used in this post here.](https://github.com/mftokic/mftokic.github.io/blob/main/notebooks/2025-03-21-ts-fundamentals-data-stationary.ipynb)*
 
 ### Trends Are Hard 
 
-In the world of forecasting, many models need the trend component to be removed in order to learn the right signal from the data. The process of removing a trend (and sometimes seasonality) is called differencing. And differencing can make a time series become stationary. 
+In the world of forecasting, many models need the trend component to be removed in order to learn the right signal from the data. The process of removing a trend (and sometimes seasonality) is called differencing, which can make a time series become stationary. 
 
 Stationary just means that the time series has a constant mean and variance over time. Put simpler, it's a time series that looks kind of random with no discernable trend or repeating seasonality. If a time series does have a trend, then we can remove it through a process called differencing, which involves subtracting a value in one time period from a value in a previous time period. More on this later. 
 
@@ -89,11 +88,11 @@ Here's a super simple table breaking this down.
 
 ### Reversal 
 
-There are cases where differencing your data to ensure it's stationary is not a good idea. Some models, like arima, have the differencing process built in. So you don't need to do it beforehand. Other models, like standard linear regressions, do not need stationary data at all since they can easily learn from trends and seasonal patterns in the data. 
+There are cases where differencing your data to ensure it's stationary is not a good idea. Some models, like arima, have the differencing process built in. So you don't need to do it beforehand. Other models, like standard linear regressions, don't need stationary data at all since they can easily learn from trends and seasonal patterns in the data. 
 
 Differencing the data can also limit model interpretability, or the ability to explain the forecasted outputs. This becomes even harder once you start to difference your data two or more times, since you are not explaining changes between observations, but instead the change in the changes or even worse. This becomes near impossible to understand for any regular human that might use your forecasts. 
 
-A final thing to call with differencing is that it can remove historical data from the beginning of your time series. This may not be a big deal with a first order difference, but taking a seasonal difference on a monthly data set will remove the first 12 months of the time series. That may not be impactful if you have 10+ years of historical data, but if you only have 3 years to start with this becomes very detrimental to the process. That's why I try to limit any seasonal differencing when the amount of historical data is low. 
+A final thing to call out with differencing is that it can remove historical data from the beginning of your time series. This may not be a big deal with a first order difference, but taking a seasonal difference on a monthly data set will remove the first 12 months of the time series. That may not be impactful if you have 10+ years of historical data, but if you only have 3 years to start with this becomes very detrimental to the process. That's why I try to limit any seasonal differencing when the amount of historical data is low. 
 
 ### Final Thoughts
 

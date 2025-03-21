@@ -22,9 +22,9 @@ The sequence of what you learn is just as important as what content you learn. I
 3. [Data Cleaning](https://mftokic.github.io/posts/2025-02-03-ts-fundamentals-data-cleaning/)
     - [Missing Values, Outliers](https://mftokic.github.io/posts/2024-11-26-ts-fundamentals-missing-outliers/)
     - [Box Cox Transformation](https://mftokic.github.io/posts/2025-02-05-ts-fundamentals-data-cleaning-boxcox/)
-    - Stationary (in progress)
+    - [Stationary](https://mftokic.github.io/posts/2025-03-21-ts-fundamentals-data-cleaning-stationary/)
 4. Univariate Models
-    - ARIMA
+    - ARIMA (in progress)
     - Exponential Smoothing
     - Simple Benchmark Models
 5. Evaluation Metrics
