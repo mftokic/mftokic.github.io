@@ -2,7 +2,7 @@
 title: "School Sucks"
 description: "Reasons why modern schooling makes no sense"
 author: "Mike Tokic"
-date: "2025-03-30"
+date: "2025-04-20"
 categories: [life, learning]
 image: "image.png"
 draft: True

@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Mike Tokic">
-<meta name="dcterms.date" content="2025-03-30">
-<meta name="description" content="Reasons why modern schooling makes no sense">
+<meta name="dcterms.date" content="2025-03-24">
+<meta name="description" content="Foundational models in forecasting">
 
-<title>School Sucks – Thoughts on Things</title>
+<title>Univariate Models For Time Series – Thoughts on Things</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -81,28 +81,27 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 </script>
-<meta name="quarto:status" content="draft">
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="School Sucks – Thoughts on Things">
-<meta property="og:description" content="Reasons why modern schooling makes no sense">
-<meta property="og:image" content="https://mftokic.github.io/posts/2025-03-20-why-school-sucks/image.png">
+<meta property="og:title" content="Univariate Models For Time Series – Thoughts on Things">
+<meta property="og:description" content="Foundational models in forecasting">
+<meta property="og:image" content="https://mftokic.github.io/posts/2025-03-24-ts-fundamentals-univariate-models/image.png">
 <meta property="og:site_name" content="Thoughts on Things">
-<meta property="og:image:height" content="293">
-<meta property="og:image:width" content="470">
-<meta name="twitter:title" content="School Sucks – Thoughts on Things">
-<meta name="twitter:description" content="Reasons why modern schooling makes no sense">
-<meta name="twitter:image" content="https://mftokic.github.io/posts/2025-03-20-why-school-sucks/image.png">
-<meta name="twitter:image-height" content="293">
-<meta name="twitter:image-width" content="470">
+<meta property="og:image:height" content="1024">
+<meta property="og:image:width" content="1024">
+<meta name="twitter:title" content="Univariate Models For Time Series – Thoughts on Things">
+<meta name="twitter:description" content="Foundational models in forecasting">
+<meta name="twitter:image" content="https://mftokic.github.io/posts/2025-03-24-ts-fundamentals-univariate-models/image.png">
+<meta name="twitter:image-height" content="1024">
+<meta name="twitter:image-width" content="1024">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner"><div id="quarto-draft-alert" class="alert alert-warning"><i class="bi bi-pencil-square"></i>Draft</div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -172,15 +171,15 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">School Sucks</h1>
+      <h1 class="title">Univariate Models For Time Series</h1>
                   <div>
         <div class="description">
-          Reasons why modern schooling makes no sense
+          Foundational models in forecasting
         </div>
       </div>
                           <div class="quarto-categories">
-                <div class="quarto-category">life</div>
-                <div class="quarto-category">learning</div>
+                <div class="quarto-category">machine-learning</div>
+                <div class="quarto-category">time-series</div>
               </div>
                   </div>
   </div>
@@ -198,7 +197,7 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">March 30, 2025</p>
+        <p class="date">March 24, 2025</p>
       </div>
     </div>
     
@@ -217,115 +216,20 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 
 
 
-<p>Everybody has a lot to say about education in America. The ability to learn and apply knowledge, aka intelligence, is <a href="https://mftokic.github.io/posts/2025-01-31-knowledge/">the most important thing to develop in our lives</a>. But schools seem to be missing the mark on this. They do some things right, but more things wrong.</p>
-<p>Here is a breakdown of many things schools do wrong, and a few of what they do right.</p>
-<section id="whats-bad-about-school" class="level2">
-<h2 class="anchored" data-anchor-id="whats-bad-about-school">What’s Bad About School</h2>
-<section id="form-of-governmental-control" class="level3">
-<h3 class="anchored" data-anchor-id="form-of-governmental-control">Form of Governmental Control</h3>
-<p>Public schooling can be rephrased as compulsory schooling. Meaning you have to go. Why do you have to go? Because the government says so. Getting an education is a good idea, but forcing you to get a specific kind of education makes little sense in a place called “the land of the free”.</p>
-<p>Saying the pledge of allegiance every day. Control over what you learn.</p>
-<p>https://www.youtube.com/watch?v=kyWFpsAnVuIhttps://www.youtube.com/watch?v=kyWFpsAnVuI</p>
+<p><em>This post is part of a larger learning series around time series forecasting fundamentals. <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/">Check out the learning path</a> to see other posts in the series.</em></p>
+<section id="whats-a-univariate-model" class="level3">
+<h3 class="anchored" data-anchor-id="whats-a-univariate-model">What’s a Univariate Model?</h3>
+<p>The simplest, yet often most powerful, models in time series forecasting are the oldest. These models are univariate approaches that are more statistics than new age machine learning. Univariate means that they only rely on previous values of the target variable to predict future values of that target variable. Just a timestamp and a target variable is all you need to get off the ground with univariate models.</p>
+<p>This might sound too simple, but often it’s <a href="https://mftokic.github.io/posts/2024-05-03-time-series-simple-models/">the simplest models that can create the best forecasts</a>.</p>
 </section>
-<section id="schools-are-just-factories" class="level3">
-<h3 class="anchored" data-anchor-id="schools-are-just-factories">Schools Are Just Factories</h3>
-<p>Factory style education was introduced in Prussia in 18th century. Coincides with industrial revolution. With each new technical revolution, eduction should be rebuilt from the ground up.</p>
-</section>
-<section id="early-start-and-end-times" class="level3">
-<h3 class="anchored" data-anchor-id="early-start-and-end-times">Early Start and End Times</h3>
-<p>Why do adults work 9am-5pm but teenagers go to school from 7am-3pm? Here’s the start times for the schools I went to in Kansas.</p>
+<section id="types-of-univariate-models" class="level3">
+<h3 class="anchored" data-anchor-id="types-of-univariate-models">Types of Univariate Models</h3>
+<p>There are countless univariate models we could cover, but instead we will keep things simple and discuss some of the most common models that provide the biggest bang for buck.</p>
 <ul>
-<li>Elementary School: 8:40 AM - 3:45 PM</li>
-<li>Middle School: 7:51 AM - 3:00 PM</li>
-<li>High School: 7:35 AM - 2:45 PM</li>
+<li>ARIMA (in progress)</li>
+<li>Exponential Smoothing</li>
+<li>Simple Benchmark Models</li>
 </ul>
-<p>Why can’t they all start at the same time? The reason has to do with bus schedules. The same bus services the same neighborhood twice each morning. Once to pick up the middle and high school kids, then a second time to pick up the elementary school kids. It’s purely a money thing. There’s also the argument that middle and high school kids need to have more time after school for extracurricular activities or jobs, so that’s why they start earlier. I think that’s just a nice way to sweep the whole bus scheduling issue under the rug.</p>
-<p>The kids who need the most sleep, high school teenagers, are getting the fewest because they start school the earliest.</p>
-<p>Variable wake times are the worst for kids.</p>
-</section>
-<section id="summer" class="level3">
-<h3 class="anchored" data-anchor-id="summer">Summer</h3>
-</section>
-<section id="school-lunches" class="level3">
-<h3 class="anchored" data-anchor-id="school-lunches">School Lunches</h3>
-</section>
-<section id="no-choice-of-teachers" class="level3">
-<h3 class="anchored" data-anchor-id="no-choice-of-teachers">No Choice of Teachers</h3>
-</section>
-<section id="no-control-over-lesson-plan" class="level3">
-<h3 class="anchored" data-anchor-id="no-control-over-lesson-plan">No Control Over Lesson Plan</h3>
-<p>Can’t learn what you’re most interested in. Can’t learn skills that actually give you a job. Can’t learn broader life skills.</p>
-</section>
-<section id="single-speed-learning" class="level3">
-<h3 class="anchored" data-anchor-id="single-speed-learning">Single Speed Learning</h3>
-<p>Single track learning, not mastery learning. Tied to grades that move one step at a time. Skipping grades can ruin your social life.</p>
-</section>
-<section id="tests-are-not-real-life" class="level3">
-<h3 class="anchored" data-anchor-id="tests-are-not-real-life">Tests Are Not Real Life</h3>
-<p>Learn for the test, not for real life. State and federal testing facilitates funding, so teachers also teach for the test. People optimize for grades. This makes the joy of learning a job, which takes away any intrinsic motivation to continue learning outside of school.</p>
-</section>
-<section id="too-expensive" class="level3">
-<h3 class="anchored" data-anchor-id="too-expensive">Too Expensive</h3>
-</section>
-<section id="often-a-decade-behind-trends" class="level3">
-<h3 class="anchored" data-anchor-id="often-a-decade-behind-trends">Often A Decade Behind Trends</h3>
-<p>Never adopt new technology in time. Anti AI today. Rows of desk facing a chalkboard doesn’t make sense anymore.</p>
-</section>
-<section id="less-yard-time-than-a-prison" class="level3">
-<h3 class="anchored" data-anchor-id="less-yard-time-than-a-prison">Less Yard Time Than a Prison</h3>
-<p>The architect who designed my high school mainly designed prisons. Coincidence?</p>
-</section>
-<section id="more-bullies-than-a-prison" class="level3">
-<h3 class="anchored" data-anchor-id="more-bullies-than-a-prison">More Bullies Than a Prison</h3>
-</section>
-<section id="social-media-corrupts-schools" class="level3">
-<h3 class="anchored" data-anchor-id="social-media-corrupts-schools">Social Media Corrupts Schools</h3>
-</section>
-<section id="peer-pressure" class="level3">
-<h3 class="anchored" data-anchor-id="peer-pressure">Peer Pressure</h3>
-</section>
-<section id="no-parental-freedom" class="level3">
-<h3 class="anchored" data-anchor-id="no-parental-freedom">No Parental Freedom</h3>
-<p>Have to build your life around the school. Restricts when you wake up, when you travel, what you want your kid to learn, what kind of job you need to pay for the school.</p>
-</section>
-<section id="getting-into-a-good-college" class="level3">
-<h3 class="anchored" data-anchor-id="getting-into-a-good-college">Getting Into a Good College</h3>
-</section>
-<section id="teacher-salaries" class="level3">
-<h3 class="anchored" data-anchor-id="teacher-salaries">Teacher Salaries</h3>
-<p>Paid nothing. Get no supplies from gov, often spending money out of their own pocket. Jump around to multiple districts to pad their pensions. Anything that has a union basically means the worker s are being taken advantaged of.</p>
-</section>
-<section id="good-schools-are-expensive" class="level3">
-<h3 class="anchored" data-anchor-id="good-schools-are-expensive">Good Schools Are Expensive</h3>
-<p>Pay for the things around learning, not for the learning itself. Better facilities, better network, better families, better after school activities.</p>
-</section>
-</section>
-<section id="whats-good-about-school" class="level2">
-<h2 class="anchored" data-anchor-id="whats-good-about-school">What’s Good About School</h2>
-<section id="networks" class="level3">
-<h3 class="anchored" data-anchor-id="networks">Networks</h3>
-</section>
-<section id="socialization" class="level3">
-<h3 class="anchored" data-anchor-id="socialization">Socialization</h3>
-<p>Girls being with boys. Being forced to ask someone to a dance. Learning how to get along. Making friends.</p>
-</section>
-<section id="sports" class="level3">
-<h3 class="anchored" data-anchor-id="sports">Sports</h3>
-</section>
-</section>
-<section id="ways-to-fix-school" class="level2">
-<h2 class="anchored" data-anchor-id="ways-to-fix-school">Ways to Fix School</h2>
-<section id="tutors-create-the-best-results" class="level3">
-<h3 class="anchored" data-anchor-id="tutors-create-the-best-results">Tutors Create the Best Results</h3>
-</section>
-<section id="combine-homeschool-with-ai" class="level3">
-<h3 class="anchored" data-anchor-id="combine-homeschool-with-ai">Combine homeschool with AI</h3>
-</section>
-</section>
-<section id="final-thoughts" class="level2">
-<h2 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h2>
-<p>My experience with school.</p>
-<p><a href="https://i0.wp.com/blog.education.nationalgeographic.org/wp-content/uploads/2016/09/france_in_xxi_century-_school.jpg?ssl=1">Photo Credit</a></p>
 
 
 </section>

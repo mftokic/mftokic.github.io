@@ -10,7 +10,42 @@
 <atom:link href="https://mftokic.github.io/index.xml" rel="self" type="application/rss+xml"/>
 <description>A collection of thoughts on things from the mind of Mike Tokic</description>
 <generator>quarto-1.5.57</generator>
-<lastBuildDate>Fri, 21 Mar 2025 07:00:00 GMT</lastBuildDate>
+<lastBuildDate>Mon, 24 Mar 2025 07:00:00 GMT</lastBuildDate>
+<item>
+  <title>Univariate Models For Time Series</title>
+  <dc:creator>Mike Tokic</dc:creator>
+  <link>https://mftokic.github.io/posts/2025-03-24-ts-fundamentals-univariate-models/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p><em>This post is part of a larger learning series around time series forecasting fundamentals. <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/">Check out the learning path</a> to see other posts in the series.</em></p>
+<section id="whats-a-univariate-model" class="level3">
+<h3 class="anchored" data-anchor-id="whats-a-univariate-model">What’s a Univariate Model?</h3>
+<p>The simplest, yet often most powerful, models in time series forecasting are the oldest. These models are univariate approaches that are more statistics than new age machine learning. Univariate means that they only rely on previous values of the target variable to predict future values of that target variable. Just a timestamp and a target variable is all you need to get off the ground with univariate models.</p>
+<p>This might sound too simple, but often it’s <a href="https://mftokic.github.io/posts/2024-05-03-time-series-simple-models/">the simplest models that can create the best forecasts</a>.</p>
+</section>
+<section id="types-of-univariate-models" class="level3">
+<h3 class="anchored" data-anchor-id="types-of-univariate-models">Types of Univariate Models</h3>
+<p>There are countless univariate models we could cover, but instead we will keep things simple and discuss some of the most common models that provide the biggest bang for buck.</p>
+<ul>
+<li>ARIMA (in progress)</li>
+<li>Exponential Smoothing</li>
+<li>Simple Benchmark Models</li>
+</ul>
+
+
+</section>
+
+ ]]></description>
+  <category>machine-learning</category>
+  <category>time-series</category>
+  <guid>https://mftokic.github.io/posts/2025-03-24-ts-fundamentals-univariate-models/</guid>
+  <pubDate>Mon, 24 Mar 2025 07:00:00 GMT</pubDate>
+  <media:content url="https://mftokic.github.io/posts/2025-03-24-ts-fundamentals-univariate-models/image.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
 <item>
   <title>Data Cleaning: Stationary</title>
   <dc:creator>Mike Tokic</dc:creator>
@@ -2368,90 +2403,6 @@
   <guid>https://mftokic.github.io/posts/2024-11-08-cancelled-streaming/</guid>
   <pubDate>Fri, 08 Nov 2024 08:00:00 GMT</pubDate>
   <media:content url="https://mftokic.github.io/posts/2024-11-08-cancelled-streaming/image.png" medium="image" type="image/png" height="144" width="144"/>
-</item>
-<item>
-  <title>Exploratory Data Analysis: Time Series Decomposition</title>
-  <dc:creator>Mike Tokic</dc:creator>
-  <link>https://mftokic.github.io/posts/2024-11-06-ts-fundamentals-decomposition/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p><em>This post is part of the <a href="https://mftokic.github.io/posts/2024-10-03-ts-fundamentals-eda/">exploratory data analysis chapter</a> within a larger learning series around time series forecasting fundamentals. <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/">Check out the main learning path</a> to see other posts in the series.</em></p>
-<p><em>The example monthly data used in this series <a href="https://github.com/mftokic/mftokic.github.io/blob/main/posts/2024-10-02-ts-fundamentals-whats-a-time-series/example_ts_data.csv">can be found here.</a> You can also find the <a href="https://github.com/mftokic/mftokic.github.io/blob/main/notebooks/2024-11-06-ts-fundamentals-decomposition.ipynb">python code used in this post here.</a></em></p>
-<section id="your-data-is-so-trendy" class="level3">
-<h3 class="anchored" data-anchor-id="your-data-is-so-trendy">Your Data is so Trendy</h3>
-<p>Every single time series you have ever seen has a trend and seasonality. If they don’t, then they are random white noise. A trend is just values steadily rising or falling over time. You could have a rising trend in some years, then a falling trend in others. Below is a chart with a strong trend but weak seasonality.</p>
-<p><img src="https://mftokic.github.io/posts/2024-11-06-ts-fundamentals-decomposition/chart1.png" class="img-fluid"></p>
-<p>Seasonality just means that your data has a recurring seasonal pattern. For example your data could spike during the holiday season from Oct-Dec, then fall drastically from Jan-Jun.&nbsp;Your seasonality could also change over time. Below is a chart with strong seasonality but weak trend.</p>
-<p><img src="https://mftokic.github.io/posts/2024-11-06-ts-fundamentals-decomposition/chart2.png" class="img-fluid"></p>
-<p>In order to better understand the trend and seasonal patterns in your data, you need to isolate them into separate components. This is done through a process called time series decomposition. This process breaks out a time series into three separate parts: trend, seasonality, and remainder. The remainder component is just parts of your time series that can’t be explained by the trend and seasonal component. Let’s try decomposing a time series from our example data set.</p>
-</section>
-<section id="breaking-out-trend-and-seasonality-with-additive-decomposition" class="level3">
-<h3 class="anchored" data-anchor-id="breaking-out-trend-and-seasonality-with-additive-decomposition">Breaking Out Trend and Seasonality with Additive Decomposition</h3>
-<p>We can isolate the trend component of a time series using simple methods like moving averages (MA). These are just simple averages over a span of time. Let’s take a time series from our example revenue data and create a moving average. In the first chart below we used a <a href="https://otexts.com/fpp3/moving-averages.html#estimating-the-trend-cycle-with-seasonal-data">2x12-MA</a>. This moving average now isolates the trend of the time series. We can see a dip in trend around 2020 then a strong rebound going forward. The moving average doesn’t start and end at the same time as our time series, since we need a burn in period to start creating the averages. If we wanted to detrend the time series we can subtract the new trend series from our original revenue, shown in the second chart below.</p>
-<p><img src="https://mftokic.github.io/posts/2024-11-06-ts-fundamentals-decomposition/chart3.png" class="img-fluid"></p>
-<p><img src="https://mftokic.github.io/posts/2024-11-06-ts-fundamentals-decomposition/chart4.png" class="img-fluid"></p>
-<p>Next we can get the seasonal component of our data. This is very straightforward. All we have to do is take our detrended series and calculate the average revenue for each month of the year. After getting the average value per month, we can divide by the total average across all months. This ensures that the seasonal values of each month add to zero. Then we repeat the final values per month across all years. The final result is shown below. Now we can see there is very strong seasonal patterns at certain times of the year. Some quarters have high sales, while others do not. This kind of repeatable pattern will be very important for us when it comes to training models.</p>
-<p><img src="https://mftokic.github.io/posts/2024-11-06-ts-fundamentals-decomposition/chart5.png" class="img-fluid"></p>
-<p>Finally we can get the final piece of our decomposition, the remainder (aka residual) series. This is everything that couldn’t be explained by the trend and seasonal components. Simply take the original revenue time series, subtract the trend and seasonal components, and bam you have the remainder series.</p>
-<p><img src="https://mftokic.github.io/posts/2024-11-06-ts-fundamentals-decomposition/chart6.png" class="img-fluid"></p>
-</section>
-<section id="stl-decomposition" class="level3">
-<h3 class="anchored" data-anchor-id="stl-decomposition">STL Decomposition</h3>
-<p>The additive decomposition approach can work very well if your data has a linear trend and stable seasonality. But if the series is growing exponentially, or has changing seasonality, then more advanced methods are needed. This is where STL decomposition comes in. STL is an acronym for “Seasonal and Trend decomposition using Loess”, while loess is a smoothing method for estimating nonlinear relationships. This smoothing process allows for changing seasonality, a more complex understanding of the trend component, and more resistance to outliers. Here is the STL process broken down step by step.</p>
-<ol type="1">
-<li>Extract Initial Seasonal Component
-<ul>
-<li>First, STL identifies the seasonal pattern in the data. It does this by looking at the regular repeating cycles (e.g., monthly or weekly patterns).</li>
-<li>Using Loess smoothing, it calculates a rough seasonal pattern that captures these cycles.</li>
-<li>This step gives an initial estimate of what the seasonal pattern looks like.</li>
-</ul></li>
-<li>Remove Seasonality to Estimate the Trend
-<ul>
-<li>After finding the initial seasonal component, STL subtracts it from the data to get a rough idea of the trend (the overall up or down direction).</li>
-<li>Loess smoothing is applied again to the deseasonalized data (data without seasonal patterns) to create a smooth trend line.</li>
-</ul></li>
-<li>Refine the Seasonal and Trend Components
-<ul>
-<li>STL repeats the process in cycles, fine-tuning both the trend and seasonal estimates.</li>
-<li>Each cycle alternates between smoothing the seasonal component and the trend component, adjusting them with each pass to better fit the data.</li>
-<li>By repeating this process, STL allows the seasonal component to change over time if necessary and captures any evolving trends.</li>
-</ul></li>
-<li>Calculate the Remainder
-<ul>
-<li>Once the trend and seasonal components are finalized, STL subtracts both from the original data. What’s left is the remainder component, representing the random, unpredictable part of the data.</li>
-<li>This remainder is what can’t be explained by the regular trend or seasonal patterns, capturing any noise or outliers.</li>
-</ul></li>
-</ol>
-<p>Here is the output of a STL decomposition. Each component can be added together to get the original time series, just like additive decomposition.</p>
-<p><img src="https://mftokic.github.io/posts/2024-11-06-ts-fundamentals-decomposition/chart7.png" class="img-fluid"></p>
-</section>
-<section id="reading-the-tea-leaves" class="level3">
-<h3 class="anchored" data-anchor-id="reading-the-tea-leaves">Reading the Tea Leaves</h3>
-<p>Understanding the outputs of time series decomposition can be more of an art than science. The more you do it, the more your data intuition grows about what’s happening. Looking at the results of STL decomposition tells us a few things for our time series.</p>
-<ol type="1">
-<li>There has been mostly a stable trend over the years, except for a strange dip in 2020.</li>
-<li>Seasonality is strong with repeating peaks and valleys across the years. But it does seem to be growing with each passing year.</li>
-<li>Most of the residual points hover around zero, which is ideal. Having the residual component have an average of zero and a constant standard deviation over time means the data is just white noise, or things that can’t be explained. We do see a large drop in 2020 though…</li>
-</ol>
-<p>This analysis shows us that there is most likely an outlier in 2020 that seriously impacted our data. If you don’t have a guess as to what this might be than you might have been living under a rock the last decade. The impact is from COVID-19. Thankfully this impact can be taken care of later in our modeling process. But for now it’s good that we identify it and get the domain knowledge to know what could have caused it.</p>
-</section>
-<section id="final-thoughts" class="level3">
-<h3 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h3>
-<p>Decomposing a time series is often one of the first things an accomplished data scientist does before training any kind of machine learning model. Breaking the time series into its components allows us to understand the potential forces that is impacting the trend of the data and if there are any outliers in the data. Knowing this allows us to change our approach when training models. Ultimately leading to more accurate forecasts down the road.</p>
-
-
-</section>
-
- ]]></description>
-  <category>machine-learning</category>
-  <category>time-series</category>
-  <guid>https://mftokic.github.io/posts/2024-11-06-ts-fundamentals-decomposition/</guid>
-  <pubDate>Wed, 06 Nov 2024 08:00:00 GMT</pubDate>
-  <media:content url="https://mftokic.github.io/posts/2024-11-06-ts-fundamentals-decomposition/chart7.png" medium="image" type="image/png" height="115" width="144"/>
 </item>
 </channel>
 </rss>

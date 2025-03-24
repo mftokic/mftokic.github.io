@@ -1,0 +1,24 @@
+---
+title: "Univariate Models For Time Series"
+description: "Foundational models in forecasting"
+author: "Mike Tokic"
+date: "2025-03-24"
+categories: [machine-learning, time-series]
+image: "image.png"
+---
+
+*This post is part of a larger learning series around time series forecasting fundamentals. [Check out the learning path](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/) to see other posts in the series.* 
+
+### What's a Univariate Model?
+
+The simplest, yet often most powerful, models in time series forecasting are the oldest. These models are univariate approaches that are more statistics than new age machine learning. Univariate means that they only rely on previous values of the target variable to predict future values of that target variable. Just a timestamp and a target variable is all you need to get off the ground with univariate models. 
+
+This might sound too simple, but often it's [the simplest models that can create the best forecasts](https://mftokic.github.io/posts/2024-05-03-time-series-simple-models/). 
+
+### Types of Univariate Models 
+
+There are countless univariate models we could cover, but instead we will keep things simple and discuss some of the most common models that provide the biggest bang for buck. 
+
+- ARIMA (in progress) 
+- Exponential Smoothing
+- Simple Benchmark Models
