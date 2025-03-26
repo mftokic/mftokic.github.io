@@ -217,16 +217,37 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 <p><em>The example monthly data used in this series <a href="https://github.com/mftokic/mftokic.github.io/blob/main/posts/2024-10-02-ts-fundamentals-whats-a-time-series/example_ts_data.csv">can be found here.</a> You can also find the <a href="https://github.com/mftokic/mftokic.github.io/blob/main/notebooks/2025-03-21-ts-fundamentals-data-stationary.ipynb">python code used in this post here.</a></em></p>
 <section id="lets-break-arima-down" class="level3">
 <h3 class="anchored" data-anchor-id="lets-break-arima-down">Let’s Break ARIMA Down</h3>
-<p>Arima stands for auto-regressive integrated moving average. That sounds like a mouthful so we’ll take it step by step on how each component works.</p>
+<p>Arima stands for autoregressive integrated moving average. That sounds like a mouthful so we’ll take it step by step on how each component works.</p>
 <ul>
-<li><strong>AR (Auto-Regressive)</strong>: The current value depends on past values of itself</li>
+<li><strong>AR (AutoRegressive)</strong>: The current value depends on past values of itself</li>
 <li><strong>I (Integrated)</strong>: Difference the data to make it <a href="https://mftokic.github.io/posts/2025-03-21-ts-fundamentals-data-cleaning-stationary/">stationary</a></li>
 <li><strong>MA (Moving Average)</strong>: The current value depends on past prediction errors</li>
 </ul>
 </section>
-<section id="auto-regressive" class="level3">
-<h3 class="anchored" data-anchor-id="auto-regressive">Auto-Regressive</h3>
+<section id="autoregressive" class="level3">
+<h3 class="anchored" data-anchor-id="autoregressive">AutoRegressive</h3>
 <p>An arima model will create lags of the target variable (the variable you want to forecast into the future) to help learn trends and patterns in the data.</p>
+</section>
+<section id="integrated" class="level3">
+<h3 class="anchored" data-anchor-id="integrated">Integrated</h3>
+</section>
+<section id="moving-average" class="level3">
+<h3 class="anchored" data-anchor-id="moving-average">Moving Average</h3>
+</section>
+<section id="putting-it-all-together" class="level3">
+<h3 class="anchored" data-anchor-id="putting-it-all-together">Putting it All Together</h3>
+<p>How a model is trained. Differencing first, autoregression second, moving average third??? Need to confirm that.</p>
+<p>How a future forecast is created and how autoregressive forecasts work in far out forecast horizons.</p>
+<p>Auto selection 1. Determine number of differencing 2. Fit certain number combinations of AR and MA, calculate accuracy 3. For the most accurate model, create small variations of AR and MA values 4. Choose new most accurate combination, repeat step number 3 until a new best model is found 5. If no new best model is found, stop and return the current best model</p>
+<p>Seasonal arima. Similar to non-seasonal arima, all AR and MA components are seasonal calculations.</p>
+</section>
+<section id="reversal" class="level3">
+<h3 class="anchored" data-anchor-id="reversal">Reversal</h3>
+<p>Forecasts flattening out over time.</p>
+</section>
+<section id="final-thoughts" class="level3">
+<h3 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h3>
+<p><a href="https://otexts.com/fpp3/arima.html">Forecasting Principles and Practice</a> by Rob Hyndman</p>
 
 
 </section>
