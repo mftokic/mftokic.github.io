@@ -20,28 +20,21 @@ Arima stands for autoregressive integrated moving average. That sounds like a mo
 - **I (Integrated)**: Difference the data to make it [stationary](https://mftokic.github.io/posts/2025-03-21-ts-fundamentals-data-cleaning-stationary/)
 - **MA (Moving Average)**: The current value depends on past prediction errors
 
-### AutoRegressive
-
-An arima model will create lags of the target variable (the variable you want to forecast into the future) to help learn trends and patterns in the data. 
-
-### Integrated
-
-
-### Moving Average
-
-
 ### Putting it All Together 
 
-How a model is trained. Differencing first, autoregression second, moving average third??? Need to confirm that. 
+Here's what happens when an arima model is trained. 
 
-How a future forecast is created and how autoregressive forecasts work in far out forecast horizons. 
+1. Integrated: Difference the data d times to remove trend or seasonality, making the series stationary. This is necessary so that the AR and MA components can model the structure reliably.
+2. Autoregressive: Model the differenced series as a linear combination of its own lagged values. This captures momentum or persistence in the time series aka how past values influence future ones.
+3. Moving Average: Model the current value as a function of past forecast errors. These errors are not directly observed, so the model estimates them recursively during training, learning how random shocks in the past influence the present.
+4. Training: The AR and MA parts are fitted together by maximizing the likelihood of the observed data, given the model structure. This involves recursively computing residuals and using numerical optimization to find the best parameters.
 
-Auto selection
-1. Determine number of differencing
-2. Fit certain number combinations of AR and MA, calculate accuracy 
-3. For the most accurate model, create small variations of AR and MA values
-4. Choose new most accurate combination, repeat step number 3 until a new best model is found
-5. If no new best model is found, stop and return the current best model
+To create future forecasts, we'd take the trained model and do the following. 
+
+1. Autoregressive: Predict differenced values using past observations (or predictions) via the AR terms.
+2. Moving Average: Refine predictions using known or assumed residual errors from past forecasts.
+3. Recursive Forecasting: Forecast multiple steps ahead by reusing your own predictions as inputs.
+4. Integrated (Last): Reverse the differencing operation to return the forecast to the original scale.
 
 Seasonal arima. Similar to non-seasonal arima, all AR and MA components are seasonal calculations. 
 
