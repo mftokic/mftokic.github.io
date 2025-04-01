@@ -228,27 +228,27 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 <h3 class="anchored" data-anchor-id="putting-it-all-together">Putting it All Together</h3>
 <p>Here’s what happens when an arima model is trained.</p>
 <ol type="1">
-<li>Integrated: Difference the data d times to remove trend or seasonality, making the series stationary. This is necessary so that the AR and MA components can model the structure reliably.</li>
-<li>Autoregressive: Model the differenced series as a linear combination of its own lagged values. This captures momentum or persistence in the time series aka how past values influence future ones.</li>
-<li>Moving Average: Model the current value as a function of past forecast errors. These errors are not directly observed, so the model estimates them recursively during training, learning how random shocks in the past influence the present.</li>
-<li>Training: The AR and MA parts are fitted together by maximizing the likelihood of the observed data, given the model structure. This involves recursively computing residuals and using numerical optimization to find the best parameters.</li>
+<li><strong>Integrated</strong>: Difference the data d times to remove trend or seasonality, making the series stationary. This is necessary so that the AR and MA components can model the structure reliably.</li>
+<li><strong>Autoregressive</strong>: Model the differenced series as a linear combination of its own lagged values. This captures momentum or persistence in the time series aka how past values influence future ones.</li>
+<li><strong>Moving Average</strong>: Model the current value as a function of past forecast errors. These errors are not directly observed, so the model estimates them recursively during training, learning how random shocks in the past influence the present.</li>
+<li><strong>Training</strong>: The AR and MA parts are fitted together by maximizing the likelihood of the observed data, given the model structure. This involves recursively computing residuals and using numerical optimization to find the best parameters.</li>
 </ol>
 <p>To create future forecasts, we’d take the trained model and do the following.</p>
 <ol type="1">
-<li>Autoregressive: Predict differenced values using past observations (or predictions) via the AR terms.</li>
-<li>Moving Average: Refine predictions using known or assumed residual errors from past forecasts.</li>
-<li>Recursive Forecasting: Forecast multiple steps ahead by reusing your own predictions as inputs.</li>
-<li>Integrated (Last): Reverse the differencing operation to return the forecast to the original scale.</li>
+<li><strong>Autoregressive</strong>: Predict differenced values using past observations (or predictions) via the AR terms.</li>
+<li><strong>Moving Average</strong>: Refine predictions using known or assumed residual errors from past forecasts.</li>
+<li><strong>Recursive Forecasting</strong>: Forecast multiple steps ahead by reusing your own predictions as inputs.</li>
+<li><strong>Integrated (Last)</strong>: Reverse the differencing operation to return the forecast to the original scale.</li>
 </ol>
 <p>Ok, now we know how arima works at a high level and how it can be used to create future forecasts. But there’s one major thing missing. The arima process we went through is for non-seasonal data. If our data has seasonality, we need to fit a seasonal arima model. It’s very similar to the plain vanilla arima model, but has a separate process added to handle seasonal differencing and seasonal lags. For example instead of comparing sales of last month to sales in this month, a seasonal approach would compare sales of 12 months ago with sales in this month. It’s kind of like stacking another arima on top of arima, but operating at a seasonal level.</p>
 </section>
 <section id="reversal" class="level3">
 <h3 class="anchored" data-anchor-id="reversal">Reversal</h3>
-<p>Arima is a cornerstone of every forecasters toolbox, but it does come with some drawbacks though.</p>
+<p>Arima is a cornerstone of every forecasters toolbox, but it does come with some drawbacks.</p>
 <ol type="1">
-<li>Assumes linearity of the data since it learns linear patters in previous data, which may not work well if the data has non-linear patterns.</li>
-<li>Not the best at long term forecasting. Sometimes an arima model can converge to the mean of the data or a constant value over a long enough forecast horizon. This removes any kind of trend or seasonality the data might possess.</li>
-<li>Finding the right parameters (number of differencing, AR and MA values) is not always optimal</li>
+<li><strong>Assumes linearity of the data</strong> since it learns linear patters in previous data, which may not work well if the data has non-linear patterns.</li>
+<li><strong>Not the best at long term forecasting.</strong> Sometimes an arima model can converge to the mean of the data or a constant value over a long enough forecast horizon. This removes any kind of trend or seasonality the data might possess.</li>
+<li><strong>Finding the right parameters</strong> (number of differencing, AR and MA values) is not always optimal</li>
 </ol>
 </section>
 <section id="final-thoughts" class="level3">
