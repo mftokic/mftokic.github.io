@@ -240,15 +240,28 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 <li>Recursive Forecasting: Forecast multiple steps ahead by reusing your own predictions as inputs.</li>
 <li>Integrated (Last): Reverse the differencing operation to return the forecast to the original scale.</li>
 </ol>
-<p>Seasonal arima. Similar to non-seasonal arima, all AR and MA components are seasonal calculations.</p>
+<p>Ok, now we know how arima works at a high level and how it can be used to create future forecasts. But there’s one major thing missing. The arima process we went through is for non-seasonal data. If our data has seasonality, we need to fit a seasonal arima model. It’s very similar to the plain vanilla arima model, but has a separate process added to handle seasonal differencing and seasonal lags. For example instead of comparing sales of last month to sales in this month, a seasonal approach would compare sales of 12 months ago with sales in this month. It’s kind of like stacking another arima on top of arima, but operating at a seasonal level.</p>
 </section>
 <section id="reversal" class="level3">
 <h3 class="anchored" data-anchor-id="reversal">Reversal</h3>
-<p>Forecasts flattening out over time.</p>
+<p>Arima is a cornerstone of every forecasters toolbox, but it does come with some drawbacks though.</p>
+<ol type="1">
+<li>Assumes linearity of the data since it learns linear patters in previous data, which may not work well if the data has non-linear patterns.</li>
+<li>Not the best at long term forecasting. Sometimes an arima model can converge to the mean of the data or a constant value over a long enough forecast horizon. This removes any kind of trend or seasonality the data might possess.</li>
+<li>Finding the right parameters (number of differencing, AR and MA values) is not always optimal</li>
+</ol>
 </section>
 <section id="final-thoughts" class="level3">
 <h3 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h3>
-<p><a href="https://otexts.com/fpp3/arima.html">Forecasting Principles and Practice</a> by Rob Hyndman</p>
+<p>Arima is one of the most foundational models in time series forecasting. Not because it’s perfect, but because it’s interpretable, fast to train, and often surprisingly effective for short-term, univariate forecasting problems. It gives us a solid mental model for thinking about time series structure: trends, momentum, and noise.</p>
+<p>That said, arima models come with limitations. They assume linearity, can struggle with longer horizons, and require a stationary signal to be effective. One particularly important limitation is that arima only looks at the past values of the target variable. It doesn’t account for external factors like promotions, weather, or economic indicators unless you explicitly modify the model to include them.</p>
+<p>We’ll look at ways to incorporate external regressors into time series models soon, but understanding how arima works in isolation is the right starting point. If you can reason through the arima process step by step, you’re building a strong foundation for more powerful forecasting techniques down the road.</p>
+</section>
+<section id="learn-more" class="level3">
+<h3 class="anchored" data-anchor-id="learn-more">Learn More</h3>
+<ul>
+<li><a href="https://otexts.com/fpp3/arima.html">Forecasting Principles and Practice</a> by Rob Hyndman</li>
+</ul>
 
 
 </section>
