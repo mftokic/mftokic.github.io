@@ -31,8 +31,8 @@
 <h3 class="anchored" data-anchor-id="types-of-univariate-models">Types of Univariate Models</h3>
 <p>There are countless univariate models we could cover, but instead we will keep things simple and discuss some of the most common models that provide the biggest bang for buck.</p>
 <ul>
-<li>ARIMA (in progress)</li>
-<li>Exponential Smoothing</li>
+<li><a href="https://mftokic.github.io/posts/2025-04-02-ts-fundamentals-univariate-arima/">ARIMA</a></li>
+<li>Exponential Smoothing (in progress)</li>
 <li>Simple Benchmark Models</li>
 </ul>
 
