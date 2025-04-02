@@ -6,11 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Mike Tokic">
-<meta name="dcterms.date" content="2025-04-02">
-<meta name="description" content="Understanding how an arima model works">
 
-<title>Univariate Models: ARIMA – Thoughts on Things</title>
+<title>Python Code – Thoughts on Things</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,28 +20,62 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<link href="../../logo.png" rel="icon" type="image/png">
-<script src="../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../logo.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -81,32 +112,23 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 </script>
-<meta name="quarto:status" content="draft">
 
 
-<link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Univariate Models: ARIMA – Thoughts on Things">
-<meta property="og:description" content="Understanding how an arima model works">
-<meta property="og:image" content="https://mftokic.github.io/posts/2025-04-02-ts-fundamentals-univariate-arima/image.png">
+<link rel="stylesheet" href="../styles.css">
+<meta property="og:title" content="Python Code – Thoughts on Things">
 <meta property="og:site_name" content="Thoughts on Things">
-<meta property="og:image:height" content="1024">
-<meta property="og:image:width" content="1024">
-<meta name="twitter:title" content="Univariate Models: ARIMA – Thoughts on Things">
-<meta name="twitter:description" content="Understanding how an arima model works">
-<meta name="twitter:image" content="https://mftokic.github.io/posts/2025-04-02-ts-fundamentals-univariate-arima/image.png">
-<meta name="twitter:image-height" content="1024">
-<meta name="twitter:image-width" content="1024">
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Python Code – Thoughts on Things">
+<meta name="twitter:card" content="summary">
 </head>
 
 <body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner"><div id="quarto-draft-alert" class="alert alert-warning"><i class="bi bi-pencil-square"></i>Draft</div>
+  <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Thoughts on Things</span>
     </a>
   </div>
@@ -117,23 +139,23 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../start_here.html"> 
+    <a class="nav-link" href="../start_here.html"> 
 <span class="menu-text">Start Here</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html"> 
+    <a class="nav-link" href="../about.html"> 
 <span class="menu-text">About Me</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../software.html"> 
+    <a class="nav-link" href="../software.html"> 
 <span class="menu-text">Software</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../books.html"> 
+    <a class="nav-link" href="../books.html"> 
 <span class="menu-text">Books</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../health.html"> 
+    <a class="nav-link" href="../health.html"> 
 <span class="menu-text">Health</span></a>
   </li>  
   <li class="nav-item">
@@ -156,7 +178,7 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="../../index.xml"> <i class="bi bi-rss" role="img">
+    <a class="nav-link" href="../index.xml"> <i class="bi bi-rss" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -169,111 +191,105 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
-      <h1 class="title">Univariate Models: ARIMA</h1>
-                  <div>
-        <div class="description">
-          Understanding how an arima model works
-        </div>
-      </div>
-                          <div class="quarto-categories">
-                <div class="quarto-category">machine-learning</div>
-                <div class="quarto-category">time-series</div>
-              </div>
-                  </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta">
-
-      <div>
-      <div class="quarto-title-meta-heading">Author</div>
-      <div class="quarto-title-meta-contents">
-               <p>Mike Tokic </p>
-            </div>
-    </div>
-      
-      <div>
-      <div class="quarto-title-meta-heading">Published</div>
-      <div class="quarto-title-meta-contents">
-        <p class="date">April 2, 2025</p>
-      </div>
-    </div>
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Python Code</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
 
 
-<p><em>This post is part of the <a href="https://mftokic.github.io/posts/2025-03-24-ts-fundamentals-univariate-models/">univariate models chapter</a> within a larger learning series around time series forecasting fundamentals. <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/">Check out the main learning path</a> to see other posts in the series.</em></p>
-<p><em>The example monthly data used in this series <a href="https://github.com/mftokic/mftokic.github.io/blob/main/posts/2024-10-02-ts-fundamentals-whats-a-time-series/example_ts_data.csv">can be found here.</a> You can also find the <a href="https://github.com/mftokic/mftokic.github.io/blob/main/notebooks/2025-04-02-ts-fundamentals-univariate-arima.ipynb">python code used in this post here.</a></em></p>
-<section id="lets-break-arima-down" class="level3">
-<h3 class="anchored" data-anchor-id="lets-break-arima-down">Let’s Break ARIMA Down</h3>
-<p>Arima stands for autoregressive integrated moving average. That sounds like a mouthful so we’ll take it step by step on how each component works.</p>
-<ul>
-<li><strong>AR (AutoRegressive)</strong>: The current value depends on past values of itself</li>
-<li><strong>I (Integrated)</strong>: Difference the data to make it <a href="https://mftokic.github.io/posts/2025-03-21-ts-fundamentals-data-cleaning-stationary/">stationary</a></li>
-<li><strong>MA (Moving Average)</strong>: The current value depends on past prediction errors</li>
-</ul>
-</section>
-<section id="putting-it-all-together" class="level3">
-<h3 class="anchored" data-anchor-id="putting-it-all-together">Putting it All Together</h3>
-<p>Here’s what happens when an arima model is trained.</p>
-<ol type="1">
-<li><strong>Integrated</strong>: Difference the data d times to remove trend or seasonality, making the series stationary. This is necessary so that the AR and MA components can model the structure reliably.</li>
-<li><strong>Autoregressive</strong>: Model the differenced series as a linear combination of its own lagged values. This captures momentum or persistence in the time series aka how past values influence future ones.</li>
-<li><strong>Moving Average</strong>: Model the current value as a function of past forecast errors. These errors are not directly observed, so the model estimates them recursively during training, learning how random shocks in the past influence the present.</li>
-<li><strong>Training</strong>: The AR and MA parts are fitted together by maximizing the likelihood of the observed data, given the model structure. This involves recursively computing residuals and using numerical optimization to find the best parameters.</li>
-</ol>
-<p>To create future forecasts, we’d take the trained model and do the following.</p>
-<ol type="1">
-<li><strong>Autoregressive</strong>: Predict differenced values using past observations (or predictions) via the AR terms.</li>
-<li><strong>Moving Average</strong>: Refine predictions using known or assumed residual errors from past forecasts.</li>
-<li><strong>Recursive Forecasting</strong>: Forecast multiple steps ahead by reusing your own predictions as inputs.</li>
-<li><strong>Integrated (Last)</strong>: Reverse the differencing operation to return the forecast to the original scale.</li>
-</ol>
-<p>Ok, now we know how arima works at a high level and how it can be used to create future forecasts. But there’s one major thing missing. The arima process we went through is for non-seasonal data. If our data has seasonality, we need to fit a seasonal arima model. It’s very similar to the plain vanilla arima model, but has a separate process added to handle seasonal differencing and seasonal lags. For example instead of comparing sales of last month to sales in this month, a seasonal approach would compare sales of 12 months ago with sales in this month. It’s kind of like stacking another arima on top of arima, but operating at a seasonal level.</p>
-</section>
-<section id="lets-train-a-model" class="level3">
-<h3 class="anchored" data-anchor-id="lets-train-a-model">Let’s Train a Model</h3>
-<p>Let’s take one of our example time series and create an arima forecast 12 months into the future and see how things look.</p>
-<p>insert chart of arima forecast</p>
-</section>
-<section id="reversal" class="level3">
-<h3 class="anchored" data-anchor-id="reversal">Reversal</h3>
-<p>Arima is a cornerstone of every forecasters toolbox, but it does come with some drawbacks.</p>
-<ol type="1">
-<li><strong>Assumes linearity of the data</strong> since it learns linear patters in previous data, which may not work well if the data has non-linear patterns.</li>
-<li><strong>Not the best at long term forecasting.</strong> Sometimes an arima model can converge to the mean of the data or a constant value over a long enough forecast horizon. This removes any kind of trend or seasonality the data might possess.</li>
-<li><strong>Finding the right parameters</strong> (number of differencing, AR and MA values) is not always optimal</li>
-</ol>
-</section>
-<section id="final-thoughts" class="level3">
-<h3 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h3>
-<p>Arima is one of the most foundational models in time series forecasting. Not because it’s perfect, but because it’s interpretable, fast to train, and often surprisingly effective for short-term, univariate forecasting problems. It gives us a solid mental model for thinking about time series structure: trends, momentum, and noise.</p>
-<p>That said, arima models come with limitations. They assume linearity, can struggle with longer horizons, and require a stationary signal to be effective. One particularly important limitation is that arima only looks at the past values of the target variable. It doesn’t account for external factors like promotions, weather, or economic indicators unless you explicitly modify the model to include them.</p>
-<p>We’ll look at ways to incorporate external regressors into time series models soon, but understanding how arima works in isolation is the right starting point. If you can reason through the arima process step by step, you’re building a strong foundation for more powerful forecasting techniques down the road.</p>
-</section>
-<section id="learn-more" class="level3">
-<h3 class="anchored" data-anchor-id="learn-more">Learn More</h3>
-<ul>
-<li><a href="https://otexts.com/fpp3/arima.html">Forecasting Principles and Practice</a> by Rob Hyndman</li>
-</ul>
+</header>
 
 
-</section>
+<div id="cell-2" class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># import libraries</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> statsforecast <span class="im">import</span> StatsForecast</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> statsforecast.models <span class="im">import</span> AutoARIMA</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-3" class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># read data</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>data_raw <span class="op">=</span> pd.read_csv(<span class="st">"../posts/2024-10-02-ts-fundamentals-whats-a-time-series/example_ts_data.csv"</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>data_raw <span class="op">=</span> (</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># select columns</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    data_raw[[<span class="st">"Country"</span>, <span class="st">"Product"</span>, <span class="st">"Date"</span>, <span class="st">"Revenue"</span>]]</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="co"># change data types</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    .assign(</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>        Date <span class="op">=</span> pd.to_datetime(data_raw[<span class="st">"Date"</span>]), </span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>        Revenue <span class="op">=</span> pd.to_numeric(data_raw[<span class="st">"Revenue"</span>])</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="co"># print the first few rows</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data_raw.head())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-4" class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># filter on specific series</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>us_ic_raw <span class="op">=</span> data_raw[(data_raw[<span class="st">"Country"</span>] <span class="op">==</span> <span class="st">"United States"</span>) <span class="op">&amp;</span> (data_raw[<span class="st">"Product"</span>] <span class="op">==</span> <span class="st">"Ice Cream"</span>)]</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># us_ic_raw.set_index("Date", inplace=False)</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co"># create unique id</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>us_ic_raw[<span class="st">"unique_id"</span>] <span class="op">=</span> us_ic_raw[<span class="st">"Country"</span>] <span class="op">+</span> <span class="st">"_"</span> <span class="op">+</span> us_ic_raw[<span class="st">"Product"</span>]</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co"># convert date to datetime</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>us_ic_raw[<span class="st">"Date"</span>] <span class="op">=</span> pd.to_datetime(us_ic_raw[<span class="st">"Date"</span>])</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(us_ic_raw.head())</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="co"># plot the data</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>plt.plot(us_ic_raw.index, us_ic_raw[<span class="st">"Revenue"</span>], label<span class="op">=</span><span class="st">"Ice Cream Revenue"</span>)</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Date"</span>)</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Revenue"</span>)</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Ice Cream Revenue in United States"</span>)</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>plt.legend()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-5" class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># get final data for forecasting</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>us_ic_clean <span class="op">=</span> us_ic_raw[[<span class="st">"unique_id"</span>, <span class="st">"Date"</span>, <span class="st">"Revenue"</span>]].copy()</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># set up models to train</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>sf <span class="op">=</span> StatsForecast(</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    models<span class="op">=</span>[AutoARIMA(season_length<span class="op">=</span><span class="dv">12</span>)],</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    freq<span class="op">=</span><span class="st">'ME'</span>,</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="co"># fit the model and forecast for 12 months ahead</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>Y_hat_df <span class="op">=</span> sf.forecast(df <span class="op">=</span> us_ic_clean, </span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>                       time_col <span class="op">=</span> <span class="st">"Date"</span>, </span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>                       target_col <span class="op">=</span> <span class="st">"Revenue"</span>, </span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>                       id_col <span class="op">=</span> <span class="st">"unique_id"</span>, </span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>                       h<span class="op">=</span><span class="dv">12</span>, </span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>                       level<span class="op">=</span>[<span class="dv">95</span>], </span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>                       fitted<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(Y_hat_df.head())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-6" class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>values<span class="op">=</span>sf.forecast_fitted_values()</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>values</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+
+
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

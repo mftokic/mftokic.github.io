@@ -10,7 +10,7 @@ draft: True
 
 *This post is part of the [univariate models chapter](https://mftokic.github.io/posts/2025-03-24-ts-fundamentals-univariate-models/) within a larger learning series around time series forecasting fundamentals. [Check out the main learning path](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/) to see other posts in the series.* 
 
-*The example monthly data used in this series [can be found here.](https://github.com/mftokic/mftokic.github.io/blob/main/posts/2024-10-02-ts-fundamentals-whats-a-time-series/example_ts_data.csv) You can also find the [python code used in this post here.](https://github.com/mftokic/mftokic.github.io/blob/main/notebooks/2025-03-21-ts-fundamentals-data-stationary.ipynb)*
+*The example monthly data used in this series [can be found here.](https://github.com/mftokic/mftokic.github.io/blob/main/posts/2024-10-02-ts-fundamentals-whats-a-time-series/example_ts_data.csv) You can also find the [python code used in this post here.](https://github.com/mftokic/mftokic.github.io/blob/main/notebooks/2025-04-02-ts-fundamentals-univariate-arima.ipynb)*
 
 ### Let's Break ARIMA Down
 
@@ -37,6 +37,12 @@ To create future forecasts, we'd take the trained model and do the following.
 4. **Integrated (Last)**: Reverse the differencing operation to return the forecast to the original scale.
 
 Ok, now we know how arima works at a high level and how it can be used to create future forecasts. But there's one major thing missing. The arima process we went through is for non-seasonal data. If our data has seasonality, we need to fit a seasonal arima model. It's very similar to the plain vanilla arima model, but has a separate process added to handle seasonal differencing and seasonal lags. For example instead of comparing sales of last month to sales in this month, a seasonal approach would compare sales of 12 months ago with sales in this month. It's kind of like stacking another arima on top of arima, but operating at a seasonal level. 
+
+### Let's Train a Model 
+
+Let's take one of our example time series and create an arima forecast 12 months into the future and see how things look. 
+
+insert chart of arima forecast
 
 ### Reversal 
 
