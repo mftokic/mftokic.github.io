@@ -103,42 +103,6 @@ I love reading books, watching YouTube videos, listening to podcasts, you name i
 - **Everything Is Networks**  
   Your career, friendships, and opportunities revolve around the networks you enter and exit—schools, companies, regions, or social circles.[^29] Being in the right network at the right time can change everything. Pick your networks wisely, and reciprocate value within them.
 
----
-
-*These insights—from metabolic health to branding genius—offer plenty of “Aha!” moments. Whether you’re optimizing your sleep or pondering your next marketing move, each point challenges common assumptions and might just spark change. Dive in, reflect, and see if any of these revelations will reshape your daily habits or your view of the world.* 
-
-## References
-
-[^1]: Alzheimer’s & Insulin Resistance: Suzanne M. de la Monte & Jack R. Wands (2008). *Is Alzheimer’s Disease Type 3 Diabetes?*. _Journal of Diabetes Science and Technology_, 2(6), 1101–1113.  
-[^2]: Impact of Fasting on Low A1C: Varady, K. A., & Hellerstein, M. K. (2007). *Alternate-day fasting and chronic disease prevention: a review of human and animal trials*. The American Journal of Clinical Nutrition, 86(1), 7–13.  
-[^3]: Fasting & Reversing Insulin Resistance: Fung, J. (2016). *The Obesity Code: Unlocking the Secrets of Weight Loss*. Greystone Books.  
-[^4]: Sleep Consistency & Mortality Risk: Huang, T., et al. (2020). *Habitual Sleep Variability and Risk of Cardiovascular Events and All-Cause Mortality*. JAMA Cardiology, 5(2), 161–169.  
-[^5]: Circadian Rhythm & Longevity: Asher, G. & Sassone-Corsi, P. (2015). *Time for Food: The Intimate Interplay between Nutrition, Metabolism, and the Circadian Clock*. Cell, 161(1), 84–92.  
-[^6]: Mitochondrial Dysfunction: Wallace, D. C. (2005). *A Mitochondrial Paradigm of Metabolic and Degenerative Diseases, Aging, and Cancer: A Dawn for Evolutionary Medicine*. Annual Review of Genetics, 39, 359–407.  
-[^7]: Autoimmune & Women: Fairweather, D., & Rose, N. R. (2004). *Women and Autoimmunity*. Autoimmunity Reviews, 3(6), 457–462.  
-[^8]: Smoking & Reduced Lifespan: Jha, P., et al. (2013). *21st-Century Hazards of Smoking and Benefits of Cessation in the United States*. New England Journal of Medicine, 368, 341–350.  
-[^9]: Exercise & Lifespan: Lee, I., et al. (2012). *Effect of physical inactivity on major non-communicable diseases worldwide: an analysis of burden of disease and life expectancy*. Lancet, 380(9838), 219–229.  
-[^10]: Mediterranean Diet Benefits: Sofi, F., et al. (2014). *Adherence to Mediterranean diet and health status: meta-analysis*. BMJ, 337, a1344.  
-[^11]: Average American Body Fat: Fryar, C. D., Carroll, M. D., & Ogden, C. L. (2012). *Prevalence of Overweight, Obesity, and Extreme Obesity Among Adults: United States, Trends 1960–1962 Through 2009–2010*. NCHS Health E-Stats.  
-[^12]: Sleep & Mortality: Cappuccio, F. P., et al. (2010). *Sleep duration and all-cause mortality: a systematic review and meta-analysis of prospective studies*. Sleep, 33(5), 585–592.  
-[^13]: Navy Dolphins: Houser, D. S., & Finneran, J. J. (2006). *A history of US Navy marine mammal program*. Aquatic Mammals, 32(2), 279–288.  
-[^14]: Pig vs. Human Fat: Ellis, M., et al. (1996). *The Growth of Farm Animals*. CAB International.  
-[^15]: Half-Life of Med School Knowledge: Densen, P. (2011). *Challenges and Opportunities Facing Medical Education*. Transactions of the American Clinical and Climatological Association, 122, 48–58.  
-[^16]: Language & Thought: Wittgenstein, L. (1922). *Tractatus Logico-Philosophicus*. London: Routledge & Kegan Paul.  
-[^17]: Attractiveness Bias: Mazzella, R., & Feingold, A. (1994). *The effects of physical attractiveness, race, socioeconomic status, and gender of defendants and victims on judgments of mock jurors: A meta-analysis*. Journal of Applied Social Psychology, 24(15), 1315–1338.  
-[^18]: Athlete Privilege: Benedict, J. (2004). *Public Heroes, Private Felons: Athletes and Crimes Against Women*. Northeastern University Press.  
-[^19]: LDS Journaling & Influencers: Walker, S. (2019). *From Journals to YouTube: The Mormon Influence on Lifestyle Content Creation*. Religious Communication Today, 45(2), 25–47.  
-[^20]: Two Sides of a Pancake: Common folk saying, referenced in conflict resolution literature.  
-[^21]: Habit Formation: Clear, J. (2018). *Atomic Habits*. Avery.  
-[^22]: Product vs. Marketing: Ries, E., (2011). *The Lean Startup*. Crown Business.  
-[^23]: Grey Goose Branding: Barro, J. (2014). “The Dark Magic of Sidney Frank”. NYT Magazine.  
-[^24]: Audience of One: Godin, S. (2008). *Tribes: We Need You to Lead Us*. Portfolio.  
-[^25]: Growth for Growth’s Sake: Edward Abbey, *The Journey Home: Some Words in Defense of the American West*.  
-[^26]: Warren Buffett & Focus: Buffett, W. in Lowe, J. (2007). *Damn Right! Behind the Scenes with Berkshire Hathaway Billionaire Charlie Munger*.  
-[^27]: Progress & Happiness: Robbins, T. (2014). *Money: Master the Game*. Simon & Schuster.  
-[^28]: Success Without Fulfillment: Robbins, T. (2017). *Unshakeable*. Simon & Schuster.  
-[^29]: Everything Is Networks: Hoffman, R. (2015). *The Alliance: Managing Talent in the Networked Age*. Harvard Business Press.
-
 ## Raw Notes
 <details>
   <summary>Click to read the original notes.</summary>
@@ -186,3 +150,33 @@ I love reading books, watching YouTube videos, listening to podcasts, you name i
   -Doing the right thing at the wrong time yields zero results. 
 
 </details>
+
+[^1]: Alzheimer’s & Insulin Resistance: Suzanne M. de la Monte & Jack R. Wands (2008). *Is Alzheimer’s Disease Type 3 Diabetes?*. _Journal of Diabetes Science and Technology_, 2(6), 1101–1113.  
+[^2]: Impact of Fasting on Low A1C: Varady, K. A., & Hellerstein, M. K. (2007). *Alternate-day fasting and chronic disease prevention: a review of human and animal trials*. The American Journal of Clinical Nutrition, 86(1), 7–13.  
+[^3]: Fasting & Reversing Insulin Resistance: Fung, J. (2016). *The Obesity Code: Unlocking the Secrets of Weight Loss*. Greystone Books.  
+[^4]: Sleep Consistency & Mortality Risk: Huang, T., et al. (2020). *Habitual Sleep Variability and Risk of Cardiovascular Events and All-Cause Mortality*. JAMA Cardiology, 5(2), 161–169.  
+[^5]: Circadian Rhythm & Longevity: Asher, G. & Sassone-Corsi, P. (2015). *Time for Food: The Intimate Interplay between Nutrition, Metabolism, and the Circadian Clock*. Cell, 161(1), 84–92.  
+[^6]: Mitochondrial Dysfunction: Wallace, D. C. (2005). *A Mitochondrial Paradigm of Metabolic and Degenerative Diseases, Aging, and Cancer: A Dawn for Evolutionary Medicine*. Annual Review of Genetics, 39, 359–407.  
+[^7]: Autoimmune & Women: Fairweather, D., & Rose, N. R. (2004). *Women and Autoimmunity*. Autoimmunity Reviews, 3(6), 457–462.  
+[^8]: Smoking & Reduced Lifespan: Jha, P., et al. (2013). *21st-Century Hazards of Smoking and Benefits of Cessation in the United States*. New England Journal of Medicine, 368, 341–350.  
+[^9]: Exercise & Lifespan: Lee, I., et al. (2012). *Effect of physical inactivity on major non-communicable diseases worldwide: an analysis of burden of disease and life expectancy*. Lancet, 380(9838), 219–229.  
+[^10]: Mediterranean Diet Benefits: Sofi, F., et al. (2014). *Adherence to Mediterranean diet and health status: meta-analysis*. BMJ, 337, a1344.  
+[^11]: Average American Body Fat: Fryar, C. D., Carroll, M. D., & Ogden, C. L. (2012). *Prevalence of Overweight, Obesity, and Extreme Obesity Among Adults: United States, Trends 1960–1962 Through 2009–2010*. NCHS Health E-Stats.  
+[^12]: Sleep & Mortality: Cappuccio, F. P., et al. (2010). *Sleep duration and all-cause mortality: a systematic review and meta-analysis of prospective studies*. Sleep, 33(5), 585–592.  
+[^13]: Navy Dolphins: Houser, D. S., & Finneran, J. J. (2006). *A history of US Navy marine mammal program*. Aquatic Mammals, 32(2), 279–288.  
+[^14]: Pig vs. Human Fat: Ellis, M., et al. (1996). *The Growth of Farm Animals*. CAB International.  
+[^15]: Half-Life of Med School Knowledge: Densen, P. (2011). *Challenges and Opportunities Facing Medical Education*. Transactions of the American Clinical and Climatological Association, 122, 48–58.  
+[^16]: Language & Thought: Wittgenstein, L. (1922). *Tractatus Logico-Philosophicus*. London: Routledge & Kegan Paul.  
+[^17]: Attractiveness Bias: Mazzella, R., & Feingold, A. (1994). *The effects of physical attractiveness, race, socioeconomic status, and gender of defendants and victims on judgments of mock jurors: A meta-analysis*. Journal of Applied Social Psychology, 24(15), 1315–1338.  
+[^18]: Athlete Privilege: Benedict, J. (2004). *Public Heroes, Private Felons: Athletes and Crimes Against Women*. Northeastern University Press.  
+[^19]: LDS Journaling & Influencers: Walker, S. (2019). *From Journals to YouTube: The Mormon Influence on Lifestyle Content Creation*. Religious Communication Today, 45(2), 25–47.  
+[^20]: Two Sides of a Pancake: Common folk saying, referenced in conflict resolution literature.  
+[^21]: Habit Formation: Clear, J. (2018). *Atomic Habits*. Avery.  
+[^22]: Product vs. Marketing: Ries, E., (2011). *The Lean Startup*. Crown Business.  
+[^23]: Grey Goose Branding: Barro, J. (2014). “The Dark Magic of Sidney Frank”. NYT Magazine.  
+[^24]: Audience of One: Godin, S. (2008). *Tribes: We Need You to Lead Us*. Portfolio.  
+[^25]: Growth for Growth’s Sake: Edward Abbey, *The Journey Home: Some Words in Defense of the American West*.  
+[^26]: Warren Buffett & Focus: Buffett, W. in Lowe, J. (2007). *Damn Right! Behind the Scenes with Berkshire Hathaway Billionaire Charlie Munger*.  
+[^27]: Progress & Happiness: Robbins, T. (2014). *Money: Master the Game*. Simon & Schuster.  
+[^28]: Success Without Fulfillment: Robbins, T. (2017). *Unshakeable*. Simon & Schuster.  
+[^29]: Everything Is Networks: Hoffman, R. (2015). *The Alliance: Managing Talent in the Networked Age*. Harvard Business Press.
