@@ -13,7 +13,7 @@ I love reading books, watching YouTube videos, listening to podcasts, you name i
 ## Health & Longevity
 
 - **Alzheimer’s as “Type 3 Diabetes”**  
-  Some researchers now refer to Alzheimer’s disease as “type 3 diabetes” because it’s strongly linked to insulin resistance in the brain [^1]. In essence, neurons become less responsive to insulin, which impairs memory and cognition—underscoring the huge role that blood sugar control plays in brain health.
+  Some researchers now refer to Alzheimer’s disease as “type 3 diabetes” because it’s strongly linked to insulin resistance in the brain.[^1] In essence, neurons become less responsive to insulin, which impairs memory and cognition—underscoring the huge role that blood sugar control plays in brain health.
 
 - **Fasting—It Depends on Your A1C**  
   Fasting isn’t one-size-fits-all. If your hemoglobin A1C (a marker of blood sugar) is already low (around 4.8–5.2%), aggressive fasting might stress your hormones (e.g., spiking cortisol and upsetting thyroid or sex hormones) [\[2\]]. But if your A1C is high, intermittent fasting can help—research shows it can reverse insulin resistance and even lower A1C levels [\[3\]]. The takeaway: people with high blood sugar may benefit from fasting, while those with normal/low A1C should be cautious not to overdo it.
@@ -109,7 +109,7 @@ I love reading books, watching YouTube videos, listening to podcasts, you name i
 
 ## References
 
-[^1] Alzheimer’s & Insulin Resistance: Suzanne M. de la Monte & Jack R. Wands (2008). *Is Alzheimer’s Disease Type 3 Diabetes?*. _Journal of Diabetes Science and Technology_, 2(6), 1101–1113.  
+[^1]: Alzheimer’s & Insulin Resistance: Suzanne M. de la Monte & Jack R. Wands (2008). *Is Alzheimer’s Disease Type 3 Diabetes?*. _Journal of Diabetes Science and Technology_, 2(6), 1101–1113.  
 2. Impact of Fasting on Low A1C: Varady, K. A., & Hellerstein, M. K. (2007). *Alternate-day fasting and chronic disease prevention: a review of human and animal trials*. The American Journal of Clinical Nutrition, 86(1), 7–13.  
 3. Fasting & Reversing Insulin Resistance: Fung, J. (2016). *The Obesity Code: Unlocking the Secrets of Weight Loss*. Greystone Books.  
 4. Sleep Consistency & Mortality Risk: Huang, T., et al. (2020). *Habitual Sleep Variability and Risk of Cardiovascular Events and All-Cause Mortality*. JAMA Cardiology, 5(2), 161–169.  
