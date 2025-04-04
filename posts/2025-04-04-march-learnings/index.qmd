@@ -5,7 +5,6 @@ author: "Mike Tokic"
 date: "2025-04-04"
 categories: [life, learning]
 image: "image.png"
-draft: True
 ---
 
 I love reading books, watching YouTube videos, listening to podcasts, you name it. Anything learning related is my jam. But I realized that if I don't take notes on what I'm learning, I will probably forget everything. Now when I hear something interesting, I write it down in an Apple note for that month. Below are some of the learnings I jotted down in March, summarized by ChatGPT with additional context added by their new deep research feature. I hope you find them as interesting as I did. 
