@@ -16,92 +16,92 @@ I love reading books, watching YouTube videos, listening to podcasts, you name i
   Some researchers now refer to Alzheimer’s disease as “type 3 diabetes” because it’s strongly linked to insulin resistance in the brain.[^1] In essence, neurons become less responsive to insulin, which impairs memory and cognition—underscoring the huge role that blood sugar control plays in brain health.
 
 - **Fasting—It Depends on Your A1C**  
-  Fasting isn’t one-size-fits-all. If your hemoglobin A1C (a marker of blood sugar) is already low (around 4.8–5.2%), aggressive fasting might stress your hormones (e.g., spiking cortisol and upsetting thyroid or sex hormones) [\[2\]]. But if your A1C is high, intermittent fasting can help—research shows it can reverse insulin resistance and even lower A1C levels [\[3\]]. The takeaway: people with high blood sugar may benefit from fasting, while those with normal/low A1C should be cautious not to overdo it.
+  Fasting isn’t one-size-fits-all. If your hemoglobin A1C (a marker of blood sugar) is already low (around 4.8–5.2%), aggressive fasting might stress your hormones (e.g., spiking cortisol and upsetting thyroid or sex hormones).[^2]. But if your A1C is high, intermittent fasting can help—research shows it can reverse insulin resistance and even lower A1C levels.[^3] The takeaway: people with high blood sugar may benefit from fasting, while those with normal/low A1C should be cautious not to overdo it.
 
 - **Consistent Sleep > Long Sleep**  
-  When it comes to sleep, consistency is king. Going to bed and waking up at the same time every day has a bigger impact on health than the total hours of sleep [\[4\]]. In fact, maintaining a regular sleep-wake schedule can add years to your life by aligning with your circadian rhythm [\[5\]]. It’s better to get, say, 6.5 hours every night reliably than 8 hours one night and 5 the next.
+  When it comes to sleep, consistency is king. Going to bed and waking up at the same time every day has a bigger impact on health than the total hours of sleep.[^4] In fact, maintaining a regular sleep-wake schedule can add years to your life by aligning with your circadian rhythm.[^5] It’s better to get, say, 6.5 hours every night reliably than 8 hours one night and 5 the next.
 
 - **Mitochondria: The Root of Many Diseases**  
-  Many diseases boil down to broken mitochondria. These tiny energy producers, if they fail in a given tissue, cause that organ to struggle. Some experts say “mitochondrial dysfunction underlies the etiology of most common complex diseases, as well as aging” [\[6\]]. So protect your mitochondria through good nutrition, exercise, and reduced toxin exposure.
+  Many diseases boil down to broken mitochondria. These tiny energy producers, if they fail in a given tissue, cause that organ to struggle. Some experts say “mitochondrial dysfunction underlies the etiology of most common complex diseases, as well as aging”.[^6] So protect your mitochondria through good nutrition, exercise, and reduced toxin exposure.
 
 - **Autoimmune Diseases Hit Women Hardest**  
-  ~80% of autoimmune disease patients are female [\[7\]]. This striking ratio could stem from hormones, genetic factors (many immune-related genes on the X chromosome), and even microbiome differences. Either way, it’s a reminder that women face unique health vulnerabilities and need specialized research and care.
+  ~80% of autoimmune disease patients are female.[^7] This striking ratio could stem from hormones, genetic factors (many immune-related genes on the X chromosome), and even microbiome differences. Either way, it’s a reminder that women face unique health vulnerabilities and need specialized research and care.
 
 - **Longevity “Power Rankings”**  
   The most impactful factors for living longer (often into your 90s):
 
-  1. **Don’t smoke:** Smoking knocks ~10 years off your life [\[8\]].
-  2. **Exercise regularly:** At least 30 minutes of moderate activity daily. This can add years to your lifespan [\[9\]].
-  3. **Mediterranean diet:** Linked to ~20–25% lower all-cause mortality [\[10\]].
-  4. **BMI of ~18–22:** Excess fat is risky. The average American man has 28% body fat [\[11\]].
+  1. **Don’t smoke:** Smoking knocks ~10 years off your life.[^8]
+  2. **Exercise regularly:** At least 30 minutes of moderate activity daily. This can add years to your lifespan.[^9]
+  3. **Mediterranean diet:** Linked to ~20–25% lower all-cause mortality.[^10]
+  4. **BMI of ~18–22:** Excess fat is risky. The average American man has 28% body fat.[^11]
   5. **Limit alcohol:** Heavy drinking raises risk of cancers and liver disease.  
-  6. **Prioritize sleep:** ~7–8 hours a night is linked to better longevity [\[12\]].
+  6. **Prioritize sleep:** ~7–8 hours a night is linked to better longevity.[^12]
 
 - **Navy Dolphins Live 3x Longer**  
-  Dolphins in the wild typically live ~20 years, but those raised by the U.S. Navy reach 40–60 years [\[13\]]. It’s a striking example of how consistent nutrition, healthcare, and a protected environment can dramatically extend longevity.
+  Dolphins in the wild typically live ~20 years, but those raised by the U.S. Navy reach 40–60 years.[^13] It’s a striking example of how consistent nutrition, healthcare, and a protected environment can dramatically extend longevity.
 
 - **Humans Are Fatter Than Pigs**  
-  The average American man’s body fat is ~28% [\[14\]], while modern farm pigs are ~16–20%. This reveals just how normalized overweight conditions have become in humans.
+  The average American man’s body fat is ~28%[^14], while modern farm pigs are ~16–20%. This reveals just how normalized overweight conditions have become in humans.
 
 - **Half-Life of Medical Knowledge**  
-  The “half-life” of med school training is ~18–24 months [\[15\]]. That means half of what doctors learn becomes outdated within two years. Rapid research advances demand ongoing education.
+  The “half-life” of med school training is ~18–24 months.[^15] That means half of what doctors learn becomes outdated within two years. Rapid research advances demand ongoing education.
 
 ## Human Psychology & Behavior
 
 - **“Language Sets Your Limits”**  
-  Echoing Ludwig Wittgenstein: if you lack words for certain ideas or emotions, you struggle to conceptualize them [\[16\]]. Expanding your vocabulary or learning new languages can literally expand the boundaries of your world.
+  Echoing Ludwig Wittgenstein: if you lack words for certain ideas or emotions, you struggle to conceptualize them.[^16] Expanding your vocabulary or learning new languages can literally expand the boundaries of your world.
 
 - **Pretty Privilege & Athlete Privilege**  
-  Society tends to give attractive women and elite male athletes a pass on bad behavior. Studies show attractive people receive more lenient treatment [\[17\]], and star athletes often face fewer consequences [\[18\]]. Recognizing this bias can be the first step to correcting it.
+  Society tends to give attractive women and elite male athletes a pass on bad behavior. Studies show attractive people receive more lenient treatment[^17], and star athletes often face fewer consequences.[^18] Recognizing this bias can be the first step to correcting it.
 
 - **Mormon Influencers & Journaling Culture**  
-  The Church of Latter-day Saints encourages regular journaling and sharing of personal insights [\[19\]]. This cultural norm produces individuals who are comfortable with transparent storytelling—perfectly suited to be bloggers/vloggers, which may explain their disproportionate presence online.
+  The Church of Latter-day Saints encourages regular journaling and sharing of personal insights.[^19] This cultural norm produces individuals who are comfortable with transparent storytelling—perfectly suited to be bloggers/vloggers, which may explain their disproportionate presence online.
 
 - **Two Sides of a Pancake**  
-  An old saying: “No matter how thin a pancake, it has two sides.” It’s a simple but powerful reminder to consider multiple perspectives in conflicts or debates [\[20\]].
+  An old saying: “No matter how thin a pancake, it has two sides.” It’s a simple but powerful reminder to consider multiple perspectives in conflicts or debates.[^20]
 
 - **A Habit Missed Twice Is a New Habit**  
-  Skip a good habit once, no big deal. Skip it twice, and you’re on your way to a new (bad) habit [\[21\]]. Consistency is the key—if you slip, correct course immediately.
+  Skip a good habit once, no big deal. Skip it twice, and you’re on your way to a new (bad) habit.[^21] Consistency is the key—if you slip, correct course immediately.
 
 ## Business & Marketing Insights
 
 - **Product vs. Marketing**  
-  Getting the product right is crucial, but achieving *escape velocity* for your business often hinges on marketing—specifically the stories you tell. A merely “okay” product with great storytelling can outsell a brilliant product with no marketing. The best scenario is both: a product people love and a compelling narrative [\[22\]].
+  Getting the product right is crucial, but achieving *escape velocity* for your business often hinges on marketing—specifically the stories you tell. A merely “okay” product with great storytelling can outsell a brilliant product with no marketing. The best scenario is both: a product people love and a compelling narrative.[^22]
 
 - **Grey Goose: A Branding Masterclass**  
   - **France over Russia:** Leveraged French luxury connotations.  
   - **Top-Shelf Pricing:** 30% higher than the competition, creating a perception of high quality.  
-  - **Tall Bottle Design:** Forced bars to place it on the top shelf, cementing its premium status [\[23\]].  
+  - **Tall Bottle Design:** Forced bars to place it on the top shelf, cementing its premium status.[^23]  
   A reminder that marketing—especially price, packaging, and provenance—can transform a commodity (vodka) into a billion-dollar brand.
 
 - **Speak to an Audience of One**  
-  Narrow your focus to a single, ideal audience member, and your content becomes more personal, resonant, and effective. Ironically, by writing to “everyone,” you often connect with no one [\[24\]].
+  Narrow your focus to a single, ideal audience member, and your content becomes more personal, resonant, and effective. Ironically, by writing to “everyone,” you often connect with no one.[^24]
 
 - **Growth for Growth’s Sake = Cancer**  
-  Mindlessly chasing growth (in business or life) can be destructive. As Edward Abbey said, “growth for the sake of growth is the ideology of the cancer cell” [\[25\]]. Pursue meaningful growth with a purpose, not expansion at all costs.
+  Mindlessly chasing growth (in business or life) can be destructive. As Edward Abbey said, “growth for the sake of growth is the ideology of the cancer cell”.[^25] Pursue meaningful growth with a purpose, not expansion at all costs.
 
 ## Productivity & Success
 
 - **Learn to Say “No”**  
-  Successful people say no to almost everything, focusing on the select few activities that truly matter [\[26\]]. Time and energy are finite resources—guard them.
+  Successful people say no to almost everything, focusing on the select few activities that truly matter.[^26] Time and energy are finite resources—guard them.
 
 - **Take Simple Ideas Seriously**  
   Complexity doesn’t guarantee success. Sometimes a simple idea, executed with extraordinary focus, can outshine more elaborate plans. Think of Amazon starting with just online book sales.
 
 - **The Hard Path Brings Happiness**  
-  The path of least resistance rarely leads to fulfillment. Progress—often uncomfortable—makes you happy [\[27\]]. Growth happens when you embrace challenges, not avoid them.
+  The path of least resistance rarely leads to fulfillment. Progress—often uncomfortable—makes you happy.[^27] Growth happens when you embrace challenges, not avoid them.
 
 - **Grow or Die, Then Give**  
   Feeling stuck? Commit to continuous growth—new skills, knowledge, or goals—so you have more to offer others. Giving back then fuels your sense of purpose.
 
 - **Success Without Fulfillment = Failure**  
-  What’s the point of external “success” if you feel empty inside? True success should include joy and meaning [\[28\]].
+  What’s the point of external “success” if you feel empty inside? True success should include joy and meaning.[^28]
 
 - **Timing Is Everything**  
   Doing the right thing at the wrong time often yields zero results. Whether in business or life, *when* you act can matter as much as *what* you do.
 
 - **Everything Is Networks**  
-  Your career, friendships, and opportunities revolve around the networks you enter and exit—schools, companies, regions, or social circles [\[29\]]. Being in the right network at the right time can change everything. Pick your networks wisely, and reciprocate value within them.
+  Your career, friendships, and opportunities revolve around the networks you enter and exit—schools, companies, regions, or social circles.[^29] Being in the right network at the right time can change everything. Pick your networks wisely, and reciprocate value within them.
 
 ---
 
@@ -110,34 +110,34 @@ I love reading books, watching YouTube videos, listening to podcasts, you name i
 ## References
 
 [^1]: Alzheimer’s & Insulin Resistance: Suzanne M. de la Monte & Jack R. Wands (2008). *Is Alzheimer’s Disease Type 3 Diabetes?*. _Journal of Diabetes Science and Technology_, 2(6), 1101–1113.  
-2. Impact of Fasting on Low A1C: Varady, K. A., & Hellerstein, M. K. (2007). *Alternate-day fasting and chronic disease prevention: a review of human and animal trials*. The American Journal of Clinical Nutrition, 86(1), 7–13.  
-3. Fasting & Reversing Insulin Resistance: Fung, J. (2016). *The Obesity Code: Unlocking the Secrets of Weight Loss*. Greystone Books.  
-4. Sleep Consistency & Mortality Risk: Huang, T., et al. (2020). *Habitual Sleep Variability and Risk of Cardiovascular Events and All-Cause Mortality*. JAMA Cardiology, 5(2), 161–169.  
-5. Circadian Rhythm & Longevity: Asher, G. & Sassone-Corsi, P. (2015). *Time for Food: The Intimate Interplay between Nutrition, Metabolism, and the Circadian Clock*. Cell, 161(1), 84–92.  
-6. Mitochondrial Dysfunction: Wallace, D. C. (2005). *A Mitochondrial Paradigm of Metabolic and Degenerative Diseases, Aging, and Cancer: A Dawn for Evolutionary Medicine*. Annual Review of Genetics, 39, 359–407.  
-7. Autoimmune & Women: Fairweather, D., & Rose, N. R. (2004). *Women and Autoimmunity*. Autoimmunity Reviews, 3(6), 457–462.  
-8. Smoking & Reduced Lifespan: Jha, P., et al. (2013). *21st-Century Hazards of Smoking and Benefits of Cessation in the United States*. New England Journal of Medicine, 368, 341–350.  
-9. Exercise & Lifespan: Lee, I., et al. (2012). *Effect of physical inactivity on major non-communicable diseases worldwide: an analysis of burden of disease and life expectancy*. Lancet, 380(9838), 219–229.  
-10. Mediterranean Diet Benefits: Sofi, F., et al. (2014). *Adherence to Mediterranean diet and health status: meta-analysis*. BMJ, 337, a1344.  
-11. Average American Body Fat: Fryar, C. D., Carroll, M. D., & Ogden, C. L. (2012). *Prevalence of Overweight, Obesity, and Extreme Obesity Among Adults: United States, Trends 1960–1962 Through 2009–2010*. NCHS Health E-Stats.  
-12. Sleep & Mortality: Cappuccio, F. P., et al. (2010). *Sleep duration and all-cause mortality: a systematic review and meta-analysis of prospective studies*. Sleep, 33(5), 585–592.  
-13. Navy Dolphins: Houser, D. S., & Finneran, J. J. (2006). *A history of US Navy marine mammal program*. Aquatic Mammals, 32(2), 279–288.  
-14. Pig vs. Human Fat: Ellis, M., et al. (1996). *The Growth of Farm Animals*. CAB International.  
-15. Half-Life of Med School Knowledge: Densen, P. (2011). *Challenges and Opportunities Facing Medical Education*. Transactions of the American Clinical and Climatological Association, 122, 48–58.  
-16. Language & Thought: Wittgenstein, L. (1922). *Tractatus Logico-Philosophicus*. London: Routledge & Kegan Paul.  
-17. Attractiveness Bias: Mazzella, R., & Feingold, A. (1994). *The effects of physical attractiveness, race, socioeconomic status, and gender of defendants and victims on judgments of mock jurors: A meta-analysis*. Journal of Applied Social Psychology, 24(15), 1315–1338.  
-18. Athlete Privilege: Benedict, J. (2004). *Public Heroes, Private Felons: Athletes and Crimes Against Women*. Northeastern University Press.  
-19. LDS Journaling & Influencers: Walker, S. (2019). *From Journals to YouTube: The Mormon Influence on Lifestyle Content Creation*. Religious Communication Today, 45(2), 25–47.  
-20. Two Sides of a Pancake: Common folk saying, referenced in conflict resolution literature.  
-21. Habit Formation: Clear, J. (2018). *Atomic Habits*. Avery.  
-22. Product vs. Marketing: Ries, E., (2011). *The Lean Startup*. Crown Business.  
-23. Grey Goose Branding: Barro, J. (2014). “The Dark Magic of Sidney Frank”. NYT Magazine.  
-24. Audience of One: Godin, S. (2008). *Tribes: We Need You to Lead Us*. Portfolio.  
-25. Growth for Growth’s Sake: Edward Abbey, *The Journey Home: Some Words in Defense of the American West*.  
-26. Warren Buffett & Focus: Buffett, W. in Lowe, J. (2007). *Damn Right! Behind the Scenes with Berkshire Hathaway Billionaire Charlie Munger*.  
-27. Progress & Happiness: Robbins, T. (2014). *Money: Master the Game*. Simon & Schuster.  
-28. Success Without Fulfillment: Robbins, T. (2017). *Unshakeable*. Simon & Schuster.  
-29. Everything Is Networks: Hoffman, R. (2015). *The Alliance: Managing Talent in the Networked Age*. Harvard Business Press.
+[^2]: Impact of Fasting on Low A1C: Varady, K. A., & Hellerstein, M. K. (2007). *Alternate-day fasting and chronic disease prevention: a review of human and animal trials*. The American Journal of Clinical Nutrition, 86(1), 7–13.  
+[^3]: Fasting & Reversing Insulin Resistance: Fung, J. (2016). *The Obesity Code: Unlocking the Secrets of Weight Loss*. Greystone Books.  
+[^4]: Sleep Consistency & Mortality Risk: Huang, T., et al. (2020). *Habitual Sleep Variability and Risk of Cardiovascular Events and All-Cause Mortality*. JAMA Cardiology, 5(2), 161–169.  
+[^5]: Circadian Rhythm & Longevity: Asher, G. & Sassone-Corsi, P. (2015). *Time for Food: The Intimate Interplay between Nutrition, Metabolism, and the Circadian Clock*. Cell, 161(1), 84–92.  
+[^6]: Mitochondrial Dysfunction: Wallace, D. C. (2005). *A Mitochondrial Paradigm of Metabolic and Degenerative Diseases, Aging, and Cancer: A Dawn for Evolutionary Medicine*. Annual Review of Genetics, 39, 359–407.  
+[^7]: Autoimmune & Women: Fairweather, D., & Rose, N. R. (2004). *Women and Autoimmunity*. Autoimmunity Reviews, 3(6), 457–462.  
+[^8]: Smoking & Reduced Lifespan: Jha, P., et al. (2013). *21st-Century Hazards of Smoking and Benefits of Cessation in the United States*. New England Journal of Medicine, 368, 341–350.  
+[^9]: Exercise & Lifespan: Lee, I., et al. (2012). *Effect of physical inactivity on major non-communicable diseases worldwide: an analysis of burden of disease and life expectancy*. Lancet, 380(9838), 219–229.  
+[^10]: Mediterranean Diet Benefits: Sofi, F., et al. (2014). *Adherence to Mediterranean diet and health status: meta-analysis*. BMJ, 337, a1344.  
+[^11]: Average American Body Fat: Fryar, C. D., Carroll, M. D., & Ogden, C. L. (2012). *Prevalence of Overweight, Obesity, and Extreme Obesity Among Adults: United States, Trends 1960–1962 Through 2009–2010*. NCHS Health E-Stats.  
+[^12]: Sleep & Mortality: Cappuccio, F. P., et al. (2010). *Sleep duration and all-cause mortality: a systematic review and meta-analysis of prospective studies*. Sleep, 33(5), 585–592.  
+[^13]: Navy Dolphins: Houser, D. S., & Finneran, J. J. (2006). *A history of US Navy marine mammal program*. Aquatic Mammals, 32(2), 279–288.  
+[^14]: Pig vs. Human Fat: Ellis, M., et al. (1996). *The Growth of Farm Animals*. CAB International.  
+[^15]: Half-Life of Med School Knowledge: Densen, P. (2011). *Challenges and Opportunities Facing Medical Education*. Transactions of the American Clinical and Climatological Association, 122, 48–58.  
+[^16]: Language & Thought: Wittgenstein, L. (1922). *Tractatus Logico-Philosophicus*. London: Routledge & Kegan Paul.  
+[^17]: Attractiveness Bias: Mazzella, R., & Feingold, A. (1994). *The effects of physical attractiveness, race, socioeconomic status, and gender of defendants and victims on judgments of mock jurors: A meta-analysis*. Journal of Applied Social Psychology, 24(15), 1315–1338.  
+[^18]: Athlete Privilege: Benedict, J. (2004). *Public Heroes, Private Felons: Athletes and Crimes Against Women*. Northeastern University Press.  
+[^19]: LDS Journaling & Influencers: Walker, S. (2019). *From Journals to YouTube: The Mormon Influence on Lifestyle Content Creation*. Religious Communication Today, 45(2), 25–47.  
+[^20]: Two Sides of a Pancake: Common folk saying, referenced in conflict resolution literature.  
+[^21]: Habit Formation: Clear, J. (2018). *Atomic Habits*. Avery.  
+[^22]: Product vs. Marketing: Ries, E., (2011). *The Lean Startup*. Crown Business.  
+[^23]: Grey Goose Branding: Barro, J. (2014). “The Dark Magic of Sidney Frank”. NYT Magazine.  
+[^24]: Audience of One: Godin, S. (2008). *Tribes: We Need You to Lead Us*. Portfolio.  
+[^25]: Growth for Growth’s Sake: Edward Abbey, *The Journey Home: Some Words in Defense of the American West*.  
+[^26]: Warren Buffett & Focus: Buffett, W. in Lowe, J. (2007). *Damn Right! Behind the Scenes with Berkshire Hathaway Billionaire Charlie Munger*.  
+[^27]: Progress & Happiness: Robbins, T. (2014). *Money: Master the Game*. Simon & Schuster.  
+[^28]: Success Without Fulfillment: Robbins, T. (2017). *Unshakeable*. Simon & Schuster.  
+[^29]: Everything Is Networks: Hoffman, R. (2015). *The Alliance: Managing Talent in the Networked Age*. Harvard Business Press.
 
 ## Raw Notes
 <details>
