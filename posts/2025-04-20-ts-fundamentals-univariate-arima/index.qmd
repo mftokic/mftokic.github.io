@@ -2,7 +2,7 @@
 title: "Univariate Models: ARIMA"
 description: "Understanding how an arima model works"
 author: "Mike Tokic"
-date: "2025-04-02"
+date: "2025-04-20"
 categories: [machine-learning, time-series]
 image: "image.png"
 draft: True

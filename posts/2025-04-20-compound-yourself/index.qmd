@@ -1,0 +1,15 @@
+---
+title: "Compounding Yourself"
+description: "It's easier to grow yourself faster than the S&P 500"
+author: "Mike Tokic"
+date: "2025-04-20"
+categories: [life, learning]
+image: "image.png"
+draft: True
+---
+
+> "Many people die at twenty-five and aren't buried until they are seventy-five."
+>
+> — *Benjamin Franklin*
+
+If you had $100 to invest today, would you invest it in the S&P 500 index, containing the largest american companies, or invest in yourself? I think most people understand the earlier you invest in the financial markets, the greater the return. But few understand this for themselves. 
