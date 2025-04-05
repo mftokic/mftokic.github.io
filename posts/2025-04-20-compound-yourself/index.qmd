@@ -8,8 +8,44 @@ image: "image.png"
 draft: True
 ---
 
+> “Compound interest is the eighth wonder of the world. He who understands it, earns it; he who doesn't, pays it.”
+>
+> — *Albert Einstein*
+
+You have two options, choose wisely. 
+
+1. You are given a million dollars a day for the rest of your life
+2. You are given a penny today, but each subsequent day the value doubles
+
+Know which one you'd pick? Most humans understand linear returns, but not everyone understands expoential returns. For option one, you'd have $365 million dollars at the end of a year. Sounds pretty good! What about option two? 
+
+- After 7 days: $1.27, basically nothing
+- After 30 days: $10 million, wow that's great but still trailing option one
+- After 36 days: $365 million, same as option one 
+- After 365 days: 7.52 × 10¹⁰⁷, basically infinity money the world has never seen
+
+Option two does not start out sexy but in the end creates untold return. That's how most things operate in life. Something starts off slow, barely trickles along for a while, then all of a sudden get's escape velocity and rockets upwards. 
+
+For those who do understand the power of compounding, or do now after reading this, their mindset around it is most likely tied to financial markets. Few think about how compounding can be applied to so many other aspects of life. 
+
+- Intelligence
+- Health
+- Relationships 
+- Career 
+
+If you had $100 to invest today, would you invest it in the S&P 500 index, containing the largest american companies, or invest in yourself? I think most people understand the earlier you invest in the financial markets, the greater the return. But few understand this for investing in yourself. 
+
+The average american lifespan is 79 years. A $100 invested in the S&P 500 index 79 years ago would today be valued at $473,355. That sounds crazy right! But it's just the math of compounding. That equals around a 11.4% annual growth of the investment each year (compound annual growth rate). That CAGR of 11.4% doesn't sound as sexy as a 473,254% total return over the period. Because the time horizon was so long, a yearly return of 11.4% can really start to add up over the years. 
+
+How much of the ending amount of ~500k was created in the first few years compared to the last few years? This is where the *math* really gets *mathing*. 
+
+- First 64 years (1947-2010): creates 20% of end investment gain
+- Last 15 years (2011-2025): creates 80% of end investment gain 
+
+This shows that showing up every day and sticking it out for the long haul can create the most investment return. If you are already investing in the stock market and are sitting back to let compounding do its magic. Good for you. But are you compounding other parts of your life? 
+
 > "Many people die at twenty-five and aren't buried until they are seventy-five."
 >
 > — *Benjamin Franklin*
 
-If you had $100 to invest today, would you invest it in the S&P 500 index, containing the largest american companies, or invest in yourself? I think most people understand the earlier you invest in the financial markets, the greater the return. But few understand this for themselves. 
+The first quarter of life is spent in personal compounding mode. You start out at zero when born, then slowly rise through the ranks. Each year
