@@ -1,5 +1,5 @@
 ---
-title: "Compounding Yourself"
+title: "The Secret to Growing Faster Than the Stock Market"
 description: "It's easier to grow yourself faster than the S&P 500"
 author: "Mike Tokic"
 date: "2025-04-20"
@@ -17,7 +17,7 @@ You have two options, choose wisely.
 1. You are given a million dollars a day for the rest of your life
 2. You are given a penny today, but each subsequent day the value doubles
 
-Know which one you'd pick? Most humans understand linear returns, but not everyone understands compound returns. For option one, you'd have $365 million dollars at the end of a year. Sounds pretty good! What about option two? 
+Which one would you pick? Most humans understand linear returns, but not everyone understands compound returns. For option one, you'd have $365 million dollars at the end of a year. Sounds pretty good! What about option two? 
 
 - After 7 days: $1.27, basically nothing
 - After 30 days: $10 million, wow that's great but still trailing option one
@@ -30,16 +30,16 @@ Option two does not start out sexy but in the end creates untold return. That's 
 
 For those who do understand the power of compounding, or do now after reading this, their mindset around it is most likely tied to financial markets. Few think about how compounding can be applied to so many other aspects of life. 
 
+- Career 
 - Intelligence
 - Health
 - Relationships 
-- Career 
 
 If you had $100 to invest today, would you invest it in the S&P 500 index, containing the largest american companies, or invest it in yourself? I think most people understand the earlier you invest in the financial markets, the greater the return. But few understand this for investing in yourself. 
 
 The average american lifespan is 79 years. A $100 invested in the S&P 500 index 79 years ago would today be valued at $473,355. That sounds crazy right! But it's just the math of compounding. That equals around a 11.4% annual growth of the investment each year (compound annual growth rate). That CAGR of 11.4% doesn't sound as sexy as a 473,254% total return over the period. Because the time horizon was so long, a yearly return of 11.4% can really start to add up over the years. 
 
-How much of the ending amount of ~500k was created in the first few years compared to the last few years? This is where the *math* really gets *mathing*. 
+How much of the ending amount of ~$500k was created in the first few years compared to the last few years? This is where the *math* really gets *mathing*. 
 
 - First 64 years (1947-2010): creates 20% of end investment gain
 - Last 15 years (2011-2025): creates 80% of end investment gain 
@@ -54,29 +54,44 @@ This proves that showing up every day and sticking it out for the long haul can 
 
 The first quarter of life is spent in personal compounding mode. You start out at zero when born, then slowly rise through the ranks. Each year what you learn not just doubles but may even 10x on a month to month basis. Going from your first word, to speaking full sentences, to writing and reading is a true hockey stick growth pattern. Same goes for math, emotions, and understanding others in the world around you.
 
-After you finish school (undergraduate college) and get a few years of work under your belt I think our level of compounding falls off. I think you are still growing as a person, but not as fast as you once did. Instead of measuring changes in 2-4 year increments you now compare yourself through different decades in your life. You go from saying "back in college" (four year span) to "back in my 20s" or "in my 30s" which is a 10 year span. This level of compounding is now more closely tied to what you can get out of the S&P 500. But I think life has to be this way. We can continue to compound ourselves through learning and personal growth at a fast clip forever. The perfect example is Warren Buffet and Charlie Munger. They have been kicking ass well into their 90s, with most of their success coming after turning 60. 
+After you finish school (undergraduate college) and get a few years of work under your belt I think our level of compounding falls off. You are still growing as a person, but not as fast as you once did. Instead of measuring changes in 1-4 year increments you now compare yourself through different decades in your life. You go from saying "back in college" (four year span) to "back in my 20s" or "in my 30s" (10 year span). This level of compounding is now more closely tied to what you can get out of the S&P 500. But I think life doesn't have to be this way. We can continue to compound ourselves through learning and personal growth at a fast clip forever. The perfect example is Warren Buffet and Charlie Munger. They have been kicking ass well into their 90s, with most of their success coming after turning 60. 
 
-Morgan Housel in his book "The Psychology of Money" tells a powerful story about a man named Ronald Read. Ronald was a janitor and gas station attendant for his entire life. When he died at 92, he had over $8,000,000 in stock investments that were quietly compounding for decades. This money was donated to hospitals and libraries in his town, making him a celebrity after his death. 
+Morgan Housel in his book [The Psychology of Money](https://a.co/d/iKWJfEd) tells a powerful story about a man named Ronald Read. Ronald was a janitor and gas station attendant for his entire life. When he died at 92, he had over $8,000,000 in stock investments that were quietly compounding for decades. This money was donated to hospitals and libraries in his town, making him a celebrity after his death. 
 
 After reading a story like Ronald's you may have one of the following thoughts. 
 
-1. Wow that guy did investing right, this proves that anyone can save money to build wealth
-2. Why didn't he use some of that money to live a better life than being a janitor, like going to europe every summer
+1. Wow that guy did investing right, this proves that anyone can save money to build wealth.
+2. Why didn't he use some of that money to live a better life than being a janitor, like vacationing in europe every summer?
 3. Why was he a janitor his entire life! 
 
-Ronald was able to compound his investments, but not his career. Who knows, maybe he crushed it at every aspect of life and just enjoyed being a janitor. All power to him. But it's just surprising to see a money so good at compounding money not doing the same to compound himself in other areas of life. 
+Ronald was able to compound his investments, but not his career. Who knows, maybe he crushed it at every aspect of life and just enjoyed being a janitor. All power to him. But it's just surprising to see a man so good at compounding money not doing the same to compound himself in other areas of life. 
 
-With the exception of people like Ronald, most people who are deemed successful by society can continue to compound their career or investments at a fast rate through the first half of life, but often at the expense of other areas like health and relationships. We have all seen tech founders who are kings of the world, but are obese or divorced. They have compounded two aspects of their life, money and career, but not other important areas that make life worth living. 
+With the exception of people like Ronald, most people who are deemed successful by society can continue to compound their career or investments at a fast rate through the first half of life, but often at the expense of other areas like health and relationships. We've all seen tech founders who are kings of the world, but are obese or divorced. They have compounded two aspects of their life, money and career, but not other important areas that make life worth living. 
 
-Once people hit their 60s, almost everything in their life stops compounding for good, and starts compounding in a bad way. Their health starts to decline, they have less friends, they see their children less, and they quit their career altogether aka retire. Things decline for 20-30 years until they die. Wow that sucks, and I don't think it has to be this way. 
+Once people hit their 60s, almost everything in their life stops compounding for good, and starts compounding in a bad way. Their health starts to decline, they have less friends, they see their children/family less, and they quit their career altogether aka retire. Things decline for 20-30 years until they die. Wow that sucks, and I don't think it has to be this way. 
 
 Advancements in technology and medicine will allow us to start living past 100 with ease, this creates more runway for us to compound ourselves. Why retire at 65 if you still feel like your in your 30s with limitless energy? If the power of compounding comes in the last few years, shouldn't we ramping up our lives after 60 than slowing them down? 
 
-Is it better to go from year 3-4 in a job than to get a new one and go from year 0-1? What has more impact in the world? 
+We all need to think more about how we can continue to compound ourselves in every aspect in life, not just money. 
 
-Failure is the best way to compound yourself. 10,000 iterations over 10,000 reps (Naval).
+- Money
+- Career 
+- Intelligence
+- Health
+- Relationships
 
-30roc six sigma happiness domination
-https://www.youtube.com/watch?v=sNxWMbbLSlA
+**Most people seem to be pretty bad at compounding intelligence and health once they hit 30. Some say 30 is their peak for health, which if you want to live past 100 that's like saying you peaked in high school.** There is so much more life to live. Every one needs to continue learning and applying that knowledge aka intelligence to make their life better. Same goes for health. It's much easier to be healthy at 80 if your were healthy at 60, and especially if you were healthy at 30. Small things compound remember? 
+
+Compounding intelligence and health often takes money. Buying books, measuring your blood, or talking to experts all cost money. Some people would rather buy a porsche than a red light bed, but only one of those is going to change your cellular biology for the better. What if taking $500 in supplements each month allows you to feel 50% better and get 20% more work done in your job? Maybe that allows you to get a promotion 50% faster or have 20% more quality time with your kids? Is it a better investment than putting that $500 in the S&P 500? Maybe...it depends how fast you can make that money compound. Most things we buy (cars, clothes, Netflix) have no compound returns. Possible negative returns. So make sure you spend your money on the right things. 
+
+Relationships also take a hit after 30. People get married, have kids, and continue to climb the corporate ladder. That removes all available time to invest into the friends and family around you. I call this the ["inner circles of life"](https://mftokic.github.io/posts/2024-06-28-life-circles/), where each stage in life your priorities change. Even as your priorities change, having quality relationships that compound over decades is a good investment. [Quality relationships](https://news.harvard.edu/gazette/story/2017/04/over-nearly-80-years-harvard-study-has-been-showing-how-to-live-a-healthy-and-happy-life/) literally make you live longer. **Keep those childhood friendships going. They're like a garden, you need to tend to them every year or they will starve and die.** 
+
+Ok, maybe by now you are on board the "let's compound everything for life" train, but how? **Failure is the best way to compound yourself.** Malcolm Gladwell says it takes 10,000 hours to master a skill. But others like Naval Ravikant say that it actually takes 10,000 iterations. Not repetitions, but instead trying to do something, failing, and iterating in the next attempt. That's how children learn everything, but as we get older we shy away from being wrong. Being wrong in public is our worst nightmare, but often that's the best way to improve. 
+
+Compounding isn't just math, it's a life strategy. Unlike traditional investments, investing in yourself offers infinite returns. Simple, consistent actions like reading, exercising, or nurturing relationships quietly compound into massive growth over time.
+
+The real power of compounding lies in its subtlety. It starts small, barely noticeable, but steadily builds momentum until you're amazed by the results. Remember, life isn't about financial gain alone. It's about intentionally growing every aspect (career, intelligence, health, relationships) to shape a fulfilling life.
+
+Picture yourself at 100, still sharp, healthy, loved, wealthy, and living your greatest adventure yet because you never stopped compounding yourself. That reality starts today.
 
 [Image Credit](https://2.bp.blogspot.com/-cDUWGJmWhhg/UQvjq4ydg5I/AAAAAAAA6yM/-n_19_RKSrM/s1600/30_rock_finale_jacks_happiness_domination_chart.jpg)
