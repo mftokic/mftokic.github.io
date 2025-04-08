@@ -21,3 +21,4 @@ title: "Learn How I Think"
 - [Principles](https://mftokic.github.io/posts/2025-02-24-life-principles/)
 - [Power](https://mftokic.github.io/posts/2024-03-13-power-pursuits/)
 - [Priorities](https://mftokic.github.io/posts/2024-06-28-life-circles/)
+- [Compounding](https://mftokic.github.io/posts/2025-04-08-compound-yourself/)
