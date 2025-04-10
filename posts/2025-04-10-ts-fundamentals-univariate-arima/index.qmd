@@ -2,15 +2,14 @@
 title: "Univariate Models: ARIMA"
 description: "Understanding how an arima model works"
 author: "Mike Tokic"
-date: "2025-04-20"
+date: "2025-04-10"
 categories: [machine-learning, time-series]
 image: "image.png"
-draft: True
 ---
 
 *This post is part of the [univariate models chapter](https://mftokic.github.io/posts/2025-03-24-ts-fundamentals-univariate-models/) within a larger learning series around time series forecasting fundamentals. [Check out the main learning path](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/) to see other posts in the series.* 
 
-*The example monthly data used in this series [can be found here.](https://github.com/mftokic/mftokic.github.io/blob/main/posts/2024-10-02-ts-fundamentals-whats-a-time-series/example_ts_data.csv) You can also find the [python code used in this post here.](https://github.com/mftokic/mftokic.github.io/blob/main/notebooks/2025-04-02-ts-fundamentals-univariate-arima.ipynb)*
+*The example monthly data used in this series [can be found here.](https://github.com/mftokic/mftokic.github.io/blob/main/posts/2024-10-02-ts-fundamentals-whats-a-time-series/example_ts_data.csv) You can also find the [python code used in this post here.](https://github.com/mftokic/mftokic.github.io/blob/main/notebooks/2025-04-10-ts-fundamentals-univariate-arima.ipynb)*
 
 ### Let's Break ARIMA Down
 
@@ -47,7 +46,7 @@ Let's take one of our example time series and create an arima forecast 12 months
 Looks pretty good! The arima model was able to capture the historical trend and seasonality and carry it forward into the future. We're also able to see two other things in the chart. 
 
 1. Hypothetical forecasts of the training data. These are often referred to as fitted values and can be used to calculate residuals, which are simply the difference between the forecast and actual value. Historically the arima model performed very well, closely matching the actual revenue values from month to month. 
-2. A 95% prediction interval. This represents with 95% certainty the upper and lower ranges where the model thinks the future value will land between. The tighter this interval the more confident the model has in its prediction. We will dig deep into prediction intervals in more detail in a later post. 
+2. A 95% prediction interval. This represents with 95% certainty the upper and lower ranges where the model thinks the future value will land between. The tighter this interval the more certain the model is in its prediction. We will dig deep into prediction intervals in more detail in a later post. 
 
 ### Reversal 
 

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Mike Tokic">
-<meta name="dcterms.date" content="2025-04-20">
+<meta name="dcterms.date" content="2025-04-10">
 <meta name="description" content="Understanding how an arima model works">
 
 <title>Univariate Models: ARIMA – Thoughts on Things</title>
@@ -81,19 +81,18 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 </script>
-<meta name="quarto:status" content="draft">
 
 
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Univariate Models: ARIMA – Thoughts on Things">
 <meta property="og:description" content="Understanding how an arima model works">
-<meta property="og:image" content="https://mftokic.github.io/posts/2025-04-20-ts-fundamentals-univariate-arima/image.png">
+<meta property="og:image" content="https://mftokic.github.io/posts/2025-04-10-ts-fundamentals-univariate-arima/image.png">
 <meta property="og:site_name" content="Thoughts on Things">
 <meta property="og:image:height" content="1024">
 <meta property="og:image:width" content="1024">
 <meta name="twitter:title" content="Univariate Models: ARIMA – Thoughts on Things">
 <meta name="twitter:description" content="Understanding how an arima model works">
-<meta name="twitter:image" content="https://mftokic.github.io/posts/2025-04-20-ts-fundamentals-univariate-arima/image.png">
+<meta name="twitter:image" content="https://mftokic.github.io/posts/2025-04-10-ts-fundamentals-univariate-arima/image.png">
 <meta name="twitter:image-height" content="1024">
 <meta name="twitter:image-width" content="1024">
 <meta name="twitter:card" content="summary_large_image">
@@ -102,7 +101,7 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 <body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner"><div id="quarto-draft-alert" class="alert alert-warning"><i class="bi bi-pencil-square"></i>Draft</div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -198,7 +197,7 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">April 20, 2025</p>
+        <p class="date">April 10, 2025</p>
       </div>
     </div>
     
@@ -218,7 +217,7 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 
 
 <p><em>This post is part of the <a href="https://mftokic.github.io/posts/2025-03-24-ts-fundamentals-univariate-models/">univariate models chapter</a> within a larger learning series around time series forecasting fundamentals. <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/">Check out the main learning path</a> to see other posts in the series.</em></p>
-<p><em>The example monthly data used in this series <a href="https://github.com/mftokic/mftokic.github.io/blob/main/posts/2024-10-02-ts-fundamentals-whats-a-time-series/example_ts_data.csv">can be found here.</a> You can also find the <a href="https://github.com/mftokic/mftokic.github.io/blob/main/notebooks/2025-04-02-ts-fundamentals-univariate-arima.ipynb">python code used in this post here.</a></em></p>
+<p><em>The example monthly data used in this series <a href="https://github.com/mftokic/mftokic.github.io/blob/main/posts/2024-10-02-ts-fundamentals-whats-a-time-series/example_ts_data.csv">can be found here.</a> You can also find the <a href="https://github.com/mftokic/mftokic.github.io/blob/main/notebooks/2025-04-10-ts-fundamentals-univariate-arima.ipynb">python code used in this post here.</a></em></p>
 <section id="lets-break-arima-down" class="level3">
 <h3 class="anchored" data-anchor-id="lets-break-arima-down">Let’s Break ARIMA Down</h3>
 <p>Arima stands for autoregressive integrated moving average. That sounds like a mouthful so we’ll take it step by step on how each component works.</p>
@@ -253,7 +252,7 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 <p>Looks pretty good! The arima model was able to capture the historical trend and seasonality and carry it forward into the future. We’re also able to see two other things in the chart.</p>
 <ol type="1">
 <li>Hypothetical forecasts of the training data. These are often referred to as fitted values and can be used to calculate residuals, which are simply the difference between the forecast and actual value. Historically the arima model performed very well, closely matching the actual revenue values from month to month.</li>
-<li>A 95% prediction interval. This represents with 95% certainty the upper and lower ranges where the model thinks the future value will land between. The tighter this interval the more confident the model has in its prediction. We will dig deep into prediction intervals in more detail in a later post.</li>
+<li>A 95% prediction interval. This represents with 95% certainty the upper and lower ranges where the model thinks the future value will land between. The tighter this interval the more certain the model is in its prediction. We will dig deep into prediction intervals in more detail in a later post.</li>
 </ol>
 </section>
 <section id="reversal" class="level3">

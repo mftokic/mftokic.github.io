@@ -10,7 +10,87 @@
 <atom:link href="https://mftokic.github.io/index.xml" rel="self" type="application/rss+xml"/>
 <description>A collection of thoughts on things from the mind of Mike Tokic</description>
 <generator>quarto-1.5.57</generator>
-<lastBuildDate>Tue, 08 Apr 2025 07:00:00 GMT</lastBuildDate>
+<lastBuildDate>Thu, 10 Apr 2025 07:00:00 GMT</lastBuildDate>
+<item>
+  <title>Univariate Models: ARIMA</title>
+  <dc:creator>Mike Tokic</dc:creator>
+  <link>https://mftokic.github.io/posts/2025-04-10-ts-fundamentals-univariate-arima/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p><em>This post is part of the <a href="https://mftokic.github.io/posts/2025-03-24-ts-fundamentals-univariate-models/">univariate models chapter</a> within a larger learning series around time series forecasting fundamentals. <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/">Check out the main learning path</a> to see other posts in the series.</em></p>
+<p><em>The example monthly data used in this series <a href="https://github.com/mftokic/mftokic.github.io/blob/main/posts/2024-10-02-ts-fundamentals-whats-a-time-series/example_ts_data.csv">can be found here.</a> You can also find the <a href="https://github.com/mftokic/mftokic.github.io/blob/main/notebooks/2025-04-10-ts-fundamentals-univariate-arima.ipynb">python code used in this post here.</a></em></p>
+<section id="lets-break-arima-down" class="level3">
+<h3 class="anchored" data-anchor-id="lets-break-arima-down">Let’s Break ARIMA Down</h3>
+<p>Arima stands for autoregressive integrated moving average. That sounds like a mouthful so we’ll take it step by step on how each component works.</p>
+<ul>
+<li><strong>AR (AutoRegressive)</strong>: The current value depends on past values of itself</li>
+<li><strong>I (Integrated)</strong>: Difference the data to make it <a href="https://mftokic.github.io/posts/2025-03-21-ts-fundamentals-data-cleaning-stationary/">stationary</a></li>
+<li><strong>MA (Moving Average)</strong>: The current value depends on past prediction errors</li>
+</ul>
+</section>
+<section id="putting-it-all-together" class="level3">
+<h3 class="anchored" data-anchor-id="putting-it-all-together">Putting it All Together</h3>
+<p>Here’s what happens when an arima model is trained.</p>
+<ol type="1">
+<li><strong>Integrated</strong>: Difference the data d times to remove trend or seasonality, making the series stationary. This is necessary so that the AR and MA components can model the structure reliably.</li>
+<li><strong>Autoregressive</strong>: Model the differenced series as a linear combination of its own lagged values. This captures momentum or persistence in the time series aka how past values influence future ones.</li>
+<li><strong>Moving Average</strong>: Model the current value as a function of past forecast errors. These errors are not directly observed, so the model estimates them recursively during training, learning how random shocks in the past influence the present.</li>
+<li><strong>Training</strong>: The AR and MA parts are fitted together by maximizing the likelihood of the observed data, given the model structure. This involves recursively computing residuals and using numerical optimization to find the best parameters.</li>
+</ol>
+<p>To create future forecasts, we’d take the trained model and do the following.</p>
+<ol type="1">
+<li><strong>Autoregressive</strong>: Predict differenced values using past observations (or predictions) via the AR terms.</li>
+<li><strong>Moving Average</strong>: Refine predictions using known or assumed residual errors from past forecasts.</li>
+<li><strong>Recursive Forecasting</strong>: Forecast multiple steps ahead by reusing your own predictions as inputs.</li>
+<li><strong>Integrated (Last)</strong>: Reverse the differencing operation to return the forecast to the original scale.</li>
+</ol>
+<p>Ok, now we know how arima works at a high level and how it can be used to create future forecasts. But there’s one major thing missing. The arima process we went through is for non-seasonal data. If our data has seasonality, we need to fit a seasonal arima model. It’s very similar to the plain vanilla arima model, but has a separate process added to handle seasonal differencing and seasonal lags. For example instead of comparing sales of last month to sales in this month, a seasonal approach would compare sales of 12 months ago with sales in this month. It’s kind of like stacking another arima on top of arima, but operating at a seasonal level.</p>
+</section>
+<section id="lets-train-a-model" class="level3">
+<h3 class="anchored" data-anchor-id="lets-train-a-model">Let’s Train a Model</h3>
+<p>Let’s take one of our example time series and create an arima forecast 12 months into the future and see how things look.</p>
+<p><img src="https://mftokic.github.io/posts/2025-04-10-ts-fundamentals-univariate-arima/chart1.png" class="img-fluid"></p>
+<p>Looks pretty good! The arima model was able to capture the historical trend and seasonality and carry it forward into the future. We’re also able to see two other things in the chart.</p>
+<ol type="1">
+<li>Hypothetical forecasts of the training data. These are often referred to as fitted values and can be used to calculate residuals, which are simply the difference between the forecast and actual value. Historically the arima model performed very well, closely matching the actual revenue values from month to month.</li>
+<li>A 95% prediction interval. This represents with 95% certainty the upper and lower ranges where the model thinks the future value will land between. The tighter this interval the more certain the model is in its prediction. We will dig deep into prediction intervals in more detail in a later post.</li>
+</ol>
+</section>
+<section id="reversal" class="level3">
+<h3 class="anchored" data-anchor-id="reversal">Reversal</h3>
+<p>Arima is a cornerstone of every forecasters toolbox, but it does come with some drawbacks.</p>
+<ol type="1">
+<li><strong>Assumes linearity of the data</strong> since it learns linear patters in previous data, which may not work well if the data has non-linear patterns.</li>
+<li><strong>Not the best at long term forecasting.</strong> Sometimes an arima model can converge to the mean of the data or a constant value over a long enough forecast horizon. This removes any kind of trend or seasonality the data might possess.</li>
+<li><strong>Finding the right parameters</strong> (number of differencing, AR and MA values) is not always optimal</li>
+</ol>
+</section>
+<section id="final-thoughts" class="level3">
+<h3 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h3>
+<p>Arima is one of the most foundational models in time series forecasting. Not because it’s perfect, but because it’s interpretable, fast to train, and often surprisingly effective for short-term, univariate forecasting problems. It gives us a solid mental model for thinking about time series structure: trends, momentum, and noise.</p>
+<p>That said, arima models come with limitations. They assume linearity, can struggle with longer horizons, and require a stationary signal to be effective. One particularly important limitation is that arima only looks at the past values of the target variable. It doesn’t account for external factors like promotions, weather, or economic indicators unless you explicitly modify the model to include them.</p>
+<p>We’ll look at ways to incorporate external regressors into time series models soon, but understanding how arima works in isolation is the right starting point. If you can reason through the arima process step by step, you’re building a strong foundation for more powerful forecasting techniques down the road.</p>
+</section>
+<section id="learn-more" class="level3">
+<h3 class="anchored" data-anchor-id="learn-more">Learn More</h3>
+<ul>
+<li><a href="https://otexts.com/fpp3/arima.html">Forecasting Principles and Practice</a> by Rob Hyndman</li>
+</ul>
+
+
+</section>
+
+ ]]></description>
+  <category>machine-learning</category>
+  <category>time-series</category>
+  <guid>https://mftokic.github.io/posts/2025-04-10-ts-fundamentals-univariate-arima/</guid>
+  <pubDate>Thu, 10 Apr 2025 07:00:00 GMT</pubDate>
+  <media:content url="https://mftokic.github.io/posts/2025-04-10-ts-fundamentals-univariate-arima/image.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
 <item>
   <title>The Secret to Growing Faster Than the Stock Market</title>
   <dc:creator>Mike Tokic</dc:creator>
@@ -2578,48 +2658,6 @@ Click to read the original notes.
   <guid>https://mftokic.github.io/posts/2024-11-26-ts-fundamentals-missing-outliers/</guid>
   <pubDate>Tue, 26 Nov 2024 08:00:00 GMT</pubDate>
   <media:content url="https://mftokic.github.io/posts/2024-11-26-ts-fundamentals-missing-outliers/image.png" medium="image" type="image/png" height="144" width="144"/>
-</item>
-<item>
-  <title>Hacking My Blood Sugar With Fiber</title>
-  <dc:creator>Mike Tokic</dc:creator>
-  <link>https://mftokic.github.io/posts/2024-11-15-hacking-blood-sugar/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>For years, I’d heard about continuous glucose monitors (CGMs) , mostly from health enthusiasts on podcasts. These small devices, which attach to your upper arm, measure blood glucose (blood sugar) every five minutes and send the data to your phone via Bluetooth. Originally developed for diabetics who need to monitor their blood glucose throughout the day, CGMs are now becoming popular among non-diabetics as a tool to track metabolic health.</p>
-<p>Metabolic health refers to how well your body processes and manages energy from food. Good metabolic health means your body efficiently converts food into energy without putting too much strain on organs like the heart, pancreas, liver, and muscles. People with optimal metabolic health typically have stable blood sugar, good insulin sensitivity, healthy cholesterol levels, and normal blood pressure. Poor metabolic health can increase the risk of conditions like diabetes, heart disease, stroke, and obesity.</p>
-<p>Key indicators of metabolic health often include:</p>
-<ul>
-<li>Blood sugar levels - Balanced glucose levels without spikes or drops.</li>
-<li>Blood pressure - Normal range without requiring medication.</li>
-<li>Cholesterol and triglycerides - Healthy levels that reduce risk of cardiovascular issues.</li>
-<li>Waist circumference - Indicates abdominal fat, linked to higher risk of metabolic disorders.</li>
-<li>Insulin sensitivity - Ability to regulate blood sugar without excessive insulin release.</li>
-</ul>
-<p>Using a CGM to track blood glucose (BG) is a great way to gauge metabolic health. When your BG stays within a healthy range (70-140 mg/dl), your body functions optimally. Repeatedly leaving that range can lead to serious consequences. <a href="https://www.cdc.gov/diabetes/communication-resources/diabetes-statistics.html#:~:text=Diabetes%201%20Diabetes%20About%2038%20million%20people%20have,health%20complications%3A%20...%205%20Common%20Types%20of%20Diabetes">Over 1/3 of Americans</a> have either diabetes or prediabetes, with many unaware of their condition. Heart disease is the <a href="https://www.healthline.com/health/leading-causes-of-death">leading cause of death</a>, accounting for 20% of all deaths in America. These illnesses, with the exception of type 1 diabetes, can be mitigated with good metabolic health, which involves maintaining stable BG throughout the day.</p>
-<p>A few months back I purchased a CGM device, <a href="https://www.stelo.com/en-us">made by Dexcom</a>, to start tracking my BG. I did it for a few reasons. A family member of mine has type 1 diabetes, so I wanted to see how my own BG levels look throughout the day. While also test driving to device before recommending it to them. I also wanted to understand how certain foods impact my blood sugar. I’ve heard on podcasts that you’d be surprised what kinds of foods impact your BG. Which is different for everyone. Some foods people thought as healthy, like bananas, might send their BG spiking. Finally, if I could get a better handle on my BG, I could also get better control of my energy throughout the day. When your BG spikes above the normal range, it will eventually come crashing down. Going far lower than the normal range. This spike and fall of BG leads many people to have energy crashes throughout the day. This saps their energy, while also giving them cravings to eat more food. This is a vicious cycle. And one that I wanted to break.</p>
-<p>I purchased the CGM from Dexcom and slapped it on my arm. It didn’t hurt to apply and after a few minutes I forgot it was even there. One device lasts for about 15 days so every couple of weeks you have to switch it out for a new one. I now got a stream of data every five minutes alerting me to my BG level. For a data nerd like me it was awesome. I quickly become some sort of mad scientist. Eating things at random and seeing how my BG changed in the next 60 minutes. The findings for my body were very straight forward. If I ate processed junk, my BG would spike. If I ate unprocessed whole food, my BG would stay stable. As long as I didn’t eat processed food, my BG would stay in the healthy range. There is just one problem though, I love junk food.</p>
-<p>Everything in moderation, including moderation. Right? I usually try to eat clean +90% of the week. But I am human, and love to pig out every once in a while. I have been known to subscribe to the practice known as “Faturday”. Where for one day of the week I go absolutely nuts and eat everything in site. This kind of <a href="https://www.investopedia.com/articles/investing/013114/barbell-investment-strategy.asp">barbell strategy</a>, either eating 100% clean or 100% junk, has kept me in balance over the years. It keeps me on track of my health goals without being too much of a stickler. The only downside of this approach is the massive hits my BG takes on the days I let loose. Once I got the CGM I could see the roller coaster ride my BG would take on these cheat days, and I could match my mood and energy level with where my BG was at the time. This made me think more about ways I could control my BG when I wanted to treat myself, without putting myself at risk of the consequences of poor BG management.</p>
-<p>There are a few tried and true ways to control your BG. The first, and most boring, is to just eat healthy unprocessed foods. A second way is to incorporate movement into your day after eating. Simply <a href="https://www.thehealthy.com/exercise/walking/blood-sugar-walking/">going on a walk after eating</a> can have a profound impact on stabilizing your blood glucose. The same goes for more intense movement like lifting weights or cardio. These two strategies are strong, but they didn’t help me when I wanted to treat myself. I quickly learned that it’s hard to outrun a donut you just ate. That’s when I came across a third way to control BG.</p>
-<p>A favorite podcast of mine is called <a href="https://allin.com/">All In</a>. It features four men who are titans in Silicon Valley. From founders of Paypal to early Facebook and Google employees, these guys know their stuff. During one episode I learned about a supplement company one of the members of the podcast invested in, called <a href="https://supergut.com/">Super Gut</a>. The company is all about fiber, which sounds like the worlds most boring supplement, but in reality has countless benefits. It turns out that 95% of Americans do not consume enough fiber, which is around 30 grams a day. So we all need to look for more ways to consume more fiber.</p>
-<p>Super Gut uses prebiotic fiber found in foods like green bananas, oats, and potatoes. This preobiotic fiber is the best kind of food to provide your gut microbiome, since it can’t be converted into fuel for your body like other macronutrients. Fiber is bulky, so it easily expands to fill your stomach, causing a feeling of being full. It also slows your digestion, which can prolong the feeling of being full, and has the additional benefit of regulating your BG. Finally, there have been recent findings that show consuming the right types of fiber makes your body <a href="https://supergut.com/blog/natural-glp-1-how-to-produce-satiety-hormones-without-ozempic">release hormones like GLP-1</a>. This is the main ingredient behind booming drugs like Ozempic, used for weight loss. Why pay thousands for synthetic GLP-1 when you get get more of it naturally with fiber?</p>
-<p>Each serving of the Super Gut shake contains 15 grams of fiber, which is around 50% of the fiber we need each day. That’s a crap ton of fiber. To put that into perspective, you would have to eat about 5 medium sized potatoes (with skin on) to get the same amount of fiber. 10 seconds of consuming a fiber supplement compared to 20+ minutes of force feeding potatoes. The choice is easy.</p>
-<p>How do I use it? First and foremost I use Super Gut to get the daily recommendation of fiber. Usually consuming a serving at the start of each day. Going from maybe 10 grams of daily fiber to 30+ is life changing in more ways then one. Bathroom trips get a lot more interesting. Any previous problems in that department gets solved immediately. What has surprised me the most is its impact on my blood sugar when I eat junk. When I treat myself on a Faturday, I first consume fiber, then eat whatever crap comes my way. Ice cream went from spiking my BG over 200 mg/dl to now only going up slightly to 130-140 mg/dl. Which is within the healthy range. That small spike is short lived, compared to previous Faturday’s where my BG would spike for hours at a time. Now when I eat pizza, my responds like I’m eating chicken and rice. I usually have a 2-3 window after consuming fiber where I can eat junk without spiking my BG. It’s truly mind blowing.</p>
-<p><img src="https://mftokic.github.io/posts/2024-11-15-hacking-blood-sugar/chart1.png" class="img-fluid"></p>
-<p><img src="https://mftokic.github.io/posts/2024-11-15-hacking-blood-sugar/chart2.png" class="img-fluid"></p>
-<p>Now this doesn’t mean you should go out and eat whatever you want, as long as you consume some fiber beforehand. Don’t do that. But when you do want to treat yourself on occasion, you can do so knowing that it won’t wreck your metabolic health. Try it for yourself! I’m sure there are other supplements besides Super Gut out there that can do the same thing. Regardless of whether you’re trying to pig out or not, getting more fiber into your life will improve your life in more ways than one.</p>
-
-
-
- ]]></description>
-  <category>life</category>
-  <category>health</category>
-  <guid>https://mftokic.github.io/posts/2024-11-15-hacking-blood-sugar/</guid>
-  <pubDate>Fri, 15 Nov 2024 08:00:00 GMT</pubDate>
-  <media:content url="https://mftokic.github.io/posts/2024-11-15-hacking-blood-sugar/image.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 </channel>
 </rss>
