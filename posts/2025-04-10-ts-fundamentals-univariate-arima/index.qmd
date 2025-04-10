@@ -67,3 +67,4 @@ We’ll look at ways to incorporate external regressors into time series models 
 ### Learn More
 
 - [Forecasting Principles and Practice](https://otexts.com/fpp3/arima.html) by Rob Hyndman
+- [AutoARIMA Model](https://nixtlaverse.nixtla.io/statsforecast/docs/models/autoarima.html) from Nixtla's StatsForecast Python Package 
