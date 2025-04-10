@@ -27,6 +27,7 @@ draft: true
 - Feature
 - Feature Engineering
 - First Order Differencing
+- Fitted Values
 - Homoscedastic
 - Independent Variable
 - Interquartile Range (IQR)

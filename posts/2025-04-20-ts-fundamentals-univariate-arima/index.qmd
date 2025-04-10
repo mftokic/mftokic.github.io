@@ -42,7 +42,12 @@ Ok, now we know how arima works at a high level and how it can be used to create
 
 Let's take one of our example time series and create an arima forecast 12 months into the future and see how things look. 
 
-insert chart of arima forecast
+![](./chart1.png)
+
+Looks pretty good! The arima model was able to capture the historical trend and seasonality and carry it forward into the future. We're also able to see two other things in the chart. 
+
+1. Hypothetical forecasts of the training data. These are often referred to as fitted values and can be used to calculate residuals, which are simply the difference between the forecast and actual value. Historically the arima model performed very well, closely matching the actual revenue values from month to month. 
+2. A 95% prediction interval. This represents with 95% certainty the upper and lower ranges where the model thinks the future value will land between. The tighter this interval the more confident the model has in its prediction. We will dig deep into prediction intervals in more detail in a later post. 
 
 ### Reversal 
 
