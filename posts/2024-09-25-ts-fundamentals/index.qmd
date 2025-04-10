@@ -24,8 +24,8 @@ The sequence of what you learn is just as important as what content you learn. I
     - [Box Cox Transformation](https://mftokic.github.io/posts/2025-02-05-ts-fundamentals-data-cleaning-boxcox/)
     - [Stationary](https://mftokic.github.io/posts/2025-03-21-ts-fundamentals-data-cleaning-stationary/)
 4. [Univariate Models](https://mftokic.github.io/posts/2025-03-24-ts-fundamentals-univariate-models/)
-    - [ARIMA](https://mftokic.github.io/posts/2025-04-02-ts-fundamentals-univariate-arima/)
-    - Exponential Smoothing
+    - [ARIMA](https://mftokic.github.io/posts/2025-04-10-ts-fundamentals-univariate-arima/)
+    - Exponential Smoothing (in progress)
     - Simple Benchmark Models
 5. Evaluation Metrics
 6. Feature Engineering

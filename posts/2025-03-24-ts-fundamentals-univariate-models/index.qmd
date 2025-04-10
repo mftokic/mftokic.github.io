@@ -19,6 +19,6 @@ This might sound too simple, but often it's [the simplest models that can create
 
 There are countless univariate models we could cover, but instead we will keep things simple and discuss some of the most common models that provide the biggest bang for buck. 
 
-- [ARIMA](https://mftokic.github.io/posts/2025-04-02-ts-fundamentals-univariate-arima/) 
+- [ARIMA](https://mftokic.github.io/posts/2025-04-10-ts-fundamentals-univariate-arima/) 
 - Exponential Smoothing (in progress)
 - Simple Benchmark Models
