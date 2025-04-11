@@ -1,0 +1,58 @@
+---
+title: "Weekend Reads (4/11/24)"
+description: "Interesting things I found on the internet this week"
+author: "Mike Tokic"
+date: "2025-04-11"
+categories: [weekend-reads]
+image: "image.png"
+draft: True
+---
+
+![](./image.png)
+
+## Articles
+
+- [50 Years of Microsoft](https://www.gatesnotes.com/home/home-page-topic/reader/microsoft-original-source-code)
+    - Bill Gates reflects on Microsoft's 50-year journey, tracing its origins from Altair BASIC to its transformative innovations in technology.
+- [What to Do](https://paulgraham.com/do.html)
+    - Paul Graham explores the fundamental question of what one should do in life, concluding that beyond helping people and caring for the world, creating "good new things" is a vital pursuit.
+- [The Case Against Conversational Interfaces](https://julian.digital/2025/03/27/the-case-against-conversational-interfaces/)
+    - Julian refutes the hype around conversational interfaces, arguing that natural language is inefficient for human-computer interaction.
+- [Tracing the Thoughts of a LLM](https://www.anthropic.com/research/tracing-thoughts-language-model)
+    - Research from Anthropic about how models like Claude think through problems. 
+- [100 Ways to Live Better](https://www.lesswrong.com/posts/HJeD6XbMGEfcrx3mD/100-ways-to-live-better)
+    - Sage advice about living.
+- [What 2026 Looks Like](https://www.lesswrong.com/posts/6Xgy6CAf2jqHhynHL/what-2026-looks-like)
+    - A scary good prediction about AI advancement from back in 2021 (pre ChatGPT).
+- [AI's Ability to Complete Tasks Doubles Every Seven Months](https://www.lesswrong.com/posts/deesrjitvXM4xYGZd/metr-measuring-ai-ability-to-complete-long-tasks)
+    - Data showing the exponential curve of how fast AI is being able to do complex tasks. 
+- [AI in 2027](https://ai-2027.com/)
+    - Freaky but well reasoned forecast of how AI will grow in the next few years. They state AI will replace all human code by 2027. 
+
+
+## Videos
+
+- [Naval Ravikant on Modern Wisdom](https://www.youtube.com/watch?v=KyfUysrNaco)
+    - Discusses various aspects of human nature, including how to find success and happiness, develop self-esteem, manage emotions, and make wise decisions. He emphasizes the importance of authenticity, focusing on what you truly enjoy, and avoiding distractions like status games and excessive rumination. He also touches on broader societal issues like the future of technology and culture wars.
+
+## Books
+
+- [Ghengis Khan and the Making of the Modern World by Jack Weatherford](https://a.co/d/fMBQ1al)
+    - The insane story of the Mongol empire. It only gets crazier the more you read. 
+- [Life Force by Tony Robbins](https://a.co/d/fMBQ1al)
+    - How advancements in technology are reversing aging. 
+- [Die Trying (Jack Reacher) by Lee Child](https://a.co/d/6ZirXdX)
+    - Jack Reacher is the american James Bond, need I say more? 
+
+## Code
+
+- [Data Analysis Agent Leaderboard on HuggingFace](https://huggingface.co/spaces/adyen/DABstep)
+    - List of best performing AI agents in data analysis. Interesting how the best one currently has to coax the AI with monetary rewards of one millions bucks in its system prompt. 
+- [Transformer Model for Tabular Data](https://www.nature.com/articles/s41586-024-08328-6?utm_campaign=The%20Batch&utm_medium=email&_hsenc=p2ANqtz-93ONGUz0xKduAMcOVXpRLAmMn-Uc9CXRbkVfEdnGBRtvXKLoYK9eNNR_F4oEY1i1DEf7c9P5RDk7jleFe97UBDMUx_UI7BUAfp-AhP-1YVgEwrTMA&_hsmi=355982825&utm_content=355982825&utm_source=hs_email)
+    - Interesting new model that is like a LLM but for tabular data. Most models from OpenAI and Anthropic cannot work on data that lives in an excel spreadsheet, this model can. 
+
+
+## Products
+
+- [Hapbee Neckband](https://www.hapbee.com/products/hapbee-neckband)
+    - This wearable uses electromagnetic fields pioneered by the Navy to create the effects of coffee, alcohol, melatonin, and various other compounds without the side effects or dependence of them. Sounds like magic, but it's just science. 
