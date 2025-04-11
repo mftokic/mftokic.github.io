@@ -5,10 +5,7 @@ author: "Mike Tokic"
 date: "2025-04-11"
 categories: [weekend-reads]
 image: "image.png"
-draft: True
 ---
-
-![](./image.png)
 
 ## Articles
 
@@ -37,7 +34,7 @@ draft: True
 
 ## Books
 
-- [Ghengis Khan and the Making of the Modern World by Jack Weatherford](https://a.co/d/fMBQ1al)
+- [Genghis Khan and the Making of the Modern World by Jack Weatherford](https://a.co/d/5IRSuUd)
     - The insane story of the Mongol empire. It only gets crazier the more you read. 
 - [Life Force by Tony Robbins](https://a.co/d/fMBQ1al)
     - How advancements in technology are reversing aging. 

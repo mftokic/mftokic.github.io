@@ -10,7 +10,111 @@
 <atom:link href="https://mftokic.github.io/index.xml" rel="self" type="application/rss+xml"/>
 <description>A collection of thoughts on things from the mind of Mike Tokic</description>
 <generator>quarto-1.5.57</generator>
-<lastBuildDate>Thu, 10 Apr 2025 07:00:00 GMT</lastBuildDate>
+<lastBuildDate>Fri, 11 Apr 2025 07:00:00 GMT</lastBuildDate>
+<item>
+  <title>Weekend Reads (4/11/24)</title>
+  <dc:creator>Mike Tokic</dc:creator>
+  <link>https://mftokic.github.io/posts/2025-04-11-weekend-reads/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="articles" class="level2">
+
+<ul>
+<li><a href="https://www.gatesnotes.com/home/home-page-topic/reader/microsoft-original-source-code">50 Years of Microsoft</a>
+<ul>
+<li>Bill Gates reflects on Microsoft’s 50-year journey, tracing its origins from Altair BASIC to its transformative innovations in technology.</li>
+</ul></li>
+<li><a href="https://paulgraham.com/do.html">What to Do</a>
+<ul>
+<li>Paul Graham explores the fundamental question of what one should do in life, concluding that beyond helping people and caring for the world, creating “good new things” is a vital pursuit.</li>
+</ul></li>
+<li><a href="https://julian.digital/2025/03/27/the-case-against-conversational-interfaces/">The Case Against Conversational Interfaces</a>
+<ul>
+<li>Julian refutes the hype around conversational interfaces, arguing that natural language is inefficient for human-computer interaction.</li>
+</ul></li>
+<li><a href="https://www.anthropic.com/research/tracing-thoughts-language-model">Tracing the Thoughts of a LLM</a>
+<ul>
+<li>Research from Anthropic about how models like Claude think through problems.</li>
+</ul></li>
+<li><a href="https://www.lesswrong.com/posts/HJeD6XbMGEfcrx3mD/100-ways-to-live-better">100 Ways to Live Better</a>
+<ul>
+<li>Sage advice about living.</li>
+</ul></li>
+<li><a href="https://www.lesswrong.com/posts/6Xgy6CAf2jqHhynHL/what-2026-looks-like">What 2026 Looks Like</a>
+<ul>
+<li>A scary good prediction about AI advancement from back in 2021 (pre ChatGPT).</li>
+</ul></li>
+<li><a href="https://www.lesswrong.com/posts/deesrjitvXM4xYGZd/metr-measuring-ai-ability-to-complete-long-tasks">AI’s Ability to Complete Tasks Doubles Every Seven Months</a>
+<ul>
+<li>Data showing the exponential curve of how fast AI is being able to do complex tasks.</li>
+</ul></li>
+<li><a href="https://ai-2027.com/">AI in 2027</a>
+<ul>
+<li>Freaky but well reasoned forecast of how AI will grow in the next few years. They state AI will replace all human code by 2027.</li>
+</ul></li>
+</ul>
+</section>
+<section id="videos" class="level2">
+<h2 class="anchored" data-anchor-id="videos">Videos</h2>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=KyfUysrNaco">Naval Ravikant on Modern Wisdom</a>
+<ul>
+<li>Discusses various aspects of human nature, including how to find success and happiness, develop self-esteem, manage emotions, and make wise decisions. He emphasizes the importance of authenticity, focusing on what you truly enjoy, and avoiding distractions like status games and excessive rumination. He also touches on broader societal issues like the future of technology and culture wars.</li>
+</ul></li>
+</ul>
+</section>
+<section id="books" class="level2">
+<h2 class="anchored" data-anchor-id="books">Books</h2>
+<ul>
+<li><a href="https://a.co/d/5IRSuUd">Genghis Khan and the Making of the Modern World by Jack Weatherford</a>
+<ul>
+<li>The insane story of the Mongol empire. It only gets crazier the more you read.</li>
+</ul></li>
+<li><a href="https://a.co/d/fMBQ1al">Life Force by Tony Robbins</a>
+<ul>
+<li>How advancements in technology are reversing aging.</li>
+</ul></li>
+<li><a href="https://a.co/d/6ZirXdX">Die Trying (Jack Reacher) by Lee Child</a>
+<ul>
+<li>Jack Reacher is the american James Bond, need I say more?</li>
+</ul></li>
+</ul>
+</section>
+<section id="code" class="level2">
+<h2 class="anchored" data-anchor-id="code">Code</h2>
+<ul>
+<li><a href="https://huggingface.co/spaces/adyen/DABstep">Data Analysis Agent Leaderboard on HuggingFace</a>
+<ul>
+<li>List of best performing AI agents in data analysis. Interesting how the best one currently has to coax the AI with monetary rewards of one millions bucks in its system prompt.</li>
+</ul></li>
+<li><a href="https://www.nature.com/articles/s41586-024-08328-6?utm_campaign=The%20Batch&amp;utm_medium=email&amp;_hsenc=p2ANqtz-93ONGUz0xKduAMcOVXpRLAmMn-Uc9CXRbkVfEdnGBRtvXKLoYK9eNNR_F4oEY1i1DEf7c9P5RDk7jleFe97UBDMUx_UI7BUAfp-AhP-1YVgEwrTMA&amp;_hsmi=355982825&amp;utm_content=355982825&amp;utm_source=hs_email">Transformer Model for Tabular Data</a>
+<ul>
+<li>Interesting new model that is like a LLM but for tabular data. Most models from OpenAI and Anthropic cannot work on data that lives in an excel spreadsheet, this model can.</li>
+</ul></li>
+</ul>
+</section>
+<section id="products" class="level2">
+<h2 class="anchored" data-anchor-id="products">Products</h2>
+<ul>
+<li><a href="https://www.hapbee.com/products/hapbee-neckband">Hapbee Neckband</a>
+<ul>
+<li>This wearable uses electromagnetic fields pioneered by the Navy to create the effects of coffee, alcohol, melatonin, and various other compounds without the side effects or dependence of them. Sounds like magic, but it’s just science.</li>
+</ul></li>
+</ul>
+
+
+</section>
+
+ ]]></description>
+  <category>weekend-reads</category>
+  <guid>https://mftokic.github.io/posts/2025-04-11-weekend-reads/</guid>
+  <pubDate>Fri, 11 Apr 2025 07:00:00 GMT</pubDate>
+  <media:content url="https://mftokic.github.io/posts/2025-04-11-weekend-reads/image.png" medium="image" type="image/png" height="96" width="144"/>
+</item>
 <item>
   <title>Univariate Models: ARIMA</title>
   <dc:creator>Mike Tokic</dc:creator>
@@ -2477,188 +2581,6 @@ Click to read the original notes.
   <guid>https://mftokic.github.io/posts/2024-11-27-diy-ozempic/</guid>
   <pubDate>Wed, 27 Nov 2024 08:00:00 GMT</pubDate>
   <media:content url="https://mftokic.github.io/posts/2024-11-27-diy-ozempic/image.png" medium="image" type="image/png" height="145" width="144"/>
-</item>
-<item>
-  <title>Exploratory Data Analysis: Missing Data and Outliers</title>
-  <dc:creator>Mike Tokic</dc:creator>
-  <link>https://mftokic.github.io/posts/2024-11-26-ts-fundamentals-missing-outliers/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p><em>This post is part of the <a href="https://mftokic.github.io/posts/2024-10-03-ts-fundamentals-eda/">exploratory data analysis chapter</a> within a larger learning series around time series forecasting fundamentals. <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/">Check out the main learning path</a> to see other posts in the series.</em></p>
-<p><em>The example monthly data used in this series <a href="https://github.com/mftokic/mftokic.github.io/blob/main/posts/2024-10-02-ts-fundamentals-whats-a-time-series/example_ts_data.csv">can be found here.</a> You can also find the <a href="https://github.com/mftokic/mftokic.github.io/blob/main/notebooks/2024-11-26-ts-fundamentals-missing-outliers.ipynb">python code used in this post here.</a></em></p>
-<section id="garbage-in-garbage-out" class="level3">
-<h3 class="anchored" data-anchor-id="garbage-in-garbage-out">Garbage In, Garbage Out</h3>
-<p>Having quality data helps produce quality forecasts. There’s an old saying in the data universe, <a href="https://mftokic.github.io/posts/2024-04-08-time-series-garbage/">garbage in, garbage out</a>. When your data is bad, you will get bad outcomes. The presence of missing data and outliers can reduce forecast accuracy. Which is a shame because they are so easy to fix.</p>
-</section>
-<section id="missing-data" class="level3">
-<h3 class="anchored" data-anchor-id="missing-data">Missing Data</h3>
-<p>Time series are unique from other types of data because they have a built in order, based on time. For this to work it’s important that each period of time is represented in the data. For example with a monthly data set spanning five years, we want there to be no missing value for any of the month’s during those five years. Having missing values creates challenges when trying to analyze and model the data, since most statistical and machine learning techniques assume all available time periods are present in the data. This leads to reduced forecast accuracy.</p>
-<p>There are a few ways data can be missing in a time series.</p>
-<ol type="1">
-<li><strong>Missing Completely at Random (MCAR)</strong>
-<ul>
-<li>Meaning: Data is missing for no specific reason, it’s just random. The missing data doesn’t depend on any pattern or the actual value that’s missing.</li>
-<li>Example: A sensor that records the temperature randomly fails to record a value now and then.</li>
-</ul></li>
-<li><strong>Missing at Random (MAR)</strong>
-<ul>
-<li>Meaning: Data is missing for a reason that depends on other information you already have, but not on the missing values themselves. You can explain the missing data using the rest of the data.</li>
-<li>Example: A temperature sensor is more likely to fail during hot weather, but the failure doesn’t depend on the exact temperature value it would have recorded.</li>
-</ul></li>
-<li><strong>Not Missing at Random (NMAR)</strong>
-<ul>
-<li>Meaning: Data is missing because of the value itself, it’s missing for a reason related to what’s not recorded. The missing data is biased, and you need to understand why it’s missing to deal with it.</li>
-<li>Example: A temperature sensor doesn’t record very high temperatures because it shuts down when it overheats.</li>
-</ul></li>
-<li><strong>Mixed Mechanisms</strong>
-<ul>
-<li>Meaning: Missing data can be a mix of random, explainable, and biased causes.</li>
-<li>Example: Some values are randomly missed due to glitches (MCAR), some during maintenance periods (MAR), and others during extreme weather (NMAR).</li>
-</ul></li>
-</ol>
-<p>Most data I deal with is some combination of missing completely at random or not missing at random. For example there might be a months worth of revenue data missing in a system due to issues with the company’s enterprise resource planning (ERP) system. So that data is missing completely at random. A system error created the missing data. Another example is having monthly revenue for three products, where two of the products have five full years of revenue data and the other only has the last three years of data. This is due to that third product being newer and only being sold in the last three years. So that data is not missing at random but is due to a specific reason.</p>
-<p>For the first two types of missing data (#1 and #2 in the list), it’s a good idea to use some sort of simple statistical model to interpolate what the missing value should be based on actual values on either side of the data. Below is a monthly time series from our example data. I removed a few months at random. We can use a statistical model that breaks down the time series by trend, seasonality, and residual. Then predict what the missing value should be based on the existing trend and seasonal components.</p>
-<p><img src="https://mftokic.github.io/posts/2024-11-26-ts-fundamentals-missing-outliers/chart1.png" class="img-fluid"></p>
-<p><img src="https://mftokic.github.io/posts/2024-11-26-ts-fundamentals-missing-outliers/chart2.png" class="img-fluid"></p>
-<p>For the third type of missing data, it’s usually a good idea to go talk to the owner of that data. Maybe missing data in a system is simply due to that observation having a value of 0, so to save memory they just don’t record that value in the system. The easy fix there is to go in and replace those values with zero. You might have some time series in your dataset that are shorter than others. For example, most of your time series could have five years of monthly data, but one may have only the recent three years of monthly data. To deal with this, you could also replace those missing values with 0. That way each time series is the same length. This becomes important later on when we want to start back testing different models to analyze forecast accuracy.</p>
-<p>After you replace the missing data, it’s also a good idea to flag where missing values were originally. This can be done with a simple binary variable added to your dataset. Showing a value of 1 when the original data point was missing, and 0 when it wasn’t. This allows us to give this information to a model, and have it adapt to the changes we made in the data.</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Date</th>
-<th>Value</th>
-<th>Missing</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>2023-01-01</td>
-<td>10</td>
-<td>0</td>
-</tr>
-<tr class="even">
-<td>2023-02-01</td>
-<td>15</td>
-<td>0</td>
-</tr>
-<tr class="odd">
-<td>2023-03-01</td>
-<td>20</td>
-<td>0</td>
-</tr>
-<tr class="even">
-<td>2023-04-01</td>
-<td>25</td>
-<td>0</td>
-</tr>
-<tr class="odd">
-<td>2023-05-01</td>
-<td>30</td>
-<td>1</td>
-</tr>
-<tr class="even">
-<td>2023-06-01</td>
-<td>35</td>
-<td>0</td>
-</tr>
-<tr class="odd">
-<td>2023-07-01</td>
-<td>40</td>
-<td>0</td>
-</tr>
-<tr class="even">
-<td>2023-08-01</td>
-<td>45</td>
-<td>1</td>
-</tr>
-<tr class="odd">
-<td>2023-09-01</td>
-<td>50</td>
-<td>0</td>
-</tr>
-<tr class="even">
-<td>2023-10-01</td>
-<td>55</td>
-<td>0</td>
-</tr>
-<tr class="odd">
-<td>2023-11-01</td>
-<td>60</td>
-<td>0</td>
-</tr>
-<tr class="even">
-<td>2023-12-01</td>
-<td>65</td>
-<td>1</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="outliers" class="level3">
-<h3 class="anchored" data-anchor-id="outliers">Outliers</h3>
-<p>Outliers are values in a time series that depart from the norm. They can be extremely high or low values. Having outliers in your time series can worsen forecast accuracy. A model may try to learn the new changes in trend/seasonality caused by an outlier and carry them forward into the future forecast. We don’t want that. Instead we should identify when outliers occur and do our best at dealing with them.</p>
-<p>There are a few ways we can spot outliers.</p>
-<ol type="1">
-<li><strong>Smell Test</strong>
-<ul>
-<li>Use our domain knowledge to point out values that don’t make sense after inspecting the time series on a chart. For example, a temperature of 150°F in Seattle may not be physically possible. It doesn’t pass our smell test, and so we can flag it manually as an outlier.</li>
-</ul></li>
-<li><strong>Statistical Methods</strong>
-<ul>
-<li>Calculate statistical measures like Z-scores and interquartile ranges (IQR) to spot data points that are outside of standard ranges.</li>
-<li>The <strong>Z-score method</strong> identifies outliers by measuring how far a data point is from the mean, in terms of standard deviations, with values typically beyond 3 considered outliers.</li>
-<li>The <strong>Interquartile Range (IQR)</strong> is a measure of statistical dispersion and represents the middle 50% of the data. It is calculated as the difference between the third quartile (Q3), which is the value below which 75% of the data lies, and the first quartile (Q1), which is the value below which 25% of the data lies. The IQR method identifies outliers as data points that fall outside Q1−1.5×IQR (too low) or Q3+1.5×IQR (too high). This method works well for skewed or non-normal data because it uses the quartiles, which are less affected by extreme values than the mean or standard deviation.</li>
-</ul></li>
-<li><strong>Residual Methods</strong>
-<ul>
-<li>Residual methods, such as those used in <strong>STL decomposition</strong> (Seasonal-Trend decomposition using LOESS), identify outliers by isolating the residuals after removing trend and seasonality from a time series. STL splits a time series into three components:
-<ol type="a">
-<li>Trend: The long-term movement or pattern in the data.</li>
-<li>Seasonal: Repeating patterns or cycles at fixed frequencies.</li>
-<li>Residual: The remaining random noise or deviations after subtracting the trend and seasonal components.</li>
-</ol></li>
-<li>Outliers are detected in the residuals, which represent the part of the data that cannot be explained by the trend or seasonal patterns. Typically, residuals that fall outside a certain threshold, such as ±3 standard deviations or another robust range, are flagged as outliers. This method is particularly effective for time series data as it accounts for both trend and seasonality, ensuring that outliers are not mistaken for normal patterns.</li>
-</ul></li>
-<li><strong>Machine Learning Methods</strong>
-<ul>
-<li>Machine learning methods identify outliers by training models to learn the normal patterns in the data and then flagging deviations from these patterns. These methods include:
-<ol type="a">
-<li><strong>Isolation Forest</strong>: This tree-based algorithm isolates data points by creating random partitions. Outliers are points that require fewer splits to isolate, as they differ significantly from the rest of the data.</li>
-<li><strong>Autoencoders</strong>: Neural networks are trained to reconstruct the time series. Data points with high reconstruction errors (i.e., the model struggles to recreate them) are flagged as outliers.</li>
-<li><strong>Clustering</strong>: Algorithms like K-Means or DBSCAN group similar data points into clusters. Outliers are points that either belong to sparse or distant clusters or are classified as noise by the algorithm.</li>
-<li><strong>Probabilistic Models</strong>: Techniques like Gaussian Mixture Models (GMM) assign probabilities to data points based on how well they fit the learned distribution, flagging low-probability points as outliers.</li>
-</ol></li>
-<li>Machine learning methods are powerful because they can handle non-linear, multi-dimensional, and non-Gaussian patterns, making them highly effective for complex time series. However, they require careful tuning and may need more data than simpler statistical approaches.</li>
-</ul></li>
-</ol>
-<p>Let’s use the residual method and see if we can spot a few outliers in our time series. First we will <a href="https://mftokic.github.io/posts/2024-11-06-ts-fundamentals-decomposition/">decompose our time series</a>, then see what residuals are 3 or more standard deviations away from the average.</p>
-<p><img src="https://mftokic.github.io/posts/2024-11-26-ts-fundamentals-missing-outliers/chart3.png" class="img-fluid"></p>
-<p><img src="https://mftokic.github.io/posts/2024-11-26-ts-fundamentals-missing-outliers/chart4.png" class="img-fluid"></p>
-<p>There seems to be on major outlier in mid 2020, shown as outside of the dotted upper and lower range. Which is not surprising since our smell test could have told us the same thing. COVID-19 in 2020 was most likely the cause for the sudden change in trend and seasonality for those periods around 2020. We can now confirm it with the residual method for spotting outliers. How cool is that!</p>
-<p>Once we know the outliers in our data, there is a few things we can do to handle them.</p>
-<ol type="1">
-<li><strong>Do Nothing</strong>: Leave it alone, and let its presence impact our future forecast. This is a good approach if there is a structural change in the time series that you expect to carry onward in the future. For example COVID might have caused a permanent work from home revolution, which could impact your business that relies on growth in office space. So leaving it alone would give the model insight into a change that is expected to continue in the future.</li>
-<li><strong>Flag It</strong>: Similar to flagging missing values, we can add a binary variable to our dataset. A value of 1 to indicate an outlier occurred, and a 0 when it did not. This will allow our model to understand true one time events that are not expected to happen again in the future. Making it less likely for a model to learn the change in pattern. COVID-19 was truly a one off thing, so flagging the outliers could be helpful for our time series.</li>
-<li><strong>Remove It</strong>: Remove the outlier, and treat it like a missing value. You can then use the methods discussed earlier to fill in the missing value with something that is more in line with future trends and seasonality. Combining this method with adding an outlier flag from #2 is a solid approach.</li>
-</ol>
-</section>
-<section id="final-thoughts" class="level3">
-<h3 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h3>
-<p>Handling the presence of missing values and outliers can sometimes be more art than science, so always make sure to be adaptable in using the right approach for your use case. When done correctly, cleaning your data of missing values and outliers can help you understand your data while improving forecast accuracy.</p>
-
-
-</section>
-
- ]]></description>
-  <category>machine-learning</category>
-  <category>time-series</category>
-  <guid>https://mftokic.github.io/posts/2024-11-26-ts-fundamentals-missing-outliers/</guid>
-  <pubDate>Tue, 26 Nov 2024 08:00:00 GMT</pubDate>
-  <media:content url="https://mftokic.github.io/posts/2024-11-26-ts-fundamentals-missing-outliers/image.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 </channel>
 </rss>
