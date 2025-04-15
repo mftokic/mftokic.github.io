@@ -1,0 +1,67 @@
+---
+title: "Univariate Models: Exponential Smoothing"
+description: "Understanding how an exponential smoothing model works"
+author: "Mike Tokic"
+date: "2025-04-15"
+categories: [machine-learning, time-series]
+image: "image.png"
+draft: True
+---
+
+*This post is part of the [univariate models chapter](https://mftokic.github.io/posts/2025-03-24-ts-fundamentals-univariate-models/) within a larger learning series around time series forecasting fundamentals. [Check out the main learning path](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/) to see other posts in the series.* 
+
+*The example monthly data used in this series [can be found here.](https://github.com/mftokic/mftokic.github.io/blob/main/posts/2024-10-02-ts-fundamentals-whats-a-time-series/example_ts_data.csv) You can also find the [python code used in this post here.](https://github.com/mftokic/mftokic.github.io/blob/main/notebooks/2025-04-10-ts-fundamentals-univariate-arima.ipynb)*
+
+### What Does Exponential Smoothing Mean? 
+
+Exponential smoothing is a family of forecasting methods that smooth out short-term fluctuations in data to reveal underlying trends or patterns. The core idea is to give more weight to recent observations and less weight to older data, which produces a “smoothed” time series with reduced noise​. This makes it easier to spot patterns and predict future values. 
+
+It's also referred to as ETS, which stands for error, trend, and seasonality. These three components are at the heart of the most advanced exponential smoothing methods. Sometimes you might also hear them be called "state space" models, since they are modeling out different states like trend and seasonality separately. 
+
+- Error (E): The unpredictable or random fluctuations (noise) around your forecast.
+- Trend (T): A longer-term movement (upward or downward) observed in your data.
+- Seasonality (S): Regular patterns or cycles occurring within a known fixed period (e.g., yearly, monthly, weekly).
+
+### Types of Exponential Smoothing
+
+Exponential smoothing isn’t a single technique but a family that includes simple (single) smoothing, double smoothing, and triple smoothing. Each one builds on the previous to handle more complex patterns in the data:
+
+- Simple Exponential Smoothing: Used for data with no clear trend or seasonality.
+- Double Exponential Smoothing (Holt’s Linear Trend): Used for data with a trend (increasing or decreasing sales over time).
+- Triple Exponential Smoothing (Holt-Winters): Used for data with both trend and seasonality (recurring seasonal patterns, such as higher sales every holiday season).
+
+Most time series we deal with in the business have both trend and seasonality, so we'll focus mostly on triple exponential smoothing going forward. 
+
+### Modeling Error, Trend, and Seasonality
+
+Exponential smoothing models—especially the Holt-Winters model—perform decomposition implicitly. They don't require explicit pre-decomposition of your data (unlike STL decomposition, which explicitly separates the time series into distinct parts). Instead, they simultaneously estimate these components using exponential smoothing equations.
+
+### Additive vs Multiplicative
+
+When using exponential smoothing (ETS) models, you can model patterns like trends and seasonality in two ways: additive or multiplicative.
+
+- Additive means seasonal and trend effects are constant amounts added or subtracted each period—think of a retailer whose sales always increase by exactly 500 units every holiday season.
+- Multiplicative means these effects are percentage-based, scaling up or down with your baseline—like a business whose holiday sales consistently spike by 20%, making seasonal swings grow as the company expands.
+
+Choosing the correct method ensures your forecasts closely match your real-world sales patterns, greatly improving forecast accuracy and business decisions.
+
+### Putting It All Together
+
+Exponential smoothing models produce future forecasts by systematically updating estimates of error, trend, and seasonality based on recent data points. Here’s how the forecasting process typically unfolds.
+
+1. Initialization: Begin with historical data to establish initial estimates for the level (baseline), trend, and seasonal components.
+2. Updating Components:
+    - Level: Adjusted each period based on recent observations, blending new data with previous estimates to capture the underlying baseline.
+    - Trend: Updated by measuring changes in the baseline from period to period, capturing increases or decreases over time.
+    - Seasonality: Regularly adjusted based on the latest observations relative to the baseline, ensuring that recurring seasonal patterns remain accurate.
+    - Forecasting Future Values: Once the model updates these components, it combines them to project forward. In an additive model, the forecast is calculated by summing the baseline, trend, and seasonal effects. In a multiplicative model, these components are multiplied, scaling the forecast proportionally.
+
+By continuously integrating new data, exponential smoothing models dynamically refine forecasts, making them highly responsive and reliable for various business needs, from inventory management to budgeting and planning.
+
+### Let's Train A Model 
+
+### Reversal 
+
+### Final Thoughts 
+
+### Learn More
