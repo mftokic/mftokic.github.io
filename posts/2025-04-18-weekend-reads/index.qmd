@@ -1,0 +1,48 @@
+---
+title: "Weekend Reads (4/18/25)"
+description: "Interesting things I found on the internet this week"
+author: "Mike Tokic"
+date: "2025-04-18"
+categories: [weekend-reads]
+image: "image.png"
+---
+
+## Articles
+
+- [Sam Altman's Productivity Tips](https://blog.samaltman.com/productivity)
+    - The best way to be productive is knowing what the work on. The right thing done at the wrong time yields zero results. So make sure you really think through the work you choose to do each day. 
+    - Sam ruthlessly prioritizes. Writing his priorities on paper each day. 
+    - He has long blocks of uninterrupted time in his schedule, even as the CEO of OpenAI. If he can do it, we all can. 
+- [New Company Allows You To Freeze Your Eggs For Free](https://techcrunch.com/2025/04/12/cofertility-lets-women-freeze-their-eggs-for-free-through-its-donor-matching-program/)
+    - Cofertility’s radical model for women: Freeze your eggs for free by donating half of them.
+- [Ryan Holiday's Leadership Philosophy](https://ryanholiday.net/these-are-leadership-ideas-i-try-to-apply-every-day/)
+    - This is a great list of leadership lessons and approaches to being a good boss. Here are a few that stood out to me. 
+        - Sense of urgency: You can either get that project done next week or next month. Both ways will produce the same result. 
+        - Don't touch paper twice: You can only keep so many "open tabs" in your head. Make decisions and work on things only once, don't keep them all running in your head constantly.    
+        - I'm leaving this with you: Bring problems for employees the solve and get the hell out of the way. Don't let them bring the monkey and place it on your back again. 
+- [101 Things I'd Tell Myself From 10 Years Ago](https://www.approachwithalacrity.com/101-things-for-my-past-self/)
+    - Giving advice to our past self is a great exercise, even better if we pretend to be in the future and give advice to our current self. Here are a few that stood out to me. 
+        - Write more on the internet to increase your luck surface area. 
+        - Don't fall in love with something that can't love you back. Companies do not spend a week crying when you break up with them.
+        - Your inbound opportunities are worse than the ones you carefully select and nurture over time. This is true both if you are an engineer looking for a job and if you are a 19-year-old girl looking for someone to date.
+        - You should aim to produce things at about a 1:10 ratio to how much you consume them. This is true of food, videos, internet comments and parties.
+        - Consider deleting as often as you consider adding. This holds true for code, furniture and obligations.
+
+## Videos
+
+- Priming Your Brain
+    - [How Priming Works](https://www.youtube.com/watch?v=60ROjGMqXUQ)
+        - Tony Robbins talks about how marketers and bad actors use the concept of priming on you in bad ways. But we can also personally use priming on ourselves in good ways. 
+    - [Priming Exercise](https://www.youtube.com/watch?v=faTGTgid8Uc)
+        - 15 minute priming exercise from one of Tony's events. 
+        - Try this in place of your morning breathwork/meditation and start your day off with a bang. 
+- [Dr. Mark Hyndman on Andrew Huberman](https://www.youtube.com/watch?v=UyneMnERmnI)
+    - Mark discusses the need for supplementation, the role of medical testing for proper health, and how newer treatments like peptides can help improve vitality. 
+- [AI for Humans](https://www.youtube.com/watch?v=2teuwjThdSI)
+    - Latest OpenAI developments, new state of the art AI video models, and google AI trying to talk to dolphins
+
+
+## Products
+
+- [NuCalm App](https://nucalm.com/)
+    - Uses specific frequencies via headphones to deliver 2 hour of deep sleep in 20 min, in additional to other tracks for focus and creativity

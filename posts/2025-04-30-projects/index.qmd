@@ -1,0 +1,21 @@
+---
+title: "We Learn Best By Doing, Not By Studying"
+description: "Projects are the best way to learn"
+author: "Mike Tokic"
+date: "2025-04-15"
+categories: [learning]
+image: "image.png"
+draft: True
+---
+
+Have you ever wanted to grow your career at work? What did you do? Most likely you took on a tough new project that would stretch you, force you to learn new skills to get the work done, put healthy pressure on you to gain those skills, all because your manager was counting on you to get it done. A good project builds on existing knowledge, but also forces you to grow in areas that make you better. It's that sweet spot of flow. Not too easy, but also not too hard. 
+
+**If that's how adults learn in the real world, why don't kids do the same thing?** Instead kids, aka students, study for a test. Which is an easy way to determine if they know the information. If they do, they can move on to the next stage, where they have to learn new information then get tested again. This happens up until they graduate from high school or college. Then BAM! They are thrown into the working world, where tests do not matter anymore. 
+
+School is siloed. You learn math from 9am-10am, then you learn science from 10am-11am. Work is a fire hose. Everything all at once. School has grades, work is a choose your own adventure. 
+
+What if kids were allowed to learn what they wanted, when they wanted? A kid could probably learn calculus before the age of 12 if they truly loved math. Why slow them down with traditional pacing of going from first grade, to second grade, to third grade, etc. 
+
+The reason is because it requires specialization around teaching. Historically that either took too much time or cost too much money. That is all fixed now with AI. Large language models like GPT-4o from OpenAI can tailor education to each student based on what they like doing the most. If a kid loves F1 racing then imagine they learned about the chemistry of racing fuel, the physics of aerodynamic cars, even to how racers build their personal brands to reach millions. That kid will learn 100x faster doing that than reading out of a standard textbook and taking a standard test. 
+
+**We learn best by doing, not by studying.** In a new AI world, it doesn't make sense to study flashcards when the smartest thing in the world are AI models that everyone will eventually access for free. Instead AI should be teaching kids through projects that they're the most interested in. People impact the world by doing things they love, so why not have kids build that sense of agency around doing interesting things (learning along the way) as early as possible?
