@@ -46,4 +46,4 @@ image: "image.png"
 ## Products
 
 - [NuCalm App](https://nucalm.com/)
-    - Uses specific frequencies via headphones to deliver 2 hour of deep sleep in 20 min, in additional to other tracks for focus and creativity.
+    - Uses specific frequencies via headphones to deliver 2 hours of deep sleep in 20 min, in additional to other tracks for focus and creativity.
