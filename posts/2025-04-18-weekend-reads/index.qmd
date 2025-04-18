@@ -10,7 +10,7 @@ image: "image.png"
 ## Articles
 
 - [Sam Altman's Productivity Tips](https://blog.samaltman.com/productivity)
-    - The best way to be productive is knowing what the work on. The right thing done at the wrong time yields zero results. So make sure you really think through the work you choose to do each day. 
+    - The best way to be productive is knowing what to work on. The right thing done at the wrong time yields zero results. So make sure you really think through the work you choose to do each day. 
     - Sam ruthlessly prioritizes. Writing his priorities on paper each day. 
     - He has long blocks of uninterrupted time in his schedule, even as the CEO of OpenAI. If he can do it, we all can. 
 - [New Company Allows You To Freeze Your Eggs For Free](https://techcrunch.com/2025/04/12/cofertility-lets-women-freeze-their-eggs-for-free-through-its-donor-matching-program/)
@@ -19,7 +19,7 @@ image: "image.png"
     - This is a great list of leadership lessons and approaches to being a good boss. Here are a few that stood out to me. 
         - Sense of urgency: You can either get that project done next week or next month. Both ways will produce the same result. 
         - Don't touch paper twice: You can only keep so many "open tabs" in your head. Make decisions and work on things only once, don't keep them all running in your head constantly.    
-        - I'm leaving this with you: Bring problems for employees the solve and get the hell out of the way. Don't let them bring the monkey and place it on your back again. 
+        - I'm leaving this with you: Bring problems for employees to solve and get the hell out of the way. Don't let them bring the monkey and place it on your back again. 
 - [101 Things I'd Tell Myself From 10 Years Ago](https://www.approachwithalacrity.com/101-things-for-my-past-self/)
     - Giving advice to our past self is a great exercise, even better if we pretend to be in the future and give advice to our current self. Here are a few that stood out to me. 
         - Write more on the internet to increase your luck surface area. 
@@ -39,10 +39,11 @@ image: "image.png"
 - [Dr. Mark Hyndman on Andrew Huberman](https://www.youtube.com/watch?v=UyneMnERmnI)
     - Mark discusses the need for supplementation, the role of medical testing for proper health, and how newer treatments like peptides can help improve vitality. 
 - [AI for Humans](https://www.youtube.com/watch?v=2teuwjThdSI)
-    - Latest OpenAI developments, new state of the art AI video models, and google AI trying to talk to dolphins
-
+    - Latest OpenAI developments, new state of the art AI video models, and google AI trying to talk to dolphins.
+- [Gary Breka on Joe Rogan](https://youtu.be/nhC8lLPpGl4?si=Fkzhx5kNEJ0aOu6L)
+    - How hydrogen water can change your life and a thousand crazy other biohacks Gary does every day.
 
 ## Products
 
 - [NuCalm App](https://nucalm.com/)
-    - Uses specific frequencies via headphones to deliver 2 hour of deep sleep in 20 min, in additional to other tracks for focus and creativity
+    - Uses specific frequencies via headphones to deliver 2 hour of deep sleep in 20 min, in additional to other tracks for focus and creativity.
