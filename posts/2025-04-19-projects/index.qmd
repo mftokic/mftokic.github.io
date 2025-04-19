@@ -3,9 +3,8 @@ title: "We Learn Best By Doing, Not By Studying"
 description: "Projects are the best way to learn"
 author: "Mike Tokic"
 date: "2025-04-19"
-categories: [learning]
+categories: [learning, school]
 image: "image.png"
-draft: True
 ---
 
 Have you ever wanted to grow your career at work? What did you do? Most likely you took on a tough new project that would force you to learn new skills to get the work done. The project put healthy pressure on you to gain those skills, all because your manager was counting on you to get it done. A good project builds on existing knowledge, but also forces you to grow in areas that make you better. It's that sweet spot of flow. Not too easy, but also not too hard. 
