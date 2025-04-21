@@ -22,26 +22,33 @@ It's also referred to as ETS, which stands for error, trend, and seasonality. Th
 - Trend (T): A longer-term movement (upward or downward) observed in your data.
 - Seasonality (S): Regular patterns or cycles occurring within a known fixed period (e.g., yearly, monthly, weekly).
 
+Another component of these models is something called the level. Think of the level (sometimes called the baseline) as the smoothed estimate of ‘where we are right now’, before any trend pushes us up or seasonality ripples us up and down. Here's how they are put together. 
+
+- Baseline right now → **level**
+- How the baseline is moving → **trend**
+- Repeating wiggles → **seasonality**
+- Random noise around all that → **error**
+
 ### Types of Exponential Smoothing
 
 Exponential smoothing isn’t a single technique but a family that includes simple (single) smoothing, double smoothing, and triple smoothing. Each one builds on the previous to handle more complex patterns in the data:
 
-- Simple Exponential Smoothing: Used for data with no clear trend or seasonality.
-- Double Exponential Smoothing (Holt’s Linear Trend): Used for data with a trend (increasing or decreasing sales over time).
-- Triple Exponential Smoothing (Holt-Winters): Used for data with both trend and seasonality (recurring seasonal patterns, such as higher sales every holiday season).
+- **Simple Exponential Smoothing**: Used for data with no clear trend or seasonality.
+- **Double Exponential Smoothing (Holt’s Linear Trend)**: Used for data with a trend (increasing or decreasing sales over time).
+- **Triple Exponential Smoothing (Holt-Winters)**: Used for data with both trend and seasonality (recurring seasonal patterns, such as higher sales every holiday season).
 
 Most time series we deal with in the business have both trend and seasonality, so we'll focus mostly on triple exponential smoothing going forward. 
 
 ### Modeling Error, Trend, and Seasonality
 
-Exponential smoothing models—especially the Holt-Winters model—perform decomposition implicitly. They don't require explicit pre-decomposition of your data (unlike STL decomposition, which explicitly separates the time series into distinct parts). Instead, they simultaneously estimate these components using exponential smoothing equations.
+Exponential smoothing models—especially the Holt-Winters model—perform decomposition implicitly. They don't require explicit pre-decomposition of your data (unlike [STL decomposition](https://mftokic.github.io/posts/2024-11-06-ts-fundamentals-decomposition/), which explicitly separates the time series into distinct parts). Instead, they simultaneously estimate these components using exponential smoothing equations.
 
 ### Additive vs Multiplicative
 
 When using exponential smoothing (ETS) models, you can model patterns like trends and seasonality in two ways: additive or multiplicative.
 
-- Additive means seasonal and trend effects are constant amounts added or subtracted each period—think of a retailer whose sales always increase by exactly 500 units every holiday season.
-- Multiplicative means these effects are percentage-based, scaling up or down with your baseline—like a business whose holiday sales consistently spike by 20%, making seasonal swings grow as the company expands.
+- **Additive** means seasonal and trend effects are constant amounts added or subtracted each period—think of a retailer whose sales always increase by exactly 500 units every holiday season.
+- **Multiplicative** means these effects are percentage-based, scaling up or down with your baseline. Like a business whose holiday sales consistently spike by 20%, making seasonal swings grow in magnitude as the company expands.
 
 Choosing the correct method ensures your forecasts closely match your real-world sales patterns, greatly improving forecast accuracy and business decisions.
 
@@ -61,6 +68,19 @@ By continuously integrating new data, exponential smoothing models dynamically r
 ### Let's Train A Model 
 
 ### Reversal 
+
+ETS models are powerful, but not in every circumstance. Here are situations where they might struggle to produce quality forecasts. 
+
+- **Big, sudden shifts (a merger, a COVID‑style shock, a new pricing policy)**
+    - ETS learns slowly, so its forecasts keep reaching back to “the old world” and miss the new level or trend.
+- **top‑and‑go, “lumpy” demand (lots of zeros, random spikes)**
+    - Exponential averaging smooths the spikes away, underforecasting the future.
+- **More than one seasonality marching at once (hour‑of‑day + day‑of‑week + holidays)**
+    - Classic Holt‑Winters can juggle only one seasonal cycle, so leftover patterns keep showing up in the residuals.
+- **When outside forces rule the game (promotions, ad spend, macro shocks)**
+    - ETS is univariate, if your forecast errors line up with random one time events, you’re in the wrong model.
+- **Tiny history (less than two full seasons of data)**
+    - With so little to learn from, ETS guesses at seasonality and wobbles all over the place.
 
 ### Final Thoughts 
 

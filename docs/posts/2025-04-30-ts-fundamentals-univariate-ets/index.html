@@ -87,11 +87,11 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Univariate Models: Exponential Smoothing – Thoughts on Things">
 <meta property="og:description" content="Understanding how an exponential smoothing model works">
-<meta property="og:image" content="https://mftokic.github.io/posts/2025-04-15-ts-fundamentals-univariate-ets/image.png">
+<meta property="og:image" content="https://mftokic.github.io/posts/2025-04-30-ts-fundamentals-univariate-ets/image.png">
 <meta property="og:site_name" content="Thoughts on Things">
 <meta name="twitter:title" content="Univariate Models: Exponential Smoothing – Thoughts on Things">
 <meta name="twitter:description" content="Understanding how an exponential smoothing model works">
-<meta name="twitter:image" content="https://mftokic.github.io/posts/2025-04-15-ts-fundamentals-univariate-ets/image.png">
+<meta name="twitter:image" content="https://mftokic.github.io/posts/2025-04-30-ts-fundamentals-univariate-ets/image.png">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -224,27 +224,34 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 <li>Trend (T): A longer-term movement (upward or downward) observed in your data.</li>
 <li>Seasonality (S): Regular patterns or cycles occurring within a known fixed period (e.g., yearly, monthly, weekly).</li>
 </ul>
+<p>Another component of these models is something called the level. Think of the level (sometimes called the baseline) as the smoothed estimate of ‘where we are right now’, before any trend pushes us up or seasonality ripples us up and down. Here’s how they are put together.</p>
+<ul>
+<li>Baseline right now → <strong>level</strong></li>
+<li>How the baseline is moving → <strong>trend</strong></li>
+<li>Repeating wiggles → <strong>seasonality</strong></li>
+<li>Random noise around all that → <strong>error</strong></li>
+</ul>
 </section>
 <section id="types-of-exponential-smoothing" class="level3">
 <h3 class="anchored" data-anchor-id="types-of-exponential-smoothing">Types of Exponential Smoothing</h3>
 <p>Exponential smoothing isn’t a single technique but a family that includes simple (single) smoothing, double smoothing, and triple smoothing. Each one builds on the previous to handle more complex patterns in the data:</p>
 <ul>
-<li>Simple Exponential Smoothing: Used for data with no clear trend or seasonality.</li>
-<li>Double Exponential Smoothing (Holt’s Linear Trend): Used for data with a trend (increasing or decreasing sales over time).</li>
-<li>Triple Exponential Smoothing (Holt-Winters): Used for data with both trend and seasonality (recurring seasonal patterns, such as higher sales every holiday season).</li>
+<li><strong>Simple Exponential Smoothing</strong>: Used for data with no clear trend or seasonality.</li>
+<li><strong>Double Exponential Smoothing (Holt’s Linear Trend)</strong>: Used for data with a trend (increasing or decreasing sales over time).</li>
+<li><strong>Triple Exponential Smoothing (Holt-Winters)</strong>: Used for data with both trend and seasonality (recurring seasonal patterns, such as higher sales every holiday season).</li>
 </ul>
 <p>Most time series we deal with in the business have both trend and seasonality, so we’ll focus mostly on triple exponential smoothing going forward.</p>
 </section>
 <section id="modeling-error-trend-and-seasonality" class="level3">
 <h3 class="anchored" data-anchor-id="modeling-error-trend-and-seasonality">Modeling Error, Trend, and Seasonality</h3>
-<p>Exponential smoothing models—especially the Holt-Winters model—perform decomposition implicitly. They don’t require explicit pre-decomposition of your data (unlike STL decomposition, which explicitly separates the time series into distinct parts). Instead, they simultaneously estimate these components using exponential smoothing equations.</p>
+<p>Exponential smoothing models—especially the Holt-Winters model—perform decomposition implicitly. They don’t require explicit pre-decomposition of your data (unlike <a href="https://mftokic.github.io/posts/2024-11-06-ts-fundamentals-decomposition/">STL decomposition</a>, which explicitly separates the time series into distinct parts). Instead, they simultaneously estimate these components using exponential smoothing equations.</p>
 </section>
 <section id="additive-vs-multiplicative" class="level3">
 <h3 class="anchored" data-anchor-id="additive-vs-multiplicative">Additive vs Multiplicative</h3>
 <p>When using exponential smoothing (ETS) models, you can model patterns like trends and seasonality in two ways: additive or multiplicative.</p>
 <ul>
-<li>Additive means seasonal and trend effects are constant amounts added or subtracted each period—think of a retailer whose sales always increase by exactly 500 units every holiday season.</li>
-<li>Multiplicative means these effects are percentage-based, scaling up or down with your baseline—like a business whose holiday sales consistently spike by 20%, making seasonal swings grow as the company expands.</li>
+<li><strong>Additive</strong> means seasonal and trend effects are constant amounts added or subtracted each period—think of a retailer whose sales always increase by exactly 500 units every holiday season.</li>
+<li><strong>Multiplicative</strong> means these effects are percentage-based, scaling up or down with your baseline. Like a business whose holiday sales consistently spike by 20%, making seasonal swings grow in magnitude as the company expands.</li>
 </ul>
 <p>Choosing the correct method ensures your forecasts closely match your real-world sales patterns, greatly improving forecast accuracy and business decisions.</p>
 </section>
@@ -268,6 +275,29 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 </section>
 <section id="reversal" class="level3">
 <h3 class="anchored" data-anchor-id="reversal">Reversal</h3>
+<p>ETS models are powerful, but not in every circumstance. Here are situations where they might struggle to produce quality forecasts.</p>
+<ul>
+<li><strong>Big, sudden shifts (a&nbsp;merger, a COVID‑style shock, a new pricing policy)</strong>
+<ul>
+<li>ETS learns slowly, so its forecasts keep reaching back to “the old world” and miss the new level or trend.</li>
+</ul></li>
+<li><strong>top‑and‑go, “lumpy” demand (lots of zeros, random spikes)</strong>
+<ul>
+<li>Exponential averaging smooths the spikes away, underforecasting the future.</li>
+</ul></li>
+<li><strong>More than one seasonality marching at once (hour‑of‑day&nbsp;+&nbsp;day‑of‑week&nbsp;+&nbsp;holidays)</strong>
+<ul>
+<li>Classic Holt‑Winters can juggle only one seasonal cycle, so leftover patterns keep showing up in the residuals.</li>
+</ul></li>
+<li><strong>When outside forces rule the game (promotions, ad spend, macro shocks)</strong>
+<ul>
+<li>ETS is univariate, if your forecast errors line up with random one time events, you’re in the wrong model.</li>
+</ul></li>
+<li><strong>Tiny history (less than two full seasons of data)</strong>
+<ul>
+<li>With so little to learn from, ETS guesses at seasonality and wobbles all over the place.</li>
+</ul></li>
+</ul>
 </section>
 <section id="final-thoughts" class="level3">
 <h3 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h3>
