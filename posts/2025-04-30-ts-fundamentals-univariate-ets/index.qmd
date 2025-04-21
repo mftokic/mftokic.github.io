@@ -67,7 +67,7 @@ By continuously integrating new data, exponential smoothing models dynamically r
 
 ### Let's Train A Model 
 
-Let's take one of our example time series and create an arima forecast 12 months into the future and see how things look.
+Let's take one of our example time series and create an ETS forecast 12 months into the future and see how things look.
 
 ![](./chart1.png)
 
@@ -89,3 +89,5 @@ ETS models are powerful, but not in every circumstance. Here are situations wher
 ### Final Thoughts 
 
 ### Learn More
+
+- [Forecasting Principles and Practice](https://otexts.com/fpp3/expsmooth.html) by Rob Hyndman
