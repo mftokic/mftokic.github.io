@@ -220,9 +220,9 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 <p>Exponential smoothing is a family of forecasting methods that smooth out short-term fluctuations in data to reveal underlying trends or patterns. The core idea is to give more weight to recent observations and less weight to older data, which produces a “smoothed” time series with reduced noise​. This makes it easier to spot patterns and predict future values.</p>
 <p>It’s also referred to as ETS, which stands for error, trend, and seasonality. These three components are at the heart of the most advanced exponential smoothing methods. Sometimes you might also hear them be called “state space” models, since they are modeling out different states like trend and seasonality separately.</p>
 <ul>
-<li>Error (E): The unpredictable or random fluctuations (noise) around your forecast.</li>
-<li>Trend (T): A longer-term movement (upward or downward) observed in your data.</li>
-<li>Seasonality (S): Regular patterns or cycles occurring within a known fixed period (e.g., yearly, monthly, weekly).</li>
+<li><strong>Error (E)</strong>: The unpredictable or random fluctuations (noise) around your forecast.</li>
+<li><strong>Trend (T)</strong>: A longer-term movement (upward or downward) observed in your data.</li>
+<li><strong>Seasonality (S)</strong>: Regular patterns or cycles occurring within a known fixed period (e.g., yearly, monthly, weekly).</li>
 </ul>
 <p>Another component of these models is something called the level. Think of the level (sometimes called the baseline) as the smoothed estimate of ‘where we are right now’, before any trend pushes us up or seasonality ripples us up and down. Here’s how they are put together.</p>
 <ul>
@@ -272,6 +272,8 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 </section>
 <section id="lets-train-a-model" class="level3">
 <h3 class="anchored" data-anchor-id="lets-train-a-model">Let’s Train A Model</h3>
+<p>Let’s take one of our example time series and create an arima forecast 12 months into the future and see how things look.</p>
+<p><img src="./chart1.png" class="img-fluid"></p>
 </section>
 <section id="reversal" class="level3">
 <h3 class="anchored" data-anchor-id="reversal">Reversal</h3>

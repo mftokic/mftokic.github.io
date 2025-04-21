@@ -241,7 +241,7 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 <li><strong>Autoregressive</strong>: Predict differenced values using past observations (or predictions) via the AR terms.</li>
 <li><strong>Moving Average</strong>: Refine predictions using known or assumed residual errors from past forecasts.</li>
 <li><strong>Recursive Forecasting</strong>: Forecast multiple steps ahead by reusing your own predictions as inputs.</li>
-<li><strong>Integrated (Last)</strong>: Reverse the differencing operation to return the forecast to the original scale.</li>
+<li><strong>Integrated</strong>: Reverse the differencing operation to return the forecast to the original scale.</li>
 </ol>
 <p>Ok, now we know how arima works at a high level and how it can be used to create future forecasts. But there’s one major thing missing. The arima process we went through is for non-seasonal data. If our data has seasonality, we need to fit a seasonal arima model. It’s very similar to the plain vanilla arima model, but has a separate process added to handle seasonal differencing and seasonal lags. For example instead of comparing sales of last month to sales in this month, a seasonal approach would compare sales of 12 months ago with sales in this month. It’s kind of like stacking another arima on top of arima, but operating at a seasonal level.</p>
 </section>

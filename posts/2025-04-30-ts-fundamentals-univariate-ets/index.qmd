@@ -18,9 +18,9 @@ Exponential smoothing is a family of forecasting methods that smooth out short-t
 
 It's also referred to as ETS, which stands for error, trend, and seasonality. These three components are at the heart of the most advanced exponential smoothing methods. Sometimes you might also hear them be called "state space" models, since they are modeling out different states like trend and seasonality separately. 
 
-- Error (E): The unpredictable or random fluctuations (noise) around your forecast.
-- Trend (T): A longer-term movement (upward or downward) observed in your data.
-- Seasonality (S): Regular patterns or cycles occurring within a known fixed period (e.g., yearly, monthly, weekly).
+- **Error (E)**: The unpredictable or random fluctuations (noise) around your forecast.
+- **Trend (T)**: A longer-term movement (upward or downward) observed in your data.
+- **Seasonality (S)**: Regular patterns or cycles occurring within a known fixed period (e.g., yearly, monthly, weekly).
 
 Another component of these models is something called the level. Think of the level (sometimes called the baseline) as the smoothed estimate of ‘where we are right now’, before any trend pushes us up or seasonality ripples us up and down. Here's how they are put together. 
 
