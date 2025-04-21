@@ -3,7 +3,7 @@ title: "We Learn Best By Doing, Not By Studying"
 description: "Projects are the best way to learn"
 author: "Mike Tokic"
 date: "2025-04-19"
-categories: [learning, school]
+categories: [learning, school, AI]
 image: "image.png"
 ---
 
