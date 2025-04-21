@@ -259,13 +259,13 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 <h3 class="anchored" data-anchor-id="putting-it-all-together">Putting It All Together</h3>
 <p>Exponential smoothing models produce future forecasts by systematically updating estimates of error, trend, and seasonality based on recent data points. Here’s how the forecasting process typically unfolds.</p>
 <ol type="1">
-<li>Initialization: Begin with historical data to establish initial estimates for the level (baseline), trend, and seasonal components.</li>
-<li>Updating Components:
+<li><strong>Initialization</strong>: Begin with historical data to establish initial estimates for the level (baseline), trend, and seasonal components.</li>
+<li><strong>Updating Components</strong>:
 <ul>
-<li>Level: Adjusted each period based on recent observations, blending new data with previous estimates to capture the underlying baseline.</li>
-<li>Trend: Updated by measuring changes in the baseline from period to period, capturing increases or decreases over time.</li>
-<li>Seasonality: Regularly adjusted based on the latest observations relative to the baseline, ensuring that recurring seasonal patterns remain accurate.</li>
-<li>Forecasting Future Values: Once the model updates these components, it combines them to project forward. In an additive model, the forecast is calculated by summing the baseline, trend, and seasonal effects. In a multiplicative model, these components are multiplied, scaling the forecast proportionally.</li>
+<li><strong>Level</strong>: Adjusted each period based on recent observations, blending new data with previous estimates to capture the underlying baseline.</li>
+<li><strong>Trend</strong>: Updated by measuring changes in the baseline from period to period, capturing increases or decreases over time.</li>
+<li><strong>Seasonality</strong>: Regularly adjusted based on the latest observations relative to the baseline, ensuring that recurring seasonal patterns remain accurate.</li>
+<li><strong>Forecasting Future Values</strong>: Once the model updates these components, it combines them to project forward. In an additive model, the forecast is calculated by summing the baseline, trend, and seasonal effects. In a multiplicative model, these components are multiplied, scaling the forecast proportionally.</li>
 </ul></li>
 </ol>
 <p>By continuously integrating new data, exponential smoothing models dynamically refine forecasts, making them highly responsive and reliable for various business needs, from inventory management to budgeting and planning.</p>
@@ -281,7 +281,7 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 <ul>
 <li>ETS learns slowly, so its forecasts keep reaching back to “the old world” and miss the new level or trend.</li>
 </ul></li>
-<li><strong>top‑and‑go, “lumpy” demand (lots of zeros, random spikes)</strong>
+<li><strong>Stop‑and‑go, “lumpy” demand (lots of zeros, random spikes)</strong>
 <ul>
 <li>Exponential averaging smooths the spikes away, underforecasting the future.</li>
 </ul></li>
