@@ -17,7 +17,7 @@ image: "image.png"
     - Become harder to reach. 
     - Get outside. 
 - [Competition by Shaan Puri](https://shaan.beehiiv.com/p/one-minute-blog-competition?_bhlid=cfb89dd099d47ff57d7b0072763f096777734330&utm_campaign=one-minute-blog-competition&utm_medium=newsletter&utm_source=shaan.beehiiv.com)
-    - You can just do things, most people won't. Y
+    - You can just do things, most people won't.
     - Your biggest competitor are the limiting thoughts in your head. 
 - [Becoming More Creative by Mark Manson](https://markmanson.net/boring-ways-to-become-more-creative)
     - Show up, be consistent. 
