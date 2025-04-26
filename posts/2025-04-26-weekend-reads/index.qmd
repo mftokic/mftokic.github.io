@@ -1,0 +1,54 @@
+---
+title: "Weekend Reads (4/26/25)"
+description: "Interesting things I found on the internet this week"
+author: "Mike Tokic"
+date: "2025-04-26"
+categories: [weekend-reads]
+image: "image.png"
+---
+
+## Articles
+
+- [The Case Against TV Shows by Trung Phan](https://www.readtrung.com/p/the-case-against-streaming-tv-shows?r=yqu&utm_campaign=post&utm_medium=web&hashed_user=ee16dc51dbe7422a414465c2656795b8&utm_source=Sailthru&utm_term=Trung)
+    - TV shows are black holes of time suck you never get back. 
+    - Watch YouTube instead. 
+- [Life Spring Cleaning by Ryan Holiday](https://ryanholiday.net/how-im-decluttering-my-life-this-spring/)
+    - Simplify more. Work on less things. 
+    - Become harder to reach. 
+    - Get outside. 
+- [Competition by Shaan Puri](https://shaan.beehiiv.com/p/one-minute-blog-competition?_bhlid=cfb89dd099d47ff57d7b0072763f096777734330&utm_campaign=one-minute-blog-competition&utm_medium=newsletter&utm_source=shaan.beehiiv.com)
+    - You can just do things, most people won't. Y
+    - Your biggest competitor are the limiting thoughts in your head. 
+- [Becoming More Creative by Mark Manson](https://markmanson.net/boring-ways-to-become-more-creative)
+    - Show up, be consistent. 
+    - Get bored.
+    - Most new things are remixes of old things. 
+
+## Videos
+
+- [Don't Die Podcast](https://www.youtube.com/watch?v=8_iIB7_fYCg)
+    - First iteration of Bryan Johnson's new podcast. 
+    - Discusses a recent paper on the benefits of creatine. 
+
+## Tweets
+
+- [One Minute Blog by Shaan Puri](https://x.com/shaanvp/status/1915826458175418448?s=46)
+    - Great post on the law of category. 
+    - Instead of building the best electric truck, Slate built the simplest. 
+- [AI Impact on Education by Beff Jezos and Austen Allred](https://x.com/basedbeffjezos/status/1914847224158380278?s=46)
+    - The half life of a college education used to be 30 years, with AI it's now less than 1 year. 
+    - The way AI learns today is how humans have learned for hundreds of years. 
+        - Model Pre-Training (aka school)
+        - Model Fine-Tuning (aka work and apprenticeship)
+    - How should humans adjust their learning approach in this new AI era? Something to think on. 
+- [RTO by Shako](https://x.com/shakoistslog/status/1914445773712073047?s=46)
+    - This one hit me deep. It happens more than you think at big tech companies. 
+- [Building AI Moats by Aaron Levie](https://x.com/levie/status/1914054995273761063?s=46)
+    - Having the right context to feed AI is a competitive advantage. 
+- [Having Brass Balls by Lou](https://x.com/moredatasets/status/1911777056863736213?s=10&hashed_user=ee16dc51dbe7422a414465c2656795b8&utm_source=Sailthru&utm_medium=email&utm_campaign=04/19&utm_term=Trung)
+    - Coffee is for closers. In the end it doesn't matter how much you work, as long as you close. 
+
+## Products
+
+- [Ketone-IQ](https://ketone.com/products/ketone)
+    - Pure horsepower for your brain. 
