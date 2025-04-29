@@ -214,7 +214,7 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 
 
 <p><em>This post is part of the <a href="https://mftokic.github.io/posts/2025-03-24-ts-fundamentals-univariate-models/">univariate models chapter</a> within a larger learning series around time series forecasting fundamentals. <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/">Check out the main learning path</a> to see other posts in the series.</em></p>
-<p><em>The example monthly data used in this series <a href="https://github.com/mftokic/mftokic.github.io/blob/main/posts/2024-10-02-ts-fundamentals-whats-a-time-series/example_ts_data.csv">can be found here.</a> You can also find the <a href="https://github.com/mftokic/mftokic.github.io/blob/main/notebooks/2025-04-10-ts-fundamentals-univariate-arima.ipynb">python code used in this post here.</a></em></p>
+<p><em>The example monthly data used in this series <a href="https://github.com/mftokic/mftokic.github.io/blob/main/posts/2024-10-02-ts-fundamentals-whats-a-time-series/example_ts_data.csv">can be found here.</a> You can also find the <a href="https://github.com/mftokic/mftokic.github.io/blob/main/notebooks/2025-04-30-ts-fundamentals-univariate-ets.ipynb">python code used in this post here.</a></em></p>
 <section id="what-does-exponential-smoothing-mean" class="level3">
 <h3 class="anchored" data-anchor-id="what-does-exponential-smoothing-mean">What Does Exponential Smoothing Mean?</h3>
 <p>Exponential smoothing is a family of forecasting methods that smooth out short-term fluctuations in data to reveal underlying trends or patterns. The core idea is to give more weight to recent observations and less weight to older data, which produces a “smoothed” time series with reduced noise​. This makes it easier to spot patterns and predict future values.</p>
@@ -276,7 +276,7 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 <p><img src="./chart1.png" class="img-fluid"></p>
 <p>Nice! The ets model was able to capture the historical trend and seasonality and carry it forward into the future. We’re also able to see two other things in the chart.</p>
 <ol type="1">
-<li>Hypothetical forecasts of the training data. These are often referred to as fitted values and can be used to calculate residuals, which are simply the difference between the forecast and actual value. Historically the arima model performed very well, closely matching the actual revenue values from month to month.</li>
+<li>Hypothetical forecasts of the training data. These are often referred to as fitted values and can be used to calculate residuals, which are simply the difference between the forecast and actual value. Historically the ets model performed very well, closely matching the actual revenue values from month to month.</li>
 <li>A 95% prediction interval. This represents with 95% certainty the upper and lower ranges where the model thinks the future value will land between. The tighter this interval the more certain the model is in its prediction. We will dig deep into prediction intervals in more detail in a later post.</li>
 </ol>
 </section>
