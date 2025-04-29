@@ -6,11 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Mike Tokic">
-<meta name="dcterms.date" content="2025-04-30">
-<meta name="description" content="Understanding how an exponential smoothing model works">
 
-<title>Univariate Models: Exponential Smoothing – Thoughts on Things</title>
+<title>Python Code – Thoughts on Things</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,28 +20,62 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<link href="../../logo.png" rel="icon" type="image/png">
-<script src="../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../logo.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -81,28 +112,23 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 </script>
-<meta name="quarto:status" content="draft">
 
 
-<link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Univariate Models: Exponential Smoothing – Thoughts on Things">
-<meta property="og:description" content="Understanding how an exponential smoothing model works">
-<meta property="og:image" content="https://mftokic.github.io/posts/2025-04-30-ts-fundamentals-univariate-ets/image.png">
+<link rel="stylesheet" href="../styles.css">
+<meta property="og:title" content="Python Code – Thoughts on Things">
 <meta property="og:site_name" content="Thoughts on Things">
-<meta name="twitter:title" content="Univariate Models: Exponential Smoothing – Thoughts on Things">
-<meta name="twitter:description" content="Understanding how an exponential smoothing model works">
-<meta name="twitter:image" content="https://mftokic.github.io/posts/2025-04-30-ts-fundamentals-univariate-ets/image.png">
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Python Code – Thoughts on Things">
+<meta name="twitter:card" content="summary">
 </head>
 
 <body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner"><div id="quarto-draft-alert" class="alert alert-warning"><i class="bi bi-pencil-square"></i>Draft</div>
+  <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Thoughts on Things</span>
     </a>
   </div>
@@ -113,23 +139,23 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../start_here.html"> 
+    <a class="nav-link" href="../start_here.html"> 
 <span class="menu-text">Start Here</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html"> 
+    <a class="nav-link" href="../about.html"> 
 <span class="menu-text">About Me</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../software.html"> 
+    <a class="nav-link" href="../software.html"> 
 <span class="menu-text">Software</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../books.html"> 
+    <a class="nav-link" href="../books.html"> 
 <span class="menu-text">Books</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../health.html"> 
+    <a class="nav-link" href="../health.html"> 
 <span class="menu-text">Health</span></a>
   </li>  
   <li class="nav-item">
@@ -152,7 +178,7 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="../../index.xml"> <i class="bi bi-rss" role="img">
+    <a class="nav-link" href="../index.xml"> <i class="bi bi-rss" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -165,160 +191,139 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
-      <h1 class="title">Univariate Models: Exponential Smoothing</h1>
-                  <div>
-        <div class="description">
-          Understanding how an exponential smoothing model works
-        </div>
-      </div>
-                          <div class="quarto-categories">
-                <div class="quarto-category">machine-learning</div>
-                <div class="quarto-category">time-series</div>
-              </div>
-                  </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta">
-
-      <div>
-      <div class="quarto-title-meta-heading">Author</div>
-      <div class="quarto-title-meta-contents">
-               <p>Mike Tokic </p>
-            </div>
-    </div>
-      
-      <div>
-      <div class="quarto-title-meta-heading">Published</div>
-      <div class="quarto-title-meta-contents">
-        <p class="date">April 30, 2025</p>
-      </div>
-    </div>
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Python Code</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
 
 
-<p><em>This post is part of the <a href="https://mftokic.github.io/posts/2025-03-24-ts-fundamentals-univariate-models/">univariate models chapter</a> within a larger learning series around time series forecasting fundamentals. <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/">Check out the main learning path</a> to see other posts in the series.</em></p>
-<p><em>The example monthly data used in this series <a href="https://github.com/mftokic/mftokic.github.io/blob/main/posts/2024-10-02-ts-fundamentals-whats-a-time-series/example_ts_data.csv">can be found here.</a> You can also find the <a href="https://github.com/mftokic/mftokic.github.io/blob/main/notebooks/2025-04-10-ts-fundamentals-univariate-arima.ipynb">python code used in this post here.</a></em></p>
-<section id="what-does-exponential-smoothing-mean" class="level3">
-<h3 class="anchored" data-anchor-id="what-does-exponential-smoothing-mean">What Does Exponential Smoothing Mean?</h3>
-<p>Exponential smoothing is a family of forecasting methods that smooth out short-term fluctuations in data to reveal underlying trends or patterns. The core idea is to give more weight to recent observations and less weight to older data, which produces a “smoothed” time series with reduced noise​. This makes it easier to spot patterns and predict future values.</p>
-<p>It’s also referred to as ETS, which stands for error, trend, and seasonality. These three components are at the heart of the most advanced exponential smoothing methods. Sometimes you might also hear them be called “state space” models, since they are modeling out different states like trend and seasonality separately.</p>
-<ul>
-<li><strong>Error (E)</strong>: The unpredictable or random fluctuations (noise) around your forecast.</li>
-<li><strong>Trend (T)</strong>: A longer-term movement (upward or downward) observed in your data.</li>
-<li><strong>Seasonality (S)</strong>: Regular patterns or cycles occurring within a known fixed period (e.g., yearly, monthly, weekly).</li>
-</ul>
-<p>Another component of these models is something called the level. Think of the level (sometimes called the baseline) as the smoothed estimate of ‘where we are right now’, before any trend pushes us up or seasonality ripples us up and down. Here’s how they are put together.</p>
-<ul>
-<li>Baseline right now → <strong>level</strong></li>
-<li>How the baseline is moving → <strong>trend</strong></li>
-<li>Repeating wiggles → <strong>seasonality</strong></li>
-<li>Random noise around all that → <strong>error</strong></li>
-</ul>
-</section>
-<section id="types-of-exponential-smoothing" class="level3">
-<h3 class="anchored" data-anchor-id="types-of-exponential-smoothing">Types of Exponential Smoothing</h3>
-<p>Exponential smoothing isn’t a single technique but a family that includes simple (single) smoothing, double smoothing, and triple smoothing. Each one builds on the previous to handle more complex patterns in the data:</p>
-<ul>
-<li><strong>Simple Exponential Smoothing</strong>: Used for data with no clear trend or seasonality.</li>
-<li><strong>Double Exponential Smoothing (Holt’s Linear Trend)</strong>: Used for data with a trend (increasing or decreasing sales over time).</li>
-<li><strong>Triple Exponential Smoothing (Holt-Winters)</strong>: Used for data with both trend and seasonality (recurring seasonal patterns, such as higher sales every holiday season).</li>
-</ul>
-<p>Most time series we deal with in the business have both trend and seasonality, so we’ll focus mostly on triple exponential smoothing going forward.</p>
-</section>
-<section id="modeling-error-trend-and-seasonality" class="level3">
-<h3 class="anchored" data-anchor-id="modeling-error-trend-and-seasonality">Modeling Error, Trend, and Seasonality</h3>
-<p>Exponential smoothing models—especially the Holt-Winters model—perform decomposition implicitly. They don’t require explicit pre-decomposition of your data (unlike <a href="https://mftokic.github.io/posts/2024-11-06-ts-fundamentals-decomposition/">STL decomposition</a>, which explicitly separates the time series into distinct parts). Instead, they simultaneously estimate these components using exponential smoothing equations.</p>
-</section>
-<section id="additive-vs-multiplicative" class="level3">
-<h3 class="anchored" data-anchor-id="additive-vs-multiplicative">Additive vs Multiplicative</h3>
-<p>When using exponential smoothing (ETS) models, you can model patterns like trends and seasonality in two ways: additive or multiplicative.</p>
-<ul>
-<li><strong>Additive</strong> means seasonal and trend effects are constant amounts added or subtracted each period—think of a retailer whose sales always increase by exactly 500 units every holiday season.</li>
-<li><strong>Multiplicative</strong> means these effects are percentage-based, scaling up or down with your baseline. Like a business whose holiday sales consistently spike by 20%, making seasonal swings grow in magnitude as the company expands.</li>
-</ul>
-<p>Choosing the correct method ensures your forecasts closely match your real-world sales patterns, greatly improving forecast accuracy and business decisions.</p>
-</section>
-<section id="putting-it-all-together" class="level3">
-<h3 class="anchored" data-anchor-id="putting-it-all-together">Putting It All Together</h3>
-<p>Exponential smoothing models produce future forecasts by systematically updating estimates of error, trend, and seasonality based on recent data points. Here’s how the forecasting process typically unfolds.</p>
-<ol type="1">
-<li><strong>Initialization</strong>: Begin with historical data to establish initial estimates for the level (baseline), trend, and seasonal components.</li>
-<li><strong>Updating Components</strong>:
-<ul>
-<li><strong>Level</strong>: Adjusted each period based on recent observations, blending new data with previous estimates to capture the underlying baseline.</li>
-<li><strong>Trend</strong>: Updated by measuring changes in the baseline from period to period, capturing increases or decreases over time.</li>
-<li><strong>Seasonality</strong>: Regularly adjusted based on the latest observations relative to the baseline, ensuring that recurring seasonal patterns remain accurate.</li>
-<li><strong>Forecasting Future Values</strong>: Once the model updates these components, it combines them to project forward. In an additive model, the forecast is calculated by summing the baseline, trend, and seasonal effects. In a multiplicative model, these components are multiplied, scaling the forecast proportionally.</li>
-</ul></li>
-</ol>
-<p>By continuously integrating new data, exponential smoothing models dynamically refine forecasts, making them highly responsive and reliable for various business needs, from inventory management to budgeting and planning.</p>
-</section>
-<section id="lets-train-a-model" class="level3">
-<h3 class="anchored" data-anchor-id="lets-train-a-model">Let’s Train A Model</h3>
-<p>Let’s take one of our example time series and create an ETS forecast 12 months into the future and see how things look.</p>
-<p><img src="./chart1.png" class="img-fluid"></p>
-<p>Nice! The ets model was able to capture the historical trend and seasonality and carry it forward into the future. We’re also able to see two other things in the chart.</p>
-<ol type="1">
-<li>Hypothetical forecasts of the training data. These are often referred to as fitted values and can be used to calculate residuals, which are simply the difference between the forecast and actual value. Historically the arima model performed very well, closely matching the actual revenue values from month to month.</li>
-<li>A 95% prediction interval. This represents with 95% certainty the upper and lower ranges where the model thinks the future value will land between. The tighter this interval the more certain the model is in its prediction. We will dig deep into prediction intervals in more detail in a later post.</li>
-</ol>
-</section>
-<section id="reversal" class="level3">
-<h3 class="anchored" data-anchor-id="reversal">Reversal</h3>
-<p>ETS models are powerful, but not in every circumstance. Here are situations where they might struggle to produce quality forecasts.</p>
-<ul>
-<li><strong>Big, sudden shifts (a&nbsp;merger, a COVID‑style shock, a new pricing policy)</strong>
-<ul>
-<li>ETS learns slowly, so its forecasts keep reaching back to “the old world” and miss the new level or trend.</li>
-</ul></li>
-<li><strong>Stop‑and‑go, “lumpy” demand (lots of zeros, random spikes)</strong>
-<ul>
-<li>Exponential averaging smooths the spikes away, underforecasting the future.</li>
-</ul></li>
-<li><strong>More than one seasonality marching at once (hour‑of‑day&nbsp;+&nbsp;day‑of‑week&nbsp;+&nbsp;holidays)</strong>
-<ul>
-<li>Classic Holt‑Winters can juggle only one seasonal cycle, so leftover patterns keep showing up in the residuals.</li>
-</ul></li>
-<li><strong>When outside forces rule the game (promotions, ad spend, macro shocks)</strong>
-<ul>
-<li>ETS is univariate, if your forecast errors line up with random one time events, you’re in the wrong model.</li>
-</ul></li>
-<li><strong>Tiny history (less than two full seasons of data)</strong>
-<ul>
-<li>With so little to learn from, ETS guesses at seasonality and wobbles all over the place.</li>
-</ul></li>
-</ul>
-</section>
-<section id="final-thoughts" class="level3">
-<h3 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h3>
-<p>ETS shines when your data marches to one clear seasonal drumbeat and drifts in a steady direction. Feed it that steady history and it returns forecasts that are fast, transparent, and business-ready. Know its blind spots (multiple calendars, lumpy demand, sudden upheavals) and you’ll know exactly when to trust it and when to reach for heavier gear.</p>
-</section>
-<section id="learn-more" class="level3">
-<h3 class="anchored" data-anchor-id="learn-more">Learn More</h3>
-<ul>
-<li><a href="https://otexts.com/fpp3/expsmooth.html">Forecasting Principles and Practice</a> by Rob Hyndman</li>
-<li><a href="https://nixtlaverse.nixtla.io/statsforecast/docs/models/autoets.html">ETS Models</a> by Nixtla</li>
-</ul>
+</header>
 
 
-</section>
+<div id="cell-2" class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># import libraries</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> statsforecast <span class="im">import</span> StatsForecast</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> statsforecast.models <span class="im">import</span> AutoETS</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-3" class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># read data</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>data_raw <span class="op">=</span> pd.read_csv(<span class="st">"../posts/2024-10-02-ts-fundamentals-whats-a-time-series/example_ts_data.csv"</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>data_raw <span class="op">=</span> (</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># select columns</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    data_raw[[<span class="st">"Country"</span>, <span class="st">"Product"</span>, <span class="st">"Date"</span>, <span class="st">"Revenue"</span>]]</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="co"># change data types</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    .assign(</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>        Date <span class="op">=</span> pd.to_datetime(data_raw[<span class="st">"Date"</span>]), </span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>        Revenue <span class="op">=</span> pd.to_numeric(data_raw[<span class="st">"Revenue"</span>])</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="co"># print the first few rows</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data_raw.head())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-4" class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># filter on specific series</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>us_ic_raw <span class="op">=</span> data_raw[(data_raw[<span class="st">"Country"</span>] <span class="op">==</span> <span class="st">"United States"</span>) <span class="op">&amp;</span> (data_raw[<span class="st">"Product"</span>] <span class="op">==</span> <span class="st">"Ice Cream"</span>)]</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># create unique id</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>us_ic_raw[<span class="st">"unique_id"</span>] <span class="op">=</span> us_ic_raw[<span class="st">"Country"</span>] <span class="op">+</span> <span class="st">"_"</span> <span class="op">+</span> us_ic_raw[<span class="st">"Product"</span>]</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co"># convert date to datetime</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>us_ic_raw[<span class="st">"Date"</span>] <span class="op">=</span> pd.to_datetime(us_ic_raw[<span class="st">"Date"</span>])</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co"># plot the data</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>plt.plot(us_ic_raw.index, us_ic_raw[<span class="st">"Revenue"</span>], label<span class="op">=</span><span class="st">"Ice Cream Revenue"</span>)</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Date"</span>)</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Revenue"</span>)</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Ice Cream Revenue in United States"</span>)</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>plt.legend()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-5" class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># get final data for forecasting</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>us_ic_clean <span class="op">=</span> us_ic_raw[[<span class="st">"unique_id"</span>, <span class="st">"Date"</span>, <span class="st">"Revenue"</span>]].copy()</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># set up models to train</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>sf <span class="op">=</span> StatsForecast(</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    models<span class="op">=</span>[AutoETS(season_length<span class="op">=</span><span class="dv">12</span>)],</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    freq<span class="op">=</span><span class="st">'ME'</span>,</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="co"># fit the model and forecast for 12 months ahead</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>Y_hat_df <span class="op">=</span> sf.forecast(df <span class="op">=</span> us_ic_clean, </span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>                       time_col <span class="op">=</span> <span class="st">"Date"</span>, </span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>                       target_col <span class="op">=</span> <span class="st">"Revenue"</span>, </span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>                       id_col <span class="op">=</span> <span class="st">"unique_id"</span>, </span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>                       h<span class="op">=</span><span class="dv">12</span>, </span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>                       level<span class="op">=</span>[<span class="dv">95</span>], </span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>                       fitted<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(Y_hat_df.head())</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a><span class="co"># convert date to be first of the month</span></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>Y_hat_df[<span class="st">"Date"</span>] <span class="op">=</span> Y_hat_df[<span class="st">"Date"</span>].dt.to_period(<span class="st">"M"</span>).dt.to_timestamp()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-6" class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># get fitted values of the historical data</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Note: The fitted values are the predicted values for the training data</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>residual_values <span class="op">=</span>sf.forecast_fitted_values()</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(residual_values.head())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-7" class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># concat both df together</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>combined_df <span class="op">=</span> pd.concat([residual_values, Y_hat_df], axis<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co"># make date the index</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>combined_df.set_index(<span class="st">"Date"</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(combined_df.head())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-8" class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plot the combined data</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co"># plot the original revenue data as line and forecast as dotted line</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>plt.plot(combined_df.index, combined_df[<span class="st">"Revenue"</span>], label<span class="op">=</span><span class="st">"Actual Revenue"</span>)</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>plt.plot(combined_df.index, combined_df[<span class="st">"AutoETS"</span>], label<span class="op">=</span><span class="st">"Forecasted Revenue"</span>, linestyle<span class="op">=</span><span class="st">'dotted'</span>)</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="co"># plot the prediction intervals as shaded areas</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>plt.fill_between(combined_df.index, </span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>                 combined_df[<span class="st">"AutoETS-lo-95"</span>], </span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>                 combined_df[<span class="st">"AutoETS-hi-95"</span>], </span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>                 color<span class="op">=</span><span class="st">'gray'</span>, alpha<span class="op">=</span><span class="fl">0.2</span>, label<span class="op">=</span><span class="st">'95% Prediction Interval'</span>)</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="co"># chart formatting</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Date"</span>)</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Revenue"</span>)</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"ETS Forecasting Results for US Ice Cream Revenue"</span>)</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a><span class="co"># save the plot</span></span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a><span class="co"># plt.savefig("chart1", dpi = 300, bbox_inches = "tight")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+
+
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

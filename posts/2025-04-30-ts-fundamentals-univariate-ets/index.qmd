@@ -2,7 +2,7 @@
 title: "Univariate Models: Exponential Smoothing"
 description: "Understanding how an exponential smoothing model works"
 author: "Mike Tokic"
-date: "2025-04-15"
+date: "2025-04-30"
 categories: [machine-learning, time-series]
 image: "image.png"
 draft: True
@@ -71,6 +71,11 @@ Let's take one of our example time series and create an ETS forecast 12 months i
 
 ![](./chart1.png)
 
+Nice! The ets model was able to capture the historical trend and seasonality and carry it forward into the future. We're also able to see two other things in the chart. 
+
+1. Hypothetical forecasts of the training data. These are often referred to as fitted values and can be used to calculate residuals, which are simply the difference between the forecast and actual value. Historically the arima model performed very well, closely matching the actual revenue values from month to month. 
+2. A 95% prediction interval. This represents with 95% certainty the upper and lower ranges where the model thinks the future value will land between. The tighter this interval the more certain the model is in its prediction. We will dig deep into prediction intervals in more detail in a later post. 
+
 ### Reversal 
 
 ETS models are powerful, but not in every circumstance. Here are situations where they might struggle to produce quality forecasts. 
@@ -88,6 +93,9 @@ ETS models are powerful, but not in every circumstance. Here are situations wher
 
 ### Final Thoughts 
 
+ETS shines when your data marches to one clear seasonal drumbeat and drifts in a steady direction. Feed it that steady history and it returns forecasts that are fast, transparent, and business-ready. Know its blind spots (multiple calendars, lumpy demand, sudden upheavals) and you’ll know exactly when to trust it and when to reach for heavier gear.
+
 ### Learn More
 
 - [Forecasting Principles and Practice](https://otexts.com/fpp3/expsmooth.html) by Rob Hyndman
+- [ETS Models](https://nixtlaverse.nixtla.io/statsforecast/docs/models/autoets.html) by Nixtla
