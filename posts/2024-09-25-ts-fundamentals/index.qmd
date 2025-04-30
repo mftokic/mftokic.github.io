@@ -25,8 +25,8 @@ The sequence of what you learn is just as important as what content you learn. I
     - [Stationary](https://mftokic.github.io/posts/2025-03-21-ts-fundamentals-data-cleaning-stationary/)
 4. [Univariate Models](https://mftokic.github.io/posts/2025-03-24-ts-fundamentals-univariate-models/)
     - [ARIMA](https://mftokic.github.io/posts/2025-04-10-ts-fundamentals-univariate-arima/)
-    - Exponential Smoothing (in progress)
-    - Simple Benchmark Models
+    - [Exponential Smoothing](https://mftokic.github.io/posts/2025-04-30-ts-fundamentals-univariate-ets/)
+    - Simple Benchmark Models (in progress)
 5. Evaluation Metrics
 6. Feature Engineering
     - Date 
