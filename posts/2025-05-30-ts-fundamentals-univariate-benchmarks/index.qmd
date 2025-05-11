@@ -48,3 +48,7 @@ Running benchmarks on differenced data.
 ### Other Benchmark Methods
 
 ### Final Thoughts
+
+### Learn More 
+
+https://nixtlaverse.nixtla.io/statsforecast/src/core/models.html#windowaverage
