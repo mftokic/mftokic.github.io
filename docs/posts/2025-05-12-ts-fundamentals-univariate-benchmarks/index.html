@@ -81,7 +81,6 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 </script>
-<meta name="quarto:status" content="draft">
 
 
 <link rel="stylesheet" href="../../styles.css">
@@ -89,16 +88,20 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 <meta property="og:description" content="Creating simple models to benchmark against complex ones">
 <meta property="og:image" content="https://mftokic.github.io/posts/2025-05-12-ts-fundamentals-univariate-benchmarks/image.png">
 <meta property="og:site_name" content="Thoughts on Things">
+<meta property="og:image:height" content="1024">
+<meta property="og:image:width" content="1024">
 <meta name="twitter:title" content="Univariate Models: Simple Benchmark Models – Thoughts on Things">
 <meta name="twitter:description" content="Creating simple models to benchmark against complex ones">
 <meta name="twitter:image" content="https://mftokic.github.io/posts/2025-05-12-ts-fundamentals-univariate-benchmarks/image.png">
+<meta name="twitter:image-height" content="1024">
+<meta name="twitter:image-width" content="1024">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner"><div id="quarto-draft-alert" class="alert alert-warning"><i class="bi bi-pencil-square"></i>Draft</div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -217,7 +220,7 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 <p><em>The example monthly data used in this series <a href="https://github.com/mftokic/mftokic.github.io/blob/main/posts/2024-10-02-ts-fundamentals-whats-a-time-series/example_ts_data.csv">can be found here.</a> You can also find the <a href="https://github.com/mftokic/mftokic.github.io/blob/main/notebooks/2025-05-12-ts-fundamentals-univariate-benchmarks.ipynb">python code used in this post here.</a></em></p>
 <section id="what-are-benchmark-models" class="level3">
 <h3 class="anchored" data-anchor-id="what-are-benchmark-models">What Are Benchmark Models?</h3>
-<p>A benchmark model is a simple model that can be used as a forecast or to compare its forecast outputs against another model that is more complex. These models do not incorporate statistical or machine learning methods, instead they use standard formulas to produce forecasts.</p>
+<p>A benchmark model is a simple model that can be used as a forecast or to compare its forecast outputs against another model that is more complex. These models don’t incorporate statistical or machine learning methods, instead they use standard formulas to produce forecasts.</p>
 </section>
 <section id="type-of-benchmark-models" class="level3">
 <h3 class="anchored" data-anchor-id="type-of-benchmark-models">Type of Benchmark Models</h3>
@@ -241,7 +244,7 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 <h3 class="anchored" data-anchor-id="lets-create-a-forecast">Let’s Create a Forecast</h3>
 <p>Let’s take one of our example time series and create these benchmark forecasts.</p>
 <p><img src="./chart1.png" class="img-fluid"></p>
-<p>Looks like our future forecast for each model does not look good. No trends were captured, same goes for seasonality outside of the seasonal naive model. These models produced future forecasts, just none that we want to use for our final forecast.</p>
+<p>Looks like our future forecast for each model doesn’t look good. No trends were captured, same goes for seasonality outside of the seasonal naive model. These models produced future forecasts, just none that we want to use for our final forecast.</p>
 </section>
 <section id="how-to-use-them" class="level3">
 <h3 class="anchored" data-anchor-id="how-to-use-them">How to Use Them</h3>

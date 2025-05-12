@@ -26,20 +26,20 @@ The sequence of what you learn is just as important as what content you learn. I
 4. [Univariate Models](https://mftokic.github.io/posts/2025-03-24-ts-fundamentals-univariate-models/)
     - [ARIMA](https://mftokic.github.io/posts/2025-04-10-ts-fundamentals-univariate-arima/)
     - [Exponential Smoothing](https://mftokic.github.io/posts/2025-04-30-ts-fundamentals-univariate-ets/)
-    - Simple Benchmark Models (in progress)
-5. Evaluation Metrics
+    - [Simple Benchmark Models](https://mftokic.github.io/posts/2025-05-12-ts-fundamentals-univariate-benchmarks/)
+5. Evaluation Metrics (in progress)
 6. Feature Engineering
     - Date 
     - Target Variable
     - External Regressors
 7. Multivariate Models
-    - Local Models
-    - Global Models
-    - Hyperparameter Tuning
     - Linear Regression
     - Decision Trees
     - Random Forest
     - Gradient Boosting (XGBoost, LightGBM)
+    - Local Models
+    - Global Models
+    - Hyperparameter Tuning
     - Feature Selection
     - Mutlistep Horizon, Autoregressive
 8. Model Training Lifecycle

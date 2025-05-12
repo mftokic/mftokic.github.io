@@ -5,7 +5,6 @@ author: "Mike Tokic"
 date: "2025-05-12"
 categories: [machine-learning, time-series]
 image: "image.png"
-draft: True
 ---
 
 *This post is part of the [univariate models chapter](https://mftokic.github.io/posts/2025-03-24-ts-fundamentals-univariate-models/) within a larger learning series around time series forecasting fundamentals. [Check out the main learning path](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/) to see other posts in the series.* 
@@ -14,7 +13,7 @@ draft: True
 
 ### What Are Benchmark Models?  
 
-A benchmark model is a simple model that can be used as a forecast or to compare its forecast outputs against another model that is more complex. These models do not incorporate statistical or machine learning methods, instead they use standard formulas to produce forecasts. 
+A benchmark model is a simple model that can be used as a forecast or to compare its forecast outputs against another model that is more complex. These models don't incorporate statistical or machine learning methods, instead they use standard formulas to produce forecasts. 
 
 ### Type of Benchmark Models
 
@@ -33,7 +32,7 @@ Let's take one of our example time series and create these benchmark forecasts.
 
 ![](./chart1.png)
 
-Looks like our future forecast for each model does not look good. No trends were captured, same goes for seasonality outside of the seasonal naive model. These models produced future forecasts, just none that we want to use for our final forecast.
+Looks like our future forecast for each model doesn't look good. No trends were captured, same goes for seasonality outside of the seasonal naive model. These models produced future forecasts, just none that we want to use for our final forecast.
 
 ### How to Use Them
 
