@@ -16,6 +16,7 @@ draft: true
 - Binary Variable
 - Box-Cox Transformation
 - Causation
+- Compound Annual Growth Rate
 - Confidence Interval
 - Correlation
 - Dependant Variable

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Mike Tokic">
-<meta name="dcterms.date" content="2025-05-30">
+<meta name="dcterms.date" content="2025-05-12">
 <meta name="description" content="Creating simple models to benchmark against complex ones">
 
 <title>Univariate Models: Simple Benchmark Models – Thoughts on Things</title>
@@ -87,11 +87,11 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Univariate Models: Simple Benchmark Models – Thoughts on Things">
 <meta property="og:description" content="Creating simple models to benchmark against complex ones">
-<meta property="og:image" content="https://mftokic.github.io/posts/2025-05-30-ts-fundamentals-univariate-benchmarks/image.png">
+<meta property="og:image" content="https://mftokic.github.io/posts/2025-05-12-ts-fundamentals-univariate-benchmarks/image.png">
 <meta property="og:site_name" content="Thoughts on Things">
 <meta name="twitter:title" content="Univariate Models: Simple Benchmark Models – Thoughts on Things">
 <meta name="twitter:description" content="Creating simple models to benchmark against complex ones">
-<meta name="twitter:image" content="https://mftokic.github.io/posts/2025-05-30-ts-fundamentals-univariate-benchmarks/image.png">
+<meta name="twitter:image" content="https://mftokic.github.io/posts/2025-05-12-ts-fundamentals-univariate-benchmarks/image.png">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -194,7 +194,7 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">May 30, 2025</p>
+        <p class="date">May 12, 2025</p>
       </div>
     </div>
     
@@ -214,7 +214,7 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 
 
 <p><em>This post is part of the <a href="https://mftokic.github.io/posts/2025-03-24-ts-fundamentals-univariate-models/">univariate models chapter</a> within a larger learning series around time series forecasting fundamentals. <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/">Check out the main learning path</a> to see other posts in the series.</em></p>
-<p><em>The example monthly data used in this series <a href="https://github.com/mftokic/mftokic.github.io/blob/main/posts/2024-10-02-ts-fundamentals-whats-a-time-series/example_ts_data.csv">can be found here.</a> You can also find the <a href="https://github.com/mftokic/mftokic.github.io/blob/main/notebooks/2025-04-30-ts-fundamentals-univariate-ets.ipynb">python code used in this post here.</a></em></p>
+<p><em>The example monthly data used in this series <a href="https://github.com/mftokic/mftokic.github.io/blob/main/posts/2024-10-02-ts-fundamentals-whats-a-time-series/example_ts_data.csv">can be found here.</a> You can also find the <a href="https://github.com/mftokic/mftokic.github.io/blob/main/notebooks/2025-05-12-ts-fundamentals-univariate-benchmarks.ipynb">python code used in this post here.</a></em></p>
 <section id="what-are-benchmark-models" class="level3">
 <h3 class="anchored" data-anchor-id="what-are-benchmark-models">What Are Benchmark Models?</h3>
 <p>A benchmark model is a simple model that can be used as a forecast or to compare its forecast outputs against another model that is more complex. These models do not incorporate statistical or machine learning methods, instead they use standard formulas to produce forecasts.</p>
@@ -245,19 +245,39 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 </section>
 <section id="how-to-use-them" class="level3">
 <h3 class="anchored" data-anchor-id="how-to-use-them">How to Use Them</h3>
-<p>Benchmark models can be ran first when starting a new forecast project to establish a simple baseline of accuracy for more advanced models to beat. You might build a fancy neural network model from scratch, but it may have the same accuracy as a dumb seasonal naive model. So starting with benchmark models first is always a good idea.</p>
-<p>Another interesting way you can use benchmark models is by removing the trend and seasonal components through differencing before running these models. By <a href="https://mftokic.github.io/posts/2025-03-21-ts-fundamentals-data-cleaning-stationary/">making the data stationary</a>, we can allow simple benchmark models to work their magic on the cleaner data to produce more robust forecasts. Let’s try each method of differencing and see how it impacts the benchmark forecasts. Also it’s important to note that after we create the forecast on the differenced data, we need to undifference the data to return it back to its original scale.</p>
-<p>Running benchmarks on differenced data.</p>
+<p>Benchmark models can be ran first when starting a new forecast project to establish a simple baseline of accuracy for more advanced models to beat. You might build a fancy neural network model from scratch, but it may have the same accuracy as a dumb seasonal naive model. So starting with benchmark models first is always a good idea. <a href="https://mftokic.github.io/posts/2024-05-03-time-series-simple-models/">Simple models are better models</a>.</p>
 </section>
 <section id="other-benchmark-methods" class="level3">
 <h3 class="anchored" data-anchor-id="other-benchmark-methods">Other Benchmark Methods</h3>
+<p>Today we just covered the three most common benchmark models, but there are countless others you can use too. Here are a few more to pique your interest.</p>
+<ul>
+<li><strong>Other Mean Forecast Methods</strong>
+<ul>
+<li>Instead of averaging over the past year, you can average over the past quarter, the entire time series, or any other significant period.</li>
+</ul></li>
+<li><strong>Random Walk with Drift</strong>
+<ul>
+<li>A variation of the naive method allows the forecasts to change over time. The amount of change, called drift, is the average change seen in the historical data.</li>
+</ul></li>
+<li><strong>Seasonal Mean Forecast</strong>
+<ul>
+<li>Similar to previously discussed mean forecast methods, but this time you are averaging the values within the same season. For example, for monthly data you might take the average value of the previous years for the month of December to use that to create a future forecast for December.</li>
+</ul></li>
+<li><strong>Growth Rate Forecast Methods</strong>
+<ul>
+<li>If the time series lacks seasonality, you can apply a compound annual growth rate (CAGR) or similar average growth over “xyz” time periods and apply that to create a future forecast.</li>
+</ul></li>
+</ul>
 </section>
 <section id="final-thoughts" class="level3">
 <h3 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h3>
+<p>Benchmark models might seem overly simplistic, but their real value lies in their role as the first step of your forecasting process. Establishing a simple, transparent baseline makes it easier to measure and justify the incremental gains from more sophisticated methods. Remember, complexity does not always equal accuracy; sometimes the simplest models offer the clearest insights. When in doubt, start simple and build complexity as needed.</p>
 </section>
 <section id="learn-more" class="level3">
 <h3 class="anchored" data-anchor-id="learn-more">Learn More</h3>
-<p>https://nixtlaverse.nixtla.io/statsforecast/src/core/models.html#windowaverage</p>
+<ul>
+<li><a href="https://nixtlaverse.nixtla.io/statsforecast/src/core/models.html#baseline-models">Benchmark Models from Nixtla’s statsforecast python package</a></li>
+</ul>
 
 
 </section>
