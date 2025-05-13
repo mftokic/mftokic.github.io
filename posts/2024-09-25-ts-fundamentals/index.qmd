@@ -27,7 +27,7 @@ The sequence of what you learn is just as important as what content you learn. I
     - [ARIMA](https://mftokic.github.io/posts/2025-04-10-ts-fundamentals-univariate-arima/)
     - [Exponential Smoothing](https://mftokic.github.io/posts/2025-04-30-ts-fundamentals-univariate-ets/)
     - [Simple Benchmark Models](https://mftokic.github.io/posts/2025-05-12-ts-fundamentals-univariate-benchmarks/)
-5. Model Evaluation
+5. [Model Evaluation](https://mftokic.github.io/posts/2025-05-13-ts-fundamentals-model-evaluation/)
     - Train/Test Splits (in progress)
     - Time Series Cross Validation 
     - Evaluation Metrics

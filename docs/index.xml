@@ -14,7 +14,7 @@
 <item>
   <title>Model Evaluation For Time Series</title>
   <dc:creator>Mike Tokic</dc:creator>
-  <link>https://mftokic.github.io/posts/2025-05-30-ts-fundamentals-model-evaluation/</link>
+  <link>https://mftokic.github.io/posts/2025-05-13-ts-fundamentals-model-evaluation/</link>
   <description><![CDATA[ 
 
 
@@ -37,9 +37,9 @@
  ]]></description>
   <category>machine-learning</category>
   <category>time-series</category>
-  <guid>https://mftokic.github.io/posts/2025-05-30-ts-fundamentals-model-evaluation/</guid>
+  <guid>https://mftokic.github.io/posts/2025-05-13-ts-fundamentals-model-evaluation/</guid>
   <pubDate>Tue, 13 May 2025 07:00:00 GMT</pubDate>
-  <media:content url="https://mftokic.github.io/posts/2025-05-30-ts-fundamentals-model-evaluation/image.png" medium="image" type="image/png" height="96" width="144"/>
+  <media:content url="https://mftokic.github.io/posts/2025-05-13-ts-fundamentals-model-evaluation/image.png" medium="image" type="image/png" height="96" width="144"/>
 </item>
 <item>
   <title>Univariate Models: Simple Benchmark Models</title>
