@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Mike Tokic">
-<meta name="dcterms.date" content="2024-09-25">
-<meta name="description" content="Understanding Core ML Concepts in Forecasting">
+<meta name="dcterms.date" content="2025-05-13">
+<meta name="description" content="Understanding the accuracy of your forecast">
 
-<title>Thoughts On Time Series Forecasting Fundamentals – Thoughts on Things</title>
+<title>Model Evaluation For Time Series – Thoughts on Things</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -84,17 +84,17 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Thoughts On Time Series Forecasting Fundamentals – Thoughts on Things">
-<meta property="og:description" content="Understanding Core ML Concepts in Forecasting">
-<meta property="og:image" content="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/image.png">
+<meta property="og:title" content="Model Evaluation For Time Series – Thoughts on Things">
+<meta property="og:description" content="Understanding the accuracy of your forecast">
+<meta property="og:image" content="https://mftokic.github.io/posts/2025-05-30-ts-fundamentals-model-evaluation/image.png">
 <meta property="og:site_name" content="Thoughts on Things">
 <meta property="og:image:height" content="1024">
-<meta property="og:image:width" content="1024">
-<meta name="twitter:title" content="Thoughts On Time Series Forecasting Fundamentals – Thoughts on Things">
-<meta name="twitter:description" content="Understanding Core ML Concepts in Forecasting">
-<meta name="twitter:image" content="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/image.png">
+<meta property="og:image:width" content="1536">
+<meta name="twitter:title" content="Model Evaluation For Time Series – Thoughts on Things">
+<meta name="twitter:description" content="Understanding the accuracy of your forecast">
+<meta name="twitter:image" content="https://mftokic.github.io/posts/2025-05-30-ts-fundamentals-model-evaluation/image.png">
 <meta name="twitter:image-height" content="1024">
-<meta name="twitter:image-width" content="1024">
+<meta name="twitter:image-width" content="1536">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -171,10 +171,10 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Thoughts On Time Series Forecasting Fundamentals</h1>
+      <h1 class="title">Model Evaluation For Time Series</h1>
                   <div>
         <div class="description">
-          Understanding Core ML Concepts in Forecasting
+          Understanding the accuracy of your forecast
         </div>
       </div>
                           <div class="quarto-categories">
@@ -197,7 +197,7 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">September 25, 2024</p>
+        <p class="date">May 13, 2025</p>
       </div>
     </div>
     
@@ -216,87 +216,15 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 
 
 
-<p>The ability to create forecasts about the future is a superpower. Machine learning (ML) models take this to another level by increasing forecast accuracy while reducing the time spent creating the forecast. Using ML might seem a little scary at first. You may not know where to start. Type “intro ML course” into Bing and you’ll probably get millions of links. Which ones are good? Why do they cost $5,000? That’s why I wanted to create a gentle introduction to time series forecasting with ML. Where I start from first principles and work our way up to shipping forecasts in production. The intent is to cover the core theory of ML forecasting, and less on the code itself. The code can come later, but anyone who consumes the outputs from ML or helps train ML models needs a strong understanding of how this process works.</p>
-<p>The sequence of what you learn is just as important as what content you learn. I have developed a learning path that takes you from absolute beginner and slowly adds new concepts until you’re a forecasting master! Please click on each link in order to get up to speed, or skip around to any topic you want to dive into again. Don’t try to read this all in a day, take your time, take notes, and maybe even paste some of the posts into your favorite AI tool to quiz yourself on the topics. Happy learning!</p>
-<section id="our-learning-journey" class="level3">
-<h3 class="anchored" data-anchor-id="our-learning-journey">Our Learning Journey</h3>
-<ol type="1">
-<li><a href="https://mftokic.github.io/posts/2024-10-02-ts-fundamentals-whats-a-time-series/">What’s a time series?</a></li>
-<li><a href="https://mftokic.github.io/posts/2024-10-03-ts-fundamentals-eda/">Exploratory Data Analysis</a>
-<ul>
-<li><a href="https://mftokic.github.io/posts/2024-10-15-ts-fundamentals-eda-data-shape/">Shape of the Data</a></li>
-<li><a href="https://mftokic.github.io/posts/2024-11-06-ts-fundamentals-decomposition/">Time Series Decomposition</a></li>
-<li><a href="https://mftokic.github.io/posts/2024-11-12-ts-fundamentals-autocorrelation/">Autocorrelation</a></li>
-<li><a href="https://mftokic.github.io/posts/2024-11-26-ts-fundamentals-missing-outliers/">Missing Values, Outliers</a></li>
-<li><a href="https://mftokic.github.io/posts/2025-01-24-ts-fundamentals-eda-xregs/">External Regressors</a></li>
-</ul></li>
-<li><a href="https://mftokic.github.io/posts/2025-02-03-ts-fundamentals-data-cleaning/">Data Cleaning</a>
-<ul>
-<li><a href="https://mftokic.github.io/posts/2024-11-26-ts-fundamentals-missing-outliers/">Missing Values, Outliers</a></li>
-<li><a href="https://mftokic.github.io/posts/2025-02-05-ts-fundamentals-data-cleaning-boxcox/">Box Cox Transformation</a></li>
-<li><a href="https://mftokic.github.io/posts/2025-03-21-ts-fundamentals-data-cleaning-stationary/">Stationary</a></li>
-</ul></li>
-<li><a href="https://mftokic.github.io/posts/2025-03-24-ts-fundamentals-univariate-models/">Univariate Models</a>
-<ul>
-<li><a href="https://mftokic.github.io/posts/2025-04-10-ts-fundamentals-univariate-arima/">ARIMA</a></li>
-<li><a href="https://mftokic.github.io/posts/2025-04-30-ts-fundamentals-univariate-ets/">Exponential Smoothing</a></li>
-<li><a href="https://mftokic.github.io/posts/2025-05-12-ts-fundamentals-univariate-benchmarks/">Simple Benchmark Models</a></li>
-</ul></li>
-<li>Model Evaluation
+<p><em>This post is part of a larger learning series around time series forecasting fundamentals. <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/">Check out the learning path</a> to see other posts in the series.</em></p>
+<section id="is-my-forecast-accurate" class="level3">
+<h3 class="anchored" data-anchor-id="is-my-forecast-accurate">Is My Forecast Accurate?</h3>
+<p>After you train a model and create a forecast, you can either blindly trust that future forecast or figure out much you should trust it based on some evaluation. NASA has a saying, “in god we trust, all others bring data”. If you create a forecast with no accompanying data around it to build trust in that forecast, no one will want to use it. That’s why we need to implement model evaluation. Here are the foundational concepts we’ll cover in this chapter.</p>
 <ul>
 <li>Train/Test Splits (in progress)</li>
 <li>Time Series Cross Validation</li>
 <li>Evaluation Metrics</li>
-</ul></li>
-<li>Feature Engineering
-<ul>
-<li>Date</li>
-<li>Target Variable</li>
-<li>External Regressors</li>
-</ul></li>
-<li>Multivariate Models
-<ul>
-<li>Linear Regression</li>
-<li>Decision Trees</li>
-<li>Random Forest</li>
-<li>Gradient Boosting (XGBoost, LightGBM)</li>
-<li>Local Models vs Global Models</li>
-<li>Hyperparameter Tuning</li>
-<li>Feature Selection</li>
-<li>Mutlistep Horizon, Autoregressive</li>
-</ul></li>
-<li>Hierarchical Forecasting
-<ul>
-<li>Standard Hierarchy</li>
-<li>Grouped Hierarchy</li>
-<li>Advanced Clustering</li>
-</ul></li>
-<li>Combining Models
-<ul>
-<li>Simple Averages</li>
-<li>Weighted Averaged</li>
-<li>Ensemble Models</li>
-</ul></li>
-<li>Prediction Intervals</li>
-<li>Model Interpretability
-<ul>
-<li>Model Specific</li>
-<li>Model Agnostic
-<ul>
-<li>Global Methods</li>
-<li>Local Methods</li>
-</ul></li>
-</ul></li>
-<li>Forecasts in Production
-<ul>
-<li>Parallel Computing</li>
-<li>Model Training and Serving</li>
-</ul></li>
-<li>Appendix
-<ul>
-<li>ML Term Glossary</li>
-</ul></li>
-</ol>
+</ul>
 
 
 </section>

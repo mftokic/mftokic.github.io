@@ -10,7 +10,37 @@
 <atom:link href="https://mftokic.github.io/index.xml" rel="self" type="application/rss+xml"/>
 <description>A collection of thoughts on things from the mind of Mike Tokic</description>
 <generator>quarto-1.5.57</generator>
-<lastBuildDate>Mon, 12 May 2025 07:00:00 GMT</lastBuildDate>
+<lastBuildDate>Tue, 13 May 2025 07:00:00 GMT</lastBuildDate>
+<item>
+  <title>Model Evaluation For Time Series</title>
+  <dc:creator>Mike Tokic</dc:creator>
+  <link>https://mftokic.github.io/posts/2025-05-30-ts-fundamentals-model-evaluation/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p><em>This post is part of a larger learning series around time series forecasting fundamentals. <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/">Check out the learning path</a> to see other posts in the series.</em></p>
+<section id="is-my-forecast-accurate" class="level3">
+<h3 class="anchored" data-anchor-id="is-my-forecast-accurate">Is My Forecast Accurate?</h3>
+<p>After you train a model and create a forecast, you can either blindly trust that future forecast or figure out much you should trust it based on some evaluation. NASA has a saying, “in god we trust, all others bring data”. If you create a forecast with no accompanying data around it to build trust in that forecast, no one will want to use it. That’s why we need to implement model evaluation. Here are the foundational concepts we’ll cover in this chapter.</p>
+<ul>
+<li>Train/Test Splits (in progress)</li>
+<li>Time Series Cross Validation</li>
+<li>Evaluation Metrics</li>
+</ul>
+
+
+</section>
+
+ ]]></description>
+  <category>machine-learning</category>
+  <category>time-series</category>
+  <guid>https://mftokic.github.io/posts/2025-05-30-ts-fundamentals-model-evaluation/</guid>
+  <pubDate>Tue, 13 May 2025 07:00:00 GMT</pubDate>
+  <media:content url="https://mftokic.github.io/posts/2025-05-30-ts-fundamentals-model-evaluation/image.png" medium="image" type="image/png" height="96" width="144"/>
+</item>
 <item>
   <title>Univariate Models: Simple Benchmark Models</title>
   <dc:creator>Mike Tokic</dc:creator>
@@ -2346,134 +2376,6 @@ Click to read the original notes.
   <guid>https://mftokic.github.io/posts/2025-01-24-ts-fundamentals-eda-xregs/</guid>
   <pubDate>Fri, 24 Jan 2025 08:00:00 GMT</pubDate>
   <media:content url="https://mftokic.github.io/posts/2025-01-24-ts-fundamentals-eda-xregs/image.png" medium="image" type="image/png" height="144" width="144"/>
-</item>
-<item>
-  <title>80/20 SaaS: Why AI-Driven Customization Is the Future</title>
-  <dc:creator>Mike Tokic</dc:creator>
-  <link>https://mftokic.github.io/posts/2025-01-02-80-20-saas/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<section id="introduction-will-ai-kill-saas" class="level2">
-<h2 class="anchored" data-anchor-id="introduction-will-ai-kill-saas">Introduction: Will AI Kill SaaS?</h2>
-<p>Artificial intelligence (AI) has advanced to a point where one or two developers, working with AI-generated code, can build functional software in a matter of weeks. That prospect has led some to conclude that it spells the end of Software-as-a-Service (SaaS). After all, why rent a platform if you can build a decent alternative in-house—cheaply and on-demand?</p>
-<p>However, I believe there’s a more practical way forward. Instead of entirely replacing SaaS with AI-built tools, <strong>SaaS providers should deliver 80% of the core features</strong> and allow customers to <strong>customize the remaining 20%</strong> via AI. This approach maintains the convenience of off-the-shelf software while offering personalized functionality.</p>
-</section>
-<section id="why-some-believe-ai-will-kill-saas" class="level2">
-<h2 class="anchored" data-anchor-id="why-some-believe-ai-will-kill-saas">Why Some Believe AI Will Kill SaaS</h2>
-<p>The primary argument for “AI replacing SaaS” goes like this:</p>
-<ul>
-<li><strong>Lower Development Costs:</strong> With AI writing boilerplate code, you need fewer developers.<br>
-</li>
-<li><strong>Faster Time to Market:</strong> AI can generate basic functionality quickly.<br>
-</li>
-<li><strong>Tailored Features:</strong> Instead of dealing with generic solutions, an in-house AI tool can theoretically be customized to meet specific business needs.</li>
-</ul>
-<p>On paper, this sounds like a dream come true for businesses. But the reality is more complicated. Building robust, production-grade software, from scratch, requires <strong>significant resources</strong>, including project management, maintenance, and ongoing support. Most companies aren’t equipped (or willing) to handle the long-term overhead that comes with building and hosting complex systems themselves.</p>
-</section>
-<section id="embracing-the-8020-model" class="level2">
-<h2 class="anchored" data-anchor-id="embracing-the-8020-model">Embracing the 80/20 Model</h2>
-<p>Rather than viewing AI and SaaS as competing forces, I propose a hybrid model. The <strong>80/20 approach</strong> involves:</p>
-<ol type="1">
-<li><strong>Core Product (80%)</strong>
-<ul>
-<li>SaaS providers develop and maintain a set of core features that almost every customer needs. Think user authentication, data storage, basic dashboards, etc. This allows them to keep their development teams lean and focus on rock-solid functionality.</li>
-</ul></li>
-<li><strong>Customer Customization (20%)</strong>
-<ul>
-<li>Customers then use AI (offered as part of the SaaS platform) to build out the features that are specific to their individual business needs. This might involve specialized workflows, custom dashboards, or niche integrations.</li>
-</ul></li>
-</ol>
-<p>By dividing responsibilities this way, the SaaS provider avoids bloating its product with endless feature requests. Customers, in turn, get <strong>exactly what they want</strong> without having to pay for an army of developers.</p>
-</section>
-<section id="a-crm-example" class="level2">
-<h2 class="anchored" data-anchor-id="a-crm-example">A CRM Example</h2>
-<p>Consider Customer Relationship Management (CRM) software. Giants like Salesforce and Microsoft Dynamics offer thousands of features, but not every company needs each one. Despite the vast customization options, many organizations still find themselves <strong>adapting to the CRM</strong>, not the other way around.</p>
-<p>What if a startup CRM provider offers a bare-bones product that covers 80% of what most sales teams require. Things like contact management, basic analytics, and lead tracking, and then <strong>invites customers to build the rest</strong> with AI-driven tools? For instance:</p>
-<ol type="1">
-<li>A sales manager wants automated follow-up emails that adapt to different time zones.<br>
-</li>
-<li>She types her request into the built-in AI feature: “Generate customized follow-up emails that go out at optimal local times for each lead.”<br>
-</li>
-<li>The AI creates this functionality on the fly, integrating it seamlessly into the CRM interface.</li>
-</ol>
-<p>No waiting for lengthy releases, no large development staff. Just a straightforward 80% solution with a customizable 20%.</p>
-</section>
-<section id="benefits-for-both-sides" class="level2">
-<h2 class="anchored" data-anchor-id="benefits-for-both-sides">Benefits for Both Sides</h2>
-<section id="for-saas-providers" class="level3">
-<h3 class="anchored" data-anchor-id="for-saas-providers">For SaaS Providers</h3>
-<ul>
-<li><strong>Lean Development Team:</strong> Focus on a stable core, lowering overhead.<br>
-</li>
-<li><strong>Reduced Feature Creep:</strong> No more chasing every edge case. Let AI and customers handle that final 20%.<br>
-</li>
-<li><strong>New Revenue Streams:</strong> Providers can charge a flat monthly fee for the core product plus incremental fees for AI-built custom features.</li>
-</ul>
-</section>
-<section id="for-customers" class="level3">
-<h3 class="anchored" data-anchor-id="for-customers">For Customers</h3>
-<ul>
-<li><strong>Faster Customization:</strong> No waiting for your feature request to pass through the SaaS provider’s roadmap.<br>
-</li>
-<li><strong>Lower Costs:</strong> Pay for essential features plus only the custom pieces you really need.<br>
-</li>
-<li><strong>Reduced Risk:</strong> Save time and money by not building entire applications from scratch.</li>
-</ul>
-</section>
-</section>
-<section id="potential-challenges" class="level2">
-<h2 class="anchored" data-anchor-id="potential-challenges">Potential Challenges</h2>
-<p>Of course, the 80/20 model comes with its own complexities:</p>
-<ol type="1">
-<li><strong>Maintenance of Custom Features</strong>
-<ul>
-<li>AI-generated features could break when the core platform updates. SaaS providers will need robust versioning and testing to ensure stability.</li>
-</ul></li>
-<li><strong>Security &amp; Compliance</strong>
-<ul>
-<li>As customers add custom modules, the platform must ensure data remains secure and compliant with regulations like GDPR.</li>
-</ul></li>
-<li><strong>Quality Control</strong>
-<ul>
-<li>Who is responsible when an AI-built feature malfunctions? Customers will demand that providers offer at least minimal support for AI-generated functionality.</li>
-</ul></li>
-<li><strong>Training Data &amp; Privacy</strong>
-<ul>
-<li>AI systems rely on data to learn. Providers must have clear policies on how user data is used to train and improve models.</li>
-</ul></li>
-</ol>
-</section>
-<section id="startups-vs.-giants" class="level2">
-<h2 class="anchored" data-anchor-id="startups-vs.-giants">Startups vs.&nbsp;Giants</h2>
-<p>This business model has the potential to disrupt established SaaS giants. Companies like Salesforce and Microsoft <strong>already offer</strong> highly customizable platforms, but they are weighed down by <strong>thousands of existing features</strong>. Re-engineering their entire codebase to an AI-first platform would be like trying to rebuild an airplane in mid-flight.</p>
-<p>Enter the <strong>new startups</strong>:<br>
-- <strong>Clean Slate:</strong> They can design products from the ground up with an 80/20 approach.<br>
-- <strong>Modern Architectures:</strong> They can embed AI customization layers from day one, rather than retrofitting existing systems.<br>
-- <strong>Agile Mindset:</strong> Less legacy overhead means they can pivot faster to market demands.</p>
-<p>The incumbents won’t disappear overnight, but they may lose out on smaller, more agile customers who prefer a streamlined, customizable experience.</p>
-</section>
-<section id="conclusion-thriving-in-an-ai-future" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion-thriving-in-an-ai-future">Conclusion: Thriving in an AI Future</h2>
-<p>AI may not spell the end of SaaS, but it <strong>will</strong> transform it. By offloading the final 20% of custom features to AI, SaaS providers can remain lean, stay focused on a reliable core, and still give customers the freedom to adapt software to their unique processes.</p>
-<section id="final-thought" class="level3">
-<h3 class="anchored" data-anchor-id="final-thought">Final Thought</h3>
-<p>Are you ready to adapt? If you’re a <strong>SaaS provider</strong>, consider slimming your product down to the essential core and building out an AI-driven customization layer. If you’re a <strong>customer</strong>, think about the time and money you could save by adopting an 80/20 approach, rather than building or buying bloated software.</p>
-<p>The future of SaaS will hinge on who best embraces this new reality. Those who see AI not as a rival to existing software, but as an ally in creating truly personal, on-demand solutions.</p>
-<p><strong>Which side of the 80/20 equation is your business on?</strong></p>
-
-
-</section>
-</section>
-
- ]]></description>
-  <category>AI</category>
-  <guid>https://mftokic.github.io/posts/2025-01-02-80-20-saas/</guid>
-  <pubDate>Thu, 02 Jan 2025 08:00:00 GMT</pubDate>
-  <media:content url="https://mftokic.github.io/posts/2025-01-02-80-20-saas/image.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 </channel>
 </rss>

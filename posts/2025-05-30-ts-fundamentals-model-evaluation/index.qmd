@@ -1,0 +1,18 @@
+---
+title: "Model Evaluation For Time Series"
+description: "Understanding the accuracy of your forecast"
+author: "Mike Tokic"
+date: "2025-05-13"
+categories: [machine-learning, time-series]
+image: "image.png"
+---
+
+*This post is part of a larger learning series around time series forecasting fundamentals. [Check out the learning path](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/) to see other posts in the series.* 
+
+### Is My Forecast Accurate? 
+
+After you train a model and create a forecast, you can either blindly trust that future forecast or figure out much you should trust it based on some evaluation. NASA has a saying, "in god we trust, all others bring data". If you create a forecast with no accompanying data around it to build trust in that forecast, no one will want to use it. That's why we need to implement model evaluation. Here are the foundational concepts we'll cover in this chapter. 
+
+- Train/Test Splits (in progress)
+- Time Series Cross Validation
+- Evaluation Metrics

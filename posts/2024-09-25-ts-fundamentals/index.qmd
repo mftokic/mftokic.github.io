@@ -27,7 +27,10 @@ The sequence of what you learn is just as important as what content you learn. I
     - [ARIMA](https://mftokic.github.io/posts/2025-04-10-ts-fundamentals-univariate-arima/)
     - [Exponential Smoothing](https://mftokic.github.io/posts/2025-04-30-ts-fundamentals-univariate-ets/)
     - [Simple Benchmark Models](https://mftokic.github.io/posts/2025-05-12-ts-fundamentals-univariate-benchmarks/)
-5. Evaluation Metrics (in progress)
+5. Model Evaluation
+    - Train/Test Splits (in progress)
+    - Time Series Cross Validation 
+    - Evaluation Metrics
 6. Feature Engineering
     - Date 
     - Target Variable
@@ -37,19 +40,14 @@ The sequence of what you learn is just as important as what content you learn. I
     - Decision Trees
     - Random Forest
     - Gradient Boosting (XGBoost, LightGBM)
-    - Local Models
-    - Global Models
+    - Local Models vs Global Models
     - Hyperparameter Tuning
     - Feature Selection
     - Mutlistep Horizon, Autoregressive
-8. Model Training Lifecycle
-    - Train/Test Splits
-    - Time Series Cross Validation 
-    - Evaluation Metrics
 9. Hierarchical Forecasting
     - Standard Hierarchy
     - Grouped Hierarchy
-    - Clustering
+    - Advanced Clustering
 10. Combining Models
     - Simple Averages
     - Weighted Averaged
