@@ -214,19 +214,45 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 
 
 <p><em>This post is part of the <a href="https://mftokic.github.io/posts/2025-05-13-ts-fundamentals-model-evaluation/">model evaluation chapter</a> within a larger learning series around time series forecasting fundamentals. <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/">Check out the main learning path</a> to see other posts in the series.</em></p>
-<p><em>The example monthly data used in this series <a href="https://github.com/mftokic/mftokic.github.io/blob/main/posts/2024-10-02-ts-fundamentals-whats-a-time-series/example_ts_data.csv">can be found here.</a> You can also find the [python code used in this post here.](https://github.com/mftokic/mftokic.github.io/blob/main/notebooks/2025-05-30-ts-fundamentals-model-evaluation-train-test-split.ipynb</em></p>
+<p><em>The example monthly data used in this series <a href="https://github.com/mftokic/mftokic.github.io/blob/main/posts/2024-10-02-ts-fundamentals-whats-a-time-series/example_ts_data.csv">can be found here.</a> You can also find the <a href="https://github.com/mftokic/mftokic.github.io/blob/main/notebooks/2025-05-30-ts-fundamentals-model-evaluation-train-test-split.ipynb">python code used in this post here.</a></em></p>
 <section id="building-trust-in-the-forecast" class="level3">
 <h3 class="anchored" data-anchor-id="building-trust-in-the-forecast">Building Trust In The Forecast</h3>
 <p>Let’s say your companies CFO is asking you, the hotshot data &amp; AI person, to produce a revenue forecast for the next 12 months. The CFO needs this forecast to communicate expectations to wall street, help optimize product inventory, and make future capital allocation decisions based on where the business is headed the next year. You take a model like ARIMA off the shelf and produce that 12 month forecast, shown below using a time series from our example dataset. Let’s take a look.</p>
 <p><img src="./chart1.png" class="img-fluid"></p>
 <p>The future 12 month forecast seems to capture the seasonality from month to month, and even the upward trend. You show the results to the CFO, even calling out the 95% prediction interval, which shows the upper of lower bounds with 95% certainty that the future revenue values are likely to fall in between. The CFO looks at it for one second, then says “so what”, I can’t use this forecast. How do I know it’s accurate, this is a black box. You’re hopes and dreams, including that potential promotion, are now crushed. Congrats, you learned one of your first hard lessons in the forecast game. <strong>Building trust in the forecast is harder than creating one in the first place.</strong> It might take seconds to train an ARIMA model, but convincing people to use it might take years.</p>
-<p>Hang on a second, you just remembered in our chapter covering <a href="https://mftokic.github.io/posts/2025-03-24-ts-fundamentals-univariate-models/">univariate models</a> that there is this thing called a residual, which allows you to see historical forecasts on the training data.</p>
+<p>Hang on a second, you just remembered in our chapter covering <a href="https://mftokic.github.io/posts/2025-03-24-ts-fundamentals-univariate-models/">univariate models</a> that there is this thing called a residual, which allows you to see historical forecasts compared to actual values on the training data.</p>
 </section>
 <section id="residuals" class="level3">
 <h3 class="anchored" data-anchor-id="residuals">Residuals</h3>
-<p>Let’s calculate the residuals for the ARIMA model we trained and plot them on a nice chart.</p>
-<p>insert chart.</p>
-<p>Calculating residuals, visualizing residuals, summarizing residuals (first evaluation metric, MAE)</p>
+<blockquote class="blockquote">
+<p>Residual = Actual Value - Forecast Value</p>
+</blockquote>
+<p>Let’s calculate the residuals for the ARIMA model we trained and plot them on some nice charts using different residual analysis techniques.</p>
+<section id="forecast-vs-actual-plot" class="level4">
+<h4 class="anchored" data-anchor-id="forecast-vs-actual-plot">Forecast vs Actual Plot</h4>
+<p><img src="./chart2.png" class="img-fluid"></p>
+<p>Overall it looks like the residuals look ok. The historical forecast closely tracks the actual value in most months. There are some months where we can see a large residual, shown by a big gap between the two lines.</p>
+</section>
+<section id="residuals-over-time-plot" class="level4">
+<h4 class="anchored" data-anchor-id="residuals-over-time-plot">Residuals Over Time Plot</h4>
+<p><img src="./chart3.png" class="img-fluid"></p>
+<p>Now we can see the actual residual across each historical period. Some are positive, where we underforecast, and some are negative, where we overforecast. <strong>Ideally residuals hang around zero on average. This means the residuals are truly white noise aka random. If they are not white noise and clustering around zero, this means there is potential for more predictive insights to be learned in the data.</strong></p>
+</section>
+<section id="histogram-of-residuals" class="level4">
+<h4 class="anchored" data-anchor-id="histogram-of-residuals">Histogram of Residuals</h4>
+<p><img src="./chart4.png" class="img-fluid"></p>
+</section>
+<section id="q-q-residual-plot" class="level4">
+<h4 class="anchored" data-anchor-id="q-q-residual-plot">Q-Q Residual Plot</h4>
+<p><img src="./chart5.png" class="img-fluid"></p>
+<p>Another interesting way to look at residuals is by plotting them in a different graph with the forecast on one axis and the historical actual values on the other. Let’s take a look.</p>
+</section>
+<section id="summarizing-the-residuals" class="level4">
+<h4 class="anchored" data-anchor-id="summarizing-the-residuals">Summarizing the Residuals</h4>
+</section>
+<section id="acf-of-residuals" class="level4">
+<h4 class="anchored" data-anchor-id="acf-of-residuals">ACF of Residuals</h4>
+</section>
 </section>
 <section id="train-vs-test-data" class="level3">
 <h3 class="anchored" data-anchor-id="train-vs-test-data">Train vs Test Data</h3>
