@@ -1,0 +1,40 @@
+---
+title: "Weekend Reads (5/16/25)"
+description: "Interesting things I found on the internet this week"
+author: "Mike Tokic"
+date: "2025-05-16"
+categories: [weekend-reads]
+image: "image.png"
+---
+
+## Articles
+
+- [Jim Kwik's Guide to Nootropics and Supplements](https://d2saw6je89goi1.cloudfront.net/uploads/digital_asset/file/1177457/Nootropics-SupplementsPDF.pdf)
+    - Good resource on brain related nutrition from the worlds best brain trainer. 
+
+## Videos
+
+- [Morgan Housel on Diary of a CEO](https://www.youtube.com/watch?v=uxu37dqVR90)
+    - Buy a house because you need to live somewhere, not as an investment. 
+    - Stop moving the goalposts on life. Keep things simple to be happy. 
+- [AI Agents Debate on Diary of a CEO](https://www.youtube.com/watch?v=JMYQmGfTltY)
+    - I think right now it's more important to be an AI agent manager than a people manager. 
+    - You need permission to manage people, but none to start managing thousands of agents. It will become the ultimate form of leverage. Better than capital, human labor, influence, etc. 
+- [Bryan Johnson On Feeling Like Sh*t](https://www.youtube.com/shorts/yWu8tdfepTs)
+    - I love how Bryan's mind works, this is why he's so successful on his Blueprint message. 
+- [Kelly Starrett on Principles of Proper Movement](https://www.youtube.com/watch?v=3WOpb8PrrSc)
+    - Spoiler! You're moving wrong and sitting too much. 
+
+## Tweets
+
+- [Sam Altman on Learning with AI](https://x.com/sama/status/1915826042729861357)
+    - Using AI to teach yourself new things is very powerful, why not learn from the smartest thing in the world?
+- [George Mack on How Language Sets Our Limits](https://x.com/george__mack/status/1916072259992875079?s=46)
+    - Our words are powerful priming mechanisms for how we see the world. Use the right ones to kick butt in life. 
+- [Siim Land on Blood Biomarkers](https://x.com/siimland/status/1921618966801195383)
+    - There are ranges that doctors classify as healthy, but those are just averages of the population. Have you seen average people recently? I don't want to have their health. Siim shares what's optimal instead of average. 
+
+## Books 
+
+- [Forecasting Principles and Practice, the Pythonic Way](https://otexts.com/fpppy/)
+    - A welcomed update to the bible of forecasting from the greatest forecasters in the world.
