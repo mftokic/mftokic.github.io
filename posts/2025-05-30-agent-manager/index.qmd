@@ -1,0 +1,43 @@
+---
+title: "AI Manager > People Manager"
+description: "Why managing AI is more important than managing people"
+author: "Mike Tokic"
+date: "2025-05-30"
+categories: [AI, career]
+image: "image.png"
+draft: True
+---
+
+### AI Layoffs Have Started
+
+Would you rather have your company spend 10x less or achieve 10x more? These are the two ends of the AI productivity spectrum. Right now senior leaders seem to be on the "spend 10x less" side, which is a bummer. The fastest way to grow earnings is by cutting costs. They want to use AI tools that allow them to get the job done with less resources. This might make sense in a cash cow business with few competitors, but that's rare and puts your business at risk of AI powered disruption. 
+
+Spending 10x less is a known quantity, CFO's can show how this impacts the bottom line and rewards shareholders. So of the two choices it's the lower hanging fruit. Choosing to be 10x more productive with the same resources you have available is less certain. Will it lead to 10x sales? Maybe, but maybe not. This combined with economic uncertainty makes the choice easy for the CEO. They think they can make cuts AND achieve more, all powered by AI. Can you have your cake and eat it too? No one knows just yet. 
+
+We are starting to see less hiring in the tech space, even layoffs. When people leave teams, no one hires their back fill. That was the first wave of "silent layoffs", now there are "loud layoffs" with thousands getting let go at major companies. This could be the start of a bigger trend. The classic tech era depictions on the HBO show "Silicon Valley" are now probably dead. The golden age of being a software developer are done. For decades, life was good if you had a rare set of skills that the world had an undying need for (writing code), but now AI can write the code. So the prickly coder who is a pain to work with but kept your companies systems running is going from a necessary pain to one that can be fixed easily with AI systems. Specifically agentic AI systems that can do work on their own much like a person. 
+
+They say 2025 is the year of the AI agents, which you can also rephrase as the year of "non-human labor". That is both terrifying and exciting. It's only terrifying if you don't change anything about your life, and very exciting if you know how to ride the wave. Let's dig in. 
+
+### Forms of Leverage
+
+Naval Ravikant states there are three types of leverage. 
+
+1. **Labor**: people working for you
+2. **Capital**: using money to build things
+3. **Permissionless**: code and media that works while you sleep
+
+Labor is the oldest form of leverage with the greatest prestige, capital has been the most popular in recent decades, but permissionless leverage is the hot new thing that is getting turbocharged by AI. 
+
+Think about how companies got off in the ground in the last decade. It was common to go raise a bunch of money around an idea, then hire a bunch of people to go build the idea, then use what you built (often through code) to make a profit. That's how the companies got the most amount of leverage in the least amount of time. Just like Tony Montana, first you get the money, then you get the labor, then you get the profit. It's a model that works, but one that requires permission. People have to agree to give you money, or agree to work with you. 
+
+In recent years this model was disrupted partly by people who are experts at either code or media. Joe Rogan makes tens of millions every year through his podcast, which at most is probably operated by 3-5 people. Instagram sold to Facebook for one billion with only a dozen employees. These people did not need permission to start a podcast or go build a viral app. They were using forms of permissionless leverage. 
+
+Permissionless leverage is now becoming orders of magnitude more important with the power of AI. AI is removing the need for the first two forms of leverage, labor and capital. Before you needed money to hire a team, but now AI is your team in the form of agents. 
+
+### AI Agent == Agency
+
+### Future Career Paths
+
+One person brand. 
+
+### Final Thoughts
