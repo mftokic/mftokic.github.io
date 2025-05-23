@@ -184,10 +184,71 @@ draft: True
 
 ### [Evaluating Quality Supplements on the Dr. Hyman Show](https://www.youtube.com/watch?v=AmyC4Yk46Nk)
 
+#### 1  Steve Martocci’s Transformation  
+- Reached **300 lb** in college despite two-a-day sports.  
+- 2010: worked with a functional-medicine MD → thyroid Rx, hormone tuning, custom supplement stack.  
+- **Lost ~100 lb**, founded tech hits (*GroupMe*, *Splice*); new mission = fix supplements.
+
+#### 2  Why Most Supplements Miss the Mark  
+| Issue | Reality check |
+|-------|---------------|
+| **Overwhelm** | > 200 k U.S. products; 8 k brands. |
+| **Loose regs** | 21 CFR 111 (self-policed GMP) ⇒ minimal FDA scrutiny. |
+| **Quality drift** | Filler dyes (e.g., titanium-dioxide), mislabeled doses, heavy-metal contamination, shady Amazon clones. |
+| **Doctor gap** | < 20 h nutrition training; many prescribe Mg oxide, D2, etc. |
+
+#### 3  The Deficiency Epidemic  
+- 90 % + Americans lack ≥1 nutrient at *RDA floor*.  
+- Function Health labs (150 k members): **~70 %** frank deficits at reference minimums.  
+- Drivers: depleted soils, ultra-processed diets, RX drug leaching (statins → CoQ10; PPIs → Mg, B12).
+
+#### 4  Enter **SuppCo**  
+- **Catalog:** 200 k products; barcode scan or AI label-upload.  
+- **29-point “Trust Score”** (0-10): 3rd-party cGMP, lot C O A, excipient flags, price-per-dose…  
+- **Sup Score:** grades *your* stack for quality, cost, goal alignment.  
+- **80+ Protocols:** brain fog, fertility, heart health, women’s hormones…  
+- **Smart Scheduler:** when/with food? pill reminders; soon tracks outcomes & side-effects.  
+- **Community:** share stacks with MDs or socials; learn from n = 1 wins.
+
+#### 5  Partnering With Function Health  
+- Lab data (vit D, omega-3, RBC-Mg, homocysteine, ferritin, etc.) feeds future **personalized rec engine**.  
+- Goal: closed-loop—​test ⇢ prescribe ⇢ verify ⇢ iterate.
+
+#### 6  Stacks & Protocol Examples  
+| Goal | Core nutrients (sample) | Why |
+|------|------------------------|-----|
+| **Longevity** | Taurine 2 g, Urolithin A, NMN, Omega-3, D-K2 | Mitochondria, autophagy, inflammation. |
+| **Prenatal** | Methyl-folate, choline, DHA, iron bisglycinate | Neuro-dev, neural-tube, RBC support. |
+| **Detox / Fire Smoke** | NAC, Glutathione, Alpha-lipoic acid, Broccoli SFN | Boost phase II, antioxidant load. |
+
+*(Full protocol markdown inside Subco app.)*
+
+#### 7  Drug–Nutrient Watch-outs  
+- **Statins ↔ CoQ10** depletion → fatigue, myopathy.  
+- **PPIs ↔ Mg/B12** deficiency → arrhythmia, neuropathy.  
+- **St John’s Wort ↔ OCP/SSRIs** efficacy drop.  
+> SuppCo will surface automatic interaction flags next release.
+
+#### 8  Cost & Ethics  
+- SuppCo **never profits on pill sales**; aims to compress end-user prices via bulk & loyalty models.  
+- Doctors can share stacks **without “white-label” mark-ups**—shifts focus from revenue to results.
+
+#### 9  Takeaways  
+- Supplements aren’t going away—​but the Wild West is.  
+- Data + transparent scoring empowers you to be **CEO of your own health**.  
+- Test (Function), curate (SuppCo), track, and adjust; stop buying expensive urine, start buying measurable change.
+
 ## Tweets
 
 ### [Jony Ive Teams Up With Sam Altman](https://x.com/sama/status/1925242282523103408)
 
+- Jony Ive started a new AI device company called IO a few years ago and they just got acquired by OpenAI 
+- They will release more info about the device in 2026
+
 ## Products
 
 ### [SuppCo](https://supp.co/)
+
+- Look at the quality of your supplements 
+- Understand if you're taking too much of a nutrient across multiple supplements 
+- Get expert guidance on ways to improve your supplement protocol
