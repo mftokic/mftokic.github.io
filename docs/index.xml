@@ -10,7 +10,617 @@
 <atom:link href="https://mftokic.github.io/index.xml" rel="self" type="application/rss+xml"/>
 <description>A collection of thoughts on things from the mind of Mike Tokic</description>
 <generator>quarto-1.5.57</generator>
-<lastBuildDate>Fri, 16 May 2025 07:00:00 GMT</lastBuildDate>
+<lastBuildDate>Fri, 23 May 2025 07:00:00 GMT</lastBuildDate>
+<item>
+  <title>Weekend Reads (5/23/25)</title>
+  <dc:creator>Mike Tokic</dc:creator>
+  <link>https://mftokic.github.io/posts/2025-05-23-weekend-reads/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="articles" class="level2">
+<h2 class="anchored" data-anchor-id="articles">Articles</h2>
+<section id="the-day-you-became-a-better-writer-by-scott-adams" class="level3">
+<h3 class="anchored" data-anchor-id="the-day-you-became-a-better-writer-by-scott-adams"><a href="https://dilbertblog.typepad.com/the_dilbert_blog/2007/06/the_day_you_bec.html">The Day You Became A Better Writer By Scott Adams</a></h3>
+<ul>
+<li>Removing fluff and keeping your writing simple is key.</li>
+</ul>
+</section>
+<section id="openai-rolls-out-codex-an-automated-coding-agent" class="level3">
+<h3 class="anchored" data-anchor-id="openai-rolls-out-codex-an-automated-coding-agent"><a href="https://openai.com/index/introducing-codex/">OpenAI Rolls Out Codex, An Automated Coding Agent</a></h3>
+<ul>
+<li>This agent runs autonomously in the cloud to build many new software features in parallel.</li>
+<li>For the longest time, I’ve been waiting for LLMs to get so good they can port my forecasting package, <a href="https://microsoft.github.io/finnts/">finnts</a>, from R to Python. I think now I might be able to get that work started. Exciting stuff!</li>
+</ul>
+</section>
+</section>
+<section id="videos" class="level2">
+<h2 class="anchored" data-anchor-id="videos">Videos</h2>
+<section id="dr.-rhonda-patrick-on-the-dr.-hyman-show" class="level3">
+<h3 class="anchored" data-anchor-id="dr.-rhonda-patrick-on-the-dr.-hyman-show"><a href="https://www.youtube.com/watch?v=AH6EklgUbiM">Dr.&nbsp;Rhonda Patrick on the Dr.&nbsp;Hyman Show</a></h3>
+<ul>
+<li><strong>Vitamin D</strong>
+<ul>
+<li><strong>What it does</strong>: Acts like a hormone, flipping 200+ genes for immune function, mood, and bone strength.</li>
+<li><strong>Problem</strong>: Indoor living leaves ~40 % of adults short.</li>
+<li><strong>Fix</strong>: Supplement 2 000–4 000 IU of vitamin D₃ daily; pair with vitamin K₂ (≈ 100 µg) so calcium goes to bones, not arteries.</li>
+</ul></li>
+<li><strong>Omega 3</strong>
+<ul>
+<li><strong>Why care</strong>: Higher blood omega-3 can add years to life, cut triglycerides, and calm inflammation.</li>
+<li><strong>Targets</strong>: 1000–2000 mg EPA + DHA daily from fatty fish or purified fish-/algal-oil capsules.</li>
+</ul></li>
+<li><strong>Magnesium</strong>
+<ul>
+<li><strong>Roles</strong>: Needed for 300+ enzymes, ATP energy, nerve balance, vitamin D activation.</li>
+<li><strong>Shortfall</strong>: Nearly half the population under-consumes it.</li>
+<li><strong>Dose</strong>: 200–400 mg nightly (glycinate, citrate, or malate). Bonus: deeper sleep, fewer cramps, steadier blood pressure.</li>
+</ul></li>
+<li><strong>Triage Theory</strong>
+<ul>
+<li>Minor shortages get “triaged” to urgent tasks (e.g., keeping blood clotting) while long-term maintenance (DNA repair, artery upkeep) is skipped. You feel fine today but sow seeds of cancer, heart disease, or dementia decades later.</li>
+<li><strong>Solution</strong>: keep every micronutrient in the green zone, not just “barely adequate.”</li>
+</ul></li>
+<li><strong>Multivitamins</strong>
+<ul>
+<li>Over 90 % of people miss at least one essential nutrient from food. A quality multivitamin/mineral fills common gaps safely and cheaply. Urine color doesn’t equal wasted value; it simply shows water-soluble B-vitamins passing through.</li>
+</ul></li>
+<li><strong>Personalized Nutrition</strong>
+<ul>
+<li>Variants in genes like MTHFR (folate), vitamin D receptors, or magnesium transporters can raise your optimal intake. Simple DNA tests plus blood work reveal whether you need more of certain B-vitamins, choline, or others. One-size-fits-all dosing belongs in the last century.</li>
+</ul></li>
+<li><strong>Nutrient Synergy</strong>
+<ul>
+<li><strong>Magnesium + Vitamin D</strong>: Mg activates D; D can’t perform without it.</li>
+<li><strong>Vitamin D + K2</strong>: D boosts calcium absorption; K2 directs calcium to bones.</li>
+<li><strong>Food First</strong>: Whole foods pack these combos naturally—e.g., salmon (D + omega-3s), leafy greens (Mg + K), bell peppers (vitamin C aids iron absorption).</li>
+</ul></li>
+<li><strong>Phytochemicals</strong>
+<ul>
+<li><strong>Sulforaphane</strong>: From broccoli sprouts; switches on Nrf2, your cell-cleanup master switch. Two servings of sprouts or a 10–20 mg extract a few times weekly can boost detox enzymes and antioxidant defenses.</li>
+<li><strong>Anthocyanins</strong>: Blue/purple pigments in berries improve brain blood flow and memory; aim for a daily cup of mixed berries or a concentrated powder.</li>
+<li><strong>Rule of Thumb</strong>: “Eat the rainbow” = free daily antioxidant therapy.</li>
+</ul></li>
+<li><strong>Processed Foods</strong>
+<ul>
+<li>Factory foods hijack appetite, spike blood sugar, and displace nutrients. In controlled trials people eat about 500 extra calories a day and gain weight on an ultra-processed diet even when meals are calorie-matched. Swap packaged snacks, sodas, and fast-food for whole-food versions; your waistline, microbiome, and inflammation markers will thank you.</li>
+</ul></li>
+<li><strong>VO2 Max</strong>
+<ul>
+<li>Cardiorespiratory fitness trumps almost every other risk factor. Moving from “poor” to “average” fitness slashes mortality risk as much as quitting smoking. Aim for at least:
+<ul>
+<li>150 min/week moderate cardio (or 75 min vigorous), plus</li>
+<li>2–3 strength sessions to preserve muscle and bone. Mix in interval training or hiking hills to nudge VO₂ max higher—adaptation happens at every age.</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="andrew-hubermans-productivity-toolkit" class="level3">
+<h3 class="anchored" data-anchor-id="andrew-hubermans-productivity-toolkit"><a href="https://www.youtube.com/watch?v=Pmd6knanPKw">Andrew Huberman’s Productivity Toolkit</a></h3>
+<p><em>Harness circadian biology for sharper focus, better mood, and deeper sleep.</em></p>
+<section id="morning-wake-noon" class="level4">
+<h4 class="anchored" data-anchor-id="morning-wake-noon">Morning (Wake → Noon)</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 17%">
+<col style="width: 41%">
+<col style="width: 41%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Tool</th>
+<th>Why It Works</th>
+<th>How To Do It</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Log Wake-Up Time</strong></td>
+<td>Estimates your <strong>temperature minimum</strong> (≈ 2 h before normal wake time). Later cues best focus window.</td>
+<td>Keep pen &amp; pad on the nightstand; jot wake-up time daily.</td>
+</tr>
+<tr class="even">
+<td><strong>Walk Outside Immediately</strong></td>
+<td>Forward motion + “optic flow” calms amygdala (lower anxiety) and boosts alertness.</td>
+<td>10–15 min brisk walk — no sunglasses.</td>
+</tr>
+<tr class="odd">
+<td><strong>Sunlight in Eyes</strong></td>
+<td>Early bright light sets your circadian clock and triggers the healthy cortisol pulse.</td>
+<td>Combine with the walk; cloud cover is fine.</td>
+</tr>
+<tr class="even">
+<td><strong>Hydrate + Electrolytes</strong></td>
+<td>Neurons fire with sodium, potassium, magnesium; you wake slightly dehydrated.</td>
+<td>Big glass of water + pinch sea salt (≈ ½ tsp).</td>
+</tr>
+<tr class="odd">
+<td><strong>Delay Caffeine 90–120 min</strong></td>
+<td>Prevents mid-afternoon crash from early adenosine blockade.</td>
+<td>First coffee/tea after the 90-min mark.</td>
+</tr>
+<tr class="even">
+<td><strong>Fast Until Late Morning</strong></td>
+<td>Mild adrenaline bump → tighter focus, better learning.</td>
+<td>First calories ~11 a.m.–noon (water/electrolytes only before).</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="minute-deep-work-block" class="level4">
+<h4 class="anchored" data-anchor-id="minute-deep-work-block">90-Minute Deep-Work Block</h4>
+<ol type="1">
+<li><strong>Start 4–6 h after temperature minimum</strong> (usually mid-morning).<br>
+</li>
+<li><strong>Set a 90-min timer</strong> to ride the brain’s ultradian cycle.<br>
+</li>
+<li><strong>Optimize workstation:</strong> screen at/above eye level, upright posture, low-volume white noise.<br>
+</li>
+<li><strong>Phone off</strong> (not airplane mode).</li>
+</ol>
+<p><em>Objective: enter a “tunnel” of calm, intense focus.</em></p>
+</section>
+<section id="midday" class="level4">
+<h4 class="anchored" data-anchor-id="midday">Midday</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 27%">
+<col style="width: 17%">
+<col style="width: 55%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Action</th>
+<th>Why</th>
+<th>Implementation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Workout</strong></td>
+<td>Exercise boosts BDNF, immune balance, mood.</td>
+<td>Alternate: <strong>Resistance</strong> (80 % sub-failure / 20 % to failure) <strong>and</strong> <strong>Endurance</strong> (80 % easy / 20 % above lactate threshold). Keep &lt; 60 min.</td>
+</tr>
+<tr class="even">
+<td><strong>First Meal: Protein-Heavy, Lowish Carb</strong></td>
+<td>Maintains dopamine &amp; adrenaline for afternoon alertness.</td>
+<td>Protein + veg; add starch only if you trained.</td>
+</tr>
+<tr class="odd">
+<td><strong>Omega-3 Dose</strong></td>
+<td>1 g EPA/day supports mood like a mild antidepressant.</td>
+<td>Fish, algae oil or capsule with lunch.</td>
+</tr>
+<tr class="even">
+<td><strong>Post-Meal Walk (5–30 min)</strong></td>
+<td>Speeds glucose clearance, reinforces light cues.</td>
+<td>Step outside immediately after eating.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="afternoon" class="level4">
+<h4 class="anchored" data-anchor-id="afternoon">Afternoon</h4>
+<ul>
+<li><strong>Light Break:</strong> 10–30 min outside. Late-day sun buffers against nighttime light disruption.<br>
+</li>
+<li><strong>Second 90-min Work Block:</strong> Same tunnel protocol during your next alert peak.</li>
+</ul>
+</section>
+<section id="evening" class="level4">
+<h4 class="anchored" data-anchor-id="evening">Evening</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 42%">
+<col style="width: 23%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Habit</th>
+<th>Purpose</th>
+<th>How</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Dinner = Starchy Carbs + Protein</strong></td>
+<td>Carbs → serotonin → melatonin → easier sleep; replenishes glycogen.</td>
+<td>Rice, potatoes, pasta, oats, plus moderate protein.</td>
+</tr>
+<tr class="even">
+<td><strong>Hot Bath/Sauna (1–2 h Pre-Bed)</strong></td>
+<td>Heats you so the body cools faster afterward, speeding sleep onset.</td>
+<td>10–15 min hot shower, bath, or sauna.</td>
+</tr>
+<tr class="odd">
+<td><strong>Dark, Cool Bedroom</strong></td>
+<td>Light &amp; heat suppress melatonin.</td>
+<td>Black-out curtains; room ≈ 18 °C / 65 °F.</td>
+</tr>
+<tr class="even">
+<td><strong>Optional Sleep Stack</strong></td>
+<td>Eases transition without heavy drugs.</td>
+<td>30–60 min pre-bed: 300–400 mg <strong>Mg threonate/glycinate</strong> + 50 mg <strong>apigenin</strong> + 100–200 mg <strong>L-theanine</strong>.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="night-waking-fixes" class="level4">
+<h4 class="anchored" data-anchor-id="night-waking-fixes">Night-Waking Fixes</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 55%">
+<col style="width: 44%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Scenario</th>
+<th>Tactic</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Wake 2–3 a.m. after forcing yourself to stay up late</td>
+<td>Go to bed earlier; align with natural melatonin wave.</td>
+</tr>
+<tr class="even">
+<td>Bathroom trips</td>
+<td>Keep lights dim, return to bed quickly.</td>
+</tr>
+<tr class="odd">
+<td>Racing mind</td>
+<td>10 slow breaths (exhale 2× inhale) or brief body-scan meditation.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="quick-cheatsheet" class="level4">
+<h4 class="anchored" data-anchor-id="quick-cheatsheet">Quick Cheatsheet</h4>
+<ul>
+<li><strong>Wake</strong> → log time → walk + sunlight → water + salt → delay caffeine.<br>
+</li>
+<li><strong>Mid-morning</strong> → 90-min deep-work tunnel.<br>
+</li>
+<li><strong>Late morning</strong> → workout (resistance or endurance).<br>
+</li>
+<li><strong>Noon</strong> → protein-heavy meal, omega-3, post-meal walk.<br>
+</li>
+<li><strong>Afternoon</strong> → sunlight break + second tunnel.<br>
+</li>
+<li><strong>Evening</strong> → carb-rich dinner → hot bath → dark, cool room → optional sleep stack.<br>
+</li>
+<li><strong>Always</strong> → skip large meals before work, hydrate, keep workouts &lt; 1 h, alternate strength &amp; cardio.</li>
+</ul>
+<blockquote class="blockquote">
+<p><strong>Master your 24-hour rhythm and everything—focus, mood, energy, sleep—gets easier.</strong></p>
+</blockquote>
+</section>
+</section>
+<section id="whoop-ceo-on-modern-wisdom" class="level3">
+<h3 class="anchored" data-anchor-id="whoop-ceo-on-modern-wisdom"><a href="https://www.youtube.com/watch?v=TIBrAdgohso">Whoop CEO on Modern Wisdom</a></h3>
+<section id="crossfits-fumble-the-fitness-vacuum" class="level4">
+<h4 class="anchored" data-anchor-id="crossfits-fumble-the-fitness-vacuum">1. CrossFit’s Fumble &amp; the Fitness Vacuum</h4>
+<ul>
+<li><strong>Peak to Pit:</strong> CrossFit peaked ~2017-18, then stumbled (leadership scandals, partner dysfunction, poor event ops).<br>
+</li>
+<li><strong>Opportunity Cost:</strong> Its fall opened space for <em>Hyrox</em>, boutique studios (F45, Barry’s, Orangetheory) &amp; run-club culture.<br>
+</li>
+<li><strong>Community Matters:</strong> Turning users into <em>evangelists</em> is CrossFit’s lost super-power—now fueling newer tribes.</li>
+<li><strong>Partner Pain:</strong> CrossFit labeled “most dysfunctional partner” in 13 yrs of WHOOP collaborations.</li>
+</ul>
+</section>
+<section id="whoop-inside-the-data-goldmine" class="level4">
+<h4 class="anchored" data-anchor-id="whoop-inside-the-data-goldmine">2. WHOOP: Inside the Data Goldmine</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 24%">
+<col style="width: 75%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Metric</th>
+<th>Insight from 100k+ users</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Sleep</strong></td>
+<td>Only ~22 % log ≥7 h; consistency beats duration for health.</td>
+</tr>
+<tr class="even">
+<td><strong>Global Quirks</strong></td>
+<td>Doha avg. bedtime ≈ 2 a.m.; Ireland tops alcohol intake; Sweden &amp; Finland lead cold plunges.</td>
+</tr>
+<tr class="odd">
+<td><strong>Activity Trends</strong></td>
+<td>2023 boom = pickleball (US); 2024 = padel (global).</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="mindset-self-development" class="level4">
+<h4 class="anchored" data-anchor-id="mindset-self-development">3. Mindset &amp; Self-Development</h4>
+<section id="only-child-edge" class="level5">
+<h5 class="anchored" data-anchor-id="only-child-edge">Only-Child Edge</h5>
+<ul>
+<li>Early adult interaction → comfort in big conversations.<br>
+</li>
+<li>Lots of solo time → innate inward reflection (helps define “what you truly want”).</li>
+</ul>
+</section>
+<section id="conviction-vs.-doubt" class="level5">
+<h5 class="anchored" data-anchor-id="conviction-vs.-doubt">Conviction vs.&nbsp;Doubt</h5>
+<ul>
+<li><strong>Start-up reality:</strong> Years 21-24 were rejection-heavy; conviction in the <em>idea</em> carried Ahmed past shaky self-belief.<br>
+</li>
+<li><strong>Separate Identities:</strong> Decouple <em>company health</em> from <em>personal worth</em>—avoid “chaotic founder” spiral.</li>
+</ul>
+</section>
+<section id="failure-philosophy" class="level5">
+<h5 class="anchored" data-anchor-id="failure-philosophy">Failure Philosophy</h5>
+<ul>
+<li>“Failure-porn” is overrated; unique successes teach more.<br>
+</li>
+<li>Yet taking <em>any</em> lesson (success or fail) expands resilience &amp; emotional range.</li>
+</ul>
+</section>
+</section>
+<section id="performance-playbook" class="level4">
+<h4 class="anchored" data-anchor-id="performance-playbook">4. Performance Playbook</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 75%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Domain</th>
+<th>Ahmed’s Go-To Protocols</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Morning Routine</strong></td>
+<td>Wake → trainer workout → sauna → cold plunge → meditation → protein breakfast.</td>
+</tr>
+<tr class="even">
+<td><strong>Travel</strong></td>
+<td>Fast during flights; hydrate with hydrogen-infused water; slam electrolytes; align immediately to destination bedtime—no naps.</td>
+</tr>
+<tr class="odd">
+<td><strong>Jet Lag Mindset</strong></td>
+<td>Much of it is psychological; stay positive, avoid alcohol &amp; erratic sleep.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="recovery-sleep-tech" class="level4">
+<h4 class="anchored" data-anchor-id="recovery-sleep-tech">5. Recovery, Sleep &amp; Tech</h4>
+<ul>
+<li><strong>Hide the Numbers:</strong> WHOOP offers a toggle to <em>collect</em> but not <em>display</em> sleep &amp; recovery scores—avoids “data anxiety.”<br>
+</li>
+<li><strong>Combating Apnea:</strong> Breath-training tools (e.g., 15 min/day resisted-exhale devices) mimic wind-instrument benefits.<br>
+</li>
+<li><strong>Hydrogen Water Wave:</strong> Portable H₂ flasks (e.g., Echo Go) and even hydrogen baths are emerging performance aids.</li>
+</ul>
+</section>
+<section id="ambition-gratitude-cost" class="level4">
+<h4 class="anchored" data-anchor-id="ambition-gratitude-cost">6. Ambition, Gratitude &amp; Cost</h4>
+<ul>
+<li>Desire the <strong>lifestyle</strong>, not just the outcome (James Clear).<br>
+</li>
+<li>High achievers (Rory McIlroy, Ronaldo, Phelps) trade normalcy for relentless intensity—admire <em>and</em> audit the price.<br>
+</li>
+<li>Blend <strong>drive (dopamine)</strong> with <strong>gratitude (serotonin)</strong> to avoid “miserable successes.”</li>
+</ul>
+</section>
+<section id="practical-nuggets" class="level4">
+<h4 class="anchored" data-anchor-id="practical-nuggets">7. Practical Nuggets</h4>
+<ul>
+<li><strong>Don’t eat on planes</strong>—fasting smooths circadian realignment.<br>
+</li>
+<li><strong>Electrolytes + H₂O</strong> &gt; airplane food.<br>
+</li>
+<li><strong>Seek recurring fleeting thoughts</strong> to discover genuine goals.<br>
+</li>
+<li><strong>State goals publicly, work hard consistently, embrace rejection</strong>—luck will find you.<br>
+</li>
+<li><strong>Limit simultaneous desires</strong>; pick one or two lanes to go “all-in.”</li>
+</ul>
+</section>
+<section id="whats-next-for-will-ahmed-whoop" class="level4">
+<h4 class="anchored" data-anchor-id="whats-next-for-will-ahmed-whoop">8. What’s Next for Will Ahmed &amp; WHOOP</h4>
+<ul>
+<li><strong>New Features:</strong> WHOOP 5.0 offers 14-day battery, blood-pressure trends, AFib screening &amp; “WHOOP Age” health-span score.</li>
+<li>Scale new health-span, BP, and heart-screening features.<br>
+</li>
+<li>Prep for an eventual IPO.<br>
+</li>
+<li>Navigate new-dad life while keeping the morning ritual intact.</li>
+</ul>
+</section>
+</section>
+<section id="evaluating-quality-supplements-on-the-dr.-hyman-show" class="level3">
+<h3 class="anchored" data-anchor-id="evaluating-quality-supplements-on-the-dr.-hyman-show"><a href="https://www.youtube.com/watch?v=AmyC4Yk46Nk">Evaluating Quality Supplements on the Dr.&nbsp;Hyman Show</a></h3>
+<section id="steve-martoccis-transformation" class="level4">
+<h4 class="anchored" data-anchor-id="steve-martoccis-transformation">1. Steve Martocci’s Transformation</h4>
+<ul>
+<li>Reached <strong>300 lb</strong> in college despite two-a-day sports.<br>
+</li>
+<li>2010: worked with a functional-medicine MD → thyroid Rx, hormone tuning, custom supplement stack.<br>
+</li>
+<li><strong>Lost ~100 lb</strong>, founded tech hits (<em>GroupMe</em>, <em>Splice</em>); new mission = fix supplements.</li>
+</ul>
+</section>
+<section id="why-most-supplements-miss-the-mark" class="level4">
+<h4 class="anchored" data-anchor-id="why-most-supplements-miss-the-mark">2. Why Most Supplements Miss the Mark</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 31%">
+<col style="width: 68%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Issue</th>
+<th>Reality check</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Overwhelm</strong></td>
+<td>&gt; 200 k U.S. products; 8 k brands.</td>
+</tr>
+<tr class="even">
+<td><strong>Loose regs</strong></td>
+<td>21 CFR 111 (self-policed GMP) ⇒ minimal FDA scrutiny.</td>
+</tr>
+<tr class="odd">
+<td><strong>Quality drift</strong></td>
+<td>Filler dyes (e.g., titanium-dioxide), mislabeled doses, heavy-metal contamination, shady Amazon clones.</td>
+</tr>
+<tr class="even">
+<td><strong>Doctor gap</strong></td>
+<td>&lt; 20 h nutrition training; many prescribe Mg oxide, D2, etc.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="the-deficiency-epidemic" class="level4">
+<h4 class="anchored" data-anchor-id="the-deficiency-epidemic">3. The Deficiency Epidemic</h4>
+<ul>
+<li>90 % + Americans lack ≥1 nutrient at <em>RDA floor</em>.<br>
+</li>
+<li>Function Health labs (150 k members): <strong>~70 %</strong> frank deficits at reference minimums.<br>
+</li>
+<li>Drivers: depleted soils, ultra-processed diets, RX drug leaching (statins → CoQ10; PPIs → Mg, B12).</li>
+</ul>
+</section>
+<section id="enter-suppco" class="level4">
+<h4 class="anchored" data-anchor-id="enter-suppco">4. Enter <strong>SuppCo</strong></h4>
+<ul>
+<li><strong>Catalog:</strong> 200 k products; barcode scan or AI label-upload.<br>
+</li>
+<li><strong>29-point “Trust Score”</strong> (0-10): 3rd-party cGMP, lot C O A, excipient flags, price-per-dose…<br>
+</li>
+<li><strong>Sup Score:</strong> grades <em>your</em> stack for quality, cost, goal alignment.<br>
+</li>
+<li><strong>80+ Protocols:</strong> brain fog, fertility, heart health, women’s hormones…<br>
+</li>
+<li><strong>Smart Scheduler:</strong> when/with food? pill reminders; soon tracks outcomes &amp; side-effects.<br>
+</li>
+<li><strong>Community:</strong> share stacks with MDs or socials; learn from n = 1 wins.</li>
+</ul>
+</section>
+<section id="partnering-with-function-health" class="level4">
+<h4 class="anchored" data-anchor-id="partnering-with-function-health">5. Partnering With Function Health</h4>
+<ul>
+<li>Lab data (vit D, omega-3, RBC-Mg, homocysteine, ferritin, etc.) feeds future <strong>personalized rec engine</strong>.<br>
+</li>
+<li>Goal: closed-loop—​test ⇢ prescribe ⇢ verify ⇢ iterate.</li>
+</ul>
+</section>
+<section id="stacks-protocol-examples" class="level4">
+<h4 class="anchored" data-anchor-id="stacks-protocol-examples">6. Stacks &amp; Protocol Examples</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 17%">
+<col style="width: 68%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Goal</th>
+<th>Core nutrients (sample)</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Longevity</strong></td>
+<td>Taurine 2 g, Urolithin A, NMN, Omega-3, D-K2</td>
+<td>Mitochondria, autophagy, inflammation.</td>
+</tr>
+<tr class="even">
+<td><strong>Prenatal</strong></td>
+<td>Methyl-folate, choline, DHA, iron bisglycinate</td>
+<td>Neuro-dev, neural-tube, RBC support.</td>
+</tr>
+<tr class="odd">
+<td><strong>Detox / Fire Smoke</strong></td>
+<td>NAC, Glutathione, Alpha-lipoic acid, Broccoli SFN</td>
+<td>Boost phase II, antioxidant load.</td>
+</tr>
+</tbody>
+</table>
+<p><em>(Full protocol markdown inside Subco app.)</em></p>
+</section>
+<section id="drugnutrient-watch-outs" class="level4">
+<h4 class="anchored" data-anchor-id="drugnutrient-watch-outs">7. Drug–Nutrient Watch-outs</h4>
+<ul>
+<li><strong>Statins ↔︎ CoQ10</strong> depletion → fatigue, myopathy.<br>
+</li>
+<li><strong>PPIs ↔︎ Mg/B12</strong> deficiency → arrhythmia, neuropathy.<br>
+</li>
+<li><strong>St John’s Wort ↔︎ OCP/SSRIs</strong> efficacy drop.</li>
+</ul>
+<blockquote class="blockquote">
+<p>SuppCo will surface automatic interaction flags next release.</p>
+</blockquote>
+</section>
+<section id="cost-ethics" class="level4">
+<h4 class="anchored" data-anchor-id="cost-ethics">8. Cost &amp; Ethics</h4>
+<ul>
+<li>SuppCo <strong>never profits on pill sales</strong>; aims to compress end-user prices via bulk &amp; loyalty models.<br>
+</li>
+<li>Doctors can share stacks <strong>without “white-label” mark-ups</strong>—shifts focus from revenue to results.</li>
+</ul>
+</section>
+<section id="takeaways" class="level4">
+<h4 class="anchored" data-anchor-id="takeaways">9. Takeaways</h4>
+<ul>
+<li>Supplements aren’t going away—​but the Wild West is.<br>
+</li>
+<li>Data + transparent scoring empowers you to be <strong>CEO of your own health</strong>.<br>
+</li>
+<li>Test (Function), curate (SuppCo), track, and adjust; stop buying expensive urine, start buying measurable change.</li>
+</ul>
+</section>
+</section>
+</section>
+<section id="tweets" class="level2">
+<h2 class="anchored" data-anchor-id="tweets">Tweets</h2>
+<section id="jony-ive-teams-up-with-sam-altman" class="level3">
+<h3 class="anchored" data-anchor-id="jony-ive-teams-up-with-sam-altman"><a href="https://x.com/sama/status/1925242282523103408">Jony Ive Teams Up With Sam Altman</a></h3>
+<ul>
+<li>Jony Ive started a new AI device company called IO a few years ago and they just got acquired by OpenAI</li>
+<li>They will release more info about the device in 2026</li>
+</ul>
+</section>
+</section>
+<section id="products" class="level2">
+<h2 class="anchored" data-anchor-id="products">Products</h2>
+<section id="suppco" class="level3">
+<h3 class="anchored" data-anchor-id="suppco"><a href="https://supp.co/">SuppCo</a></h3>
+<ul>
+<li>Look at the quality of your supplements</li>
+<li>Understand if you’re taking too much of a nutrient across multiple supplements</li>
+<li>Get expert guidance on ways to improve your supplement protocol</li>
+</ul>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>weekend-reads</category>
+  <guid>https://mftokic.github.io/posts/2025-05-23-weekend-reads/</guid>
+  <pubDate>Fri, 23 May 2025 07:00:00 GMT</pubDate>
+  <media:content url="https://mftokic.github.io/posts/2025-05-23-weekend-reads/image.png" medium="image" type="image/png" height="216" width="144"/>
+</item>
 <item>
   <title>Weekend Reads (5/16/25)</title>
   <dc:creator>Mike Tokic</dc:creator>
@@ -2007,44 +2617,6 @@ Click to read the original notes.
   <guid>https://mftokic.github.io/posts/2025-02-01-january-learnings/</guid>
   <pubDate>Sat, 01 Feb 2025 08:00:00 GMT</pubDate>
   <media:content url="https://mftokic.github.io/posts/2025-02-01-january-learnings/image.png" medium="image" type="image/png" height="144" width="144"/>
-</item>
-<item>
-  <title>What Item Would You Bring to a Deserted Island?</title>
-  <dc:creator>Mike Tokic</dc:creator>
-  <link>https://mftokic.github.io/posts/2025-01-31-knowledge/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>For the first time in history, the answer to the following questions of “what item would you bring to a deserted island” and “what item would you keep to start civilization over from scratch” is now the same thing. You would bring ChatGPT, or put more generally a large language model (llm) or generative AI model. At its core, these AI models condense the knowledge of the data it was trained on. It can acquire knowledge and know how to apply it, which is the definition of intelligence. This proves that the most important thing in our world is access to knowledge and how to use it, aka intelligence, and AI models are the best container for knowledge. Let’s dive deeper into why ChatGPT is the best item to bring to a deserted island. Before everyone gets their panties in a bunch about needing internet access for ChatGPT, let’s assume it’s an offline model running locally inside an indestructible cube that is powered by a hand crank and solar panels. Ok? Good. Let’s continue.</p>
-<p>When you crash on the island, the AI would tell you what you need to do first to survive. Most likely how to build a shelter with the elements you have around you. Teach you how to get fresh water. Show you which mushrooms are poisonous and which make for a tasty treat. It could entertain you with stories. Even act as a friend for companionship in a lonely place. Having a physical tool like a hatchet would be nice, but it’s not going to help administer first aid to you when you accidentally cut yourself while chopping wood.</p>
-<p>Imagine trying to bring other forms of knowledge to the island. Maybe a waterproof copy of a survival manual. That would definitely help you survive the first few nights and eventually thrive on the island. But only for your most basic needs. What if you found other people on the island? Maybe a potential partner you want to settle down with and start a family? The survival book is not going to help you deliver a child.</p>
-<p>Instead of a survival book you could bring an entire encyclopedia. Either one of those old school physical books, or a print out of everything on Wikipedia. That could help you with a lot of things. But now your problem is knowing where to find the right knowledge to help you with new problems. Does that rash on your arm match with the description of a rare disease in the encyclopedia? Hard to say. You then find another tribe on the island that speaks a different language as you and they seem pretty pissed off. Scrolling through Wikipedia for 30 minutes can’t help you there. So it’s not enough to have the knowledge itself at hand, but easy ways to access exactly what you need, when you need it.</p>
-<p>Easy access to knowledge used to be driven by search engines like Google and Bing. They could search through various information for you automatically. In a sense they condensed the entire internet into a text box to ask questions. But what came out on the other side are things that might be able to help, but not the exact knowledge you might need immediately or how to apply it to solve your problem. New AI services like ChatGPT can do just that. It knows most of what a search engine might know, but it can find the right answer immediately. It’s also able to create new information never thought possible, because it wasn’t in the original training data. Google search may not know what to do when a completely new event like a meteorite hits your island. But ChatGPT can reason and give you the knowledge and implementation to deal with the incident. It not only knows what, it also knows how. Knowledge is power. But being able to apply knowledge correctly, aka intelligence, is even more powerful.</p>
-<p>The cost of intelligence with AI is quickly going to zero. What happens then? It feels like the two most important jobs going forward in an AI future is either building smarter AI models. Or finding the right data to feed them. By building smarter models you are improving the how (intelligence), and by getting better data you are improving the what (knowledge). The scary part is that AI models can now create their own synthetic training data, and techniques like reinforcement learning allow them to essential train themselves. So manual human intervention in these models might go away too. What’s left to do if the AI can train itself and get better every day?</p>
-<p>The answer is to use the AI to make humans better. To increase their knowledge of the what and the how. Imagine a 30 year old accountant who has never camped outside in their life lands on the island with ChatGPT. They would most likely be able to get by with the help of the AI, but they would still struggle initially, maybe even perish from plain bad luck. Now replace that person with <a href="https://en.wikipedia.org/wiki/Bear_Grylls">Bear Grylles</a>, the famous British survival expert. I mean, the dudes name is literally “Bear”, how could he not survive in the wild? Combine him with ChatGPT and now he turns into a superhuman. He already knows how to survive, and paired with ChatGPT he can now build an island empire.</p>
-<p>Having a smart AI is good, but having a smart AI combined with a smart human is even better. As these AI models get smarter, they should also enable humans to get smarter as well. If you want to start learning how to code today, you shouldn’t read a textbook on python. Instead have ChatGPT start teaching you. It’s a world class tutor available 24/7, tailored to your learning style, and is infinitely patient. It can write code for you, explain how it works, and then quiz you about it. <strong>Using AI to increase the collective knowledge and intelligence of every person in the world should be a top priority.</strong></p>
-<p>So many problems in our world today can partly be due to a lack of education. When using a college degree as a proxy for education, the problems in our society stick out. People who don’t have a college degree have more problems.</p>
-<ol type="1">
-<li><a href="https://www.idra.org/resource-center/college-degrees-are-worth-it-people-with-bachelors-degrees-have-lower-poverty-rates/">Poverty</a>: In 2019 people with a college degree earned $25,000 more than someone with only a high school diploma.</li>
-<li><a href="https://www.prisonpolicy.org/blog/2018/10/30/education-report/">Crime</a>: Less than 4% of formerly incarcerated people have a college degree.</li>
-<li><a href="https://pubmed.ncbi.nlm.nih.gov/28756896/">Suicide</a>: Men without a college degree are twice as likely to die from suicide compared to a college graduate.</li>
-</ol>
-<p>Having a college degree is not a perfect measure of who has knowledge and who does not. But the above stats paint a bad picture for those without a degree. Soon everyone with an internet connection will have access to the best tutor in the world, essentially for free. AI tutors can teach billions of people at once. The only limiting factors will become tailoring the AI tutor to each persons wants and needs, and a person’s thirst for knowledge. There’s an old saying that goes: “The cure for boredom is curiosity. There is no cure for curiosity.” We can tailor the AI tutors to the learner, but creating the want inside of people to learn is the hard part. In a world of video games and TikTok, getting someone excited to learn about chemistry or to simply read a book will be a challenge.</p>
-<p>This is where the multimodal nature of AI models can save the day. The AI can print out text, talk to you via voice, even create photos and videos. This unlocks limitless ways for an AI to teach you something. Someone may prefer a book like experience with an AI using chat, whereas another may learn best through a superhero movie that teaches you about greek mythology. Creating an AI tutor that a person can’t turn away from is one of the most important problems to work on. Imagine your 10 year old staying up all night because they don’t want to stop learning about the migratory patterns of birds, or how nuclear fusion works, instead of watching TikTok dance trends. This is a possible future. AI is up to the task.</p>
-<p>AI models are not only positioned to make the world better, they are also well positioned to make humans better. Let’s go build one.</p>
-
-
-
- ]]></description>
-  <category>AI</category>
-  <category>learning</category>
-  <category>school</category>
-  <guid>https://mftokic.github.io/posts/2025-01-31-knowledge/</guid>
-  <pubDate>Fri, 31 Jan 2025 08:00:00 GMT</pubDate>
-  <media:content url="https://mftokic.github.io/posts/2025-01-31-knowledge/image.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 </channel>
 </rss>

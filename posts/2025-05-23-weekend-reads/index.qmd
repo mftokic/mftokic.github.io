@@ -5,7 +5,6 @@ author: "Mike Tokic"
 date: "2025-05-23"
 categories: [weekend-reads]
 image: "image.png"
-draft: True
 ---
 
 ## Articles
@@ -127,6 +126,7 @@ draft: True
 - **Peak to Pit:** CrossFit peaked ~2017-18, then stumbled (leadership scandals, partner dysfunction, poor event ops).  
 - **Opportunity Cost:** Its fall opened space for *Hyrox*, boutique studios (F45, Barry’s, Orangetheory) & run-club culture.  
 - **Community Matters:** Turning users into *evangelists* is CrossFit’s lost super-power—now fueling newer tribes.
+- **Partner Pain:** CrossFit labeled “most dysfunctional partner” in 13 yrs of WHOOP collaborations.  
 
 #### 2. WHOOP: Inside the Data Goldmine  
 | Metric | Insight from 100k+ users |
@@ -134,9 +134,6 @@ draft: True
 | **Sleep** | Only ~22 % log ≥7 h; consistency beats duration for health. |
 | **Global Quirks** | Doha avg. bedtime ≈ 2 a.m.; Ireland tops alcohol intake; Sweden & Finland lead cold plunges. |
 | **Activity Trends** | 2023 boom = pickleball (US); 2024 = padel (global). |
-
-- **Partner Pain:** CrossFit labeled “most dysfunctional partner” in 13 yrs of WHOOP collaborations.  
-- **New Features:** WHOOP 5.0 offers 14-day battery, blood-pressure trends, AFib screening & “WHOOP Age” health-span score.
 
 #### 3. Mindset & Self-Development  
 ##### Only-Child Edge  
@@ -176,20 +173,19 @@ draft: True
 - **Limit simultaneous desires**; pick one or two lanes to go “all-in.”
 
 #### 8. What’s Next for Will Ahmed & WHOOP  
+- **New Features:** WHOOP 5.0 offers 14-day battery, blood-pressure trends, AFib screening & “WHOOP Age” health-span score.
 - Scale new health-span, BP, and heart-screening features.  
 - Prep for an eventual IPO.  
 - Navigate new-dad life while keeping the morning ritual intact.
 
-> **Bottom Line:** Master your data without becoming its slave; match relentless curiosity with equal parts gratitude—then build, recover, repeat.
-
 ### [Evaluating Quality Supplements on the Dr. Hyman Show](https://www.youtube.com/watch?v=AmyC4Yk46Nk)
 
-#### 1  Steve Martocci’s Transformation  
+#### 1. Steve Martocci’s Transformation  
 - Reached **300 lb** in college despite two-a-day sports.  
 - 2010: worked with a functional-medicine MD → thyroid Rx, hormone tuning, custom supplement stack.  
 - **Lost ~100 lb**, founded tech hits (*GroupMe*, *Splice*); new mission = fix supplements.
 
-#### 2  Why Most Supplements Miss the Mark  
+#### 2. Why Most Supplements Miss the Mark  
 | Issue | Reality check |
 |-------|---------------|
 | **Overwhelm** | > 200 k U.S. products; 8 k brands. |
@@ -197,12 +193,12 @@ draft: True
 | **Quality drift** | Filler dyes (e.g., titanium-dioxide), mislabeled doses, heavy-metal contamination, shady Amazon clones. |
 | **Doctor gap** | < 20 h nutrition training; many prescribe Mg oxide, D2, etc. |
 
-#### 3  The Deficiency Epidemic  
+#### 3. The Deficiency Epidemic  
 - 90 % + Americans lack ≥1 nutrient at *RDA floor*.  
 - Function Health labs (150 k members): **~70 %** frank deficits at reference minimums.  
 - Drivers: depleted soils, ultra-processed diets, RX drug leaching (statins → CoQ10; PPIs → Mg, B12).
 
-#### 4  Enter **SuppCo**  
+#### 4. Enter **SuppCo**  
 - **Catalog:** 200 k products; barcode scan or AI label-upload.  
 - **29-point “Trust Score”** (0-10): 3rd-party cGMP, lot C O A, excipient flags, price-per-dose…  
 - **Sup Score:** grades *your* stack for quality, cost, goal alignment.  
@@ -210,11 +206,11 @@ draft: True
 - **Smart Scheduler:** when/with food? pill reminders; soon tracks outcomes & side-effects.  
 - **Community:** share stacks with MDs or socials; learn from n = 1 wins.
 
-#### 5  Partnering With Function Health  
+#### 5. Partnering With Function Health  
 - Lab data (vit D, omega-3, RBC-Mg, homocysteine, ferritin, etc.) feeds future **personalized rec engine**.  
 - Goal: closed-loop—​test ⇢ prescribe ⇢ verify ⇢ iterate.
 
-#### 6  Stacks & Protocol Examples  
+#### 6. Stacks & Protocol Examples  
 | Goal | Core nutrients (sample) | Why |
 |------|------------------------|-----|
 | **Longevity** | Taurine 2 g, Urolithin A, NMN, Omega-3, D-K2 | Mitochondria, autophagy, inflammation. |
@@ -223,17 +219,18 @@ draft: True
 
 *(Full protocol markdown inside Subco app.)*
 
-#### 7  Drug–Nutrient Watch-outs  
+#### 7. Drug–Nutrient Watch-outs  
 - **Statins ↔ CoQ10** depletion → fatigue, myopathy.  
 - **PPIs ↔ Mg/B12** deficiency → arrhythmia, neuropathy.  
 - **St John’s Wort ↔ OCP/SSRIs** efficacy drop.  
+
 > SuppCo will surface automatic interaction flags next release.
 
-#### 8  Cost & Ethics  
+#### 8. Cost & Ethics  
 - SuppCo **never profits on pill sales**; aims to compress end-user prices via bulk & loyalty models.  
 - Doctors can share stacks **without “white-label” mark-ups**—shifts focus from revenue to results.
 
-#### 9  Takeaways  
+#### 9. Takeaways  
 - Supplements aren’t going away—​but the Wild West is.  
 - Data + transparent scoring empowers you to be **CEO of your own health**.  
 - Test (Function), curate (SuppCo), track, and adjust; stop buying expensive urine, start buying measurable change.
