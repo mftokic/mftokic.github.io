@@ -1,0 +1,193 @@
+---
+title: "Weekend Reads (5/23/25)"
+description: "Interesting things I found on the internet this week"
+author: "Mike Tokic"
+date: "2025-05-23"
+categories: [weekend-reads]
+image: "image.png"
+draft: True
+---
+
+## Articles
+
+### [The Day You Became A Better Writer By Scott Adams](https://dilbertblog.typepad.com/the_dilbert_blog/2007/06/the_day_you_bec.html)
+
+- Removing fluff and keeping your writing simple is key.
+
+### [OpenAI Rolls Out Codex, An Automated Coding Agent](https://openai.com/index/introducing-codex/)
+
+- This agent runs autonomously in the cloud to build many new software features in parallel. 
+- For the longest time, I've been waiting for LLMs to get so good they can port my forecasting package, [finnts](https://microsoft.github.io/finnts/), from R to Python. I think now I might be able to get that work started. Exciting stuff!
+
+## Videos
+
+### [Dr. Rhonda Patrick on the Dr. Hyman Show](https://www.youtube.com/watch?v=AH6EklgUbiM)
+
+- **Vitamin D**
+    - **What it does**: Acts like a hormone, flipping 200+ genes for immune function, mood, and bone strength.
+    - **Problem**: Indoor living leaves ~40 % of adults short.
+    - **Fix**: Supplement 2 000–4 000 IU of vitamin D₃ daily; pair with vitamin K₂ (≈ 100 µg) so calcium goes to bones, not arteries.
+- **Omega 3**
+    - **Why care**: Higher blood omega-3 can add years to life, cut triglycerides, and calm inflammation.
+    - **Targets**: 1000–2000 mg EPA + DHA daily from fatty fish or purified fish-/algal-oil capsules.
+- **Magnesium**
+    - **Roles**: Needed for 300+ enzymes, ATP energy, nerve balance, vitamin D activation.
+    - **Shortfall**: Nearly half the population under-consumes it.
+    - **Dose**: 200–400 mg nightly (glycinate, citrate, or malate). Bonus: deeper sleep, fewer cramps, steadier blood pressure.
+- **Triage Theory**
+    - Minor shortages get “triaged” to urgent tasks (e.g., keeping blood clotting) while long-term maintenance (DNA repair, artery upkeep) is skipped. You feel fine today but sow seeds of cancer, heart disease, or dementia decades later. 
+    - **Solution**: keep every micronutrient in the green zone, not just “barely adequate.”
+- **Multivitamins**
+    - Over 90 % of people miss at least one essential nutrient from food. A quality multivitamin/mineral fills common gaps safely and cheaply. Urine color doesn’t equal wasted value; it simply shows water-soluble B-vitamins passing through.
+- **Personalized Nutrition**
+    - Variants in genes like MTHFR (folate), vitamin D receptors, or magnesium transporters can raise your optimal intake. Simple DNA tests plus blood work reveal whether you need more of certain B-vitamins, choline, or others. One-size-fits-all dosing belongs in the last century.
+- **Nutrient Synergy**
+    - **Magnesium + Vitamin D**: Mg activates D; D can’t perform without it.
+    - **Vitamin D + K2**: D boosts calcium absorption; K2 directs calcium to bones.
+    - **Food First**: Whole foods pack these combos naturally—e.g., salmon (D + omega-3s), leafy greens (Mg + K), bell peppers (vitamin C aids iron absorption).
+- **Phytochemicals** 
+    - **Sulforaphane**: From broccoli sprouts; switches on Nrf2, your cell-cleanup master switch. Two servings of sprouts or a 10–20 mg extract a few times weekly can boost detox enzymes and antioxidant defenses.
+    - **Anthocyanins**: Blue/purple pigments in berries improve brain blood flow and memory; aim for a daily cup of mixed berries or a concentrated powder.
+    - **Rule of Thumb**: “Eat the rainbow” = free daily antioxidant therapy.
+- **Processed Foods**
+    - Factory foods hijack appetite, spike blood sugar, and displace nutrients. In controlled trials people eat about 500 extra calories a day and gain weight on an ultra-processed diet even when meals are calorie-matched. Swap packaged snacks, sodas, and fast-food for whole-food versions; your waistline, microbiome, and inflammation markers will thank you.
+- **VO2 Max**
+    - Cardiorespiratory fitness trumps almost every other risk factor. Moving from “poor” to “average” fitness slashes mortality risk as much as quitting smoking. Aim for at least:
+        - 150 min/week moderate cardio (or 75 min vigorous), plus
+        - 2–3 strength sessions to preserve muscle and bone. Mix in interval training or hiking hills to nudge VO₂ max higher—adaptation happens at every age.
+
+### [Andrew Huberman's Productivity Toolkit](https://www.youtube.com/watch?v=Pmd6knanPKw)
+
+*Harness circadian biology for sharper focus, better mood, and deeper sleep.*
+
+#### Morning (Wake → Noon)
+
+| Tool | Why It Works | How To Do It |
+|------|--------------|--------------|
+| **Log Wake-Up Time** | Estimates your **temperature minimum** (≈ 2 h before normal wake time). Later cues best focus window. | Keep pen & pad on the nightstand; jot wake-up time daily. |
+| **Walk Outside Immediately** | Forward motion + “optic flow” calms amygdala (lower anxiety) and boosts alertness. | 10–15 min brisk walk — no sunglasses. |
+| **Sunlight in Eyes** | Early bright light sets your circadian clock and triggers the healthy cortisol pulse. | Combine with the walk; cloud cover is fine. |
+| **Hydrate + Electrolytes** | Neurons fire with sodium, potassium, magnesium; you wake slightly dehydrated. | Big glass of water + pinch sea salt (≈ ½ tsp). |
+| **Delay Caffeine 90–120 min** | Prevents mid-afternoon crash from early adenosine blockade. | First coffee/tea after the 90-min mark. |
+| **Fast Until Late Morning** | Mild adrenaline bump → tighter focus, better learning. | First calories ~11 a.m.–noon (water/electrolytes only before). |
+
+#### 90-Minute Deep-Work Block
+1. **Start 4–6 h after temperature minimum** (usually mid-morning).  
+2. **Set a 90-min timer** to ride the brain’s ultradian cycle.  
+3. **Optimize workstation:** screen at/above eye level, upright posture, low-volume white noise.  
+4. **Phone off** (not airplane mode).  
+
+*Objective: enter a “tunnel” of calm, intense focus.*
+
+#### Midday
+
+| Action | Why | Implementation |
+|--------|-----|----------------|
+| **Workout** | Exercise boosts BDNF, immune balance, mood. | Alternate: **Resistance** (80 % sub-failure / 20 % to failure) **and** **Endurance** (80 % easy / 20 % above lactate threshold). Keep < 60 min. |
+| **First Meal: Protein-Heavy, Lowish Carb** | Maintains dopamine & adrenaline for afternoon alertness. | Protein + veg; add starch only if you trained. |
+| **Omega-3 Dose** | 1 g EPA/day supports mood like a mild antidepressant. | Fish, algae oil or capsule with lunch. |
+| **Post-Meal Walk (5–30 min)** | Speeds glucose clearance, reinforces light cues. | Step outside immediately after eating. |
+
+#### Afternoon
+
+- **Light Break:** 10–30 min outside. Late-day sun buffers against nighttime light disruption.  
+- **Second 90-min Work Block:** Same tunnel protocol during your next alert peak.
+
+#### Evening
+
+| Habit | Purpose | How |
+|-------|---------|-----|
+| **Dinner = Starchy Carbs + Protein** | Carbs → serotonin → melatonin → easier sleep; replenishes glycogen. | Rice, potatoes, pasta, oats, plus moderate protein. |
+| **Hot Bath/Sauna (1–2 h Pre-Bed)** | Heats you so the body cools faster afterward, speeding sleep onset. | 10–15 min hot shower, bath, or sauna. |
+| **Dark, Cool Bedroom** | Light & heat suppress melatonin. | Black-out curtains; room ≈ 18 °C / 65 °F. |
+| **Optional Sleep Stack** | Eases transition without heavy drugs. | 30–60 min pre-bed: 300–400 mg **Mg threonate/glycinate** + 50 mg **apigenin** + 100–200 mg **L-theanine**. |
+
+#### Night-Waking Fixes
+
+| Scenario | Tactic |
+|----------|--------|
+| Wake 2–3 a.m. after forcing yourself to stay up late | Go to bed earlier; align with natural melatonin wave. |
+| Bathroom trips | Keep lights dim, return to bed quickly. |
+| Racing mind | 10 slow breaths (exhale 2× inhale) or brief body-scan meditation. |
+
+#### Quick Cheatsheet
+- **Wake** → log time → walk + sunlight → water + salt → delay caffeine.  
+- **Mid-morning** → 90-min deep-work tunnel.  
+- **Late morning** → workout (resistance or endurance).  
+- **Noon** → protein-heavy meal, omega-3, post-meal walk.  
+- **Afternoon** → sunlight break + second tunnel.  
+- **Evening** → carb-rich dinner → hot bath → dark, cool room → optional sleep stack.  
+- **Always** → skip large meals before work, hydrate, keep workouts < 1 h, alternate strength & cardio.
+
+> **Master your 24-hour rhythm and everything—focus, mood, energy, sleep—gets easier.**
+
+### [Whoop CEO on Modern Wisdom](https://www.youtube.com/watch?v=TIBrAdgohso)
+
+#### 1. CrossFit’s Fumble & the Fitness Vacuum  
+- **Peak to Pit:** CrossFit peaked ~2017-18, then stumbled (leadership scandals, partner dysfunction, poor event ops).  
+- **Opportunity Cost:** Its fall opened space for *Hyrox*, boutique studios (F45, Barry’s, Orangetheory) & run-club culture.  
+- **Community Matters:** Turning users into *evangelists* is CrossFit’s lost super-power—now fueling newer tribes.
+
+#### 2. WHOOP: Inside the Data Goldmine  
+| Metric | Insight from 100k+ users |
+|--------|-------------------------|
+| **Sleep** | Only ~22 % log ≥7 h; consistency beats duration for health. |
+| **Global Quirks** | Doha avg. bedtime ≈ 2 a.m.; Ireland tops alcohol intake; Sweden & Finland lead cold plunges. |
+| **Activity Trends** | 2023 boom = pickleball (US); 2024 = padel (global). |
+
+- **Partner Pain:** CrossFit labeled “most dysfunctional partner” in 13 yrs of WHOOP collaborations.  
+- **New Features:** WHOOP 5.0 offers 14-day battery, blood-pressure trends, AFib screening & “WHOOP Age” health-span score.
+
+#### 3. Mindset & Self-Development  
+##### Only-Child Edge  
+- Early adult interaction → comfort in big conversations.  
+- Lots of solo time → innate inward reflection (helps define “what you truly want”).  
+
+##### Conviction vs. Doubt  
+- **Start-up reality:** Years 21-24 were rejection-heavy; conviction in the *idea* carried Ahmed past shaky self-belief.  
+- **Separate Identities:** Decouple *company health* from *personal worth*—avoid “chaotic founder” spiral.
+
+##### Failure Philosophy  
+- “Failure-porn” is overrated; unique successes teach more.  
+- Yet taking *any* lesson (success or fail) expands resilience & emotional range.
+
+#### 4. Performance Playbook  
+| Domain | Ahmed’s Go-To Protocols |
+|--------|------------------------|
+| **Morning Routine** | Wake → trainer workout → sauna → cold plunge → meditation → protein breakfast. |
+| **Travel** | Fast during flights; hydrate with hydrogen-infused water; slam electrolytes; align immediately to destination bedtime—no naps. |
+| **Jet Lag Mindset** | Much of it is psychological; stay positive, avoid alcohol & erratic sleep. |
+
+#### 5. Recovery, Sleep & Tech  
+- **Hide the Numbers:** WHOOP offers a toggle to *collect* but not *display* sleep & recovery scores—avoids “data anxiety.”  
+- **Combating Apnea:** Breath-training tools (e.g., 15 min/day resisted-exhale devices) mimic wind-instrument benefits.  
+- **Hydrogen Water Wave:** Portable H₂ flasks (e.g., Echo Go) and even hydrogen baths are emerging performance aids.
+
+#### 6. Ambition, Gratitude & Cost  
+- Desire the **lifestyle**, not just the outcome (James Clear).  
+- High achievers (Rory McIlroy, Ronaldo, Phelps) trade normalcy for relentless intensity—admire *and* audit the price.  
+- Blend **drive (dopamine)** with **gratitude (serotonin)** to avoid “miserable successes.”
+
+#### 7. Practical Nuggets  
+- **Don’t eat on planes**—fasting smooths circadian realignment.  
+- **Electrolytes + H₂O** > airplane food.  
+- **Seek recurring fleeting thoughts** to discover genuine goals.  
+- **State goals publicly, work hard consistently, embrace rejection**—luck will find you.  
+- **Limit simultaneous desires**; pick one or two lanes to go “all-in.”
+
+#### 8. What’s Next for Will Ahmed & WHOOP  
+- Scale new health-span, BP, and heart-screening features.  
+- Prep for an eventual IPO.  
+- Navigate new-dad life while keeping the morning ritual intact.
+
+> **Bottom Line:** Master your data without becoming its slave; match relentless curiosity with equal parts gratitude—then build, recover, repeat.
+
+### [Evaluating Quality Supplements on the Dr. Hyman Show](https://www.youtube.com/watch?v=AmyC4Yk46Nk)
+
+## Tweets
+
+### [Jony Ive Teams Up With Sam Altman](https://x.com/sama/status/1925242282523103408)
+
+## Products
+
+### [SuppCo](https://supp.co/)
