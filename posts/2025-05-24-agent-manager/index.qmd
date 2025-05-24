@@ -5,20 +5,19 @@ author: "Mike Tokic"
 date: "2025-05-24"
 categories: [AI, career]
 image: "image.png"
-draft: True
 ---
 
 ### TL;DR 
 
-Being able to manage armies of AI in the form of agents that can perform tasks autonomously on their own will enable more leverage than ever before. When making choices about your career, this should always be top of mind. When in doubt, choose managing AI over managing people. Doing both is better, but one requires permission, while the other does not. Anyone can start managing AI today, so why haven't you started already? 
+Being able to manage armies of AI, in the form of agents that can perform tasks autonomously on their own, will enable more leverage than ever before. When making choices about your career, this should always be top of mind. When in doubt, choose managing AI over managing people. Doing both is better, but one requires permission, while the other does not. Anyone can start managing AI today, so why haven't you started already? 
 
 ### AI Layoffs Have Started
 
-Would you rather have your company spend 10x less or achieve 10x more? These are the two ends of the AI productivity spectrum. Right now senior leaders seem to be on the "spend 10x less" side, which is a bummer. The fastest way to grow earnings it seems is by cutting costs. They want to use AI tools that allow them to get the job done with less resources. This might make sense in a cash cow business with few competitors, but that's rare and puts your business at risk of AI powered disruption. As Jeff Bezos used to say, "your margin is my opportunity".  
+Would you rather have your company spend 10x less or achieve 10x more? These are the two ends of the AI productivity spectrum. Right now senior leaders seem to be on the spend 10x less side, which is a bummer. The fastest way to grow earnings it seems is by cutting costs. They want to use AI tools that allow them to get the job done with less resources. This might make sense in a cash cow business with few competitors, but that's rare and puts your business at risk of AI powered disruption. As Jeff Bezos used to say, "your margin is my opportunity".  
 
 Spending 10x less is a known quantity, CFO's can show how this impacts the bottom line and rewards shareholders. So of the two choices it's the lower hanging fruit. Choosing to be 10x more productive with the same resources you have available is less certain. Will it lead to 10x sales? Maybe, but maybe not. This combined with economic uncertainty makes the choice easy for the CEO. They think they can make cuts AND achieve more, all powered by AI. Can you have your cake and eat it too? No one knows just yet. 
 
-We are starting to see less hiring in the tech space, even layoffs. When people leave teams, no one hires their back fill. That was the first wave of "silent layoffs", now there are "loud layoffs" with thousands getting let go at major companies. This could be the start of a bigger trend. The classic tech era depictions on the HBO show "Silicon Valley" are now probably dead. The golden age of being a software developer are done. For decades, life was good if you had a rare set of skills that the world had an undying need for (writing code), but now AI can write the code. So the prickly coder who is a pain to work with but kept your companies core systems running is going from a necessary pain to one that can be fixed easily with AI powered tools. Specifically agentic AI systems that can do work on their own much like a person. 
+We are starting to see less hiring in the tech space, even layoffs. When people leave teams, no one hires their back fill. That was the first wave of "silent layoffs", now there are "loud layoffs" with thousands getting let go at major companies. This could be the start of a bigger trend. The classic tech era depictions on the HBO show "Silicon Valley" are now probably dead. The golden age of being a software developer are done. For decades, life was good if you had a rare set of skills that the world had an undying need for (writing code), but now AI can write the code. So the prickly coder who kept your companies core systems running is going from a necessary pain to one that can be replaced with AI powered tools. Specifically agentic AI systems that can do work on their own much like a person. 
 
 They say 2025 is the year of the AI agents, which you can also rephrase as the year of "non-human labor". That is both terrifying and exciting. It's only terrifying if you don't change anything about your life, and very exciting if you know how to ride the wave. Let's dig in. 
 
@@ -36,13 +35,13 @@ Think about how companies got off in the ground in the last decade. It was commo
 
 In recent years this model was disrupted partly by people who are experts at either code or media. Joe Rogan makes tens of millions every year through his podcast, which at most is probably operated by 3-5 people. Instagram sold to Facebook for one billion with only a dozen employees. These people did not need permission to start a podcast or go build a viral app. They were using forms of permissionless leverage. 
 
-Permissionless leverage is now becoming orders of magnitude more important with the power of AI. AI is removing the need for the first two forms of leverage, labor and capital. Before you needed money to hire a team, but now AI is your team in the form of agents. This means a team of one with a bootstrapped budget can have the same impact as large companies. But for this to happen you need agency and agents.  
+Permissionless leverage is now becoming orders of magnitude more important with the power of AI. AI is removing the need for the first two forms of leverage, labor and capital. Before you needed money to hire a team, but now AI is your team in the form of agents. This means a team of one with a bootstrapped budget can have the same impact as large companies. But for this to happen you need agents AND agency.  
 
 ### AI Agent = Agency
 
 When AI agents can start doing tasks similar to a human, what's left for humans to do? 
 
-The most important skill to have in this new AI future is proactively taking action, also known as having a [high degree of agency](https://www.highagency.com/). Being a high agency person means you get shit done. No one has to tell you what to do. You are proactively doing things. 
+The most important skill to have in this new AI future is proactively taking action, also known as having a [high degree of agency](https://www.highagency.com/). Being a high agency person means you get stuff done. No one has to tell you what to do. You are proactively doing things. 
 
 Having access to AI agents that can do human work for a few bucks now allows you to do anything you want. The only problem now is taking the agency to go out and do it. Have an idea for a company? Now you can deploy agents to get it off the ground. They will quickly be able to do most things you'd hire a human for.
 
@@ -51,7 +50,7 @@ Having access to AI agents that can do human work for a few bucks now allows you
 - Answer support related questions from customers 
 - Analyze the finances and recommend what market to expand into next
 
-People used to do these jobs, now agents are coming to do them. They will be used by people who have high agency, folks who go out and make a dent in the world instead of being told what to do. If your workday is driven by others telling you what to do instead of figuring out the most important thing to work on yourself. You might be in trouble. What's stopping your boss from telling an AI agent to start doing that work instead of you? They give the same instructions to the agent, and it works 24/7. If you think about it from their point of view, it's a no brainer. They're going to choose the agent over a human. Having high agency means you think for yourself and proactively make choices that help your company. This might mean doing the opposite of what your boss asks you to do instead of being a yes man. If it helps the company in the end, you are rewarded instead of punished. 
+People used to do these jobs, now agents are coming to do them. They will be used by people who have high agency, folks who go out and make a dent in the world instead of being told what to do. If your workday is driven by others telling you what to do instead of figuring out the most important thing to work on yourself. You might be in trouble. What's stopping your boss from telling an AI agent to start doing that work instead of you? They give the same instructions to the agent, and it works 24/7. If you think about it from their point of view, it's a no brainer. They're going to choose the agent over a human. Having high agency means you think for yourself and proactively make choices that help your company. This might mean doing the opposite of what your boss asks you to do instead of being a yes man. If it helps the company in the end, you are called a maverick instead of insubordinate. 
 
 ### Future Career Paths
 
@@ -84,4 +83,6 @@ We'll have to see how this plays out in the next few years. What I know for cert
 
 ### Final Thoughts
 
-We are quickly coming into a new world of infinite leverage. One where the only bottleneck is getting off your butt and taking action. Successful careers will no longer be measured in how much money you raised or how many people work for you, but instead in how much impact you provide the world. Being able to work with and even directly manage people will still be important, but it will not be the biggest force multiplier anymore. Being able to leverage AI and specifically in the form of AI agents will. Get started now.  
+We are quickly coming into a new world of infinite leverage. One where the only bottleneck is getting off your butt and taking action. Successful careers will no longer be measured in how much money you raised or how many people work for you, but instead in how much value you provide the world. Being able to work with and even directly manage people will still be important, but it will not be the biggest force multiplier anymore. Being able to leverage and manage AI will. Get started now.
+
+Shameless plug...Did you enjoy this post? If so, sign up to never miss a post via email on the [homepage](https://mftokic.github.io/). 

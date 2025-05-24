@@ -10,7 +10,90 @@
 <atom:link href="https://mftokic.github.io/index.xml" rel="self" type="application/rss+xml"/>
 <description>A collection of thoughts on things from the mind of Mike Tokic</description>
 <generator>quarto-1.5.57</generator>
-<lastBuildDate>Fri, 23 May 2025 07:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sat, 24 May 2025 07:00:00 GMT</lastBuildDate>
+<item>
+  <title>AI Manager &gt; People Manager</title>
+  <dc:creator>Mike Tokic</dc:creator>
+  <link>https://mftokic.github.io/posts/2025-05-24-agent-manager/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="tldr" class="level3">
+<h3 class="anchored" data-anchor-id="tldr">TL;DR</h3>
+<p>Being able to manage armies of AI, in the form of agents that can perform tasks autonomously on their own, will enable more leverage than ever before. When making choices about your career, this should always be top of mind. When in doubt, choose managing AI over managing people. Doing both is better, but one requires permission, while the other does not. Anyone can start managing AI today, so why haven’t you started already?</p>
+</section>
+<section id="ai-layoffs-have-started" class="level3">
+<h3 class="anchored" data-anchor-id="ai-layoffs-have-started">AI Layoffs Have Started</h3>
+<p>Would you rather have your company spend 10x less or achieve 10x more? These are the two ends of the AI productivity spectrum. Right now senior leaders seem to be on the spend 10x less side, which is a bummer. The fastest way to grow earnings it seems is by cutting costs. They want to use AI tools that allow them to get the job done with less resources. This might make sense in a cash cow business with few competitors, but that’s rare and puts your business at risk of AI powered disruption. As Jeff Bezos used to say, “your margin is my opportunity”.</p>
+<p>Spending 10x less is a known quantity, CFO’s can show how this impacts the bottom line and rewards shareholders. So of the two choices it’s the lower hanging fruit. Choosing to be 10x more productive with the same resources you have available is less certain. Will it lead to 10x sales? Maybe, but maybe not. This combined with economic uncertainty makes the choice easy for the CEO. They think they can make cuts AND achieve more, all powered by AI. Can you have your cake and eat it too? No one knows just yet.</p>
+<p>We are starting to see less hiring in the tech space, even layoffs. When people leave teams, no one hires their back fill. That was the first wave of “silent layoffs”, now there are “loud layoffs” with thousands getting let go at major companies. This could be the start of a bigger trend. The classic tech era depictions on the HBO show “Silicon Valley” are now probably dead. The golden age of being a software developer are done. For decades, life was good if you had a rare set of skills that the world had an undying need for (writing code), but now AI can write the code. So the prickly coder who kept your companies core systems running is going from a necessary pain to one that can be replaced with AI powered tools. Specifically agentic AI systems that can do work on their own much like a person.</p>
+<p>They say 2025 is the year of the AI agents, which you can also rephrase as the year of “non-human labor”. That is both terrifying and exciting. It’s only terrifying if you don’t change anything about your life, and very exciting if you know how to ride the wave. Let’s dig in.</p>
+</section>
+<section id="forms-of-leverage" class="level3">
+<h3 class="anchored" data-anchor-id="forms-of-leverage">Forms of Leverage</h3>
+<p>Naval Ravikant states there are three types of leverage.</p>
+<ol type="1">
+<li><strong>Labor</strong>: people working for you</li>
+<li><strong>Capital</strong>: using money to build things</li>
+<li><strong>Permissionless</strong>: code and media that works while you sleep</li>
+</ol>
+<p>Labor is the oldest form of leverage with the greatest prestige, capital has been the most popular in recent decades, but permissionless leverage is the hot new thing that is getting turbocharged by AI.</p>
+<p>Think about how companies got off in the ground in the last decade. It was common to go raise a bunch of money around an idea, then hire a bunch of people to go build the idea, then use what you built (often through code) to make a profit. That’s how the companies got the most amount of leverage in the least amount of time. Just like Tony Montana: first you get the money, then you get the labor, then you get the profit. It’s a model that works, but one that requires permission. People have to agree to give you money, or agree to work with you.</p>
+<p>In recent years this model was disrupted partly by people who are experts at either code or media. Joe Rogan makes tens of millions every year through his podcast, which at most is probably operated by 3-5 people. Instagram sold to Facebook for one billion with only a dozen employees. These people did not need permission to start a podcast or go build a viral app. They were using forms of permissionless leverage.</p>
+<p>Permissionless leverage is now becoming orders of magnitude more important with the power of AI. AI is removing the need for the first two forms of leverage, labor and capital. Before you needed money to hire a team, but now AI is your team in the form of agents. This means a team of one with a bootstrapped budget can have the same impact as large companies. But for this to happen you need agents AND agency.</p>
+</section>
+<section id="ai-agent-agency" class="level3">
+<h3 class="anchored" data-anchor-id="ai-agent-agency">AI Agent = Agency</h3>
+<p>When AI agents can start doing tasks similar to a human, what’s left for humans to do?</p>
+<p>The most important skill to have in this new AI future is proactively taking action, also known as having a <a href="https://www.highagency.com/">high degree of agency</a>. Being a high agency person means you get stuff done. No one has to tell you what to do. You are proactively doing things.</p>
+<p>Having access to AI agents that can do human work for a few bucks now allows you to do anything you want. The only problem now is taking the agency to go out and do it. Have an idea for a company? Now you can deploy agents to get it off the ground. They will quickly be able to do most things you’d hire a human for.</p>
+<ul>
+<li>Build the product (app or service)</li>
+<li>Track down potential customers to purchase the product, even sell to them</li>
+<li>Answer support related questions from customers</li>
+<li>Analyze the finances and recommend what market to expand into next</li>
+</ul>
+<p>People used to do these jobs, now agents are coming to do them. They will be used by people who have high agency, folks who go out and make a dent in the world instead of being told what to do. If your workday is driven by others telling you what to do instead of figuring out the most important thing to work on yourself. You might be in trouble. What’s stopping your boss from telling an AI agent to start doing that work instead of you? They give the same instructions to the agent, and it works 24/7. If you think about it from their point of view, it’s a no brainer. They’re going to choose the agent over a human. Having high agency means you think for yourself and proactively make choices that help your company. This might mean doing the opposite of what your boss asks you to do instead of being a yes man. If it helps the company in the end, you are called a maverick instead of insubordinate.</p>
+</section>
+<section id="future-career-paths" class="level3">
+<h3 class="anchored" data-anchor-id="future-career-paths">Future Career Paths</h3>
+<p>Career paths in a post AI agent world will never be the same again. Historically an ambitious career path might have looked like this.</p>
+<ol type="1">
+<li><strong>Intern</strong>: You don’t know anything, but are there to learn and try not to slow the team down too much. Your contribution to the company is gaining knowledge about how work gets done, not in completing the work itself.</li>
+<li><strong>Junior Employee</strong>: You are fresh out of school and ready to kick butt. You get the lowest level work that needs to get done, but doing it well grows your reputation for doing good work. Which allows you to work on more interesting things.</li>
+<li><strong>Senior Employee</strong>: You have gotten so good at your job that now your boss wants you coming up with fresh ideas and running new initiatives. You now have more freedom to choose what you work on and how you get it done because you’ve proven to be reliable. People can count on you.</li>
+<li><strong>People Manager</strong>: Congrats, you’ve kicked so much butt at the senior level that you are now in charge of your own team! Now you are really calling the shots and providing the direction for your employees to run towards. The individual contributor work you did is now out the window. People rely on you to make decisions, not to output work items.</li>
+<li><strong>Senior Management</strong>: You’ve proved that you can run successful teams, and the top dogs think you have real potential so they move you up to the big leagues. Now you are looking over teams of teams, which is a whole other level of decision making and judgement. Now you are in charge of the long term strategic vision of the organization. Everything is long term and at a 30,000 ft view. The days of tiny details are over for you, you simply don’t have the time for it.</li>
+<li><strong>C-Suite</strong>: The final stop on a lifelong career. The highest summit for which to have impact. Single decisions made by you now impact thousands of employees and even shape financial markets. Shareholders are relying on you to make the right decisions to impossible problems.</li>
+</ol>
+<p>If you were good at your job and had leadership potential, the next logical step was to rise to the next level. Normally the act of making progress leads to happiness in life. So making progress on this career ladder has the <em>potential</em> to make you happy. Do you see how each new level of the ladder gives you more access to labor and capital leverage? To rise to a new level of labor and capital leverage, someone at a higher level has to give the green light. You can only move one level at a time. Unless you start your own thing. No one goes from intern to a senior manager overnight at a large company.</p>
+<p>What happens when AI agents come into the picture? How does this career ladder change? An army of labor is now accessible starting at the intern level, with the same level of access as the C-Suite. These agents don’t take breaks. They start off at a few bucks a month and scaling them might cost thousands, not tens of thousands like a human. <strong>I think corporate careers will start to turn into the career paths similar to musicians and athletes.</strong> Where the better the individual is, the greater the stage for them to do what they do best.</p>
+<p>Let’s take Taylor Swift as an example. Taylor Swift came onto the scene over 15 years ago back when I was in high school. Since then what she does has not changed much. She still writes songs, she still performs in front of fans, and hopefully soon will stop making breakup songs once her and Travis Kelce settle down and make some rugrats. What has changed is the level at which she does it. Her most recent tour, the Eras Tour, made over a billion dollars within a year. That’s insane. At no point in her career did a music exec say “you’re so good at your job, we’re going to promote you to running the record label or managing the careers of other bands”. Instead she was given every resource imaginable to do what she does best at the next highest level. Over the past 15 years she has continued to level up. Doing bigger and better shows until now becoming the biggest artist in the world.</p>
+<p>The same goes for athletes like my main man Patrick Mahomes. They start out as peewee football players like in <a href="https://www.imdb.com/title/tt0110364/">“The Little Giants”</a> and step by step the game gets more competitive, the crowds get bigger, and the money starts to roll in. Mahomes has been playing the same game his entire life, it’s just the stage he performs on is now the biggest in the world.</p>
+<p>I believe people in the corporate world will do something similar. The best person in the world at something will now be able to do it for everyone else around the world. Similar to how everyone listens to Taylor Swift (if you say you don’t you’re lying) or watches Patrick Mahomes every Sunday (either hate watching or as a fan). So instead of being the best at your company and rising through the ranks to gain more leverage, I think now you can skip to the final level sooner and leverage an army of AI agents to help maximize what you do best not just for your company but for everyone in the world who would benefit from your expertise.</p>
+<p>What I’m unsure about in this new age of infinite leverage is how the best in the world will do their work. Will they still be a part of large companies, or will they have their own company? For example let’s take the worlds best design expert, Jony Ive. He worked at Apple for 27 years. Then he started his own design firm called LoveFrom in 2019. Then created a new AI product company called io. Recently <a href="https://x.com/sama/status/1925242282523103408">OpenAI acquired io</a> and now he will presumably work at OpenAI for the next few years. Jony is also a man in his late 50s, so maybe he’s still in the paradigm of the pre-AI work world even though he works on AI.</p>
+<p>Maybe we’ll dig deeper into the “gig economy”. Where someone might come to a company for a “tour of duty”, work on a project for a few years, then move on. The human will use AI agents to scale up a new project, then let the agents continue to manage it after they leave. Going from zero to one on something will take human effort and AI, but keeping a developed project afloat might only take AI. Sometimes I fantasize about “hacker guilds” or collectives of people that are hired as a group to go work on something for a set time. Instead of hiring a standard consulting firm or individual people, you hire a packaged group who already work well together and can kick butt from day one. Kind of like the military with special operations units. Hiring the seal team six equivalent of coders has 100x more leverage than hiring a hodgepodge of random big tech coders or Stanford grads.</p>
+<p>Something I’ve learned over the years in corporate america is that companies do not love you, and will not miss you when you’re gone. People who work with you might miss you, but everything eventually comes to an end in all aspects of life. You are not indispensable and you probably can be replaced. That doesn’t mean you shouldn’t be loyal to one company for many years. It just means not to attach too much of your identity to any one thing in life.</p>
+<p>We’ll have to see how this plays out in the next few years. What I know for certain is that personal branding is going to rise to a whole new level. As AI agents give more people leverage, their impact can rise faster than it can within a single company. So having a strong personal brand amplified by superintelligence will be essential. If you aren’t working on your brand today, start now. The best time to plant a tree was 20 years ago, the next best time is today.</p>
+</section>
+<section id="final-thoughts" class="level3">
+<h3 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h3>
+<p>We are quickly coming into a new world of infinite leverage. One where the only bottleneck is getting off your butt and taking action. Successful careers will no longer be measured in how much money you raised or how many people work for you, but instead in how much value you provide the world. Being able to work with and even directly manage people will still be important, but it will not be the biggest force multiplier anymore. Being able to leverage and manage AI will. Get started now.</p>
+<p>Shameless plug…Did you enjoy this post? If so, sign up to never miss a post via email on the <a href="https://mftokic.github.io/">homepage</a>.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>AI</category>
+  <category>career</category>
+  <guid>https://mftokic.github.io/posts/2025-05-24-agent-manager/</guid>
+  <pubDate>Sat, 24 May 2025 07:00:00 GMT</pubDate>
+  <media:content url="https://mftokic.github.io/posts/2025-05-24-agent-manager/image.png" medium="image" type="image/png" height="96" width="144"/>
+</item>
 <item>
   <title>Weekend Reads (5/23/25)</title>
   <dc:creator>Mike Tokic</dc:creator>
@@ -2451,172 +2534,6 @@ Click to read the original notes.
   <guid>https://mftokic.github.io/posts/2025-02-03-ts-fundamentals-data-cleaning/</guid>
   <pubDate>Mon, 03 Feb 2025 08:00:00 GMT</pubDate>
   <media:content url="https://mftokic.github.io/posts/2025-02-03-ts-fundamentals-data-cleaning/image.png" medium="image" type="image/png" height="144" width="144"/>
-</item>
-<item>
-  <title>January Learnings</title>
-  <dc:creator>Mike Tokic</dc:creator>
-  <link>https://mftokic.github.io/posts/2025-02-01-january-learnings/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>I love reading books, watching YouTube videos, listening to podcasts, you name it. Anything learning related is my jam. But I recently realized that if I don’t take notes on what I’m learning, I will probably forget everything. Now when I hear something interesting, I write it down in an Apple note for that month. Below are some of the learnings I jotted down in January, summarized by ChatGPT. I hope you find them as interesting as I did.</p>
-<section id="work-life-balance-fulfillment" class="level3">
-<h3 class="anchored" data-anchor-id="work-life-balance-fulfillment">1. Work-Life Balance &amp; Fulfillment</h3>
-<ul>
-<li><strong>Fun, not discipline</strong>: Scheduling enjoyable activities each week prevents work from creeping into all free time.<br>
-</li>
-<li><strong>Success definition</strong>: True success is loving both your work and your personal life.<br>
-</li>
-<li><strong>Capping success</strong>: Decide how much growth you can handle without losing who you are.</li>
-</ul>
-</section>
-<section id="tradeoffs-decision-making" class="level3">
-<h3 class="anchored" data-anchor-id="tradeoffs-decision-making">2. Tradeoffs &amp; Decision-Making</h3>
-<ul>
-<li><strong>No perfect solutions</strong>: Everything has pros and cons; success lies in choosing the right tradeoff.<br>
-</li>
-<li><strong>Red flags</strong>: If you find yourself thinking “but it’s so much money,” reassess your motives.<br>
-</li>
-<li><strong>Fear of big goals</strong>: While aiming high is less crowded, it can also be used as an excuse if you fail.</li>
-</ul>
-</section>
-<section id="competition-high-performance" class="level3">
-<h3 class="anchored" data-anchor-id="competition-high-performance">3. Competition &amp; High Performance</h3>
-<ul>
-<li><strong>Hidden costs</strong>: Emulating high performers may mean accepting hidden sacrifices.<br>
-</li>
-<li><strong>Consistency</strong>: Deliberate, ongoing practice filters out those who can’t sustain effort.<br>
-</li>
-<li><strong>Focus vs.&nbsp;Obsession</strong>: The lazy lose to the average, the average lose to the focused, the focused lose to the obsessed.</li>
-</ul>
-</section>
-<section id="adaptability-innovation" class="level3">
-<h3 class="anchored" data-anchor-id="adaptability-innovation">4. Adaptability &amp; Innovation</h3>
-<ul>
-<li><strong>Pivot or perish</strong>: Like Western Digital clinging to telegrams post-telephone, ignoring new tech can be fatal.<br>
-</li>
-<li><strong>Company reinvention</strong>: Nintendo, YouTube, and Slack all started with entirely different products.</li>
-</ul>
-</section>
-<section id="human-needs-motivations" class="level3">
-<h3 class="anchored" data-anchor-id="human-needs-motivations">5. Human Needs &amp; Motivations</h3>
-<ul>
-<li><strong>Beyond basics</strong>: After food and shelter, people want affiliation, status, and freedom from fear.<br>
-</li>
-<li><strong>Status &amp; affiliation</strong>: These drive many personal and social decisions, from kids to career choices.</li>
-</ul>
-</section>
-<section id="simplicity-execution" class="level3">
-<h3 class="anchored" data-anchor-id="simplicity-execution">6. Simplicity &amp; Execution</h3>
-<ul>
-<li><strong>Complexity as an enemy</strong>: Simpler approaches often yield better execution (Tony Robbins).<br>
-</li>
-<li><strong>Stress from neglect</strong>: Stress arises from ignoring important tasks or problems.</li>
-</ul>
-</section>
-<section id="personal-growth-mindset" class="level3">
-<h3 class="anchored" data-anchor-id="personal-growth-mindset">7. Personal Growth &amp; Mindset</h3>
-<ul>
-<li><strong>Meditation zones</strong>: Mindfulness, Support, Flow, and Awakening each expand consciousness in different ways.<br>
-</li>
-<li><strong>Courage gap</strong>: For most smart people, the missing piece is the bravery to act.<br>
-</li>
-<li><strong>Thinking in writing</strong>: Writing clarifies thoughts and fosters deeper understanding.</li>
-</ul>
-</section>
-<section id="entrepreneurship-career" class="level3">
-<h3 class="anchored" data-anchor-id="entrepreneurship-career">8. Entrepreneurship &amp; Career</h3>
-<ul>
-<li><strong>Keys to success</strong>:
-<ol type="1">
-<li><strong>Courage</strong> to start<br>
-</li>
-<li><strong>Perseverance</strong> to test multiple approaches<br>
-</li>
-<li><strong>Skills</strong> to build, sell, and harness luck<br>
-</li>
-</ol></li>
-<li><strong>Building an audience</strong>: Focus on the right followers, share your niche expertise, and aim for ongoing improvement.<br>
-</li>
-<li><strong>If you don’t choose a goal</strong>: Society will assign you one you might not want.</li>
-</ul>
-</section>
-<section id="health-well-being" class="level3">
-<h3 class="anchored" data-anchor-id="health-well-being">9. Health &amp; Well-Being</h3>
-<ul>
-<li><strong>Weight control</strong>: Balance palatability with low calorie density.<br>
-</li>
-<li><strong>Dental health</strong>: Poor oral care can raise dementia risk by up to 30%.<br>
-</li>
-<li><strong>Marriage vs.&nbsp;career</strong>: A great marriage and an average job can be happier than a great job but unhappy marriage.</li>
-</ul>
-</section>
-<section id="education-parenting" class="level3">
-<h3 class="anchored" data-anchor-id="education-parenting">10. Education &amp; Parenting</h3>
-<ul>
-<li><strong>Raising a sovereign child</strong>: Freedom over control; allow exploration and independent thought.<br>
-</li>
-<li><strong>Scaffolding</strong>: Provide temporary support or structure until a child (or learner) can handle it on their own.<br>
-</li>
-<li><strong>Beware status games in youth</strong>: Sports can become more about prestige than personal growth.</li>
-</ul>
-</section>
-<section id="angel-investing-business-acumen" class="level3">
-<h3 class="anchored" data-anchor-id="angel-investing-business-acumen">11. Angel Investing &amp; Business Acumen</h3>
-<ul>
-<li><strong>Founder first</strong>: Investors should look at who’s running the startup more than the idea itself.<br>
-</li>
-<li><strong>Pratfall effect</strong>: Revealing small imperfections <strong>after</strong> showing competence makes you more relatable.</li>
-</ul>
-</section>
-<section id="societal-observations-history" class="level3">
-<h3 class="anchored" data-anchor-id="societal-observations-history">12. Societal Observations &amp; History</h3>
-<ul>
-<li><strong>Slowing progress</strong>: Bigger scientific fields often have slower breakthroughs.<br>
-</li>
-<li><strong>Policy &amp; power</strong>: Politicians can stifle innovation (e.g., Facebook’s Libra).<br>
-</li>
-<li><strong>Odd facts</strong>: 80% of US cash is in $100 bills; 70% of restaurant food is delivered.</li>
-</ul>
-</section>
-<section id="influence-conformity" class="level3">
-<h3 class="anchored" data-anchor-id="influence-conformity">13. Influence &amp; Conformity</h3>
-<ul>
-<li><strong>Preference falsification</strong>: Publicly supporting what you don’t believe privately.<br>
-</li>
-<li><strong>Conformity vs.&nbsp;prestige</strong>: We follow the crowd for safety or follow those with status to elevate ourselves.</li>
-</ul>
-</section>
-<section id="ai-the-future-of-work" class="level3">
-<h3 class="anchored" data-anchor-id="ai-the-future-of-work">14. AI &amp; the Future of Work</h3>
-<ul>
-<li><strong>Leadership vs.&nbsp;management</strong>: As AI handles tasks, leadership (direction, strategy) grows more important than micromanagement.<br>
-</li>
-<li><strong>Using AI</strong>: Either harness AI to assist your projects or risk falling behind.</li>
-</ul>
-</section>
-<section id="overarching-wisdom" class="level3">
-<h3 class="anchored" data-anchor-id="overarching-wisdom">15. Overarching Wisdom</h3>
-<ul>
-<li><strong>“Enough” vs.&nbsp;“more”</strong>: Don’t let the pursuit of endless growth blind you to the beauty of having enough.<br>
-</li>
-<li><strong>Fail fast, learn faster</strong>: The cost of being wrong is often lower than the cost of doing nothing.<br>
-</li>
-<li><strong>Mind as friend</strong>: Wisdom comes from taming your own mind.</li>
-</ul>
-
-
-</section>
-
- ]]></description>
-  <category>life</category>
-  <category>learning</category>
-  <guid>https://mftokic.github.io/posts/2025-02-01-january-learnings/</guid>
-  <pubDate>Sat, 01 Feb 2025 08:00:00 GMT</pubDate>
-  <media:content url="https://mftokic.github.io/posts/2025-02-01-january-learnings/image.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 </channel>
 </rss>
