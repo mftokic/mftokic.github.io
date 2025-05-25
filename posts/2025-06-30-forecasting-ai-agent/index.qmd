@@ -1,0 +1,55 @@
+---
+title: "First Thoughts on Forecasting AI Agents"
+description: "Having a true virtual data scientist will change forecasting forever"
+author: "Mike Tokic"
+date: "2025-06-30"
+categories: [AI, machine-learning, forecasting, time-series]
+image: "image.png"
+draft: True
+---
+
+- AI Agent will be a ds headcount right out of the box. 
+- Agents fix the scaling issue of ds in finance, truly democratizing. 
+- Instead of teaching regular people to use self-serve AI tools, agents will teach regular people about ML
+
+- Workflows
+    - Data Formatting
+    - Research
+    - EDA 
+        - Data profiling
+        - Autocorrelation
+        - Missing Values, Outliers
+        - Changepoints 
+        - Xreg Analysis 
+        - Hierarchies
+        - Multiple seasonal periods
+    - Forecast Iteration
+        - Global first, local second
+        - data cleaning order 
+            - missing values, outliers, boxcox
+        - bottoms up first, hierarchical second 
+        - univariate first, multivariate second 
+            - univariate: baseline models (arima, ets, meanf, snaive, stlm-arima, tbats), data cleaning, seasonal periods, all univariate models
+            - multivariate: baseline models (xgboost, glmnet) with defaults, data cleaning (global models), multistep, target features, xregs features, feature selection, all multivariate models
+        - Features to adjust in order 
+            - Target: lags, rolling window 
+            - Xregs: lags 
+    - Forecast Update
+        - Take last best inputs and create updated future forecast and historical back test 
+        - Option to retrain model or use last trained model
+    - Forecast Analysis
+        - Analyze back test accuracy and future forecast results
+        - Determine if forecasts pass various thresholds, either default or set by user 
+            - Growth rates, large/small forecasts 
+        - If updated forecast does not pass accuracy thresholds or previous best runs, restart forecast iteration process
+        - Initial and secondary accuracy metrics. For example if first threshold of 2% weighted MAPE is met then check for a MAE secondary metric. 
+    - Forecast Scenarios
+        - Run various what if scenarios defined by the user, leveraging the forecast update workflow
+    - Forecast Transformation
+        - Apply any specific post ML transformations. For example custom allocations down to lower level of data. 
+    - Forecast Explanation
+        - Explain the forecast output, data used to train models.
+        - Teach the user more about how the ML process works, and the reasoning behind model choices. 
+    - Variance Analysis
+    - Ad Hoc Data Analysis
+        - Create and run code to answer any other questions asked by user. 

@@ -4,8 +4,7 @@ title: "Books That Changed My Life"
 
 ### Better Life 
 
-- [The Alamanack of Naval Ravikant](https://a.co/d/crZWpii)
-    - [Review](https://mftokic.github.io/posts/2023-12-30-naval-book/)
+- [The Alamanack of Naval Ravikant](https://a.co/d/crZWpii) ([Notes](https://mftokic.github.io/posts/2023-12-30-naval-book/))
 - [Tools of Titans](https://a.co/d/dQsTYXz)
 - [The Essential Wooden](https://a.co/d/4Xk3z9z) 
 - [The Anthology of Balaji](https://a.co/d/7QqpPoP) 
@@ -99,6 +98,7 @@ title: "Books That Changed My Life"
 - [Breath](https://a.co/d/aLiLd4n) 
 - [The Four Hour Body](https://a.co/d/7ixne61)
 - [Magic Pill](https://a.co/d/9kWYp66)
+- [The Bulletproof Diet](https://a.co/d/ankeizO)
 
 ### Fiction 
 
