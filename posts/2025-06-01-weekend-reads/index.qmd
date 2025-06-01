@@ -14,50 +14,110 @@ draft: True
 
 ## Videos 
 
-::: {.callout-tip collapse="true" title="Alzheimer’s ↔ “Type-3 diabetes”"}
-- Insulin resistance in the brain is a proposed driver.  
-- Tight glucose control & exercise appear protective.
+::: {.callout-tip collapse="true" title="Kevin Rose on Tim Ferriss"}
+
+[Link to Video](https://www.youtube.com/watch?v=Eql0VFUc4Dc)
+
+### Personalized Medicine & Preventive Health
+
+#### Genomics-Driven Playbooks
+- **Whole-genome sequencing now <$1 k**; actionable variants like *MTHFR* surfaced fast.  
+- Kevin fed genome data to an LLM ➜ designed methyl-donor stack (methyl-B vitamins + NAC) that normalized chronic homocysteine in 8 weeks.  
+- Expect AI-omics pipelines to accelerate bespoke supplement/drug combos and UCSF-style novel proteins for dementia.
+
+#### Regular Screening Saves Lives
+- Colonoscopy (propofol “slow ramp”) + annual full-body MRI caught early issues in friends.  
+- **GRAIL blood test** offers multi-cancer screen for MRI-averse patients.  
+- Baseline science literacy (*Bad Science*) curbs scan anxiety and media hype.
+
+#### Everyday Bio-Optimizations
+- **WHOOP MG** band: smaller; cuff-calibrated BP, VO₂ max, “Whoop Age,” ECG spot-checks, AI coach.  
+- **Zone 2 cardio** (talk-test or custom HR zones) for mitochondrial fitness; Quantified Scientist benchmarks wearables.  
+
+---
+
+### Sobriety & Mental Health
+
+#### 90-Day Alcohol Reset
+- Kevin’s ALT/AST 150 → low-30s and mood up after 26 dry days, aided by:  
+  - 24-hour “Not today” mindset from 12-step culture.  
+  - Phone-a-friend list & weekly men’s Zoom.  
+  - Replacement hobbies (adult Lego, bonsai Nanoblocks, golf).  
+- **Quotes**  
+  - “Drinking is borrowing happiness from tomorrow.”  
+  - “I had my first drink—and my last—to feel like a grown-up.”  
+  - “Discipline is the strongest form of self-love.”
+
+#### Tech-Assisted Therapy
+- **Accelerated TMS** (50 × 9-min sessions/5 days) gave Tim 3–4 months of OCD remission; psychedelic priming may boost neuroplasticity.  
+- Trazodone caused delayed ejaculation; consumer brain-zappers mostly ineffective or risky.  
+- Insurers may soon cover accelerated protocols; combine with metabolic psychiatry (keto, exogenous ketones) for durable gains.
+
+---
+
+### AI, Data Privacy & the Trust Crisis
+
+#### Exploding Possibilities
+- AI + AlphaFold compress decades of protein discovery; UAE wiring government & genomics at national scale.  
+- LLMs craft deep-fake gurus & fake reviews (e.g., $6 headphones “beating” $500 sets).
+
+#### Proving You’re Human
+- **World ID** iris scans yield private on-device proofs.  
+- Digg 2.0 exploring ZK-proof badges (e.g., verified 5-year Oura subscriber).  
+- Genome data is never truly anonymous; Tim deleted 23-and-Me data post-acquisition scare.
+
+---
+
+### Travel, Culture & Lifestyle
+
+#### Taiwan Highlights
+- Go soon—cultural shift feels inevitable; locals oddly calm.  
+- Must-tries: “Really Good Seafood,” Oriental Beauty Oolong, rainforest hikes <1 hr from Taipei.
+
+#### Japan Coffee Circuit
+- Glitch (Ginza), Bear Pond, Send Gold, Café Mameya (aged brews).  
+- Souvenirs: POJ Studio for artisan imports, Nijya markets for affordable teas/dashi.
+
+#### Low-Stimulation Entertainment
+- *32 Sounds* documentary (headphones!).  
+- *Flow* (wordless low-poly Latvian animation) rewards 5 min acclimation.
+
+---
+
+### Meditation, Awareness & Inner Work
+
+#### Hybrid Zen Retreat
+- Small-group (8 ppl) talk-enabled format with Henry Shukman + Valerie = “warm-bath” re-entry vs. monastic sesshin.  
+- Multiple daily sits build momentum; even Tim (post-Vipassana crash) found it healing.  
+- *Way* app — 30 free sessions → <https://thewayapp.com/tim>
+
+#### Mindfulness Aids
+- **Books**  
+  - Anthony De Mello *Awareness* (insight-dense).  
+  - Paul Madonna *Everything Is Its Own Reward* (illustrated essays on noticing the everyday miracle).  
+- Tea-time dashi, Lego art, Japanese incense double as sober anchors.
+
+---
+
+### Play & Entrepreneurship
+
+#### Coyote Card Game
+- Tim × Exploding Kittens collab; top-seller at Walmart, viral gameplay videos (tens of millions).  
+- Mechanics: bluff / probability twist on rock-paper-scissors.
+
+#### Digg 2.0
+- Kevin + Alexis Ohanian reviving Digg as human-verified discussion hub to counter AI spam.
+
+---
+
+### Key Meta-Themes
+1. **Proactive Health > Reactive Care** — genome-to-wearable stack.  
+2. **Tech as Amplifier** — same AI enables healing *and* harm; verification layer crucial.  
+3. **Meaningful Constraints** — sobriety, meditation, screening schedules create freedom.  
+4. **Rediscover Ordinary Wonder** — soundscapes, tea rituals, Lego builds turn mundane moments magical.
+
+> *“Courage isn’t the absence of fear; it’s taking action in spite of it.”*  
 :::
-
-<ul>
-
-<li>
-::: {.callout-tip collapse="true" title="Alzheimer’s ↔ “Type-3 diabetes”"}
-- Insulin resistance in the brain is a proposed driver.  
-- Tight glucose control & exercise appear protective.
-:::
-</li>
-
-<li>
-::: {.callout-tip collapse="true" title="Fasting & HbA1c"}
-- A1C 4.8-5.2 % → long fasts may disrupt hormones.  
-- A1C > 5.6 % → time-restricted eating often improves markers.
-:::
-</li>
-
-</ul>
-
-<ul>
-
-<li>
-  <details>
-    <summary><strong>Alzheimer’s ↔ “Type-3 diabetes”</strong></summary>
-
-- Insulin resistance in the brain is a proposed driver.  
-- Tight glucose control & exercise appear protective.
-  </details>
-</li>
-
-<li>
-  <details>
-    <summary><strong>Fasting & HbA1c</strong></summary>
-
-- A1C 4.8-5.2 % → long fasts may disrupt hormones.  
-- A1C > 5.6 % → time-restricted eating often improves markers.
-  </details>
-</li>
-
-</ul>
 
 
 ## Tweets 
