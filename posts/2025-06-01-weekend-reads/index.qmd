@@ -1,0 +1,39 @@
+---
+title: "Weekend Reads (6/1/25)"
+description: "Interesting things I found on the internet this week"
+author: "Mike Tokic"
+date: "2025-06-01"
+categories: [weekend-reads]
+image: "image.png"
+draft: True
+---
+
+## Articles 
+
+- Test
+
+## Videos 
+
+<ul>
+
+<li>
+::: {.callout-tip collapse="true" title="Alzheimer’s ↔ “Type-3 diabetes”"}
+- Insulin resistance in the brain is a proposed driver.  
+- Tight glucose control & exercise appear protective.
+:::
+</li>
+
+<li>
+::: {.callout-tip collapse="true" title="Fasting & HbA1c"}
+- A1C 4.8-5.2 % → long fasts may disrupt hormones.  
+- A1C > 5.6 % → time-restricted eating often improves markers.
+:::
+</li>
+
+</ul>
+
+
+
+## Tweets 
+
+- [Apple reacts to OpenAI's new AI device](https://x.com/trungtphan/status/1925643955787423946?s=46)
