@@ -14,6 +14,11 @@ draft: True
 
 ## Videos 
 
+::: {.callout-tip collapse="true" title="Alzheimer’s ↔ “Type-3 diabetes”"}
+- Insulin resistance in the brain is a proposed driver.  
+- Tight glucose control & exercise appear protective.
+:::
+
 <ul>
 
 <li>
