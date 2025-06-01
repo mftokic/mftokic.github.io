@@ -10,7 +10,1230 @@
 <atom:link href="https://mftokic.github.io/index.xml" rel="self" type="application/rss+xml"/>
 <description>A collection of thoughts on things from the mind of Mike Tokic</description>
 <generator>quarto-1.5.57</generator>
-<lastBuildDate>Sat, 24 May 2025 07:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sun, 01 Jun 2025 07:00:00 GMT</lastBuildDate>
+<item>
+  <title>Weekend Reads (6/1/25)</title>
+  <dc:creator>Mike Tokic</dc:creator>
+  <link>https://mftokic.github.io/posts/2025-06-01-weekend-reads/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="videos" class="level2">
+<h2 class="anchored" data-anchor-id="videos">Videos</h2>
+<div class="callout callout-style-default callout-tip callout-titled" title="Kevin Rose on Tim Ferriss">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Kevin Rose on Tim Ferriss
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><a href="https://www.youtube.com/watch?v=Eql0VFUc4Dc">Link to Video</a></p>
+<section id="personalized-medicine-preventive-health" class="level3">
+<h3 class="anchored" data-anchor-id="personalized-medicine-preventive-health">Personalized Medicine &amp; Preventive Health</h3>
+<section id="genomics-driven-supplement-playbook" class="level4">
+<h4 class="anchored" data-anchor-id="genomics-driven-supplement-playbook">Genomics-Driven Supplement “Playbook”</h4>
+<ul>
+<li>Kevin sequenced his <strong>entire genome</strong> for ≈ $700 (full‐genome, not 23-and-Me).<br>
+</li>
+<li>AI + VCF file located an <em>MTHFR</em> mutation ➜ explains chronically high <strong>homocysteine</strong> (CVD risk marker).<br>
+</li>
+<li>Iterative stack (added one lever at a time):
+<ul>
+<li>Methyl-B vitamins (methyl-folate, methyl-B12).<br>
+</li>
+<li><strong>N-Acetyl-Cysteine (NAC)</strong> as extra methyl donor → finally dropped homocysteine to <em>normal range</em> after “years of failure.”<br>
+</li>
+</ul></li>
+<li>Take-away → expect LLM-driven “omic” protocols that surface <em>root-cause</em> bottlenecks, not just blanket supplement lists.</li>
+</ul>
+</section>
+<section id="annual-check-ups-early-detection" class="level4">
+<h4 class="anchored" data-anchor-id="annual-check-ups-early-detection">Annual Check-ups &amp; Early Detection</h4>
+<ul>
+<li>Colonoscopy schedule: Tim keeps rigid 5-year cadence after friend’s fatal metastatic colon cancer.
+<ul>
+<li>Pro-tip: ask anesthesiologist for a <strong>“slow ramp”</strong> propofol drip (60 s mild euphoria before lights-out).<br>
+</li>
+</ul></li>
+<li>Full-body MRI: caught a stable micro-aneurysm in Kevin’s brain; now scanned yearly.
+<ul>
+<li>Downside = “incidentalomas” (false positives you must learn to ignore).<br>
+</li>
+</ul></li>
+<li><strong>GRAIL blood test</strong> as needle-only multi-cancer screen for claustrophobic patients.<br>
+</li>
+<li>Baseline literacy books ­→ <em>Bad Science</em> (Ben Goldacre) for media-hype triage.</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="everyday-bio-optimization-toolkit" class="level3">
+<h3 class="anchored" data-anchor-id="everyday-bio-optimization-toolkit">Everyday Bio-Optimization Toolkit</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 30%">
+<col style="width: 35%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Tool / Habit</th>
+<th>Key Details</th>
+<th>Practical Tip</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>WHOOP “MG”</strong></td>
+<td>12 % smaller; cuff-calibrated BP, ECG spot check, VO₂ max, “Whoop Age” composite.</td>
+<td>Set custom HR zones or import lab VO₂ max to refine Zone-2 training.</td>
+</tr>
+<tr class="even">
+<td><strong>Zone 2 cardio</strong></td>
+<td>“Talk test” ≈ can speak full sentences, wouldn’t choose to.</td>
+<td>Aim 30–60 min daily; compare wearables with <em>Quantified Scientist</em> benchmarks.</td>
+</tr>
+<tr class="odd">
+<td><strong>Profi nasal hydro-gel</strong></td>
+<td>Stanford tech; traps viruses/bacteria in mucosal matrix.</td>
+<td>1 spray/nostril pre-flight or large indoor events.</td>
+</tr>
+<tr class="even">
+<td><strong>Dashi tea-bags</strong></td>
+<td>Okui 1871 packs bonito + anchovy + kelp as single-serve sachets.</td>
+<td>Use like morning tea/coffee; mineral-rich umami without caffeine.</td>
+</tr>
+<tr class="odd">
+<td><strong>Peloton seat caution</strong></td>
+<td>Narrow saddle → perineal compression → numbness, fertility risk.</td>
+<td>Swap seat or move to air-rower/Assault-bike with adjustable saddle.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="sobriety-journey-liver-reset" class="level3">
+<h3 class="anchored" data-anchor-id="sobriety-journey-liver-reset">Sobriety Journey &amp; Liver Reset</h3>
+<ul>
+<li>Kevin: <strong>26+ dry days</strong> (goal ≥ 90).
+<ul>
+<li>Liver enzymes AST/ALT fell <strong>150 → low-30s</strong>.<br>
+</li>
+<li>Mood “+10 % baseline” and reduced sensitivity to criticism.<br>
+</li>
+</ul></li>
+<li>Tools &amp; mindsets
+<ul>
+<li>24-hour pledge: “Not today—tomorrow is undecided.”<br>
+</li>
+<li>Phone-a-friend contact sheet; weekly men-only Zoom for accountability.<br>
+</li>
+<li>Substitute hobbies: adult <strong>LEGO art</strong> (<em>Great Wave</em> 1 k pcs), Nanoblocks cherry-blossom, golf w/ spouse.<br>
+</li>
+</ul></li>
+<li>Aphorisms
+<ul>
+<li>“Drinking is <strong>borrowing happiness from tomorrow</strong>.”<br>
+</li>
+<li>“Discipline is the strongest form of self-love.”</li>
+</ul></li>
+</ul>
+<hr>
+</section>
+<section id="neuro-tech-mental-health-experiments" class="level3">
+<h3 class="anchored" data-anchor-id="neuro-tech-mental-health-experiments">Neuro-Tech &amp; Mental-Health Experiments</h3>
+<section id="accelerated-tms-saint-protocol" class="level4">
+<h4 class="anchored" data-anchor-id="accelerated-tms-saint-protocol">Accelerated TMS (SAINT protocol)</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 57%">
+<col style="width: 42%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Parameter</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Course</strong></td>
+<td>50 sessions × 9 min over 5 days (10 hrs total).</td>
+</tr>
+<tr class="even">
+<td><strong>Target</strong></td>
+<td>Anxiometic coil placement for OCD/rumination.</td>
+</tr>
+<tr class="odd">
+<td><strong>Outcome #1</strong></td>
+<td>2-week latency → 3–4 months full-symptom remission.</td>
+</tr>
+<tr class="even">
+<td><strong>Outcome #2</strong></td>
+<td>1-day &amp; 3-day boosters = no effect.</td>
+</tr>
+<tr class="odd">
+<td><strong>Hypothesis</strong></td>
+<td>Remission amplified by <strong>psychedelic priming</strong> ➜ heightened neuroplasticity.</td>
+</tr>
+<tr class="even">
+<td><strong>Side-effect</strong></td>
+<td>Transient <em>delayed ejaculation</em> (likely trazodone, not TMS).</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="blockquote">
+<p><strong>Insurance</strong> covers conventional TMS for TR-depression; accelerated protocols may follow once cost-benefit data mature.</p>
+</blockquote>
+<hr>
+</section>
+</section>
+<section id="ai-privacy-the-trust-layer" class="level3">
+<h3 class="anchored" data-anchor-id="ai-privacy-the-trust-layer">AI, Privacy &amp; the “Trust Layer”</h3>
+<ul>
+<li>Deep-fake Tim Ferriss ads (stock-tips) → 90 % realistic; glitchy head-tilts only giveaway.<br>
+</li>
+<li>LLMs fabricate persuasive product copy (<em>$6 headphones &gt; $500 model</em> test).<br>
+</li>
+<li><strong>World ID</strong> iris scan stores zero-knowledge proof on device → reusable “proof of personhood.”<br>
+</li>
+<li>Digg 2.0 (Kevin + Alexis Ohanian) exploring <strong>ZK-proof badges</strong> (e.g., “verified 5-yr Oura user”) to filter bot content.<br>
+</li>
+<li>Tim deleted 23-and-Me data post-acquisition: genome anonymity is illusion; custom bio-agents feasible once LLMs pair with wet-labs.</li>
+</ul>
+<hr>
+</section>
+<section id="travel-culture-experiential-picks" class="level3">
+<h3 class="anchored" data-anchor-id="travel-culture-experiential-picks">Travel, Culture &amp; Experiential Picks</h3>
+<section id="taiwan-visit-before-prc-re-absorption" class="level4">
+<h4 class="anchored" data-anchor-id="taiwan-visit-before-prc-re-absorption">Taiwan (visit <em>before</em> PRC re-absorption?)</h4>
+<ul>
+<li>Locals oddly placid about geopolitics.<br>
+</li>
+<li>Highlights:
+<ul>
+<li><strong>“Really Good Seafood”</strong> (bronze sculptures inside).<br>
+</li>
+<li>Oriental Beauty Oolong &amp; rainforest hikes &lt; 60 min from Taipei.</li>
+</ul></li>
+</ul>
+</section>
+<section id="japan-coffee-circuit" class="level4">
+<h4 class="anchored" data-anchor-id="japan-coffee-circuit">Japan Coffee Circuit</h4>
+<ol type="1">
+<li><strong>Glitch</strong> (Ginza) – latte w/ Hokkaido milk “witchcraft.”<br>
+</li>
+<li><strong>Bear Pond</strong> – “Angel-stain” viscous espresso.<br>
+</li>
+<li><strong>Send Gold</strong> – Colombian wine-yeast peach-honey beans.<br>
+</li>
+<li><strong>Café Mameya</strong> – reservation-only; serves aged geishas in wine snifters.</li>
+</ol>
+<p><em>Tip:</em> Yen weakness → tourist surge; book Studio-Ghibli tickets months ahead.</p>
+</section>
+<section id="indielow-stim-entertainment" class="level4">
+<h4 class="anchored" data-anchor-id="indielow-stim-entertainment">Indie/Low-Stim Entertainment</h4>
+<ul>
+<li><em>32 Sounds</em> (headphones a must) – immersive docu-meditation on sound.<br>
+</li>
+<li><em>Flow</em> – Latvian low-poly, wordless post-apocalyptic cat saga; visual acclimation ≈ 5 min.<br>
+</li>
+<li>Adult LEGO “art series,” Nanoblocks cherry-blossom, POJ Studio for Japanese home goods.</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="meditation-inner-work" class="level3">
+<h3 class="anchored" data-anchor-id="meditation-inner-work">Meditation &amp; Inner Work</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 21%">
+<col style="width: 24%">
+<col style="width: 54%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Retreat Style</th>
+<th>Classic Sesshin</th>
+<th>Hybrid “Warm-Bath” (NM mini-retreat)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Wake-up</td>
+<td>4–5 a.m.</td>
+<td>9 a.m.</td>
+</tr>
+<tr class="even">
+<td>Silence</td>
+<td>100 %</td>
+<td>Mixed: silent sits + dialog breaks</td>
+</tr>
+<tr class="odd">
+<td>Food</td>
+<td>Oryoki mush</td>
+<td>Café lunches + group dinner</td>
+</tr>
+<tr class="even">
+<td>Tim’s Outcome</td>
+<td>Nervous-system crash (prior Vipassana)</td>
+<td>Safe re-entry; regained momentum; now daily <em>Way</em> sessions</td>
+</tr>
+</tbody>
+</table>
+<p><em>Way</em> app ⇒ 30 free sits → <a href="https://thewayapp.com/tim" class="uri">https://thewayapp.com/tim</a></p>
+<p><strong>Books for practice</strong><br>
+- Anthony de Mello <em>Awareness</em> – lecture transcripts, dense insights.<br>
+- Paul Madonna <em>Everything Is Its Own Reward</em> – illustrated urban essays; makes ordinary magic visible.</p>
+<hr>
+</section>
+<section id="entrepreneurship-play" class="level3">
+<h3 class="anchored" data-anchor-id="entrepreneurship-play">Entrepreneurship &amp; Play</h3>
+<ul>
+<li><strong>Coyote</strong> (Ferriss × Exploding Kittens)
+<ul>
+<li>Social bluff party game; Walmart exclusive → top seller; gameplay videos = most-watched in EK history.</li>
+</ul></li>
+<li><strong>True Ventures</strong> invests $15 M in UCSF protein tackling Alzheimer’s/dementia; Kevin joins board.</li>
+</ul>
+<hr>
+</section>
+<section id="favorite-quotes-aphorisms" class="level3">
+<h3 class="anchored" data-anchor-id="favorite-quotes-aphorisms">Favorite Quotes &amp; Aphorisms</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Theme</th>
+<th>Quote</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Sobriety</td>
+<td>“I had my first drink—and my last—to be a grown-up.”</td>
+</tr>
+<tr class="even">
+<td>Momentum</td>
+<td>“A habit missed once is no big deal; a habit missed twice is the start of a new habit.”</td>
+</tr>
+<tr class="odd">
+<td>Focus</td>
+<td>“Successful people say <em>no</em> to most things; the most successful say no to <em>everything</em>.”</td>
+</tr>
+<tr class="even">
+<td>Ethics</td>
+<td>“Growth for growth’s sake is the ideology of a cancer cell.”</td>
+</tr>
+<tr class="odd">
+<td>Resilience</td>
+<td>“Courage isn’t the absence of fear; it’s taking action in spite of it.”</td>
+</tr>
+</tbody>
+</table>
+</section>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="The Science Behind Intersellar">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+The Science Behind Intersellar
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><a href="https://www.youtube.com/watch?v=4f9V-8BHONo">Link to Video</a></p>
+<section id="kip-thorne-context-career-arc" class="level3">
+<h3 class="anchored" data-anchor-id="kip-thorne-context-career-arc">Kip Thorne — context &amp; career arc</h3>
+<ul>
+<li><strong>Caltech theoretical physicist</strong> (Richard P. Feynman Professor Emeritus).<br>
+</li>
+<li>Co-author of the 1 200-page graduate text <strong><em>Gravitation</em></strong> (Misner–Thorne–Wheeler, 1973) – nicknamed <em>“the phone book”</em> for its Manhattan-yellow-pages thickness.<br>
+</li>
+<li>Research timeline
+<ol type="1">
+<li>1960-s–90-s Black-hole astrophysics &amp; relativistic stars.<br>
+</li>
+<li>1970-s  Conceptual seeds of gravitational-wave detection (inspired by Joe Weber’s resonant bars).<br>
+</li>
+<li>1984-2015 Co-founds &amp; steers <strong>LIGO</strong> → first direct wave detection (14 Sep 2015).<br>
+</li>
+<li>2005-present Science/arts cross-over: <em>Interstellar</em> (exec-producer), poetry-and-painting projects, sci-fi screenplay development.<br>
+</li>
+</ol></li>
+<li><strong>Nobel Prize in Physics 2017</strong> (with Rainer Weiss &amp; Barry Barish) “for decisive contributions to the LIGO detector and the observation of gravitational waves.”</li>
+</ul>
+<hr>
+</section>
+<section id="interstellar-2014-science-baked-into-cinema" class="level2">
+<h2 class="anchored" data-anchor-id="interstellar-2014-science-baked-into-cinema">Interstellar (2014) — science baked into cinema</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 23%">
+<col style="width: 40%">
+<col style="width: 36%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Production seed</th>
+<th>Core scientific constraint</th>
+<th>How it appears on-screen</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1990s brainstorming between Thorne &amp; producer Linda Obst → “warp-side of the universe” premise</td>
+<td><strong>No plot device may violate well-established physics; ‘wild’ elements must at least extrapolate existing theory.</strong></td>
+<td>Wormhole near Saturn (valid under GR if exotic matter available); Gargantua black hole rendered via full relativistic ray-tracing.</td>
+</tr>
+<tr class="even">
+<td>Christopher &amp; Jonathan Nolan rewrite Thorne/Obst outline</td>
+<td>Preserve constraints, add human drama</td>
+<td>Ending deliberately “Kubrick-mysterious”; detailed explanation relegated to Thorne’s tie-in book <strong><em>The Science of Interstellar</em></strong>.</td>
+</tr>
+</tbody>
+</table>
+<section id="two-widely-debated-scenes-explained" class="level4">
+<h4 class="anchored" data-anchor-id="two-widely-debated-scenes-explained">Two widely debated scenes explained</h4>
+<ol type="1">
+<li><strong>Miller’s Planet giant wave</strong>
+<ul>
+<li>Modeled as a <strong>solitary (soliton) wave</strong> – a stable, non-breaking solution to the Korteweg–de Vries equation where non-linearity balances dispersion.<br>
+</li>
+<li>Wave amplitude ≈ 6× local water depth ⇒ must occur over deep ocean; protagonists stand on a subsurface island (Thorne’s back-story).<br>
+</li>
+<li>Tides driven by planet’s periodic re-orientation in Gargantua’s extreme gravitational gradient (not a simple “swell”).</li>
+</ul></li>
+<li><strong>1 h = 7 y time-dilation</strong>
+<ul>
+<li>Requires orbit at (or just outside) the <strong>innermost stable circular orbit (ISCO)</strong> of an <strong>extremely rapidly spinning (near-maximal Kerr) black hole</strong>.<br>
+</li>
+<li>Thorne derived an analytic series formula showing dilation factor ≈ (1 – a*)^{-1/3}; solving yields dimensionless spin (a*).<br>
+</li>
+<li>Spin this high is borderline but not forbidden by GR → challenge met.</li>
+</ul></li>
+</ol>
+</section>
+<section id="tessaract-5-d-bulk-travel" class="level4">
+<h4 class="anchored" data-anchor-id="tessaract-5-d-bulk-travel">Tessaract &amp; 5-D “bulk travel”</h4>
+<ul>
+<li>Once Cooper crosses Gargantua’s horizon he is picked up by a 4-D cube spacecraft (tesseract) built by an advanced civilization.<br>
+</li>
+<li>Craft exits the hole through the higher-dimensional bulk, where Earth lies only a short 5-D distance away → avoids FTL violation in 4-D spacetime.</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="wormholes-exotic-matter-time-machines" class="level2">
+<h2 class="anchored" data-anchor-id="wormholes-exotic-matter-time-machines">Wormholes, exotic matter &amp; time machines</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 27%">
+<col style="width: 72%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Key term</th>
+<th>Plain-language expansion</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Wormhole throat</strong></td>
+<td>3-D tunnel linking two distant 4-D regions. Stable only if its walls are <strong>repelled</strong> by negative-pressure, negative-energy <strong>exotic matter</strong>.</td>
+</tr>
+<tr class="even">
+<td><strong>Exotic matter source</strong></td>
+<td>In quantum field theory, regions where vacuum energy is <em>lower</em> than normal (Casimir effect between conducting plates). To hold a macroscopic throat open you would need vacuum-fluctuation engineering on planetary scale.</td>
+</tr>
+<tr class="odd">
+<td><strong>Sum-over-histories (Feynman/Gell-Mann–Hartle)</strong></td>
+<td>Quantum-mechanical picture where every possible spacetime geometry contributes; allows small probabilities for closed timelike curves ⇒ potential information loss.</td>
+</tr>
+<tr class="even">
+<td><strong>Hawking–Thorne–Preskill bet (1990)</strong></td>
+<td><ins>Issue</ins> Does black-hole evaporation destroy information?<br><strong>Hawking + Thorne:</strong> <em>Yes</em> (non-unitary).<br><strong>Preskill:</strong> <em>No</em>.<br>• 2004 Hawking conceded publicly in Dublin, gifting Preskill an encyclopedia “full of information”. Thorne withholds concession, citing viable info-loss within sum-over-histories quantum gravity.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Chronology protection</strong><br>
+- Vacuum fluctuations would circulate through a newly created time machine, exponentially blueshift, and <em>likely</em> destroy the wormhole (Hawking “safe for historians” conjecture).<br>
+- Final answer requires yet-to-be-completed <strong>quantum gravity</strong>.</p>
+<hr>
+</section>
+<section id="gravitational-waves-ligo-from-phone-book-crazy-to-nobel" class="level2">
+<h2 class="anchored" data-anchor-id="gravitational-waves-ligo-from-phone-book-crazy-to-nobel">Gravitational waves &amp; LIGO — from “phone-book crazy” to Nobel</h2>
+<section id="conceptual-leap" class="level3">
+<h3 class="anchored" data-anchor-id="conceptual-leap">Conceptual leap</h3>
+<ol type="1">
+<li><strong>Joe Weber (1960s)</strong> – aluminium cylinders with piezoelectric transducers; claimed detections (later unconfirmed).<br>
+</li>
+<li><strong>Rainer Weiss (1972 MIT memo)</strong> – kilometre-scale <strong>laser interferometer</strong>; identified all noise sources; memo circulated but unpublished.<br>
+</li>
+<li><strong>Thorne (1973)</strong> in <em>Gravitation</em>: exercise “show this is impractical.” (He later changed mind.)<br>
+</li>
+<li><strong>Caltech–MIT collaboration (1980s)</strong> – private $2 M seed → NSF joins; Barry Barish leads construction of two 4 km detectors (Hanford WA &amp; Livingston LA).</li>
+</ol>
+</section>
+<section id="technical-translation-of-einsteins-idea" class="level3">
+<h3 class="anchored" data-anchor-id="technical-translation-of-einsteins-idea">Technical translation of Einstein’s idea</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 40%">
+<col style="width: 59%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Target signal</th>
+<th>Required sensitivity</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Binary-black-hole merger at 400 Mpc → strain (h10^{-21})</td>
+<td>Mirror displacement (ΔL h × 4 km ≈ 4 × 10^{-18},m) ≈ <strong>1/100 of a proton diameter</strong>, <strong>10 million × smaller than atomic spacing</strong>.</td>
+</tr>
+</tbody>
+</table>
+<section id="noise-beating-innovations" class="level4">
+<h4 class="anchored" data-anchor-id="noise-beating-innovations">Noise-beating innovations</h4>
+<ul>
+<li><strong>Seismic isolation</strong>: quadruple pendulum suspensions, 10 m vacuum tubes, active feedback.<br>
+</li>
+<li><strong>Quantum-precision metrology</strong>: squeezed-light injection reduces shot noise below the “standard quantum limit” (circumventing Heisenberg via vacuum-fluctuation sculpting).<br>
+</li>
+<li><strong>Super-polished 40 kg test-mass mirrors</strong> with nanoradian alignment control.</li>
+</ul>
+</section>
+</section>
+<section id="milestone" class="level3">
+<h3 class="anchored" data-anchor-id="milestone">Milestone</h3>
+<ul>
+<li><strong>GW150914</strong> detected 14 Sep 2015; announcement 11 Feb 2016.
+<ul>
+<li>36 M⊙ + 29 M⊙ → 62 M⊙ remnant (3 M⊙ radiated as gravitational energy).<br>
+</li>
+<li>7 ms arrival lag between sites matches light-speed travel through Earth.</li>
+</ul></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="relativity-quantum-mechanics-the-incompatibility" class="level2">
+<h2 class="anchored" data-anchor-id="relativity-quantum-mechanics-the-incompatibility">Relativity ↔︎ Quantum Mechanics: the incompatibility</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 51%">
+<col style="width: 48%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>General Relativity (GR)</th>
+<th>Quantum Mechanics (QM)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Spacetime = smooth classical manifold; curvature sourced by mass-energy.</td>
+<td>Fundamental dynamics probabilistic; <strong>unitarity</strong> forbids information loss.</td>
+</tr>
+<tr class="even">
+<td>Predicts singularities (black-hole core, Big Bang) where curvature → ∞.</td>
+<td>Fluctuating quantum fields demand discretized/uncertain geometry at Planck scale (~10⁻³⁵ m).</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Outstanding goal</strong> – a self-consistent <strong>quantum gravity</strong> theory (string theory &amp; loop-quantum gravity are leading candidates).<br>
+- Thorne: <em>“…string/M-theory likely path, but the problem is hard enough to span generations.”</em></p>
+<hr>
+</section>
+<section id="vacuum-fluctuations-the-casimir-effect-mini-glossary" class="level2">
+<h2 class="anchored" data-anchor-id="vacuum-fluctuations-the-casimir-effect-mini-glossary">Vacuum fluctuations &amp; the Casimir effect (mini-glossary)</h2>
+<ul>
+<li><strong>Vacuum fluctuation</strong> – transient “virtual” particle–antiparticle pairs mandated by the uncertainty principle.<br>
+</li>
+<li><strong>Casimir plates</strong> – two parallel conductors ∼µm apart restrict photon modes between them → lower vacuum energy inside → plates attract. Region exhibits <strong>negative energy density</strong> (prototype exotic matter).<br>
+</li>
+<li><strong>Quantum-precision measurement</strong> – technique (pioneered for LIGO) that squeezes vacuum noise in one quadrature while amplifying the other, beating standard quantum limits for displacement sensing.</li>
+</ul>
+<hr>
+</section>
+<section id="kip-thornes-current-future-creative-projects" class="level2">
+<h2 class="anchored" data-anchor-id="kip-thornes-current-future-creative-projects">Kip Thorne’s current &amp; future creative projects</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 32%">
+<col style="width: 68%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Domain</th>
+<th>Work in progress</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Literary</strong></td>
+<td><em>The Warped Side of the Universe</em> – illustrated poetry with painter Lia Halloran (2024).</td>
+</tr>
+<tr class="even">
+<td><strong>Film/TV</strong></td>
+<td>Unrevealed sci-fi screenplay begun with Linda Obst &amp; the late Stephen Hawking; may become a novel if film stalls.</td>
+</tr>
+<tr class="odd">
+<td><strong>History of science</strong></td>
+<td>Multi-author narrative history of LIGO (draft 6 circulating; anticipated 2027 publication).</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<section id="quotable-take-aways" class="level3">
+<h3 class="anchored" data-anchor-id="quotable-take-aways">Quotable take-aways</h3>
+<blockquote class="blockquote">
+<p>“If I see farther, it’s because I’ve stood on the shoulders of giants.” – paraphrasing Newton, Thorne emphasizes collaborative science.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>“Some problems take 50 years. That doesn’t mean they’re impossible — just important.”</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>“LIGO’s Nobel medal really belongs to a thousand people.”</p>
+</blockquote>
+<hr>
+<section id="recommended-entry-points-for-deeper-study" class="level4">
+<h4 class="anchored" data-anchor-id="recommended-entry-points-for-deeper-study">Recommended entry points for deeper study</h4>
+<ul>
+<li><strong><em>The Science of Interstellar</em></strong> (K. Thorne, 2014) – lay-level expansion of the film’s physics.<br>
+</li>
+<li><strong><em>Black Holes &amp; Time Warps</em></strong> (K. Thorne, 1994) – narrative history of relativistic astrophysics pre-LIGO.<br>
+</li>
+<li><strong>Caltech’s multimedia “Einstein’s Gravity Playlist”</strong> – video course on gravitational waves &amp; detectors.<br>
+</li>
+</ul>
+</section>
+</section>
+</section>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Bryan Johnson on Lex Fridman">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Bryan Johnson on Lex Fridman
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><a href="https://www.youtube.com/watch?v=1YbcB6b4A2U">Link to Video</a></p>
+<section id="demo-wearing-the-kernel-flow-headset" class="level2">
+<h2 class="anchored" data-anchor-id="demo-wearing-the-kernel-flow-headset">1 Demo: wearing the <strong>Kernel Flow</strong> headset</h2>
+<ul>
+<li><strong>Hardware</strong>: 52 optode “modules,” each containing <strong>1 picosecond-pulsed laser + 6 photodetectors</strong> → ≈ 1 000 independent fNIRS* channels covering the whole cortex.<br>
+</li>
+<li><strong>Principle</strong>: time-resolved <strong>near-infra-red spectroscopy</strong> measures tiny changes (&lt;1 %) in blood-oxygenation caused by local neuronal firing; photon time-of-flight inversion reconstructs depth-specific activation maps.<br>
+</li>
+<li><strong>User experience</strong>: surprisingly comfortable; self-adjusting elastomer lattice supports large head sizes; silent; can be donned in &lt;30 s.<br>
+</li>
+<li><strong>Real-time stream</strong>: Ubuntu 20.04 machine next to Lex records gigabytes of raw photon counts → GPU pipeline → cortical heat-maps at ~ 10 Hz.<br>
+</li>
+<li><strong>Joke/No-smile task</strong>: live demo shows differential motor-cortex activity when Lex suppresses facial muscles; illustrates sub-second sensitivity.</li>
+</ul>
+<blockquote class="blockquote">
+<p><em>fNIRS = functional Near-Infrared Spectroscopy — non-invasive cousin of fMRI; ~cm spatial, ~100 ms temporal resolution.</em></p>
+</blockquote>
+<hr>
+</section>
+<section id="from-toy-to-tool-why-this-matters" class="level2">
+<h2 class="anchored" data-anchor-id="from-toy-to-tool-why-this-matters">2 From toy to tool — why this matters</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 41%">
+<col style="width: 58%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Traditional “biometrics”</th>
+<th><strong>Brainstream (Flow/Flux roadmap)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Steps, HR, HRV — single scalar per second</td>
+<td>Thousands-dimensional activation vector every 10 ms</td>
+</tr>
+<tr class="even">
+<td>1–2 sensors on wrist</td>
+<td>Whole-cortex coverage</td>
+</tr>
+<tr class="odd">
+<td>Ex-situ lab studies</td>
+<td><strong>Wear anywhere:</strong> at home, work, therapy, meditation, gaming</td>
+</tr>
+<tr class="even">
+<td>Manual self-report</td>
+<td><strong>Passive, objective, self-supervised data</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Potential applications Johnson highlights:<br>
+1. <strong>Personalised cognitive load manager</strong> (tune meetings, learning blocks, meditation sessions).<br>
+2. <strong>Clinical</strong>: closed-loop depression &amp; PTSD therapies; drug-dose optimisation (e.g., ketamine, psychedelics).<br>
+3. <strong>Population research</strong>: large-N brain-behaviour datasets analogous to UK-Biobank for genetics.<br>
+4. <strong>Human-computer symbiosis</strong>: adaptive UIs that pause podcasts when attention drifts, or rewrite content difficulty live.</p>
+<hr>
+</section>
+<section id="kernels-go-to-market-logic-a-la-drake-equation" class="level2">
+<h2 class="anchored" data-anchor-id="kernels-go-to-market-logic-a-la-drake-equation">3 Kernel’s go-to-market logic (a la <strong>Drake equation</strong>)</h2>
+<blockquote class="blockquote">
+<p>“Our job is <strong>not</strong> to guess one killer app.<br>
+It’s to drop the sensor cost × data quality below a threshold that ignites an ecosystem.” — B.J.</p>
+</blockquote>
+<ul>
+<li>Phase 1 (2022-24): sell Flow to research labs &amp; dev studios → seed algos/tools.<br>
+</li>
+<li>Phase 2 (~2025): consumer variant <strong>Flux</strong> (magnetoencephalography-on-chip) = full-HD brain movie.<br>
+</li>
+<li>Phase 3: third-party apps discover “the Angry-Birds moment” for BCIs.</li>
+</ul>
+<hr>
+</section>
+<section id="neuralink-vs-kernel-two-complements-not-rivals" class="level2">
+<h2 class="anchored" data-anchor-id="neuralink-vs-kernel-two-complements-not-rivals">4 Neuralink vs Kernel — two complements, not “rivals”</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 41%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Feature</th>
+<th><strong>Neuralink</strong></th>
+<th><strong>Kernel</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Implant?</td>
+<td>Yes (invasive micro-electrodes)</td>
+<td>No (optical / magnetic)</td>
+</tr>
+<tr class="even">
+<td>Channel count</td>
+<td>1 000 spikes at 30 k S/s</td>
+<td>1 000 hemodynamic voxels at 10 Hz</td>
+</tr>
+<tr class="odd">
+<td>Spatial patch</td>
+<td>mm-scale 4 K circle</td>
+<td>Whole-head 1080p blur</td>
+</tr>
+<tr class="even">
+<td>Use-case</td>
+<td>Direct motor/sensory prosthesis</td>
+<td>Behavioural &amp; cognitive analytics</td>
+</tr>
+<tr class="odd">
+<td>Horizon</td>
+<td>FDA 🧠 2028+</td>
+<td>Research units shipping now</td>
+</tr>
+</tbody>
+</table>
+<p>Johnson’s bet: <em>“Seven-year window where high-resolution non-invasive will ignite developer culture before surgical BCIs become routine.”</em></p>
+<hr>
+</section>
+<section id="zeroth-principle-thinking" class="level2">
+<h2 class="anchored" data-anchor-id="zeroth-principle-thinking">5 Zeroth-principle thinking 🔭</h2>
+<ul>
+<li><strong>First principles</strong> = deduce from system laws (à la Sherlock’s <em>“once you eliminate the impossible…”</em>).<br>
+</li>
+<li><strong>Zeroth principles</strong> = hunt <em>building blocks</em> we don’t yet see — revolutionary “zeros” (Einsteinian spacetime; AlphaGo’s alien moves).<br>
+</li>
+<li>Algorithm:
+<ol type="1">
+<li>Map the <em>known unknowns</em> of today’s tech stack.<br>
+</li>
+<li>Ask which hidden variables, if measured, would spawn entirely new coordinate systems for society.<br>
+</li>
+<li>Design scaffolds (Kernel Flow) that lower the cost of discovering such variables.</li>
+</ol></li>
+</ul>
+<hr>
+</section>
+<section id="personal-physiology-hacks-johnsons-n-1-protocol" class="level2">
+<h2 class="anchored" data-anchor-id="personal-physiology-hacks-johnsons-n-1-protocol">6 Personal physiology hacks (Johnson’s n = 1 protocol)</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 17%">
+<col style="width: 38%">
+<col style="width: 44%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Domain</th>
+<th>Johnson’s routine</th>
+<th>Rationale / metrics</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Diet</strong></td>
+<td>1 meal/day at 08:30 — “Super-Veggie pudding” (broccoli, cauliflower, etc.), “Nutty pudding”, rotating bowl; 20 supplements; vegan.</td>
+<td>Long fasting window → resting HR 42 bpm, deep-sleep ↑, HRV ↑.</td>
+</tr>
+<tr class="even">
+<td><strong>Sleep</strong></td>
+<td>21:30 lights-off; no calories ≥ 4 h before; Oura ring + EEG band.</td>
+<td>Deep-sleep minutes predict next-day impulse control.</td>
+</tr>
+<tr class="odd">
+<td><strong>Biomarkers</strong></td>
+<td>200+ labs every 90 days (lipids, DNA-meth clocks, microbiome, NTs).</td>
+<td>Remove “conscious Brian” from menu decisions; algorithmic grocery list.</td>
+</tr>
+<tr class="even">
+<td><strong>Movement</strong></td>
+<td>Fasted zone-2 cardio &amp; strength daily.</td>
+<td>Insulin sensitivity, mood.</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="blockquote">
+<p>He compares his “autonomous self-care loop” to <strong>cryptocurrency</strong> smart contracts: encoded rules, minimal human whim.</p>
+</blockquote>
+<hr>
+</section>
+<section id="depression-kilimanjaro-the-death-match-with-reality" class="level2">
+<h2 class="anchored" data-anchor-id="depression-kilimanjaro-the-death-match-with-reality">7 Depression, Kilimanjaro &amp; the <em>“death-match with reality”</em></h2>
+<ul>
+<li>2014: mid-divorce, leaving Mormon faith, chronic depression. Joined charity trek in Tanzania.<br>
+</li>
+<li>Summit day: viral gastroenteritis + altitude sickness, SaO₂ ≈ 50 %. Guide’s mantra: <strong>“Look up → breathe → step.”</strong><br>
+</li>
+<li>Personal reset: descent ≈ rebirth → decision to sell Braintree/Venmo (2013) and fund Kernel ($53 M seed).</li>
+</ul>
+<hr>
+</section>
+<section id="brains-money-freedom" class="level2">
+<h2 class="anchored" data-anchor-id="brains-money-freedom">8 Brains ↔︎ Money ↔︎ Freedom</h2>
+<ul>
+<li>Payments history: door-to-door credit-card salesman → founded <strong>Braintree</strong> (2007) → acquired <strong>Venmo</strong> (2012) → PayPal buyout $800 M.<br>
+</li>
+<li>Crypto view: decentralised ledgers offer the same “autonomous accounting” we now need for brain data permissions (transparency + user control).<br>
+</li>
+<li>Privacy model: Kernel app lets wearer own/delete streams; future smart-contracts will grant time-bound, purpose-bound “brain-scope” to apps (akin to Android permissions).</li>
+</ul>
+<hr>
+</section>
+<section id="psychedelics-closed-loop-psychiatry" class="level2">
+<h2 class="anchored" data-anchor-id="psychedelics-closed-loop-psychiatry">9 Psychedelics &amp; closed-loop psychiatry</h2>
+<ul>
+<li>Today: subjective narratives dominate (“trip reports”).<br>
+</li>
+<li>Future: Flow baseline → dose → post-integration scans → ML models quantify which molecule × dose × context remits which network (DMN hyper-connectivity, amygdala hyper-re-weighting, etc.).<br>
+</li>
+<li>Parallel: cardiology wouldn’t hand out statins without cholesterol numbers; psych should stop handing out SSRIs without neural numbers.</li>
+</ul>
+<hr>
+</section>
+<section id="advice-to-young-minds" class="level2">
+<h2 class="anchored" data-anchor-id="advice-to-young-minds">10 Advice to young minds</h2>
+<blockquote class="blockquote">
+<ol type="1">
+<li><strong>Gather advice as mirrors</strong>, not blueprints; decode each speaker’s <em>assumption stack</em>.<br>
+</li>
+<li>Optimise for <strong>projects whose impact is still obvious in 250 years</strong>; money is fuel, not the game.<br>
+</li>
+<li>Train empathy + zeroth-principle curiosity: “Expect most conscious thoughts to be at least partially wrong on landing — examine &amp; iterate.”</li>
+</ol>
+</blockquote>
+<hr>
+</section>
+<section id="meaning-of-life-johnsons-current-stack" class="level2">
+<h2 class="anchored" data-anchor-id="meaning-of-life-johnsons-current-stack">11 Meaning of life — Johnson’s current stack</h2>
+<ol type="1">
+<li><strong>Infinite games</strong>: ensure the game of intelligence continues.<br>
+</li>
+<li><strong>Goal alignment</strong>: negotiation among billions of biological &amp; synthetic agents.<br>
+</li>
+<li><strong>Exploration</strong>: use ever-cheaper designed intelligence to poke outside current reality’s “sandbox rules.”</li>
+</ol>
+<blockquote class="blockquote">
+<p>“We may be the first generation that can genuinely <strong>upgrade consciousness</strong> beyond anything we can verbalise today… that aspiration alone is enough.”</p>
+</blockquote>
+<hr>
+<section id="further-reading-listening" class="level3">
+<h3 class="anchored" data-anchor-id="further-reading-listening">Further reading / listening</h3>
+<ul>
+<li><em>The Science of Brain Interfaces</em> — forthcoming Kernel white-paper series.<br>
+</li>
+<li>J. Horgan, “Spectroscopy of Thought” (<em>SciAm</em>, 2020) for fNIRS primer.<br>
+</li>
+<li>B. Johnson, blog post “Zeroth-Principles Thinking” (2020).<br>
+</li>
+<li>Lex Fridman Podcast #181 (full 2 h video).</li>
+</ul>
+</section>
+</section>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Andrew Huberman on Theo Von">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Andrew Huberman on Theo Von
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><a href="https://www.youtube.com/watch?v=gxHktBHVY5I">Link to Video</a></p>
+<section id="podcastings-rise" class="level3">
+<h3 class="anchored" data-anchor-id="podcastings-rise">Podcasting’s Rise</h3>
+<ul>
+<li><strong>Authenticity wins</strong> – shows launched in closets, bedrooms, skate-shop back rooms, so listeners sensed zero corporate filter.<br>
+</li>
+<li><strong>Long-form = modern campfire</strong> – multi-hour space lets comedians, scientists and musicians explore nuance mainstream outlets cut.<br>
+</li>
+<li><strong>Early-stage magic</strong> – when money and metrics aren’t dominant, creators operate in the “pre-conscious” zone Rick Rubin praises; audiences feel the difference.<br>
+</li>
+<li><strong>Ad tolerance rule</strong> – audiences accept ads if hosts genuinely use the products; trust stays intact.</li>
+</ul>
+<hr>
+</section>
+<section id="dopamine-101" class="level3">
+<h3 class="anchored" data-anchor-id="dopamine-101">Dopamine 101</h3>
+<ul>
+<li>Dopamine is about <em>wanting</em> and <strong>anticipatory motivation</strong>, not the actual reward.<br>
+</li>
+<li><strong>Reward-prediction error</strong> determines mood afterward:
+<ul>
+<li>Better than expected → extended high.<br>
+</li>
+<li>Worse than expected → crash below baseline.<br>
+</li>
+</ul></li>
+<li>Rapid, high-magnitude spikes (meth, gambling, extreme porn) produce deep troughs, driving compulsive reuse.<br>
+</li>
+<li>Healthy strategy: create slower, effort-based climbs (learning, training, creative work) to avoid the crash.</li>
+</ul>
+<hr>
+</section>
+<section id="pornography-intimacy-sexual-function" class="level3">
+<h3 class="anchored" data-anchor-id="pornography-intimacy-sexual-function">Pornography, Intimacy &amp; Sexual Function</h3>
+<ul>
+<li>Online porn is the “methamphetamine” version of sex stimuli: intensity and novelty raise dopamine thresholds, making real intimacy feel flat.<br>
+</li>
+<li>Excess porn in adolescence rewires expectations during a period of peak neural plasticity (≈0-25 yrs).<br>
+</li>
+<li>Practical fixes:
+<ul>
+<li>Abstinence / “dopamine fast” periods to reset baseline.<br>
+</li>
+<li>Slow-build intimacy – multiple non-intercourse sessions before sex, emphasize communication and breathing to stay parasympathetic.<br>
+</li>
+<li>Treat erectile anxiety with openness, not immediate pharmacology; Tadalafil (2.5-5 mg) is helpful later in life, not as an early crutch.</li>
+</ul></li>
+</ul>
+<hr>
+</section>
+<section id="circadian-lifestyle-protocols" class="level3">
+<h3 class="anchored" data-anchor-id="circadian-lifestyle-protocols">Circadian &amp; Lifestyle Protocols</h3>
+<ul>
+<li><strong>Morning anchors</strong>: sunlight to eyes, hydration, caffeine after 90 min, brief movement.<br>
+</li>
+<li><strong>Evening wind-down</strong>: dim screens or red-lens glasses, long exhale breathing, reduce stimulants.<br>
+</li>
+<li>Identify personal chronotype by testing bed/wake times for three days each.<br>
+</li>
+<li>Non-sleep deep rest (NSDR / yoga nidra) for 20-30 min restores dopamine ~60 %.</li>
+</ul>
+<hr>
+</section>
+<section id="views-on-science-pharma-replication" class="level3">
+<h3 class="anchored" data-anchor-id="views-on-science-pharma-replication">Views on Science, Pharma &amp; Replication</h3>
+<ul>
+<li>Most scientists pursue truth, but career incentives can bias which data get published or repeated.<br>
+</li>
+<li>Big-pharma profit model favors repurposing old drugs under patent rather than creating new molecules.<br>
+</li>
+<li>Wakefield fraud tainted vaccine debate; Huberman calls for <strong>open, well-designed replication studies</strong> on all public-health interventions.</li>
+</ul>
+<hr>
+</section>
+<section id="psychedelics-mental-health" class="level3">
+<h3 class="anchored" data-anchor-id="psychedelics-mental-health">Psychedelics &amp; Mental Health</h3>
+<ul>
+<li>Ibogaine + DMT protocol in veterans shows striking PTSD and addiction relief; Stanford’s Nolan Williams is imaging associated brain changes.<br>
+</li>
+<li>Huberman personally finds clinically guided MDMA and psilocybin transformative; stresses legality and expert supervision.</li>
+</ul>
+<hr>
+</section>
+<section id="faith-personal-practice" class="level3">
+<h3 class="anchored" data-anchor-id="faith-personal-practice">Faith &amp; Personal Practice</h3>
+<ul>
+<li>Both hosts pray daily; Huberman reconciles faith with science by noting that human perception covers only a slice of reality’s spectrum.<br>
+</li>
+<li>Prayer provides grounding, reflection, and a sense of “agency as receptor” for creative ideas.</li>
+</ul>
+<hr>
+</section>
+<section id="miscellaneous-nuggets" class="level3">
+<h3 class="anchored" data-anchor-id="miscellaneous-nuggets">Miscellaneous Nuggets</h3>
+<ul>
+<li>Finger-length ratio research: larger ring-to-index difference linked to higher prenatal testosterone; exaggerated in gay men.<br>
+</li>
+<li>Lesbians as “relationship coaches” – Huberman credits platonic lesbian friends for blunt, invaluable dating feedback.<br>
+</li>
+<li>Caffeine intake: Huberman consumes ~800 mg/day via yerba maté; warns against high-dose nicotine except low-milligram pouches early in day.<br>
+</li>
+<li>“Addiction = progressive narrowing of things that bring pleasure.” Aim for a wide palette of rewarding activities to stay mentally healthy.</li>
+</ul>
+</section>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Thomas DeLauer on Judd Lienhard">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Thomas DeLauer on Judd Lienhard
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><a href="https://www.youtube.com/watch?v=7U5ErqPiZG8">Link to Video</a></p>
+<section id="background-context" class="level3">
+<h3 class="anchored" data-anchor-id="background-context">1. Background &amp; Context</h3>
+<ul>
+<li><strong>Thomas DeLauer</strong> – former 300-lb corporate exec ➜ lost 100 lb, reversed debilitating IBS, built a 4 M-subscriber channel on nutrition, recovery and exercise science.<br>
+</li>
+<li>Runs experiments on himself and publicly <strong>updates/ corrects</strong> advice when new data overturn earlier takes.<br>
+</li>
+<li>Core mission: translate dense biochemistry into <em>actionable</em> habits for ordinary people.</li>
+</ul>
+<hr>
+</section>
+<section id="nutrition-myths-debunked" class="level3">
+<h3 class="anchored" data-anchor-id="nutrition-myths-debunked">2. Nutrition Myths Debunked</h3>
+<p><em>Protein</em><br>
+- “You can only absorb 30 g per meal.” → Human subjects assimilated <strong>100 g</strong> whey just as well as 25 g (labeled-leucine study, <em>Cell Metabolism</em> 2023). The surplus fuels protein synthesis for <strong>longer</strong>, not “wasted.”<br>
+- “Anabolic window = 30 min post-lift.” → MPS is still climbing 6 h post-workout, peaks ~24 h.<br>
+- “High protein hurts kidneys.” → No evidence in healthy kidneys; contraindicated only in late-stage disease. Longevity debate still open.</p>
+<p><em>Meal frequency &amp; snacking</em><br>
+- Frequent eating was popularized by bodybuilding; it <strong>mutes glucagon</strong>, never lets insulin fully drop and stalls fat mobilization.<br>
+- DeLauer’s rule: <strong>clear, defined gaps</strong> between feedings—no Skittles “in the valley.”</p>
+<p><em>Cortisol fear</em><br>
+- Transient spikes (fasting, workouts) aid lipolysis and alertness; demonizing cortisol keeps trainees over-fed and under-trained.</p>
+<p><em>Low-calorie grind</em><br>
+- Chronic 1–200 kcal deficits backfire: metabolism adapts, muscle is lost, “cheat-meal” rebounds get stored as fat at a slower BMR.<br>
+- <strong>High-energy flux</strong> (eat more + move more) outperforms <strong>eat less + move less</strong>: you burn extra calories just mobilizing larger energy throughput.</p>
+<hr>
+</section>
+<section id="core-nutrition-principles" class="level3">
+<h3 class="anchored" data-anchor-id="core-nutrition-principles">3. Core Nutrition Principles</h3>
+<ol type="1">
+<li><strong>Anchor every meal in protein</strong>
+<ul>
+<li>Target ≈ 1–1.2 g per lb <em>lean mass</em> (or per lb desired weight) to cover muscle, connective tissue, immune and enzyme needs.<br>
+</li>
+</ul></li>
+<li><strong>Strategic fasting / calorie cycling</strong>
+<ul>
+<li>Large deficit days or 24-h fasts are easier mentally than tiny daily cuts; maintain near-maintenance on other days.<br>
+</li>
+</ul></li>
+<li><strong>Whole-food quality &gt; calorie math</strong>
+<ul>
+<li>Micronutrients, fiber, resistant starch and satiety from foods like sweet potatoes, berries, aged cheese, lean beef, fatty fish.<br>
+</li>
+</ul></li>
+<li><strong>Randomness &amp; adaptability</strong>
+<ul>
+<li>Rotate carb sources, caloric loads and even unusual foods to broaden the microbiome and keep hormones responsive.</li>
+</ul></li>
+</ol>
+<hr>
+</section>
+<section id="fasting-valley-physiology" class="level3">
+<h3 class="anchored" data-anchor-id="fasting-valley-physiology">4. Fasting &amp; “Valley” Physiology</h3>
+<ul>
+<li>Insulin falls ➜ glucagon rises ➜ hormone-sensitive lipase releases stored fat.<br>
+</li>
+<li>Benefits: gut motility (“rest-and-digest” finally engages), sharper cognition (ketones + evolutionary alertness), practical calorie control.<br>
+</li>
+<li>Safe even for extended periods <strong>if hydration and electrolytes are maintained</strong>.</li>
+</ul>
+<hr>
+</section>
+<section id="training-philosophy-rqi" class="level3">
+<h3 class="anchored" data-anchor-id="training-philosophy-rqi">5. Training Philosophy (RQI)</h3>
+<ol type="1">
+<li><strong>Randomness / Adaptability</strong> – expose body to novel patterns, loads, planes; improvise when joints or recovery dictate.<br>
+</li>
+<li><strong>Quality</strong> – prioritize mind-muscle connection, controlled eccentrics, isometrics, full-range mechanics over arbitrary volume.<br>
+</li>
+<li><strong>Intuition</strong> – plan tomorrow’s session each night, but listen to fatigue, sleep and mood signals; shift goals to performance and feeling, not vanity metrics.</li>
+</ol>
+<hr>
+</section>
+<section id="supplement-short-list" class="level3">
+<h3 class="anchored" data-anchor-id="supplement-short-list">6. Supplement Short-List</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Supplement</th>
+<th>Core Reason &amp; Dose Thumb-Rules</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Whey protein isolate</td>
+<td>Convenient leucine bolus; easy pre-grocery hunger control.</td>
+</tr>
+<tr class="even">
+<td>Creatine monohydrate (5 g/day)</td>
+<td>Strength, power, neuro-protective; universally safe.</td>
+</tr>
+<tr class="odd">
+<td><strong>Taurine</strong> (4-6 g/day)</td>
+<td>Antioxidant, membrane stabilizer, intra-workout recovery.</td>
+</tr>
+<tr class="even">
+<td><strong>Betaine / TMG</strong> (2-3 g/day)</td>
+<td>Methyl-donor; research shows concurrent muscle gain &amp; fat loss, supports homocysteine control.</td>
+</tr>
+<tr class="odd">
+<td>L-Theanine (200-400 mg evening)</td>
+<td>Parasympathetic shift, smooths caffeine, improves sleep quality.</td>
+</tr>
+</tbody>
+</table>
+<p><em>Watch-outs</em>:<br>
+- <strong>Ashwagandha</strong> may blunt emotional highs for some; long wash-out times reported.<br>
+- <strong>Methylene blue</strong>—emerging nootropic/ mitochondrial aid, but still experimental.</p>
+<hr>
+</section>
+<section id="pantry-fridge-blueprint" class="level3">
+<h3 class="anchored" data-anchor-id="pantry-fridge-blueprint">7. Pantry / Fridge Blueprint</h3>
+<ul>
+<li>Blueberries<br>
+</li>
+<li>93 % lean ground beef<br>
+</li>
+<li>Sardines / mackerel (omega-3 + vitamin D &amp; calcium)<br>
+</li>
+<li>Free-range eggs<br>
+</li>
+<li>A2 or raw milk (lower BCM-7 inflammation)<br>
+</li>
+<li>Sweet &amp; regular potatoes<br>
+</li>
+<li>Broccoli sprouts (sulforaphane, DIM)<br>
+</li>
+<li>Aged cheese (pecorino, cheddar, parmesan)<br>
+</li>
+<li>Macadamia nuts<br>
+</li>
+<li>Quality coffee or green tea</li>
+</ul>
+<p><strong>Why</strong>: maximal nutrient density, favorable fatty-acid and amino profiles, minimal processing.</p>
+<hr>
+</section>
+<section id="ingredients-to-purge" class="level3">
+<h3 class="anchored" data-anchor-id="ingredients-to-purge">8. Ingredients to Purge</h3>
+<ol type="1">
+<li><strong>Polysorbate-80/-65/-20</strong> – lab-grade emulsifier that perforates cell membranes; used experimentally to induce gut inflammation.<br>
+</li>
+<li><strong>Petroleum-based dyes</strong> (Red 40, Yellow 5/6, etc.) – behavioral effects in kids; unnecessary when beet or spirulina coloring exists.<br>
+</li>
+<li>Chronic ultra-processed snacks that merge sugar, refined grain, seed-oil and high emulsifier loads.</li>
+</ol>
+<hr>
+</section>
+<section id="mindset-discipline-takeaways" class="level3">
+<h3 class="anchored" data-anchor-id="mindset-discipline-takeaways">9. Mindset &amp; Discipline Takeaways</h3>
+<ul>
+<li><strong>Purpose-driven fitness</strong> – after fatherhood Thomas’ KPI shifted from abs to energy &amp; patience for family; physique improvements followed.<br>
+</li>
+<li><strong>Intention beats goal</strong> – set daily intentions (direction) instead of binary goals that breed dopamine crashes.<br>
+</li>
+<li><strong>Plan nightly, live daily</strong> – outline food, training and meetings before bed; frees cognitive load for in-moment intuition.<br>
+</li>
+<li><strong>Community matters</strong> – progress accelerates when tied to a team, mission or service larger than self.<br>
+</li>
+<li><strong>Accept the coping element</strong> – high achievers often channel trauma into training; use it, don’t impose it on family.</li>
+</ul>
+<hr>
+</section>
+<section id="entrepreneurship-risk" class="level3">
+<h3 class="anchored" data-anchor-id="entrepreneurship-risk">10. Entrepreneurship &amp; Risk</h3>
+<ul>
+<li>Progress <strong>always involves risk</strong>: “You can’t steal second with your foot on first.”<br>
+</li>
+<li>DeLauer left high-pay corporate recruiting to solve his own IBS &amp; obesity, then monetized the <em>skill of articulating complex science</em>.<br>
+</li>
+<li>Tactical advice: start side-content while employed, prove value, then leap—own your schedule (and bathroom breaks).</li>
+</ul>
+</section>
+</div>
+</div>
+</div>
+</section>
+<section id="tweets" class="level2">
+<h2 class="anchored" data-anchor-id="tweets">Tweets</h2>
+<ul>
+<li><a href="https://x.com/trungtphan/status/1925643955787423946?s=46">Apple reacts to OpenAI’s new AI device</a></li>
+<li><a href="https://x.com/AutismCapital/status/1925683628589064682">ASMR is the most searched term on YouTube</a></li>
+<li><a href="https://x.com/StartupArchive_/status/1926244088170320189">Peter Thiel’s advice to his younger self</a></li>
+<li><a href="https://x.com/unusual_whales/status/1925913985007648932">No one actually eats INSIDE restaurants anymore</a></li>
+<li><a href="https://x.com/george__mack/status/1924571262472560852?s=46">Being vague creates anxiety</a></li>
+<li><a href="https://x.com/fitfounder/status/1927387176360137182?s=46">Beware of supplement scans on amazon</a></li>
+<li><a href="https://x.com/nikitabier/status/1926400125007458790?s=46">Guys being dudes</a></li>
+<li><a href="https://x.com/navalismhq/status/1928968738336026894?s=46">Meetings</a></li>
+<li><a href="https://x.com/david_perell/status/1928591346182332754?s=46">Meetings, still the worst</a></li>
+</ul>
+
+
+</section>
+
+ ]]></description>
+  <category>weekend-reads</category>
+  <guid>https://mftokic.github.io/posts/2025-06-01-weekend-reads/</guid>
+  <pubDate>Sun, 01 Jun 2025 07:00:00 GMT</pubDate>
+  <media:content url="https://mftokic.github.io/posts/2025-06-01-weekend-reads/image.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
 <item>
   <title>AI Manager &gt; People Manager</title>
   <dc:creator>Mike Tokic</dc:creator>
@@ -2500,40 +3723,6 @@ Click to read the original notes.
   <guid>https://mftokic.github.io/posts/2025-02-05-ts-fundamentals-data-cleaning-boxcox/</guid>
   <pubDate>Wed, 05 Feb 2025 08:00:00 GMT</pubDate>
   <media:content url="https://mftokic.github.io/posts/2025-02-05-ts-fundamentals-data-cleaning-boxcox/image.png" medium="image" type="image/png" height="144" width="144"/>
-</item>
-<item>
-  <title>Data Cleaning For Time Series</title>
-  <dc:creator>Mike Tokic</dc:creator>
-  <link>https://mftokic.github.io/posts/2025-02-03-ts-fundamentals-data-cleaning/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p><em>This post is part of a larger learning series around time series forecasting fundamentals. <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/">Check out the learning path</a> to see other posts in the series.</em></p>
-<section id="data-overview" class="level3">
-<h3 class="anchored" data-anchor-id="data-overview">Data Overview</h3>
-<p>The result of exploratory data analysis can reveal a lot about your data. One factor it can bubble up is how clean the data is, and if there needs to be any interventions done before we start training models. Cleaning your data is an important next step. If your data is garbage, you will create a garbage forecast. <a href="https://mftokic.github.io/posts/2024-04-08-time-series-garbage/">Gargbage in, garbage out.</a></p>
-</section>
-<section id="data-cleaning-for-time-series" class="level3">
-<h3 class="anchored" data-anchor-id="data-cleaning-for-time-series">Data Cleaning for Time Series</h3>
-<p>The way you clean your time series data is very different than of machine learning domains. Here are the building blocks of good data cleaning. Some are the same posts from previous chapters, but they still apply here. Click on each to explore further.</p>
-<ul>
-<li><a href="https://mftokic.github.io/posts/2024-11-26-ts-fundamentals-missing-outliers/">Missing Values, Outliers</a></li>
-<li><a href="https://mftokic.github.io/posts/2025-02-05-ts-fundamentals-data-cleaning-boxcox/">Box-Cox Transformation</a></li>
-<li><a href="https://mftokic.github.io/posts/2025-03-21-ts-fundamentals-data-cleaning-stationary/">Stationary</a></li>
-</ul>
-
-
-</section>
-
- ]]></description>
-  <category>machine-learning</category>
-  <category>time-series</category>
-  <guid>https://mftokic.github.io/posts/2025-02-03-ts-fundamentals-data-cleaning/</guid>
-  <pubDate>Mon, 03 Feb 2025 08:00:00 GMT</pubDate>
-  <media:content url="https://mftokic.github.io/posts/2025-02-03-ts-fundamentals-data-cleaning/image.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 </channel>
 </rss>

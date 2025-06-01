@@ -5,7 +5,6 @@ author: "Mike Tokic"
 date: "2025-06-01"
 categories: [weekend-reads]
 image: "image.png"
-draft: True
 ---
 
 ## Videos 
