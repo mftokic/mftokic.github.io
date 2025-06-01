@@ -8,15 +8,12 @@ image: "image.png"
 draft: True
 ---
 
-## Articles 
-
-- Test
-
 ## Videos 
 
 ::: {.callout-tip collapse="true" title="Kevin Rose on Tim Ferriss"}
 
 [Link to Video](https://www.youtube.com/watch?v=Eql0VFUc4Dc)
+
 ### Personalized Medicine & Preventive Health
 
 #### Genomics-Driven Supplement “Playbook”
@@ -150,7 +147,436 @@ draft: True
 | Resilience | “Courage isn’t the absence of fear; it’s taking action in spite of it.” |
 :::
 
+::: {.callout-tip collapse="true" title="The Science Behind Intersellar"}
+
+[Link to Video](https://www.youtube.com/watch?v=4f9V-8BHONo)
+
+### Kip Thorne — context & career arc  
+- **Caltech theoretical physicist** (Richard P. Feynman Professor Emeritus).  
+- Co-author of the 1 200-page graduate text **_Gravitation_** (Misner–Thorne–Wheeler, 1973) – nicknamed *“the phone book”* for its Manhattan-yellow-pages thickness.  
+- Research timeline  
+  1. 1960-s–90-s Black-hole astrophysics & relativistic stars.  
+  2. 1970-s   Conceptual seeds of gravitational-wave detection (inspired by Joe Weber’s resonant bars).  
+  3. 1984-2015 Co-founds & steers **LIGO** → first direct wave detection (14 Sep 2015).  
+  4. 2005-present Science/arts cross-over: *Interstellar* (exec-producer), poetry-and-painting projects, sci-fi screenplay development.  
+- **Nobel Prize in Physics 2017** (with Rainer Weiss & Barry Barish) “for decisive contributions to the LIGO detector and the observation of gravitational waves.”  
+
+---
+
+## Interstellar (2014) — science baked into cinema  
+
+| Production seed | Core scientific constraint | How it appears on-screen |
+|-----------------|-----------------------------|--------------------------|
+| 1990s brainstorming between Thorne & producer Linda Obst → “warp-side of the universe” premise | **No plot device may violate well-established physics; ‘wild’ elements must at least extrapolate existing theory.** | Wormhole near Saturn (valid under GR if exotic matter available); Gargantua black hole rendered via full relativistic ray-tracing. |
+| Christopher & Jonathan Nolan rewrite Thorne/Obst outline | Preserve constraints, add human drama | Ending deliberately “Kubrick-mysterious”; detailed explanation relegated to Thorne’s tie-in book **_The Science of Interstellar_**. |
+
+#### Two widely debated scenes explained  
+
+1. **Miller’s Planet giant wave**  
+   - Modeled as a **solitary (soliton) wave** – a stable, non-breaking solution to the Korteweg–de Vries equation where non-linearity balances dispersion.  
+   - Wave amplitude ≈ 6× local water depth ⇒ must occur over deep ocean; protagonists stand on a subsurface island (Thorne’s back-story).  
+   - Tides driven by planet’s periodic re-orientation in Gargantua’s extreme gravitational gradient (not a simple “swell”).  
+
+2. **1 h = 7 y time-dilation**  
+   - Requires orbit at (or just outside) the **innermost stable circular orbit (ISCO)** of an **extremely rapidly spinning (near-maximal Kerr) black hole**.  
+   - Thorne derived an analytic series formula showing dilation factor ≈ (1 – a\*)^{-1/3}; solving yields dimensionless spin \(a\*\gtrsim0.99999\).  
+   - Spin this high is borderline but not forbidden by GR → challenge met.
+
+#### Tessaract & 5-D “bulk travel”  
+- Once Cooper crosses Gargantua’s horizon he is picked up by a 4-D cube spacecraft (tesseract) built by an advanced civilization.  
+- Craft exits the hole through the higher-dimensional bulk, where Earth lies only a short 5-D distance away → avoids FTL violation in 4-D spacetime.
+
+---
+
+## Wormholes, exotic matter & time machines  
+
+| Key term | Plain-language expansion |
+|----------|--------------------------|
+| **Wormhole throat** | 3-D tunnel linking two distant 4-D regions. Stable only if its walls are **repelled** by negative-pressure, negative-energy **exotic matter**. |
+| **Exotic matter source** | In quantum field theory, regions where vacuum energy is *lower* than normal (Casimir effect between conducting plates). To hold a macroscopic throat open you would need vacuum-fluctuation engineering on planetary scale. |
+| **Sum-over-histories (Feynman/Gell-Mann–Hartle)** | Quantum-mechanical picture where every possible spacetime geometry contributes; allows small probabilities for closed timelike curves ⇒ potential information loss. |
+| **Hawking–Thorne–Preskill bet (1990)** | <ins>Issue</ins> Does black-hole evaporation destroy information?<br>**Hawking + Thorne:** *Yes* (non-unitary).<br>**Preskill:** *No*.<br>• 2004 Hawking conceded publicly in Dublin, gifting Preskill an encyclopedia “full of information”. Thorne withholds concession, citing viable info-loss within sum-over-histories quantum gravity. |
+
+**Chronology protection**  
+- Vacuum fluctuations would circulate through a newly created time machine, exponentially blueshift, and *likely* destroy the wormhole (Hawking “safe for historians” conjecture).  
+- Final answer requires yet-to-be-completed **quantum gravity**.
+
+---
+
+## Gravitational waves & LIGO — from “phone-book crazy” to Nobel
+
+### Conceptual leap  
+1. **Joe Weber (1960s)** – aluminium cylinders with piezoelectric transducers; claimed detections (later unconfirmed).  
+2. **Rainer Weiss (1972 MIT memo)** – kilometre-scale **laser interferometer**; identified all noise sources; memo circulated but unpublished.  
+3. **Thorne (1973)** in _Gravitation_: exercise “show this is impractical.” (He later changed mind.)  
+4. **Caltech–MIT collaboration (1980s)** – private \$2 M seed → NSF joins; Barry Barish leads construction of two 4 km detectors (Hanford WA & Livingston LA).  
+
+### Technical translation of Einstein’s idea  
+| Target signal | Required sensitivity |
+|---------------|----------------------|
+| Binary-black-hole merger at 400 Mpc → strain \(h\sim10^{-21}\) | Mirror displacement \(ΔL \approx h × 4 km ≈ 4 × 10^{-18}\,m\) ≈ **1/100 of a proton diameter**, **10 million × smaller than atomic spacing**. |
+
+#### Noise-beating innovations  
+- **Seismic isolation**: quadruple pendulum suspensions, 10 m vacuum tubes, active feedback.  
+- **Quantum-precision metrology**: squeezed-light injection reduces shot noise below the “standard quantum limit” (circumventing Heisenberg via vacuum-fluctuation sculpting).  
+- **Super-polished 40 kg test-mass mirrors** with nanoradian alignment control.
+
+### Milestone  
+- **GW150914** detected 14 Sep 2015; announcement 11 Feb 2016.  
+  - 36 M⊙ + 29 M⊙ → 62 M⊙ remnant (3 M⊙ radiated as gravitational energy).  
+  - 7 ms arrival lag between sites matches light-speed travel through Earth.
+
+---
+
+## Relativity ↔ Quantum Mechanics: the incompatibility  
+
+| General Relativity (GR) | Quantum Mechanics (QM) |
+|-------------------------|------------------------|
+| Spacetime = smooth classical manifold; curvature sourced by mass-energy. | Fundamental dynamics probabilistic; **unitarity** forbids information loss. |
+| Predicts singularities (black-hole core, Big Bang) where curvature → ∞. | Fluctuating quantum fields demand discretized/uncertain geometry at Planck scale (~10⁻³⁵ m). |
+
+**Outstanding goal** – a self-consistent **quantum gravity** theory (string theory & loop-quantum gravity are leading candidates).  
+- Thorne: _“…string/M-theory likely path, but the problem is hard enough to span generations.”_
+
+---
+
+## Vacuum fluctuations & the Casimir effect (mini-glossary)  
+- **Vacuum fluctuation** – transient “virtual” particle–antiparticle pairs mandated by the uncertainty principle.  
+- **Casimir plates** – two parallel conductors ∼µm apart restrict photon modes between them → lower vacuum energy inside → plates attract. Region exhibits **negative energy density** (prototype exotic matter).  
+- **Quantum-precision measurement** – technique (pioneered for LIGO) that squeezes vacuum noise in one quadrature while amplifying the other, beating standard quantum limits for displacement sensing.
+
+---
+
+## Kip Thorne’s current & future creative projects  
+
+| Domain | Work in progress |
+|--------|-----------------|
+| **Literary** | _The Warped Side of the Universe_ – illustrated poetry with painter Lia Halloran (2024). |
+| **Film/TV** | Unrevealed sci-fi screenplay begun with Linda Obst & the late Stephen Hawking; may become a novel if film stalls. |
+| **History of science** | Multi-author narrative history of LIGO (draft 6 circulating; anticipated 2027 publication). |
+
+---
+
+### Quotable take-aways  
+
+> “If I see farther, it’s because I’ve stood on the shoulders of giants.” – paraphrasing Newton, Thorne emphasizes collaborative science.  
+
+> “Some problems take 50 years. That doesn’t mean they’re impossible — just important.”  
+
+> “LIGO’s Nobel medal really belongs to a thousand people.”  
+
+---
+
+#### Recommended entry points for deeper study  
+- **_The Science of Interstellar_** (K. Thorne, 2014) – lay-level expansion of the film’s physics.  
+- **_Black Holes & Time Warps_** (K. Thorne, 1994) – narrative history of relativistic astrophysics pre-LIGO.  
+- **Caltech’s multimedia “Einstein’s Gravity Playlist”** – video course on gravitational waves & detectors.  
+:::
+
+::: {.callout-tip collapse="true" title="Bryan Johnson on Lex Fridman"}
+
+[Link to Video](https://www.youtube.com/watch?v=1YbcB6b4A2U)
+
+## 1 Demo: wearing the **Kernel Flow** headset  
+- **Hardware**: 52 optode “modules,” each containing **1 picosecond-pulsed laser + 6 photodetectors** → ≈ 1 000 independent fNIRS* channels covering the whole cortex.  
+- **Principle**: time-resolved **near-infra-red spectroscopy** measures tiny changes (<1 %) in blood-oxygenation caused by local neuronal firing; photon time-of-flight inversion reconstructs depth-specific activation maps.  
+- **User experience**: surprisingly comfortable; self-adjusting elastomer lattice supports large head sizes; silent; can be donned in <30 s.  
+- **Real-time stream**: Ubuntu 20.04 machine next to Lex records gigabytes of raw photon counts → GPU pipeline → cortical heat-maps at ~ 10 Hz.  
+- **Joke/No-smile task**: live demo shows differential motor-cortex activity when Lex suppresses facial muscles; illustrates sub-second sensitivity.
+
+> *fNIRS = functional Near-Infrared Spectroscopy — non-invasive cousin of fMRI; ~cm spatial, ~100 ms temporal resolution.*
+
+---
+
+## 2 From toy to tool — why this matters  
+| Traditional “biometrics” | **Brainstream (Flow/Flux roadmap)** |
+|--------------------------|-------------------------------------|
+| Steps, HR, HRV — single scalar per second | Thousands-dimensional activation vector every 10 ms |
+| 1–2 sensors on wrist | Whole-cortex coverage |
+| Ex-situ lab studies | **Wear anywhere:** at home, work, therapy, meditation, gaming |
+| Manual self-report | **Passive, objective, self-supervised data** |
+
+Potential applications Johnson highlights:  
+1. **Personalised cognitive load manager** (tune meetings, learning blocks, meditation sessions).  
+2. **Clinical**: closed-loop depression & PTSD therapies; drug-dose optimisation (e.g., ketamine, psychedelics).  
+3. **Population research**: large-N brain-behaviour datasets analogous to UK-Biobank for genetics.  
+4. **Human-computer symbiosis**: adaptive UIs that pause podcasts when attention drifts, or rewrite content difficulty live.  
+
+---
+
+## 3 Kernel’s go-to-market logic (a la **Drake equation**)  
+> “Our job is **not** to guess one killer app.  
+>  It’s to drop the sensor cost × data quality below a threshold that ignites an ecosystem.” — B.J.
+
+- Phase 1 (2022-24): sell Flow to research labs & dev studios → seed algos/tools.  
+- Phase 2 (~2025): consumer variant **Flux** (magnetoencephalography-on-chip) = full-HD brain movie.  
+- Phase 3: third-party apps discover “the Angry-Birds moment” for BCIs.
+
+---
+
+## 4 Neuralink vs Kernel — two complements, not “rivals”  
+| Feature | **Neuralink** | **Kernel** |
+|---------|---------------|------------|
+| Implant? | Yes (invasive micro-electrodes) | No (optical / magnetic) |
+| Channel count | 1 000 spikes at 30 k S/s | 1 000 hemodynamic voxels at 10 Hz |
+| Spatial patch | mm-scale  4 K circle | Whole-head  1080p blur |
+| Use-case | Direct motor/sensory prosthesis | Behavioural & cognitive analytics |
+| Horizon | FDA 🧠 2028+ | Research units shipping now |
+
+Johnson’s bet: *“Seven-year window where high-resolution non-invasive will ignite developer culture before surgical BCIs become routine.”*
+
+---
+
+## 5 Zeroth-principle thinking 🔭  
+- **First principles** = deduce from system laws (à la Sherlock’s *“once you eliminate the impossible…”*).  
+- **Zeroth principles** = hunt *building blocks* we don’t yet see — revolutionary “zeros” (Einsteinian spacetime; AlphaGo’s alien moves).  
+- Algorithm:  
+  1. Map the *known unknowns* of today’s tech stack.  
+  2. Ask which hidden variables, if measured, would spawn entirely new coordinate systems for society.  
+  3. Design scaffolds (Kernel Flow) that lower the cost of discovering such variables.  
+
+---
+
+## 6 Personal physiology hacks (Johnson’s n = 1 protocol)
+
+| Domain | Johnson’s routine | Rationale / metrics |
+|--------|------------------|---------------------|
+| **Diet** | 1 meal/day at 08:30 — “Super-Veggie pudding” (broccoli, cauliflower, etc.), “Nutty pudding”, rotating bowl; 20 supplements; vegan. | Long fasting window → resting HR 42 bpm, deep-sleep ↑, HRV ↑. |
+| **Sleep** | 21:30 lights-off; no calories ≥ 4 h before; Oura ring + EEG band. | Deep-sleep minutes predict next-day impulse control. |
+| **Biomarkers** | 200+ labs every 90 days (lipids, DNA-meth clocks, microbiome, NTs). | Remove “conscious Brian” from menu decisions; algorithmic grocery list. |
+| **Movement** | Fasted zone-2 cardio & strength daily. | Insulin sensitivity, mood. |
+
+> He compares his “autonomous self-care loop” to **cryptocurrency** smart contracts: encoded rules, minimal human whim.
+
+---
+
+## 7 Depression, Kilimanjaro & the *“death-match with reality”*  
+- 2014: mid-divorce, leaving Mormon faith, chronic depression. Joined charity trek in Tanzania.  
+- Summit day: viral gastroenteritis + altitude sickness, SaO₂ ≈ 50 %. Guide’s mantra: **“Look up → breathe → step.”**  
+- Personal reset: descent ≈ rebirth → decision to sell Braintree/Venmo (2013) and fund Kernel ($53 M seed).
+
+---
+
+## 8 Brains ↔ Money ↔ Freedom  
+- Payments history: door-to-door credit-card salesman → founded **Braintree** (2007) → acquired **Venmo** (2012) → PayPal buyout $800 M.  
+- Crypto view: decentralised ledgers offer the same “autonomous accounting” we now need for brain data permissions (transparency + user control).  
+- Privacy model: Kernel app lets wearer own/delete streams; future smart-contracts will grant time-bound, purpose-bound “brain-scope” to apps (akin to Android permissions).
+
+---
+
+## 9 Psychedelics & closed-loop psychiatry  
+- Today: subjective narratives dominate (“trip reports”).  
+- Future: Flow baseline → dose → post-integration scans → ML models quantify which molecule × dose × context remits which network (DMN hyper-connectivity, amygdala hyper-re-weighting, etc.).  
+- Parallel: cardiology wouldn’t hand out statins without cholesterol numbers; psych should stop handing out SSRIs without neural numbers.
+
+---
+
+## 10 Advice to young minds  
+> 1. **Gather advice as mirrors**, not blueprints; decode each speaker’s *assumption stack*.  
+> 2. Optimise for **projects whose impact is still obvious in 250 years**; money is fuel, not the game.  
+> 3. Train empathy + zeroth-principle curiosity: “Expect most conscious thoughts to be at least partially wrong on landing — examine & iterate.”
+
+---
+
+## 11 Meaning of life — Johnson’s current stack  
+1. **Infinite games**: ensure the game of intelligence continues.  
+2. **Goal alignment**: negotiation among billions of biological & synthetic agents.  
+3. **Exploration**: use ever-cheaper designed intelligence to poke outside current reality’s “sandbox rules.”
+
+> “We may be the first generation that can genuinely **upgrade consciousness** beyond anything we can verbalise today… that aspiration alone is enough.”  
+
+---
+
+### Further reading / listening  
+- *The Science of Brain Interfaces* — forthcoming Kernel white-paper series.  
+- J. Horgan, “Spectroscopy of Thought” (*SciAm*, 2020) for fNIRS primer.  
+- B. Johnson, blog post “Zeroth-Principles Thinking” (2020).  
+- Lex Fridman Podcast #181 (full 2 h video).
+:::
+
+::: {.callout-tip collapse="true" title="Andrew Huberman on Theo Von"}
+
+[Link to Video](https://www.youtube.com/watch?v=gxHktBHVY5I)
+
+### Podcasting’s Rise  
+- **Authenticity wins** – shows launched in closets, bedrooms, skate-shop back rooms, so listeners sensed zero corporate filter.  
+- **Long-form = modern campfire** – multi-hour space lets comedians, scientists and musicians explore nuance mainstream outlets cut.  
+- **Early-stage magic** – when money and metrics aren’t dominant, creators operate in the “pre-conscious” zone Rick Rubin praises; audiences feel the difference.  
+- **Ad tolerance rule** – audiences accept ads if hosts genuinely use the products; trust stays intact.
+
+---
+
+### Dopamine 101  
+- Dopamine is about *wanting* and **anticipatory motivation**, not the actual reward.  
+- **Reward-prediction error** determines mood afterward:  
+  - Better than expected → extended high.  
+  - Worse than expected → crash below baseline.  
+- Rapid, high-magnitude spikes (meth, gambling, extreme porn) produce deep troughs, driving compulsive reuse.  
+- Healthy strategy: create slower, effort-based climbs (learning, training, creative work) to avoid the crash.
+
+---
+
+### Pornography, Intimacy & Sexual Function  
+- Online porn is the “methamphetamine” version of sex stimuli: intensity and novelty raise dopamine thresholds, making real intimacy feel flat.  
+- Excess porn in adolescence rewires expectations during a period of peak neural plasticity (≈0-25 yrs).  
+- Practical fixes:  
+  - Abstinence / “dopamine fast” periods to reset baseline.  
+  - Slow-build intimacy – multiple non-intercourse sessions before sex, emphasize communication and breathing to stay parasympathetic.  
+  - Treat erectile anxiety with openness, not immediate pharmacology; Tadalafil (2.5-5 mg) is helpful later in life, not as an early crutch.
+
+---
+
+### Circadian & Lifestyle Protocols  
+- **Morning anchors**: sunlight to eyes, hydration, caffeine after 90 min, brief movement.  
+- **Evening wind-down**: dim screens or red-lens glasses, long exhale breathing, reduce stimulants.  
+- Identify personal chronotype by testing bed/wake times for three days each.  
+- Non-sleep deep rest (NSDR / yoga nidra) for 20-30 min restores dopamine ~60 %.
+
+---
+
+### Views on Science, Pharma & Replication  
+- Most scientists pursue truth, but career incentives can bias which data get published or repeated.  
+- Big-pharma profit model favors repurposing old drugs under patent rather than creating new molecules.  
+- Wakefield fraud tainted vaccine debate; Huberman calls for **open, well-designed replication studies** on all public-health interventions.
+
+---
+
+### Psychedelics & Mental Health  
+- Ibogaine + DMT protocol in veterans shows striking PTSD and addiction relief; Stanford’s Nolan Williams is imaging associated brain changes.  
+- Huberman personally finds clinically guided MDMA and psilocybin transformative; stresses legality and expert supervision.
+
+---
+
+### Faith & Personal Practice  
+- Both hosts pray daily; Huberman reconciles faith with science by noting that human perception covers only a slice of reality’s spectrum.  
+- Prayer provides grounding, reflection, and a sense of “agency as receptor” for creative ideas.
+
+---
+
+### Miscellaneous Nuggets  
+- Finger-length ratio research: larger ring-to-index difference linked to higher prenatal testosterone; exaggerated in gay men.  
+- Lesbians as “relationship coaches” – Huberman credits platonic lesbian friends for blunt, invaluable dating feedback.  
+- Caffeine intake: Huberman consumes ~800 mg/day via yerba maté; warns against high-dose nicotine except low-milligram pouches early in day.  
+- “Addiction = progressive narrowing of things that bring pleasure.”  Aim for a wide palette of rewarding activities to stay mentally healthy.
+:::
+
+::: {.callout-tip collapse="true" title="Thomas DeLauer on Judd Lienhard"}
+
+[Link to Video](https://www.youtube.com/watch?v=7U5ErqPiZG8)
+
+### 1.  Background & Context  
+- **Thomas DeLauer** – former 300-lb corporate exec ➜ lost 100 lb, reversed debilitating IBS, built a 4 M-subscriber channel on nutrition, recovery and exercise science.  
+- Runs experiments on himself and publicly **updates/ corrects** advice when new data overturn earlier takes.  
+- Core mission: translate dense biochemistry into *actionable* habits for ordinary people.
+
+---
+
+### 2.  Nutrition Myths Debunked  
+*Protein*  
+- “You can only absorb 30 g per meal.” → Human subjects assimilated **100 g** whey just as well as 25 g (labeled-leucine study, *Cell Metabolism* 2023). The surplus fuels protein synthesis for **longer**, not “wasted.”  
+- “Anabolic window = 30 min post-lift.” → MPS is still climbing 6 h post-workout, peaks ~24 h.  
+- “High protein hurts kidneys.” → No evidence in healthy kidneys; contraindicated only in late-stage disease. Longevity debate still open.
+
+*Meal frequency & snacking*  
+- Frequent eating was popularized by bodybuilding; it **mutes glucagon**, never lets insulin fully drop and stalls fat mobilization.  
+- DeLauer’s rule: **clear, defined gaps** between feedings—no Skittles “in the valley.”
+
+*Cortisol fear*  
+- Transient spikes (fasting, workouts) aid lipolysis and alertness; demonizing cortisol keeps trainees over-fed and under-trained.
+
+*Low-calorie grind*  
+- Chronic 1–200 kcal deficits backfire: metabolism adapts, muscle is lost, “cheat-meal” rebounds get stored as fat at a slower BMR.  
+- **High-energy flux** (eat more + move more) outperforms **eat less + move less**: you burn extra calories just mobilizing larger energy throughput.
+
+---
+
+### 3.  Core Nutrition Principles  
+1. **Anchor every meal in protein**  
+   - Target ≈ 1–1.2 g per lb *lean mass* (or per lb desired weight) to cover muscle, connective tissue, immune and enzyme needs.  
+2. **Strategic fasting / calorie cycling**  
+   - Large deficit days or 24-h fasts are easier mentally than tiny daily cuts; maintain near-maintenance on other days.  
+3. **Whole-food quality > calorie math**  
+   - Micronutrients, fiber, resistant starch and satiety from foods like sweet potatoes, berries, aged cheese, lean beef, fatty fish.  
+4. **Randomness & adaptability**  
+   - Rotate carb sources, caloric loads and even unusual foods to broaden the microbiome and keep hormones responsive.
+
+---
+
+### 4.  Fasting & “Valley” Physiology  
+- Insulin falls ➜ glucagon rises ➜ hormone-sensitive lipase releases stored fat.  
+- Benefits: gut motility (“rest-and-digest” finally engages), sharper cognition (ketones + evolutionary alertness), practical calorie control.  
+- Safe even for extended periods **if hydration and electrolytes are maintained**.
+
+---
+
+### 5.  Training Philosophy (RQI)  
+1. **Randomness / Adaptability** – expose body to novel patterns, loads, planes; improvise when joints or recovery dictate.  
+2. **Quality** – prioritize mind-muscle connection, controlled eccentrics, isometrics, full-range mechanics over arbitrary volume.  
+3. **Intuition** – plan tomorrow’s session each night, but listen to fatigue, sleep and mood signals; shift goals to performance and feeling, not vanity metrics.
+
+---
+
+### 6.  Supplement Short-List  
+| Supplement | Core Reason & Dose Thumb-Rules |
+|---|---|
+| Whey protein isolate | Convenient leucine bolus; easy pre-grocery hunger control. |
+| Creatine monohydrate (5 g/day) | Strength, power, neuro-protective; universally safe. |
+| **Taurine** (4-6 g/day) | Antioxidant, membrane stabilizer, intra-workout recovery. |
+| **Betaine / TMG** (2-3 g/day) | Methyl-donor; research shows concurrent muscle gain & fat loss, supports homocysteine control. |
+| L-Theanine (200-400 mg evening) | Parasympathetic shift, smooths caffeine, improves sleep quality. |
+
+*Watch-outs*:  
+- **Ashwagandha** may blunt emotional highs for some; long wash-out times reported.  
+- **Methylene blue**—emerging nootropic/ mitochondrial aid, but still experimental.
+
+---
+
+### 7.  Pantry / Fridge Blueprint  
+- Blueberries  
+- 93 % lean ground beef  
+- Sardines / mackerel (omega-3 + vitamin D & calcium)  
+- Free-range eggs  
+- A2 or raw milk (lower BCM-7 inflammation)  
+- Sweet & regular potatoes  
+- Broccoli sprouts (sulforaphane, DIM)  
+- Aged cheese (pecorino, cheddar, parmesan)  
+- Macadamia nuts  
+- Quality coffee or green tea  
+
+**Why**: maximal nutrient density, favorable fatty-acid and amino profiles, minimal processing.
+
+---
+
+### 8.  Ingredients to Purge  
+1. **Polysorbate-80/-65/-20** – lab-grade emulsifier that perforates cell membranes; used experimentally to induce gut inflammation.  
+2. **Petroleum-based dyes** (Red 40, Yellow 5/6, etc.) – behavioral effects in kids; unnecessary when beet or spirulina coloring exists.  
+3. Chronic ultra-processed snacks that merge sugar, refined grain, seed-oil and high emulsifier loads.
+
+---
+
+### 9.  Mindset & Discipline Takeaways  
+- **Purpose-driven fitness** – after fatherhood Thomas’ KPI shifted from abs to energy & patience for family; physique improvements followed.  
+- **Intention beats goal** – set daily intentions (direction) instead of binary goals that breed dopamine crashes.  
+- **Plan nightly, live daily** – outline food, training and meetings before bed; frees cognitive load for in-moment intuition.  
+- **Community matters** – progress accelerates when tied to a team, mission or service larger than self.  
+- **Accept the coping element** – high achievers often channel trauma into training; use it, don’t impose it on family.
+
+---
+
+### 10.  Entrepreneurship & Risk  
+- Progress **always involves risk**: “You can’t steal second with your foot on first.”  
+- DeLauer left high-pay corporate recruiting to solve his own IBS & obesity, then monetized the *skill of articulating complex science*.  
+- Tactical advice: start side-content while employed, prove value, then leap—own your schedule (and bathroom breaks).
+:::
 
 ## Tweets 
 
 - [Apple reacts to OpenAI's new AI device](https://x.com/trungtphan/status/1925643955787423946?s=46)
+- [ASMR is the most searched term on YouTube](https://x.com/AutismCapital/status/1925683628589064682)
+- [Peter Thiel's advice to his younger self](https://x.com/StartupArchive_/status/1926244088170320189)
+- [No one actually eats INSIDE restaurants anymore](https://x.com/unusual_whales/status/1925913985007648932)
+- [Being vague creates anxiety](https://x.com/george__mack/status/1924571262472560852?s=46)
+- [Beware of supplement scans on amazon](https://x.com/fitfounder/status/1927387176360137182?s=46)
+- [Guys being dudes](https://x.com/nikitabier/status/1926400125007458790?s=46)
+- [Meetings](https://x.com/navalismhq/status/1928968738336026894?s=46)
+- [Meetings, still the worst](https://x.com/david_perell/status/1928591346182332754?s=46)
