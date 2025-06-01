@@ -37,6 +37,27 @@ draft: True
 
 </ul>
 
+<ul>
+
+<li>
+  <details>
+    <summary><strong>Alzheimer’s ↔ “Type-3 diabetes”</strong></summary>
+
+- Insulin resistance in the brain is a proposed driver.  
+- Tight glucose control & exercise appear protective.
+  </details>
+</li>
+
+<li>
+  <details>
+    <summary><strong>Fasting & HbA1c</strong></summary>
+
+- A1C 4.8-5.2 % → long fasts may disrupt hormones.  
+- A1C > 5.6 % → time-restricted eating often improves markers.
+  </details>
+</li>
+
+</ul>
 
 
 ## Tweets 
