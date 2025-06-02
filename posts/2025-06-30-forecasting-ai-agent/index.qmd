@@ -8,6 +8,18 @@ image: "image.png"
 draft: True
 ---
 
+- Why ML forecasting in finance is hard 
+    - Centralized ML forecasts and bottoms up self-serve tools both don't work 
+        - Hand rolled ML forecasts straight from a data scientist cannot scale. They take time, they take expertise, and unlike data engineering they cannot be figured out once then run forever. This is a long-tail aspect of ML. Where models that once worked well no longer produce accurate forecasts. The business changes, the market environment changes, and the models may need new data or to train completely new models that were never used before. 
+        - Data scientists simply cannot work on dozens of forecasting projects at once. You need an army, which there is never the budget for. 
+        - Self serve tools can democratize ML to everyone in Finance, but only people who are willing to use the tools. Even if people can load their own data and submit a forecast with a click of a button, there is still some inherent data science knowledge that needs to be learned. 
+            - Understanding what models work best, when to trust the recommended model versus choosing a different model for your specific situation. 
+            - Knowing what drivers to use and when. Some might throw all drivers at once in a single run, this does not help build intuition and might be feeding more noise versus signal. Also feature selection techniques built into the automated forecast process may work but they have their own limitations. 
+            - Doing proper evaluation of model forecasts. Running the analysis to see if the changes you made 
+            - Getting the accuracy you want can often mean optimizing one time series at a time instead of optimizing an entire dataset of all time series. AutoML can try to do this but it sometimes fails. 
+    - Poor career path for a seasoned data scientist 
+        - Any DS that is any good can go make double the many in any other department of the company. This becomes especially true if they have gen AI skills too. 
+
 - AI Agent will be a ds headcount right out of the box. 
 - Agents fix the scaling issue of ds in finance, truly democratizing. 
 - Instead of teaching regular people to use self-serve AI tools, agents will teach regular people about ML
@@ -24,13 +36,13 @@ draft: True
         - Hierarchies
         - Multiple seasonal periods
     - Forecast Iteration
-        - Global first, local second
-        - data cleaning order 
-            - missing values, outliers, boxcox
         - bottoms up first, hierarchical second 
+        - Global first, local second
         - univariate first, multivariate second 
             - univariate: baseline models (arima, ets, meanf, snaive, stlm-arima, tbats), data cleaning, seasonal periods, all univariate models
             - multivariate: baseline models (xgboost, glmnet) with defaults, data cleaning (global models), multistep, target features, xregs features, feature selection, all multivariate models
+        - data cleaning order 
+            - missing values, outliers, boxcox
         - Features to adjust in order 
             - Target: lags, rolling window 
             - Xregs: lags 
