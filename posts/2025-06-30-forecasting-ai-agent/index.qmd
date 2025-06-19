@@ -3,65 +3,64 @@ title: "First Thoughts on Forecasting AI Agents"
 description: "Having a true virtual data scientist will change forecasting forever"
 author: "Mike Tokic"
 date: "2025-06-30"
-categories: [AI, machine-learning, forecasting, time-series]
+categories: [AI, machine-learning, forecasting, time-series, finance]
 image: "image.png"
 draft: True
 ---
 
-- Why ML forecasting in finance is hard 
-    - Centralized ML forecasts and bottoms up self-serve tools both don't work 
-        - Hand rolled ML forecasts straight from a data scientist cannot scale. They take time, they take expertise, and unlike data engineering they cannot be figured out once then run forever. This is a long-tail aspect of ML. Where models that once worked well no longer produce accurate forecasts. The business changes, the market environment changes, and the models may need new data or to train completely new models that were never used before. 
-        - Data scientists simply cannot work on dozens of forecasting projects at once. You need an army, which there is never the budget for. 
-        - Self serve tools can democratize ML to everyone in Finance, but only people who are willing to use the tools. Even if people can load their own data and submit a forecast with a click of a button, there is still some inherent data science knowledge that needs to be learned. 
-            - Understanding what models work best, when to trust the recommended model versus choosing a different model for your specific situation. 
-            - Knowing what drivers to use and when. Some might throw all drivers at once in a single run, this does not help build intuition and might be feeding more noise versus signal. Also feature selection techniques built into the automated forecast process may work but they have their own limitations. 
-            - Doing proper evaluation of model forecasts. Running the analysis to see if the changes you made 
-            - Getting the accuracy you want can often mean optimizing one time series at a time instead of optimizing an entire dataset of all time series. AutoML can try to do this but it sometimes fails. 
-    - Poor career path for a seasoned data scientist 
-        - Any DS that is any good can go make double the many in any other department of the company. This becomes especially true if they have gen AI skills too. 
+### Democratize -> Delegate
 
-- AI Agent will be a ds headcount right out of the box. 
-- Agents fix the scaling issue of ds in finance, truly democratizing. 
-- Instead of teaching regular people to use self-serve AI tools, agents will teach regular people about ML
+I've worked on machine learning (ML) forecasting for most of my career. The biggest opportunity I've found to scale the impact of machine learning was to [democratize the technology](https://mftokic.github.io/posts/2024-07-15-msft-ml-fcst-journey-3/) to an average person with no technical or coding background. I thought that was the holy grail of ML adoption. Instead of data scientists writing custom code and giving the outputs to others to aid in decision making, how can we allow the end decision makers to create the ML output themselves? This was the basis of my work for many years, but I think it was the wrong approach. Instead of working on democratizing ML to every person, we should instead delegate that kind of work to AI agents who can do the work 24/7. Let's dive in. 
 
-- Workflows
-    - Data Formatting
-    - Research
-    - EDA 
-        - Data profiling
-        - Autocorrelation
-        - Missing Values, Outliers
-        - Changepoints 
-        - Xreg Analysis 
-        - Hierarchies
-        - Multiple seasonal periods
-    - Forecast Iteration
-        - bottoms up first, hierarchical second 
-        - Global first, local second
-        - univariate first, multivariate second 
-            - univariate: baseline models (arima, ets, meanf, snaive, stlm-arima, tbats), data cleaning, seasonal periods, all univariate models
-            - multivariate: baseline models (xgboost, glmnet) with defaults, data cleaning (global models), multistep, target features, xregs features, feature selection, all multivariate models
-        - data cleaning order 
-            - missing values, outliers, boxcox
-        - Features to adjust in order 
-            - Target: lags, rolling window 
-            - Xregs: lags 
-    - Forecast Update
-        - Take last best inputs and create updated future forecast and historical back test 
-        - Option to retrain model or use last trained model
-    - Forecast Analysis
-        - Analyze back test accuracy and future forecast results
-        - Determine if forecasts pass various thresholds, either default or set by user 
-            - Growth rates, large/small forecasts 
-        - If updated forecast does not pass accuracy thresholds or previous best runs, restart forecast iteration process
-        - Initial and secondary accuracy metrics. For example if first threshold of 2% weighted MAPE is met then check for a MAE secondary metric. 
-    - Forecast Scenarios
-        - Run various what if scenarios defined by the user, leveraging the forecast update workflow
-    - Forecast Transformation
-        - Apply any specific post ML transformations. For example custom allocations down to lower level of data. 
-    - Forecast Explanation
-        - Explain the forecast output, data used to train models.
-        - Teach the user more about how the ML process works, and the reasoning behind model choices. 
-    - Variance Analysis
-    - Ad Hoc Data Analysis
-        - Create and run code to answer any other questions asked by user. 
+### Why Forecasting with Machine Learning is Hard in Finance
+
+Democratizing ML forecasting has had immense impact over the last few years, but it's also had a lot of challenges. Most of the roadblocks to ML adoption end up in two buckets. 
+
+1. **Not Enough Time**: Finance people are too busy doing their current jobs to learn how to do it any other way. They don't have time to learn to use new tools. No time to analyze the ML output alongside their traditional forecast methods. Even if they wanted to use the democratized ML tools (or even have a data science do it for them) the process of iterating to find the best combination of data inputs and ML techniques takes up too much time. There's simply not enough time. 
+2. **Black Box**: There's a certain leap of faith that needs to happen when using ML. Before with traditional excel models, a Finance person could trace cell by cell how a specific forecast number was created. This goes out the window with ML. Making it harder to explain the forecasts to business partners and be accountable if the ML forecast is in accurate. Either the Finance person needs to be technical enough to explain the ML process and output or they need to come to someone like me to "read the ML tea leaves" for them to help understand the forecast output. 
+
+### Can't LLMs Create Forecasts? 
+
+At this point, you might be thinking to yourself "I thought everyone is saying these new large language models (LLM) from places like OpenAI are close to superintelligence, can't they just create the forecast for us?". LLMs are good at text, not numbers. You cannot simply give them historical revenue data and expect them to output a sophisticated forecast. It will not work with today's models. There are some companies like [Nixtla](https://www.nixtla.io/) who have created generative AI models that are specific to time series that are looking into. 
+
+Instead of training humans to use democratized ML tools, can we train AI to use the tools? This is where AI agents come into play. Think of them as LLMs who can call various tools and APIs on their own autonomously to accomplish a goal set by a human. In a sense they are like hiring a contractor or intern to go work on something for you, maybe check in from time to time, and continue to work for days or weeks until they finish the task. 
+
+### Are AI Agents The Answer? 
+
+AI agents that can create forecasts will be like having a virtual data scientist right out of the box ready to go 24/7. Every Finance person can have an agent working for them around the clock. Constantly iterating and updating their forecasts to make them more accurate and easier to understand. Agents will solve both of the biggest challenges in adopting ML forecasts. They fix the lack of time problem by being able to run 24/7 and at scale across the cloud. They also can help fix the black box problem by being able to easily explain any ML output in plain english to a user. This "chat with your forecast" capability will help teach Finance users how ML works and help build their "ML intuition". Let's see what an AI forecast agent can actually do.  
+
+### What Can an AI Forecast Agent Do?  
+
+Here's a brain dump of all of the "skills" or "workflows" I imagine an AI agent being able to do for finance users. Some require connecting to other agents, while others are self-contained within the realm of the forecast agent. 
+
+1. **Research**
+    - Being able to find and pull data to use in the ML forecast process. This is most likely done through a separate agent that specializes in this. For example, having an internal data agent in your company that allows other agents to connect to it and pull financial data from your core reporting systems. 
+    - Run analysis on potential things that are impacting your business, and therefore your forecast. For example, understanding the current state of tariffs, and how their impact should be reflected in the ML forecast. Either by adding input data around tariffs or applying some sort of adjustment after the ML forecast process runs. 
+2. **Data Formatting**
+    - Once you have some data you want to use to produce a ML forecast, transform it in the right ways to make it easy for the ML forecast process to learn from the data and produce an accurate forecast.
+3. **Exploratory Data Analysis**
+    - Teach the LLM about your data set. Run all of the [classic EDA techniques](https://mftokic.github.io/posts/2024-10-03-ts-fundamentals-eda/) and provide that information to the AI agent so it knows about the trends and patterns in your historical data.  
+4. **Forecast Iteration**
+    - Allow the AI agent to start running ML forecasts on your behalf. This is where it connects to existing AutoML like tools where it can kick off new ML runs, analyze the forecast accuracy, and make tweaks to the data or ML inputs to get an even better forecast. The user can give the agent constraints around the maximum amount of runs it can do and the end goal of a forecast error it wants the agent to obtain. 
+    - Combining EDA with iteration is where the magic happens. This is where the agent can work 24/7 on constantly trying to improve the forecast and find new ways to make it even more accurate. This is how you get scalable impact by having a full time virtual data scientist working for you nonstop. 
+    - Most AutoML systems will optimize all time series at once. An AI agent can go one time series at a time, knowing exactly what inputs and ML parameters to use to get the maximum accuracy. Even in complex [hiearchical forecast](https://otexts.com/fpp3/hierarchical.html) processes. 
+5. **Forecast Update**
+    - Once you have that optimized forecast from skill #4, you might need to create updated forecasts every month going forward. The agent can now take new data and combine with what created the best forecasts previously to update new forecasts on the fly. This kind of memory helps save time and resources by not needing to run the whole AutoML forecast process from scratch each time you need a new forecast. 
+    - Over time, inputs that initially created the most accurate forecast initially may now longer be relevant in creating the most accurate forecast going forward. The agent will be able to recognize when these forecasts deviate from historical accuracy and know when to properly retrain or even go back to the drawing board and try new forecast iterations to get back to the proper level of accuracy. 
+6. **Forecast Explanation**
+    - Users can ask the agent questions about the forecast and get answers back in plain english. The agent can rely on learnings from the EDA process, previous forecast iterations, and its research capabilities to answer any question. 
+    - For tougher analysis questions asked by users, the agent will be able to write and execute code on the fly to return tables and charts that give greater insight into the forecast. 
+    - This kind of QnA capability allows Finance users to increase their understanding of the ML forecast output, which increases their trust in ML. Over time as this trust builds they will want to use the ML output even more, since now they know it's accurate and are able to explain the outputs to their business partners. 
+7. **Forecast Transformation**
+    - After the final ML forecast is created, users can then instruct the agent to allocate it down to even more granular levels. For example a ML forecast might be created at a worldwide level, then be allocated down to a country level. All done intelligently and on the fly by the agent. 
+    - Users can also make high level manual adjustments to the forecast and the agent will correct apply them. For example a user may want to adjust a revenue forecast by 10 million, and the agent can take that amount and spread it correctly to each country based on predetermined seasonality or any other technique asked by the user. 
+8. **Scenario Analysis**
+    - Being able to ask what if questions about a ML forecast has been tough to do historically. It requires changes to the input data and feature engineering process to get the final outputs. But with an agent this all becomes a simple ask away. The agent will be able to adjust the data and re-run the ML forecast process based on the scenarios asked by the user and easily explain the changes in the forecast that arise. 
+9. **Variance Analysis**
+    - If LLMs and agents can help us look into the future with forecasting, they can definitely help us look into the past and figure out the reasons why our forecast was different than what actually happened in the business for a specific quarter. Using ML to create future forecasts makes it easier to run variance analysis because everything in documented for the AI agent to sift through and understand. It knows exactly what historical data was used, what other ML params were chosen, and what the final ML models were that produced the forecast. It can fill in it's gaps with its research skills to understand other internal and external factors that might have impacted the business as well. Making it easy to spot and explain forecast variances at scale. 
+
+### Final Thoughts 
+
+[Eventually all of us will be AI agent managers](https://mftokic.github.io/posts/2025-05-24-agent-manager/). The benefits are simply too good to pass up. Being able to to build and wield these agents will become the ultimate source of leverage in business. Things really start to heat up when a forecast AI agent can go out and interact with other agents your company might have deployed. You can eventually build whole teams of Agents that work with one another to do insane amounts of work. 
+
+I'm currently working on building AI agent capabilities directly into my [automated ML forecast framework called Finn](https://microsoft.github.io/finnts/). It's completely open-source and free to use. Stay tuned for more updates!
