@@ -2,7 +2,7 @@
 title: "First Thoughts on Forecasting AI Agents"
 description: "Having a true virtual data scientist will change forecasting forever"
 author: "Mike Tokic"
-date: "2025-06-30"
+date: "2025-06-20"
 categories: [AI, machine-learning, forecasting, time-series, finance]
 image: "image.png"
 draft: True
