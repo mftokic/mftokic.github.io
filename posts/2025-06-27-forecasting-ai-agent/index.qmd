@@ -2,7 +2,7 @@
 title: "First Thoughts on Forecasting AI Agents"
 description: "Having a true virtual data scientist will change forecasting forever"
 author: "Mike Tokic"
-date: "2025-06-20"
+date: "2025-06-27"
 categories: [AI, machine-learning, forecasting, time-series, finance]
 image: "image.png"
 draft: True
@@ -10,14 +10,16 @@ draft: True
 
 ### Democratize -> Delegate
 
-I've worked on machine learning (ML) forecasting for most of my career. The biggest opportunity I've found to scale the impact of machine learning was to [democratize the technology](https://mftokic.github.io/posts/2024-07-15-msft-ml-fcst-journey-3/) to an average person with no technical or coding background. I thought that was the holy grail of ML adoption. Instead of data scientists writing custom code and giving the outputs to others to aid in decision making, how can we allow the end decision makers to create the ML output themselves? This was the basis of my work for many years, but I think it was the wrong approach. Instead of working on democratizing ML to every person, we should instead delegate that kind of work to AI agents who can do the work 24/7. Let's dive in. 
+I've worked on machine learning (ML) forecasting for most of my career. The biggest opportunity I've found to scale the impact of machine learning was to [democratize the technology](https://mftokic.github.io/posts/2024-07-15-msft-ml-fcst-journey-3/) to an average person with no technical or coding background. Each user could become their own citizen data scientist. But now I'm starting to rethink that. Instead of trying to teach humans how to use AI/ML tools, how can we teach AI to use these tools. Shouldn't AI be the best at using AI? I think so. 
+
+This shifts my initial idea of democratize to now delegating the task of creating ML forecasts to AI agents who can work on them 24/7. Let's dive in. 
 
 ### Why Forecasting with Machine Learning is Hard in Finance
 
 Democratizing ML forecasting has had immense impact over the last few years, but it's also had a lot of challenges. Most of the roadblocks to ML adoption end up in two buckets. 
 
 1. **Not Enough Time**: Finance people are too busy doing their current jobs to learn how to do it any other way. They don't have time to learn to use new tools. No time to analyze the ML output alongside their traditional forecast methods. Even if they wanted to use the democratized ML tools (or even have a data science do it for them) the process of iterating to find the best combination of data inputs and ML techniques takes up too much time. There's simply not enough time. 
-2. **Black Box**: There's a certain leap of faith that needs to happen when using ML. Before with traditional excel models, a finance person could trace cell by cell how a specific forecast number was created. This goes out the window with ML. Making it harder to explain the forecasts to business partners and be accountable if the ML forecast is in accurate. Either the finance person needs to be technical enough to explain the ML process and output or they need to come to someone like me to "read the ML tea leaves" for them to help understand the forecast output. 
+2. **Black Box**: There's a certain leap of faith that needs to happen when using ML. Before with traditional excel models, a finance person could trace cell by cell how a specific forecast number was created. This goes out the window with ML. Making it harder to explain the forecasts to business partners and be accountable if the ML forecast is inaccurate. Either the finance person needs to be technical enough to explain the ML process and output or they need to come to someone like me to "read the ML tea leaves" for them to help understand the forecast output. 
 
 ### Can't LLMs Create Forecasts? 
 
@@ -31,7 +33,7 @@ AI agents that can create forecasts will be like having a virtual data scientist
 
 ### What Can an AI Forecast Agent Do?  
 
-Here's a brain dump of all of the "skills" or "workflows" I imagine an AI agent being able to do for finance users. Some require connecting to other agents, while others are self-contained within the realm of the forecast agent. 
+Here are all of the "skills" or "workflows" I imagine an AI agent being able to do for finance users. Some require connecting to other agents, while others are self-contained within the realm of the forecast agent. 
 
 1. **Research**
     - Being able to find and pull data to use in the ML forecast process. This is most likely done through a separate agent that specializes in this. For example, having an internal data agent in your company that allows other agents to connect to it and pull financial data from your core reporting systems. 
@@ -57,10 +59,10 @@ Here's a brain dump of all of the "skills" or "workflows" I imagine an AI agent 
 8. **Scenario Analysis**
     - Being able to ask what if questions about a ML forecast has been tough to do historically. It requires changes to the input data and feature engineering process to get the final outputs. But with an agent this all becomes a simple ask away. The agent will be able to adjust the data and re-run the ML forecast process based on the scenarios asked by the user and easily explain the changes in the forecast that arise. 
 9. **Variance Analysis**
-    - If LLMs and agents can help us look into the future with forecasting, they can definitely help us look into the past and figure out the reasons why our forecast was different than what actually happened in the business for a specific quarter. Using ML to create future forecasts makes it easier to run variance analysis because everything in documented for the AI agent to sift through and understand. It knows exactly what historical data was used, what other ML params were chosen, and what the final ML models were that produced the forecast. It can fill in it's gaps with its research skills to understand other internal and external factors that might have impacted the business as well. Making it easy to spot and explain forecast variances at scale. 
+    - If LLMs and agents can help us look into the future with forecasting, they can definitely help us look into the past and figure out the reasons why our forecast was different than what actually happened in the business for a specific quarter. Using ML to create future forecasts makes it easier to run variance analysis because everything is documented for the AI agent to sift through and understand. It knows exactly what historical data was used, what other ML params were chosen, and what the final ML models were that produced the forecast. It can fill in it's gaps with its research skills to understand other internal and external factors that might have impacted the business as well. Making it easy to spot and explain forecast variances at scale. 
 
 ### Final Thoughts 
 
-[Eventually all of us will be AI agent managers](https://mftokic.github.io/posts/2025-05-24-agent-manager/). The benefits are simply too good to pass up. Being able to to build and wield these agents will become the ultimate source of leverage in business. Things really start to heat up when a forecast AI agent can go out and interact with other agents your company might have deployed. You can eventually build whole teams of Agents that work with one another to do insane amounts of work. 
+[Eventually all of us will be AI agent managers](https://mftokic.github.io/posts/2025-05-24-agent-manager/). Being able to to build and wield these agents will become the ultimate source of leverage in business. Agents applied in the forecasting space have so much potential to help finance teams better plan and make decisions about the future. They will be able to work faster and do kinds of work never thought possible before. 
 
-I'm currently working on building AI agent capabilities directly into my [automated ML forecast framework called Finn](https://microsoft.github.io/finnts/). It's completely open-source and free to use. Stay tuned for more updates!
+I'm currently working on building AI agent capabilities directly into my [automated ML forecast framework called Finn](https://microsoft.github.io/finnts/). It's completely open-source and free to use. Stay tuned for more updates if you'd like to use it!
