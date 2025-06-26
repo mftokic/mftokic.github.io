@@ -81,7 +81,6 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 </script>
-<meta name="quarto:status" content="draft">
 
 
 <link rel="stylesheet" href="../../styles.css">
@@ -89,16 +88,20 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 <meta property="og:description" content="Having a true virtual data scientist will change forecasting forever">
 <meta property="og:image" content="https://mftokic.github.io/posts/2025-06-26-forecasting-ai-agent/image.png">
 <meta property="og:site_name" content="Thoughts on Things">
+<meta property="og:image:height" content="1024">
+<meta property="og:image:width" content="1024">
 <meta name="twitter:title" content="First Thoughts on Forecasting AI Agents – Thoughts on Things">
 <meta name="twitter:description" content="Having a true virtual data scientist will change forecasting forever">
 <meta name="twitter:image" content="https://mftokic.github.io/posts/2025-06-26-forecasting-ai-agent/image.png">
+<meta name="twitter:image-height" content="1024">
+<meta name="twitter:image-width" content="1024">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner"><div id="quarto-draft-alert" class="alert alert-warning"><i class="bi bi-pencil-square"></i>Draft</div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -218,20 +221,19 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 
 <section id="democratize---delegate" class="level3">
 <h3 class="anchored" data-anchor-id="democratize---delegate">Democratize -&gt; Delegate</h3>
-<p>I’ve worked on machine learning (ML) forecasting for most of my career. The biggest opportunity I’ve found to scale the impact of machine learning was to <a href="https://mftokic.github.io/posts/2024-07-15-msft-ml-fcst-journey-3/">democratize the technology</a> to an average person with no technical or coding background. Each user could become their own citizen data scientist. But now I’m starting to rethink that. Instead of trying to teach humans how to use AI/ML tools, how can we teach AI to use these tools. Shouldn’t AI be the best at using AI? I think so.</p>
-<p>This shifts my initial idea of democratize to now delegating the task of creating ML forecasts to AI agents who can work on them 24/7. Let’s dive in.</p>
+<p>I’ve worked on machine learning (ML) forecasting for most of my career. The biggest opportunity I’ve found to scale the impact of machine learning was to <a href="https://mftokic.github.io/posts/2024-07-15-msft-ml-fcst-journey-3/">democratize the technology</a> to an average person with no technical or coding background. Each user could become their own citizen data scientist. But now I’m starting to rethink that. Instead of trying to teach humans how to use AI/ML tools, how can we teach AI to use these tools? <strong>Shouldn’t AI be the best at using AI?</strong> I think so. This shifts my initial idea of <strong>democratizing to now delegating</strong> the task of creating ML forecasts to AI agents who can work on them 24/7. Having this full time virtual data scientist working for humans will have profound effects on the future of forecasting.</p>
 </section>
 <section id="why-forecasting-with-machine-learning-is-hard-in-finance" class="level3">
 <h3 class="anchored" data-anchor-id="why-forecasting-with-machine-learning-is-hard-in-finance">Why Forecasting with Machine Learning is Hard in Finance</h3>
-<p>Democratizing ML forecasting has had immense impact over the last few years, but it’s also had a lot of challenges. Most of the roadblocks to ML adoption end up in two buckets.</p>
+<p>Before we discuss the promise of new AI agents, let’s review why the current state of democratizing is hard to do. Most of the roadblocks to ML adoption end up in two buckets.</p>
 <ol type="1">
-<li><strong>Not Enough Time</strong>: Finance people are too busy doing their current jobs to learn how to do it any other way. They don’t have time to learn to use new tools. No time to analyze the ML output alongside their traditional forecast methods. Even if they wanted to use the democratized ML tools (or even have a data science do it for them) the process of iterating to find the best combination of data inputs and ML techniques takes up too much time. There’s simply not enough time.</li>
+<li><strong>Not Enough Time</strong>: Finance people are too busy doing their current jobs to learn how to do it any other way. They don’t have time to learn to use new tools. No time to analyze the ML output alongside their traditional forecast methods. Even if they wanted to use the democratized ML tools (or even have a data science do it for them) the process of iterating to find the best combination of data inputs and ML techniques takes up too much time.</li>
 <li><strong>Black Box</strong>: There’s a certain leap of faith that needs to happen when using ML. Before with traditional excel models, a finance person could trace cell by cell how a specific forecast number was created. This goes out the window with ML. Making it harder to explain the forecasts to business partners and be accountable if the ML forecast is inaccurate. Either the finance person needs to be technical enough to explain the ML process and output or they need to come to someone like me to “read the ML tea leaves” for them to help understand the forecast output.</li>
 </ol>
 </section>
 <section id="cant-llms-create-forecasts" class="level3">
 <h3 class="anchored" data-anchor-id="cant-llms-create-forecasts">Can’t LLMs Create Forecasts?</h3>
-<p>At this point, you might be thinking to yourself “I thought everyone is saying these new large language models (LLM) from places like OpenAI are close to superintelligence, can’t they just create the forecast for us?”. LLMs are good at text, not numbers. You cannot simply give them historical revenue data and expect them to output a sophisticated forecast. It will not work with today’s models. There are some companies like <a href="https://www.nixtla.io/">Nixtla</a> who have created generative AI models that are specific to time series that are worth looking into, but we’re still early on those models.</p>
+<p>At this point, you might be thinking to yourself “I thought everyone is saying these new large language models (LLM) from places like OpenAI are close to superintelligence, can’t they just create the forecast for us?”. LLMs are good at text, not numbers. You cannot simply give them historical revenue data and expect them to output a sophisticated forecast. It will not work with today’s models. There are some companies like <a href="https://www.nixtla.io/">Nixtla</a> who have created generative AI models that are specific to time series that are worth looking into, but we’re still in the early days of these models.</p>
 <p>Instead of training humans to use democratized ML tools, can we train AI to use the tools? This is where AI agents come into play. Think of them as LLMs who can call various tools and APIs on their own autonomously to accomplish a goal set by a human. In a sense they are like hiring a contractor or intern to go work on something for you, maybe check in from time to time, and continue to work for days or weeks until they finish the task.</p>
 </section>
 <section id="are-ai-agents-the-answer" class="level3">
@@ -280,7 +282,7 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 </ul></li>
 <li><strong>Scenario Analysis</strong>
 <ul>
-<li>Being able to ask what if questions about a ML forecast has been tough to do historically. It requires changes to the input data and feature engineering process to get the final outputs. But with an agent this all becomes a simple ask away. The agent will be able to adjust the data and re-run the ML forecast process based on the scenarios asked by the user and easily explain the changes in the forecast that arise.</li>
+<li>Being able to ask “what if” questions about a ML forecast has been tough to do historically. It requires changes to the input data and feature engineering process to get the final outputs. But with an agent this all becomes a simple ask away. The agent will be able to adjust the data and re-run the ML forecast process based on the scenarios asked by the user and easily explain the changes in the forecast that arise.</li>
 </ul></li>
 <li><strong>Variance Analysis</strong>
 <ul>

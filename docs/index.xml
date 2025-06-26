@@ -10,7 +10,106 @@
 <atom:link href="https://mftokic.github.io/index.xml" rel="self" type="application/rss+xml"/>
 <description>A collection of thoughts on things from the mind of Mike Tokic</description>
 <generator>quarto-1.5.57</generator>
-<lastBuildDate>Sun, 01 Jun 2025 07:00:00 GMT</lastBuildDate>
+<lastBuildDate>Thu, 26 Jun 2025 07:00:00 GMT</lastBuildDate>
+<item>
+  <title>First Thoughts on Forecasting AI Agents</title>
+  <dc:creator>Mike Tokic</dc:creator>
+  <link>https://mftokic.github.io/posts/2025-06-26-forecasting-ai-agent/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="democratize---delegate" class="level3">
+<h3 class="anchored" data-anchor-id="democratize---delegate">Democratize -&gt; Delegate</h3>
+<p>I’ve worked on machine learning (ML) forecasting for most of my career. The biggest opportunity I’ve found to scale the impact of machine learning was to <a href="https://mftokic.github.io/posts/2024-07-15-msft-ml-fcst-journey-3/">democratize the technology</a> to an average person with no technical or coding background. Each user could become their own citizen data scientist. But now I’m starting to rethink that. Instead of trying to teach humans how to use AI/ML tools, how can we teach AI to use these tools? <strong>Shouldn’t AI be the best at using AI?</strong> I think so. This shifts my initial idea of <strong>democratizing to now delegating</strong> the task of creating ML forecasts to AI agents who can work on them 24/7. Having this full time virtual data scientist working for humans will have profound effects on the future of forecasting.</p>
+</section>
+<section id="why-forecasting-with-machine-learning-is-hard-in-finance" class="level3">
+<h3 class="anchored" data-anchor-id="why-forecasting-with-machine-learning-is-hard-in-finance">Why Forecasting with Machine Learning is Hard in Finance</h3>
+<p>Before we discuss the promise of new AI agents, let’s review why the current state of democratizing is hard to do. Most of the roadblocks to ML adoption end up in two buckets.</p>
+<ol type="1">
+<li><strong>Not Enough Time</strong>: Finance people are too busy doing their current jobs to learn how to do it any other way. They don’t have time to learn to use new tools. No time to analyze the ML output alongside their traditional forecast methods. Even if they wanted to use the democratized ML tools (or even have a data science do it for them) the process of iterating to find the best combination of data inputs and ML techniques takes up too much time.</li>
+<li><strong>Black Box</strong>: There’s a certain leap of faith that needs to happen when using ML. Before with traditional excel models, a finance person could trace cell by cell how a specific forecast number was created. This goes out the window with ML. Making it harder to explain the forecasts to business partners and be accountable if the ML forecast is inaccurate. Either the finance person needs to be technical enough to explain the ML process and output or they need to come to someone like me to “read the ML tea leaves” for them to help understand the forecast output.</li>
+</ol>
+</section>
+<section id="cant-llms-create-forecasts" class="level3">
+<h3 class="anchored" data-anchor-id="cant-llms-create-forecasts">Can’t LLMs Create Forecasts?</h3>
+<p>At this point, you might be thinking to yourself “I thought everyone is saying these new large language models (LLM) from places like OpenAI are close to superintelligence, can’t they just create the forecast for us?”. LLMs are good at text, not numbers. You cannot simply give them historical revenue data and expect them to output a sophisticated forecast. It will not work with today’s models. There are some companies like <a href="https://www.nixtla.io/">Nixtla</a> who have created generative AI models that are specific to time series that are worth looking into, but we’re still in the early days of these models.</p>
+<p>Instead of training humans to use democratized ML tools, can we train AI to use the tools? This is where AI agents come into play. Think of them as LLMs who can call various tools and APIs on their own autonomously to accomplish a goal set by a human. In a sense they are like hiring a contractor or intern to go work on something for you, maybe check in from time to time, and continue to work for days or weeks until they finish the task.</p>
+</section>
+<section id="are-ai-agents-the-answer" class="level3">
+<h3 class="anchored" data-anchor-id="are-ai-agents-the-answer">Are AI Agents The Answer?</h3>
+<p>AI agents that can create forecasts will be like having a virtual data scientist right out of the box ready to go 24/7. Every finance person can have an agent working for them around the clock. Constantly iterating and updating their forecasts to make them more accurate and easier to understand. Agents will solve both of the biggest challenges in adopting ML forecasts. They fix the lack of time problem by being able to run 24/7 and at scale across the cloud. They also can help fix the black box problem by being able to easily explain any ML output in plain english to a user. This “chat with your forecast” capability will help teach finance users how ML works and help build their “ML intuition”. Let’s see what an AI forecast agent can actually do.</p>
+</section>
+<section id="what-can-an-ai-forecast-agent-do" class="level3">
+<h3 class="anchored" data-anchor-id="what-can-an-ai-forecast-agent-do">What Can an AI Forecast Agent Do?</h3>
+<p>Here are all of the “skills” or “workflows” I imagine an AI agent being able to do for finance users. Some require connecting to other agents, while others are self-contained within the realm of the forecast agent.</p>
+<ol type="1">
+<li><strong>Research</strong>
+<ul>
+<li>Being able to find and pull data to use in the ML forecast process. This is most likely done through a separate agent that specializes in this. For example, having an internal data agent in your company that allows other agents to connect to it and pull financial data from your core reporting systems.</li>
+<li>Run analysis on potential things that are impacting your business, and therefore your forecast. For example, understanding the current state of tariffs, and how their impact should be reflected in the ML forecast. Either by adding input data around tariffs or applying some sort of adjustment after the ML forecast process runs.</li>
+</ul></li>
+<li><strong>Data Formatting</strong>
+<ul>
+<li>Once you have some data you want to use to produce a ML forecast, transform it in the right ways to make it easy for the ML forecast process to learn from the data and produce an accurate forecast.</li>
+</ul></li>
+<li><strong>Exploratory Data Analysis</strong>
+<ul>
+<li>Teach the LLM about your data set. Run all of the <a href="https://mftokic.github.io/posts/2024-10-03-ts-fundamentals-eda/">classic EDA techniques</a> and provide that information to the AI agent so it knows about the trends and patterns in your historical data.<br>
+</li>
+</ul></li>
+<li><strong>Forecast Iteration</strong>
+<ul>
+<li>Allow the AI agent to start running ML forecasts on your behalf. This is where it connects to existing AutoML like tools where it can kick off new ML runs, analyze the forecast accuracy, and make tweaks to the data or ML inputs to get an even better forecast. The user can give the agent constraints around the maximum amount of runs it can do and the end goal of a forecast error it wants the agent to obtain.</li>
+<li>Combining EDA with iteration is where the magic happens. This is where the agent can work 24/7 on constantly trying to improve the forecast and find new ways to make it even more accurate. This is how you get scalable impact by having a full time virtual data scientist working for you nonstop.</li>
+<li>Most AutoML systems will optimize all time series at once. An AI agent can go one time series at a time, knowing exactly what inputs and ML parameters to use to get the maximum accuracy. Even in complex <a href="https://otexts.com/fpp3/hierarchical.html">hiearchical forecast</a> processes.</li>
+</ul></li>
+<li><strong>Forecast Update</strong>
+<ul>
+<li>Once you have that optimized forecast from skill #4, you might need to create updated forecasts every month going forward. The agent can now take new data and combine with what created the best forecasts previously to update new forecasts on the fly. This kind of memory helps save time and resources by not needing to run the whole AutoML forecast process from scratch each time you need a new forecast.</li>
+<li>Over time, inputs that initially created the most accurate forecast initially may now longer be relevant in creating the most accurate forecast going forward. The agent will be able to recognize when these forecasts deviate from historical accuracy and know when to properly retrain or even go back to the drawing board and try new forecast iterations to get back to the proper level of accuracy.</li>
+</ul></li>
+<li><strong>Forecast Explanation</strong>
+<ul>
+<li>Users can ask the agent questions about the forecast and get answers back in plain english. The agent can rely on learnings from the EDA process, previous forecast iterations, and its research capabilities to answer any question.</li>
+<li>For tougher analysis questions asked by users, the agent will be able to write and execute code on the fly to return tables and charts that give greater insight into the forecast.</li>
+<li>This kind of QnA capability allows finance users to increase their understanding of the ML forecast output, which increases their trust in ML. Over time as this trust builds they will want to use the ML output even more, since now they know it’s accurate and are able to explain the outputs to their business partners.</li>
+</ul></li>
+<li><strong>Forecast Transformation</strong>
+<ul>
+<li>After the final ML forecast is created, users can then instruct the agent to allocate it down to even more granular levels. For example a ML forecast might be created at a worldwide level, then be allocated down to a country level. All done intelligently and on the fly by the agent.</li>
+<li>Users can also make high level manual adjustments to the forecast and the agent will correct apply them. For example a user may want to adjust a revenue forecast by 10 million, and the agent can take that amount and spread it correctly to each country based on predetermined seasonality or any other technique asked by the user.</li>
+</ul></li>
+<li><strong>Scenario Analysis</strong>
+<ul>
+<li>Being able to ask “what if” questions about a ML forecast has been tough to do historically. It requires changes to the input data and feature engineering process to get the final outputs. But with an agent this all becomes a simple ask away. The agent will be able to adjust the data and re-run the ML forecast process based on the scenarios asked by the user and easily explain the changes in the forecast that arise.</li>
+</ul></li>
+<li><strong>Variance Analysis</strong>
+<ul>
+<li>If LLMs and agents can help us look into the future with forecasting, they can definitely help us look into the past and figure out the reasons why our forecast was different than what actually happened in the business for a specific quarter. Using ML to create future forecasts makes it easier to run variance analysis because everything is documented for the AI agent to sift through and understand. It knows exactly what historical data was used, what other ML params were chosen, and what the final ML models were that produced the forecast. It can fill in it’s gaps with its research skills to understand other internal and external factors that might have impacted the business as well. Making it easy to spot and explain forecast variances at scale.</li>
+</ul></li>
+</ol>
+</section>
+<section id="final-thoughts" class="level3">
+<h3 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h3>
+<p><a href="https://mftokic.github.io/posts/2025-05-24-agent-manager/">Eventually all of us will be AI agent managers</a>. Being able to to build and wield these agents will become the ultimate source of leverage in business. Agents applied in the forecasting space have so much potential to help finance teams better plan and make decisions about the future. They will be able to work faster and do kinds of work never thought possible before.</p>
+<p>I’m currently working on building AI agent capabilities directly into my <a href="https://microsoft.github.io/finnts/">automated ML forecast framework called Finn</a>. It’s completely open-source and free to use. Stay tuned for more updates if you’d like to use it!</p>
+
+
+</section>
+
+ ]]></description>
+  <category>AI</category>
+  <category>machine-learning</category>
+  <category>forecasting</category>
+  <category>time-series</category>
+  <category>finance</category>
+  <guid>https://mftokic.github.io/posts/2025-06-26-forecasting-ai-agent/</guid>
+  <pubDate>Thu, 26 Jun 2025 07:00:00 GMT</pubDate>
+  <media:content url="https://mftokic.github.io/posts/2025-06-26-forecasting-ai-agent/image.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
 <item>
   <title>Weekend Reads (6/1/25)</title>
   <dc:creator>Mike Tokic</dc:creator>
@@ -3668,61 +3767,6 @@ Click to read the original notes.
   <guid>https://mftokic.github.io/posts/2025-02-24-life-principles/</guid>
   <pubDate>Mon, 24 Feb 2025 08:00:00 GMT</pubDate>
   <media:content url="https://mftokic.github.io/posts/2025-02-24-life-principles/image.png" medium="image" type="image/png" height="95" width="144"/>
-</item>
-<item>
-  <title>Data Cleaning: Box-Cox Transformations</title>
-  <dc:creator>Mike Tokic</dc:creator>
-  <link>https://mftokic.github.io/posts/2025-02-05-ts-fundamentals-data-cleaning-boxcox/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p><em>This post is part of the <a href="https://mftokic.github.io/posts/2025-02-03-ts-fundamentals-data-cleaning">data cleaning chapter</a> within a larger learning series around time series forecasting fundamentals. <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/">Check out the main learning path</a> to see other posts in the series.</em></p>
-<p><em>The example monthly data used in this series <a href="https://github.com/mftokic/mftokic.github.io/blob/main/posts/2024-10-02-ts-fundamentals-whats-a-time-series/example_ts_data.csv">can be found here.</a> You can also find the <a href="https://github.com/mftokic/mftokic.github.io/blob/main/notebooks/2025-02-05-ts-fundamentals-data-cleaning-boxcox.ipynb">python code used in this post here.</a></em></p>
-<section id="keeping-it-in-between-the-lines" class="level3">
-<h3 class="anchored" data-anchor-id="keeping-it-in-between-the-lines">Keeping It In Between The Lines</h3>
-<p>Most of time series forecasting is all about trying to fit a line to your data. There are a million ways to do it, but at its core we want to fit a line that’s as close as possible to the original data and where we think future data points might lie.</p>
-<p>The easiest line to fit is already a straight line, or one that has linear growth. Consider the chart below. What do you think the future forecast will be? Pretty easy, a model can just extend the same upward linear growth going forward.</p>
-<p><img src="https://mftokic.github.io/posts/2025-02-05-ts-fundamentals-data-cleaning-boxcox/chart1.png" class="img-fluid"></p>
-<p>We would always prefer to model a time series that has a linear trend. But often that’s not the case in businesses. Revenue might double every year, and that my friend is not a linear line, but instead an exponential one. A time series growing exponentially is harder for many models to forecast because most models expect the variance of the data to stay the same over time (more on this in the stationary post), and a expanding time series violates this assumption. Consider one of our example time series in our dataset below. See how it grows not at a linear pace but a hockey stick like exponential pace?</p>
-<p><img src="https://mftokic.github.io/posts/2025-02-05-ts-fundamentals-data-cleaning-boxcox/chart2.png" class="img-fluid"></p>
-<p>A good way to handle this exponential growth is to transform it into one that looks more linear. This is where a technique called a box-cox transformation comes in handy.</p>
-</section>
-<section id="box-cox-enters-the-chat" class="level3">
-<h3 class="anchored" data-anchor-id="box-cox-enters-the-chat">Box-Cox Enters The Chat</h3>
-<p>The Box-Cox transformation is a family of power transformations that aim to make data more normally distributed and stabilize its variance​. In simple terms, it transforms your original values using an exponent (λ, “lambda”) to reduce skewness.</p>
-<p>Lambda can take many values. A lambda of 0 corresponds to a log transform. A value of 0.5 is a square root transform. By transforming our data this way we can in essence de-scale the data to ensure any large spikes are dampened and easier for a model to fit the data. This can transform our data to be homoscedastic, or having constant variance. Let’s see how our time series looks after applying a few box-cox transformations.</p>
-<p><img src="https://mftokic.github.io/posts/2025-02-05-ts-fundamentals-data-cleaning-boxcox/chart3.png" class="img-fluid"></p>
-<p><img src="https://mftokic.github.io/posts/2025-02-05-ts-fundamentals-data-cleaning-boxcox/chart4.png" class="img-fluid"></p>
-<p>The log transformation (lambda = 0) seems to have done a great job at turning our exponential growth into linear growth. The square root transformation (lambda = 0.5) didn’t do as well. Choosing the right value of lambda is important, thankfully there is an automated process that can do it for us. Let’s see how the data looks with an optimal lambda value chosen automatically.</p>
-<p><img src="https://mftokic.github.io/posts/2025-02-05-ts-fundamentals-data-cleaning-boxcox/chart5.png" class="img-fluid"></p>
-<p>The automated process chose a lambda value very close to zero. So it basically did a simple log transformation. Now our data has become much easier to model correctly, how cool is that!</p>
-</section>
-<section id="reversal" class="level3">
-<h3 class="anchored" data-anchor-id="reversal">Reversal</h3>
-<p>There are no perfect solutions, only tradeoffs. Here are a few when using box-cox transformations.</p>
-<ol type="1">
-<li><strong>Runaway exponential trends</strong>: If your time series has exponential trend aspects, but isn’t actually a true exponential trend, there can be big repercussions. A model might take that transformed data and start creating future forecasts that are astronomical in size, going from thousands to trillions in a few periods. A good example is a time series that is stable for most of its history, then at the very end it all of a sudden has tripled in value over one or two periods. A box-cox transformation will pick up on this and transform the data in a way that a model might pick up on as a trend that should grow into the future. So each subsequent forecast period might continue to triple in value. That’s not good.</li>
-<li><strong>Time series can’t be zero or negative</strong>: All zero values must be changed to be a placeholder value like 0.1 or 1, that way things like a log transformation can work. There also can’t be any negative values, again because you can’t take the log of a negative number, which in some time series is unavoidable.</li>
-<li><strong>Need to back transform the data after forecasting</strong>: After you train a model and create a forecast on the transformed data, you must transform the forecast back to the original units. So you have to make sure you keep the lambda value used in the box-cox transformation handy, because you will need it to inverse the transformation.</li>
-<li><strong>Less model interpretability</strong>: Because a model is learning on transformed data, being able to explain the models decisions become harder. Know there is always a tradeoff between model accuracy and model interpretability.</li>
-</ol>
-</section>
-<section id="final-thoughts" class="level3">
-<h3 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h3>
-<p>Box-Cox transformations are a powerful tool for taming exponential growth in time series, making trends easier to model and forecast. However, like any transformation, they come with tradeoffs. Potentially misleading trends, the need for careful handling of zeros and negatives, and additional steps to back-transform predictions. Despite these challenges, applying box-cox correctly can make a significant difference in forecasting accuracy. The key takeaway? Use transformations thoughtfully, always validate their impact on your specific dataset, and remember that the best forecast starts with well-prepared data.</p>
-
-
-</section>
-
- ]]></description>
-  <category>machine-learning</category>
-  <category>time-series</category>
-  <guid>https://mftokic.github.io/posts/2025-02-05-ts-fundamentals-data-cleaning-boxcox/</guid>
-  <pubDate>Wed, 05 Feb 2025 08:00:00 GMT</pubDate>
-  <media:content url="https://mftokic.github.io/posts/2025-02-05-ts-fundamentals-data-cleaning-boxcox/image.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 </channel>
 </rss>

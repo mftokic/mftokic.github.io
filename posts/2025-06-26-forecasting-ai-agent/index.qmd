@@ -5,25 +5,22 @@ author: "Mike Tokic"
 date: "2025-06-26"
 categories: [AI, machine-learning, forecasting, time-series, finance]
 image: "image.png"
-draft: True
 ---
 
 ### Democratize -> Delegate
 
-I've worked on machine learning (ML) forecasting for most of my career. The biggest opportunity I've found to scale the impact of machine learning was to [democratize the technology](https://mftokic.github.io/posts/2024-07-15-msft-ml-fcst-journey-3/) to an average person with no technical or coding background. Each user could become their own citizen data scientist. But now I'm starting to rethink that. Instead of trying to teach humans how to use AI/ML tools, how can we teach AI to use these tools. Shouldn't AI be the best at using AI? I think so. 
-
-This shifts my initial idea of democratize to now delegating the task of creating ML forecasts to AI agents who can work on them 24/7. Let's dive in. 
+I've worked on machine learning (ML) forecasting for most of my career. The biggest opportunity I've found to scale the impact of machine learning was to [democratize the technology](https://mftokic.github.io/posts/2024-07-15-msft-ml-fcst-journey-3/) to an average person with no technical or coding background. Each user could become their own citizen data scientist. But now I'm starting to rethink that. Instead of trying to teach humans how to use AI/ML tools, how can we teach AI to use these tools? **Shouldn't AI be the best at using AI?** I think so. This shifts my initial idea of **democratizing to now delegating** the task of creating ML forecasts to AI agents who can work on them 24/7. Having this full time virtual data scientist working for humans will have profound effects on the future of forecasting.
 
 ### Why Forecasting with Machine Learning is Hard in Finance
 
-Democratizing ML forecasting has had immense impact over the last few years, but it's also had a lot of challenges. Most of the roadblocks to ML adoption end up in two buckets. 
+Before we discuss the promise of new AI agents, let's review why the current state of democratizing is hard to do.  Most of the roadblocks to ML adoption end up in two buckets. 
 
-1. **Not Enough Time**: Finance people are too busy doing their current jobs to learn how to do it any other way. They don't have time to learn to use new tools. No time to analyze the ML output alongside their traditional forecast methods. Even if they wanted to use the democratized ML tools (or even have a data science do it for them) the process of iterating to find the best combination of data inputs and ML techniques takes up too much time. There's simply not enough time. 
+1. **Not Enough Time**: Finance people are too busy doing their current jobs to learn how to do it any other way. They don't have time to learn to use new tools. No time to analyze the ML output alongside their traditional forecast methods. Even if they wanted to use the democratized ML tools (or even have a data science do it for them) the process of iterating to find the best combination of data inputs and ML techniques takes up too much time.
 2. **Black Box**: There's a certain leap of faith that needs to happen when using ML. Before with traditional excel models, a finance person could trace cell by cell how a specific forecast number was created. This goes out the window with ML. Making it harder to explain the forecasts to business partners and be accountable if the ML forecast is inaccurate. Either the finance person needs to be technical enough to explain the ML process and output or they need to come to someone like me to "read the ML tea leaves" for them to help understand the forecast output. 
 
 ### Can't LLMs Create Forecasts? 
 
-At this point, you might be thinking to yourself "I thought everyone is saying these new large language models (LLM) from places like OpenAI are close to superintelligence, can't they just create the forecast for us?". LLMs are good at text, not numbers. You cannot simply give them historical revenue data and expect them to output a sophisticated forecast. It will not work with today's models. There are some companies like [Nixtla](https://www.nixtla.io/) who have created generative AI models that are specific to time series that are worth looking into, but we're still early on those models. 
+At this point, you might be thinking to yourself "I thought everyone is saying these new large language models (LLM) from places like OpenAI are close to superintelligence, can't they just create the forecast for us?". LLMs are good at text, not numbers. You cannot simply give them historical revenue data and expect them to output a sophisticated forecast. It will not work with today's models. There are some companies like [Nixtla](https://www.nixtla.io/) who have created generative AI models that are specific to time series that are worth looking into, but we're still in the early days of these models.
 
 Instead of training humans to use democratized ML tools, can we train AI to use the tools? This is where AI agents come into play. Think of them as LLMs who can call various tools and APIs on their own autonomously to accomplish a goal set by a human. In a sense they are like hiring a contractor or intern to go work on something for you, maybe check in from time to time, and continue to work for days or weeks until they finish the task. 
 
@@ -57,7 +54,7 @@ Here are all of the "skills" or "workflows" I imagine an AI agent being able to 
     - After the final ML forecast is created, users can then instruct the agent to allocate it down to even more granular levels. For example a ML forecast might be created at a worldwide level, then be allocated down to a country level. All done intelligently and on the fly by the agent. 
     - Users can also make high level manual adjustments to the forecast and the agent will correct apply them. For example a user may want to adjust a revenue forecast by 10 million, and the agent can take that amount and spread it correctly to each country based on predetermined seasonality or any other technique asked by the user. 
 8. **Scenario Analysis**
-    - Being able to ask what if questions about a ML forecast has been tough to do historically. It requires changes to the input data and feature engineering process to get the final outputs. But with an agent this all becomes a simple ask away. The agent will be able to adjust the data and re-run the ML forecast process based on the scenarios asked by the user and easily explain the changes in the forecast that arise. 
+    - Being able to ask "what if" questions about a ML forecast has been tough to do historically. It requires changes to the input data and feature engineering process to get the final outputs. But with an agent this all becomes a simple ask away. The agent will be able to adjust the data and re-run the ML forecast process based on the scenarios asked by the user and easily explain the changes in the forecast that arise. 
 9. **Variance Analysis**
     - If LLMs and agents can help us look into the future with forecasting, they can definitely help us look into the past and figure out the reasons why our forecast was different than what actually happened in the business for a specific quarter. Using ML to create future forecasts makes it easier to run variance analysis because everything is documented for the AI agent to sift through and understand. It knows exactly what historical data was used, what other ML params were chosen, and what the final ML models were that produced the forecast. It can fill in it's gaps with its research skills to understand other internal and external factors that might have impacted the business as well. Making it easy to spot and explain forecast variances at scale. 
 
