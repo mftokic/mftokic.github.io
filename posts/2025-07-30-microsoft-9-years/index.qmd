@@ -1,0 +1,29 @@
+---
+title: "9 Hard Lessons Learned After 9 Years at Microsoft"
+description: "Reflections on my career so far"
+author: "Mike Tokic"
+date: "2025-07-30"
+categories: [career, life]
+image: "image.png"
+draft: True
+---
+
+Intro. Talk about starting work in 2015 as intern. 
+
+### 1. People Love You, Companies Don't
+
+### 2. Meetings Are Corporate Junk Food
+
+### 3. No One Cares How Hard You Work
+
+### 4. Managers Are Temporary
+
+### 5. Saying No Is A Superpower
+
+### 6. You Can Just Do Things
+
+### 7. Don't Work Under A Rock
+
+### 8. The Reward For Good Work Is More Work
+
+### 9. Nothing Is As Good Or Bad As It Seems
