@@ -1,0 +1,23 @@
+---
+title: "Title"
+description: "Subtitle"
+author: "Mike Tokic"
+date: "2030-01-01"
+categories: [category]
+image: "image.png"
+draft: True
+---
+
+1. What am I trying to say? 
+2. What emotion do I want to get across? 
+3. What story can I tell? 
+4. List major parts by sections/points
+5. Brain dump into each one
+6. Refine into a cohesive narrative
+7. Create hook/intro 
+8. How is this 1% better than my previous post? 
+9. Final review, read it out loud via AI
+10. Create thumbnail, make it fun
+11. Post blog 
+12. Condense and post on LinkedIn
+13. Condense and post on X
