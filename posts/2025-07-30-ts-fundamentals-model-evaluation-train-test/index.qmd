@@ -18,9 +18,9 @@ Let's say your companies CFO is asking you, the hotshot data & AI person, to pro
 
 ![](./chart1.png)
 
-The future 12 month forecast seems to capture the seasonality from month to month, and even the upward trend. You show the results to the CFO, even calling out the 95% prediction interval, which shows the upper of lower bounds with 95% certainty that the future revenue values are likely to fall in between. The CFO looks at it for one second, then says "so what", I can't use this forecast. How do I know it's accurate, this is a black box. You're hopes and dreams, including that potential promotion, are now crushed. Congrats, you learned one of your first hard lessons in the forecast game. **Building trust in the forecast is harder than creating one in the first place.** It might take seconds to train an ARIMA model, but convincing people to use it might take years. 
+The future 12 month forecast seems to capture the seasonality from month to month, and even the upward trend. You show the results to the CFO, even calling out the 95% prediction interval, which shows the upper of lower bounds with 95% certainty that the future revenue values are likely to fall in between. The CFO looks at it for one second, then says "so what, I can't use this forecast. How do I know it's accurate, this is a black box". You're hopes and dreams, including that potential promotion, are now crushed. Congrats, you learned one of your first hard lessons in the forecast game. **Building trust in the forecast is harder than creating one in the first place.** It might take seconds to train an ARIMA model, but convincing people to use it might take years. 
 
-Hang on a second, you just remembered in our chapter covering [univariate models](https://mftokic.github.io/posts/2025-03-24-ts-fundamentals-univariate-models/) that there is this thing called a residual, which allows you to see historical forecasts compared to actual values on the training data.
+Hang on a second, you just remembered in our chapter covering [univariate models](https://mftokic.github.io/posts/2025-03-24-ts-fundamentals-univariate-models/) that there is this thing called a residual, which allows you to see historical forecasts compared to actual values on the training data. Maybe residuals can help your CFO build trust in the forecast? 
 
 ### Residuals
 
