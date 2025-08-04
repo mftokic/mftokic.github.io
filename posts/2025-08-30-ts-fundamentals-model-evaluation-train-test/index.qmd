@@ -2,7 +2,7 @@
 title: "Model Evaluation: Train Test Splits"
 description: "Analyzing how your forecast performs on unseen data"
 author: "Mike Tokic"
-date: "2025-05-30"
+date: "2025-08-30"
 categories: [machine-learning, time-series]
 image: "image.png"
 draft: True
@@ -44,15 +44,19 @@ Now we can see the actual residual across each historical period. Some are posit
 
 ![](./chart4.png)
 
+A historgram is one of the oldest ways to chart data. This chart creates buckets that a value can fall between on the x axis, then on the y axis shows how many times a value falls in that bucket. Choosing the amount of buckets or "bins" is up to the chart creator. Usually you want the histogram to look like a normal distribution centered about zero. This means most of the residuals are close to zero and there is an equal share of residuals above zero as below zero. In our histogram the residuals are mostly centered around zero, which is good, but it looks like we have more positive residuals than negative. This means on average our model underforecasted the target variable. A helpful insight to have when sharing the results with business partners!
+
 #### Q-Q Residual Plot
 
 ![](./chart5.png)
 
-Another interesting way to look at residuals is by plotting them in a different graph with the forecast on one axis and the historical actual values on the other. Let's take a look. 
-
-#### Summarizing the Residuals
+Another interesting way to look at residuals is by plotting them in a different graph with the forecast on one axis and the historical actual values on the other. A perfect forecast would follow a straight diaganal line on the chart, since the forecast would match the actual target value. Any values above the line is the model overforecasting, and any values below the line is the model underforecasting. This chart is helpful because you can see the performance for the smallest values in the bottom left all the way to the largest values in the top right. It also makes it easy to spot any potential outlier forecasts. 
 
 #### ACF of Residuals
+
+![](./chart5.png)
+
+The last chart we will showcase is creating an ACF chart on the residuals. If you think back to a [previous post on autocorrelation](https://mftokic.github.io/posts/2024-11-12-ts-fundamentals-autocorrelation/), an ACF chart shows the correlation of a variable with lagged versions of itself. For example showing the correlation of revenue today with revenue from 6 months ago.  
 
 ### Train vs Test Data
 

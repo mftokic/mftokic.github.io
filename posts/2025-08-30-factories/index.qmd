@@ -1,0 +1,70 @@
+---
+title: "Factories Are Back Baby"
+description: "Why getting good at factories is the skill of the future"
+author: "Mike Tokic"
+date: "2025-08-30"
+categories: [AI, career]
+image: "image.png"
+draft: True
+---
+
+1. What am I trying to say? 
+    - Factories were once the greatest achievement of the industrial revolution, then they became an afterthought and something to outsource. Now with AI they will swing back into importance and be a job of the future. 
+2. What emotion do I want to get across? 
+    - Wow you're totally right, maybe I should change my major. 
+3. What story can I tell? 
+    - Recent All In summit around how the US can win the AI race. All of it was about
+4. List major parts by sections/points
+5. Brain dump into each one
+6. Refine into a cohesive narrative
+7. Create hook/intro 
+8. How is this 1% better than my previous post? 
+9. Final review, read it out loud via AI
+10. Create thumbnail, make it fun
+11. Post blog 
+12. Condense and post on LinkedIn
+13. Condense and post on X
+
+
+### Opening Thoughts
+
+My grandpa worked in a factory, so my dad could be the first in the family to go to college, so I could live a life of my dreams. Now my kid will most likely work in a factory if he wants to be successful in life. 
+
+The virtual world was how people made the most money in recent years, this will swing back to the physical world. Nvidia is the worlds most valuable company, because they make physical products that power both the digital and eventually the physical worlds. 
+
+### All In Summit Story
+
+Big gov is focused on getting manufacturing back to US. Mostly because AI is the most important thing in the world and in the long run it's a bad idea to build it using technology made in other countries who don't share our interests. This will create the infrastructure for success of every other kind of factory. Kind of like how telegrams were placed next to railway tracks. 
+
+### Quick History Lesson
+
+
+
+![](./image2.png)
+
+Why do factories exist? 
+Why did they go overseas?
+How have they shaped our society for the better or worse? 
+    - Schools were initially made to prepare us for factories. 
+    - Modern job norms are still structured from factories. Unions, 8 hour shifts, child labor, concept of weekends. 
+Why do we need them back in America? 
+
+### Factories of The Future
+
+The definition of a factory needs to adjust to modern times. It's no longer a steel mill with set rules and structure, but instead an autonomous and ever evolving organism. 
+
+AI Factory
+Energy Factory
+Food Factory
+Knowledge Factory
+
+### What Skills Are Needed
+
+Managing AI, which manages robots. 
+My grandpa didn't need a college degree to work in a 1960s factory, and my kids won't either. 
+
+### Elon Musk, King of the Factory, King of the World
+
+Elon is the richest person in the world, and that will not change anytime soon. He is in the best position to reap the benefits of factories making a big comeback in the US, because he is already the expert at them. He has the best factories in the US, Tesla and SpaceX. These are physical factories, but pretty soon with xAI he could have the best AI factories. If you already dislike him now, wait another decade when factories make a huge comeback in the US and his power grows exponentially. So will his wealth. He might even become the worlds first trillionaire. 
+
+### Closing Thoughts
