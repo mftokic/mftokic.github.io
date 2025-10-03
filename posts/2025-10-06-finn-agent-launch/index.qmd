@@ -1,0 +1,64 @@
+---
+title: "Finn Forecasting AI Agent Launch"
+description: "Building the worlds smartest forecast teammate"
+author: "Mike Tokic"
+date: "2025-10-06"
+categories: [AI, finance, machine-learning, time-series]
+image: "image.png"
+draft: True
+---
+
+1. What am I trying to say? 
+    - Information related to the initial dev launch of the Finn AI forecast agent.
+2. What emotion do I want to get across? 
+    - Wow I need to go check this thing out asap. 
+3. What story can I tell? 
+    - My own pain in being the bottleneck to ML forecast adoption in MSFT Finance. 
+4. List major parts by sections/points
+5. Brain dump into each one
+6. Refine into a cohesive narrative
+7. Create hook/intro 
+8. How is this 1% better than my previous post? 
+9. Final review, read it out loud via AI
+10. Create thumbnail, make it fun
+11. Post blog 
+12. Condense and post on LinkedIn
+13. Condense and post on X
+
+### Building an AI Finance Teammate
+
+What would you do if your CFO asked you to build a finance teammate from scratch using AI? Where would you start? You might think about the main types of work people do in a company's finance department. Let's boil them down to the top three. 
+
+1. Looking Forward
+2. Looking Backward
+3. Making the Next Best Decision
+
+These big three come directly from Microsoft's CFO, Amy Hood. Each one of these core finance functions use data to make decisions. In terms of which one is the most important, my vote would be for looking forward. That's the essence of finance, making decisions about the future. Looking backward is for accountants. What makes finance fun is using data to make decisions about an uncertain future.
+
+In order to make decisions about the future, you have to make a guess or prediction about what the future might be. This is the practice of forecasting. In finance our forecasts are based on numbers, which are in the form of a time series (numbers over time). Being able to forecast these time series effectively allows the CFO and the rest of the company to make the best decisions based on the direction the company is headed. So in summary the most important job you can do in finance is to make high quality time series forecasts. 
+
+Creating these forecasts are hard though. They take time, and can often be inaccurate. Thankfully time series forecasting is a perfect problem for AI and machine learning to solve. So when starting to build an AI teammate, the first thing you want it to be good at is the problem of forecasting. 
+
+### Challenges in ML Forecast Adoption
+
+Historically the practice of using machine learning in financial forecasting has been hard. Both in creating accurate forecasts and in getting finance humans to use them to drive business decision making. 
+
+The first challenge relies in knowing how to use the right grain of data and machine learning techniques to get an accurate forecast that can match or exceed the accuracy of existing manual forecasts created by humans. This takes a unique combination of data and machine learning knowledge, as well as the domain expertise of the business you are trying to forecast. Finance people have the domain knowledge, but lack the required data engineering and machine learning knowledge. In the past this means that expensive engineering teams would have to be created to put together these complex machine learning forecasts. These engineering teams would have to do a lot of trial and error around testing what data inputs and machine learning techniques produce the highest quality forecasts. These process can be very tedious. Which slows down how fast these forecasts can be created and how fast new forecast projects can be onboarded to a machine learning approach. 
+
+Once these machine learning outputs are created, the other major problem lies in getting finance humans to use the outputs created by a machine. With their manual forecasts created in excel, they can trace how the forecast was created cell by cell. Fully understanding the assumptions and thought process that went into the process. With machine learning, this excel model is now abstracted away behind the curtain of a machine learning model. A black box that only a talented data scientist can understand. This created a problem of trust between a finance human and the machine learning forecast. Because they cannot understand it as easily as their manual excel process, they are less likely to use it for their decision making. Even if the machine learning forecast is proven to be more accurate, they are still hesitant. 
+
+These two problems have slowed down the adoption of machine learning forecasts in finance over the last decade. Good advancements have been made in democratizing machine learning tools to help reduce the need for engineers, but the accuracy and trust problems still persist. What we need is to not democratize machine learning to finance human but to instead delegate the complex work of creating these forecasts into a digital finance employee. An AI teammate who at it's core knows how to use AI and machine learning to help finance humans get more work done. This teammate is an AI agent, one who can work 24/7 alongside you. Allowing finance humans to do more than they ever thought possible. 
+
+That's the purpose of recent work we've been doing in Microsoft finance to build the first version of our forecasting AI agent. It builds upon our existing [machine learning forecast framework called Finn](https://microsoft.github.io/finnts/), and adds a new AI agent on top of the framework to take forecasting to a whole new level. Let's explore what the new agent can do.
+
+### Iterate Forecast 
+
+The first problem we wanted the agent to tackle was to automate the process of experimentation in trying to find the right combination of input data and machine learning techniques to create the most accurate forecast. This process is easily the biggest bottleneck in starting any new forecast project with machine learning. 
+
+We call this the "iterate forecast" skill in the Finn agent. The first thing it does when starting the iteration process is to teach itself about the historical data. It runs various exploratory data analysis steps to learn many things about the historical input data. For example,
+
+### Update Forecast 
+
+### Explain Forecast
+
+### Final Thoughts
