@@ -2,7 +2,7 @@
 title: "Finn Forecasting AI Agent Launch"
 description: "Building the worlds smartest forecast teammate"
 author: "Mike Tokic"
-date: "2025-10-06"
+date: "2025-10-13"
 categories: [AI, finance, machine-learning, time-series]
 image: "image.png"
 draft: True
@@ -27,15 +27,15 @@ draft: True
 
 ### Building an AI Finance Teammate
 
-What would you do if your CFO asked you to build a finance teammate from scratch using AI? Where would you start? You might think about the main types of work people do in a company's finance department. Let's boil them down to the top three. 
+What would you do if your CFO asked you to build a finance teammate from scratch using AI? Where would you start? You might think about the main types of work people do in a company's finance department. Let's boil them down to the top three, according to Microsoft CFO Amy Hood. 
 
 1. Looking Forward
 2. Looking Backward
 3. Making the Next Best Decision
 
-These big three come directly from Microsoft's CFO, Amy Hood. In terms of which one is the most important, my vote would be for looking forward. That's the essence of finance, making decisions about the future. Looking backward is for accountants. What makes finance fun is using data to make decisions about an uncertain future.
+In terms of which one is the most important, my vote would be for looking forward. That's the essence of finance, making decisions about the future. Looking backward is for accountants. What makes finance fun is using data to make decisions about an uncertain future.
 
-In order to make decisions about the future, you have to make a guess or prediction about what the future might be. This is the practice of forecasting. In finance our forecasts are based on numbers, which are in the form of a time series (numbers over time). Being able to forecast these time series effectively allows the CFO and the rest of the company to make the best decisions. The most important job you can do in finance is to make high quality time series forecasts. 
+In order to make decisions about the future, you have to make a guess or prediction about what the future might be. This is the practice of forecasting. In finance our forecasts are based on numbers, which are in the form of a time series (numbers over time). Being able to forecast these time series effectively allows the CFO and the rest of the company to make the best decisions. Therefore the most important job you can do in finance is to make high quality time series forecasts. 
 
 Creating these forecasts are hard though. They take time, and can often be inaccurate. Thankfully time series forecasting is a perfect problem for AI and machine learning to solve. So when starting to build an AI teammate, the first thing you want it to be good at is the problem of forecasting. 
 
@@ -47,7 +47,7 @@ The first challenge relies in knowing how to use the right grain of data and mac
 
 Once these machine learning outputs are created, the other major problem lies in getting finance humans to use the outputs created by a machine. With their manual forecasts created in excel, they can trace how the forecast was created cell by cell. Fully understanding the assumptions and thought process that went into the forecast. With machine learning, this excel model is now abstracted away behind the curtain of a machine learning model. A black box that only a talented data scientist can understand. This created a problem of trust between a finance human and the machine learning forecast. Because they cannot understand it as easily as their manual excel process, they are less likely to use it for their decision making. Even if the machine learning forecast is proven to be more accurate, they are still hesitant. 
 
-These two problems have slowed down the adoption of machine learning forecasts in finance over the last decade. Good advancements have been made in democratizing machine learning tools to help reduce the need for engineers, but the accuracy and trust problems still persist. What we need is to not democratize machine learning to finance humans but to instead delegate the complex work of creating these forecasts into a digital finance employee. An AI teammate who at its core knows how to use AI and machine learning to help finance humans get more work done. This teammate is an AI agent, one who can work 24/7 at scale in the cloud alongside you. Allowing finance humans to do more than they ever thought possible. 
+These two problems have slowed down the adoption of machine learning forecasts in finance over the last decade. Good advancements have been made in democratizing machine learning tools to help reduce the need for engineers, but the accuracy and trust problems still persist. What we need is to not democratize machine learning to finance humans but to instead **delegate the complex work of creating these forecasts into a digital finance employee**. An AI teammate who at its core knows how to use AI and machine learning to help finance humans get more work done. This teammate is an AI agent, one who can work 24/7 at scale in the cloud alongside you. Allowing finance humans to do more than they ever thought possible. 
 
 That's the purpose of recent work we've been doing in Microsoft finance to build the first version of our forecasting AI agent. It builds upon our existing [machine learning forecast framework called Finn](https://microsoft.github.io/finnts/), and adds a new AI agent on top of the framework to take forecasting to a whole new level. Let's explore what the initial version of the agent can do.
 
@@ -84,6 +84,35 @@ Being able to easily update forecasts based on previously trained models allows 
 
 ### Explain Forecast
 
-The first two skills in the agent help us solve the first challenge of machine learning adoption around accuracy. What's missing is being able to easily explain the outputs of the agent to a regular person, without the need of an expert data scientist. This is where the **explain forecast skill** comes to save the day. It's able to 
+The first two skills in the agent help us solve the first challenge of machine learning adoption around accuracy. What's missing is being able to easily explain the outputs of the agent to a regular person, without the need of an expert data scientist. This is where the **explain forecast skill** comes to save the day. 
+
+When a user asks a question of the agent, it can think through the problem step by step and come up with an approach to answer it. 
+
+1. **Planning**: The agent first takes the question and thinks through what steps it needs to accomplish to answer the question. 
+2. **Execute Steps**: Then it will go through each one of these steps, writing and executing code to get data outputs for final analysis.
+3. **Finalize Answer**: After all steps in the plan are complete, it will synthesize the outputs from each step into a simple answer back to the user. 
+
+This type of thinking process allows the agent to answer a various range of complex questions. 
+
+- **Historical Data**: Teaches you about the historical data based on exploratory data analysis.
+    - Are there any missing data or outliers in the data? 
+    - What external variables are correlated to revenue? 
+- **Forecast Output Review**
+    - What was the historical back testing accuracy? 
+    - Which models performed the best? 
+- ** Run Settings and Model Selection**
+    - What data cleaning strategies were used in the final forecast? 
+    - What outside variables were used in the final forecast? 
+- ** Model Explanation** 
+    - What variables are the most important in the model? 
+    - Explain how the arima model works to produce the forecast? 
+
+Now finance humans can ask the agent any question about the machine learning forecast and get back answers in simple terms that enable them to understand exactly how the forecast was created. This removes the black-box complexity and helps build trust. The agent will patiently answer any questions asked and is always available to chat 24/7. This capability takes machine learning forecasting to new levels. 
 
 ### Final Thoughts
+
+With an AI agent, we can now have forecasts that are accurate, fast, and easier to understand. This is the holy trinity of machine learning forecasting in finance. Solving these three areas removes 99% of common adoption roadblocks. This creates an exciting new world where finance humans can closely collaborate with AI teammates to do things never thought possible. 
+
+A final thing I'd like to call out is that once we are able to change the finance forecasting game with agents, it makes it easier to take the other two components of corporate finance work. If you can use AI to look into the future (forecasting), it makes it a hell of a lot easier to look into the past (financial close). Imagine having AI perfectly understand the forecast, which allows it to explain variances to forecast when it comes time to close the books at month end or quarter end. This is the true long term vision of these agents, expanding their capabilities until they turn into well rounded finance teammates. 
+
+Let's go build this future. It's going to be a wild wide! 
