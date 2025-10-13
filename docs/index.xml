@@ -10,7 +10,115 @@
 <atom:link href="https://mftokic.github.io/index.xml" rel="self" type="application/rss+xml"/>
 <description>A collection of thoughts on things from the mind of Mike Tokic</description>
 <generator>quarto-1.5.57</generator>
-<lastBuildDate>Thu, 26 Jun 2025 07:00:00 GMT</lastBuildDate>
+<lastBuildDate>Mon, 13 Oct 2025 07:00:00 GMT</lastBuildDate>
+<item>
+  <title>Finn Forecasting AI Agent Launch</title>
+  <dc:creator>Mike Tokic</dc:creator>
+  <link>https://mftokic.github.io/posts/2025-10-13-finn-agent-launch/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="building-an-ai-finance-teammate" class="level3">
+<h3 class="anchored" data-anchor-id="building-an-ai-finance-teammate">Building an AI Finance Teammate</h3>
+<p>What would you do if your CFO asked you to build a finance teammate from scratch using AI? Where would you start? You might think about the main types of work people do in a company’s finance department. Let’s boil them down to the top three, according to Microsoft CFO Amy Hood.</p>
+<ol type="1">
+<li>Looking Forward</li>
+<li>Looking Backward</li>
+<li>Making the Next Best Decision</li>
+</ol>
+<p>In terms of which one is the most important, my vote would be for looking forward. Making decisions about the future is the essence of finance. Looking backward is for accountants. What makes finance fun is using data to make decisions about an uncertain future.</p>
+<p>In order to make decisions about the future, you have to make a guess or prediction about what the future might be. This is the practice of forecasting. In finance our forecasts are based on numbers, which are in the form of a time series (numbers over time). Being able to forecast these time series effectively allows the CFO and the rest of the company to make the best decisions. Therefore the most important job you can do in finance is to make high quality time series forecasts.</p>
+<p>Creating these forecasts are hard though. They take time, and can often be inaccurate. Thankfully time series forecasting is a perfect problem for AI and machine learning to solve. So when starting to build an AI teammate, the first thing you want it to be good at is the problem of forecasting.</p>
+</section>
+<section id="challenges-in-ml-forecast-adoption" class="level3">
+<h3 class="anchored" data-anchor-id="challenges-in-ml-forecast-adoption">Challenges in ML Forecast Adoption</h3>
+<p>Historically the practice of using machine learning in financial forecasting has been hard. Both in creating accurate forecasts and in getting finance humans to use them to drive business decision making.</p>
+<p>The first challenge relies in knowing how to use the right grain of data and machine learning techniques to get an accurate forecast that can match or exceed the accuracy of existing manual forecasts created by humans. This takes a unique combination of data and machine learning knowledge, as well as the domain expertise of the business you are trying to forecast. Finance people have the domain knowledge, but lack the required data engineering and machine learning knowledge. In the past this means that expensive engineering teams would have to be created to put together these complex machine learning forecasts. These engineering teams would have to do a lot of trial and error around testing what data inputs and machine learning techniques produce the highest quality forecasts. This process can be very tedious. Which slows down how fast these forecasts can be created and how fast new forecast projects can be onboarded to a machine learning approach.</p>
+<p>Once these machine learning outputs are created, the other major problem lies in getting finance humans to use the outputs created by a machine. With their manual forecasts created in excel, they can trace how the forecast was created cell by cell. Fully understanding the assumptions and thought process that went into the forecast. With machine learning, this excel model is now abstracted away behind the curtain of a machine learning model. A black box that only a talented data scientist can understand. This creates a problem of trust between a finance human and the machine learning forecast. Because they cannot understand it as easily as their manual excel process, they are less likely to use it for their decision making. Even if the machine learning forecast is proven to be more accurate, they are still hesitant.</p>
+<p>These two problems have slowed down the adoption of machine learning forecasts in finance over the last decade. Good advancements have been made in democratizing machine learning tools to help reduce the need for engineers, but the accuracy and trust problems still persist. What we need is to not democratize machine learning to finance humans but to instead <strong>delegate the complex work of creating these forecasts into a digital finance employee</strong>. An AI teammate who at its core knows how to use AI and machine learning to help finance humans get more work done. This teammate is an AI agent, one who can work 24/7 at scale in the cloud alongside you. Allowing finance humans to do more than they ever thought possible.</p>
+<p>That’s the purpose of recent work we’ve been doing in Microsoft finance to build the first version of our forecasting AI agent. It builds upon our existing <a href="https://microsoft.github.io/finnts/">machine learning forecast framework called Finn</a>, and adds a new AI agent on top of the framework to take forecasting to a whole new level. Let’s explore what the initial version of the agent can do.</p>
+</section>
+<section id="iterate-forecast" class="level3">
+<h3 class="anchored" data-anchor-id="iterate-forecast">Iterate Forecast</h3>
+<p>The first problem we wanted the agent to tackle was to automate the process of experimentation in trying to find the right combination of input data and machine learning techniques to create the most accurate forecast. This process is easily the biggest bottleneck in starting any new forecast project with machine learning.</p>
+<p>We call this the <strong>iterate forecast skill</strong> in the Finn agent. The first thing it does when starting the iteration process is to teach itself about the historical data. It runs various exploratory data analysis steps to learn many things about the historical input data. For example, it will check for missing values and outliers, seasonal patterns, and what variables are most correlated to what we’re trying to forecast.</p>
+<p>Once the agent has taught itself about the data, it thinks through what combination of data and machine learning techniques it should use in the first iteration of the machine learning forecast process. It bases this decision on what it learned during exploratory data analysis, the knowledge it has about using Finn, and custom domain knowledge we gave it based on our experience running thousands of forecast experiments over the years.</p>
+<p>After the agent determines what inputs to use, it kicks off a machine learning run inside of Finn. Running through each stage in the Finn forecast process.</p>
+<ol type="1">
+<li><strong>Data Cleaning</strong>: fill in missing values, fix outliers, etc.</li>
+<li><strong>Feature Engineering</strong>: transform the data before training models using lags, rolling window periods, etc.</li>
+<li><strong>Model Back Testing</strong>: train various models on historical data.</li>
+<li><strong>Best Model Selection</strong>: blend different models together and choose which model or combination of models are the most accurate.</li>
+<li><strong>Final Forecast Output</strong>: consolidate the final results into a dataset that contains historical back test and future forecasts.</li>
+</ol>
+<p>When the Finn forecast process is finished, the agent will analyze the back testing results and make a decision to either stop or think through another set of inputs to try in a second iteration based on what it learned from the first run to improve accuracy. What determines if the agent keeps running or not is a set of constraints and goals we provide the agent.</p>
+<ul>
+<li><strong>Iteration Constraint</strong>: The number of times the agent will iterate on running forecast experiments. Looping through reasoning what inputs to try next, running the Finn forecast process, then analyzing the back test accuracy.</li>
+<li><strong>Accuracy Goal</strong>: The mean absolute percent error (what % the forecast is off on average) the back test forecast should be lower than.</li>
+</ul>
+<p>The agent will continue to iterate on the forecast until it either reaches the iteration constraint, beats the accuracy goal, or runs out of ideas of what to try next (quits the run). These built in stopping mechanisms ensure the agent doesn’t run forever and gets us closer to our overall accuracy goals within a reasonable time limit.</p>
+</section>
+<section id="update-forecast" class="level3">
+<h3 class="anchored" data-anchor-id="update-forecast">Update Forecast</h3>
+<p>The iteration process can take a while to run, based on the size of the data and the constraint/goal you provide it. This makes it hard to use during tight forecast cycles where a finance team may only have a day or two to create a forecast end to end. That’s why we built the <strong>update forecast skill</strong> in the agent. This allows the agent to take already trained models from previous agent forecast iterations (or updates) and feed the latest historical data through them.</p>
+<p>After updated forecasts are created, the agent will analyze the accuracy of this newest forecast with the accuracy obtained during the previous agent forecast iteration. If accuracy is considerably worse for most of the data, if allowed, it will kick off a new forecast iteration process to ensure the agent is creating the most accurate forecast on the data. This is totally optional, and controlled by the user of the agent.</p>
+<p>Being able to easily update forecasts based on previously trained models allows us to cut down the total run time by up to 90% when compared to previous Finn version runs. This allows users of Finn to go from creating forecasts in hours to now creating forecasts in minutes. A true order of magnitude improvement.</p>
+</section>
+<section id="explain-forecast" class="level3">
+<h3 class="anchored" data-anchor-id="explain-forecast">Explain Forecast</h3>
+<p>The first two skills in the agent help us solve the first challenge of machine learning adoption around accuracy. What’s missing is being able to easily explain the outputs of the agent to a regular person, without the need of an expert data scientist. This is where the <strong>explain forecast skill</strong> comes to save the day.</p>
+<p>When a user asks a question of the agent, it can think through the problem step by step and come up with an approach to answer it.</p>
+<ol type="1">
+<li><strong>Planning</strong>: The agent first takes the question and thinks through what steps it needs to accomplish to answer the question.</li>
+<li><strong>Execute Steps</strong>: Then it will go through each one of these steps, writing and executing code to get data outputs for final analysis.</li>
+<li><strong>Finalize Answer</strong>: After all steps in the plan are complete, it will synthesize the outputs from each step into a simple answer back to the user.</li>
+</ol>
+<p>This type of thinking process allows the agent to answer a various range of complex questions.</p>
+<ul>
+<li><strong>Historical Data</strong>
+<ul>
+<li>Are there any missing data or outliers in the data?</li>
+<li>What external variables are correlated to revenue?</li>
+</ul></li>
+<li><strong>Forecast Output Review</strong>
+<ul>
+<li>What was the historical back testing accuracy?</li>
+<li>Which models performed the best?</li>
+</ul></li>
+<li><strong>Run Settings and Model Selection</strong>
+<ul>
+<li>What data cleaning strategies were used in the final forecast?</li>
+<li>What outside variables were used in the final forecast?</li>
+</ul></li>
+<li><strong>Model Explanation</strong>
+<ul>
+<li>What variables are the most important in the model?</li>
+<li>Explain how the arima model works to produce the forecast?</li>
+</ul></li>
+</ul>
+<p>Now finance humans can ask the agent any question about the machine learning forecast and get back answers in simple terms that enable them to understand exactly how the forecast was created. This removes the black box complexity and helps build trust. The agent will patiently answer any questions asked and is always available to chat 24/7.</p>
+</section>
+<section id="final-thoughts" class="level3">
+<h3 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h3>
+<p>With an AI agent, we can now have forecasts that are accurate, fast, and easier to understand. This is the holy trinity of machine learning forecasting in finance. Solving these three areas removes 99% of common adoption roadblocks. This creates an exciting new world where finance humans can closely collaborate with AI teammates to do things never thought possible.</p>
+<p>Once we are able to change the finance forecasting game with agents, it makes it easier to tackle the other two components of corporate finance work. If you can use AI to look into the future (forecasting), it makes it a lot easier to look into the past (financial close). Imagine having AI perfectly understand the forecast, which allows it to explain variances to forecast when it comes time to close the books at month end or quarter end. This is the true long term vision of these agents, expanding their capabilities until they turn into well rounded finance teammates.</p>
+<p>The future of finance work is very exciting. If you’re interested in the Finn AI agent, <a href="https://microsoft.github.io/finnts/">check out the Finn open-source documentation to learn more</a>. May the MAPE ever be in your favor.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>AI</category>
+  <category>finance</category>
+  <category>machine-learning</category>
+  <category>time-series</category>
+  <guid>https://mftokic.github.io/posts/2025-10-13-finn-agent-launch/</guid>
+  <pubDate>Mon, 13 Oct 2025 07:00:00 GMT</pubDate>
+  <media:content url="https://mftokic.github.io/posts/2025-10-13-finn-agent-launch/image.png" medium="image" type="image/png" height="216" width="144"/>
+</item>
 <item>
   <title>First Thoughts on Forecasting AI Agents</title>
   <dc:creator>Mike Tokic</dc:creator>
@@ -3635,138 +3743,6 @@ Click to read the original notes.
   <guid>https://mftokic.github.io/posts/2025-03-01-february-learnings/</guid>
   <pubDate>Sat, 01 Mar 2025 08:00:00 GMT</pubDate>
   <media:content url="https://mftokic.github.io/posts/2025-03-01-february-learnings/image.png" medium="image" type="image/png" height="144" width="144"/>
-</item>
-<item>
-  <title>Life Principles</title>
-  <dc:creator>Mike Tokic</dc:creator>
-  <link>https://mftokic.github.io/posts/2025-02-24-life-principles/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<section id="a-man-must-have-a-code" class="level3">
-<h3 class="anchored" data-anchor-id="a-man-must-have-a-code">A Man Must Have a Code</h3>
-<p>Every person lives by a set of principles that govern their actions throughout life. They are either principles inherited by the society they were raised in (unconsciously), or principles that were chosen and updated by a person on their own (consciously). The best principles in life are ones you have thought through yourself. Below are the top principles I like to live my life by.</p>
-</section>
-<section id="bias-for-action" class="level3">
-<h3 class="anchored" data-anchor-id="bias-for-action">Bias for Action</h3>
-<p>Action is the best answer to most problems. Sitting around waiting for something to happen to you rarely works out. No one ever get’s lucky sitting on their couch watching Netflix. Action creates luck, creates feedback, and also creates momentum.</p>
-</section>
-<section id="sense-of-urgency" class="level3">
-<h3 class="anchored" data-anchor-id="sense-of-urgency">Sense of Urgency</h3>
-<p>Life is short, and timelines are negotiable. Ever heard of the parkinson principle? It states that work expands to fill the time available for its completion. Got an important work project due in a month? It will probably take you a month to do. Does the same project need to be done by Friday? Then you will also probably finish it Friday morning.</p>
-<p>Reality is negotiable. Peter Thiel has a saying: “If you have a 10 year plan of how to get somewhere, you should ask: why can’t I do this in 6 months?”. The quality of your questions determines the quality of your life.</p>
-<p>When you combine a sense of urgency with a bias for action, you become an unstoppable force. This brings us to my next principle.</p>
-</section>
-<section id="high-agency" class="level3">
-<h3 class="anchored" data-anchor-id="high-agency">High Agency</h3>
-<p>Who would you call to break you out of a third world prison? That person has a high sense of agency, which means they have have the ability to control what happens to them in life. Think of it as the opposite of a victim mentality. Agency is the combination of a bias for action with a sense of urgency.</p>
-<p>George Mack does a good job discussing agency. <a href="https://x.com/george__mack/status/1661426260327759902?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1661426260327759902%7Ctwgr%5E7eacc97032d4e2d008f3d1d669bb67c347937b2c%7Ctwcon%5Es1_&amp;ref_url=https%3A%2F%2Fapp.beehiiv.com%2Flogin%3F_gl%3D11bn3wdj_gaNTI1OTM1NjEuMTY4NjMyNDQzMg.._ga_E6Y4WLQ2ECMTY4NjMyNDQzMi4xLjAuMTY4NjMyNDQzMi42MC4wLjA.&amp;utm_source=clouds-and-dirt.beehiiv.com&amp;utm_medium=referral&amp;utm_campaign=lindy-library-the-0-1-of-ideas-i-ve-found">Here is a good example</a>.</p>
-</section>
-<section id="zero-expectations" class="level3">
-<h3 class="anchored" data-anchor-id="zero-expectations">Zero Expectations</h3>
-<p>When Charlie Munger was asked about what it takes to live a happy life his response was simple, have low expectations. In a similar vein, Naval Ravikant states that happiness is a simple equation. Happiness = Reality - Expectations.</p>
-<p>If you came to Seattle in January and expected it to be warm and sunny, you’d be bummed out if it was 50 degrees with a slight drizzle. Instead if you came expecting it to be cold and constantly raining, then you’d be pleasantly surprised to find out that it didn’t rain much at all. The same external events happened in both examples, but the change in expectations made for a better outcome.</p>
-<p>It’s ok to have high expectations for yourself, but having high expectations over things in life you can’t control is a recipe for disaster.</p>
-</section>
-<section id="time-over-money" class="level3">
-<h3 class="anchored" data-anchor-id="time-over-money">Time Over Money</h3>
-<p>Control over how you spend your time is the ultimate freedom and source of power. It’s the life razor I use to make most decisions in my life.</p>
-</section>
-<section id="love-over-power" class="level3">
-<h3 class="anchored" data-anchor-id="love-over-power">Love Over Power</h3>
-<p>Most things we chase in life are a <a href="https://mftokic.github.io/posts/2024-03-13-power-pursuits/">form of power</a>. Money, status, fame, beauty, these are all forms of power. They will not make you fulfilled in life. You know what will? Love.</p>
-</section>
-<section id="giving-without-getting" class="level3">
-<h3 class="anchored" data-anchor-id="giving-without-getting">Giving Without Getting</h3>
-<p>Giving away my time, attention, and skills with no expectations of something in return is very important to me. Nothing grinds my gears like someone doing a good deed in the world then immediately posting about it on social media. They are giving with the intention of receiving status in return. Giving yourself to others is an amazing act in and of itself, full stop.</p>
-</section>
-<section id="stay-present" class="level3">
-<h3 class="anchored" data-anchor-id="stay-present">Stay Present</h3>
-<p>If you think about the future, you are anxious. If you think about the past, you are depressed. Staying in the future moment is the best way to live a happy and purpose filled life.</p>
-</section>
-<section id="stagnation-is-death" class="level3">
-<h3 class="anchored" data-anchor-id="stagnation-is-death">Stagnation is Death</h3>
-<p>If you are coasting, you are going downhill. Always be learning, always be evolving. If you are not learning, you are dying.</p>
-</section>
-<section id="keep-it-simple" class="level3">
-<h3 class="anchored" data-anchor-id="keep-it-simple">Keep it Simple</h3>
-<p>The best solutions to problems in life are the simplest. Keep it simple stupid.</p>
-</section>
-<section id="incentives-matter" class="level3">
-<h3 class="anchored" data-anchor-id="incentives-matter">Incentives Matter</h3>
-<p>Charlie Munger once said “show me the incentive and I’ll show you the behavior”. Incentives rule most things in life. Use the right incentive and you will change your life, and maybe the world.</p>
-</section>
-<section id="run-towards-fear" class="level3">
-<h3 class="anchored" data-anchor-id="run-towards-fear">Run Towards Fear</h3>
-<p>Usually the things you are the most afraid of are the most important things that you need to do to improve your life. Scared of public speaking? Then getting good at it will probably change your life more than anything else.</p>
-</section>
-<section id="allergic-to-status" class="level3">
-<h3 class="anchored" data-anchor-id="allergic-to-status">Allergic to Status</h3>
-<p>Increasing your status will not create a fulfilling life. So I try not to do things that inflate my status. Comparison is the thief of joy. Never compare yourself to others (aka your status compared to others), only compare yourself to who you were yesterday.</p>
-</section>
-<section id="do-things-worth-writing-write-things-worth-reading" class="level3">
-<h3 class="anchored" data-anchor-id="do-things-worth-writing-write-things-worth-reading">Do Things Worth Writing, Write Things Worth Reading</h3>
-<p>This is a quote from Ben Franklin. I think it’s a great life philosophy. I try to do both interesting things, and write interesting things. Heck, you are hopefully reading something interesting right now!</p>
-</section>
-<section id="what-would-you-do-if-you-couldnt-fail" class="level3">
-<h3 class="anchored" data-anchor-id="what-would-you-do-if-you-couldnt-fail">What Would You Do If You Couldn’t Fail?</h3>
-<p>This is a fantastic question to ask yourself. It can help you determine your career path and most of your major decisions in life. If you are stuck in your career, asking this question can point you in the right direction.</p>
-</section>
-<section id="what-makes-for-the-best-story" class="level3">
-<h3 class="anchored" data-anchor-id="what-makes-for-the-best-story">What Makes for the Best Story?</h3>
-<p>Amjad Masad, CEO of Replit, uses this question as the final decision framework for big life moves. When deciding between two paths, taking the one that makes for the better story will almost always create a better life for you. Choose wisely.</p>
-</section>
-<section id="did-i-always-do-my-best" class="level3">
-<h3 class="anchored" data-anchor-id="did-i-always-do-my-best">Did I Always Do My Best?</h3>
-<p>John Wooden says that “success is the peace of mind that is the direct result of self-satisfaction knowing you did your best to become the best that you are capable of becoming”. He didn’t care about the score of the game, he only cared that his players rose to their full potential. If they did that, everything else will take care of itself. Even if they lost, they still were at peace because they knew they did their best. This is a powerful idea and one that people today seem to overlook.</p>
-</section>
-<section id="dont-be-the-best-be-the-only" class="level3">
-<h3 class="anchored" data-anchor-id="dont-be-the-best-be-the-only">Don’t Be the Best, Be the Only</h3>
-<p>This comes from the law of category from a book called <a href="https://a.co/d/9bse5C6">The 22 Immutable Laws of Marketing</a>. It’s better to be the first person in a new industry than to be the 10th person. Finding things that you are the only person in the world doing is a good place to be.</p>
-</section>
-<section id="stop-trying-to-sound-smart" class="level3">
-<h3 class="anchored" data-anchor-id="stop-trying-to-sound-smart">Stop Trying to Sound Smart</h3>
-<p>I’ve had to learn this one the hard way. Stop trying to be right all of the time. Stop trying to one up people with more interesting facts or stories. Stop correcting people. Once you stop, the quality of your relationships improve, which improves your entire life.</p>
-</section>
-<section id="hard-choices-easy-life.-easy-choices-hard-life." class="level3">
-<h3 class="anchored" data-anchor-id="hard-choices-easy-life.-easy-choices-hard-life.">Hard Choices, Easy Life. Easy Choices, Hard Life.</h3>
-<p>This comes from Jerzy Gregorek. If you make the easy choice of eating junk food today, your life will become much harder in the future once you develop diabetes and cardiovascular disease. But if you make the hard choices of diet and exercise today, future you will be happy and healthy. This approach applies to most things in life. Hard now, easy later.</p>
-</section>
-<section id="gear-over-stuff" class="level3">
-<h3 class="anchored" data-anchor-id="gear-over-stuff">Gear Over Stuff</h3>
-<p>This was outlined in Michael Easter’s book called <a href="https://a.co/d/2GHLZeR">Scarcity Brain</a>. Having more stuff in my life weighs me down, increasing stress. Instead gear serves a purpose in your life. You can have tons of stuff, but only so much gear.</p>
-</section>
-<section id="avoid-scarcity-loops" class="level3">
-<h3 class="anchored" data-anchor-id="avoid-scarcity-loops">Avoid Scarcity Loops</h3>
-<p>This is the main concept outlined in Michael Easter’s book called <a href="https://a.co/d/2GHLZeR">Scarcity Brain</a>. It has three parts.</p>
-<ol type="1">
-<li>Opportunity</li>
-<li>Unpredictable Rewards</li>
-<li>Quick Repeatability</li>
-</ol>
-<p>Scarcity loops are built to make us crave certain behaviors that are most likely not good for us. Once you learn this you see it everywhere. Let’s take checking your email. It’s easy to open the app on your phone (opportunity), you may or may not have any new unread emails (unpredictable rewards), and you can easily recheck for new emails five minutes later (quick repeatability). Checking your email constantly is obviously not good for you, but scarcity loops change your behavior for the worst. There are also scarcity loops on social media, junk food, drinking, drugs, gambling, online shopping, and literally anything else that is not healthy for you.</p>
-<p>Avoid them at all cost.</p>
-</section>
-<section id="the-most-important-question" class="level3">
-<h3 class="anchored" data-anchor-id="the-most-important-question">The Most Important Question</h3>
-<p>Josh Waitzkin has a framework called <a href="https://www.youtube.com/watch?v=UnGtVDU-Yw4&amp;t">the most important question</a> that helps train you on discovering what matters most. Knowing where to focus your energy is often more important than how hard you work at something. Remember, the quality of your questions determines the quality of your life. So being able to think about <a href="https://www.youtube.com/watch?v=dfv2d1ItzOQ">the most important question to solve</a> for in your job, marriage, etc. is paramount.</p>
-</section>
-<section id="final-thoughts" class="level3">
-<h3 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h3>
-<p>To live a quality life you must have quality principles. If you don’t, you will be easily influenced to live an unauthentic life based on the expectations of society. Feel free to take some of mine to use as your own principles, or don’t! I could care less, because I have zero expectations about people reading this post.</p>
-<p><a href="https://www.hardwoodandhollywood.com/pop-culture-spin/2015/01/28/wire-five-omar-littles-greatest-quotes/">Photo Credit</a></p>
-
-
-</section>
-
- ]]></description>
-  <category>life</category>
-  <guid>https://mftokic.github.io/posts/2025-02-24-life-principles/</guid>
-  <pubDate>Mon, 24 Feb 2025 08:00:00 GMT</pubDate>
-  <media:content url="https://mftokic.github.io/posts/2025-02-24-life-principles/image.png" medium="image" type="image/png" height="95" width="144"/>
 </item>
 </channel>
 </rss>

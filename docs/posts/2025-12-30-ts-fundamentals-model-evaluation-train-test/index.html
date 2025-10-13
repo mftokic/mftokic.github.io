@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Mike Tokic">
-<meta name="dcterms.date" content="2025-07-30">
-<meta name="description" content="Reflections on my career so far">
+<meta name="dcterms.date" content="2025-08-30">
+<meta name="description" content="Analyzing how your forecast performs on unseen data">
 
-<title>9 Hard Lessons Learned After 9 Years at Microsoft – Thoughts on Things</title>
+<title>Model Evaluation: Train Test Splits – Thoughts on Things</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -85,13 +85,13 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="9 Hard Lessons Learned After 9 Years at Microsoft – Thoughts on Things">
-<meta property="og:description" content="Reflections on my career so far">
-<meta property="og:image" content="https://mftokic.github.io/posts/2025-07-30-microsoft-9-years/image.png">
+<meta property="og:title" content="Model Evaluation: Train Test Splits – Thoughts on Things">
+<meta property="og:description" content="Analyzing how your forecast performs on unseen data">
+<meta property="og:image" content="https://mftokic.github.io/posts/2025-12-30-ts-fundamentals-model-evaluation-train-test/image.png">
 <meta property="og:site_name" content="Thoughts on Things">
-<meta name="twitter:title" content="9 Hard Lessons Learned After 9 Years at Microsoft – Thoughts on Things">
-<meta name="twitter:description" content="Reflections on my career so far">
-<meta name="twitter:image" content="https://mftokic.github.io/posts/2025-07-30-microsoft-9-years/image.png">
+<meta name="twitter:title" content="Model Evaluation: Train Test Splits – Thoughts on Things">
+<meta name="twitter:description" content="Analyzing how your forecast performs on unseen data">
+<meta name="twitter:image" content="https://mftokic.github.io/posts/2025-12-30-ts-fundamentals-model-evaluation-train-test/image.png">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -168,15 +168,15 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">9 Hard Lessons Learned After 9 Years at Microsoft</h1>
+      <h1 class="title">Model Evaluation: Train Test Splits</h1>
                   <div>
         <div class="description">
-          Reflections on my career so far
+          Analyzing how your forecast performs on unseen data
         </div>
       </div>
                           <div class="quarto-categories">
-                <div class="quarto-category">career</div>
-                <div class="quarto-category">life</div>
+                <div class="quarto-category">machine-learning</div>
+                <div class="quarto-category">time-series</div>
               </div>
                   </div>
   </div>
@@ -194,7 +194,7 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">July 30, 2025</p>
+        <p class="date">August 30, 2025</p>
       </div>
     </div>
     
@@ -213,60 +213,61 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 
 
 
-<ol type="1">
-<li>What am I trying to say?
-<ul>
-<li>Advice about corporate america from someone who’s been in its bowels for a decade.</li>
-</ul></li>
-<li>What emotion do I want to get across?
-<ul>
-<li>Wow, I never thought of that!</li>
-</ul></li>
-<li>What story can I tell?
-<ul>
-<li>Try and tell a story about each lesson</li>
-</ul></li>
-<li>List major parts by sections/points</li>
-<li>Brain dump into each one</li>
-<li>Refine into a cohesive narrative</li>
-<li>Create hook/intro</li>
-<li>How is this 1% better than my previous post?</li>
-<li>Final review, read it out loud via AI</li>
-<li>Create thumbnail, make it fun</li>
-<li>Post blog</li>
-<li>Condense and post on LinkedIn</li>
-<li>Condense and post on X</li>
-</ol>
-<p>Intro. Talk about starting work in 2015 as intern.</p>
-<section id="people-love-you-companies-dont" class="level3">
-<h3 class="anchored" data-anchor-id="people-love-you-companies-dont">1. People Love You, Companies Don’t</h3>
-<p>When an athlete on a sports team does a good job then leaves the team, they get a statue built of them. When an employee does a good job then leaves a company, they get a firm handshake and a thank you. Maybe a cake if they’re lucky. No jersey’s hung up in the rafter, no statue outside of the stadium. And that’s ok.</p>
-<p>Early in my career I thought of trying to make myself indispensable to my team. Where if I left there would be this crater sized whole left on the team that no one could fill. Basically I wanted them to miss me if I left. I’ve realized this is dumb. The company will not care if you leave, but people will. I’ve worked with a lot of great people, but once they leave it’s like we have some sort of short term memory on the team. A what have you done for me lately mentality.</p>
+<p><em>This post is part of the <a href="https://mftokic.github.io/posts/2025-05-13-ts-fundamentals-model-evaluation/">model evaluation chapter</a> within a larger learning series around time series forecasting fundamentals. <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/">Check out the main learning path</a> to see other posts in the series.</em></p>
+<p><em>The example monthly data used in this series <a href="https://github.com/mftokic/mftokic.github.io/blob/main/posts/2024-10-02-ts-fundamentals-whats-a-time-series/example_ts_data.csv">can be found here.</a> You can also find the <a href="https://github.com/mftokic/mftokic.github.io/blob/main/notebooks/2025-05-30-ts-fundamentals-model-evaluation-train-test-split.ipynb">python code used in this post here.</a></em></p>
+<section id="building-trust-in-the-forecast" class="level3">
+<h3 class="anchored" data-anchor-id="building-trust-in-the-forecast">Building Trust In The Forecast</h3>
+<p>Let’s say your companies CFO is asking you, the hotshot data &amp; AI person, to produce a revenue forecast for the next 12 months. The CFO needs this forecast to communicate expectations to wall street, help optimize product inventory, and make future capital allocation decisions based on where the business is headed the next year. You take a model like ARIMA off the shelf and produce that 12 month forecast, shown below using a time series from our example dataset. Let’s take a look.</p>
+<p><img src="./chart1.png" class="img-fluid"></p>
+<p>The future 12 month forecast seems to capture the seasonality from month to month, and even the upward trend. You show the results to the CFO, even calling out the 95% prediction interval, which shows the upper of lower bounds with 95% certainty that the future revenue values are likely to fall in between. The CFO looks at it for one second, then says “so what, I can’t use this forecast. How do I know it’s accurate, this is a black box”. You’re hopes and dreams, including that potential promotion, are now crushed. Congrats, you learned one of your first hard lessons in the forecast game. <strong>Building trust in the forecast is harder than creating one in the first place.</strong> It might take seconds to train an ARIMA model, but convincing people to use it might take years.</p>
+<p>Hang on a second, you just remembered in our chapter covering <a href="https://mftokic.github.io/posts/2025-03-24-ts-fundamentals-univariate-models/">univariate models</a> that there is this thing called a residual, which allows you to see historical forecasts compared to actual values on the training data. Maybe residuals can help your CFO build trust in the forecast?</p>
 </section>
-<section id="meetings-are-corporate-junk-food" class="level3">
-<h3 class="anchored" data-anchor-id="meetings-are-corporate-junk-food">2. Meetings Are Corporate Junk Food</h3>
-<p>I believe meetings are a form of laziness. Empty calories that add unneeded bloat to an operation. It’s the easiest form of coordination, but also the least effective. People schedule them as a forcing function for others to get their work done, or as time to actually do the work itself during the meeting. This makes my skill crawl. If someone is not responding to your Teams messages or email, you might set up a meeting with them. This is not ideal.</p>
+<section id="residuals" class="level3">
+<h3 class="anchored" data-anchor-id="residuals">Residuals</h3>
+<blockquote class="blockquote">
+<p>Residual = Actual Value - Forecast Value</p>
+</blockquote>
+<p>Let’s calculate the residuals for the ARIMA model we trained and plot them on some nice charts using different residual analysis techniques.</p>
+<section id="forecast-vs-actual-plot" class="level4">
+<h4 class="anchored" data-anchor-id="forecast-vs-actual-plot">Forecast vs Actual Plot</h4>
+<p><img src="./chart2.png" class="img-fluid"></p>
+<p>Overall it looks like the residuals look ok. The historical forecast closely tracks the actual value in most months. There are some months where we can see a large residual, shown by a big gap between the two lines.</p>
 </section>
-<section id="no-one-cares-how-hard-you-work" class="level3">
-<h3 class="anchored" data-anchor-id="no-one-cares-how-hard-you-work">3. No One Cares How Hard You Work</h3>
+<section id="residuals-over-time-plot" class="level4">
+<h4 class="anchored" data-anchor-id="residuals-over-time-plot">Residuals Over Time Plot</h4>
+<p><img src="./chart3.png" class="img-fluid"></p>
+<p>Now we can see the actual residual across each historical period. Some are positive, where we underforecast, and some are negative, where we overforecast. <strong>Ideally residuals hang around zero on average. This means the residuals are truly white noise aka random. If they are not white noise and clustering around zero, this means there is potential for more predictive insights to be learned in the data.</strong></p>
 </section>
-<section id="managers-are-temporary" class="level3">
-<h3 class="anchored" data-anchor-id="managers-are-temporary">4. Managers Are Temporary</h3>
+<section id="histogram-of-residuals" class="level4">
+<h4 class="anchored" data-anchor-id="histogram-of-residuals">Histogram of Residuals</h4>
+<p><img src="./chart4.png" class="img-fluid"></p>
+<p>A histogram is one of the oldest ways to chart data. This chart creates buckets that a value can fall between on the x axis, then on the y axis shows how many times a value falls in that bucket. Choosing the amount of buckets or “bins” is up to the chart creator. Usually you want the histogram to look like a normal distribution centered about zero. This means most of the residuals are close to zero and there is an equal share of residuals above zero as below zero. In our histogram the residuals are mostly centered around zero, which is good, but it looks like we have more positive residuals than negative. This means on average our model underforecasted the target variable. A helpful insight to have when sharing the results with business partners!</p>
 </section>
-<section id="saying-no-is-a-superpower" class="level3">
-<h3 class="anchored" data-anchor-id="saying-no-is-a-superpower">5. Saying No Is A Superpower</h3>
+<section id="q-q-residual-plot" class="level4">
+<h4 class="anchored" data-anchor-id="q-q-residual-plot">Q-Q Residual Plot</h4>
+<p><img src="./chart5.png" class="img-fluid"></p>
+<p>Another interesting way to look at residuals is by plotting them in a different graph with the forecast on one axis and the historical actual values on the other. A perfect forecast would follow a straight diagonal line on the chart, since the forecast would match the actual target value. Any values above the line is the model overforecasting, and any values below the line is the model underforecasting. This chart is helpful because you can see the performance for the smallest values in the bottom left all the way to the largest values in the top right. It also makes it easy to spot any potential outlier forecasts.</p>
 </section>
-<section id="you-can-just-do-things" class="level3">
-<h3 class="anchored" data-anchor-id="you-can-just-do-things">6. You Can Just Do Things</h3>
+<section id="acf-of-residuals" class="level4">
+<h4 class="anchored" data-anchor-id="acf-of-residuals">ACF of Residuals</h4>
+<p><img src="./chart6.png" class="img-fluid"></p>
+<p>The last chart we will showcase is creating an ACF chart on the residuals. If you think back to a <a href="https://mftokic.github.io/posts/2024-11-12-ts-fundamentals-autocorrelation/">previous post on autocorrelation</a>, an ACF chart shows the correlation of a variable with lagged versions of itself. For example showing the correlation of revenue today with revenue from 6 months ago. The ACF chart of our residuals looks good. All of the lagged correlations are below the threshold of being significant, meaning they are within the blue shaded region. If we had lags outside of the blue shaded region, it might show that there was still important information in the historical data not being picked up by our model.</p>
 </section>
-<section id="dont-work-under-a-rock" class="level3">
-<h3 class="anchored" data-anchor-id="dont-work-under-a-rock">7. Don’t Work Under A Rock</h3>
 </section>
-<section id="the-reward-for-good-work-is-more-work" class="level3">
-<h3 class="anchored" data-anchor-id="the-reward-for-good-work-is-more-work">8. The Reward For Good Work Is More Work</h3>
+<section id="train-vs-test-data" class="level3">
+<h3 class="anchored" data-anchor-id="train-vs-test-data">Train vs Test Data</h3>
+<p>Now we know all about residuals and all of the fun ways we can interpret them. Are you going to show these plots to your boss? Not so fast! Understanding the residuals in your trained model is a good idea when training the model, but using residuals to show the performance of the model to others is not a good idea. Analyzing the accuracy of the residuals is kind of like having your model take an open note test. It already has the answers to each question, so usually it will score really well. It’s not a good representation of the real world. Instead you want to make sure your model can generalize well to new and unseen data.</p>
+<p>To do that we have to take some of the historical data and hide it from the model. This means splitting your data into two sets. An initial training set of data that’s used to, you guessed it, train the model. Then a second testing data set that we’ll use to compare the predictions of the model to. Having this hold out testing data is crucial to understand if our model can actually create strong predictions on data it’s never seen before.</p>
+<p>When splitting the data into train and test sets, you need to do it carefully. In most machine learning problems, you can split the data randomly and be just fine. But in the world of time series this is a cardinal sin. Because the data is ordered by time, it has to be split by time. Let’s see a quick example of splitting the data randomly.</p>
+<p>insert chart.</p>
+<p>Then talk about why this is wrong and the right way to do it.</p>
+<p>insert correct train/test split chart.</p>
 </section>
-<section id="nothing-is-as-good-or-bad-as-it-seems" class="level3">
-<h3 class="anchored" data-anchor-id="nothing-is-as-good-or-bad-as-it-seems">9. Nothing Is As Good Or Bad As It Seems</h3>
+<section id="final-thoughts" class="level3">
+<h3 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h3>
+</section>
+<section id="learn-more" class="level3">
+<h3 class="anchored" data-anchor-id="learn-more">Learn More</h3>
 
 
 </section>
