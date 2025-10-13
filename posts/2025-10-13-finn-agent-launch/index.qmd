@@ -76,7 +76,7 @@ The agent will continue to iterate on the forecast until it either reaches the i
 
 ### Update Forecast 
 
-The iteration process can take a while to run, based on the size of the data and the constraint/goal you provide it. This makes it hard to use during tight forecast cycles where a finance team may only have a day or two to create a forecast end to end. That's why we built the **update forecast skill* in the agent. This allows the agent to take already trained models from previous agent forecast iterations (or updates) and feed the latest historical data through them. 
+The iteration process can take a while to run, based on the size of the data and the constraint/goal you provide it. This makes it hard to use during tight forecast cycles where a finance team may only have a day or two to create a forecast end to end. That's why we built the **update forecast skill** in the agent. This allows the agent to take already trained models from previous agent forecast iterations (or updates) and feed the latest historical data through them. 
 
 After updated forecasts are created, the agent will analyze the accuracy of this newest forecast with the accuracy obtained during the previous agent forecast iteration. If accuracy is considerably worse for most of the data, if allowed, it will kick off a new forecast iteration process to ensure the agent is creating the most accurate forecast on the data. This is totally optional, and controlled by the user of the agent. 
 
@@ -100,10 +100,10 @@ This type of thinking process allows the agent to answer a various range of comp
 - **Forecast Output Review**
     - What was the historical back testing accuracy? 
     - Which models performed the best? 
-- ** Run Settings and Model Selection**
+- **Run Settings and Model Selection**
     - What data cleaning strategies were used in the final forecast? 
     - What outside variables were used in the final forecast? 
-- ** Model Explanation** 
+- **Model Explanation** 
     - What variables are the most important in the model? 
     - Explain how the arima model works to produce the forecast? 
 
