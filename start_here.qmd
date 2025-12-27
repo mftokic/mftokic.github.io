@@ -4,6 +4,7 @@ title: "Learn How I Think"
 
 ### Machine Learning
 
+- [Finn Forecast AI Agent Launch](https://mftokic.github.io/posts/2025-10-13-finn-agent-launch/)
 - [Initial Thoughts on Forecasting AI Agents](https://mftokic.github.io/posts/2025-06-26-forecasting-ai-agent/)
 - [Machine Learning Forecasting Fundamentals](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/)
 - [Microsoft Finance ML Forecast Journey](https://mftokic.github.io/posts/2024-06-12-msft-ml-fcst-journey-1/)

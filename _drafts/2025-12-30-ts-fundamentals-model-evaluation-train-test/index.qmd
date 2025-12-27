@@ -14,7 +14,7 @@ draft: True
 
 ### Building Trust In The Forecast
 
-Let's say your companies CFO is asking you, the hotshot data & AI person, to produce a revenue forecast for the next 12 months. The CFO needs this forecast to communicate expectations to wall street, help optimize product inventory, and make future capital allocation decisions based on where the business is headed the next year. You take a model like ARIMA off the shelf and produce that 12 month forecast, shown below using a time series from our example dataset. Let's take a look. 
+Let's say your company's CFO is asking you, the hotshot data & AI person, to produce a revenue forecast for the next 12 months. The CFO needs this forecast to communicate expectations to wall street, help optimize product inventory, and make future capital allocation decisions based on where the business is headed the next year. You take a model like ARIMA off the shelf and produce that 12 month forecast, shown below using a time series from our example dataset. Let's take a look. 
 
 ![](./chart1.png)
 
@@ -56,7 +56,7 @@ Another interesting way to look at residuals is by plotting them in a different 
 
 ![](./chart6.png)
 
-The last chart we will showcase is creating an ACF chart on the residuals. If you think back to a [previous post on autocorrelation](https://mftokic.github.io/posts/2024-11-12-ts-fundamentals-autocorrelation/), an ACF chart shows the correlation of a variable with lagged versions of itself. For example showing the correlation of revenue today with revenue from 6 months ago. The ACF chart of our residuals looks good. All of the lagged correlations are below the threshold of being significant, meaning they are within the blue shaded region. If we had lags outside of the blue shaded region, it might show that there was still important information in the historical data not being picked up by our model.  
+The last chart we will showcase is creating an ACF chart on the residuals. If you think back to a [previous post on autocorrelation](https://mftokic.github.io/posts/2024-11-12-ts-fundamentals-autocorrelation/), an ACF chart shows the correlation of a variable with lagged versions of itself. For example showing the correlation of revenue today with revenue from 6 months ago. The ACF chart of our residuals looks good. All of the lagged correlations are below the threshold of being significant, meaning they are within the blue shaded region. **If we had lags outside of the blue shaded region, it might show that there was still important information in the historical data not being picked up by our model.**  
 
 ### Train vs Test Data
 
@@ -64,13 +64,25 @@ Now we know all about residuals and all of the fun ways we can interpret them. A
 
 To do that we have to take some of the historical data and hide it from the model. This means splitting your data into two sets. An initial training set of data that's used to, you guessed it, train the model. Then a second testing data set that we'll use to compare the predictions of the model to. Having this hold out testing data is crucial to understand if our model can actually create strong predictions on data it's never seen before. 
 
-When splitting the data into train and test sets, you need to do it carefully. In most machine learning problems, you can split the data randomly and be just fine. But in the world of time series this is a cardinal sin. Because the data is ordered by time, it has to be split by time. Let's see a quick example of splitting the data randomly. 
+Let me state these two concepts again because they are that important. 
 
-insert chart. 
+1. Train Data: the data used to train a model 
+2. Test Data: the historical data held out (not used to train the model) to evaluate the predictions of a trained model
 
-Then talk about why this is wrong and the right way to do it. 
+When splitting the data into train and test sets, you need to do it carefully. In most machine learning problems, you can split the data randomly and be just fine. But in the world of time series this is a cardinal sin. **Because the data is ordered by time, it has to be split into train/test sets by time.** Let's see a quick example of splitting the data randomly. 
 
-insert correct train/test split chart.
+![](./chart7.png)
+
+In the chart we see some historical months being assigned in the training data, while others are in the testing data. This creates multiple problems when training and evaluating models. 
+
+1. Having training data on either side of a single historical date period allows a model to "peek ahead" and learn about future trend and seasonality patters. Effectively cheating to get better results when creating the prediction for the test date period. This will allow the model to create accurate predictions on the test data, but will not allow us to understand if the model can generalize well to new and unseen data when we need to create a forecast into the future. 
+2. Some models, like ARIMA, need every historical data point in a time series to be ordered by time with no missing values between each date period. Splitting data randomly creates unordered time series with missing values in the training data, making it impossible for models like ARIMA to properly train and create predictions. 
+
+![](./chart8.png)
+
+Now we have split the data correctly into train and test splits. We took all of the historical data and withheld the final 12 months as the test data. This will allow us to properly evaluate the our forecast model. Where we can show the future forecast, as well as how well the same model performed historically. 
+
+Insert chart around final model forecast with future forecast and back test forecast. 
 
 ### Final Thoughts
 

@@ -62,9 +62,11 @@ draft: true
 - Statistically Significant
 - Supervised Learning
 - Target Variable
+- Test Data
 - Time Series
 - Time Series Decomposition
 - Timestamp
+- Train Data
 - Trend
 - Univariate Model
 - Variance
