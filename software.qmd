@@ -9,5 +9,6 @@ title: "Software I've Written"
 ## Web Apps Built on Replit
 
 - [AI Brain Clone](https://personal-blog-ai-chat-mftokic.replit.app/) - scrapes my blog daily and allows users to ask questions about my blog
+- [Book Highlights Feed](https://readwisefeed.replit.app/) - scroll your favorite kindle highlights like a X feed
 - [Workout Builder](https://workout-builder-mftokic.replit.app/) - use AI to create custom workouts tailored to your needs
 - [Decision Tracker](https://decision-tracker-mftokic.replit.app/login) - track your major decisions and analyze them in the future
