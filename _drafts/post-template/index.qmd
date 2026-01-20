@@ -9,13 +9,13 @@ draft: True
 ---
 
 1. What am I trying to say? 
-2. What emotion do I want to get across? 
-3. What story can I tell? 
-4. List major parts by sections/points
-5. Brain dump into each one
-6. Refine into a cohesive narrative
-7. Create hook/intro 
-8. How is this 1% better than my previous post? 
+2. What story can I tell? 
+3. List major parts by sections/points
+4. Brain dump into each one
+5. Refine into a cohesive narrative
+6. Create hook/intro 
+7. How is this 1% better than my previous post? 
+8. Is this interesting? Is it fun to read? 
 9. Final review, read it out loud via AI
 10. Create thumbnail, make it fun
 11. Post blog 
