@@ -2,7 +2,7 @@
 title: "Model Evaluation: Train Test Splits"
 description: "Analyzing how your forecast performs on unseen data"
 author: "Mike Tokic"
-date: "2025-08-30"
+date: "2026-01-29"
 categories: [machine-learning, time-series]
 image: "image.png"
 draft: True
@@ -66,7 +66,7 @@ To do that we have to take some of the historical data and hide it from the mode
 
 Let me state these two concepts again because they are that important. 
 
-1. Train Data: the data used to train a model 
+1. Train Data: the historical data used to train a model 
 2. Test Data: the historical data held out (not used to train the model) to evaluate the predictions of a trained model
 
 When splitting the data into train and test sets, you need to do it carefully. In most machine learning problems, you can split the data randomly and be just fine. But in the world of time series this is a cardinal sin. **Because the data is ordered by time, it has to be split into train/test sets by time.** Let's see a quick example of splitting the data randomly. 
@@ -80,10 +80,14 @@ In the chart we see some historical months being assigned in the training data, 
 
 ![](./chart8.png)
 
-Now we have split the data correctly into train and test splits. We took all of the historical data and withheld the final 12 months as the test data. This will allow us to properly evaluate the our forecast model. Where we can show the future forecast, as well as how well the same model performed historically. 
+Now we have split the data correctly into train and test splits. We took all of the historical data and withheld the final 12 months as the test data. This will allow us to properly evaluate the our forecast model. Where we can show the future forecast, as well as how well the same model performed historically. Let's keep in mind the train/test splits and see if we can create a forecast for the test data, and also create a final future forecast. 
 
-Insert chart around final model forecast with future forecast and back test forecast. 
+![](./chart8.png)
+
+Excellent! Now we can show the boss the future forecast, in addition to how a similar forecast would have performed on the historical data as a back test. 
 
 ### Final Thoughts
+
+Splitting your data into separate training and testing data helps us understand if the model is capable of creating a robust future forecast. When showing the results of a ML forecast to others, it's just as important to show how well the model performed historically as it is to show the future forecast. That's how you build trust. No one wants to use a forecast that has been proven to work poorly in the past. Calculating the accuracy of those back tests is the topic for our next post. 
 
 ### Learn More
