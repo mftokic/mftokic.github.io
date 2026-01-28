@@ -82,7 +82,7 @@ In the chart we see some historical months being assigned in the training data, 
 
 Now we have split the data correctly into train and test splits. We took all of the historical data and withheld the final 12 months as the test data. This will allow us to properly evaluate the our forecast model. Where we can show the future forecast, as well as how well the same model performed historically. Let's keep in mind the train/test splits and see if we can create a forecast for the test data, and also create a final future forecast. 
 
-![](./chart8.png)
+![](./chart9.png)
 
 Excellent! Now we can show the boss the future forecast, in addition to how a similar forecast would have performed on the historical data as a back test. 
 
