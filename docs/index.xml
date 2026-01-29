@@ -10,7 +10,94 @@
 <atom:link href="https://mftokic.github.io/index.xml" rel="self" type="application/rss+xml"/>
 <description>A collection of thoughts on things from the mind of Mike Tokic</description>
 <generator>quarto-1.5.57</generator>
-<lastBuildDate>Mon, 13 Oct 2025 07:00:00 GMT</lastBuildDate>
+<lastBuildDate>Thu, 29 Jan 2026 08:00:00 GMT</lastBuildDate>
+<item>
+  <title>Model Evaluation: Train Test Splits</title>
+  <dc:creator>Mike Tokic</dc:creator>
+  <link>https://mftokic.github.io/posts/2026-01-29-ts-fundamentals-model-evaluation-train-test/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p><em>This post is part of the <a href="https://mftokic.github.io/posts/2025-05-13-ts-fundamentals-model-evaluation/">model evaluation chapter</a> within a larger learning series around time series forecasting fundamentals. <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/">Check out the main learning path</a> to see other posts in the series.</em></p>
+<p><em>The example monthly data used in this series <a href="https://github.com/mftokic/mftokic.github.io/blob/main/posts/2024-10-02-ts-fundamentals-whats-a-time-series/example_ts_data.csv">can be found here.</a> You can also find the <a href="https://github.com/mftokic/mftokic.github.io/blob/main/notebooks/2026-01-29-ts-fundamentals-model-evaluation-train-test-split.ipynb">python code used in this post here.</a></em></p>
+<section id="building-trust-in-the-forecast" class="level3">
+<h3 class="anchored" data-anchor-id="building-trust-in-the-forecast">Building Trust In The Forecast</h3>
+<p>Let’s say your company’s CFO is asking you, the hotshot data &amp; AI person, to produce a revenue forecast for the next 12 months. The CFO needs this forecast to communicate expectations to wall street, help optimize product inventory, and make future capital allocation decisions based on where the business is headed the next year. You take a model like ARIMA off the shelf and produce that 12 month forecast, shown below using a time series from our example dataset. Let’s take a look.</p>
+<p><img src="https://mftokic.github.io/posts/2026-01-29-ts-fundamentals-model-evaluation-train-test/chart1.png" class="img-fluid"></p>
+<p>The future 12 month forecast seems to capture the seasonality from month to month, and even the upward trend. You show the results to the CFO, even calling out the 95% prediction interval, which shows the upper of lower bounds with 95% certainty that the future revenue values are likely to fall in between. The CFO looks at it for one second, then says “So what, I can’t use this forecast! How do I know it’s accurate? This is a black box.”. You’re hopes and dreams, including that potential promotion, are now crushed. Congrats, you learned one of your first hard lessons in the forecast game. <strong>Building trust in the forecast is harder than creating one in the first place.</strong> It might take seconds to train an ARIMA model, but convincing people to use it might take years.</p>
+<p>Hang on a second, you just remembered in our chapter covering <a href="https://mftokic.github.io/posts/2025-03-24-ts-fundamentals-univariate-models/">univariate models</a> that there is this thing called a residual, which allows you to see historical forecasts compared to actual values on the training data. Maybe residuals can help your CFO build trust in the forecast?</p>
+</section>
+<section id="residuals" class="level3">
+<h3 class="anchored" data-anchor-id="residuals">Residuals</h3>
+<blockquote class="blockquote">
+<p>Residual = Actual Value - Forecast Value</p>
+</blockquote>
+<p>Let’s calculate the residuals for the ARIMA model we trained and plot them on some nice charts using different residual analysis techniques.</p>
+<section id="forecast-vs-actual-plot" class="level4">
+<h4 class="anchored" data-anchor-id="forecast-vs-actual-plot">Forecast vs Actual Plot</h4>
+<p><img src="https://mftokic.github.io/posts/2026-01-29-ts-fundamentals-model-evaluation-train-test/chart2.png" class="img-fluid"></p>
+<p>Overall it looks like the residuals look ok. The historical forecast closely tracks the actual value in most months. There are some months where we can see a large residual, shown by a big gap between the two lines.</p>
+</section>
+<section id="residuals-over-time-plot" class="level4">
+<h4 class="anchored" data-anchor-id="residuals-over-time-plot">Residuals Over Time Plot</h4>
+<p><img src="https://mftokic.github.io/posts/2026-01-29-ts-fundamentals-model-evaluation-train-test/chart3.png" class="img-fluid"></p>
+<p>Now we can see the actual residual across each historical period. Some are positive, where we underforecast, and some are negative, where we overforecast. <strong>Ideally residuals hang around zero on average. This means the residuals are truly white noise aka random. If they are not white noise and clustering around zero, this means there is potential for more predictive insights to be learned in the data.</strong></p>
+</section>
+<section id="histogram-of-residuals" class="level4">
+<h4 class="anchored" data-anchor-id="histogram-of-residuals">Histogram of Residuals</h4>
+<p><img src="https://mftokic.github.io/posts/2026-01-29-ts-fundamentals-model-evaluation-train-test/chart4.png" class="img-fluid"></p>
+<p>A histogram is one of the oldest ways to chart data. This chart creates buckets that a value can fall between on the x axis, then on the y axis shows how many times a value falls in that bucket. Choosing the amount of buckets or “bins” is up to the chart creator. Usually you want the histogram to look like a normal distribution centered about zero. This means most of the residuals are close to zero and there is an equal share of residuals above zero as below zero. In our histogram the residuals are mostly centered around zero, which is good, but it looks like we have more positive residuals than negative. This means on average our model underforecasted the target variable. A helpful insight to have when sharing the results with business partners!</p>
+</section>
+<section id="q-q-residual-plot" class="level4">
+<h4 class="anchored" data-anchor-id="q-q-residual-plot">Q-Q Residual Plot</h4>
+<p><img src="https://mftokic.github.io/posts/2026-01-29-ts-fundamentals-model-evaluation-train-test/chart5.png" class="img-fluid"></p>
+<p>Another interesting way to look at residuals is by plotting them in a different graph with the forecast on one axis and the historical actual values on the other. A perfect forecast would follow a straight diagonal line on the chart, since the forecast would match the actual target value. Any values above the line is the model overforecasting, and any values below the line is the model underforecasting. This chart is helpful because you can see the performance for the smallest values in the bottom left all the way to the largest values in the top right. It also makes it easy to spot any potential outlier forecasts.</p>
+</section>
+<section id="acf-of-residuals" class="level4">
+<h4 class="anchored" data-anchor-id="acf-of-residuals">ACF of Residuals</h4>
+<p><img src="https://mftokic.github.io/posts/2026-01-29-ts-fundamentals-model-evaluation-train-test/chart6.png" class="img-fluid"></p>
+<p>The last chart we will showcase is creating an ACF chart on the residuals. If you think back to a <a href="https://mftokic.github.io/posts/2024-11-12-ts-fundamentals-autocorrelation/">previous post on autocorrelation</a>, an ACF chart shows the correlation of a variable with lagged versions of itself. For example showing the correlation of revenue today with revenue from 6 months ago. The ACF chart of our residuals looks good. All of the lagged correlations are below the threshold of being significant, meaning they are within the blue shaded region. <strong>If we had lags outside of the blue shaded region, it might show that there was still important information in the historical data not being picked up by our model.</strong></p>
+</section>
+</section>
+<section id="train-vs-test-data" class="level3">
+<h3 class="anchored" data-anchor-id="train-vs-test-data">Train vs Test Data</h3>
+<p>Now we know all about residuals and all of the fun ways we can interpret them. Are you going to show these plots to your boss? Not so fast! Understanding the residuals in your trained model is a good idea when training the model, but using residuals to show the performance of the model to others is not a good idea. Analyzing the accuracy of the residuals is kind of like having your model take an open note test. It already has the answers to each question, so usually it will score really well. It’s not a good representation of the real world. Instead you want to make sure your model can generalize well to new and unseen data.</p>
+<p>To do that we have to take some of the historical data and hide it from the model. This means splitting your data into two sets. An initial <strong>training data set</strong> that’s used to, you guessed it, train the model. Then a second <strong>testing data set</strong> that we’ll use to compare the predictions of the model to. Having this hold out testing data is crucial to understand if our model can actually create strong predictions on data it’s never seen before.</p>
+<p>Let me state these two concepts again because they are that important.</p>
+<ol type="1">
+<li><strong>Train Data</strong>: the historical data used to train a model</li>
+<li><strong>Test Data</strong>: the historical data held out (not used to train the model) to evaluate the predictions of a trained model</li>
+</ol>
+<p>When splitting the data into train and test sets, you need to do it carefully. In most machine learning problems, you can split the data randomly and be just fine. But in the world of time series this is a cardinal sin. <strong>Because the data is ordered by time, it has to be split into train/test sets by time.</strong> Let’s see a quick example of splitting the data randomly.</p>
+<p><img src="https://mftokic.github.io/posts/2026-01-29-ts-fundamentals-model-evaluation-train-test/chart7.png" class="img-fluid"></p>
+<p>In the chart we see some historical months being assigned in the training data, while others are in the testing data. This creates multiple problems when training and evaluating models.</p>
+<ol type="1">
+<li>Having training data on either side of a single historical date period allows a model to “peek ahead” and learn about future trend and seasonality patters. Effectively cheating to get better results when creating the prediction for the test date period. This will allow the model to create accurate predictions on the test data, but will not allow us to understand if the model can generalize well to new and unseen data when we need to create a forecast into the future.</li>
+<li>Some models, like ARIMA, need every historical data point in a time series to be ordered by time with no missing values between each date period. Splitting data randomly creates unordered time series with missing values in the training data, making it impossible for models like ARIMA to properly train and create predictions.</li>
+</ol>
+<p>Let’s split the data by time and see how it looks.</p>
+<p><img src="https://mftokic.github.io/posts/2026-01-29-ts-fundamentals-model-evaluation-train-test/chart8.png" class="img-fluid"></p>
+<p>Now we have split the data correctly into train and test splits. We took all of the historical data and withheld the final 12 months as the test data. This will allow us to properly evaluate the our forecast model. Where we can show the future forecast, as well as how well the same model performed historically. Let’s keep in mind the train/test splits and see if we can create a forecast for the test data, and also create a final future forecast.</p>
+<p><img src="https://mftokic.github.io/posts/2026-01-29-ts-fundamentals-model-evaluation-train-test/chart9.png" class="img-fluid"></p>
+<p>Excellent! Now we can show the boss the future forecast, in addition to how a similar forecast would have performed on the historical data as a back test.</p>
+</section>
+<section id="final-thoughts" class="level3">
+<h3 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h3>
+<p>Splitting your data into separate training and testing data helps us understand if the model is capable of creating a robust future forecast. When showing the results of a ML forecast to others, it’s just as important to show how well the model performed historically as it is to show the future forecast. That’s how you build trust. No one wants to use a forecast that has been proven to work poorly in the past.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>machine-learning</category>
+  <category>time-series</category>
+  <guid>https://mftokic.github.io/posts/2026-01-29-ts-fundamentals-model-evaluation-train-test/</guid>
+  <pubDate>Thu, 29 Jan 2026 08:00:00 GMT</pubDate>
+  <media:content url="https://mftokic.github.io/posts/2026-01-29-ts-fundamentals-model-evaluation-train-test/image.png" medium="image" type="image/png" height="96" width="144"/>
+</item>
 <item>
   <title>Finn Forecasting AI Agent Launch</title>
   <dc:creator>Mike Tokic</dc:creator>
@@ -2226,7 +2313,7 @@ Thomas DeLauer on Judd Lienhard
 <h3 class="anchored" data-anchor-id="is-my-forecast-accurate">Is My Forecast Accurate?</h3>
 <p>After you train a model and create a forecast, you can either blindly trust that future forecast or figure out much you should trust it based on some evaluation. NASA has a saying, “in god we trust, all others bring data”. If you create a forecast with no accompanying data around it to build trust in that forecast, no one will want to use it. That’s why we need to implement model evaluation. Here are the foundational concepts we’ll cover in this chapter.</p>
 <ul>
-<li>Train/Test Splits (in progress)</li>
+<li><a href="https://mftokic.github.io/posts/2026-01-29-ts-fundamentals-model-evaluation-train-test/">Train/Test Splits</a></li>
 <li>Time Series Cross Validation</li>
 <li>Evaluation Metrics</li>
 </ul>
@@ -3508,241 +3595,6 @@ Click to read the original notes.
   <guid>https://mftokic.github.io/posts/2025-03-15-genetic-methylation/</guid>
   <pubDate>Sat, 15 Mar 2025 07:00:00 GMT</pubDate>
   <media:content url="https://mftokic.github.io/posts/2025-03-15-genetic-methylation/image.png" medium="image" type="image/png" height="86" width="144"/>
-</item>
-<item>
-  <title>February Learnings</title>
-  <dc:creator>Mike Tokic</dc:creator>
-  <link>https://mftokic.github.io/posts/2025-03-01-february-learnings/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>I love reading books, watching YouTube videos, listening to podcasts, you name it. Anything learning related is my jam. But I realized that if I don’t take notes on what I’m learning, I will probably forget everything. Now when I hear something interesting, I write it down in an Apple note for that month. Below are some of the learnings I jotted down in February, summarized by ChatGPT with additional context added by their new deep research feature. I hope you find them as interesting as I did.</p>
-<section id="ai-machine-learning" class="level2">
-<h2 class="anchored" data-anchor-id="ai-machine-learning">AI &amp; Machine Learning</h2>
-<section id="knowledge-distillation" class="level3">
-<h3 class="anchored" data-anchor-id="knowledge-distillation">Knowledge Distillation</h3>
-<ul>
-<li><strong>AI Distillation:</strong> Process of transferring knowledge from a large, complex AI model (teacher) to a smaller, efficient model (student). Example: DeepSeek training their R1 model using GPT-4 answers as training data.</li>
-</ul>
-</section>
-<section id="large-language-model-llm-architectures" class="level3">
-<h3 class="anchored" data-anchor-id="large-language-model-llm-architectures">Large Language Model (LLM) Architectures</h3>
-<ul>
-<li><strong>Transformer Architecture:</strong> Neural network architecture characterized by self-attention mechanisms, enabling parallel processing and context awareness.</li>
-<li><strong>Mixture of Experts (MoE):</strong> Architecture where subsets of neurons (“experts”) activate selectively per task, significantly reducing computational overhead and inference costs.</li>
-</ul>
-</section>
-<section id="economics-of-ai" class="level3">
-<h3 class="anchored" data-anchor-id="economics-of-ai">Economics of AI</h3>
-<ul>
-<li><strong>Jevons Paradox:</strong> Lowering the cost of AI increases its usage dramatically.</li>
-<li><strong>Token Costs:</strong> Input tokens (~¼ the cost of output tokens) allow parallel processing, whereas output tokens are sequential and auto-regressive.</li>
-<li><strong>GPU Performance Factors:</strong> Critical aspects for AI training and inference are Floating-point operations (FLOPS), Memory bandwidth (IO), and Chip interconnectedness.</li>
-<li><strong>Cost Evolution of AI Models:</strong> GPT-3 costs dropped drastically from ~$60 to ~$0.05 per million tokens between 2022 and 2024, a 1,200x reduction.</li>
-</ul>
-</section>
-<section id="geopolitics-and-ai-chips" class="level3">
-<h3 class="anchored" data-anchor-id="geopolitics-and-ai-chips">Geopolitics and AI Chips</h3>
-<ul>
-<li>Chinese companies circumvent U.S. Nvidia GPU export bans by routing purchases through third-party vendors in Singapore.</li>
-<li><strong>DeepSeek Origin:</strong> Began as a spinoff of the Chinese hedge fund “High Flyer,” originally focused on GPU-based trading algorithms, later pivoting to AI models.</li>
-</ul>
-</section>
-</section>
-<section id="cognitive-performance-optimization" class="level2">
-<h2 class="anchored" data-anchor-id="cognitive-performance-optimization">Cognitive &amp; Performance Optimization</h2>
-<section id="most-important-question-miq-framework" class="level3">
-<h3 class="anchored" data-anchor-id="most-important-question-miq-framework">Most Important Question (MIQ) Framework</h3>
-<ul>
-<li>Regularly clarify and revisit the single most critical, high-level question guiding your decisions, ensuring deep strategic alignment.</li>
-</ul>
-</section>
-<section id="peak-performance-work-strategies" class="level3">
-<h3 class="anchored" data-anchor-id="peak-performance-work-strategies">Peak Performance Work Strategies</h3>
-<ul>
-<li>Optimize intense, focused effort for fewer hours (3–5 hours/day) rather than prolonged mediocre sessions.</li>
-<li>Reserve creative, high-focus tasks for peak-energy periods; routine tasks during lower-energy periods (e.g., noted dip around 2:30–3:30 pm).</li>
-</ul>
-</section>
-<section id="mental-state-management" class="level3">
-<h3 class="anchored" data-anchor-id="mental-state-management">Mental State Management</h3>
-<ul>
-<li>Leverage breathing techniques to control adrenaline and enhance decision-making speed and clarity.</li>
-<li>Prioritize reflective time by avoiding immediate stimuli (e.g., smartphones) first thing in the morning.</li>
-</ul>
-</section>
-<section id="quality-over-quantity" class="level3">
-<h3 class="anchored" data-anchor-id="quality-over-quantity">Quality Over Quantity</h3>
-<ul>
-<li>Short bursts of deep work significantly outperform extended hours of moderate or distracted effort.</li>
-</ul>
-</section>
-</section>
-<section id="health-fitness" class="level2">
-<h2 class="anchored" data-anchor-id="health-fitness">Health &amp; Fitness</h2>
-<section id="training-principles" class="level3">
-<h3 class="anchored" data-anchor-id="training-principles">Training Principles</h3>
-<ul>
-<li><strong>Optimal Training Splits:</strong> “Push-Legs-Pull” split recommended for optimal muscle recovery and growth.</li>
-<li>Aim to train each muscle group twice weekly for maximal growth stimulus.</li>
-<li>Understand the <strong>interference effect</strong>—heavy back workouts might negatively impact squatting performance the next day.</li>
-</ul>
-</section>
-<section id="protein-intake-recommendations" class="level3">
-<h3 class="anchored" data-anchor-id="protein-intake-recommendations">Protein Intake Recommendations</h3>
-<ul>
-<li>Non-lifters: ~0.8 grams per pound of body weight daily.</li>
-<li>Lifters aiming for muscle growth: ~1.3 grams per pound daily; significant growth benefit compared to lower intakes.</li>
-</ul>
-</section>
-<section id="effective-supplements-for-muscle-gain" class="level3">
-<h3 class="anchored" data-anchor-id="effective-supplements-for-muscle-gain">Effective Supplements for Muscle Gain</h3>
-<ul>
-<li>Creatine (improves strength and power), Protein powder (supports muscle recovery), Multivitamins (general health), Carb powders (Gatorade, Powerade for energy replenishment), Caffeine (enhances workout focus).</li>
-</ul>
-</section>
-<section id="risks-of-sedentary-behavior" class="level3">
-<h3 class="anchored" data-anchor-id="risks-of-sedentary-behavior">Risks of Sedentary Behavior</h3>
-<ul>
-<li>Prolonged sitting significantly increases mortality risk; offset by regular activity and frequent movement breaks.</li>
-</ul>
-</section>
-<section id="behavioral-eating-habit-adjustment" class="level3">
-<h3 class="anchored" data-anchor-id="behavioral-eating-habit-adjustment">Behavioral Eating Habit Adjustment</h3>
-<ul>
-<li>When stressed or craving food, first take a 30-minute walk to distinguish genuine hunger from stress-induced urges.</li>
-</ul>
-</section>
-</section>
-<section id="business-strategy" class="level2">
-<h2 class="anchored" data-anchor-id="business-strategy">Business &amp; Strategy</h2>
-<section id="new-product-strategy" class="level3">
-<h3 class="anchored" data-anchor-id="new-product-strategy">New Product Strategy</h3>
-<ul>
-<li>Start by identifying core insights, fire small “test” bullets (low-risk experiments), and upon success, scale with larger, well-resourced “cannonballs.”</li>
-</ul>
-</section>
-<section id="market-psychology" class="level3">
-<h3 class="anchored" data-anchor-id="market-psychology">Market Psychology</h3>
-<ul>
-<li><strong>Osborn Effect:</strong> Announcing future products too early can stall current sales as customers delay purchasing decisions.</li>
-<li><strong>Halo Effect:</strong> Successfully launching a new product enhances brand image, positively affecting the sales of existing products.</li>
-</ul>
-</section>
-<section id="strategic-hiring-expert-filtering" class="level3">
-<h3 class="anchored" data-anchor-id="strategic-hiring-expert-filtering">Strategic Hiring &amp; Expert Filtering</h3>
-<ul>
-<li>Identify talent by querying top performers for recommendations, refining the hiring funnel to focus on demonstrated capability and peer recognition.</li>
-</ul>
-</section>
-<section id="economic-insights" class="level3">
-<h3 class="anchored" data-anchor-id="economic-insights">Economic Insights</h3>
-<ul>
-<li><strong>GDP Growth Simplified:</strong> Driven by the productivity per worker and the total workforce.</li>
-<li><strong>Idiot Index:</strong> Metric comparing raw material costs to finished product price, highlighting operational inefficiencies and pricing strategies.</li>
-</ul>
-</section>
-</section>
-<section id="historical-cultural-insights" class="level2">
-<h2 class="anchored" data-anchor-id="historical-cultural-insights">Historical &amp; Cultural Insights</h2>
-<section id="mongol-empire" class="level3">
-<h3 class="anchored" data-anchor-id="mongol-empire">Mongol Empire</h3>
-<ul>
-<li>Exceptional warfare tactics: mobility, psychological intimidation, and merit-based leadership. Each soldier crafted their own bows, ensuring skill and accountability.</li>
-<li>Mongol rule lasted until Soviet invasion (~1220–1920), marking the longest family-led empire in history.</li>
-<li>Genghis Khan’s aggressive strategies rooted partly in personal revenge and necessity after familial trauma.</li>
-</ul>
-</section>
-<section id="korean-language-origins-hangul" class="level3">
-<h3 class="anchored" data-anchor-id="korean-language-origins-hangul">Korean Language Origins (Hangul)</h3>
-<ul>
-<li>Hangul invented explicitly due to difficulty in learning complex Chinese characters. Designed for rapid acquisition, enhancing widespread literacy.</li>
-</ul>
-</section>
-<section id="stanfords-touchy-feely-class" class="level3">
-<h3 class="anchored" data-anchor-id="stanfords-touchy-feely-class">Stanford’s “Touchy-Feely” Class</h3>
-<ul>
-<li>“Interpersonal Dynamics” at Stanford GSB teaches emotional intelligence, authentic communication, and relationship-building skills via experiential T-group sessions.</li>
-<li>5 levels of communication
-<ol type="1">
-<li>Ritual: classic conversations like general greeting</li>
-<li>Extended ritual: asking about the weather or a recent sports game</li>
-<li>Content: facts about a project or work items</li>
-<li>Emotional self-disclosure: saying how you feel emotionally (I feel sad)</li>
-<li>Neutral emotional self-disclosure: expressing emotion at another person (I feel proud of you, angry at you, etc)</li>
-</ol></li>
-<li>To have strong relationships in life and career, you have to get to level 4 and 5</li>
-</ul>
-</section>
-</section>
-<section id="psychology-behavioral-science" class="level2">
-<h2 class="anchored" data-anchor-id="psychology-behavioral-science">Psychology &amp; Behavioral Science</h2>
-<section id="behavioral-loops-addiction" class="level3">
-<h3 class="anchored" data-anchor-id="behavioral-loops-addiction">Behavioral Loops &amp; Addiction</h3>
-<ul>
-<li><strong>Scarcity Loop:</strong> Opportunity → Unpredictable reward → Quick repeatability drives addictive behaviors (gambling, social media).</li>
-<li><strong>Near-Miss Effect:</strong> Close failures in gambling or gaming increase dopamine and repeat behaviors, driving addiction.</li>
-</ul>
-</section>
-<section id="importance-of-courage" class="level3">
-<h3 class="anchored" data-anchor-id="importance-of-courage">Importance of Courage</h3>
-<ul>
-<li>Courage is central to achieving significant outcomes; talent and intelligence without courage lead to stagnation and regret.</li>
-</ul>
-</section>
-<section id="nova-effect" class="level3">
-<h3 class="anchored" data-anchor-id="nova-effect">Nova Effect</h3>
-<ul>
-<li>Sudden positive events (e.g., winning the lottery) can negatively impact perceived happiness afterward. Gradual progress allows better psychological adaptation.</li>
-</ul>
-</section>
-</section>
-<section id="miscellaneous-insights-notable-quotes" class="level2">
-<h2 class="anchored" data-anchor-id="miscellaneous-insights-notable-quotes">Miscellaneous Insights &amp; Notable Quotes</h2>
-<section id="philosophical-reflections" class="level3">
-<h3 class="anchored" data-anchor-id="philosophical-reflections">Philosophical Reflections</h3>
-<ul>
-<li><strong>Success &amp; Failure:</strong> “Success is going from failure to failure without loss of enthusiasm.”</li>
-<li><strong>Life Razor (Personal Decision Framework):</strong> Prioritize actions granting maximum control over personal time.</li>
-<li><strong>Seasons of Life:</strong> Life priorities shift naturally through different life stages; adaptability is crucial.</li>
-<li><strong>Learning &amp; Reflection:</strong> True learning arises when experience intersects with thoughtful reflection.</li>
-</ul>
-</section>
-<section id="intriguing-observations" class="level3">
-<h3 class="anchored" data-anchor-id="intriguing-observations">Intriguing Observations</h3>
-<ul>
-<li>Diamonds priced disproportionately at milestone sizes (2-carat vs.&nbsp;1.99-carat).</li>
-<li>Chronic strep throat indicates potential mold exposure.</li>
-<li>Epstein-Barr virus (mono) infection necessary precursor for multiple sclerosis.</li>
-<li>Icelandic dating app created by the government prevents accidental familial relationships.</li>
-<li>Drug companies advertise heavily on news networks, indirectly shaping media narratives.</li>
-</ul>
-</section>
-<section id="notable-quotes" class="level3">
-<h3 class="anchored" data-anchor-id="notable-quotes">Notable Quotes</h3>
-<ul>
-<li><em>“Your life is in your hands; don’t drop it.”</em></li>
-<li><em>“The generation that lights the fuse usually gets buried in the rubble.”</em></li>
-<li><em>“Be interested, not interesting.”</em><br>
-</li>
-<li><em>“If more money wouldn’t change how you spend your time, you’re already rich.”</em><br>
-</li>
-<li><em>“Your health at age 80 is a reflection of your relationships at age 50.”</em></li>
-</ul>
-
-
-</section>
-</section>
-
- ]]></description>
-  <category>life</category>
-  <category>learning</category>
-  <guid>https://mftokic.github.io/posts/2025-03-01-february-learnings/</guid>
-  <pubDate>Sat, 01 Mar 2025 08:00:00 GMT</pubDate>
-  <media:content url="https://mftokic.github.io/posts/2025-03-01-february-learnings/image.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 </channel>
 </rss>

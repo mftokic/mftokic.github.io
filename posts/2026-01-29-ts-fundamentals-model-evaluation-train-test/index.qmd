@@ -5,12 +5,11 @@ author: "Mike Tokic"
 date: "2026-01-29"
 categories: [machine-learning, time-series]
 image: "image.png"
-draft: True
 ---
 
 *This post is part of the [model evaluation chapter](https://mftokic.github.io/posts/2025-05-13-ts-fundamentals-model-evaluation/) within a larger learning series around time series forecasting fundamentals. [Check out the main learning path](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/) to see other posts in the series.* 
 
-*The example monthly data used in this series [can be found here.](https://github.com/mftokic/mftokic.github.io/blob/main/posts/2024-10-02-ts-fundamentals-whats-a-time-series/example_ts_data.csv) You can also find the [python code used in this post here.](https://github.com/mftokic/mftokic.github.io/blob/main/notebooks/2025-05-30-ts-fundamentals-model-evaluation-train-test-split.ipynb)*
+*The example monthly data used in this series [can be found here.](https://github.com/mftokic/mftokic.github.io/blob/main/posts/2024-10-02-ts-fundamentals-whats-a-time-series/example_ts_data.csv) You can also find the [python code used in this post here.](https://github.com/mftokic/mftokic.github.io/blob/main/notebooks/2026-01-29-ts-fundamentals-model-evaluation-train-test-split.ipynb)*
 
 ### Building Trust In The Forecast
 
@@ -18,7 +17,7 @@ Let's say your company's CFO is asking you, the hotshot data & AI person, to pro
 
 ![](./chart1.png)
 
-The future 12 month forecast seems to capture the seasonality from month to month, and even the upward trend. You show the results to the CFO, even calling out the 95% prediction interval, which shows the upper of lower bounds with 95% certainty that the future revenue values are likely to fall in between. The CFO looks at it for one second, then says "so what, I can't use this forecast. How do I know it's accurate, this is a black box". You're hopes and dreams, including that potential promotion, are now crushed. Congrats, you learned one of your first hard lessons in the forecast game. **Building trust in the forecast is harder than creating one in the first place.** It might take seconds to train an ARIMA model, but convincing people to use it might take years. 
+The future 12 month forecast seems to capture the seasonality from month to month, and even the upward trend. You show the results to the CFO, even calling out the 95% prediction interval, which shows the upper of lower bounds with 95% certainty that the future revenue values are likely to fall in between. The CFO looks at it for one second, then says "So what, I can't use this forecast! How do I know it's accurate? This is a black box.". You're hopes and dreams, including that potential promotion, are now crushed. Congrats, you learned one of your first hard lessons in the forecast game. **Building trust in the forecast is harder than creating one in the first place.** It might take seconds to train an ARIMA model, but convincing people to use it might take years. 
 
 Hang on a second, you just remembered in our chapter covering [univariate models](https://mftokic.github.io/posts/2025-03-24-ts-fundamentals-univariate-models/) that there is this thing called a residual, which allows you to see historical forecasts compared to actual values on the training data. Maybe residuals can help your CFO build trust in the forecast? 
 
@@ -62,12 +61,12 @@ The last chart we will showcase is creating an ACF chart on the residuals. If yo
 
 Now we know all about residuals and all of the fun ways we can interpret them. Are you going to show these plots to your boss? Not so fast! Understanding the residuals in your trained model is a good idea when training the model, but using residuals to show the performance of the model to others is not a good idea. Analyzing the accuracy of the residuals is kind of like having your model take an open note test. It already has the answers to each question, so usually it will score really well. It's not a good representation of the real world. Instead you want to make sure your model can generalize well to new and unseen data. 
 
-To do that we have to take some of the historical data and hide it from the model. This means splitting your data into two sets. An initial training set of data that's used to, you guessed it, train the model. Then a second testing data set that we'll use to compare the predictions of the model to. Having this hold out testing data is crucial to understand if our model can actually create strong predictions on data it's never seen before. 
+To do that we have to take some of the historical data and hide it from the model. This means splitting your data into two sets. An initial **training data set** that's used to, you guessed it, train the model. Then a second **testing data set** that we'll use to compare the predictions of the model to. Having this hold out testing data is crucial to understand if our model can actually create strong predictions on data it's never seen before. 
 
 Let me state these two concepts again because they are that important. 
 
-1. Train Data: the historical data used to train a model 
-2. Test Data: the historical data held out (not used to train the model) to evaluate the predictions of a trained model
+1. **Train Data**: the historical data used to train a model 
+2. **Test Data**: the historical data held out (not used to train the model) to evaluate the predictions of a trained model
 
 When splitting the data into train and test sets, you need to do it carefully. In most machine learning problems, you can split the data randomly and be just fine. But in the world of time series this is a cardinal sin. **Because the data is ordered by time, it has to be split into train/test sets by time.** Let's see a quick example of splitting the data randomly. 
 
@@ -77,6 +76,8 @@ In the chart we see some historical months being assigned in the training data, 
 
 1. Having training data on either side of a single historical date period allows a model to "peek ahead" and learn about future trend and seasonality patters. Effectively cheating to get better results when creating the prediction for the test date period. This will allow the model to create accurate predictions on the test data, but will not allow us to understand if the model can generalize well to new and unseen data when we need to create a forecast into the future. 
 2. Some models, like ARIMA, need every historical data point in a time series to be ordered by time with no missing values between each date period. Splitting data randomly creates unordered time series with missing values in the training data, making it impossible for models like ARIMA to properly train and create predictions. 
+
+Let's split the data by time and see how it looks. 
 
 ![](./chart8.png)
 
@@ -88,6 +89,4 @@ Excellent! Now we can show the boss the future forecast, in addition to how a si
 
 ### Final Thoughts
 
-Splitting your data into separate training and testing data helps us understand if the model is capable of creating a robust future forecast. When showing the results of a ML forecast to others, it's just as important to show how well the model performed historically as it is to show the future forecast. That's how you build trust. No one wants to use a forecast that has been proven to work poorly in the past. Calculating the accuracy of those back tests is the topic for our next post. 
-
-### Learn More
+Splitting your data into separate training and testing data helps us understand if the model is capable of creating a robust future forecast. When showing the results of a ML forecast to others, it's just as important to show how well the model performed historically as it is to show the future forecast. That's how you build trust. No one wants to use a forecast that has been proven to work poorly in the past.
