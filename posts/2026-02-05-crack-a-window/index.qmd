@@ -6,7 +6,6 @@ author: "Mike Tokic"
 date: "2026-02-05"
 categories: [health]
 image: "image.png"
-draft: true
 ---
 
 The more you breathe in a closed room, the dumber you get. This is caused by rising levels of CO2 in the air. It's why you feel like death on long plane rides, marathon conference room sessions, or spending all day inside a stuffy convention hall. High levels of CO2 contribute to poorer decision making, focus, and make you sleepy. All things we don't want when trying to get stuff done. Ever feel sleepy in the afternoon at your desk? It could just be rising C02 levels in your office. Why do you think the phrase, "get some fresh air", actually exists? 
