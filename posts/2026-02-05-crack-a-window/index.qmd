@@ -3,39 +3,11 @@
 title: "The Life Changing Magic of Cracking A Window"
 description: "How fresh air makes you smarter"
 author: "Mike Tokic"
-date: "2026-02-04"
+date: "2026-02-05"
 categories: [health]
 image: "image.png"
 draft: true
 ---
-
-1. What am I trying to say? 
-- Breathing stale air creates high levels of C02, and high C02 makes us dumb. 
-2. What story can I tell? 
-- Measuring the levels of C02 at my place (especially after I work out), at work, and at my girlfriends apartment with pets
-- Why we feel like shit on planes
-3. List major parts by sections/points
-- Intro/hook
-- How high C02 affects the body
-- Measuring C02
-    - Devices to use
-    - What levels cause what affects
-- Reducing C02
-- Final Thoughts
-4. Brain dump into each one
-5. Refine into a cohesive narrative
-6. Create hook/intro 
-7. How is this 1% better than my previous post? 
-8. Is this interesting? Is it fun to read? 
-9. Final review, read it out loud via AI
-10. Create thumbnail, make it fun
-11. Post blog 
-12. Condense and post on LinkedIn
-13. Condense and post on X
-
---
-
-### Intro/hook
 
 The more you breathe in a closed room, the dumber you get. This is caused by rising levels of CO2 in the air. It's why you feel like death on long plane rides, marathon conference room sessions, or spending all day inside a stuffy convention hall. High levels of CO2 contribute to poorer decision making, focus, and make you sleepy. All things we don't want when trying to get stuff done. Ever feel sleepy in the afternoon at your desk? It could just be rising C02 levels in your office. Why do you think the phrase, "get some fresh air", actually exists? 
 
@@ -43,7 +15,7 @@ Let's crack a window, let some air in, and dive deeper into what's going on.
 
 ### How high C02 affects the body
 
-High levels of CO2 is usually caused by too many living beings breathing inside of a poorly ventilated space for an extended period of time. As we breathe oxygen in, we breathe out CO2. Things like plants cannot clean up that CO2 fast enough, so levels rise. 
+High levels of CO2 is usually caused by too many humans/animals breathing inside of a poorly ventilated space for an extended period of time. As we breathe oxygen in, we breathe out CO2. Things like plants cannot clean up that CO2 fast enough, so levels rise. 
 
 Outdoor air has around 400ppm (parts per million). That's the healthy baseline we always want to get close to with our indoor air. As the levels rise, our body's begin to suffer. 
 
@@ -60,11 +32,11 @@ Outdoor air has around 400ppm (parts per million). That's the healthy baseline w
 Thankfully it's easy to measure the amount of CO2 in and room. Here are a few options based on your budget. 
 
 - [SAF ARANET4 $190](https://www.amazon.com/dp/B07YY7BH2W?ref=ppx_yo2ov_dt_b_fed_asin_title): This little device is like a kindle but for air quality. It has a little e-ink display that shows current C02 levels. It's battery powered so you can take it anywhere. I have one of these in my backpack, ready to pull out and measure anytime I want. There's no buttons or setup, put the batteries in and it just works. 
-- [IQAir Quality Monitor $330](https://www.amazon.com/dp/B0784TZFRW?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1): This is the pricier option, but provides more than just CO2 levels. It can also measure indoor temperature, humidity, and PM2.5 (toxins in the air). This is a nice all in one air quality monitor, since it can also connect to outdoors sensors other IQAir users might be using in your same neighborhood. So you get to know how healthy the air inside is compared to outside.  
+- [IQAir Quality Monitor $330](https://www.amazon.com/dp/B0784TZFRW?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1): This is the pricier option, but provides more than just CO2 levels. It can also measure indoor temperature, humidity, and PM2.5 (toxins in the air). This is a nice all-in-one air quality monitor, since it can also connect to outdoors sensors other IQAir users might be using in your neighborhood. So you get to know how healthy the air inside is compared to outside.  
 
 ### Reducing C02
 
-The best way to reduce rooms with high levels of C02 is to either improve the ventilation or simply open a window. In an office you may not have the option to open a window, so checking how your building ventilates air is important. If it just cycles existing indoor air, without pulling fresh air from outside, then you might have a problem. CO2 levels may continue to rise as more people come into the office throughout the day. Making sure to get outside a few times throughout the workday and breathe fresh air might be your best bet. 
+The best way to reduce rooms with high levels of C02 is to either improve the indoor ventilation or simply open a window. In an office you may not have the option to open a window, so checking how your building ventilates air is important. If it just cycles existing indoor air, without pulling fresh air from outside, then you might have a problem. CO2 levels may continue to rise as more people come into the office throughout the day. Making sure to get outside a few times throughout the workday and breathe fresh air might be your best bet. 
 
 **If you do have access to a window, then the best approach is to crack it slightly open and have it continuously send in fresh air 24/7.** Yes, I even do this in the wintertime in my apartment. Yes, it probably jacks up my heating bills. But would you trade off a sharper mind for a few more dollars in heating bills a month? Yes, I definitely would. Remember, high levels of CO2 has been proven to drop cognitive performance by over 50%. Do you want that in your work from home set up? No, I didn't think so. 
 
