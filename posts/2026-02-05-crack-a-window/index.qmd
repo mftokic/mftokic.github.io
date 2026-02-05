@@ -22,10 +22,10 @@ Outdoor air has around 400ppm (parts per million). That's the healthy baseline w
 - **400ppm**: Equivalent to outdoor air, body function optimal. 
 - **400-800ppm**: Little to no expected cognitive impact. This is the sweet spot for most indoor spaces. 
 - **800-1,000ppm**: Mild drowsiness and reduced mental sharpness start to occur. 
-- **1,000-1,500**: 15-20% reduction in cognitive function. Symptoms like headache, tiredness, and difficulty concentrating continue to worsen. 
-- **1,500-2,500**: Concentration and fatigue worsen, creative thinking drops off a cliff. 
-- **2,500-5,000**: Cognitive performance falls by over 50%.
-- **5,000+**: Hazardous level, not healthy for any amount of time. 
+- **1,000-1,500ppm**: 15-20% reduction in cognitive function. Symptoms like headache, tiredness, and difficulty concentrating continue to worsen. 
+- **1,500-2,500ppm**: Concentration and fatigue worsen, creative thinking drops off a cliff. 
+- **2,500-5,000ppm**: Cognitive performance falls by over 50%.
+- **5,000+ppm**: Hazardous level, not healthy for any amount of time. 
 
 ### Measuring C02
 
