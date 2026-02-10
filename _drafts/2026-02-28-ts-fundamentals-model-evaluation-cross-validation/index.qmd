@@ -1,0 +1,54 @@
+---
+title: "Model Evaluation: Time Series Cross-Validation"
+description: "The right way to back test your forecast"
+author: "Mike Tokic"
+date: "2026-02-28"
+categories: [machine-learning, time-series]
+image: "image.png"
+draft: True
+---
+
+1. What am I trying to say?
+
+- How cross validation allows us to actually back test a model properly. 
+- Why time series needs a special set of cross-validation
+
+2. What story can I tell? 
+3. List major parts by sections/points
+4. Brain dump into each one
+5. Refine into a cohesive narrative
+6. Create hook/intro 
+7. How is this 1% better than my previous post? 
+8. Is this interesting? Is it fun to read? 
+9. Final review, read it out loud via AI
+10. Create thumbnail, make it fun
+11. Post blog 
+12. Condense and post on LinkedIn
+13. Condense and post on X
+
+### Intro/Hook 
+
+*This post is part of the [model evaluation chapter](https://mftokic.github.io/posts/2025-05-13-ts-fundamentals-model-evaluation/) within a larger learning series around time series forecasting fundamentals. [Check out the main learning path](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/) to see other posts in the series.* 
+
+*The example monthly data used in this series [can be found here.](https://github.com/mftokic/mftokic.github.io/blob/main/posts/2024-10-02-ts-fundamentals-whats-a-time-series/example_ts_data.csv) You can also find the [python code used in this post here.](https://github.com/mftokic/mftokic.github.io/blob/main/notebooks/2026-01-29-ts-fundamentals-model-evaluation-train-test-split.ipynb)*
+
+In the [previous post](https://mftokic.github.io/posts/2026-01-29-ts-fundamentals-model-evaluation-train-test/), we discussed the importance of splitting you data into train/test splits. This allows us to see how a model does on new data it hasn't seen before. 
+
+
+### What is Time Series Cross-Validation? 
+
+
+### Types of Time Series Cross-Validation 
+
+
+### Getting Insights from Time Series Cross-Validation
+
+How to show TSCV to business stakeholders. Looking at results by forecast horizon. 
+
+### Reversal 
+
+
+### Final Thoughts
+
+
+### Learn More

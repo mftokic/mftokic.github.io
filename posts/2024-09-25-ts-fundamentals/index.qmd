@@ -29,7 +29,7 @@ The sequence of what you learn is just as important as what content you learn. I
     - [Simple Benchmark Models](https://mftokic.github.io/posts/2025-05-12-ts-fundamentals-univariate-benchmarks/)
 5. [Model Evaluation](https://mftokic.github.io/posts/2025-05-13-ts-fundamentals-model-evaluation/)
     - [Train/Test Splits](https://mftokic.github.io/posts/2026-01-29-ts-fundamentals-model-evaluation-train-test/)
-    - Time Series Cross Validation 
+    - Time Series Cross-Validation 
     - Evaluation Metrics
 6. Feature Engineering
     - Date 
