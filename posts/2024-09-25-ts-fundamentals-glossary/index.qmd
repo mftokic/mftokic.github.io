@@ -7,73 +7,181 @@ categories: [machine-learning, time-series]
 image: "image.png"
 ---
 
-Jump to: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#g) · [H](#h) · [I](#i) · [J](#j) · [K](#k) · [L](#l) · [M](#m) · [N](#n) · [O](#o) · [P](#p) · [Q](#q) · [R](#r) · [S](#s) · [T](#t) · [U](#u) · [V](#v) · [W](#w) · [X](#x) · [Y](#y) · [Z](#z)
+[A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#g) · [H](#h) · [I](#i) · [J](#j) · [K](#k) · [L](#l) · [M](#m) · [N](#n) · [O](#o) · [P](#p) · [Q](#q) · [R](#r) · [S](#s) · [T](#t) · [U](#u) · [V](#v) · [W](#w) · [X](#x) · [Y](#y) · [Z](#z)
 
 ### A {#a}
 
 #### Additive Decomposition 
 
+A method of breaking a time series into its components (trend, seasonality, and remainder) by adding them together. In additive decomposition, the seasonal effect is a fixed amount that gets added or subtracted each period—like a retailer whose sales always increase by exactly the same dollar amount every holiday season.
+
+*Discussed in: [Time Series Decomposition](https://mftokic.github.io/posts/2024-11-06-ts-fundamentals-decomposition/), [Exponential Smoothing](https://mftokic.github.io/posts/2025-04-30-ts-fundamentals-univariate-ets/)*
+
 #### ARIMA 
+
+Stands for AutoRegressive Integrated Moving Average. It's a univariate forecasting model that predicts future values by combining three ideas: using past values of the series (autoregressive), differencing the data to remove trends (integrated), and learning from past forecast errors (moving average). ARIMA is one of the most foundational and widely used models in time series forecasting.
+
+*Discussed in: [ARIMA](https://mftokic.github.io/posts/2025-04-10-ts-fundamentals-univariate-arima/)*
 
 #### Artificial Intelligence (AI) 
 
+The ability for machines to learn and think like humans. AI has been around since the mid 20th century and contains many subdisciplines, with machine learning being the biggest and most important.
+
+*Discussed in: [What's A Time Series?](https://mftokic.github.io/posts/2024-10-02-ts-fundamentals-whats-a-time-series/)*
+
 #### Autocorrelation (ACF) 
+
+A measure of how much a current value in a time series is related to its own past values. For example, if revenue this month is high, autocorrelation tells you how likely it is that revenue next month (or 12 months ago) was also high. Strong autocorrelation means your data has memory, which is great for forecasting.
+
+*Discussed in: [Autocorrelation](https://mftokic.github.io/posts/2024-11-12-ts-fundamentals-autocorrelation/), [Train Test Splits](https://mftokic.github.io/posts/2026-01-29-ts-fundamentals-model-evaluation-train-test/)*
 
 ### B {#b}
 
 #### Back Testing 
 
+The process of evaluating a forecast model by testing it against historical data it has never seen before. You train a model on older data and then compare its predictions to actual results from a more recent time period, giving you a realistic measure of how well the model might perform in the future.
+
+*Discussed in: [Train Test Splits](https://mftokic.github.io/posts/2026-01-29-ts-fundamentals-model-evaluation-train-test/)*
+
+#### Benchmark Model 
+
+A simple model that uses basic formulas (like averages or last-known values) to produce a forecast, serving as a baseline to compare against more complex models. If a fancy machine learning model can't beat a simple benchmark, it's probably not worth the added complexity.
+
+*Discussed in: [Simple Benchmark Models](https://mftokic.github.io/posts/2025-05-12-ts-fundamentals-univariate-benchmarks/)*
+
 #### Binary Variable 
 
+A variable that can only take two values: 0 or 1. In time series forecasting, binary variables are used to flag events like whether a product launch happened in a given month (1) or not (0), or whether a data point was originally missing or an outlier.
+
+*Discussed in: [Missing Data and Outliers](https://mftokic.github.io/posts/2024-11-26-ts-fundamentals-missing-outliers/), [External Regressors](https://mftokic.github.io/posts/2025-01-24-ts-fundamentals-eda-xregs/)*
+
 #### Box-Cox Transformation 
+
+A mathematical technique that transforms data with exponential growth into data with more linear growth, making it easier for models to forecast. It works by applying a power transformation controlled by a parameter called lambda (λ), where a lambda of 0 is a log transformation and 0.5 is a square root transformation.
+
+*Discussed in: [Box-Cox Transformations](https://mftokic.github.io/posts/2025-02-05-ts-fundamentals-data-cleaning-boxcox/)*
 
 ### C {#c}
 
 #### Causation 
 
+When one variable directly causes a change in another variable, not just moves alongside it. A strong correlation between two variables does not prove that one causes the other—understanding true causation requires domain expertise and careful analysis.
+
+*Discussed in: [External Regressors](https://mftokic.github.io/posts/2025-01-24-ts-fundamentals-eda-xregs/)*
+
 #### Compound Annual Growth Rate 
+
+A measure of the average annual growth rate of a value over a specified period, smoothing out year-to-year volatility. In time series forecasting, CAGR can be used as a simple benchmark method to project future values when the data lacks seasonality.
+
+*Discussed in: [Simple Benchmark Models](https://mftokic.github.io/posts/2025-05-12-ts-fundamentals-univariate-benchmarks/)*
 
 #### Confidence Interval 
 
+A range of values that is likely to contain the true value with a certain level of certainty. In autocorrelation analysis, confidence intervals help you determine which lag correlations are statistically significant versus those that could have occurred by random chance.
+
+*Discussed in: [Autocorrelation](https://mftokic.github.io/posts/2024-11-12-ts-fundamentals-autocorrelation/)*
+
 #### Correlation 
+
+A statistical measure of how two variables move together, with values ranging between -1 and 1. A strong positive or negative correlation between an external regressor and your target variable suggests it could be useful for improving forecast accuracy.
+
+*Discussed in: [External Regressors](https://mftokic.github.io/posts/2025-01-24-ts-fundamentals-eda-xregs/), [Autocorrelation](https://mftokic.github.io/posts/2024-11-12-ts-fundamentals-autocorrelation/)*
 
 ### D {#d}
 
 #### Dependant Variable 
 
+The variable you are trying to predict, also called the target variable. In a revenue forecast, the dependant variable is the revenue amount that the model is trying to forecast into the future.
+
+*Discussed in: [What's A Time Series?](https://mftokic.github.io/posts/2024-10-02-ts-fundamentals-whats-a-time-series/)*
+
 #### Differencing 
 
+The process of subtracting a value in one time period from a value in a previous time period to remove trends and make a time series stationary. For example, instead of looking at raw monthly revenue, you look at the change in revenue from month to month.
+
+*Discussed in: [Stationary](https://mftokic.github.io/posts/2025-03-21-ts-fundamentals-data-cleaning-stationary/), [ARIMA](https://mftokic.github.io/posts/2025-04-10-ts-fundamentals-univariate-arima/)*
+
 #### Distance Correlation (dCor) 
+
+A measure of dependence between two variables that captures both linear and non-linear relationships, with values ranging from 0 (independent) to 1 (perfectly dependent). Unlike traditional correlation, distance correlation can detect complex relationships that a straight-line analysis would miss.
+
+*Discussed in: [External Regressors](https://mftokic.github.io/posts/2025-01-24-ts-fundamentals-eda-xregs/)*
 
 ### E {#e}
 
 #### Exploratory Data Analysis (EDA) 
 
+The process of understanding patterns in your data before training any machine learning model. For time series, EDA includes analyzing the shape of the data, decomposing trend and seasonality, checking autocorrelation, identifying missing values and outliers, and evaluating external regressors.
+
+*Discussed in: [Exploratory Data Analysis](https://mftokic.github.io/posts/2024-10-03-ts-fundamentals-eda/), [Shape of the Data](https://mftokic.github.io/posts/2024-10-15-ts-fundamentals-eda-data-shape/)*
+
 #### Exponential Smoothing 
 
+A family of forecasting methods that give more weight to recent observations and less weight to older data, smoothing out short-term noise to reveal underlying patterns. The most advanced version, called ETS (Error, Trend, Seasonality) or Holt-Winters, can simultaneously model the level, trend, and seasonal components of a time series.
+
+*Discussed in: [Exponential Smoothing](https://mftokic.github.io/posts/2025-04-30-ts-fundamentals-univariate-ets/)*
+
 #### External Regressors (xregs) 
+
+Outside data points that can be added to your time series model to improve prediction accuracy. These could be macroeconomic indicators like inflation, competitor data, promotional flags, or any other variable that has a measurable relationship with the thing you're trying to forecast.
+
+*Discussed in: [External Regressors](https://mftokic.github.io/posts/2025-01-24-ts-fundamentals-eda-xregs/)*
 
 ### F {#f}
 
 #### Feature 
 
+A variable in your dataset that can be used to help predict your target variable. In a revenue forecast, features might include things like month of the year, last year's revenue for the same month, or an external economic indicator.
+
+*Discussed in: [What's A Time Series?](https://mftokic.github.io/posts/2024-10-02-ts-fundamentals-whats-a-time-series/)*
+
 #### Feature Engineering 
+
+The process of creating new variables (features) from your existing data before training a model. For time series, this could mean creating lag values, month-of-year indicators, or rolling averages that help the model better learn patterns in the data.
+
+*Discussed in: [What's A Time Series?](https://mftokic.github.io/posts/2024-10-02-ts-fundamentals-whats-a-time-series/)*
 
 #### First Order Differencing 
 
+Taking the difference between two consecutive time periods in your data, like subtracting November's sales from December's sales. This is the simplest form of differencing and is often all that's needed to remove a trend and make a time series stationary.
+
+*Discussed in: [Stationary](https://mftokic.github.io/posts/2025-03-21-ts-fundamentals-data-cleaning-stationary/)*
+
 #### Fitted Values 
+
+The model's hypothetical forecasts for the historical training data, showing what the model would have predicted for each past period. Comparing fitted values to actual values gives you the residuals, which help you understand how well the model learned the historical patterns.
+
+*Discussed in: [ARIMA](https://mftokic.github.io/posts/2025-04-10-ts-fundamentals-univariate-arima/), [Exponential Smoothing](https://mftokic.github.io/posts/2025-04-30-ts-fundamentals-univariate-ets/), [Train Test Splits](https://mftokic.github.io/posts/2026-01-29-ts-fundamentals-model-evaluation-train-test/)*
 
 ### G {#g}
 
 ### H {#h}
 
+#### Holt-Winters 
+
+The most advanced form of exponential smoothing (triple exponential smoothing) that can simultaneously model trend and seasonality in a time series. It comes in additive and multiplicative flavors depending on whether seasonal effects are constant dollar amounts or percentage-based.
+
+*Discussed in: [Exponential Smoothing](https://mftokic.github.io/posts/2025-04-30-ts-fundamentals-univariate-ets/)*
+
 #### Homoscedastic 
+
+When a time series has constant variance (spread) over time, meaning the data doesn't fan out or compress as it moves forward. Box-Cox transformations can help make data homoscedastic by dampening large spikes in exponentially growing time series.
+
+*Discussed in: [Box-Cox Transformations](https://mftokic.github.io/posts/2025-02-05-ts-fundamentals-data-cleaning-boxcox/)*
 
 ### I {#i}
 
 #### Independent Variable 
 
+A variable used as an input to predict the dependant (target) variable, also known as a feature or external regressor. In a revenue forecast, independent variables might include economic indicators, promotional calendars, or pricing data.
+
+*Discussed in: [What's A Time Series?](https://mftokic.github.io/posts/2024-10-02-ts-fundamentals-whats-a-time-series/), [External Regressors](https://mftokic.github.io/posts/2025-01-24-ts-fundamentals-eda-xregs/)*
+
 #### Interquartile Range (IQR) 
+
+A measure of the middle 50% of your data, calculated as the difference between the 75th percentile and the 25th percentile. The IQR method identifies outliers as data points that fall more than 1.5 times the IQR above the 75th percentile or below the 25th percentile.
+
+*Discussed in: [Missing Data and Outliers](https://mftokic.github.io/posts/2024-11-26-ts-fundamentals-missing-outliers/)*
 
 ### J {#j}
 
@@ -83,47 +191,149 @@ Jump to: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 
 #### Lag 
 
+A past value of a time series shifted back by a certain number of periods. For example, a lag of 1 on monthly data is last month's value, and a lag of 12 is the value from the same month one year ago. Lags are essential for understanding autocorrelation and for creating features in forecasting models.
+
+*Discussed in: [Autocorrelation](https://mftokic.github.io/posts/2024-11-12-ts-fundamentals-autocorrelation/), [External Regressors](https://mftokic.github.io/posts/2025-01-24-ts-fundamentals-eda-xregs/)*
+
+#### Lambda (λ) 
+
+The parameter that controls a Box-Cox transformation, determining how aggressively the data is rescaled. A lambda of 0 applies a log transformation, 0.5 applies a square root transformation, and an optimal lambda can be chosen automatically to best stabilize the variance in your time series.
+
+*Discussed in: [Box-Cox Transformations](https://mftokic.github.io/posts/2025-02-05-ts-fundamentals-data-cleaning-boxcox/)*
+
+#### Level 
+
+The smoothed estimate of where a time series is right now, before accounting for any trend or seasonal effects. Think of the level as the baseline value of your data at any given point in time, which exponential smoothing models continuously update as new data arrives.
+
+*Discussed in: [Exponential Smoothing](https://mftokic.github.io/posts/2025-04-30-ts-fundamentals-univariate-ets/)*
+
+#### Loess 
+
+A smoothing method used for estimating non-linear relationships in data. Loess is the engine behind STL decomposition, allowing it to handle changing seasonality and complex trends that simpler methods like moving averages cannot capture.
+
+*Discussed in: [Time Series Decomposition](https://mftokic.github.io/posts/2024-11-06-ts-fundamentals-decomposition/)*
+
 ### M {#m}
 
 #### Machine Learning (ML) 
 
+A branch of artificial intelligence where algorithms learn patterns from data rather than following explicit programmed rules. Instead of writing code that tells a computer exactly what to do, you feed it data and let it figure out the rules on its own—powering everything from self-driving cars to revenue forecasts.
+
+*Discussed in: [What's A Time Series?](https://mftokic.github.io/posts/2024-10-02-ts-fundamentals-whats-a-time-series/)*
+
+#### Mean Forecast 
+
+A simple benchmark forecast method that takes the average of the last few periods and uses that as the predicted value going forward. While it won't capture trends or seasonality, it provides a useful baseline that more complex models should be expected to beat.
+
+*Discussed in: [Simple Benchmark Models](https://mftokic.github.io/posts/2025-05-12-ts-fundamentals-univariate-benchmarks/)*
+
 #### Missing at Random (MAR) 
+
+Data that is missing for a reason related to other available information, but not related to the missing value itself. For example, a temperature sensor that is more likely to fail during hot weather—the failure depends on the weather conditions, not the exact temperature it would have recorded.
+
+*Discussed in: [Missing Data and Outliers](https://mftokic.github.io/posts/2024-11-26-ts-fundamentals-missing-outliers/)*
 
 #### Missing Completely at Random (MCAR) 
 
+Data that is missing for no specific pattern or reason—it's purely random. An example would be a system glitch that randomly causes a month of revenue data to not get recorded in your ERP system.
+
+*Discussed in: [Missing Data and Outliers](https://mftokic.github.io/posts/2024-11-26-ts-fundamentals-missing-outliers/)*
+
 #### Missing Data 
+
+When one or more time periods in your time series don't have a recorded value. Missing data creates problems because most statistical and machine learning models assume every time period is present, and gaps can reduce forecast accuracy if not handled properly.
+
+*Discussed in: [Missing Data and Outliers](https://mftokic.github.io/posts/2024-11-26-ts-fundamentals-missing-outliers/)*
 
 #### Mixed Mechanisms (Missing Data) 
 
+When missing data in your time series is caused by a combination of random, explainable, and biased reasons. For example, some values may be missing due to system glitches (MCAR), others during scheduled maintenance (MAR), and still others during extreme conditions (NMAR).
+
+*Discussed in: [Missing Data and Outliers](https://mftokic.github.io/posts/2024-11-26-ts-fundamentals-missing-outliers/)*
+
 #### Model 
+
+An algorithm or mathematical equation that learns patterns from historical data and uses them to make predictions about the future. In time series forecasting, a model takes in your historical data, learns the underlying trends and seasonality, and produces a forecast for future periods.
+
+*Discussed in: [What's A Time Series?](https://mftokic.github.io/posts/2024-10-02-ts-fundamentals-whats-a-time-series/)*
 
 #### Moving Average (MA) 
 
+A simple calculation that averages values over a sliding window of time to smooth out short-term fluctuations and reveal the underlying trend. In ARIMA models, the MA component has a different meaning—it refers to modeling the current value as a function of past forecast errors.
+
+*Discussed in: [Time Series Decomposition](https://mftokic.github.io/posts/2024-11-06-ts-fundamentals-decomposition/), [ARIMA](https://mftokic.github.io/posts/2025-04-10-ts-fundamentals-univariate-arima/)*
+
 #### Multicolinearity 
+
+When two or more external regressors are highly correlated with each other, making it difficult for a model to determine which variable is actually driving the prediction. If two regressors contain overlapping information, consider removing or transforming one to avoid confusing the model.
+
+*Discussed in: [External Regressors](https://mftokic.github.io/posts/2025-01-24-ts-fundamentals-eda-xregs/)*
 
 #### Multiplicative Decomposition 
 
+A method of breaking a time series into its components where trend, seasonality, and remainder are multiplied together instead of added. This approach works better when seasonal swings grow proportionally with the level of the series—like a business whose holiday sales consistently spike by 20% rather than by a fixed dollar amount.
+
+*Discussed in: [Time Series Decomposition](https://mftokic.github.io/posts/2024-11-06-ts-fundamentals-decomposition/), [Exponential Smoothing](https://mftokic.github.io/posts/2025-04-30-ts-fundamentals-univariate-ets/)*
+
 #### Multivariate Model 
+
+A forecasting model that uses multiple input variables (features) beyond just the historical target variable to make predictions. These models can incorporate external regressors like economic indicators, promotional calendars, or engineered features like month of year and lagged values.
+
+*Discussed in: [What's A Time Series?](https://mftokic.github.io/posts/2024-10-02-ts-fundamentals-whats-a-time-series/)*
 
 #### Mutual Information (MI) 
 
+A measure from information theory that captures both linear and non-linear dependencies between two variables. Unlike traditional correlation, MI can detect complex relationships where variables are connected but not in a straight-line fashion—higher values mean more shared information between the variables.
+
+*Discussed in: [External Regressors](https://mftokic.github.io/posts/2025-01-24-ts-fundamentals-eda-xregs/)*
+
 ### N {#n}
+
+#### Naive Forecast 
+
+A benchmark forecast method that simply takes the last known value and uses it as the prediction for all future periods. It's the simplest possible forecast—if this month's revenue was $100, next month's forecast is also $100.
+
+*Discussed in: [Simple Benchmark Models](https://mftokic.github.io/posts/2025-05-12-ts-fundamentals-univariate-benchmarks/)*
 
 #### Noise 
 
+Random fluctuations in your data that can't be explained by trend, seasonality, or any known pattern. Noise is the unpredictable part of your time series, and a good model should learn to separate the signal (meaningful patterns) from the noise (random variation).
+
+*Discussed in: [Time Series Decomposition](https://mftokic.github.io/posts/2024-11-06-ts-fundamentals-decomposition/), [Exponential Smoothing](https://mftokic.github.io/posts/2025-04-30-ts-fundamentals-univariate-ets/)*
+
 #### Not Missing at Random (NMAR) 
+
+Data that is missing because of the value itself or a specific, non-random reason. For example, a newer product only has three years of sales history while older products have five years—the data isn't missing randomly, it's missing because the product didn't exist yet.
+
+*Discussed in: [Missing Data and Outliers](https://mftokic.github.io/posts/2024-11-26-ts-fundamentals-missing-outliers/)*
 
 ### O {#o}
 
 #### Outlier 
 
+A data point that significantly departs from the normal pattern of a time series—either extremely high or extremely low. Outliers can mislead a model into learning false patterns, so it's important to identify them (through smell tests, statistical methods like Z-scores and IQR, or residual analysis) and decide whether to flag, remove, or leave them.
+
+*Discussed in: [Missing Data and Outliers](https://mftokic.github.io/posts/2024-11-26-ts-fundamentals-missing-outliers/)*
+
 ### P {#p}
 
 #### Partial Autocorrelation (PACF) 
 
+A refined version of autocorrelation that removes the influence of intermediate lags, showing only the direct relationship between the current value and a specific past value. PACF is the preferred method for analyzing autocorrelation because it eliminates misleading correlations that are just byproducts of other lags.
+
+*Discussed in: [Autocorrelation](https://mftokic.github.io/posts/2024-11-12-ts-fundamentals-autocorrelation/)*
+
 #### Period 
 
+A single unit of time in your time series, such as a day, week, month, or quarter. The period defines the frequency at which your data is recorded—monthly revenue means each period is one month.
+
+*Discussed in: [What's A Time Series?](https://mftokic.github.io/posts/2024-10-02-ts-fundamentals-whats-a-time-series/)*
+
 #### Prediction Interval 
+
+A range of values that shows, with a stated level of certainty (like 95%), where a future forecasted value is likely to fall. The wider the prediction interval, the less certain the model is in its forecast—a tight interval means the model is confident in its prediction.
+
+*Discussed in: [ARIMA](https://mftokic.github.io/posts/2025-04-10-ts-fundamentals-univariate-arima/), [Exponential Smoothing](https://mftokic.github.io/posts/2025-04-30-ts-fundamentals-univariate-ets/), [Train Test Splits](https://mftokic.github.io/posts/2026-01-29-ts-fundamentals-model-evaluation-train-test/)*
 
 ### Q {#q}
 
@@ -131,57 +341,163 @@ Jump to: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 
 #### Regression 
 
+A type of supervised learning that predicts a numerical value based on past data and relationships between variables. In the context of time series, regression models learn from historical patterns to predict a number (like revenue) going forward.
+
+*Discussed in: [What's A Time Series?](https://mftokic.github.io/posts/2024-10-02-ts-fundamentals-whats-a-time-series/)*
+
 #### Remainder 
 
+The component of a time series decomposition that represents everything not explained by the trend or seasonal components. Ideally, the remainder should look like random noise centered around zero—if it shows clear patterns, there may be additional signal in the data that the model could capture.
+
+*Discussed in: [Time Series Decomposition](https://mftokic.github.io/posts/2024-11-06-ts-fundamentals-decomposition/)*
+
 #### Residual 
+
+The difference between an actual value and its forecasted value (Actual − Forecast). Residuals help you understand how well a model is performing—ideally they should be small, centered around zero, and look like random white noise with no discernable patterns.
+
+*Discussed in: [Time Series Decomposition](https://mftokic.github.io/posts/2024-11-06-ts-fundamentals-decomposition/), [ARIMA](https://mftokic.github.io/posts/2025-04-10-ts-fundamentals-univariate-arima/), [Exponential Smoothing](https://mftokic.github.io/posts/2025-04-30-ts-fundamentals-univariate-ets/), [Train Test Splits](https://mftokic.github.io/posts/2026-01-29-ts-fundamentals-model-evaluation-train-test/)*
 
 ### S {#s}
 
 #### Seasonality 
 
+A recurring, predictable pattern in your time series that repeats at regular intervals. For example, a retail company might see sales spike every October through December for the holiday season, then drop in January—this repeating cycle is seasonality.
+
+*Discussed in: [Time Series Decomposition](https://mftokic.github.io/posts/2024-11-06-ts-fundamentals-decomposition/), [Shape of the Data](https://mftokic.github.io/posts/2024-10-15-ts-fundamentals-eda-data-shape/), [Exponential Smoothing](https://mftokic.github.io/posts/2025-04-30-ts-fundamentals-univariate-ets/)*
+
 #### Seasonal Differencing 
+
+Taking the difference between a value and the value from the same season in the previous cycle (e.g., this January minus last January for monthly data). This removes the seasonal pattern from the time series, helping make it stationary for models that require it.
+
+*Discussed in: [Stationary](https://mftokic.github.io/posts/2025-03-21-ts-fundamentals-data-cleaning-stationary/)*
+
+#### Seasonal Naive Forecast 
+
+A benchmark forecast method that uses the value from the same season in the previous year as the prediction. For monthly data, next March's forecast would simply be this past March's actual value—it's simple but captures basic seasonal patterns that other naive methods miss.
+
+*Discussed in: [Simple Benchmark Models](https://mftokic.github.io/posts/2025-05-12-ts-fundamentals-univariate-benchmarks/)*
 
 #### Second Order Differencing 
 
+Differencing your data twice—first taking the change between consecutive periods, then taking the change of those changes. Think of first order differencing as velocity (how fast things are changing) and second order differencing as acceleration (how fast the rate of change is changing).
+
+*Discussed in: [Stationary](https://mftokic.github.io/posts/2025-03-21-ts-fundamentals-data-cleaning-stationary/)*
+
 #### Signal 
+
+The meaningful, predictable patterns in your data—such as trends and seasonality—that a model can learn from. The goal of forecasting is to separate the signal from the noise, so the model learns what matters and ignores what's random.
+
+*Discussed in: [Time Series Decomposition](https://mftokic.github.io/posts/2024-11-06-ts-fundamentals-decomposition/), [External Regressors](https://mftokic.github.io/posts/2025-01-24-ts-fundamentals-eda-xregs/)*
 
 #### Smell Test 
 
+Using your human judgment and domain expertise to look at data on a chart and identify things that seem off or noteworthy. It's the most underrated concept in machine learning—before running any statistical test, simply eyeballing the data can reveal outliers, trends, and patterns that inform your analysis.
+
+*Discussed in: [Shape of the Data](https://mftokic.github.io/posts/2024-10-15-ts-fundamentals-eda-data-shape/), [Missing Data and Outliers](https://mftokic.github.io/posts/2024-11-26-ts-fundamentals-missing-outliers/)*
+
 #### Stationary 
+
+A time series whose statistical properties (mean and variance) stay constant over time. A stationary series looks roughly random with no clear trend or growing spread—many models need data to be stationary to work properly, which is achieved through differencing.
+
+*Discussed in: [Stationary](https://mftokic.github.io/posts/2025-03-21-ts-fundamentals-data-cleaning-stationary/)*
 
 #### Statistically Significant 
 
+When a result (like a correlation or pattern) is strong enough that it's unlikely to have occurred by random chance alone. In autocorrelation charts, values outside the shaded confidence interval are considered statistically significant, meaning they represent real relationships in the data.
+
+*Discussed in: [Autocorrelation](https://mftokic.github.io/posts/2024-11-12-ts-fundamentals-autocorrelation/)*
+
+#### STL Decomposition 
+
+An advanced method for breaking a time series into trend, seasonality, and remainder components using a technique called Loess smoothing. Unlike basic additive decomposition, STL can handle changing seasonality over time, more complex trends, and is more resistant to the influence of outliers.
+
+*Discussed in: [Time Series Decomposition](https://mftokic.github.io/posts/2024-11-06-ts-fundamentals-decomposition/), [Missing Data and Outliers](https://mftokic.github.io/posts/2024-11-26-ts-fundamentals-missing-outliers/)*
+
 #### Supervised Learning 
+
+A type of machine learning where you teach a model to make predictions by showing it examples of inputs paired with the correct outputs. It's like giving a student a set of practice problems with answer keys—the model learns the patterns and can then predict answers for new problems it hasn't seen before.
+
+*Discussed in: [What's A Time Series?](https://mftokic.github.io/posts/2024-10-02-ts-fundamentals-whats-a-time-series/)*
 
 ### T {#t}
 
 #### Target Variable 
 
+The specific value you are trying to forecast, also called the dependant variable. In most business forecasting, the target variable is something like monthly revenue, units sold, or customer count—it's the number your model is trying to predict.
+
+*Discussed in: [What's A Time Series?](https://mftokic.github.io/posts/2024-10-02-ts-fundamentals-whats-a-time-series/)*
+
 #### Test Data 
+
+The portion of historical data that is held out and not used to train the model, reserved solely for evaluating how well the model predicts unseen data. In time series, test data must always be the most recent chunk of history to avoid letting the model peek at future patterns.
+
+*Discussed in: [Train Test Splits](https://mftokic.github.io/posts/2026-01-29-ts-fundamentals-model-evaluation-train-test/)*
 
 #### Time Series 
 
+A series of numerical data points recorded at regular time intervals, like monthly revenue or daily temperatures. If you have that data for multiple entities (e.g., revenue for 50 products), each entity represents a separate time series in your dataset.
+
+*Discussed in: [What's A Time Series?](https://mftokic.github.io/posts/2024-10-02-ts-fundamentals-whats-a-time-series/)*
+
 #### Time Series Cross-Validation 
+
+A method of repeatedly splitting your time series into training and testing sets at multiple points in history, creating several back tests instead of just one. This gives you a more robust understanding of model performance across different time periods, rather than relying on a single train/test split.
+
+*Discussed in: [Model Evaluation](https://mftokic.github.io/posts/2025-05-13-ts-fundamentals-model-evaluation/)*
 
 #### Time Series Decomposition 
 
+The process of breaking a time series into its individual components—typically trend, seasonality, and remainder—to better understand the forces driving your data. Common methods include additive decomposition (using moving averages) and STL decomposition (using Loess smoothing).
+
+*Discussed in: [Time Series Decomposition](https://mftokic.github.io/posts/2024-11-06-ts-fundamentals-decomposition/)*
+
 #### Timestamp 
+
+The date or time associated with each data point in a time series, like "2024-01-01" for monthly data. Timestamps define the order and frequency of your data and are required alongside a target variable to train any time series model.
+
+*Discussed in: [What's A Time Series?](https://mftokic.github.io/posts/2024-10-02-ts-fundamentals-whats-a-time-series/)*
 
 #### Train Data 
 
+The historical data used to teach a model the underlying patterns, trends, and seasonality in your time series. In time series forecasting, train data must always be the earlier portion of the history, with the most recent data held out as test data.
+
+*Discussed in: [Train Test Splits](https://mftokic.github.io/posts/2026-01-29-ts-fundamentals-model-evaluation-train-test/)*
+
 #### Trend 
+
+The overall long-term direction of your time series—either rising, falling, or staying flat over time. A trend might be linear (growing by the same amount each year) or exponential (growing by an increasing amount each year, like hockey stick growth).
+
+*Discussed in: [Time Series Decomposition](https://mftokic.github.io/posts/2024-11-06-ts-fundamentals-decomposition/), [Shape of the Data](https://mftokic.github.io/posts/2024-10-15-ts-fundamentals-eda-data-shape/), [Exponential Smoothing](https://mftokic.github.io/posts/2025-04-30-ts-fundamentals-univariate-ets/)*
 
 ### U {#u}
 
+#### Unit Root Test 
+
+A statistical test used to determine whether a time series is stationary or not. The most common version, the KPSS test, analyzes your data and tells you how many times you need to difference it to achieve stationarity.
+
+*Discussed in: [Stationary](https://mftokic.github.io/posts/2025-03-21-ts-fundamentals-data-cleaning-stationary/)*
+
 #### Univariate Model 
+
+A forecasting model that only uses the historical values of the target variable itself (plus timestamps) to predict future values—no external data needed. Models like ARIMA and exponential smoothing are univariate, and despite their simplicity, they often beat more complex approaches.
+
+*Discussed in: [Univariate Models](https://mftokic.github.io/posts/2025-03-24-ts-fundamentals-univariate-models/), [What's A Time Series?](https://mftokic.github.io/posts/2024-10-02-ts-fundamentals-whats-a-time-series/)*
 
 ### V {#v}
 
 #### Variance 
 
+A measure of how spread out the values in your data are from the average. In time series, having constant variance over time (homoscedastic) is important for many models—if variance grows over time, techniques like Box-Cox transformations can help stabilize it.
+
+*Discussed in: [Stationary](https://mftokic.github.io/posts/2025-03-21-ts-fundamentals-data-cleaning-stationary/), [Box-Cox Transformations](https://mftokic.github.io/posts/2025-02-05-ts-fundamentals-data-cleaning-boxcox/)*
+
 ### W {#w}
 
 #### White Noise 
+
+A time series that is completely random with no discernible pattern—it has a constant mean, constant variance, and no autocorrelation. If your model's residuals look like white noise, that's a good sign—it means the model captured all the learnable signal and only random noise remains.
+
+*Discussed in: [Time Series Decomposition](https://mftokic.github.io/posts/2024-11-06-ts-fundamentals-decomposition/), [Train Test Splits](https://mftokic.github.io/posts/2026-01-29-ts-fundamentals-model-evaluation-train-test/)*
 
 ### X {#x}
 
@@ -190,3 +506,7 @@ Jump to: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 ### Z {#z}
 
 #### Z-Score 
+
+A statistical measure that tells you how many standard deviations a data point is from the mean. In time series, Z-scores are used to identify outliers—values typically beyond 3 standard deviations from the mean are flagged as potential outliers that warrant further investigation.
+
+*Discussed in: [Missing Data and Outliers](https://mftokic.github.io/posts/2024-11-26-ts-fundamentals-missing-outliers/)*
