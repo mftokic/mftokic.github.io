@@ -86,9 +86,9 @@
 <p><em>The example monthly data used in this series <a href="https://github.com/mftokic/mftokic.github.io/blob/main/posts/2024-10-02-ts-fundamentals-whats-a-time-series/example_ts_data.csv">can be found here.</a> You can also find the <a href="https://github.com/mftokic/mftokic.github.io/blob/main/notebooks/2026-01-29-ts-fundamentals-model-evaluation-train-test-split.ipynb">python code used in this post here.</a></em></p>
 <section id="building-trust-in-the-forecast" class="level3">
 <h3 class="anchored" data-anchor-id="building-trust-in-the-forecast">Building Trust In The Forecast</h3>
-<p>Let’s say your company’s CFO is asking you, the hotshot data &amp; AI person, to produce a revenue forecast for the next 12 months. The CFO needs this forecast to communicate expectations to wall street, help optimize product inventory, and make future capital allocation decisions based on where the business is headed the next year. You take a model like ARIMA off the shelf and produce that 12 month forecast, shown below using a time series from our example dataset. Let’s take a look.</p>
+<p>Let’s say your company’s CFO is asking you, the hotshot data &amp; AI person, to produce a revenue forecast for the next 12 months. The CFO needs this forecast to communicate expectations to wall street, help optimize product inventory, and make future capital allocation decisions based on where the business is headed the next year. You take a model like <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#arima">ARIMA</a> off the shelf and produce that 12 month forecast, shown below using a time series from our example dataset. Let’s take a look.</p>
 <p><img src="https://mftokic.github.io/posts/2026-01-29-ts-fundamentals-model-evaluation-train-test/chart1.png" class="img-fluid"></p>
-<p>The future 12 month forecast seems to capture the seasonality from month to month, and even the upward trend. You show the results to the CFO, even calling out the 95% prediction interval, which shows the upper of lower bounds with 95% certainty that the future revenue values are likely to fall in between. The CFO looks at it for one second, then says “So what, I can’t use this forecast! How do I know it’s accurate? This is a black box.”. You’re hopes and dreams, including that potential promotion, are now crushed. Congrats, you learned one of your first hard lessons in the forecast game. <strong>Building trust in the forecast is harder than creating one in the first place.</strong> It might take seconds to train an ARIMA model, but convincing people to use it might take years.</p>
+<p>The future 12 month forecast seems to capture the <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#seasonality">seasonality</a> from month to month, and even the upward <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#trend">trend</a>. You show the results to the CFO, even calling out the 95% <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#prediction-interval">prediction interval</a>, which shows the upper of lower bounds with 95% certainty that the future revenue values are likely to fall in between. The CFO looks at it for one second, then says “So what, I can’t use this forecast! How do I know it’s accurate? This is a black box.”. You’re hopes and dreams, including that potential promotion, are now crushed. Congrats, you learned one of your first hard lessons in the forecast game. <strong>Building trust in the forecast is harder than creating one in the first place.</strong> It might take seconds to train an ARIMA model, but convincing people to use it might take years.</p>
 <p>Hang on a second, you just remembered in our chapter covering <a href="https://mftokic.github.io/posts/2025-03-24-ts-fundamentals-univariate-models/">univariate models</a> that there is this thing called a residual, which allows you to see historical forecasts compared to actual values on the training data. Maybe residuals can help your CFO build trust in the forecast?</p>
 </section>
 <section id="residuals" class="level3">
@@ -96,7 +96,7 @@
 <blockquote class="blockquote">
 <p>Residual = Actual Value - Forecast Value</p>
 </blockquote>
-<p>Let’s calculate the residuals for the ARIMA model we trained and plot them on some nice charts using different residual analysis techniques.</p>
+<p>Let’s calculate the <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#residual">residuals</a> for the ARIMA model we trained and plot them on some nice charts using different residual analysis techniques.</p>
 <section id="forecast-vs-actual-plot" class="level4">
 <h4 class="anchored" data-anchor-id="forecast-vs-actual-plot">Forecast vs Actual Plot</h4>
 <p><img src="https://mftokic.github.io/posts/2026-01-29-ts-fundamentals-model-evaluation-train-test/chart2.png" class="img-fluid"></p>
@@ -105,12 +105,12 @@
 <section id="residuals-over-time-plot" class="level4">
 <h4 class="anchored" data-anchor-id="residuals-over-time-plot">Residuals Over Time Plot</h4>
 <p><img src="https://mftokic.github.io/posts/2026-01-29-ts-fundamentals-model-evaluation-train-test/chart3.png" class="img-fluid"></p>
-<p>Now we can see the actual residual across each historical period. Some are positive, where we underforecast, and some are negative, where we overforecast. <strong>Ideally residuals hang around zero on average. This means the residuals are truly white noise aka random. If they are not white noise and clustering around zero, this means there is potential for more predictive insights to be learned in the data.</strong></p>
+<p>Now we can see the actual residual across each historical period. Some are positive, where we underforecast, and some are negative, where we overforecast. <strong>Ideally residuals hang around zero on average. This means the residuals are truly <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#white-noise">white noise</a> aka random. If they are not white noise and clustering around zero, this means there is potential for more predictive insights to be learned in the data.</strong></p>
 </section>
 <section id="histogram-of-residuals" class="level4">
 <h4 class="anchored" data-anchor-id="histogram-of-residuals">Histogram of Residuals</h4>
 <p><img src="https://mftokic.github.io/posts/2026-01-29-ts-fundamentals-model-evaluation-train-test/chart4.png" class="img-fluid"></p>
-<p>A histogram is one of the oldest ways to chart data. This chart creates buckets that a value can fall between on the x axis, then on the y axis shows how many times a value falls in that bucket. Choosing the amount of buckets or “bins” is up to the chart creator. Usually you want the histogram to look like a normal distribution centered about zero. This means most of the residuals are close to zero and there is an equal share of residuals above zero as below zero. In our histogram the residuals are mostly centered around zero, which is good, but it looks like we have more positive residuals than negative. This means on average our model underforecasted the target variable. A helpful insight to have when sharing the results with business partners!</p>
+<p>A histogram is one of the oldest ways to chart data. This chart creates buckets that a value can fall between on the x axis, then on the y axis shows how many times a value falls in that bucket. Choosing the amount of buckets or “bins” is up to the chart creator. Usually you want the histogram to look like a <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#normal-distribution">normal distribution</a> centered about zero. This means most of the residuals are close to zero and there is an equal share of residuals above zero as below zero. In our histogram the residuals are mostly centered around zero, which is good, but it looks like we have more positive residuals than negative. This means on average our model underforecasted the target variable. A helpful insight to have when sharing the results with business partners!</p>
 </section>
 <section id="q-q-residual-plot" class="level4">
 <h4 class="anchored" data-anchor-id="q-q-residual-plot">Q-Q Residual Plot</h4>
@@ -143,7 +143,7 @@
 <p><img src="https://mftokic.github.io/posts/2026-01-29-ts-fundamentals-model-evaluation-train-test/chart8.png" class="img-fluid"></p>
 <p>Now we have split the data correctly into train and test splits. We took all of the historical data and withheld the final 12 months as the test data. This will allow us to properly evaluate the our forecast model. Where we can show the future forecast, as well as how well the same model performed historically. Let’s keep in mind the train/test splits and see if we can create a forecast for the test data, and also create a final future forecast.</p>
 <p><img src="https://mftokic.github.io/posts/2026-01-29-ts-fundamentals-model-evaluation-train-test/chart9.png" class="img-fluid"></p>
-<p>Excellent! Now we can show the boss the future forecast, in addition to how a similar forecast would have performed on the historical data as a back test.</p>
+<p>Excellent! Now we can show the boss the future forecast, in addition to how a similar forecast would have performed on the historical data as a <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#back-testing">back test</a>.</p>
 </section>
 <section id="final-thoughts" class="level3">
 <h3 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h3>
@@ -2427,7 +2427,7 @@ Thomas DeLauer on Judd Lienhard
 <h3 class="anchored" data-anchor-id="lets-create-a-forecast">Let’s Create a Forecast</h3>
 <p>Let’s take one of our example time series and create these benchmark forecasts.</p>
 <p><img src="https://mftokic.github.io/posts/2025-05-12-ts-fundamentals-univariate-benchmarks/chart1.png" class="img-fluid"></p>
-<p>Looks like our future forecast for each model doesn’t look good. No trends were captured, same goes for seasonality outside of the seasonal naive model. These models produced future forecasts, just none that we want to use for our final forecast.</p>
+<p>Looks like our future forecast for each model doesn’t look good. No <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#trend">trends</a> were captured, same goes for <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#seasonality">seasonality</a> outside of the seasonal naive model. These models produced future forecasts, just none that we want to use for our final forecast.</p>
 </section>
 <section id="how-to-use-them" class="level3">
 <h3 class="anchored" data-anchor-id="how-to-use-them">How to Use Them</h3>
@@ -2441,7 +2441,7 @@ Thomas DeLauer on Judd Lienhard
 <ul>
 <li>Instead of averaging over the past year, you can average over the past quarter, the entire time series, or any other significant period.</li>
 </ul></li>
-<li><strong>Random Walk with Drift</strong>
+<li><strong><a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#random-walk-with-drift">Random Walk with Drift</a></strong>
 <ul>
 <li>A variation of the naive method allows the forecasts to change over time. The amount of change, called drift, is the average change seen in the historical data.</li>
 </ul></li>
@@ -2451,7 +2451,7 @@ Thomas DeLauer on Judd Lienhard
 </ul></li>
 <li><strong>Growth Rate Forecast Methods</strong>
 <ul>
-<li>If the time series lacks seasonality, you can apply a compound annual growth rate (CAGR) or similar average growth over “xyz” time periods and apply that to create a future forecast.</li>
+<li>If the time series lacks seasonality, you can apply a <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#compound-annual-growth-rate">compound annual growth rate (CAGR)</a> or similar average growth over “xyz” time periods and apply that to create a future forecast.</li>
 </ul></li>
 </ul>
 </section>
@@ -2489,7 +2489,7 @@ Thomas DeLauer on Judd Lienhard
 <p><em>The example monthly data used in this series <a href="https://github.com/mftokic/mftokic.github.io/blob/main/posts/2024-10-02-ts-fundamentals-whats-a-time-series/example_ts_data.csv">can be found here.</a> You can also find the <a href="https://github.com/mftokic/mftokic.github.io/blob/main/notebooks/2025-04-30-ts-fundamentals-univariate-ets.ipynb">python code used in this post here.</a></em></p>
 <section id="what-does-exponential-smoothing-mean" class="level3">
 <h3 class="anchored" data-anchor-id="what-does-exponential-smoothing-mean">What Does Exponential Smoothing Mean?</h3>
-<p>Exponential smoothing is a family of forecasting methods that smooth out short-term fluctuations in data to reveal underlying trends or patterns. The core idea is to give more weight to recent observations and less weight to older data, which produces a “smoothed” time series with reduced noise​. This makes it easier to spot patterns and predict future values.</p>
+<p>Exponential smoothing is a family of forecasting methods that smooth out short-term fluctuations in data to reveal underlying trends or patterns. The core idea is to give more weight to recent observations and less weight to older data, which produces a “smoothed” time series with reduced <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#noise">noise</a>. This makes it easier to spot patterns and predict future values.</p>
 <p>It’s also referred to as ETS, which stands for error, trend, and seasonality. These three components are at the heart of the most advanced exponential smoothing methods. Sometimes you might also hear them be called “state space” models, since they are modeling out different states like trend and seasonality separately.</p>
 <ul>
 <li><strong>Error (E)</strong>: The unpredictable or random fluctuations (noise) around your forecast.</li>
@@ -2548,8 +2548,8 @@ Thomas DeLauer on Judd Lienhard
 <p><img src="https://mftokic.github.io/posts/2025-04-30-ts-fundamentals-univariate-ets/chart1.png" class="img-fluid"></p>
 <p>Nice! The ets model was able to capture the historical trend and seasonality and carry it forward into the future. We’re also able to see two other things in the chart.</p>
 <ol type="1">
-<li>Hypothetical forecasts of the training data. These are often referred to as fitted values and can be used to calculate residuals, which are simply the difference between the forecast and actual value. Historically the ets model performed very well, closely matching the actual revenue values from month to month.</li>
-<li>A 95% prediction interval. This represents with 95% certainty the upper and lower ranges where the model thinks the future value will land between. The tighter this interval the more certain the model is in its prediction. We will dig deep into prediction intervals in more detail in a later post.</li>
+<li>Hypothetical forecasts of the training data. These are often referred to as <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#fitted-values">fitted values</a> and can be used to calculate <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#residual">residuals</a>, which are simply the difference between the forecast and actual value. Historically the ets model performed very well, closely matching the actual revenue values from month to month.</li>
+<li>A 95% <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#prediction-interval">prediction interval</a>. This represents with 95% certainty the upper and lower ranges where the model thinks the future value will land between. The tighter this interval the more certain the model is in its prediction. We will dig deep into prediction intervals in more detail in a later post.</li>
 </ol>
 </section>
 <section id="reversal" class="level3">
@@ -2570,7 +2570,7 @@ Thomas DeLauer on Judd Lienhard
 </ul></li>
 <li><strong>When outside forces rule the game (promotions, ad spend, macro shocks)</strong>
 <ul>
-<li>ETS is univariate, if your forecast errors line up with random one time events, you’re in the wrong model.</li>
+<li>ETS is <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#univariate-model">univariate</a>, if your forecast errors line up with random one time events, you’re in the wrong model.</li>
 </ul></li>
 <li><strong>Tiny history (less than two full seasons of data)</strong>
 <ul>
@@ -2965,8 +2965,8 @@ Thomas DeLauer on Judd Lienhard
 <h3 class="anchored" data-anchor-id="putting-it-all-together">Putting it All Together</h3>
 <p>Here’s what happens when an arima model is trained.</p>
 <ol type="1">
-<li><strong>Integrated</strong>: Difference the data d times to remove trend or seasonality, making the series stationary. This is necessary so that the AR and MA components can model the structure reliably.</li>
-<li><strong>Autoregressive</strong>: Model the differenced series as a linear combination of its own lagged values. This captures momentum or persistence in the time series aka how past values influence future ones.</li>
+<li><strong>Integrated</strong>: Difference the data d times to remove <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#trend">trend</a> or <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#seasonality">seasonality</a>, making the series stationary. This is necessary so that the AR and MA components can model the structure reliably.</li>
+<li><strong>Autoregressive</strong>: Model the differenced series as a linear combination of its own <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#lag">lagged</a> values. This captures momentum or persistence in the time series aka how past values influence future ones.</li>
 <li><strong>Moving Average</strong>: Model the current value as a function of past forecast errors. These errors are not directly observed, so the model estimates them recursively during training, learning how random shocks in the past influence the present.</li>
 <li><strong>Training</strong>: The AR and MA parts are fitted together by maximizing the likelihood of the observed data, given the model structure. This involves recursively computing residuals and using numerical optimization to find the best parameters.</li>
 </ol>
@@ -2977,7 +2977,7 @@ Thomas DeLauer on Judd Lienhard
 <li><strong>Recursive Forecasting</strong>: Forecast multiple steps ahead by reusing your own predictions as inputs.</li>
 <li><strong>Integrated</strong>: Reverse the differencing operation to return the forecast to the original scale.</li>
 </ol>
-<p>Ok, now we know how arima works at a high level and how it can be used to create future forecasts. But there’s one major thing missing. The arima process we went through is for non-seasonal data. If our data has seasonality, we need to fit a seasonal arima model. It’s very similar to the plain vanilla arima model, but has a separate process added to handle seasonal differencing and seasonal lags. For example instead of comparing sales of last month to sales in this month, a seasonal approach would compare sales of 12 months ago with sales in this month. It’s kind of like stacking another arima on top of arima, but operating at a seasonal level.</p>
+<p>Ok, now we know how arima works at a high level and how it can be used to create future forecasts. But there’s one major thing missing. The arima process we went through is for non-seasonal data. If our data has seasonality, we need to fit a <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#seasonal-arima-sarima">seasonal arima</a> model. It’s very similar to the plain vanilla arima model, but has a separate process added to handle seasonal differencing and seasonal lags. For example instead of comparing sales of last month to sales in this month, a seasonal approach would compare sales of 12 months ago with sales in this month. It’s kind of like stacking another arima on top of arima, but operating at a seasonal level.</p>
 </section>
 <section id="lets-train-a-model" class="level3">
 <h3 class="anchored" data-anchor-id="lets-train-a-model">Let’s Train a Model</h3>
@@ -2985,8 +2985,8 @@ Thomas DeLauer on Judd Lienhard
 <p><img src="https://mftokic.github.io/posts/2025-04-10-ts-fundamentals-univariate-arima/chart1.png" class="img-fluid"></p>
 <p>Looks pretty good! The arima model was able to capture the historical trend and seasonality and carry it forward into the future. We’re also able to see two other things in the chart.</p>
 <ol type="1">
-<li>Hypothetical forecasts of the training data. These are often referred to as fitted values and can be used to calculate residuals, which are simply the difference between the forecast and actual value. Historically the arima model performed very well, closely matching the actual revenue values from month to month.</li>
-<li>A 95% prediction interval. This represents with 95% certainty the upper and lower ranges where the model thinks the future value will land between. The tighter this interval the more certain the model is in its prediction. We will dig deep into prediction intervals in more detail in a later post.</li>
+<li>Hypothetical forecasts of the training data. These are often referred to as <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#fitted-values">fitted values</a> and can be used to calculate <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#residual">residuals</a>, which are simply the difference between the forecast and actual value. Historically the arima model performed very well, closely matching the actual revenue values from month to month.</li>
+<li>A 95% <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#prediction-interval">prediction interval</a>. This represents with 95% certainty the upper and lower ranges where the model thinks the future value will land between. The tighter this interval the more certain the model is in its prediction. We will dig deep into prediction intervals in more detail in a later post.</li>
 </ol>
 </section>
 <section id="reversal" class="level3">
@@ -3376,8 +3376,8 @@ Click to read the original notes.
 <p><em>The example monthly data used in this series <a href="https://github.com/mftokic/mftokic.github.io/blob/main/posts/2024-10-02-ts-fundamentals-whats-a-time-series/example_ts_data.csv">can be found here.</a> You can also find the <a href="https://github.com/mftokic/mftokic.github.io/blob/main/notebooks/2025-03-21-ts-fundamentals-data-stationary.ipynb">python code used in this post here.</a></em></p>
 <section id="trends-are-hard" class="level3">
 <h3 class="anchored" data-anchor-id="trends-are-hard">Trends Are Hard</h3>
-<p>In the world of forecasting, many models need the trend component to be removed in order to learn the right signal from the data. The process of removing a trend (and sometimes seasonality) is called differencing, which can make a time series become stationary.</p>
-<p>Stationary just means that the time series has a constant mean and variance over time. Put simpler, it’s a time series that looks kind of random with no discernable trend or repeating seasonality. If a time series does have a trend, then we can remove it through a process called differencing, which involves subtracting a value in one time period from a value in a previous time period. More on this later.</p>
+<p>In the world of forecasting, many models need the <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#trend">trend</a> component to be removed in order to learn the right <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#signal">signal</a> from the data. The process of removing a trend (and sometimes <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#seasonality">seasonality</a>) is called differencing, which can make a time series become stationary.</p>
+<p>Stationary just means that the time series has a constant mean and <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#variance">variance</a> over time. Put simpler, it’s a time series that looks kind of random with no discernable trend or repeating seasonality. If a time series does have a trend, then we can remove it through a process called differencing, which involves subtracting a value in one time period from a value in a previous time period. More on this later.</p>
 <p>Some models need data to be stationary to ensure it’s learning the correct relationships in the data, and doesn’t get fooled from thinking trends will always remain the same.</p>
 <p>Let’s take a look at one of our time series. Does it look like it has a constant mean and variance over time?</p>
 <p><img src="https://mftokic.github.io/posts/2025-03-21-ts-fundamentals-data-cleaning-stationary/chart1.png" class="img-fluid"></p>
@@ -3499,7 +3499,7 @@ Click to read the original notes.
 </section>
 <section id="reversal" class="level3">
 <h3 class="anchored" data-anchor-id="reversal">Reversal</h3>
-<p>There are cases where differencing your data to ensure it’s stationary is not a good idea. Some models, like arima, have the differencing process built in. So you don’t need to do it beforehand. Other models, like standard linear regressions, don’t need stationary data at all since they can easily learn from trends and seasonal patterns in the data.</p>
+<p>There are cases where differencing your data to ensure it’s stationary is not a good idea. Some models, like <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#arima">ARIMA</a>, have the differencing process built in. So you don’t need to do it beforehand. Other models, like standard linear regressions, don’t need stationary data at all since they can easily learn from trends and seasonal patterns in the data.</p>
 <p>Differencing the data can also limit model interpretability, or the ability to explain the forecasted outputs. This becomes even harder once you start to difference your data two or more times, since you are not explaining changes between observations, but instead the change in the changes or even worse. This becomes near impossible to understand for any regular human that might use your forecasts.</p>
 <p>A final thing to call out with differencing is that it can remove historical data from the beginning of your time series. This may not be a big deal with a first order difference, but taking a seasonal difference on a monthly data set will remove the first 12 months of the time series. That may not be impactful if you have 10+ years of historical data, but if you only have 3 years to start with this becomes very detrimental to the process. That’s why I try to limit any seasonal differencing when the amount of historical data is low.</p>
 </section>

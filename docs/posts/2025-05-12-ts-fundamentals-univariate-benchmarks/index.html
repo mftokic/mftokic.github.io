@@ -244,7 +244,7 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 <h3 class="anchored" data-anchor-id="lets-create-a-forecast">Let’s Create a Forecast</h3>
 <p>Let’s take one of our example time series and create these benchmark forecasts.</p>
 <p><img src="./chart1.png" class="img-fluid"></p>
-<p>Looks like our future forecast for each model doesn’t look good. No trends were captured, same goes for seasonality outside of the seasonal naive model. These models produced future forecasts, just none that we want to use for our final forecast.</p>
+<p>Looks like our future forecast for each model doesn’t look good. No <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#trend">trends</a> were captured, same goes for <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#seasonality">seasonality</a> outside of the seasonal naive model. These models produced future forecasts, just none that we want to use for our final forecast.</p>
 </section>
 <section id="how-to-use-them" class="level3">
 <h3 class="anchored" data-anchor-id="how-to-use-them">How to Use Them</h3>
@@ -258,7 +258,7 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 <ul>
 <li>Instead of averaging over the past year, you can average over the past quarter, the entire time series, or any other significant period.</li>
 </ul></li>
-<li><strong>Random Walk with Drift</strong>
+<li><strong><a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#random-walk-with-drift">Random Walk with Drift</a></strong>
 <ul>
 <li>A variation of the naive method allows the forecasts to change over time. The amount of change, called drift, is the average change seen in the historical data.</li>
 </ul></li>
@@ -268,7 +268,7 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 </ul></li>
 <li><strong>Growth Rate Forecast Methods</strong>
 <ul>
-<li>If the time series lacks seasonality, you can apply a compound annual growth rate (CAGR) or similar average growth over “xyz” time periods and apply that to create a future forecast.</li>
+<li>If the time series lacks seasonality, you can apply a <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#compound-annual-growth-rate">compound annual growth rate (CAGR)</a> or similar average growth over “xyz” time periods and apply that to create a future forecast.</li>
 </ul></li>
 </ul>
 </section>

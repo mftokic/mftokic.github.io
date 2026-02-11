@@ -247,6 +247,11 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 <p>The process of evaluating a forecast model by testing it against historical data it has never seen before. You train a model on older data and then compare its predictions to actual results from a more recent time period, giving you a realistic measure of how well the model might perform in the future.</p>
 <p><em>Discussed in: <a href="https://mftokic.github.io/posts/2026-01-29-ts-fundamentals-model-evaluation-train-test/">Train Test Splits</a></em></p>
 </section>
+<section id="back-transformation" class="level4">
+<h4 class="anchored" data-anchor-id="back-transformation">Back Transformation</h4>
+<p>The process of reversing a data transformation (like Box-Cox or differencing) to convert forecasted values back to their original units. After training a model on transformed data, you must always back-transform the predictions so the final forecast is in meaningful business terms like actual dollar amounts.</p>
+<p><em>Discussed in: <a href="https://mftokic.github.io/posts/2025-02-05-ts-fundamentals-data-cleaning-boxcox/">Box-Cox Transformations</a>, <a href="https://mftokic.github.io/posts/2025-03-21-ts-fundamentals-data-cleaning-stationary/">Stationary</a></em></p>
+</section>
 <section id="benchmark-model" class="level4">
 <h4 class="anchored" data-anchor-id="benchmark-model">Benchmark Model</h4>
 <p>A simple model that uses basic formulas (like averages or last-known values) to produce a forecast, serving as a baseline to compare against more complex models. If a fancy machine learning model can’t beat a simple benchmark, it’s probably not worth the added complexity.</p>
@@ -288,10 +293,20 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 </section>
 <section id="d" class="level3">
 <h3 class="anchored" data-anchor-id="d">D</h3>
+<section id="deep-learning" class="level4">
+<h4 class="anchored" data-anchor-id="deep-learning">Deep Learning</h4>
+<p>A subset of machine learning that uses multi-layered neural networks to learn complex patterns in data. Despite being the most hyped branch of AI, deep learning models are often beaten by simpler univariate models like ARIMA and exponential smoothing for many time series forecasting tasks.</p>
+<p><em>Discussed in: <a href="https://mftokic.github.io/posts/2024-10-02-ts-fundamentals-whats-a-time-series/">What’s A Time Series?</a></em></p>
+</section>
 <section id="dependant-variable" class="level4">
 <h4 class="anchored" data-anchor-id="dependant-variable">Dependant Variable</h4>
 <p>The variable you are trying to predict, also called the target variable. In a revenue forecast, the dependant variable is the revenue amount that the model is trying to forecast into the future.</p>
 <p><em>Discussed in: <a href="https://mftokic.github.io/posts/2024-10-02-ts-fundamentals-whats-a-time-series/">What’s A Time Series?</a></em></p>
+</section>
+<section id="detrending" class="level4">
+<h4 class="anchored" data-anchor-id="detrending">Detrending</h4>
+<p>The process of removing the trend component from a time series to isolate other patterns like seasonality and noise. Detrending can be done by subtracting a moving average, applying differencing, or using decomposition methods like STL.</p>
+<p><em>Discussed in: <a href="https://mftokic.github.io/posts/2024-11-06-ts-fundamentals-decomposition/">Time Series Decomposition</a>, <a href="https://mftokic.github.io/posts/2025-03-21-ts-fundamentals-data-cleaning-stationary/">Stationary</a></em></p>
 </section>
 <section id="differencing" class="level4">
 <h4 class="anchored" data-anchor-id="differencing">Differencing</h4>
@@ -344,6 +359,11 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 <p>The model’s hypothetical forecasts for the historical training data, showing what the model would have predicted for each past period. Comparing fitted values to actual values gives you the residuals, which help you understand how well the model learned the historical patterns.</p>
 <p><em>Discussed in: <a href="https://mftokic.github.io/posts/2025-04-10-ts-fundamentals-univariate-arima/">ARIMA</a>, <a href="https://mftokic.github.io/posts/2025-04-30-ts-fundamentals-univariate-ets/">Exponential Smoothing</a>, <a href="https://mftokic.github.io/posts/2026-01-29-ts-fundamentals-model-evaluation-train-test/">Train Test Splits</a></em></p>
 </section>
+<section id="forecast-horizon" class="level4">
+<h4 class="anchored" data-anchor-id="forecast-horizon">Forecast Horizon</h4>
+<p>The number of future time periods you want to predict, such as forecasting the next 12 months of revenue. A shorter forecast horizon generally produces more accurate predictions than a longer one, since uncertainty grows the further out you try to predict.</p>
+<p><em>Discussed in: <a href="https://mftokic.github.io/posts/2025-04-10-ts-fundamentals-univariate-arima/">ARIMA</a>, <a href="https://mftokic.github.io/posts/2026-01-29-ts-fundamentals-model-evaluation-train-test/">Train Test Splits</a></em></p>
+</section>
 </section>
 <section id="g" class="level3">
 <h3 class="anchored" data-anchor-id="g">G</h3>
@@ -368,9 +388,19 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 <p>A variable used as an input to predict the dependant (target) variable, also known as a feature or external regressor. In a revenue forecast, independent variables might include economic indicators, promotional calendars, or pricing data.</p>
 <p><em>Discussed in: <a href="https://mftokic.github.io/posts/2024-10-02-ts-fundamentals-whats-a-time-series/">What’s A Time Series?</a>, <a href="https://mftokic.github.io/posts/2025-01-24-ts-fundamentals-eda-xregs/">External Regressors</a></em></p>
 </section>
+<section id="interpolation" class="level4">
+<h4 class="anchored" data-anchor-id="interpolation">Interpolation</h4>
+<p>The process of estimating missing values in a time series using the data points on either side of the gap. Common interpolation methods use trend and seasonal patterns from the existing data to fill in what the missing value likely would have been.</p>
+<p><em>Discussed in: <a href="https://mftokic.github.io/posts/2024-11-26-ts-fundamentals-missing-outliers/">Missing Data and Outliers</a></em></p>
+</section>
 <section id="interquartile-range-iqr" class="level4">
 <h4 class="anchored" data-anchor-id="interquartile-range-iqr">Interquartile Range (IQR)</h4>
 <p>A measure of the middle 50% of your data, calculated as the difference between the 75th percentile and the 25th percentile. The IQR method identifies outliers as data points that fall more than 1.5 times the IQR above the 75th percentile or below the 25th percentile.</p>
+<p><em>Discussed in: <a href="https://mftokic.github.io/posts/2024-11-26-ts-fundamentals-missing-outliers/">Missing Data and Outliers</a></em></p>
+</section>
+<section id="isolation-forest" class="level4">
+<h4 class="anchored" data-anchor-id="isolation-forest">Isolation Forest</h4>
+<p>A tree-based machine learning algorithm that detects outliers by randomly partitioning data, where outliers are identified as points that require fewer splits to isolate from the rest. It’s a powerful automated approach for finding anomalies in time series data when simpler statistical methods aren’t enough.</p>
 <p><em>Discussed in: <a href="https://mftokic.github.io/posts/2024-11-26-ts-fundamentals-missing-outliers/">Missing Data and Outliers</a></em></p>
 </section>
 </section>
@@ -478,6 +508,11 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 <p>Random fluctuations in your data that can’t be explained by trend, seasonality, or any known pattern. Noise is the unpredictable part of your time series, and a good model should learn to separate the signal (meaningful patterns) from the noise (random variation).</p>
 <p><em>Discussed in: <a href="https://mftokic.github.io/posts/2024-11-06-ts-fundamentals-decomposition/">Time Series Decomposition</a>, <a href="https://mftokic.github.io/posts/2025-04-30-ts-fundamentals-univariate-ets/">Exponential Smoothing</a></em></p>
 </section>
+<section id="normal-distribution" class="level4">
+<h4 class="anchored" data-anchor-id="normal-distribution">Normal Distribution</h4>
+<p>A bell-shaped distribution where most values cluster around the average, with fewer values appearing as you move further away in either direction. In time series forecasting, you want your model’s residuals to follow a normal distribution centered around zero, which indicates the model has captured all learnable patterns.</p>
+<p><em>Discussed in: <a href="https://mftokic.github.io/posts/2026-01-29-ts-fundamentals-model-evaluation-train-test/">Train Test Splits</a></em></p>
+</section>
 <section id="not-missing-at-random-nmar" class="level4">
 <h4 class="anchored" data-anchor-id="not-missing-at-random-nmar">Not Missing at Random (NMAR)</h4>
 <p>Data that is missing because of the value itself or a specific, non-random reason. For example, a newer product only has three years of sales history while older products have five years—the data isn’t missing randomly, it’s missing because the product didn’t exist yet.</p>
@@ -490,6 +525,11 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 <h4 class="anchored" data-anchor-id="outlier">Outlier</h4>
 <p>A data point that significantly departs from the normal pattern of a time series—either extremely high or extremely low. Outliers can mislead a model into learning false patterns, so it’s important to identify them (through smell tests, statistical methods like Z-scores and IQR, or residual analysis) and decide whether to flag, remove, or leave them.</p>
 <p><em>Discussed in: <a href="https://mftokic.github.io/posts/2024-11-26-ts-fundamentals-missing-outliers/">Missing Data and Outliers</a></em></p>
+</section>
+<section id="overfitting" class="level4">
+<h4 class="anchored" data-anchor-id="overfitting">Overfitting</h4>
+<p>When a model learns the noise and random fluctuations in the training data instead of the true underlying patterns, causing it to perform well on historical data but poorly on new unseen data. Overfitting is why we split data into separate training and testing sets—to ensure the model can generalize beyond what it’s already seen.</p>
+<p><em>Discussed in: <a href="https://mftokic.github.io/posts/2026-01-29-ts-fundamentals-model-evaluation-train-test/">Train Test Splits</a></em></p>
 </section>
 </section>
 <section id="p" class="level3">
@@ -515,6 +555,11 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 </section>
 <section id="r" class="level3">
 <h3 class="anchored" data-anchor-id="r">R</h3>
+<section id="random-walk-with-drift" class="level4">
+<h4 class="anchored" data-anchor-id="random-walk-with-drift">Random Walk with Drift</h4>
+<p>A variation of the naive forecast method that allows predictions to gradually increase or decrease over time based on the average historical change in the data. Think of it as the naive forecast plus a small adjustment each period to account for the overall trend direction.</p>
+<p><em>Discussed in: <a href="https://mftokic.github.io/posts/2025-05-12-ts-fundamentals-univariate-benchmarks/">Simple Benchmark Models</a></em></p>
+</section>
 <section id="regression" class="level4">
 <h4 class="anchored" data-anchor-id="regression">Regression</h4>
 <p>A type of supervised learning that predicts a numerical value based on past data and relationships between variables. In the context of time series, regression models learn from historical patterns to predict a number (like revenue) going forward.</p>
@@ -537,6 +582,11 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 <h4 class="anchored" data-anchor-id="seasonality">Seasonality</h4>
 <p>A recurring, predictable pattern in your time series that repeats at regular intervals. For example, a retail company might see sales spike every October through December for the holiday season, then drop in January—this repeating cycle is seasonality.</p>
 <p><em>Discussed in: <a href="https://mftokic.github.io/posts/2024-11-06-ts-fundamentals-decomposition/">Time Series Decomposition</a>, <a href="https://mftokic.github.io/posts/2024-10-15-ts-fundamentals-eda-data-shape/">Shape of the Data</a>, <a href="https://mftokic.github.io/posts/2025-04-30-ts-fundamentals-univariate-ets/">Exponential Smoothing</a></em></p>
+</section>
+<section id="seasonal-arima-sarima" class="level4">
+<h4 class="anchored" data-anchor-id="seasonal-arima-sarima">Seasonal ARIMA (SARIMA)</h4>
+<p>An extension of the standard ARIMA model that adds seasonal components to handle repeating patterns at fixed intervals, like monthly or quarterly cycles. It essentially stacks a seasonal ARIMA process on top of the regular one, using seasonal lags and seasonal differencing to capture recurring patterns.</p>
+<p><em>Discussed in: <a href="https://mftokic.github.io/posts/2025-04-10-ts-fundamentals-univariate-arima/">ARIMA</a></em></p>
 </section>
 <section id="seasonal-differencing" class="level4">
 <h4 class="anchored" data-anchor-id="seasonal-differencing">Seasonal Differencing</h4>
