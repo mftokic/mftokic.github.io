@@ -32,7 +32,7 @@ Let's take one of our example time series and create these benchmark forecasts.
 
 ![](./chart1.png)
 
-Looks like our future forecast for each model doesn't look good. No trends were captured, same goes for seasonality outside of the seasonal naive model. These models produced future forecasts, just none that we want to use for our final forecast.
+Looks like our future forecast for each model doesn't look good. No [trends](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#trend) were captured, same goes for [seasonality](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#seasonality) outside of the seasonal naive model. These models produced future forecasts, just none that we want to use for our final forecast.
 
 ### How to Use Them
 
@@ -44,12 +44,12 @@ Today we just covered the three most common benchmark models, but there are coun
 
 - **Other Mean Forecast Methods**
     - Instead of averaging over the past year, you can average over the past quarter, the entire time series, or any other significant period. 
-- **Random Walk with Drift**
+- **[Random Walk with Drift](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#random-walk-with-drift)**
     - A variation of the naive method allows the forecasts to change over time. The amount of change, called drift, is the average change seen in the historical data.
 - **Seasonal Mean Forecast**
     - Similar to previously discussed mean forecast methods, but this time you are averaging the values within the same season. For example, for monthly data you might take the average value of the previous years for the month of December to use that to create a future forecast for December. 
 - **Growth Rate Forecast Methods**
-    - If the time series lacks seasonality, you can apply a compound annual growth rate (CAGR) or similar average growth over "xyz" time periods and apply that to create a future forecast. 
+    - If the time series lacks seasonality, you can apply a [compound annual growth rate (CAGR)](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#compound-annual-growth-rate) or similar average growth over "xyz" time periods and apply that to create a future forecast. 
 
 ### Final Thoughts
 

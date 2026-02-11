@@ -19,7 +19,7 @@ External regressors come in many shapes and sizes. They are usually chosen based
 
 ### Measuring Linear Relationships
 
-The most straightforward approach is a simple correlation analysis. We take the external regressor time series, and calculate the correlation against our target variable time series. This gives us a value between -1 and 1. Having either a strong negative correlation or positive correlation are both helpful. Here are a few rules of thumb to measure strong correlations of external regressors based on the date grain of your data. 
+The most straightforward approach is a simple correlation analysis. We take the external regressor time series, and calculate the [correlation](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#correlation) against our [target variable](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#target-variable) time series. This gives us a value between -1 and 1. Having either a strong negative correlation or positive correlation are both helpful. Here are a few rules of thumb to measure strong correlations of external regressors based on the date grain of your data. 
 
 - Year/Quarter/Month: Absolute value correlation of 0.5 or higher. 
 - Week/Day: Absolute value correlation of 0.2 or higher.  
@@ -48,7 +48,7 @@ The first external regressor (xreg1) seems to have similar trend and seasonality
 | Revenue    | xreg1      |        0.83 |
 | Revenue    | xreg2      |        0.05 |
 
-The table confirms our initial smell test after reading the line chart. Xreg1 has a strong correlation, and xreg2 does not. This tells us that xreg1 could be a good candidate to use as a feature in our ML forecast model. What if we don't know what xreg1 values are going to be in the future? That's where calculating correlation on lags becomes valuable. We can calculate lags for 1 month, 2 months, 3 months, and onward to see if lag values of our external regressors can also be used as features. 
+The table confirms our initial smell test after reading the line chart. Xreg1 has a strong correlation, and xreg2 does not. This tells us that xreg1 could be a good candidate to use as a feature in our ML forecast model. What if we don't know what xreg1 values are going to be in the future? That's where calculating correlation on [lags](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#lag) becomes valuable. We can calculate lags for 1 month, 2 months, 3 months, and onward to see if lag values of our external regressors can also be used as features. 
 
 | Variable 1 | Variable 2     | Correlation |
 |------------|----------------|-------------|
@@ -118,11 +118,11 @@ Distance correlation is easier to understand and compare scores across different
 | Revenue    | xreg2_lag_9    | 0.00              |
 | Revenue    | xreg2_lag_12   | 0.00              |
 
-Similar to regular correlation, xreg1 shows a strong relationship with revenue. But for MI it only has a relationship with lag 0 and lag 1. All other values are either very small or zero, meaning there is not strong relationship. This differs from the original correlation values. Usually it's a good idea to use a few of these methods together. If external regressors are flagged as important in more than one of these approaches, then it's safe to say they have some predictive power for our target variable. So for our data we can keep xreg1 to use in our model and drop xreg2 since it's mostly noise with no signal. 
+Similar to regular correlation, xreg1 shows a strong relationship with revenue. But for MI it only has a relationship with lag 0 and lag 1. All other values are either very small or zero, meaning there is not strong relationship. This differs from the original correlation values. Usually it's a good idea to use a few of these methods together. If external regressors are flagged as important in more than one of these approaches, then it's safe to say they have some predictive power for our target variable. So for our data we can keep xreg1 to use in our model and drop xreg2 since it's mostly [noise](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#noise) with no [signal](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#signal). 
 
 ### Dealing With Binary Regressors
 
-There's one final type of analysis we are missing. Sometimes adding simple binary variables as external regressors can result in major accuracy improvements. These are 1 or 0 values that can represent a certain event or action happening. For example you might have new product launches in random months throughout the year. These can be represented with a 1 when there is a product launch, and a 0 when there is not. Without this binary data, a model may pick up on trends and patterns that may not repeat in the future. Your business might thrive during the months leading up to the US presidential election, but that only comes around every four years. So giving the model context of those events is important. 
+There's one final type of analysis we are missing. Sometimes adding simple [binary variables](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#binary-variable) as external regressors can result in major accuracy improvements. These are 1 or 0 values that can represent a certain event or action happening. For example you might have new product launches in random months throughout the year. These can be represented with a 1 when there is a product launch, and a 0 when there is not. Without this binary data, a model may pick up on trends and patterns that may not repeat in the future. Your business might thrive during the months leading up to the US presidential election, but that only comes around every four years. So giving the model context of those events is important. 
 
 An interesting binary regressor in recent years has been a COVID-19 flag. This shows when COVID was impacting the world the most. When looking at the chart of our time series above, we can see a large dip in 2020. So it looks like COVID has a potential effect. Let's create a COVID flag with a value of 1 for every month in 2020 and a value of 0 for all other months. We will also create a second flag that contains random 1 and 0 values to see if we can determine which regressor is important to our specific time series. 
 
@@ -139,9 +139,9 @@ Finally there are other ways to figure out the importance of external regressors
 
 ### Reversal
 
-When working with external regressors, it’s important to approach correlations and relationships critically. A strong correlation might suggest a connection, but it does not prove causation. This distinction is crucial, as relying on variables without clear logical links to your target can mislead your analysis and undermine your forecast.
+When working with external regressors, it’s important to approach correlations and relationships critically. A strong correlation might suggest a connection, but it does not prove [causation](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#causation). This distinction is crucial, as relying on variables without clear logical links to your target can mislead your analysis and undermine your forecast.
 
-Another issue to watch for is multicollinearity. This happens when external regressors are highly correlated with one another. Models can struggle to differentiate the effects of variables that overlap significantly, leading to instability in coefficient estimates and diminished interpretability. To mitigate this, examine the correlations among your regressors before including them. If two variables are redundant, consider removing or transforming one to reduce redundancy.
+Another issue to watch for is [multicollinearity](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#multicolinearity). This happens when external regressors are highly correlated with one another. Models can struggle to differentiate the effects of variables that overlap significantly, leading to instability in coefficient estimates and diminished interpretability. To mitigate this, examine the correlations among your regressors before including them. If two variables are redundant, consider removing or transforming one to reduce redundancy.
 
 Ultimately, external regressors should be chosen based on both statistical evidence and domain knowledge. They should have a clear, interpretable relationship with the target variable. Without this foundation, even the most promising-looking variables can introduce unnecessary complexity and noise.
 

@@ -23,8 +23,8 @@ Arima stands for autoregressive integrated moving average. That sounds like a mo
 
 Here's what happens when an arima model is trained. 
 
-1. **Integrated**: Difference the data d times to remove trend or seasonality, making the series stationary. This is necessary so that the AR and MA components can model the structure reliably.
-2. **Autoregressive**: Model the differenced series as a linear combination of its own lagged values. This captures momentum or persistence in the time series aka how past values influence future ones.
+1. **Integrated**: Difference the data d times to remove [trend](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#trend) or [seasonality](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#seasonality), making the series stationary. This is necessary so that the AR and MA components can model the structure reliably.
+2. **Autoregressive**: Model the differenced series as a linear combination of its own [lagged](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#lag) values. This captures momentum or persistence in the time series aka how past values influence future ones.
 3. **Moving Average**: Model the current value as a function of past forecast errors. These errors are not directly observed, so the model estimates them recursively during training, learning how random shocks in the past influence the present.
 4. **Training**: The AR and MA parts are fitted together by maximizing the likelihood of the observed data, given the model structure. This involves recursively computing residuals and using numerical optimization to find the best parameters.
 
@@ -35,7 +35,7 @@ To create future forecasts, we'd take the trained model and do the following.
 3. **Recursive Forecasting**: Forecast multiple steps ahead by reusing your own predictions as inputs.
 4. **Integrated**: Reverse the differencing operation to return the forecast to the original scale.
 
-Ok, now we know how arima works at a high level and how it can be used to create future forecasts. But there's one major thing missing. The arima process we went through is for non-seasonal data. If our data has seasonality, we need to fit a seasonal arima model. It's very similar to the plain vanilla arima model, but has a separate process added to handle seasonal differencing and seasonal lags. For example instead of comparing sales of last month to sales in this month, a seasonal approach would compare sales of 12 months ago with sales in this month. It's kind of like stacking another arima on top of arima, but operating at a seasonal level. 
+Ok, now we know how arima works at a high level and how it can be used to create future forecasts. But there's one major thing missing. The arima process we went through is for non-seasonal data. If our data has seasonality, we need to fit a [seasonal arima](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#seasonal-arima-sarima) model. It's very similar to the plain vanilla arima model, but has a separate process added to handle seasonal differencing and seasonal lags. For example instead of comparing sales of last month to sales in this month, a seasonal approach would compare sales of 12 months ago with sales in this month. It's kind of like stacking another arima on top of arima, but operating at a seasonal level. 
 
 ### Let's Train a Model 
 
@@ -45,8 +45,8 @@ Let's take one of our example time series and create an arima forecast 12 months
 
 Looks pretty good! The arima model was able to capture the historical trend and seasonality and carry it forward into the future. We're also able to see two other things in the chart. 
 
-1. Hypothetical forecasts of the training data. These are often referred to as fitted values and can be used to calculate residuals, which are simply the difference between the forecast and actual value. Historically the arima model performed very well, closely matching the actual revenue values from month to month. 
-2. A 95% prediction interval. This represents with 95% certainty the upper and lower ranges where the model thinks the future value will land between. The tighter this interval the more certain the model is in its prediction. We will dig deep into prediction intervals in more detail in a later post. 
+1. Hypothetical forecasts of the training data. These are often referred to as [fitted values](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#fitted-values) and can be used to calculate [residuals](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#residual), which are simply the difference between the forecast and actual value. Historically the arima model performed very well, closely matching the actual revenue values from month to month. 
+2. A 95% [prediction interval](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#prediction-interval). This represents with 95% certainty the upper and lower ranges where the model thinks the future value will land between. The tighter this interval the more certain the model is in its prediction. We will dig deep into prediction intervals in more detail in a later post. 
 
 ### Reversal 
 

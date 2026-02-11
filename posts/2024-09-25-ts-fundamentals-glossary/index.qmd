@@ -43,6 +43,12 @@ The process of evaluating a forecast model by testing it against historical data
 
 *Discussed in: [Train Test Splits](https://mftokic.github.io/posts/2026-01-29-ts-fundamentals-model-evaluation-train-test/)*
 
+#### Back Transformation 
+
+The process of reversing a data transformation (like Box-Cox or differencing) to convert forecasted values back to their original units. After training a model on transformed data, you must always back-transform the predictions so the final forecast is in meaningful business terms like actual dollar amounts.
+
+*Discussed in: [Box-Cox Transformations](https://mftokic.github.io/posts/2025-02-05-ts-fundamentals-data-cleaning-boxcox/), [Stationary](https://mftokic.github.io/posts/2025-03-21-ts-fundamentals-data-cleaning-stationary/)*
+
 #### Benchmark Model 
 
 A simple model that uses basic formulas (like averages or last-known values) to produce a forecast, serving as a baseline to compare against more complex models. If a fancy machine learning model can't beat a simple benchmark, it's probably not worth the added complexity.
@@ -89,11 +95,23 @@ A statistical measure of how two variables move together, with values ranging be
 
 ### D {#d}
 
+#### Deep Learning 
+
+A subset of machine learning that uses multi-layered neural networks to learn complex patterns in data. Despite being the most hyped branch of AI, deep learning models are often beaten by simpler univariate models like ARIMA and exponential smoothing for many time series forecasting tasks.
+
+*Discussed in: [What's A Time Series?](https://mftokic.github.io/posts/2024-10-02-ts-fundamentals-whats-a-time-series/)*
+
 #### Dependant Variable 
 
 The variable you are trying to predict, also called the target variable. In a revenue forecast, the dependant variable is the revenue amount that the model is trying to forecast into the future.
 
 *Discussed in: [What's A Time Series?](https://mftokic.github.io/posts/2024-10-02-ts-fundamentals-whats-a-time-series/)*
+
+#### Detrending 
+
+The process of removing the trend component from a time series to isolate other patterns like seasonality and noise. Detrending can be done by subtracting a moving average, applying differencing, or using decomposition methods like STL.
+
+*Discussed in: [Time Series Decomposition](https://mftokic.github.io/posts/2024-11-06-ts-fundamentals-decomposition/), [Stationary](https://mftokic.github.io/posts/2025-03-21-ts-fundamentals-data-cleaning-stationary/)*
 
 #### Differencing 
 
@@ -153,6 +171,12 @@ The model's hypothetical forecasts for the historical training data, showing wha
 
 *Discussed in: [ARIMA](https://mftokic.github.io/posts/2025-04-10-ts-fundamentals-univariate-arima/), [Exponential Smoothing](https://mftokic.github.io/posts/2025-04-30-ts-fundamentals-univariate-ets/), [Train Test Splits](https://mftokic.github.io/posts/2026-01-29-ts-fundamentals-model-evaluation-train-test/)*
 
+#### Forecast Horizon 
+
+The number of future time periods you want to predict, such as forecasting the next 12 months of revenue. A shorter forecast horizon generally produces more accurate predictions than a longer one, since uncertainty grows the further out you try to predict.
+
+*Discussed in: [ARIMA](https://mftokic.github.io/posts/2025-04-10-ts-fundamentals-univariate-arima/), [Train Test Splits](https://mftokic.github.io/posts/2026-01-29-ts-fundamentals-model-evaluation-train-test/)*
+
 ### G {#g}
 
 ### H {#h}
@@ -177,9 +201,21 @@ A variable used as an input to predict the dependant (target) variable, also kno
 
 *Discussed in: [What's A Time Series?](https://mftokic.github.io/posts/2024-10-02-ts-fundamentals-whats-a-time-series/), [External Regressors](https://mftokic.github.io/posts/2025-01-24-ts-fundamentals-eda-xregs/)*
 
+#### Interpolation 
+
+The process of estimating missing values in a time series using the data points on either side of the gap. Common interpolation methods use trend and seasonal patterns from the existing data to fill in what the missing value likely would have been.
+
+*Discussed in: [Missing Data and Outliers](https://mftokic.github.io/posts/2024-11-26-ts-fundamentals-missing-outliers/)*
+
 #### Interquartile Range (IQR) 
 
 A measure of the middle 50% of your data, calculated as the difference between the 75th percentile and the 25th percentile. The IQR method identifies outliers as data points that fall more than 1.5 times the IQR above the 75th percentile or below the 25th percentile.
+
+*Discussed in: [Missing Data and Outliers](https://mftokic.github.io/posts/2024-11-26-ts-fundamentals-missing-outliers/)*
+
+#### Isolation Forest 
+
+A tree-based machine learning algorithm that detects outliers by randomly partitioning data, where outliers are identified as points that require fewer splits to isolate from the rest. It's a powerful automated approach for finding anomalies in time series data when simpler statistical methods aren't enough.
 
 *Discussed in: [Missing Data and Outliers](https://mftokic.github.io/posts/2024-11-26-ts-fundamentals-missing-outliers/)*
 
@@ -301,6 +337,12 @@ Random fluctuations in your data that can't be explained by trend, seasonality, 
 
 *Discussed in: [Time Series Decomposition](https://mftokic.github.io/posts/2024-11-06-ts-fundamentals-decomposition/), [Exponential Smoothing](https://mftokic.github.io/posts/2025-04-30-ts-fundamentals-univariate-ets/)*
 
+#### Normal Distribution 
+
+A bell-shaped distribution where most values cluster around the average, with fewer values appearing as you move further away in either direction. In time series forecasting, you want your model's residuals to follow a normal distribution centered around zero, which indicates the model has captured all learnable patterns.
+
+*Discussed in: [Train Test Splits](https://mftokic.github.io/posts/2026-01-29-ts-fundamentals-model-evaluation-train-test/)*
+
 #### Not Missing at Random (NMAR) 
 
 Data that is missing because of the value itself or a specific, non-random reason. For example, a newer product only has three years of sales history while older products have five years—the data isn't missing randomly, it's missing because the product didn't exist yet.
@@ -314,6 +356,12 @@ Data that is missing because of the value itself or a specific, non-random reaso
 A data point that significantly departs from the normal pattern of a time series—either extremely high or extremely low. Outliers can mislead a model into learning false patterns, so it's important to identify them (through smell tests, statistical methods like Z-scores and IQR, or residual analysis) and decide whether to flag, remove, or leave them.
 
 *Discussed in: [Missing Data and Outliers](https://mftokic.github.io/posts/2024-11-26-ts-fundamentals-missing-outliers/)*
+
+#### Overfitting 
+
+When a model learns the noise and random fluctuations in the training data instead of the true underlying patterns, causing it to perform well on historical data but poorly on new unseen data. Overfitting is why we split data into separate training and testing sets—to ensure the model can generalize beyond what it's already seen.
+
+*Discussed in: [Train Test Splits](https://mftokic.github.io/posts/2026-01-29-ts-fundamentals-model-evaluation-train-test/)*
 
 ### P {#p}
 
@@ -338,6 +386,12 @@ A range of values that shows, with a stated level of certainty (like 95%), where
 ### Q {#q}
 
 ### R {#r}
+
+#### Random Walk with Drift 
+
+A variation of the naive forecast method that allows predictions to gradually increase or decrease over time based on the average historical change in the data. Think of it as the naive forecast plus a small adjustment each period to account for the overall trend direction.
+
+*Discussed in: [Simple Benchmark Models](https://mftokic.github.io/posts/2025-05-12-ts-fundamentals-univariate-benchmarks/)*
 
 #### Regression 
 
@@ -364,6 +418,12 @@ The difference between an actual value and its forecasted value (Actual − Fore
 A recurring, predictable pattern in your time series that repeats at regular intervals. For example, a retail company might see sales spike every October through December for the holiday season, then drop in January—this repeating cycle is seasonality.
 
 *Discussed in: [Time Series Decomposition](https://mftokic.github.io/posts/2024-11-06-ts-fundamentals-decomposition/), [Shape of the Data](https://mftokic.github.io/posts/2024-10-15-ts-fundamentals-eda-data-shape/), [Exponential Smoothing](https://mftokic.github.io/posts/2025-04-30-ts-fundamentals-univariate-ets/)*
+
+#### Seasonal ARIMA (SARIMA) 
+
+An extension of the standard ARIMA model that adds seasonal components to handle repeating patterns at fixed intervals, like monthly or quarterly cycles. It essentially stacks a seasonal ARIMA process on top of the regular one, using seasonal lags and seasonal differencing to capture recurring patterns.
+
+*Discussed in: [ARIMA](https://mftokic.github.io/posts/2025-04-10-ts-fundamentals-univariate-arima/)*
 
 #### Seasonal Differencing 
 

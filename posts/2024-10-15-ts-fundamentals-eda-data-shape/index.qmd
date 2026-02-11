@@ -23,11 +23,11 @@ The example data used in this series [can be found here.](https://github.com/mft
 
 ### Initial Data Smell Test
 
-The first step of exploratory data analysis for time series is getting a feel for the data at a high level. This doesn't involve complex statistical analysis. Just simple charts to see how things look. When analyzing these charts we'll use the most underrated concept in machine learning. The human smell test. This involves using your eye balls to look at the data and understand what could be going on based on your [domain experience](https://mftokic.github.io/posts/2024-04-02-time-series-domain-expertise/). Let's chart the time series in a few ways and give it a smell test.   
+The first step of [exploratory data analysis](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#exploratory-data-analysis-eda) for time series is getting a feel for the data at a high level. This doesn't involve complex statistical analysis. Just simple charts to see how things look. When analyzing these charts we'll use the most underrated concept in machine learning. The human [smell test](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#smell-test). This involves using your eye balls to look at the data and understand what could be going on based on your [domain experience](https://mftokic.github.io/posts/2024-04-02-time-series-domain-expertise/). Let's chart the time series in a few ways and give it a smell test.   
 
 ![Total revenue by month](./chart1.png)
 
-Looking at the data all up shows a pretty stable upward trend with a few bumps in the data. Right now it's hard to tell if those bumps in 2019 and 2021 are outliers or not. We would have to dig deeper into the data. The trend seems to be growing exponentially. Meaning it's not a straight line but instead one that seems to grow faster each year. This kind of hockey stick growth is what all businesses aspire to. Lastly it's hard to tell if there is any strong seasonality. 
+Looking at the data all up shows a pretty stable upward [trend](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#trend) with a few bumps in the data. Right now it's hard to tell if those bumps in 2019 and 2021 are [outliers](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#outlier) or not. We would have to dig deeper into the data. The trend seems to be growing exponentially. Meaning it's not a straight line but instead one that seems to grow faster each year. This kind of hockey stick growth is what all businesses aspire to. Lastly it's hard to tell if there is any strong [seasonality](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#seasonality). 
 
 ![Total country revenue by month](./chart2.png)
 

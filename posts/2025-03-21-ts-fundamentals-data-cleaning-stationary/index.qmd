@@ -13,9 +13,9 @@ image: "image.png"
 
 ### Trends Are Hard 
 
-In the world of forecasting, many models need the trend component to be removed in order to learn the right signal from the data. The process of removing a trend (and sometimes seasonality) is called differencing, which can make a time series become stationary. 
+In the world of forecasting, many models need the [trend](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#trend) component to be removed in order to learn the right [signal](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#signal) from the data. The process of removing a trend (and sometimes [seasonality](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#seasonality)) is called differencing, which can make a time series become stationary. 
 
-Stationary just means that the time series has a constant mean and variance over time. Put simpler, it's a time series that looks kind of random with no discernable trend or repeating seasonality. If a time series does have a trend, then we can remove it through a process called differencing, which involves subtracting a value in one time period from a value in a previous time period. More on this later. 
+Stationary just means that the time series has a constant mean and [variance](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#variance) over time. Put simpler, it's a time series that looks kind of random with no discernable trend or repeating seasonality. If a time series does have a trend, then we can remove it through a process called differencing, which involves subtracting a value in one time period from a value in a previous time period. More on this later. 
 
 Some models need data to be stationary to ensure it's learning the correct relationships in the data, and doesn't get fooled from thinking trends will always remain the same. 
 
@@ -88,7 +88,7 @@ Here's a super simple table breaking this down.
 
 ### Reversal 
 
-There are cases where differencing your data to ensure it's stationary is not a good idea. Some models, like arima, have the differencing process built in. So you don't need to do it beforehand. Other models, like standard linear regressions, don't need stationary data at all since they can easily learn from trends and seasonal patterns in the data. 
+There are cases where differencing your data to ensure it's stationary is not a good idea. Some models, like [ARIMA](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#arima), have the differencing process built in. So you don't need to do it beforehand. Other models, like standard linear regressions, don't need stationary data at all since they can easily learn from trends and seasonal patterns in the data. 
 
 Differencing the data can also limit model interpretability, or the ability to explain the forecasted outputs. This becomes even harder once you start to difference your data two or more times, since you are not explaining changes between observations, but instead the change in the changes or even worse. This becomes near impossible to understand for any regular human that might use your forecasts. 
 

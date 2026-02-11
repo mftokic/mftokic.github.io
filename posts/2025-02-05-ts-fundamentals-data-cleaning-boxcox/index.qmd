@@ -19,7 +19,7 @@ The easiest line to fit is already a straight line, or one that has linear growt
 
 ![](./chart1.png)
 
-We would always prefer to model a time series that has a linear trend. But often that's not the case in businesses. Revenue might double every year, and that my friend is not a linear line, but instead an exponential one. A time series growing exponentially is harder for many models to forecast because most models expect the variance of the data to stay the same over time (more on this in the stationary post), and a expanding time series violates this assumption. Consider one of our example time series in our dataset below. See how it grows not at a linear pace but a hockey stick like exponential pace? 
+We would always prefer to model a time series that has a linear [trend](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#trend). But often that's not the case in businesses. Revenue might double every year, and that my friend is not a linear line, but instead an exponential one. A time series growing exponentially is harder for many models to forecast because most models expect the [variance](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#variance) of the data to stay the same over time (more on this in the stationary post), and a expanding time series violates this assumption. Consider one of our example time series in our dataset below. See how it grows not at a linear pace but a hockey stick like exponential pace? 
 
 ![](./chart2.png)
 
@@ -29,7 +29,7 @@ A good way to handle this exponential growth is to transform it into one that lo
 
 The Box-Cox transformation is a family of power transformations that aim to make data more normally distributed and stabilize its variance​. In simple terms, it transforms your original values using an exponent (λ, “lambda”) to reduce skewness. 
 
-Lambda can take many values. A lambda of 0 corresponds to a log transform. A value of 0.5 is a square root transform. By transforming our data this way we can in essence de-scale the data to ensure any large spikes are dampened and easier for a model to fit the data. This can transform our data to be homoscedastic, or having constant variance. Let's see how our time series looks after applying a few box-cox transformations. 
+Lambda can take many values. A lambda of 0 corresponds to a log transform. A value of 0.5 is a square root transform. By transforming our data this way we can in essence de-scale the data to ensure any large spikes are dampened and easier for a model to fit the data. This can transform our data to be [homoscedastic](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#homoscedastic), or having constant variance. Let's see how our time series looks after applying a few box-cox transformations. 
 
 ![](./chart3.png)
 

@@ -19,7 +19,7 @@ Autocorrelation is when a value in a time series is related to previous values i
 
 ### Calculating Autocorrelation
 
-Getting the autocorrelation is as simple as computing the correlation of the existing time series with a lagged time series. For example let's take a time series from our example data set, shown below. 
+Getting the autocorrelation is as simple as computing the [correlation](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#correlation) of the existing time series with a [lagged](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#lag) time series. For example let's take a time series from our example data set, shown below. 
 
 ![](./chart1.png)
 
@@ -27,19 +27,19 @@ We can create lags of one month, two months, and onwards. Then calculate the cor
 
 ![](./chart2.png)
 
-Correlation is shown on the y-axis and the lag amount is shown on the x-axis. The chart shows high autocorrelation for a lag of 0, 1, 12, and 24 months. A lag of 0 has a perfect correlation because it's the exact same as the original time series. These lag correlations are shown as positive values, meaning that there is a positive correlation with the original time series. There are also above the shaded blue region of the chart. This shaded region is a confidence interval. This confidence interval helps us filter out lags that are not statistically significant, meaning they don't have a correlation due to random chance. Any lag outside of the shaded region is significant and should have a real relationship with our original time series. 
+Correlation is shown on the y-axis and the lag amount is shown on the x-axis. The chart shows high autocorrelation for a lag of 0, 1, 12, and 24 months. A lag of 0 has a perfect correlation because it's the exact same as the original time series. These lag correlations are shown as positive values, meaning that there is a positive correlation with the original time series. There are also above the shaded blue region of the chart. This shaded region is a [confidence interval](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#confidence-interval). This confidence interval helps us filter out lags that are not [statistically significant](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#statistically-significant), meaning they don't have a correlation due to random chance. Any lag outside of the shaded region is significant and should have a real relationship with our original time series. 
 
 ### Partial Autocorrelation
 
 Autocorrelation has one fatal flaw though. It can provide misleading correlations since it doesn't account for correlations between lags. For example, there might be a very strong correlation with the original time series and lag 1 of the time series. Because of this correlation, there is a good chance that a lag 2 also shows a strong correlation. The lag 2 correlation might only be due to lag 2 having similar information to lag 1. So the end results could be misleading. 
 
-To account for this, partial autocorrelation was created. This process takes into account the correlations between lags. Making sure that the end correlations are only connected to the original time series. It is the preferred method of analyzing autocorrelation. So make sure it's part of your time series tool kit. Here is the partial autocorrelation of our example time series. 
+To account for this, [partial autocorrelation](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#partial-autocorrelation-pacf) was created. This process takes into account the correlations between lags. Making sure that the end correlations are only connected to the original time series. It is the preferred method of analyzing autocorrelation. So make sure it's part of your time series tool kit. Here is the partial autocorrelation of our example time series. 
 
 ![](./chart3.png)
 
 ### Reading the Tea Leaves
 
-Let's take a deeper look at the partial autocorrelation and see what insights it might provide. When looking at the partial autocorrelation chart, the biggest correlation is at lag 0. This makes sense since a lag of 0 is just the original time series, so there will be a perfect correlation of 1. Lag 1 shows a strong correlation, which makes sense, since it's contains values closest to the original series. There are also strong correlations at lag 11, 12, and 13. This confirms our data has strong seasonality. The highest correlation is at lag 12, which means values today are highly correlated to values at the same time in the previous year (12 months ago). This information will be invaluable when we start to build models in the future. 
+Let's take a deeper look at the partial autocorrelation and see what insights it might provide. When looking at the partial autocorrelation chart, the biggest correlation is at lag 0. This makes sense since a lag of 0 is just the original time series, so there will be a perfect correlation of 1. Lag 1 shows a strong correlation, which makes sense, since it's contains values closest to the original series. There are also strong correlations at lag 11, 12, and 13. This confirms our data has strong [seasonality](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#seasonality). The highest correlation is at lag 12, which means values today are highly correlated to values at the same time in the previous year (12 months ago). This information will be invaluable when we start to build models in the future. 
 
 ### Final Thoughts
 
