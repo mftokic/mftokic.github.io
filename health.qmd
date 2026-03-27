@@ -19,12 +19,15 @@ title: "How I Try to Stay Healthy"
     - [Methylated Multivitamin](https://a.co/d/0hFwLvDd) by Pure Encapsulations
     - [Magnesium Breakthrough](https://a.co/d/7k1WBv4) by BIOptimizers
     - [Essential Amino Acids](https://a.co/d/647Du5X) by BodyHealth
-    - [Prebiotic Fiber](https://a.co/d/g90viZU) by Supergut
-    - [Mineral Sea Salt](https://a.co/d/bEIgQMg) by Baja Gold
-    - [Whey Protein](https://a.co/d/1OpQr8g) by ProMix
+    - [Sea Salt](https://a.co/d/bEIgQMg) by Baja Gold
+    - [Whey Protein](https://a.co/d/02FsEobQ) by Transparent Labs
     - [Minerals](https://a.co/d/08NhvRNn) by SuppGrade Labs
     - [Collagen](https://a.co/d/0guEFl0D) by Blueprint
-- Specific to My Biomarkers
+    - [L-Theanine](https://a.co/d/05XsMnMs) by Bluebonnet
+    - Various Fiber Supplements
+        - [Prebiotic Fiber](https://a.co/d/g90viZU) by Supergut
+        - [Fiber+](https://www.livemomentous.com/products/fiber-plus) by Momentous
+- Specific to My Lab Testing
     - [TMG](https://a.co/d/2YKdRYk) by 10X Health 
     - [5-MTHF](https://a.co/d/4PTGZeq) by 10X Health
     - [NAD+](https://a.co/d/03w0dkSG) by Qualia
@@ -32,6 +35,8 @@ title: "How I Try to Stay Healthy"
     - [Colostrum](https://shop.heartandsoil.co/products/free-form-grass-fed-colostrum) by Heart and Soil 
     - [Whole Package](https://shop.heartandsoil.co/products/whole-package) by Heart and Soil
     - [Thyroid+](https://shop.heartandsoil.co/products/grass-fed-thyroid) By Heart and Soil
+    - [GLP-1 Postbiotic](https://a.co/d/04zG2zqV) by resM
+    - [Ubiquinol](https://a.co/d/0hJj1now) by Jarrow Formulas
 
 ### Water Filtration
 
@@ -44,12 +49,20 @@ title: "How I Try to Stay Healthy"
 
 ### Health Tracking
 
-- [Blood Panel Testing](https://www.functionhealth.com/) by Function
-- [Microbiome Testing](https://www.viome.com/products/full-body-intelligence) by Viome 
-- [Genetic Methylation Testing](https://shop.10xhealthsystem.com/products/10x-health-gene-testing-kit?utm_source=products-page) by 10x Health
-- [Blood Glucose Monitor](https://www.stelo.com/) by Dexcom
-- [Whoop](https://www.whoop.com/us/en/)
-- [Eight Sleep](https://www.eightsleep.com/)
+- Wearables
+    - [Whoop](https://www.whoop.com/us/en/)
+    - [Eight Sleep](https://www.eightsleep.com/)
+    - [Blood Glucose Monitor](https://a.co/d/0eXEXiiQ) by Dexcom one month a quarter
+    - [Brain Neurofeedback](https://info.40yearsofzen.com/#features) by Satoria
+- Lab Testing 
+    - [Blood Biomarkers](https://www.functionhealth.com/) by Function
+    - [Microbiome](https://www.viome.com/products/full-body-intelligence) by Viome 
+    - [Mitochondria](https://www.mito.me/) by Mitome
+    - [Toxins](https://vibrant-wellness.com/tests/toxin-zoomer) by Vibrant Wellness
+    - [Microplastics](https://blueprint.bryanjohnson.com/products/microplastics-test) by Blueprint
+    - [Speed of Aging](https://www.trudiagnostic.com) by TruDiagnostics
+    - [NAD+](https://www.jinfiniti.com/) by Jinfinity
+    - [Full Genome Sequencing](https://selfdecode.com/?nab=1) by SelfDecode
 
 ### Exercise
 
@@ -89,13 +102,23 @@ title: "How I Try to Stay Healthy"
 - Oral care 
     - [Toothpaste](https://a.co/d/7hZ3JRn) 
     - [Tongue Scraper](https://a.co/d/1pNk2Nu)
-- Take [perfect aminos](https://a.co/d/647Du5X) and [creatine](https://a.co/d/aUD3imc)
-- Cold Plunge at 50 degrees and stay for 2 minutes 
+- Cold Plunge at 50 degrees for 2 minutes 
+- Take morning supplements 
+    - Creatine, Perfect Aminos, Fiber, Probiotic, Sea Salt in shaker bottle
+    - Postbiotic, Whole Package, Thyroid+
+- Get light in my eyes using [10k lux lamp](https://a.co/d/0a3DCEcC) for 10 minutes
+    - [Wim Hoff breathwork](https://www.youtube.com/watch?v=tybOi4hjZFQ) while using light lamp
+- 20 min [red light therapy](https://boncharge.com/products/full-body-red-light-therapy-bundle)
 - Perform exercise of the day 
-- Consume another serving of [perfect aminos](https://a.co/d/647Du5X) after exercise
+- Consume whey protein and collagen
 - Shower and get ready for work 
-- [Moisturize](https://a.co/d/9C2UnAe)
-- 5 minutes of Wim Hoff style breathwork using an [app called State](https://www.shiftstate.io/)
+    - [Bar Soap](https://a.co/d/0eX6G8VP) by Dr. Bronner
+    - [Shampoo+Conditioner](https://a.co/d/00nCxg1B) by Pura D'Or
+    - [Facial Cleanser](https://a.co/d/0j78Y0Rf) by Blueprint
+    - [Moisturizer](https://a.co/d/0ehEM2e7) by OneSkin
+    - [Sunscreen](https://a.co/d/0eeWJmeh) by OneSkin
+    - [Hair Serum](https://a.co/d/0bllzF6i) by OneSkin
+    - [Deodorant](https://a.co/d/0c2GyZcq) by Native
 - Journal using an [app called Day One](https://dayoneapp.com/), answering the following prompts
     - I am grateful for...
     - Morning exercise 
@@ -105,26 +128,17 @@ title: "How I Try to Stay Healthy"
     - What would make today great? 
     - Daily affirmation
 - Write for 30-60 minutes about anything that interests me 
-- Eat first meal at 8am and take rest of supplements (excluding supplements taken during evening routine)
+- Eat first meal around 7am and take rest of supplements (excluding supplements taken during evening routine)
 - Kick ass the rest of the day
 
 ### Evening Routine
 
-- 6:30pm put on blue light blocking glasses
-- 7:30pm dim all lights, stop looking at screens, and take the following supplements 
-    - [5-MTHF](https://a.co/d/4PTGZeq)
-    - [Magnesium Breakthrough](https://a.co/d/7k1WBv4)
-- 7:40pm do the following cognitive work
-    - 10 minutes of parasympathetic inducing breathwork  using an [app called State](https://www.shiftstate.io/)
-    - 10 minutes of meditation using an [app called The Way](https://www.thewayapp.com/?source=us_traffic)
-- 8:30pm take a contrast shower 
-    - Few minutes on very hot 
-    - Last minute on very cold
-- Oral care 
-    - [Floss](https://a.co/d/7PgC1HM)
-    - [Toothpaste](https://a.co/d/7hZ3JRn) 
-    - [Tongue Scraper](https://a.co/d/1pNk2Nu)
-    - [Mouthwash](https://a.co/d/dEXJS8g)
-    - [Coconut Oil Pulling](https://a.co/d/61a0Cl7) 
-- [Moisturize](https://a.co/d/g4Ji7sW)
+- 6:00pm put on [blue light blocking glasses](https://truedark.com/), 30 min [sauna](https://boncharge.com/products/infrared-sauna-blanket), then shower
+- 6:45pm oral, face, hair care
+    - same as morning
+- 7:00pm do the following exercises
+    - 10 min breathwork 
+    - 15 min [neurofeedback session](https://info.40yearsofzen.com/#features)
+- 7:30pm dim all lights, stop looking at screens, and take supplements
+    - 5-MTHF, Magnesium Breakthrough, L-Theanine
 - Fall asleep by 9:00pm
