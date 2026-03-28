@@ -14,7 +14,10 @@ website:
     right:
       - text: "Start Here"
         file: start_here.qmd
-      - about.qmd
+      - text: "About Me"
+        file: about.qmd
+      - text: "Hire Me"
+        file: hire_me.qmd
       - text: "Software"
         file: software.qmd
       - text: "Books"
