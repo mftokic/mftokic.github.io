@@ -40,6 +40,7 @@ The sequence of what you learn is just as important as what content you learn. I
     - Decision Trees
     - Random Forest
     - Gradient Boosting (XGBoost, LightGBM)
+    - Transformers (TimeGPT, Chronos)
     - Local Models vs Global Models
     - Hyperparameter Tuning
     - Feature Selection
@@ -58,9 +59,12 @@ The sequence of what you learn is just as important as what content you learn. I
     - Model Agnostic
         - Global Methods
         - Local Methods
-13. Forecasts in Production
+13. AI Agents in Forecasting
+    - Forecast Iteration
+    - Forecast Explanation
+14. Forecasts in Production
     - Parallel Computing
     - Model Training and Serving
-14. Appendix
-    - ML Term Glossary
+15. Appendix
+    - [ML Term Glossary](https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/)
 

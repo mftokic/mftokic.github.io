@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Mike Tokic">
+<meta name="dcterms.date" content="2026-04-11">
+<meta name="description" content="How to correctly back test your forecast">
 
-<title>How I Try to Stay Healthy – Thoughts on Things</title>
+<title>Model Evaluation: Time Series Cross-Validation – Thoughts on Things</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,25 +26,25 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./logo.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../logo.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -78,25 +81,28 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 </script>
+<meta name="quarto:status" content="draft">
 
 
-<link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="How I Try to Stay Healthy – Thoughts on Things">
-<meta property="og:description" content="A collection of thoughts on things from the mind of Mike Tokic">
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="Model Evaluation: Time Series Cross-Validation – Thoughts on Things">
+<meta property="og:description" content="How to correctly back test your forecast">
+<meta property="og:image" content="https://mftokic.github.io/posts/2026-04-11-ts-fundamentals-ts-cross-validation/image.png">
 <meta property="og:site_name" content="Thoughts on Things">
-<meta name="twitter:title" content="How I Try to Stay Healthy – Thoughts on Things">
-<meta name="twitter:description" content="A collection of thoughts on things from the mind of Mike Tokic">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Model Evaluation: Time Series Cross-Validation – Thoughts on Things">
+<meta name="twitter:description" content="How to correctly back test your forecast">
+<meta name="twitter:image" content="https://mftokic.github.io/posts/2026-04-11-ts-fundamentals-ts-cross-validation/image.png">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner"><div id="quarto-draft-alert" class="alert alert-warning"><i class="bi bi-pencil-square"></i>Draft</div>
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Thoughts on Things</span>
     </a>
   </div>
@@ -107,27 +113,27 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./start_here.html"> 
+    <a class="nav-link" href="../../start_here.html"> 
 <span class="menu-text">Start Here</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About Me</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./hire_me.html"> 
+    <a class="nav-link" href="../../hire_me.html"> 
 <span class="menu-text">Hire Me</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./software.html"> 
+    <a class="nav-link" href="../../software.html"> 
 <span class="menu-text">Software</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./books.html"> 
+    <a class="nav-link" href="../../books.html"> 
 <span class="menu-text">Books</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./health.html" aria-current="page"> 
+    <a class="nav-link" href="../../health.html"> 
 <span class="menu-text">Health</span></a>
   </li>  
   <li class="nav-item">
@@ -150,7 +156,7 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="./index.xml"> <i class="bi bi-rss" role="img">
+    <a class="nav-link" href="../../index.xml"> <i class="bi bi-rss" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -163,230 +169,91 @@ gtag('config', 'G-LPFFKTCPJX', { 'anonymize_ip': true});
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Model Evaluation: Time Series Cross-Validation</h1>
+                  <div>
+        <div class="description">
+          How to correctly back test your forecast
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">machine-learning</div>
+                <div class="quarto-category">time-series</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Mike Tokic </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">April 11, 2026</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">How I Try to Stay Healthy</h1>
-</div>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
 
 
-</header>
-
-
-<p><strong>Last Updated: March 2026</strong></p>
-<section id="diet" class="level3">
-<h3 class="anchored" data-anchor-id="diet">Diet</h3>
-<ul>
-<li>Whole foods, no processed foods. Limit seed oils.</li>
-<li>0.7-1 gram of protein per ideal body weight, so around 150 grams per day.</li>
-<li>Stop eating 4 hours before bed.</li>
-</ul>
+<ol type="1">
+<li>What am I trying to say?</li>
+<li>What story can I tell?</li>
+<li>List major parts by sections/points</li>
+<li>Brain dump into each one</li>
+<li>Refine into a cohesive narrative</li>
+<li>Create hook/intro</li>
+<li>How is this 1% better than my previous post?</li>
+<li>Is this interesting? Is it fun to read?</li>
+<li>Final review, read it out loud via AI</li>
+<li>Create thumbnail, make it fun</li>
+<li>Post blog</li>
+<li>Condense and post on LinkedIn</li>
+<li>Condense and post on X</li>
+</ol>
+<p><em>This post is part of the <a href="https://mftokic.github.io/posts/2025-05-13-ts-fundamentals-model-evaluation/">model evaluation chapter</a> within a larger learning series around time series forecasting fundamentals. <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/">Check out the main learning path</a> to see other posts in the series.</em></p>
+<p><em>The example monthly data used in this series <a href="https://github.com/mftokic/mftokic.github.io/blob/main/posts/2024-10-02-ts-fundamentals-whats-a-time-series/example_ts_data.csv">can be found here.</a> You can also find the <a href="https://github.com/mftokic/mftokic.github.io/blob/main/notebooks/2026-01-29-ts-fundamentals-model-evaluation-train-test-split.ipynb">python code used in this post here.</a></em></p>
+<section id="a-single-train-test-split-is-not-enough" class="level3">
+<h3 class="anchored" data-anchor-id="a-single-train-test-split-is-not-enough">A Single Train Test Split Is Not Enough</h3>
+<p>If you are trying to create a ML forecast for next quarter, you probably want to see how the same model performed on historical data. In a [previous post]https://mftokic.github.io/posts/2026-01-29-ts-fundamentals-model-evaluation-train-test/, we walked through the correct way to train and test your model on historical data. Would you test your next quarter forecast on only the most recent historical quarter? Probably not. You might prefer seeing how well this ML model performed across multiple historical quarters. The process of evaluating your ML forecast on historical data is called back testing.</p>
 </section>
-<section id="supplements" class="level3">
-<h3 class="anchored" data-anchor-id="supplements">Supplements</h3>
-<ul>
-<li>Essentials for Everyone
-<ul>
-<li><a href="https://a.co/d/aUD3imc">Creatine Monohydrate</a> by Momentous</li>
-<li><a href="https://a.co/d/fTlqdxr">Omega 3 Fish Oil</a> by Momentous</li>
-<li><a href="https://a.co/d/0hfwmoHR">Vitamin D3</a> by Designs for Health</li>
-<li><a href="https://a.co/d/0hFwLvDd">Methylated Multivitamin</a> by Pure Encapsulations</li>
-<li><a href="https://a.co/d/7k1WBv4">Magnesium Breakthrough</a> by BIOptimizers</li>
-<li><a href="https://a.co/d/647Du5X">Essential Amino Acids</a> by BodyHealth</li>
-<li><a href="https://a.co/d/bEIgQMg">Sea Salt</a> by Baja Gold</li>
-<li><a href="https://a.co/d/02FsEobQ">Whey Protein</a> by Transparent Labs</li>
-<li><a href="https://a.co/d/08NhvRNn">Minerals</a> by SuppGrade Labs</li>
-<li><a href="https://a.co/d/0guEFl0D">Collagen</a> by Blueprint</li>
-<li><a href="https://a.co/d/05XsMnMs">L-Theanine</a> by Bluebonnet</li>
-<li>Various Fiber Supplements
-<ul>
-<li><a href="https://a.co/d/g90viZU">Prebiotic Fiber</a> by Supergut</li>
-<li><a href="https://www.livemomentous.com/products/fiber-plus">Fiber+</a> by Momentous</li>
-</ul></li>
-</ul></li>
-<li>Specific to My Lab Testing
-<ul>
-<li><a href="https://a.co/d/03vVdRte">TMG</a> by Double Wood</li>
-<li><a href="https://a.co/d/0iYgmRyL">5-MTHF</a> by Thorne</li>
-<li><a href="https://a.co/d/03w0dkSG">NAD+</a> by Qualia</li>
-<li><a href="https://shop.heartandsoil.co/products/free-form-grass-fed-colostrum">Colostrum</a> by Heart and Soil</li>
-<li><a href="https://shop.heartandsoil.co/products/whole-package">Whole Package</a> by Heart and Soil</li>
-<li><a href="https://shop.heartandsoil.co/products/grass-fed-thyroid">Thyroid+</a> By Heart and Soil</li>
-<li><a href="https://a.co/d/04zG2zqV">GLP-1 Postbiotic</a> by resM</li>
-<li><a href="https://a.co/d/0hJj1now">Ubiquinol</a> by Jarrow Formulas</li>
-</ul></li>
-</ul>
+<section id="time-series-cross-validation-overview" class="level3">
+<h3 class="anchored" data-anchor-id="time-series-cross-validation-overview">Time Series Cross-Validation Overview</h3>
+<p>What’s time series cross-validation? Types of TSCV, rolling, expanding window. Overlap vs back to back folds.</p>
 </section>
-<section id="water-filtration" class="level3">
-<h3 class="anchored" data-anchor-id="water-filtration">Water Filtration</h3>
-<ul>
-<li><a href="https://aquatruwater.com/">Countertop Reverse Osmosis Filter</a> by AquaTru</li>
-<li><a href="https://jolieskinco.com/">Shower Head Filter</a> by Jolie</li>
-</ul>
+<section id="the-correct-way-to-back-test" class="level3">
+<h3 class="anchored" data-anchor-id="the-correct-way-to-back-test">The Correct Way to Back Test</h3>
+<p>Rolling origin, overlapping folds, ideally back testing the past year of data.</p>
+<p>Create visual walking through the proper TSCV.</p>
+<p>Run example data through TSCV. Show insights across horizon, and a summarized view.</p>
 </section>
-<section id="air-filtration" class="level3">
-<h3 class="anchored" data-anchor-id="air-filtration">Air Filtration</h3>
-<ul>
-<li><a href="https://jaspr.co/">Jaspr Air Scrubber</a></li>
-</ul>
+<section id="reversal" class="level3">
+<h3 class="anchored" data-anchor-id="reversal">Reversal</h3>
+<p>New products. The future does not resemble the past.</p>
 </section>
-<section id="health-tracking" class="level3">
-<h3 class="anchored" data-anchor-id="health-tracking">Health Tracking</h3>
-<ul>
-<li>Wearables
-<ul>
-<li><a href="https://www.whoop.com/us/en/">Whoop</a></li>
-<li><a href="https://www.eightsleep.com/">Eight Sleep</a></li>
-<li><a href="https://a.co/d/0eXEXiiQ">Blood Glucose Monitor</a> by Dexcom one month a quarter</li>
-<li><a href="https://info.40yearsofzen.com/#features">Brain Neurofeedback</a> by Satoria</li>
-</ul></li>
-<li>Lab Testing
-<ul>
-<li><a href="https://www.functionhealth.com/">Blood Biomarkers</a> by Function</li>
-<li><a href="https://www.viome.com/products/full-body-intelligence">Microbiome</a> by Viome</li>
-<li><a href="https://www.mito.me/">Mitochondria</a> by Mitome</li>
-<li><a href="https://vibrant-wellness.com/tests/toxin-zoomer">Toxins</a> by Vibrant Wellness</li>
-<li><a href="https://blueprint.bryanjohnson.com/products/microplastics-test">Microplastics</a> by Blueprint</li>
-<li><a href="https://www.trudiagnostic.com">Speed of Aging</a> by TruDiagnostics</li>
-<li><a href="https://www.jinfiniti.com/">NAD+</a> by Jinfinity</li>
-<li><a href="https://selfdecode.com/?nab=1">Full Genome Sequencing</a> by SelfDecode</li>
-</ul></li>
-</ul>
-</section>
-<section id="exercise" class="level3">
-<h3 class="anchored" data-anchor-id="exercise">Exercise</h3>
-<ul>
-<li>10k steps every day</li>
-<li>Zone 2 cardio 3x per week
-<ul>
-<li>Peloton cycle on Tuesday/Thursday
-<ul>
-<li>30-60 min</li>
-</ul></li>
-<li>Rucking on Sunday with 20-45 pound weight for 1-3 miles</li>
-</ul></li>
-<li>HIIT 1x per week
-<ul>
-<li>Norwegian 4x4 every Saturday using Peloton cycle</li>
-</ul></li>
-<li>Strength training 3x per week
-<ul>
-<li>4 week mesocycle
-<ul>
-<li>First 3 weeks of progressive overload</li>
-<li>Last week of deload with half the weight, half the reps, and half the sets</li>
-<li>Push/Legs/Pull Split</li>
-</ul></li>
-<li>Push on Monday
-<ul>
-<li>Chest Fly with Dumbbells</li>
-<li>Overhead Press with Dumbbells</li>
-<li>Tricep Extension with Dumbbells</li>
-<li>Reverse Crunch</li>
-</ul></li>
-<li>Legs on Tuesday
-<ul>
-<li>Bulgarian Split Squat Dumbbells</li>
-<li>Romanian Deadlift Dumbbells</li>
-<li>Calf Extensions</li>
-<li>Tibialis Raises</li>
-<li>Russian Twist with Dumbbells</li>
-</ul></li>
-<li>Pull on Friday
-<ul>
-<li>Pullups</li>
-<li>Bicep Curls with Dumbbells</li>
-<li>Lawn Mower Rows with Dumbbells</li>
-<li>Bicycle Kicks</li>
-</ul></li>
-</ul></li>
-<li>All training tracked via <a href="https://www.whoop.com/us/en/">Whoop</a></li>
-</ul>
-</section>
-<section id="morning-routine" class="level3">
-<h3 class="anchored" data-anchor-id="morning-routine">Morning Routine</h3>
-<ul>
-<li>Wake up at 4:30am</li>
-<li>Oral care
-<ul>
-<li><a href="https://a.co/d/7hZ3JRn">Toothpaste</a></li>
-<li><a href="https://a.co/d/1pNk2Nu">Tongue Scraper</a></li>
-</ul></li>
-<li>Take morning supplements
-<ul>
-<li>Creatine, Perfect Aminos, Fiber, Probiotic, Sea Salt in shaker bottle</li>
-<li>Postbiotic, Whole Package, Thyroid+</li>
-</ul></li>
-<li>Get light in my eyes using <a href="https://a.co/d/0a3DCEcC">10k lux lamp</a> for 10 minutes and do the following
-<ul>
-<li><a href="https://www.youtube.com/watch?v=tybOi4hjZFQ">Wim Hoff breathwork</a> while using light lamp</li>
-<li><a href="https://blueprint.bryanjohnson.com/products/laser-cap">Red light cap</a> for hair health while using light lamp</li>
-</ul></li>
-<li>20 min <a href="https://boncharge.com/products/full-body-red-light-therapy-bundle">red light therapy</a></li>
-<li>Perform exercise of the day</li>
-<li>25 min <a href="https://boncharge.com/products/infrared-sauna-blanket">infrared sauna</a> session</li>
-<li>Consume whey protein and collagen</li>
-<li>Shower and get ready for work
-<ul>
-<li><a href="https://a.co/d/0eX6G8VP">Bar Soap</a> by Dr.&nbsp;Bronner</li>
-<li><a href="https://a.co/d/00nCxg1B">Shampoo+Conditioner</a> by Pura D’Or</li>
-<li><a href="https://a.co/d/0j78Y0Rf">Facial Cleanser</a> by Blueprint</li>
-<li><a href="https://a.co/d/0ehEM2e7">Moisturizer</a> by OneSkin</li>
-<li><a href="https://a.co/d/0eeWJmeh">Sunscreen</a> by OneSkin</li>
-<li><a href="https://a.co/d/0bllzF6i">Hair Serum</a> by OneSkin</li>
-<li><a href="https://a.co/d/0c2GyZcq">Deodorant</a> by Native</li>
-</ul></li>
-<li>Journal using an <a href="https://dayoneapp.com/">app called Day One</a>, answering the following prompts
-<ul>
-<li>I am grateful for…</li>
-<li>Morning exercise</li>
-<li>What’s the most important question for today?</li>
-<li>What would I do if I couldn’t fail?</li>
-<li>What will you have a sense of urgency about today?</li>
-<li>What will you have a bias for action about today?</li>
-<li>How can I make today more fun?</li>
-<li>Daily affirmation</li>
-</ul></li>
-<li>Write for 30-60 minutes about anything that interests me</li>
-<li>Eat first meal around 7am and take rest of supplements (excluding supplements taken during evening routine)</li>
-<li>Kick ass the rest of the day</li>
-</ul>
-</section>
-<section id="evening-routine" class="level3">
-<h3 class="anchored" data-anchor-id="evening-routine">Evening Routine</h3>
-<ul>
-<li>6:00pm put on <a href="https://truedark.com/">blue light blocking glasses</a></li>
-<li>7:00pm oral, face, hair care
-<ul>
-<li>same as morning, add <a href="https://a.co/d/0gRCtIC8">floss</a></li>
-</ul></li>
-<li>7:10pm do the following exercises
-<ul>
-<li>10 min breathwork</li>
-<li>15 min <a href="https://info.40yearsofzen.com/#features">neurofeedback session</a></li>
-</ul></li>
-<li>7:30pm dim all lights, stop looking at screens, and take supplements
-<ul>
-<li>5-MTHF, Magnesium Breakthrough, L-Theanine</li>
-</ul></li>
-<li>Fall asleep by 9:00pm</li>
-</ul>
+<section id="final-thoughts" class="level3">
+<h3 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h3>
 
 
 </section>
