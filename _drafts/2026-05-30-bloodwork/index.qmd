@@ -1,0 +1,35 @@
+---
+title: "What Get's Measured, Get's Managed, So Let's Measure Our Health More"
+description: "We need a bloodwork revolution equivalent to the Apple watch"
+author: "Mike Tokic"
+date: "2030-01-01"
+categories: [health]
+image: "image.png"
+draft: True
+---
+
+1. What am I trying to say? 
+- We can measure our heart rate, HRV, stress, blood sugar, etc continuously all day. But we only ever do blood work once a year, and we don't even measure everything that matters
+- People have changed their behavior because of what their wearables tell them. People drink less because they can track how bad it is for their health (sleep quality, HRV, etc.). We need to do the same thing for blood biomarkers. 
+- We are currently in the "go into a lab for a sleep study" stage of tracking what's in our blood. We can't track mitochondria that well. And no one even knows or cares what level of stem cells we have in our body. 
+- We need to be tracking our biomarkers way more. People like Bryan Johnson do it, but he can only do it because he has unlimited money. We need to make it easier to do at home and cheaper. Some companies are leading the way. But the bottleneck seems to be collecting blood and analyzing it. 
+- Oligopoly on blood testing. LabCorp and Quest run the show. Why? Did theranos screw this up for everyone? Can we make this cheaper? 
+- Bryan Johnson can improve his health so much because he can constantly run experiments and have the data to back up if it worked or not. That requires thousands of dollars, how can we do this for hundreds of dollars? 
+- How do blood testing machines work? Have they improved over the years? What's stopping us from making cheaper blood tests?   
+- If we can build CGMs and CKMs, why can't we do blood work at home? 
+
+2. What story can I tell? 
+- My mom pestering me for years around going to the doctor. It's basically an olympic sport for men to put off going to the doctor. So much so it get's joked about in TV shows like how I met your mother. 
+- Getting my first real blood work on Function, and how I took it to the next level with Rhythm Health. 
+
+3. List major parts by sections/points
+4. Brain dump into each one
+5. Refine into a cohesive narrative
+6. Create hook/intro 
+7. How is this 1% better than my previous post? 
+8. Is this interesting? Is it fun to read? 
+9. Final review, read it out loud via AI
+10. Create thumbnail, make it fun
+11. Post blog 
+12. Condense and post on LinkedIn
+13. Condense and post on X
