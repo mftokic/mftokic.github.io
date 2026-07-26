@@ -1,0 +1,56 @@
+---
+title: "AI Trends in Finance"
+description: "Patterns I'm seeing across finance jobs"
+author: "Mike Tokic"
+date: "2030-01-01"
+categories: [finance, AI]
+image: "image.png"
+draft: True
+---
+
+I've been working in the finance space for over 10 years now. First doing actual finance work and then building software for finance work on the engineering side. In the past six months I've seen more transformation around how finance people do their work than in the previous 10 years of my career in finance. 
+
+The biggest change agent has been, well, agents themselves. These are AI's packaged up with tools they can call, and code they can write on the fly to do basically anything you can imagine. Here are a couple trends I have noticed in recent months that are starting to change how people think about their work in traditional finance jobs. 
+
+### Excel As An Artifact, Not the Workspace
+
+For decades the number one tool used by every finance professional has been excel. It's a required skill on every finance job application. 
+
+Excel was a finance person's external brain. A place to think through problems, analyze data, and present answers to tough questions. Creating a financial model was almost a piece of art. Each one had common formatting that was industry standard (color coding, tab layouts, etc.) but each one had the unique scent of whoever made it. Much like how a painter may use the same water colors as everyone else, but have their own distinct style. 
+
+This has all changed with AI. Now the thinking, the analysis, the answering, is all done somewhere else outside of excel. And once the answer is found elsewhere, only then will a summary output be placed in excel as an artifact. Something that can be referenced later by AI in further work or shown to another human to show the final answer to the problem needing solved.
+
+Excel is not the place finance people come to think anymore, the real thinking is done by AI tools. This is where coding agents come into play. 
+
+### Coding Agents Are the Best Agents
+
+When a finance person starts their day, instead of opening excel, they now power up GitHub Copilot, or more recently more user friendly agents like Microsoft Scout. These are now the sharpest tools in their arsenal. 
+
+Why? Because at their core they are coding agents. And with code, you can do anything you can imagine. The AI writes the code, with the human steering them in the right direction from time to time. 
+
+A coding agent can do everything a human used to do manually inside of excel. 
+- Pull data 
+- Transform data for analysis 
+- Analyze the data 
+- Make decisions about the problem at hand
+- Iterate the analysis until a final answer is found 
+- Provide the outputs for others to easily digest
+
+Coding agents like GitHub Copilot can now do all of that for a financial analyst. After it does it once the right way, a human can turn that process into a recurring skill or script for the AI to run the perfect way every single time after. 
+
+If the agent doesn't have the right data, it can go find the right data. It can connect to API's, write one off scripts to scrape data from hard to find sources, and connect to other AI agents to do things never thought possible before. 
+
+With all of this capability, going back to the old ways in excel seems insane to a finance person. 
+
+### Local Still Wins Over Cloud
+
+The best part of these coding agents is how they execute their code. Locally on your own machine. Instead of running in the cloud, everything is done on your computer, just like you were doing it yourself. At first this may not sound ideal, shouldn't we run these things in the cloud at scale? 
+
+The answer to that is both yes and no. Parts of the work should be done at scale in the cloud, but most of the work still benefits from local execution. The biggest compliance obstacle in finance is data security. Making sure you can only see data you have access to. So it would make sense that a coding agent that's doing the work you assigned is only able to pull and analyze the same level of data you have access to. 
+
+This kind of data security is easy to do on your own machine using your own credentials, but hard to do in the cloud. A big problem right now in the AI space is authentication...
+
+### Don't Over Engineer
+
+
+### Final Thoughts
