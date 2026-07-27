@@ -14,6 +14,9 @@ The biggest change agent has been, well, agents themselves. These are AI's packa
 
 ### Excel As An Artifact, Not the Workspace
 
+> "AI doesn't do it end-to-end. It does it middle-to-middle. The new bottlenecks are prompting and verifying."
+> — Balaji Srinivasan
+
 For decades the number one tool used by every finance professional has been excel. It's a required skill on every finance job application. 
 
 Excel was a finance person's external brain. A place to think through problems, analyze data, and present answers to tough questions. Creating a financial model was almost a piece of art. Each one had common formatting that was industry standard (color coding, tab layouts, etc.) but each one had the unique scent of whoever made it. Much like how a painter may use the same water colors as everyone else, but have their own distinct style. 
@@ -46,11 +49,24 @@ With all of this capability, going back to the old ways in excel seems insane to
 
 The best part of these coding agents is how they execute their code. Locally on your own machine. Instead of running in the cloud, everything is done on your computer, just like you were doing it yourself. At first this may not sound ideal, shouldn't we run these things in the cloud at scale? 
 
-The answer to that is both yes and no. Parts of the work should be done at scale in the cloud, but most of the work still benefits from local execution. The biggest compliance obstacle in finance is data security. Making sure you can only see data you have access to. So it would make sense that a coding agent that's doing the work you assigned is only able to pull and analyze the same level of data you have access to. 
+The answer to that is both yes and no. Parts of the work should be done at scale in the cloud, but most of the work still benefits from local execution. The biggest compliance obstacle in finance is data security. Making sure you can only see and pull data you have access to. So it would make sense that a coding agent that's doing the work you assigned is only able to pull and analyze the same level of data you have access to. 
 
-This kind of data security is easy to do on your own machine using your own credentials, but hard to do in the cloud. A big problem right now in the AI space is authentication...
+This kind of data security is easy to do on your own machine using your own credentials, but hard to do in the cloud. A big problem right now in the AI space is authentication. AI agents can have their own separate identity. Where they are treated like a new coworker. But this breaks down when different people come to the same agent wanting to do work that requires different levels of data access (row level security). This kind of blended access between what systems the agent can access overall and how that adjusts based on who is talking to the agent is still hard to do today. So local execution seems to win. 
 
 ### Don't Over Engineer
 
+Anyone can now build something with code using AI coding agents. Writing the code is a solved problem, but plugging together the lego pieces in a software system is not solved by AI. This still requires humans to set up the cloud infrastructure, ensure proper security practices are followed when storing API keys, authenticating between systems, and everything else required to make the code the AI work. 
+
+It's exciting to build a local web app or AI powered tool that works locally on your laptop, but when it comes to sharing that with others things turn into a slippery slope. You might be able to build the prototype faster than going to your engineering counterparts to build the same things in 3 weeks that took you three hours. But when it comes to scaling it in the cloud, allowing others to access it securely, that's when a DIY finance project can stall. 
+
+Corporate systems are more paranoid to cyber attack than ever. So there are countless restrictions around how software can be built and deployed inside clouds. Code that easily connected to systems locally on your laptop now seem broken when you try to run it in the cloud. That's a feature, not a bug. 
+
+Even if you do build something that works off your computer. You are now a one person engineering team. Congrats! You are now the only person on your finance team that can fix it when broken, so you're always on call 24/7. If your boss wants it to work differently, congrats again! It's your job to add the new feature on top of your existing work. The cherry on top is when you decide to leave your team for another job, or more commonly get re-orged to another team, the software tool dies on the vine because only you knows how it works. This is a parasitic relationship, and if that sounds bad, trust your instincts.
+
+The reason you built the damn thing in the first place was to help you and the team save time, now it seems the only thing you're doing with that saved time is working on maintaining your software. You know, things engineering teams would have been happy to do for you all along. 
+
+Heed my warning and keep things simple in this new AI era. Just because you can build a web app to showcase your companies financial's with live commentary doesn't mean you want to build one. Everything has tradeoffs. If you want to build something, turn it into a re-usable AI skill that can be packaged up and shared with others. The skill can contain scripts to run locally, and even ways to connect to corporate systems. But have these executed on your own machine for now. Just like you would if you were doing these tasks manually with out the help of AI.  
 
 ### Final Thoughts
+
+The AI landscape seems to change every day. So this post may become obsolete within days of publishing, we'll see. But for now, using coding agents that run workflows locally on your own machine seems to be the main way finance people are overhauling their work. It's a new era for finance work. If this still sounds strange to you, I advise you to stay curious and see what these tools can do for you. You might be surprised. 
