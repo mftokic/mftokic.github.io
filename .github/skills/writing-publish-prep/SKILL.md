@@ -16,6 +16,10 @@ argument-hint: '[final-draft-path] [platform-focus] [cta]'
 - Final or near-final draft path.
 - Optional CTA, audience segment, and platform focus.
 
+## Voice Calibration
+- Read the shared [author voice profile](../author-voice/VOICE.md) before adapting copy for LinkedIn or X so platform conventions do not flatten the author's point of view or tone.
+- Use the [author voice skill](../author-voice/SKILL.md) to refresh the profile when a new corpus calibration is needed.
+
 ## Procedure
 1. Read frontmatter and body for title, description, date, categories, and key takeaway.
 2. Run a final readiness check: clarity, claim support, and consistency.

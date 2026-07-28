@@ -17,6 +17,10 @@ argument-hint: '[topic-or-draft-path] [audience] [goal]'
 - Optional audience and intent, such as teach, persuade, or provoke.
 - Optional constraints such as word count or publishing date.
 
+## Voice Calibration
+- Read the shared [author voice profile](../author-voice/VOICE.md) when recommending angles, hooks, or framing for the author.
+- Use the [author voice skill](../author-voice/SKILL.md) to refresh the profile when a new corpus calibration is needed.
+
 ## Procedure
 1. Read the current draft or prompt notes.
 2. Extract the working thesis and list uncertain claims.

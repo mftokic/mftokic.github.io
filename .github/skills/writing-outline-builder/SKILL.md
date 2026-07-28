@@ -16,6 +16,10 @@ argument-hint: '[draft-or-notes-path] [target-length] [tone]'
 - Optional target length and tone.
 - Optional must-include examples or anecdotes.
 
+## Voice Calibration
+- Read the shared [author voice profile](../author-voice/VOICE.md) before creating an outline meant to sound like the author, especially when selecting a hook, personal angle, or ending.
+- Use the [author voice skill](../author-voice/SKILL.md) to refresh the profile when a new corpus calibration is needed.
+
 ## Procedure
 1. Read the source draft or notes and extract the core thesis.
 2. Identify the reader promise and the strongest supporting evidence.

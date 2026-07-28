@@ -16,6 +16,10 @@ argument-hint: '[draft-path] [edit-depth: light|standard|heavy] [voice-notes]'
 - Optional depth: light, standard, or heavy edit.
 - Optional voice guidance for tone and style boundaries.
 
+## Voice Calibration
+- Read the shared [author voice profile](../author-voice/VOICE.md) before any edit where the author's voice matters.
+- Use the [author voice skill](../author-voice/SKILL.md) to refresh the profile when no current profile is available or new published work may have changed the author's style.
+
 ## Procedure
 1. Read the full draft including frontmatter and headings.
 2. Run a structural pass first: thesis clarity, section flow, redundancy.
