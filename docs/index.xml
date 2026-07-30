@@ -10,7 +10,71 @@
 <atom:link href="https://mftokic.github.io/index.xml" rel="self" type="application/rss+xml"/>
 <description>A collection of thoughts on things from the mind of Mike Tokic</description>
 <generator>quarto-1.5.57</generator>
-<lastBuildDate>Thu, 05 Feb 2026 08:00:00 GMT</lastBuildDate>
+<lastBuildDate>Thu, 30 Jul 2026 07:00:00 GMT</lastBuildDate>
+<item>
+  <title>AI Trends in Finance</title>
+  <dc:creator>Mike Tokic</dc:creator>
+  <link>https://mftokic.github.io/posts/2026-07-30-finance-ai-trends/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>I’ve been working in the finance space for over 10 years now. First doing actual finance work, then building software for finance teams on the engineering side. In the past six months, I’ve seen more transformation in how finance people do their work than in the previous 10 years of my career.</p>
+<p>The biggest change agent has been, well, agents themselves: AI systems packaged with tools they can call and code they can write on the fly. The biggest near-term gains in finance will not come from replacing every system with an AI platform. They will come from giving people local agents that can safely turn repetitive analysis into repeatable workflows, while keeping the work close to the data, credentials, and judgment already in place.</p>
+<p>Here are a few AI trends I’ve been noticing in recent months.</p>
+<section id="excel-as-an-artifact-not-the-workspace" class="level3">
+<h3 class="anchored" data-anchor-id="excel-as-an-artifact-not-the-workspace">Excel as an Artifact, Not the Workspace</h3>
+<blockquote class="blockquote">
+<p>“AI doesn’t do it end-to-end. It does it middle-to-middle. The new bottlenecks are prompting and verifying.” — Balaji Srinivasan</p>
+</blockquote>
+<p>For decades the number one tool used by every finance professional has been Excel. It’s a required skill on every finance job application.</p>
+<p>Excel was a finance person’s external brain. A place to think through problems, analyze data, and present answers to tough questions. Creating a financial model was almost a piece of art. Each one shared industry-standard formatting, such as color coding and tab layouts, but retained the unique fingerprint of its creator. Much like painters using the same watercolors but developing their own distinct styles.</p>
+<p>AI is starting to change this. Increasingly, the first pass of thinking, analysis, and drafting happens outside Excel. Excel does not disappear, but it is becoming the review surface. The familiar artifact where assumptions, outputs, and exceptions are checked by the people accountable for the decision.</p>
+<p>That is where coding agents come into play.</p>
+</section>
+<section id="coding-agents-are-becoming-the-finance-interface" class="level3">
+<h3 class="anchored" data-anchor-id="coding-agents-are-becoming-the-finance-interface">Coding Agents Are Becoming the Finance Interface</h3>
+<p>When a finance person starts their day, they may now power up GitHub Copilot or another user-friendly agent like Microsoft Scout before opening Excel. These are becoming some of the sharpest tools in their arsenal.</p>
+<p>Why? At their core, they are coding agents. Code gives them a way to work across data sources, analysis tools, and output formats. The AI writes the code, with the human steering it in the right direction from time to time.</p>
+<p>A coding agent can take on much of the work a human used to do manually inside Excel: - Pull data - Transform data for analysis - Analyze the data - Flag unusual movements and test plausible drivers - Iterate the analysis until a final answer is found - Prepare outputs others can quickly review</p>
+<p>Think about a monthly variance-analysis task that once required opening five reports, reconciling account names, calculating drivers, and writing commentary. An agent can turn much of that routine into a repeatable workflow. The analyst still owns the assumptions and the conclusion. The agent removes the mechanical middle.</p>
+<p>After an agent performs a workflow correctly, a human can document it as a repeatable workflow, perhaps with a skill or script. If the agent doesn’t have the right data, it can connect to APIs or write one-off scripts to retrieve it from approved sources.</p>
+<p>With all of this capability, manually rebuilding the same analysis in Excel starts to feel increasingly hard to justify.</p>
+</section>
+<section id="local-still-wins-over-cloud" class="level3">
+<h3 class="anchored" data-anchor-id="local-still-wins-over-cloud">Local Still Wins Over Cloud</h3>
+<p>One of the best parts of these coding agents is that they can execute code locally on your own machine. Instead of immediately running in the cloud, the work happens on your computer, much as it would if you were doing it yourself. At first this may not sound ideal. Shouldn’t we run these things in the cloud at scale?</p>
+<p>The answer is both yes and no. Parts of the work should be done at scale in the cloud, but much exploratory work still benefits from local execution. The biggest compliance obstacle in finance is data security: making sure you can only see and pull data you have access to. It makes sense that a coding agent doing work you assigned should be able to pull and analyze only the data you can access.</p>
+<p>For exploratory work, local execution can be the easier path because the agent can operate through the same authenticated tools and permissions the employee already uses. Cloud deployments can be secured, but they introduce a separate identity, authorization, audit, and operational design problem before they are ready for broad use.</p>
+<p>AI agents can have their own separate identity, where they are treated like a new coworker. But that gets complicated when different people use the same agent for work requiring different levels of data access. Designing the blended access model between the systems an agent can access overall and what it can access for each employee remains difficult. For now, local execution often wins.</p>
+</section>
+<section id="finance-teams-are-building-software-by-accident" class="level3">
+<h3 class="anchored" data-anchor-id="finance-teams-are-building-software-by-accident">Finance Teams Are Building Software by Accident</h3>
+<p>Anyone can now build something using AI coding agents. Writing a first version is easier than ever, but plugging together the Lego pieces in a software system is not solved by AI. This still requires humans to set up cloud infrastructure, follow proper security practices when storing API keys, authenticate between systems, and handle everything else required to make the code work.</p>
+<p>It is exciting to build a local web app or AI-powered tool that works on your laptop, but sharing it with others can become a slippery slope. You might build the prototype in three hours rather than waiting three weeks for an engineering team. But scaling it in the cloud and allowing others to access it securely is where a DIY finance project can stall.</p>
+<p>Corporate systems are more cautious about cyberattacks than ever. That means there are countless restrictions around how software can be built and deployed in the cloud. Code that connects easily to systems on your laptop can appear broken when you try to run it in the cloud. That’s a feature, not a bug.</p>
+<p>A local prototype can be valuable precisely because it’s small. Trouble starts when a useful personal tool quietly becomes a shared production system. The moment other people depend on it, someone must own access controls, secrets, deployment, monitoring, support, and change requests. That is not a failure of the prototype. It’s the point where the work has become software engineering.</p>
+<p>If you built a tool the entire team wants to use, the time you saved by using the tool can turn into an unpaid on-call rotation. You are now the only person on your finance team who can fix it when it breaks. If your boss wants it to work differently, it is your job to add the feature. And when you leave for another job, or more commonly get re-orged to another team, the tool can die on the vine because only you know how it works.</p>
+<p>The reason you built the damn thing in the first place was to help you and the team save time. If all that saved time becomes maintenance, you are doing work an engineering team would have been happy to own.</p>
+<p>Heed my warning and keep things simple in this new AI era. Just because you can build a web app to showcase your company’s financials with live commentary does not mean you want to build one. Everything has tradeoffs. If you want to build something, turn it into a reusable AI skill that teammates can run locally on their own machines. The skill can contain scripts and ways to connect to corporate systems, while keeping the work close to the permissions people already use instead of quietly creating a shared production app. Save the hosted web apps and APIs for your engineering counterparts.</p>
+</section>
+<section id="final-thoughts" class="level3">
+<h3 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h3>
+<p>The AI landscape seems to change every day, so this post may become obsolete within days of publishing. We’ll see. But for now, the near-term opportunity is not to rebuild the finance stack with AI. It is to remove the repetitive middle from the work people already do, while keeping the workflow close to the data, controls, and judgment that make finance trustworthy.</p>
+<p>Start local. Make the workflow repeatable. But the moment other people depend on it, treat it as software, with all the ownership that implies.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>finance</category>
+  <category>AI</category>
+  <guid>https://mftokic.github.io/posts/2026-07-30-finance-ai-trends/</guid>
+  <pubDate>Thu, 30 Jul 2026 07:00:00 GMT</pubDate>
+  <media:content url="https://mftokic.github.io/posts/2026-07-30-finance-ai-trends/image.png" medium="image" type="image/png" height="96" width="144"/>
+</item>
 <item>
   <title>The Life Changing Magic of Cracking A Window</title>
   <dc:creator>Mike Tokic</dc:creator>
@@ -3361,162 +3425,6 @@ Click to read the original notes.
   <guid>https://mftokic.github.io/posts/2025-03-24-ts-fundamentals-univariate-models/</guid>
   <pubDate>Mon, 24 Mar 2025 07:00:00 GMT</pubDate>
   <media:content url="https://mftokic.github.io/posts/2025-03-24-ts-fundamentals-univariate-models/image.png" medium="image" type="image/png" height="144" width="144"/>
-</item>
-<item>
-  <title>Data Cleaning: Stationary</title>
-  <dc:creator>Mike Tokic</dc:creator>
-  <link>https://mftokic.github.io/posts/2025-03-21-ts-fundamentals-data-cleaning-stationary/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p><em>This post is part of the <a href="https://mftokic.github.io/posts/2025-02-03-ts-fundamentals-data-cleaning">data cleaning chapter</a> within a larger learning series around time series forecasting fundamentals. <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals/">Check out the main learning path</a> to see other posts in the series.</em></p>
-<p><em>The example monthly data used in this series <a href="https://github.com/mftokic/mftokic.github.io/blob/main/posts/2024-10-02-ts-fundamentals-whats-a-time-series/example_ts_data.csv">can be found here.</a> You can also find the <a href="https://github.com/mftokic/mftokic.github.io/blob/main/notebooks/2025-03-21-ts-fundamentals-data-stationary.ipynb">python code used in this post here.</a></em></p>
-<section id="trends-are-hard" class="level3">
-<h3 class="anchored" data-anchor-id="trends-are-hard">Trends Are Hard</h3>
-<p>In the world of forecasting, many models need the <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#trend">trend</a> component to be removed in order to learn the right <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#signal">signal</a> from the data. The process of removing a trend (and sometimes <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#seasonality">seasonality</a>) is called differencing, which can make a time series become stationary.</p>
-<p>Stationary just means that the time series has a constant mean and <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#variance">variance</a> over time. Put simpler, it’s a time series that looks kind of random with no discernable trend or repeating seasonality. If a time series does have a trend, then we can remove it through a process called differencing, which involves subtracting a value in one time period from a value in a previous time period. More on this later.</p>
-<p>Some models need data to be stationary to ensure it’s learning the correct relationships in the data, and doesn’t get fooled from thinking trends will always remain the same.</p>
-<p>Let’s take a look at one of our time series. Does it look like it has a constant mean and variance over time?</p>
-<p><img src="https://mftokic.github.io/posts/2025-03-21-ts-fundamentals-data-cleaning-stationary/chart1.png" class="img-fluid"></p>
-<p>Hmmm, not really. Seems like there is an upward trend to the data. This means that the mean over time will also rise. It probably also has a slightly growing variance. Meaning the year over year growth amount is getting bigger and bigger. Let’s see what we can do to make this data stationary through differencing.</p>
-</section>
-<section id="types-of-differencing" class="level3">
-<h3 class="anchored" data-anchor-id="types-of-differencing">Types of Differencing</h3>
-<p>There are two main types of differencing. The first is simply taking the difference between two consecutive periods. For example taking the sales in December and subtracting the sales in November (previous month). This is called first order differencing. Let’s try that on our time series and see what happens.</p>
-<p><img src="https://mftokic.github.io/posts/2025-03-21-ts-fundamentals-data-cleaning-stationary/chart2.png" class="img-fluid"></p>
-<p>Ok it’s looking a lot better! Our data is centered around zero, and doesn’t seem to be growing in magnitude over time. Seems like it could be stationary! Another way to apply differencing is by doing it twice, this is called second order differencing. You start by doing a first order difference, then do that same process again on that data. So instead of ending up with the change from period to period. You have the change of the change from period to period.</p>
-<ul>
-<li>A first order difference measures the change in position over time, which is like velocity</li>
-<li>A second order difference measures the rate of change of the rate of change, which is like acceleration (the change in velocity over time)</li>
-</ul>
-<p>Taking a second order difference is done when the time series still doesn’t have constant mean or variance. Let’s take a second order difference of our example time series.</p>
-<p><img src="https://mftokic.github.io/posts/2025-03-21-ts-fundamentals-data-cleaning-stationary/chart3.png" class="img-fluid"></p>
-<p>Things changed a little, but not much. Seems like a second order difference may not always be necessary. The final way to difference your time series is through seasonal differencing. This is the difference between an observation and the previous observation from the same season. For example with monthly sales, a season difference would be taking the difference between a month this year and the same month in the previous year. Taking a seasonal difference removes most seasonality in the data, hence the name. Let’s see how our data looks by just taking a seasonal difference.</p>
-<p><img src="https://mftokic.github.io/posts/2025-03-21-ts-fundamentals-data-cleaning-stationary/chart4.png" class="img-fluid"></p>
-<p>The seasonal difference result looks good. Constant mean and variance throughout time. You can also combine both standard differencing with seasonal differencing. If your data has some seasonality, it’s best to do the seasonal difference first, then take the first order difference after. Let’s see how it looks.</p>
-<p><img src="https://mftokic.github.io/posts/2025-03-21-ts-fundamentals-data-cleaning-stationary/chart5.png" class="img-fluid"></p>
-<p>We now have a nice mean around zero and no major variance throughout the data. Nice! But how the heck do we know if the data is stationary once we difference it?</p>
-</section>
-<section id="checking-if-your-data-is-stationary" class="level3">
-<h3 class="anchored" data-anchor-id="checking-if-your-data-is-stationary">Checking if Your Data is Stationary</h3>
-<p>In order to check if the data is stationary, either the original data or data that’s been differenced, you can use something called a unit root test. Specially a Kwiatkowski-Phillips-Schmidt-Shin (KPSS) test. This kind of test runs a few statistical processes and lets you know if the data it was fed was stationary or not. We can take this once step further by leveraging tools that build on this test and tell you how many differences should be applied on your data.</p>
-<p>Let’s try running this test on our data and see how many differences we might need to make the data stationary.</p>
-<ul>
-<li>First order difference: stationary ✅</li>
-<li>Second order difference: stationary ✅</li>
-<li>Seasonal difference: stationary ✅</li>
-<li>Seasonal and first order difference : stationary ✅</li>
-</ul>
-<p>Sweet! All of our differencing techniques each resulted in our data being stationary. It’s a good idea to pick the method that is the simplest way to get a stationary time series, which in our case is the first order difference. So we can use that going forward when training models.</p>
-</section>
-<section id="back-transformations" class="level3">
-<h3 class="anchored" data-anchor-id="back-transformations">Back Transformations</h3>
-<p>After you train a model and produce a forecast, the work is still not done. That forecast is the predicting the change between periods, not the actual values for that period. In order to get a final forecast we can use we need to transform that data back to the original units.</p>
-<p>To do this we need all original values of the time series. When we difference our data, the process creates missing values at the start of the time series, because we cannot calculate the difference of the first period of the data since it’s the first period of the data. So a first order difference has one missing value at the start of the time series, a second order difference has 2, and a seasonal difference has many more depending on the seasonal periods in the data.</p>
-<p>To get our final forecast we need to keep these original values, add them back to the differenced data, then start to add them up one by one. For a first order difference, that just means taking that original value in the first period, adding it to the differenced value in the second period, then adding that new value to the differenced value in the third period, and so on. It’s a daisy chained process to get the original data back. We carry this math forward into the future with our predictions, with the final output being our finished forecast!</p>
-<p>Here’s a super simple table breaking this down.</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 12%">
-<col style="width: 19%">
-<col style="width: 35%">
-<col style="width: 32%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;">Month</th>
-<th style="text-align: center;">Original Series (Yₜ)</th>
-<th style="text-align: center;">1st Order Difference (ΔYₜ = Yₜ - Yₜ₋₁)</th>
-<th style="text-align: center;">Transformed Back to Original Units</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">Jan 2024</td>
-<td style="text-align: center;">100</td>
-<td style="text-align: center;">—</td>
-<td style="text-align: center;">—</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">Feb 2024</td>
-<td style="text-align: center;">105</td>
-<td style="text-align: center;">+5</td>
-<td style="text-align: center;">—</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">Mar 2024</td>
-<td style="text-align: center;">108</td>
-<td style="text-align: center;">+3</td>
-<td style="text-align: center;">—</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">Apr 2024</td>
-<td style="text-align: center;">112</td>
-<td style="text-align: center;">+4</td>
-<td style="text-align: center;">—</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">May 2024</td>
-<td style="text-align: center;">115</td>
-<td style="text-align: center;">+3</td>
-<td style="text-align: center;">—</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">Jun 2024</td>
-<td style="text-align: center;">118</td>
-<td style="text-align: center;">+3</td>
-<td style="text-align: center;">—</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><strong>Forecast</strong></td>
-<td style="text-align: center;">—</td>
-<td style="text-align: center;">—</td>
-<td style="text-align: center;">—</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">Jul 2024</td>
-<td style="text-align: center;">—</td>
-<td style="text-align: center;">+3 (forecasted)</td>
-<td style="text-align: center;">121 (118 + 3)</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">Aug 2024</td>
-<td style="text-align: center;">—</td>
-<td style="text-align: center;">+3 (forecasted)</td>
-<td style="text-align: center;">124 (121 + 3)</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">Sep 2024</td>
-<td style="text-align: center;">—</td>
-<td style="text-align: center;">+3 (forecasted)</td>
-<td style="text-align: center;">127 (124 + 3)</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="reversal" class="level3">
-<h3 class="anchored" data-anchor-id="reversal">Reversal</h3>
-<p>There are cases where differencing your data to ensure it’s stationary is not a good idea. Some models, like <a href="https://mftokic.github.io/posts/2024-09-25-ts-fundamentals-glossary/#arima">ARIMA</a>, have the differencing process built in. So you don’t need to do it beforehand. Other models, like standard linear regressions, don’t need stationary data at all since they can easily learn from trends and seasonal patterns in the data.</p>
-<p>Differencing the data can also limit model interpretability, or the ability to explain the forecasted outputs. This becomes even harder once you start to difference your data two or more times, since you are not explaining changes between observations, but instead the change in the changes or even worse. This becomes near impossible to understand for any regular human that might use your forecasts.</p>
-<p>A final thing to call out with differencing is that it can remove historical data from the beginning of your time series. This may not be a big deal with a first order difference, but taking a seasonal difference on a monthly data set will remove the first 12 months of the time series. That may not be impactful if you have 10+ years of historical data, but if you only have 3 years to start with this becomes very detrimental to the process. That’s why I try to limit any seasonal differencing when the amount of historical data is low.</p>
-</section>
-<section id="final-thoughts" class="level3">
-<h3 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h3>
-<p>Stationarity is fundamental to reliable forecasting because it ensures your models are learning stable, meaningful patterns rather than temporary or misleading trends. A stationary time series maintains a constant mean and variance over time, making its behavior predictable and easier for statistical models to learn from.</p>
-<p>Differencing is a powerful yet straightforward way to achieve stationarity, paving the path for more accurate forecasts. While simple first-order differencing often does the trick, be cautious with higher-order or seasonal differences, as they can reduce interpretability, remove valuable historical context, and complicate back transformations. Always prioritize the simplest approach that achieves stationarity, keeping both modeling and explanations clear and intuitive. Ultimately, knowing how—and when—to apply stationarity transformations is key to building robust, effective forecasts.</p>
-
-
-</section>
-
- ]]></description>
-  <category>machine-learning</category>
-  <category>time-series</category>
-  <guid>https://mftokic.github.io/posts/2025-03-21-ts-fundamentals-data-cleaning-stationary/</guid>
-  <pubDate>Fri, 21 Mar 2025 07:00:00 GMT</pubDate>
-  <media:content url="https://mftokic.github.io/posts/2025-03-21-ts-fundamentals-data-cleaning-stationary/image.png" medium="image" type="image/png" height="82" width="144"/>
 </item>
 </channel>
 </rss>

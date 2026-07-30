@@ -27,13 +27,14 @@ argument-hint: '[draft-path] [edit-depth: light|standard|heavy] [voice-notes]'
 4. Propose targeted rewrites by priority using [editing checklist](./assets/editing-checklist.md).
 5. Apply a final quality gate: each section must pass easy + interesting + fun before sign-off.
 6. If requested, provide a consolidated revised draft.
-7. Summarize key changes and what still needs author judgment.
+7. End with an implementation menu: a single numbered list of every recommended change, ordered from high to low priority, so the author can approve specific items by number.
 
 ## Output Contract
 - Editorial findings grouped by priority: high, medium, low.
 - A short scorecard for easy, interesting, and fun with one fix suggestion for any weak area.
 - Concrete rewrite suggestions, not only abstract advice.
 - Optional rewritten version when requested.
+- Conclude with a continuous numbered implementation menu containing every recommended change. Each item must identify its priority, location, and proposed change or rewrite. Do not recommend a change elsewhere in the review without including it in this final list.
 
 ## Guardrails
 - Preserve the original voice unless explicitly asked to shift style.
