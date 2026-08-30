@@ -1,0 +1,9 @@
+---
+title: "Title"
+description: "Subtitle"
+author: "Mike Tokic"
+date: "2030-01-01"
+categories: [category]
+image: "image.png"
+draft: True
+---

@@ -1,0 +1,38 @@
+---
+title: "10 Thoughts on 10 Years at Microsoft"
+description: "Lessons learned from a decade of being soft"
+author: "Mike Tokic"
+date: "2030-01-01"
+categories: [career, life]
+image: "image.png"
+draft: True
+---
+
+1. What am I trying to say? 
+2. What story can I tell? 
+3. List major parts by sections/points
+4. Brain dump into each one
+5. Refine into a cohesive narrative
+6. Create hook/intro 
+7. How is this 1% better than my previous post? 
+8. Is this interesting? Is it fun to read? 
+9. Final review, read it out loud via AI
+10. Create thumbnail, make it fun
+11. Post blog 
+12. Condense and post on LinkedIn
+13. Condense and post on X
+
+During my senior year of college all of my friends started calling me Michaelsoft. Even the pretty girls we'd hang out with would call me Michaelsoft. Trust me, they didn't call me that because it sounded cool. They all knew I just came back from my internship in Redmond and would be headed back full time after graduation. Thank god people forgot that nickname. 
+
+This summer I crossed the 10 year mark at the company. My entire career, in one place. Over the past decade I had to learn a lot of lessons the hard way. Here are a few thoughts as I look back on my career so far. 
+
+### 1. Keep the Main Thing, the Main Thing
+### 2. Meetings Are Empty Calories
+### 3. Ask for What You Want
+### 4. Be You
+### 5. Mission Over Managers
+### 6. Work on What You Think Is Important
+### 7. Don't Work Under a Rock
+### 8. Success Makes It Harder to Succeed
+### 9. Do Things That Scale, and Also Don't Scale
+### 10. Evolve or Go Extinct
