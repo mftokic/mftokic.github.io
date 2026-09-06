@@ -1,0 +1,75 @@
+---
+title: "FinnTS Version 0.7.0 on CRAN"
+description: "Taking Finn into the agentic era"
+author: "Mike Tokic"
+date: "2026-09-06"
+categories: [forecasting, finn, finnts, machine-learning, ai]
+image: "image.png"
+---
+
+Over the past year, we have been trying to take Finn, the machine learning forecasting framework we built inside Microsoft Finance, into the new AI era.
+
+When we started building Finn in 2018, ChatGPT did not exist. We built Finn using what people now call "classic" machine learning: models trained on a company's own historical data. To get a good forecast, you still had to do the hard part. Look at the data, decide what to try, run an experiment, check the accuracy, then do it again.
+
+LLMs have changed what is possible around that loop. They are not going to magically look at a revenue time series and spit out a perfect forecast. But they are good at reading information, making a plan, and using tools. At the same time, time-series foundation models give us another set of numerical forecasting models to test alongside the models Finn already uses.
+
+So we are not trying to turn Finn into ChatGPT. We are using LLMs to help Finn think through the work that happens between forecast runs. The agent can study a series, decide what to try next, kick off a Finn run, and learn from the backtest. Finn is still doing the actual forecasting work: preparing data, engineering features, testing models, and producing the final output.
+
+What started as a proof of concept in May 2025 is now available on [CRAN](https://CRAN.R-project.org/package=finnts), the R package repository. That makes it much easier for anyone to install Finn and start building better forecasts.
+
+Let's walk through what is new in version 0.7.0.
+
+### Iterate Forecast
+
+The first problem we wanted the agent to solve was forecast experimentation. Whenever we start a new forecast project, somebody has to figure out which data inputs, features, and model settings will create the most accurate forecast. That takes data knowledge, machine learning knowledge, and business context. It also takes a lot of trial and error.
+
+The [`iterate_forecast()`](https://microsoft.github.io/finnts/reference/iterate_forecast.html) workflow lets the agent take on that repetitive work. You give it historical data, a forecast error goal, and a limit on how many forecast runs it can try. From there, it starts working.
+
+1. First, it teaches itself about the historical data. It checks missing values, outliers, seasonal patterns, stationarity, and relationships with external regressors.
+2. Then it uses an LLM connected through [ellmer](https://ellmer.tidyverse.org/) to think through what to try first: how to treat the data, which features to create, and which local or global model families to run.
+3. Based on that reasoning, it kicks off a Finn experiment. Finn runs the forecast, backtests it, and records the accuracy, settings, and model summaries.
+4. If the run reaches the accuracy goal, the agent stops. If it has more room to iterate, it studies the latest result and comes up with another experiment to try.
+
+A Finance person is still responsible for setting the goal and deciding whether the result makes business sense. But instead of making one data scientist work through experiment after experiment, Finn can apply the same process to every time series at scale. It can find the best run for each series while also comparing global models that learn patterns across the whole data set. That is the big deal: less time rerunning failed experiments and more time understanding the business.
+
+### Update Forecast
+
+Forecast iteration is where you learn what works. But when the monthly forecast cycle comes around, Finance teams do not have time to start from scratch.
+
+That is why we built [`update_forecast()`](https://microsoft.github.io/finnts/reference/update_forecast.html). After an initial agent run, it takes the best configurations from previous runs and uses them with the latest data. It rebuilds global models when they are in play and updates local series without making the agent relearn everything from day one. New or failed series receive default local forecasts instead of stopping the entire run.
+
+If forecast accuracy gets materially worse, teams can give the agent permission to go back into a small, bounded iteration cycle. The practical benefit is not a magic runtime percentage. It is that Finance does not have to rediscover the same good model and feature choices every month.
+
+### Explain Forecast
+
+Getting a lower forecast error is only half of the problem. The other half is getting a Finance person to actually use a forecast created by machine learning.
+
+With an Excel forecast, someone can trace a number cell by cell. A machine learning forecast needs a different way to show its work. That is why we built [`ask_agent()`](https://microsoft.github.io/finnts/reference/ask_agent.html).
+
+After an iteration or update, you can ask the agent questions about the forecast, the data, or the model choices. It can look at the stored forecast output, best-run settings, exploratory data analysis, and model summaries before answering. Ask which series have the worst accuracy, what features mattered most, whether the data has outliers, or why a model was selected.
+
+This does not mean a Finance partner should stop challenging the forecast. It means the conversation no longer has to start with "trust the model." The agent gives people results, settings, and diagnostics they can inspect together.
+
+### Advanced Models
+
+We also did not want Finn to be tied to only the models it started with. So we added support for cutting edge foundation models that are built for time series. The agent and time-series foundation models have different jobs. The agent helps decide which experiments are worth running. The foundation models are additional ways for Finn to make the actual numerical forecast.
+
+Version 0.7.0 adds five time-series foundation models to Finn:
+
+- **[Chronos2](https://huggingface.co/amazon/chronos-2), built by Amazon:** Can run locally for an individual series or globally across a data set, and can use external regressors.
+- **[Chronos Bolt Base](https://huggingface.co/amazon/chronos-bolt-base), built by Amazon:** A lighter Chronos model for local, univariate forecasts without external regressors.
+- **[Chronos Bolt Tiny](https://huggingface.co/amazon/chronos-bolt-tiny), built by Amazon:** The smallest and fastest Chronos option for local, univariate forecasts without external regressors.
+- **[TimesFM](https://github.com/google-research/timesfm), built by Google Research:** A local, univariate forecasting model that does not use external regressors.
+- **[TimeGPT](https://www.nixtla.io/), built by Nixtla:** Can run locally or globally and can use external regressors.
+
+None of these models automatically beat the classic models for every series. That is exactly why they belong in the Finn backtest. The exciting part is not that we have a shiny new foundation model to call the best. It is that Finn can test these models alongside the old ones and let the historical accuracy decide which one actually earns the job.
+
+### Final Thoughts
+
+At the end of the day, we are not building an agent to take Finance judgment out of forecasting. A model cannot know about a pricing decision, a product launch, or a one-time business event that never made it into the historical data.
+
+For years, we have tried to democratize machine learning forecasting by giving Finance people better tools. Version 0.7.0 takes another step toward a better idea: delegate the repetitive technical work to an agent, while keeping the human close to the decisions that require business judgment.
+
+Finn 0.7.0 is not about handing the keys to a chatbot. It is about giving Finance a teammate that can run the tedious experiments, remember what worked, and show its work. Better forecasts matter. A forecast process that people can refresh, inspect, and improve matters just as much.
+
+Try it out and let me know what you think!
